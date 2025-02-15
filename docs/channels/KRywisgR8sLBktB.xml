@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://konrad.website/liveboat-github-runner/</link><description></description><item><title>Conditional types in TypeScript</title><link>https://2ality.com/2025/02/conditional-types-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In TypeScript, conditional types let us make decisions (think if-then-else expressions) – which is especially useful in generic types. They are also an essential tool for working with union types because they let use “loop” over them. Read on if you want to know how all of that works.]]></content:encoded></item><item><title>Handwriting an SVG Heart, With Our Hearts</title><link>https://css-tricks.com/handwriting-an-svg-heart-with-our-hearts/</link><author>Ryan Trimble</author><category>frontend</category><pubDate>Fri, 14 Feb 2025 13:25:12 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[According to local grocery stores, it’s the Valentine’s Day season again, and what better way to express our love than with the symbol of love: . A while back on CSS-Tricks, we shared several ways to draw hearts, and the response was dreamy. Check out all these amazing, heart-filled submissions in this collection on CodePen:Temani Afif’s CSS Shapes site offers a super modern heart using only CSS:Now, to show  love, I wanted to do something personal, something crafty, something with a mild amount of effort.Handwriting a love note is a classic romantic gesture, but have you considered handwriting an SVG? We won’t need some fancy vector drawing tool to express our love. Instead, we can open a blank HTML document and add an  tag:We’ll need a way to see what we are doing inside the “SVG realm” (as I like to call it), which is what the  attribute provides. The 2D plane upon which vector graphics render is as infinite as our love, quite literally, complete with an x- and y-axis and all (like from math class).We’ll set the start coordinates as  and end coordinates as  to make a handsome, square . Oh, and by the way, we don’t concern ourselves over pixels,  values, or any other unit types; this is , and we play by our own rules.We add in these coordinates to the  as a string of values:<svg viewBox="0 0 10 10">
+
+</svg>Now we can begin drawing our heart,  our heart. Let’s make a line. To do that, we’ll need to know a lot more about coordinates, and where to stick ’em. We’re able to draw a line with many points using the  element, which defines paths using the  attribute. SVG path commands are difficult to memorize, but the effort means you care. The path commands are:, , , , , , We’re only interested in drawing line segments for now, so together we’ll explore the first two:  and . MDN romantically describes MoveTo as picking up a drawing instrument, such as a pen or pencil: we aren’t yet drawing anything, just moving our pen to the point where we want to begin our confession of love.We’ll  the coordinates of  represented in the  attribute as :<svg viewBox="0 0 10 10">
+  <path d="M2,2" />
+</svg>Not surprising then to find that  is akin to putting pen to paper and  from one point to another. Let’s draw the first segment of our heart by drawing a  with coordinates , represented as  next in the  attribute:<svg viewBox="0 0 10 10">
+  <path d="M2,2 L4,4" />
+</svg>We’ll add a final line segment as another LineTo  with coordinates , again appended to the  attribute as :<svg viewBox="0 0 10 10">
+  <path d="M2,2 L4,4 L6,2" />
+</svg>If you stop to preview what we’ve accomplished so far, you may be confused as it renders an upside-down triangle; that’s not quite a heart yet, Let’s fix that.SVG shapes apply a  by default, which we can remove with :<svg viewBox="0 0 10 10">
+  <path d="M2,2 L4,4 L6,2" fill="none" />
+</svg>Rather than filling in the shape, instead, let’s display our line path by adding a , adding color to our heart.<svg viewBox="0 0 10 10">
+  <path 
+    d="M2,2 L4,4 L6,2" 
+    fill="none" 
+    stroke="rebeccapurple" />
+</svg>Next, add some weight to the stroke by increasing the :<svg viewBox="0 0 10 10">
+  <path 
+    d="M2,2 L4,4 L6,2" 
+    fill="none" 
+    stroke="rebeccapurple" 
+    stroke-width="4" />
+</svg>Finally, apply a  of  (sorry, no time for  jokes) to round off the start and end points of our line path, giving us that classic symbol of love:<svg viewBox="0 0 10 10">
+  <path 
+    d="M2,2 L4,4 L6,2" 
+    fill="none"
+    stroke="rebeccapurple"
+    stroke-width="4"
+    stroke-linecap="round" />
+</svg>. Now all that’s left to do is send it to that special someone. ]]></content:encoded></item><item><title>It&apos;s time to go ESM-only</title><link>https://javascriptweekly.com/issues/723</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[🤯 Pfft, vehicle data is a joke without CarsXE. API goes brrrrr. VIN decoding, plate lookup, market value reports. Get Serious!]]></content:encoded></item><item><title>Mapped types in TypeScript</title><link>https://2ality.com/2025/02/mapped-types-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[A mapped type is a loop over keys that produces an object or tuple type and looks as follows:{[]: }
+In this blog post, we examine how mapped types work and see examples of using them. Their most importing use cases are transforming objects and mapping tuples.]]></content:encoded></item><item><title>Scroll Driven Animations Notebook</title><link>https://css-tricks.com/scroll-driven-animations-notebook/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 13 Feb 2025 13:24:29 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[One of his latest is a notebook of scroll-driven animations. They’re all impressive as heck, as you’d expect from Adam. But it’s the simplicity of the first few examples that I love most. Here I am recreating two of the effects in a CodePen, which you’ll want to view in the latest version of Chrome for support.This is a perfect example of how a scroll-driven animation is simply a normal CSS animation, just tied to scrolling instead of the document’s default timeline, which starts on render. We’re talking about the same set of keyframes:@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+}All we have to do to trigger scrolling is call the animation and assign it to the timeline:li {
+  animation: var(--animation) linear both;
+  animation-timeline: view();
+}Notice how there’s no duration set on the animation. There’s no need to since we’re dealing with a scroll-based timeline instead of the document’s timeline. We’re using the  function instead of the  function, which acts sort of like JavsScript’s Intersection Observer where scrolling is based on where the element comes into view and intersects the scrollable area.It’s easy to drop your jaw and ooo and ahh all over Adam’s demos, especially as they get more advanced. But just remember that we’re still working with plain ol’ CSS animations. The difference is the timeline they’re on.]]></content:encoded></item><item><title>Typecasting and Viewport Transitions in CSS With tan(atan2())</title><link>https://css-tricks.com/typecasting-and-viewport-transitions-in-css-with-tanatan2/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Wed, 12 Feb 2025 14:15:28 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[We’ve been able to get the length of the viewport in CSS since… … 2013! Surprisingly, that was more than a decade ago. Getting the viewport width is as easy these days as easy as writing , but what does that translate to, say, in ? What about the other properties, like those that take a percentage, an angle, or an integer?Think about changing an element’s opacity, rotating it, or setting an animation progress based on the screen size. We would first need the  — which isn’t currently possible in CSS, right?What I am about to say isn’t a groundbreaking discovery, it was first described amazingly by Jane Ori in 2023. In short, we can use a weird hack (or feature) involving the  and  trigonometric functions to typecast a length (such as the viewport) to an integer. This opens  new layout possibilities, but my first experience was while writing an Almanac entry in which I just wanted to make an image’s opacity responsive.Resize the CodePen and the image will get more transparent as the screen size gets smaller, of course with some boundaries, so it doesn’t become invisible:This is the simplest we can do, but there is a lot more. Take, for example, this demo I did trying to combine many viewport-related effects. Resize the demo and the page feels alive: objects move, the background changes and the text smoothly wraps in place.I think it’s really cool, but I am no designer, so that’s the best my brain could come up with. Still, it may be too much for an introduction to this typecasting hack, so as a middle-ground, I’ll focus only on the title transition to showcase how all of it works:The idea behind this is to convert  to radians (a way to write angles) using , and then back to its original value using , with the perk of coming out as an integer. It should be achieved like this::root {
+  --int-width: tan(atan2(100vw, 1px));
+}But! Browsers aren’t too keep on this method, so a lot more wrapping is needed to make it work across all browsers. The following may seem like magic (or nonsense), so I recommend reading Jane’s post to better understand it, but this way it will work in all browsers:@property --100vw {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+
+:root {
+  --100vw: 100vw;
+  --int-width: calc(10000 * tan(atan2(var(--100vw), 10000px)));
+}Don’t worry too much about it. What’s important is our precious  variable, which holds the viewport size as an integer!Wideness: One number to rule them allRight now we have the viewport as an integer, but that’s just the first step. That integer isn’t super useful by itself. We oughta convert it to something else next since:different properties have different units, andwe want each property to go from a start value to an end value.Think about an image’s  going from  to , an object rotating from  to , or an element’s  going from  to . We want to interpolate between these values as  gets bigger, but right now it’s just an integer that usually ranges between  to , which is inflexible and can’t be easily converted to any of the end values.The best solution is to turn  into a number that goes from  to . So, as the screen gets bigger, we can multiply it by the desired end value. Lacking a better name, I call this “0-to-1” value . If we have , all the last examples become possible:/* If `--wideness is 0.5 */
+
+.element {
+  opacity: var(--wideness); /* is 0.5 */
+  translate: rotate(calc(wideness(400px, 1200px) * 360deg)); /* is 180deg */
+  offset-distance: calc(var(--wideness) * 100%); /* is 50% */
+}So  is a value between  to  that represents how wide the screen is:  represents when the screen is narrow, and  represents when it’s wide. But we still have to set what those values mean in the viewport. For example, we may want  to be  and  to be , our viewport transitions will run between these values. Anything below and above is clamped to  and , respectively.In CSS, we can write that as follows::root {
+  /* Both bounds are unitless */
+  --lower-bound: 400; 
+  --upper-bound: 1200;
+
+  --wideness: calc(
+    (clamp(var(--lower-bound), var(--int-width), var(--upper-bound)) - var(--lower-bound)) / (var(--upper-bound) - var(--lower-bound))
+  );
+}Besides easy conversions, the  variable lets us define the lower and upper limits in which the transition should run. And what’s even better, we can set the transition zone at a middle spot so that the user can see it in its full glory. Otherwise, the screen would need to be  so that  reaches  and who knows how wide to reach .We got the . What’s next?For starters, the title’s markup is divided into spans since there is no CSS-way to select specific words in a sentence:<h1><span>Resize</span> and <span>enjoy!</span></h1>And since we will be doing the line wrapping ourselves, it’s important to unset some defaults:h1 {
+  position: absolute; /* Keeps the text at the center */
+  white-space: nowrap; /* Disables line wrapping */
+}The transition should work without the base styling, but it’s just too plain-looking. They are below if you want to copy them onto your stylesheet:And just as a recap, our current hack looks like this:@property --100vw {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+
+:root {
+  --100vw: 100vw;
+  --int-width: calc(10000 * tan(atan2(var(--100vw), 10000px)));
+  --lower-bound: 400;
+  --upper-bound: 1200;
+
+  --wideness: calc(
+    (clamp(var(--lower-bound), var(--int-width), var(--upper-bound)) - var(--lower-bound)) / (var(--upper-bound) - var(--lower-bound))
+  );
+}OK, enough with the set-up. It’s time to use our new values and make the viewport transition. We first gotta identify  the title should be rearranged for smaller screens: as you saw in the initial demo, the first  goes up and right, while the second  does the opposite and goes down and left. So, the end position for both spans translates to the following values:h1 {
+  span:nth-child(1) {
+    display: inline-block; /* So transformations work */
+    position: relative;
+    bottom: 1.2lh;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  span:nth-child(2) {
+    display: inline-block; /* So transformations work */
+    position: relative;
+    bottom: -1.2lh;
+    left: -50%;
+    transform: translate(50%);
+  }
+}Before going forward, both formulas are basically the same, but with different signs. We can rewrite them at once bringing one new variable: . It will be either  or  and define which direction to run the transition:h1 {
+  span {
+    display: inline-block;
+    position: relative;
+    bottom: calc(1.2lh * var(--direction));
+    left: calc(50% * var(--direction));
+    transform: translate(calc(-50% * var(--direction)));
+    }
+
+  span:nth-child(1) {
+    --direction: 1;
+  }
+
+  span:nth-child(2) {
+    --direction: -1;
+  }
+}
+The next step would be bringing  into the formula so that the values change as the screen resizes. However, we can’t just multiply everything by . Why? Let’s see what happens if we do:span {
+  display: inline-block;
+  position: relative;
+  bottom: calc(var(--wideness) * 1.2lh * var(--direction));
+  left: calc(var(--wideness) * 50% * var(--direction));
+  transform: translate(calc(var(--wideness) * -50% * var(--direction)));
+}As you’ll see, everything is backwards! The words wrap when the screen is too wide, and unwrap when the screen is too narrow:Unlike our first examples, in which the transition ends as  increases from  to , we want to complete the transition as  decreases from  to , i.e. while the screen gets smaller the properties need to reach their end value. This isn’t a big deal, as we can rewrite our formula as a subtraction, in which the subtracting number gets bigger as  increases:span {
+  display: inline-block;
+  position: relative;
+  bottom: calc((1.2lh - var(--wideness) * 1.2lh) * var(--direction));
+  left: calc((50% - var(--wideness) * 50%) * var(--direction));
+  transform: translate(calc((-50% - var(--wideness) * -50%) * var(--direction)));
+}And now everything moves in the right direction while resizing the screen!However, you will notice how words move in a straight line and some words overlap while resizing. We can’t allow this since a user with a specific screen size may get stuck at that point in the transition. Viewport transitions are cool, but not at the expense of ruining the experience for certain screen sizes.Instead of moving in a straight line, words should move in a curve such that they pass around the central word. Don’t worry, making a curve here is easier than it looks: just move the spans twice as fast in the x-axis as they do in the y-axis. This can be achieved by multiplying  by , although we have to cap it at  so it doesn’t overshoot past the final value.span {
+ display: inline-block;
+ position: relative;
+ bottom: calc((1.2lh - var(--wideness) * 1.2lh) * var(--direction));
+ left: calc((50% - min(var(--wideness) * 2, 1) * 50%) * var(--direction));
+ transform: translate(calc((-50% - min(var(--wideness) * 2, 1) * -50%) * var(--direction)));
+}Look at that beautiful curve, just avoiding the central text:This is just the beginning!It’s surprising how powerful having the viewport as an integer can be, and what’s even crazier, the last example is one of the most basic transitions you could make with this typecasting hack. Once you do the initial setup, I can imagine a lot more possible transitions, and  is so useful, it’s like having a new CSS feature right now.I expect to see more about “Viewport Transitions” in the future because they do make websites feel more “alive” than adaptive.]]></content:encoded></item><item><title>This Week In React #221: State of React, React Router, Rsbuild, ProseMirror, Redux, React Hook Form, Base UI, RSC, React Admin | AI &amp; RN, Expo, Strict DOM, Polygen, Ignite, New Arch, Radon, macOS, Universal RSC, Gesture Handler | TypeScript, Prettier, esbuild...</title><link>https://thisweekinreact.com/newsletter/221</link><author></author><category>frontend</category><pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[Cyril and Matthieu from Theodo Apps here 👋, standing in for Seb to bring you the latest news from React and React Native!This week we’ve been carefully reading the State of React 2024 survey results, and also found quite a few interesting articles. Things have been quieter when it comes to new releases.Check our partner conf App.js, happening May 28-30 in 🇵🇱 Kraków! The biggest React Native and Expo-focused conference gives us a 15% discount with code "TWIR". Want to submit a talk? Hurry—CFP is closing soon!As always, thanks for supporting us on your favorite platform:When you wake up in the morning how many different yaml files do you want to manage? With EAS Workflows, you have .• Automate builds• Run e2e tests• Submit to stores• GitHub triggers, lint checks, slack notifications...so much moreWith EAS Workflows you can  all your builds/updates/submissions. Package up all the commands in a workflow and go drink a coffee. You deserve it.The results of State of React 2024 are out. It is a gold mine of information and we can’t possibly talk about everything here but here are a few highlights:Of the “new” React features, Server Components are the most popular with 40% of the ~7000 respondents having “used it”, probably thanks to Next.js… is the most disliked React API, and is going away!Have you heard about React’s Taint API? It looks like 80% of React devs have not, which is understandable since it’s experimental.There’s not that much movement in the #1 spot: Next.js, TanStack Query, Axios, Jest, and Zod are still the most frequently used.A few rising stars: Zustand and Vitest got more users, TanStack Start is #1 in interest even though almost no one has used it yet.Deploying Next.js apps on Vercel is easy, but optimizing hosting costs? That’s a different story.Join Chris Lojniewski and Jakub Dakowicz of Pagepro on  for a deep analysis of Vercel cost optimization strategies. Learn how to identify what drives your costs and reduce them with  like adjusting prefetching to avoid excessive function calls, choosing proper rendering methods, and trimming unnecessary data transfers.They’ll also show you how to minimize reliance on Vercel’s premium features with feature externalization - offloading analytics, image optimization, and password protection. Plus, they’ll break down when enterprise pricing is worth considering and when you’re better off with alternatives. .We don't talk too much about LLMs in this newsletter (we guess you already hear about it more than enough 😅) but with all the announcements this week we thought it was a good time to give you an update.The big news:  to add (React-)Native mobile apps support to Bolt. Right now you can preview your AI-generated apps on the web, but you need to download the code to go further. They plan to add an integration with EAS to deploy to production in the future.Some competitors also had things to announce:]]></content:encoded></item><item><title>Micro Frontends with Angular and Native Federation</title><link>https://blog.angular.dev/micro-frontends-with-angular-and-native-federation-7623cfc5f413?source=rss----447683c3d9a3---4</link><author>Manfred Steyer</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Mon, 10 Feb 2025 15:02:31 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[Enterprise-scale software systems are often implemented by several cross-functional teams. To enable such teams to provide new features efficiently, it is desirable to minimize the need for coordination between them. This calls for a modularization that verticalizes the system into low-coupled areas individual teams can take care of.There are several possibilities for implementing such high-level modules (also called verticals). For instance, they can be implemented using a respective folder structure or in the form of several libraries in a Monorepo. Micro Frontends go one step further and designate a separate application for each vertical. This architectural style promises several advantages, such as a high amount of team autonomy, but it also comes with numerous challenges.The first part of this article provides a critical overview of the benefits and drawbacks of Micro Frontends in the space of single-page applications. The second part discusses how such an architecture can be implemented with Native Federation, a community project built upon web standards that provide close integration with the Angular CLI.Motivation Behind Micro FrontendsLike Micro Services, Micro Frontends promise several advantages, both technically and with respect to the organization. As applying Micro Frontend architectures results in several smaller applications, testing, performance tuning, and isolating faults in one part of the overarching system becomes more effortless, according to several sources.However, the increased team autonomy was the main reason for applying this architectural style in the numerous cases I was involved in as a consultant. Individual teams are not blocked by waiting for other teams and can deploy separately anytime. This might not be a significant concern in a vast number of projects. Still, as soon as we talk about multi-team projects in a corporate environment with long communication paths and decision times, this aspect quickly becomes vital for the project’s success.Teams can also make their own decisions that best fit their goals — architecturally and technology-wise. Mixing multiple client-side frameworks in the same application is considered an anti-pattern and should be avoided. However, it can help to create a migration path over to a new stack in the long run. The concern in corporate environments is that we find software solutions that usually outlive the average technology stackSince Micro Frontends result in separate build processes, combining them with incremental builds, where only changed applications need to be rebuilt, has a massive potential for build-time improvements. For instance, the well-known Nx build system provides this option. Interestingly, this feature can also be used without applying other aspects such as aligning teams with individual applications or separate deployments. There is debate about whether leveraging this tempting option automatically leads to micro frontend architectures.A system consisting of several smaller applications can provide further organizational advantages: It’s easier to onboard new members and scale the development by adding further micro frontends. Team autonomy also leads to faster release cycles.Challenges to keep in mindEvery architectural decision has consequences that need to be evaluated, and Micro Frontends are no exception. Besides the positive consequences outlined above, there are also several negative ones to consider.For instance, individually developed Micro Frontends can diverge in UI/UX, leading to an inconsistent appearance. Also, loading several applications increases the number of bundles that need to be downloaded, adversely affecting loading times and increasing the memory pressure.Splitting an application into low-coupled parts might be a best practice in general. However, it is often hard to define the boundaries between verticals clearly enough to implement them as individual applications. Also, while having several small applications at first glance simplifies the implementation, integrating them into an overarching solution brings additional complexity.This leads to one of the biggest challenges I have seen in practice: we are moving away from a compile-time integration towards a runtime integration. This has severe consequences because we cannot easily foresee problems that might arise when individually developed and deployed applications start interacting at runtime. Besides the chance of technical conflicts, we also have to see that the current generation of SPA frameworks has not been built with such an operation mode in mind.Instead, modern SPA frameworks, especially Angular, have been developed to focus on compile time optimizations. A powerful compiler leverages type checks to identify technical conflicts and emits efficient source code optimized for tree-shaking. Furthermore, the CLI in the Angular space provides a highly optimized build process. An off-label usage necessary for implementing Micro Frontends undermines some of these achievements.Angular Does Not Officially Support Micro FrontendsFor all the outlined reasons, the Angular team recommends checking if alternatives, like implementing the individual verticals in Monorepos, which can be compiled together, are suitable. For instance, Google adopted this approach years ago and manages all its products and libraries in a single Monorepo.Of course, there are also ways to compensate for the disadvantages outlined here, and some of them, like establishing a design system to help with a consistent UI/UX or lazy loading individual system parts, might be needed in general. More details on such compensation strategies can be found in this survey of more than 150 Micro Frontend practitioners.All architectural decisions have benefits and drawbacks and should be evaluated with those considerations if you are going to implement a solution. If such an evaluation reveals that Micro Frontends provide more advantages than alternatives for achieving your very goals, the following sections provide you a well-lit path for implementing this architectural pattern with Angular.Micro Frontends with FederationModule Federation is a popular technology for implementing Micro Frontends and sharing dependencies. Shipped initially with webpack 5, it comes with a tooling-agnostic runtime and provides compile-time integration into  and . Besides the usage of the vite dev server, these technologies are currently not supported by the Angular CLI. However, promising community solutions like and AnalogJS allow them to be used with Angular. Nx and my CLI-plugin provide an effortless integration.Module Federation enables an application to load parts of other separately built and deployed applications lazily. The loading application is referred to as the host; the integrated ones are called remotes:Federation, if permitted by the library version, can share dependencies like Angular or RxJS between the host and remotes. There are several configuration options for preventing version mismatches. Since MF can only decide which dependencies to share at runtime, tree-shaking for shared parts is not possible.To inform the host about the remotes and their shared dependencies, Module Federation creates a metadata file, the so-called remote entry, during the build. This file needs to be loaded into the host.To fully decouple the idea of Federation from specific bundlers, I started the project Native Federation several years ago. Its API surface is very similar to that of Module Federation. The focus is on portability and standards like ECMAScript modules and Import Maps. Its compile time acts as a wrapper around existing bundlers. For the communication with the bundler, it uses an exchangeable adapter:The integration into the Angular CLI directly delegates to Angular’s  that leverages the fast bundler esbuild, and is the foundation for several current features like partial hydration. Because of its architecture, Native Federation can also be ported to further builders or other innovations the CLI might provide in the long run.For integrating Micro Frontends built with Angular’s webpack-based builder, there is a bridging solution allowing the loading of such remotes into a Native Federation host. This solution enables the gradual adoption of the CLI’s new  and permits the sharing of dependencies between the two kinds of Federation. One of the features added recently is support for SSR and Hydration, which is vital for performance-critical applications like public portals and web shops.Native Federation for Angular is close to the CLI’s , but its compilation mode is for shared dependencies differs. While it works well for packages that align with Angular’s Package Format, which is the case for all libraries built with the CLI, other libraries might provide some challenges, especially older ones that still use CommonJS or older conventions for providing metadata.Using Native Federation in AngularFor the setup Native Federation provides a schematic:ng add @angular-architects/native-federation --project mfe1 --port 4201 --type remoteThe switch  defines the kind of the application. Possible options are , , and . The latter is a host configured with a configuration file (federation manifest) during application start. This manifest informs the application of the locations of the remotes and can be switched out by another manifest during deployment:{    "mfe1" : "http://localhost:4201/remoteEntry.json"The key, in this case, is a short name the host uses to refer to the Micro Frontend. The value is the location of the remote entry with the metadata mentioned above. Alternatively, the manifest can be replaced by a service that informs the host of the current location of all deployed remotes and acts as a Micro Frontend registry.The schematic configures the Native Federation builder delegation to the  and creates a configuration file :const { withNativeFederation, shareAll }     = require('@angular-architects/native-federation/config');module.exports = withNativeFederation({    './Component': './projects/mfe1/src/app/app.component.ts',    ...shareAll({}),    'rxjs/ajax',    'rxjs/testing',    // Add further packages you don't need at runtimeThe configuration assigns a unique name to the remote or host and defines which dependencies to share. Instead of providing an exhaustive list of all the dependencies to share, the configuration uses the helper function , which adds all dependencies found in the project’s . The skip list is used to opt out of sharing some of them or their secondary entry points.Remotes also define exposed EcmaScript modules that can be loaded into the shell. For this, the  node maps the paths of the modules to short names such as  in the example shown.The schematic also adds code to initialize Native Federation to the . For the host, this code points to the federation manifest:import { initFederation } from '@angular-architects/native-federation';initFederation('federation.manifest.json')  .catch(err => console.error(err))  .then(_ => import('./bootstrap'))  .catch(err => console.error(err));After initializing federation, the file , also created by the schematic, is loaded. It contains the usual code for bootstrapping Angular, e.g., via  when the application uses Standalone Components.To load a component or routing configuration exposed by a remote, traditional lazy loading is combined with Native Federation’s  function:import { loadRemoteModule } from '@angular-architects/native-federation';export const APP_ROUTES: Routes = [  [...]    path: 'flights',      loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),];Here,  is the key defined in the manifest, and  points to the respective exposed module in the remote’s federation configuration.More information on Native Federation can be found in this blog article and in the project’s readme, which also links to a tutorial.Micro Frontends promise significant advantages for enterprise-scale applications, such as enhanced team autonomy and independent deployment. These benefits make this architectural style particularly appealing in multi-team corporate environments where streamlined communication and rapid development cycles are critical. Additionally, they support gradual migration to new technologies and optimize build times by leveraging incremental builds.However, these advantages come with trade-offs. Micro Frontends can lead to inconsistent UI/UX, increased load times, and complex runtime integrations. Defining clear vertical boundaries and managing inter-application communication add to the challenge. Furthermore, frameworks like Angular, designed for compile-time optimization, face limitations in runtime integration scenarios. The Angular team, therefore, recommends alternatives such as splitting an application into libraries managed within a Monorepo, which aligns better with Angular’s strengths in type safety and efficient compilation.Module Federation has emerged as a popular solution to address some challenges by enabling lazy loading and dependency sharing. Native Federation builds on these concepts with a focus on standards and portability. It provides a seamless integration into the Angular CLI and its performant esbuild-based , which is also the foundation for advanced features like SSR and hydration.Together with this team at , Manfred Steyer helps companies around the globe establish maintainable Angular-based Architectures. He is a trainer, consultant, and Google Developer Expert (GDE) and writes for O’Reilly, the German Java Magazin, windows.developer, and Heise Developer. Furthermore, he regularly speaks at conferences.]]></content:encoded></item><item><title>Organizing Design System Component Patterns With CSS Cascade Layers</title><link>https://css-tricks.com/organizing-design-system-component-patterns-with-css-cascade-layers/</link><author>Ryan Trimble</author><category>frontend</category><pubDate>Mon, 10 Feb 2025 14:06:52 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’m trying to come up with ways to make components more customizable, more efficient, and easier to use and understand, and I want to describe a pattern I’ve been leaning into using CSS Cascade Layers.I enjoy organizing code and find cascade layers a fantastic way to organize code explicitly as the cascade looks at it. The neat part is, that as much as it helps with “top-level” organization, cascade layers can be nested, which allows us to author more precise styles based on the cascade.The only downside here is your imagination, nothing stops us from over-engineering CSS. And to be clear, you may very well consider what I’m about to show you as a form of over-engineering. I think I’ve found a balance though, keeping things simple yet organized, and I’d like to share my findings.Let’s explore a pattern for writing components in CSS using a button as an example. Buttons are one of the more popular components found in just about every component library. There’s good reason for that popularity because buttons can be used for a variety of use cases, including:performing actions, like opening a drawer,navigating to different sections of the UI, andholding some form of state, such as  or .And buttons come in several different flavors of markup, like , , and . There are even more ways to make buttons than that, if you can believe it.On top of that, different buttons perform different functions and are often styled accordingly so that a button for one type of action is distinguished from another. Buttons also respond to state changes, such as when they are hovered, active, and focused. If you have ever written CSS with the BEM syntax, we can sort of think  within the context of cascade layers..button {}
+.button-primary {}
+.button-secondary {}
+.button-warning {}
+/* etc. */Okay, now, let’s write some code. Specifically, let’s create a few different types of buttons. We’ll start with a  class that we can set on any element that we want to be styled as, well, a button! We already know that buttons come in different flavors of markup, so a generic  class is the most reusable and extensible way to select one or all of them..button {
+  /* Styles common to all buttons */
+}This is where we can insert our very first cascade layer! Remember, the reason we want a cascade layer in the first place is that it allows us to set the CSS Cascade’s reading order when evaluating our styles. We can tell CSS to evaluate one layer first, followed by another layer, then another — all according to the order we want. This is an incredible feature that grants us superpower control over which styles “win” when applied by the browser.We’ll call this layer  because, well, buttons are a type of component. What I like about this naming is that it is generic enough to support other components in the future as we decide to expand our design system. It scales with us while maintaining a nice separation of concerns with other styles we write down the road that maybe aren’t specific to components./* Components top-level layer */
+@layer components {
+  .button {
+    /* Styles common to all buttons */
+  }
+}Here is where things get a little weird. Did you know you can  cascade layers  classes? That’s totally a thing. So, check this out, we can introduce a new layer inside the  class that’s already inside its own layer. Here’s what I mean:/* Components top-level layer */
+@layer components {
+
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      /* Styles */
+    }
+  }
+}This is how the browser interprets that layer within a layer at the end of the day:@layer components {
+  @layer elements {
+    .button {
+      /* button styles... */
+    }
+  }
+}So far, we’ve established a  class inside of a cascade layer that’s designed to hold any type of  in our design system. Inside that  is another cascade layer, this one for selecting the different types of buttons we might encounter in the markup. We talked earlier about buttons being , , or  and this is how we can individually select style each type.We can use the  pseudo-selector function as that is akin to saying, “If this  an  element, then apply these styles.”/* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      /* styles common to all buttons */
+
+      &:is(a) {
+        /* <a> specific styles */
+      }
+
+      &:is(button) {
+        /* <button> specific styles */
+      }
+
+      /* etc. */
+    }
+  }
+}Defining default button stylesI’m going to fill in our code with the common styles that apply to all buttons. These styles sit at the top of the  layer so that they are applied to any and all buttons, regardless of the markup. Consider them default button styles, so to speak./* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      background-color: darkslateblue;
+      border: 0;
+      color: white;
+      cursor: pointer;
+      display: grid;
+      font-size: 1rem;
+      font-family: inherit;
+      line-height: 1;
+      margin: 0;
+      padding-block: 0.65rem;
+      padding-inline: 1rem;
+      place-content: center;
+      width: fit-content;
+    }
+  }
+}Defining button state stylesWhat should our default buttons do when they are hovered, clicked, or in focus? These are the different  that the button might take when the user interacts with them, and we need to style those accordingly.I’m going to create a new cascade sub-layer directly under the  sub-layer called, creatively, :/* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      /* Styles common to all buttons */
+    }
+
+    /* Component states layer */
+    @layer states {
+      /* Styles for specific button states */
+    }
+  }
+}Pause and reflect here. What states should we target? What do we want to change for each of these states?Some states may share similar property changes, such as  and  having the same background color. Luckily, CSS gives us the tools we need to tackle such problems, using the  function to group property changes based on the state. Why  instead of ?  comes with zero specificity, meaning it’s a lot easier to override than , which takes the specificity of the element with the highest specificity score in its arguments. Maintaining low specificity is a virtue when it comes to writing scalable, maintainable CSS./* Component states layer */
+@layer states {
+  &:where(:hover, :focus-visible) {
+    /* button hover and focus state styles */
+  }
+}But how do we update the button’s styles in a  way? What I mean by that is how do we make sure that the button  like it’s hovered or in focus? We could just slap a new background color on it, but ideally, the color should be related to the  set in the  layer.So, let’s refactor things a bit. Earlier, I set the  element’s  to . I want to reuse that color, so it behooves us to make that into a CSS variable so we can update it once and have it apply everywhere. Relying on variables is yet another virtue of writing scalable and maintainable CSS.I’ll create a new variable called --button-background-color that is initially set to  and then set it on the default button styles:/* Component elements layer */
+@layer elements {
+  --button-background-color: darkslateblue;
+
+  background-color: var(--button-background-color);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  display: grid;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1;
+  margin: 0;
+  padding-block: 0.65rem;
+  padding-inline: 1rem;
+  place-content: center;
+  width: fit-content;
+}Now that we have a color stored in a variable, we can set that same variable on the button’s hovered and focused states in our other layer, using the relatively new  function to convert  to a lighter color when the button is hovered or in focus.Back to our  layer! We’ll first mix the color in a new CSS variable called :/* Component states layer */
+@layer states {
+  &:where(:hover, :focus-visible) {
+    /* custom property only used in state */
+    --state-background-color: color-mix(
+      in srgb, 
+      var(--button-background-color), 
+      white 10%
+    );
+  }
+}We can then apply that color as the background color by updating the  property./* Component states layer */
+@layer states {
+  &:where(:hover, :focus-visible) {
+    /* custom property only used in state */
+    --state-background-color: color-mix(
+      in srgb, 
+      var(--button-background-color), 
+      white 10%
+    );
+
+    /* applying the state background-color */
+    background-color: var(--state-background-color);
+  }
+}Defining modified button stylesAlong with  and  layers, you may be looking for some sort of variation in your components, such as . That’s because not all buttons are going to look like your default button. You might want one with a green background color for the user to confirm a decision. Or perhaps you want a red one to indicate danger when clicked. So, we can take our existing default button styles and modify them for those specific use cases If we think about the order of the cascade — always flowing from top to bottom — we don’t want the modified styles to affect the styles in the states layer we just made. So, let’s add a new  layer in between  and :/* Components top-level layer */
+@layer components {
+
+  .button {
+  /* Component elements layer */
+  @layer elements {
+    /* etc. */
+  }
+
+  /* Component modifiers layer */
+  @layer modifiers {
+    /* new layer! */
+  }
+
+  /* Component states layer */
+  @layer states {
+    /* etc. */
+  }
+}Similar to how we handled , we can now update the --button-background-color variable for each button modifier. We could modify the styles further, of course, but we’re keeping things fairly straightforward to demonstrate how this system works.We’ll create a new class that modifies the  of the default button from  to . Again, we can rely on the  selector because we want the added specificity in this case. That way, we override the default button style with the modifier class. We’ll call this class  (green is a “successful” color) and feed it to :/* Component modifiers layer */
+@layer modifiers {
+  &:is(.success) {
+    --button-background-color: darkgreen;
+  }
+}If we add the  class to one of our buttons, it becomes  instead  which is exactly what we want. And since we already do some -ing in the  layer, we’ll automatically inherit those hover and focus styles, meaning  is lightened in those states./* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      --button-background-color: darkslateblue;
+
+      background-color: var(--button-background-color);
+      /* etc. */
+
+    /* Component modifiers layer */
+    @layer modifiers {
+      &:is(.success) {
+        --button-background-color: darkgreen;
+      }
+    }
+
+    /* Component states layer */
+    @layer states {
+      &:where(:hover, :focus) {
+        --state-background-color: color-mix(
+          in srgb,
+          var(--button-background-color),
+          white 10%
+        );
+
+        background-color: var(--state-background-color);
+      }
+    }
+  }
+}We can refactor any CSS property we need to modify into a CSS custom property, which gives us a lot of room for customization./* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      --button-background-color: darkslateblue;
+
+      --button-border-width: 1px;
+      --button-border-style: solid;
+      --button-border-color: transparent;
+      --button-border-radius: 0.65rem;
+
+      --button-text-color: white;
+
+      --button-padding-inline: 1rem;
+      --button-padding-block: 0.65rem;
+
+      background-color: var(--button-background-color);
+      border: 
+        var(--button-border-width) 
+        var(--button-border-style) 
+        var(--button-border-color);
+      border-radius: var(--button-border-radius);
+      color: var(--button-text-color);
+      cursor: pointer;
+      display: grid;
+      font-size: 1rem;
+      font-family: inherit;
+      line-height: 1;
+      margin: 0;
+      padding-block: var(--button-padding-block);
+      padding-inline: var(--button-padding-inline);
+      place-content: center;
+      width: fit-content;
+    }
+
+    /* Component modifiers layer */
+    @layer modifiers {
+      &:is(.success) {
+        --button-background-color: darkgreen;
+      }
+
+      &:is(.ghost) {
+        --button-background-color: transparent;
+        --button-text-color: black;
+        --button-border-color: darkslategray;
+        --button-border-width: 3px;
+      }
+    }
+
+    /* Component states layer */
+    @layer states {
+      &:where(:hover, :focus) {
+        --state-background-color: color-mix(
+          in srgb,
+          var(--button-background-color),
+          white 10%
+        );
+
+        background-color: var(--state-background-color);
+      }
+    }
+  }
+}P.S. Look closer at that demo and check out how I’m adjusting the button’s background using  — then go read Sara Joy’s “Come to the  Side” for a thorough rundown of how that works!What do you think? Is this something you would use to organize your styles? I can see how creating a system of cascade layers could be overkill for a small project with few components. But even a little toe-dipping into things like we just did illustrates how much power we have when it comes to managing — and even taming — the CSS Cascade. Buttons are deceptively complex but we saw how few styles it takes to handle everything from the default styles to writing the styles for their states and modified versions.]]></content:encoded></item><item><title>Make Any File a Template Using This Hidden macOS Tool</title><link>https://css-tricks.com/make-any-file-a-template-using-this-hidden-macos-tool/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Mon, 10 Feb 2025 13:54:00 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Stationery Pad is a handy way to nix a step in your workflow if you regularly use document templates on your Mac. The long-standing Finder feature essentially tells a file’s parent application to open a copy of it by default, ensuring that the original file remains unedited.This works for any kind of file, including HTML, CSS, JavaScriprt, or what have you. You can get there with + or right-click and select “Get info.”]]></content:encoded></item><item><title>TypeScript: extracting parts of composite types via infer</title><link>https://2ality.com/2025/02/typescript-infer-operator.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore how we can extract parts of composite types via the  operator.It helps if you are loosely familiar with conditional types. You can check out section “Conditional types” in “Tackling TypeScript” to read up on them.]]></content:encoded></item><item><title>TypeDoc: testing code examples in doc comments</title><link>https://2ality.com/2025/02/testing-typedoc-examples.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 9 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[TypeDoc now lets us refer to parts of other files via . In this blog post, I explain how that works and why it’s useful.]]></content:encoded></item><item><title>TypeScript: the satisfies operator</title><link>https://2ality.com/2025/02/satisfies-operator.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sat, 8 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[TypeScript’s  operator lets us check the type of a value (mostly) without influencing it. In this blog post, we examine how exactly it works and where it’s useful.]]></content:encoded></item><item><title>Oracle dabbles in some JavaScript comedy</title><link>https://javascriptweekly.com/issues/722</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 7 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[🍪 CookieConsent 3.1 – A lightweight, pure JS, GDPR-compliant cookie consent mechanism with which to  meet regulatory requirements.Happy DOM 17.0 – Cross-runtime JS implementation of a web browser  UI. Now supports ES modules.get-value 4.0 – Use property paths () get a nested value from an object.mp4-muxer 5.2 – MP4 multiplexer in pure TypeScript with support for the WebCodecs API, video and audio.Wasp 0.16 – Wasp is a Rails-like framework using Node, React & Prisma.RxDB 16.5 – Offline-first, reactive database for JS apps.]]></content:encoded></item><item><title>Container query units: cqi and cqb</title><link>https://css-tricks.com/container-query-units-cqi-and-cqb/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 6 Feb 2025 15:29:35 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[A little gem from Kevin Powell’s “HTML & CSS Tip of the Week” website, reminding us that using container queries opens up container query units for sizing things based on the size of the queried container. and  are similar to  and , but instead of caring about the viewport, they care about their containers size. is your inline-size unit (usually width in horizontal writing modes), while handles block-size (usually height).So,  is equivalent to 1% of the container’s  size, and  is equal to 1% of the container’s  size. I’d be remiss not to mention the  and  units, which evaluate either the container’s inline  block size. So, we could say  and that equals 50% of the container’s size, but it will look at both the container’s inline and block size, determine which is greater, and use that to calculate the final computed value.That’s a nice dash of conditional logic. It can help maintain proportions if you think the writing mode might change on you, such as moving from horizontal to vertical.]]></content:encoded></item><item><title>Read-only accessibility in TypeScript</title><link>https://2ality.com/2025/02/typescript-readonly.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 6 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at how can make things “read-only” in TypeScript – mainly via the keyword .]]></content:encoded></item><item><title>Baseline Status in a WordPress Block</title><link>https://css-tricks.com/baseline-status-in-a-wordpress-block/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2024/11/Screen-Recording-2024-11-05-at-2.56.06 PM.mp4" length="" type=""/><pubDate>Wed, 5 Feb 2025 14:58:18 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Of course, we could simply drop the HTML component into the page. But I never know where we’re going to use something like this. The Almanac, obs. But I’m sure there are times where embedded it in other pages and posts makes sense.That’s exactly what WordPress blocks are good for. We can take an already reusable component and make it repeatable when working in the WordPress editor. So that’s what I did! That component you see up there is the  web component formatted as a WordPress block. Let’s drop another one in just for kicks.Pretty neat! I saw that Pawel Grzybek made an equivalent for Hugo. There’s an Astro equivalent, too. Because I’m fairly green with WordPress block development I thought I’d write a bit up on how it’s put together. There are still rough edges that I’d like to smooth out later, but this is a good enough point to share the basic idea.I used the  package to bootstrap and initialize the project. All that means is I ‘d into the  directory from the command line and ran the install command to plop it all in there.npm install @wordpress/create-blockThe  file is where the plugin is registered. And yes, it’s looks completely the same as it’s been for years, just not in a  file like it is for themes. The difference is that the  package does some lifting to register the widget so I don’t have to:<?php
+/**
+ * Plugin Name:       Baseline Status
+ * Plugin URI:        https://css-tricks.com
+ * Description:       Displays current Baseline availability for web platform features.
+ * Requires at least: 6.6
+ * Requires PHP:      7.2
+ * Version:           0.1.0
+ * Author:            geoffgraham
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       baseline-status
+ *
+ * @package CssTricks
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+  exit; // Exit if accessed directly.
+}
+
+function csstricks_baseline_status_block_init() {
+  register_block_type( __DIR__ . '/build' );
+}
+add_action( 'init', 'csstricks_baseline_status_block_init' );
+
+?>The real meat is in  directory.The  package also did some filling of the blanks in the  file based on the onboarding process:{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "css-tricks/baseline-status",
+  "version": "0.1.0",
+  "title": "Baseline Status",
+  "category": "widgets",
+  "icon": "chart-pie",
+  "description": "Displays current Baseline availability for web platform features.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "baseline-status",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}Going off some tutorials published right here on CSS-Tricks, I knew that WordPress blocks render twice — once on the front end and once on the back end — and there’s a file for each one in the  folder: Handles the front-end view Handles the back-end viewThe front-end and back-end markupCool. I started with the  web component’s markup:<script src="https://cdn.jsdelivr.net/npm/baseline-status@1.0.8/baseline-status.min.js" type="module"></script>
+<baseline-status featureId="anchor-positioning"></baseline-status>I’d hate to inject that  every time the block pops up, so I decided to enqueue the file conditionally based on the block being displayed on the page. This is happening in the main  file which I treated sorta the same way as a theme’s  file. It’s just where helper functions go.// ... same code as before
+
+// Enqueue the minified script
+function csstricks_enqueue_block_assets() {
+  wp_enqueue_script(
+    'baseline-status-widget-script',
+    'https://cdn.jsdelivr.net/npm/baseline-status@1.0.4/baseline-status.min.js',
+    array(),
+    '1.0.4',
+    true
+  );
+}
+add_action( 'enqueue_block_assets', 'csstricks_enqueue_block_assets' );
+
+// Adds the 'type="module"' attribute to the script
+function csstricks_add_type_attribute($tag, $handle, $src) {
+  if ( 'baseline-status-widget-script' === $handle ) {
+    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+  }
+  return $tag;
+}
+add_filter( 'script_loader_tag', 'csstricks_add_type_attribute', 10, 3 );
+
+// Enqueues the scripts and styles for the back end
+function csstricks_enqueue_block_editor_assets() {
+  // Enqueues the scripts
+  wp_enqueue_script(
+    'baseline-status-widget-block',
+    plugins_url( 'block.js', __FILE__ ),
+    array( 'wp-blocks', 'wp-element', 'wp-editor' ),
+    false,
+  );
+
+  // Enqueues the styles
+  wp_enqueue_style(
+    'baseline-status-widget-block-editor',
+    plugins_url( 'style.css', __FILE__ ),
+    array( 'wp-edit-blocks' ),
+    false,
+  );
+}
+add_action( 'enqueue_block_editor_assets', 'csstricks_enqueue_block_editor_assets' );The final result bakes the script directly into the plugin so that it adheres to the WordPress Plugin Directory guidelines. If that wasn’t the case, I’d probably keep the hosted script intact because I’m completely uninterested in maintaining it. Oh, and that csstricks_add_type_attribute() function is to help import the file as an ES module. There’s a  action available to hook into that should handle that, but I couldn’t get it to do the trick.With that in hand, I can put the component’s markup into a template. The  file is where all the front-end goodness resides, so that’s where I dropped the markup:<baseline-status
+  <?php echo get_block_wrapper_attributes(); ?> 
+  featureId="[FEATURE]">
+</baseline-status>That  thing is recommended by the WordPress docs as a way to output all of a block’s information for debugging things, such as which features it ought to support.is a placeholder that will eventually tell the component which web platform to render information about. We may as well work on that now. I can register attributes for the component in :"attributes": { "showBaselineStatus": {
+  "featureID": {
+  "type": "string"
+  }
+},Now we can update the markup in  to echo the  when it’s been established.<baseline-status
+  <?php echo get_block_wrapper_attributes(); ?> 
+  featureId="<?php echo esc_html( $featureID ); ?>">
+</baseline-status>There will be more edits to that markup a little later. But first, I need to put the markup in the  file so that the component renders in the WordPress editor when adding it to the page.<baseline-status { ...useBlockProps() } featureId={ featureID }></baseline-status> is the JavaScript equivalent of get_block_wrapper_attibutes() and can be good for debugging on the back end.At this point, the block is fully rendered on the page when dropped in! The problems are:It’s not passing in the feature I want to display.I’ll work on the latter first. That way, I can simply plug the right variable in there once everything’s been hooked up.One of the nicer aspects of WordPress DX is that we have direct access to the same controls that WordPress uses for its own blocks. We import them and extend them where needed.I started by importing the stuff in :import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { PanelBody, TextControl } from '@wordpress/components';
+import './editor.scss';This gives me a few handy things: are good for debugging. are what can be debugged. is the main wrapper for the block settings. is the field I want to pass into the markup where  currently is. provides styles for the controls.Before I get to the controls, there’s an  function needed to use as a wrapper for all the work:export default function Edit( { attributes, setAttributes } ) {
+  // Controls
+}First is  and the :export default function Edit( { attributes, setAttributes } ) {
+  // React components need a parent element
+  <>
+    <InspectorControls>
+      <PanelBody title={ __( 'Settings', 'baseline-status' ) }>
+      // Controls
+      </PanelBody>
+    </InspectorControls>
+  </>
+}export default function Edit( { attributes, setAttributes } ) {
+  <>
+    <InspectorControls>
+      <PanelBody title={ __( 'Settings', 'baseline-status' ) }>
+        // Controls
+        <TextControl
+          label={ __(
+            'Feature', // Input label
+            'baseline-status'
+          ) }
+          value={ featureID || '' }
+          onChange={ ( value ) =>
+            setAttributes( { featureID: value } )
+          }
+        />
+     </PanelBody>
+    </InspectorControls>
+  </>
+}Block settings with a text inputAll the logic for handling stateOh yeah! Can’t forget to define the  variable because that’s what populates in the component’s markup. Back in :const { featureID } = attributes;In short: The feature’s ID is what constitutes the block’s attributes. Now I need to register that attribute so the block recognizes it. Back in  in a new section:"attributes": {
+  "featureID": {
+    "type": "string"
+  }
+},Pretty straightforward, I think. Just a single text field that’s a string. It’s at this time that I can  wire it up to the front-end markup in :<baseline-status
+  <?php echo get_block_wrapper_attributes(); ?>
+  featureId="<?php echo esc_html( $featureID ); ?>">
+</baseline-status>I struggled with this more than I care to admit. I’ve dabbled with styling the Shadow DOM but only academically, so to speak. This is the first time I’ve attempted to style a web component with Shadow DOM parts on something being used in production.If you’re new to Shadow DOM, the basic idea is that it prevents styles and scripts from “leaking” in or out of the component. This is a big selling point of web components because it’s so darn easy to drop them into any project and have them “just” work.A few other more articles I used:First off, I knew I could select the  element directly without any classes, IDs, or other attributes:baseline-status {
+  /* Styles! */
+}I peeked at the script’s source code to see what I was working with. I had a few light styles I could use right away on the type selector:baseline-status {
+  background: #000;
+  border: solid 5px #f8a100;
+  border-radius: 8px;
+  color: #fff;
+  display: block;
+  margin-block-end: 1.5em;
+  padding: .5em;
+}I noticed a CSS color variable in the source code that I could use in place of hard-coded values, so I redefined them and set them where needed:baseline-status {
+  --color-text: #fff;
+  --color-outline: var(--orange);
+
+  border: solid 5px var(--color-outline);
+  border-radius: 8px;
+  color: var(--color-text);
+  display: block;
+  margin-block-end: var(--gap);
+  padding: calc(var(--gap) / 4);
+}Now for a tricky part. The component’s markup looks close to this in the DOM when fully rendered:<baseline-status class="wp-block-css-tricks-baseline-status" featureid="anchor-positioning"></baseline-status>
+<h1>Anchor positioning</h1>
+<details>
+  <summary aria-label="Baseline: Limited availability. Supported in Chrome: yes. Supported in Edge: yes. Supported in Firefox: no. Supported in Safari: no.">
+    <baseline-icon aria-hidden="true" support="limited"></baseline-icon>
+    <div class="baseline-status-title" aria-hidden="true">
+      <div>Limited availability</div>
+        <div class="baseline-status-browsers">
+        <!-- Browser icons -->
+        </div>
+    </div>
+  </summary><p>This feature is not Baseline because it does not work in some of the most widely-used browsers.</p><p><a href="https://github.com/web-platform-dx/web-features/blob/main/features/anchor-positioning.yml">Learn more</a></p></details>
+<baseline-status class="wp-block-css-tricks-baseline-status" featureid="anchor-positioning"></baseline-status>I wanted to play with the idea of hiding the  element in some contexts but thought twice about it because  displaying the title only really works for Almanac content when you’re on the page for the same feature as what’s rendered in the component. Any other context and the heading is a “need” for providing context as far as what feature we’re looking at. Maybe that can be a future enhancement where the heading can be toggled on and off.This is freely available in the WordPress Plugin Directory as of today! This is my very first plugin I’ve submitted to WordPress on my own behalf, so this is really exciting for me!This is far from fully baked but definitely gets the job done for now. In the future it’d be nice if this thing could do a few more things: The widget does not update on the back end until the page refreshes. I’d love to see the final rendering before hitting Publish on something. I got it where typing into the text input is instantly reflected on the back end. It’s just that the component doesn’t re-render to show the update. As in “large” and “small”.  Toggle to hide or show, depending on where the block is used.]]></content:encoded></item><item><title>This Week In React #220: Next.js, Astro, Nuqs, CRA, React Scan, Fumadocs, Fusion, Radix, Inertia | Sortables, Contributors Summit, Windows, Deep linking, Oklab, Audio, BottomTabs, Metro, OTA | TypeScript, Angular, Node.js, Vite</title><link>https://thisweekinreact.com/newsletter/220</link><author></author><category>frontend</category><pubDate>Wed, 5 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have a good variety of React articles and Next.js is finally adding support for Node.js runtime middleware!Mobile developers will also discover future plans for React Native, including desktop support from Microsoft. A new sortables drag & drop library should unlock new interactions in your app, considering it's quite hard to build all this yourself.TypeScript continues to progress with a new beta including a flag to support the newly added native Node.js support, and the upcoming browser support. A polyfill for native browser support is already available!I'm trying something new this week, splitting the newsletter title keywords with a , following the pattern React keywords | React Native keywords | Other keywords. Do you think this is useful?As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.A much-awaited feature for the Next.js community. The latest v15.2 canary has a new experimental.nodeMiddleware flag letting you opt-in for , enabling you to use Node.js APIs in middleware, and remove the constraints of being limited to APIs compatible with the edge runtime.Sentry's new bi-weekly live demos will show you how to catch, fix and prevent issues fast. Join one of their engineers Thursdays at 1 PM ET for 25 minute tour—no slides, no fluff, just code-level visibility from pre-release to production. RSVPA new powerful React Native library for re-ordering items with drag & drop gestures, including features such as:Support for Grid and Flex layoutsSupport for different item sizes, spacing, and arrangementsAuto-scrolling when dragging outside screenSeamless layout animationsSimple API, full TypeScript supportCompatible with Expo and both architectures]]></content:encoded></item><item><title>Tutorial: publishing ESM-based npm packages with TypeScript</title><link>https://2ality.com/2025/02/typescript-esm-packages.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Tue, 4 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[During the last two years, ESM support in TypeScript, Node.js and browsers has made a lot of progress. In this blog post, I explain my modern setup that is relatively simple – compared to what we had to do in the past:]]></content:encoded></item><item><title>Compiling CSS With Vite and Lightning CSS</title><link>https://css-tricks.com/compiling-css-with-vite-and-lightning-css/</link><author>Ryan Trimble</author><category>frontend</category><pubDate>Mon, 3 Feb 2025 15:23:37 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Suppose you follow CSS feature development as closely as we do here at CSS-Tricks. In that case, you may be like me and eager to use many of these amazing tools but find browser support sometimes lagging behind what might be considered “modern” CSS (whatever that means).Even if browser vendors all have a certain feature released, users might not have the latest versions!We can certainly plan for this a number of ways:feature detection with  designsFor even extra help, we turn to build tools. Chances are, you’re already using some sort of build tool in your projects today. CSS developers are  familiar with CSS pre-processors (such as Sass or Less), but if you don’t know, these are tools capable of compiling many CSS files into one stylesheet. CSS pre-processors help make organizing CSS a lot easier, as you can move parts of CSS into related folders and import things as needed.Pre-processors do not  provide organizational superpowers, though. Sass gave us a crazy list of features to work with, including:For a while, this big feature set provided a means of filling gaps missing from CSS, making Sass (or whatever preprocessor you fancy) feel like a necessity when starting a new project. CSS has evolved a lot since the release of Sass — we have so many of those features in CSS today — so it doesn’t quite feel that way anymore, especially now that we have native CSS nesting and custom properties.Along with CSS pre-processors, there’s also the concept of -processing. This type of tool usually helps transform compiled CSS in different ways, like auto-prefixing properties for different browser vendors, code minification, and more. PostCSS is the big one here, giving you tons of ways to manipulate and optimize your code, another step in the build pipeline.In many implementations I’ve seen, the build pipeline typically runs roughly like this:CSS is usually handled in that first part, which includes running CSS pre- and post-processors (though post-processing might also happen after Step 2). As mentioned, the continued evolution of CSS makes it less necessary for a tool such as Sass, so we might have an opportunity to save some time.Awarded “” and “” from the State of JavaScript 2024 survey, Vite certainly seems to be one of the more popular build tools available. Vite is mainly used to build reactive JavaScript front-end frameworks, such as Angular, React, Svelte, and Vue (made by the same developer, of course). As the name implies, Vite is crazy fast and can be as simple or complex as you need it, and has become one of my favorite tools to work with.Vite is mostly thought of as a  tool for  projects, but you can use it without writing any JavaScript at all. Vite works with Sass, though you still need to install Sass as a dependency to include it in the build pipeline. On the other hand, Vite also automatically supports compiling CSS with no extra steps. We can organize our CSS code how we see fit, with no or very minimal configuration necessary. Let’s check that out.We will be using Node and npm to install Node packages, like Vite, as well as commands to run and build the project. If you do not have  or  installed, please check out the download page on their website.Navigate a terminal to a safe place to create a new project, then run:The command line interface will ask a few questions, you can keep it as simple as possible by choosing  and  which will provide you with a starter template including some no-frameworks-attached HTML, CSS, and JavaScript files to help get you started.Before running other commands, open the folder in your IDE (integrated development environment, such as VSCode) of choice so that we can inspect the project files and folders.If you would like to follow along with me,  the following files that are unnecessary for demonstration:We should only have the following files left in out project folder:Let’s also replace the contents of  with an empty HTML template:<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <title>CSS Only Vite Project</title>
+  </head>
+  <body>
+    <!-- empty for now -->
+  </body>
+</html>One last piece to set up is Vite’s dependencies, so let’s run the npm installation command:A short sequence will occur in the terminal. Then we’ll see a new folder called  and a  file added in our file viewer. is used to house all package files installed through node package manager, and allows us to import and use installed packages throughout our applications. is a file usually used to make sure a development team is all using the same versions of packages and dependencies.We most likely won’t need to touch these things, but they are necessary for Node and Vite to process our code during the build. Inside the project’s root folder, we can create a  folder to contain the CSS we will write. Let’s create one file to begin with, , which we can use to test out Vite.├── public/
+├── styles/
+|   └── main.css
+└──index.htmlIn our  file, inside the  section, we can include a  tag pointing to the CSS file:<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>CSS Only Vite Project</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>Let’s add a bit of CSS to :body {
+  background: green;
+}It’s not much, but it’s all we’ll need at the moment! In our terminal, we can now run the Vite build command using :With everything linked up properly, Vite will build things based on what is available within the  file, including our linked CSS files. The build will be  fast, and you’ll be returned to your terminal prompt.The newly generated  folder is Vite’s default output directory, which we can open and see our processed files. Checking out  (the filename will include a unique hash for cache busting), and you’ll see the code we wrote, minified here.Now that we know how to make Vite aware of our CSS, we will probably want to start writing more CSS for it to compile.As quick as Vite is with our code, constantly re-running the build command would still get very tedious. Luckily, Vite provides its own development server, which includes a live environment with hot module reloading, making changes appear instantly in the browser. We can start the Vite development server by running the following terminal command:Vite uses the default network port  for the development server. Opening the  address in your browser will display a blank screen with a green background.Adding any HTML to the  or CSS to , Vite will reload the page to display changes. To stop the development server, use the keyboard shortcut + or close the terminal to kill the process.At this point, you pretty much know all you need to know about how to compile CSS files with Vite. Any CSS file you link up will be included in the built file.Organizing CSS into Cascade LayersOne of the items on my 2025 CSS Wishlist is the ability to apply a cascade layer to a  tag. To me, this might be helpful to organize CSS in a meaningful ways, as well as fine control over the cascade, with the benefits cascade layers provide. Unfortunately, this is a rather difficult ask when considering the way browsers paint styles in the viewport. This type of functionality is being discussed between the CSS Working Group and TAG, but it’s unclear if it’ll move forward.With Vite as our build tool, we can replicate the concept as a way to organize our built CSS. Inside the  file, let’s add the @layer at-rule to set the cascade order of our layers. I’ll use a couple of layers here for this demo, but feel free to customize this setup to your needs./* styles/main.css */
+@layer reset, layouts;This is all we’ll need inside our , let’s create another file for our reset. I’m a fan of my friend Mayank‘s modern CSS reset, which is available as a Node package. We can install the reset by running the following terminal command:npm install @acab/reset.cssNow, we can import Mayank’s reset into our newly created  file, as a cascade layer:/* styles/reset.css */
+@import '@acab/reset.css' layer(reset);If there are any other reset layer stylings we want to include, we can open up another  block inside this file as well./* styles/reset.css */
+@import '@acab/reset.css' layer(reset);
+
+@layer reset {
+  /* custom reset styles */
+}This  statement is used to pull packages from the  folder. This folder is not  available in the built, public version of a website or application, so referencing this might cause problems if not handled properly.Now that we have two files ( and ), let’s link them up in our  file. Inside the  tag, let’s add them after :<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>CSS Only Vite Project</title>
+	
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/reset.css">
+</head>The idea here is we can add each CSS file, in the order we need them parsed. In this case, I’m planning to pull in each file named after the cascade layers setup in the main.css file. This may not work for every setup, but it is a helpful way to keep in mind the precedence of how cascade layers affect computed styles when rendered in a browser, as well as grouping similarly relevant files.Since we’re in the  file, we’ll add a third CSS  for .<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+  <title>CSS Only Vite Project</title>
+	
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/layouts.css">
+</head>Create the  file with the new  declaration block, where we can add layout-specific stylings./* styles/layouts.css */
+@layer layouts {
+  /* layouts styles */
+}For some quick, easy, and awesome CSS snippets, I tend to refer to Stephanie Eckles‘ SmolCSS project. Let’s grab the “Smol intrinsic container” code and include it within the  cascade layer:/* styles/layouts.css */
+@layer layouts {
+  .smol-container {
+    width: min(100% - 3rem, var(--container-max, 60ch));
+    margin-inline: auto;
+  }
+}This powerful little, two-line container uses the CSS  function to provide a responsive width, with  set to horizontally center itself and contain its child elements. We can also dynamically adjust the width using the  custom property.Now if we re-run the build command  and check the  folder, our compiled CSS file should contain:Our cascade layer declarations from Mayank’s CSS reset fully imported from The  class added from As you can see, we can get quite far with Vite as our build tool without writing any JavaScript. However, if we choose to, we can extend our build’s capabilities even further by writing just a  of JavaScript.Post-processing with LightningCSSLightning CSS is a CSS parser and post-processing tool that has a lot of nice features baked into it to help with cross-compatibility among browsers and browser versions. Lightning CSS can transform a lot of modern CSS into backward-compatible styles  you.We can install Lightning CSS in our project with :npm install --save-dev lightningcssThe  flag means the package will be installed as a development dependency, as it won’t be included with our built project. We can include it within our Vite build process, but first, we will need to write a tiny bit of JavaScript, a configuration file for Vite. Create a new file called:  and inside add the following code:// vite.config.mjs
+export default {
+  css: {
+    transformer: 'lightningcss'
+  },
+  build: {
+    cssMinify: 'lightningcss'
+  }
+};Vite will now use LightningCSS to transform and minify CSS files. Now, let’s give it a test run using an  color. Inside  let’s add the following code:/* main.css */
+body {
+  background-color: oklch(51.98% 0.1768 142.5);
+}Then re-running the Vite build command, we can see the  property added in the compiled CSS:/* dist/index.css */
+body {
+  background-color: green;
+  background-color: color(display-p3 0.216141 0.494224 0.131781);
+  background-color: lab(46.2829% -47.5413 48.5542);
+}Browserslist will give us a way to specify browsers by matching certain conditions (try it out online!)npm install -D browserslistInside our  file, we can configure Lightning CSS further. Let’s import the  package into the Vite configuration, as well as a module from the Lightning CSS package to help us use  in our config:// vite.config.mjs
+import browserslist from 'browserslist';
+import { browserslistToTargets } from 'lightningcss';We can add configuration settings for , containing the browser targets based on specified browser versions to Vite’s  configuration:// vite.config.mjs
+import browserslist from 'browserslist';
+import { browserslistToTargets } from 'lightningcss';
+
+export default {
+  css: {
+    transformer: 'lightningcss',
+    lightningcss: {
+      targets: browserslistToTargets(browserslist('>= 0.25%')),
+    }
+  },
+  build: {
+    cssMinify: 'lightningcss'
+  }
+};There are lots of ways to extend Lightning CSS with Vite, such as enabling specific features, excluding features we won’t need, or writing our own custom transforms.// vite.config.mjs
+import browserslist from 'browserslist';
+import { browserslistToTargets, Features } from 'lightningcss';
+
+export default {
+  css: {
+    transformer: 'lightningcss',
+    lightningcss: {
+      targets: browserslistToTargets(browserslist('>= 0.25%')),
+      // Including `light-dark()` and `colors()` functions
+      include: Features.LightDark | Features.Colors,
+    }
+  },
+  build: {
+    cssMinify: 'lightningcss'
+  }
+};Is any of this necessary?Reading through all this, you may be asking yourself if all of this is really necessary. The answer:  But I think you can see the benefits of having access to partialized files that we can compile into unified stylesheets.I doubt I’d go to these lengths for smaller projects, however, if building something with more complexity, such as a design system, I might reach for these tools for organizing code, cross-browser compatibility, and thoroughly optimizing compiled CSS.]]></content:encoded></item><item><title>Chrome 133 Goodies</title><link>https://css-tricks.com/chrome-133-goodies/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Fri, 31 Jan 2025 15:27:50 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I often wonder what it’s like working for the Chrome team. You must get issued some sort of government-level security clearance for the latest browser builds that grants you permission to bash on them ahead of everyone else and come up with these rad demos showing off the latest features. No, I’m, not jealous, why are you asking?Totally unrelated, did you see the release notes for Chrome 133? It’s currently in beta, but the Chrome team has been publishing a slew of new articles with pretty incredible demos that are tough to ignore. I figured I’d round those up in one place.We’ve been able to use HTML attributes in CSS for some time now, but it’s been relegated to the  property and only parsed strings.<h1 data-color="orange">Some text</h1>h1::before {
+  content: ' (Color: ' attr(data-color) ') ';
+}Bramus demonstrates how we can now use it on any CSS property, including custom properties, in Chrome 133. So, for example, we can take the attribute’s value and put it to use on the element’s  property:h1 {
+  color: attr(data-color type(<color>), #fff)
+}This is a trite example, of course. But it helps illustrate that there are three moving pieces here:the attribute ()the fallback value ()We make up the attribute. It’s nice to have a wildcard we can insert into the markup and hook into for styling. The  is a new deal that helps CSS know what sort of value it’s working with. If we had been working with a numeric value instead, we could ditch that in favor of something less verbose. For example, let’s say we’re using an attribute for the element’s font size:<div data-size="20">Some text</div>Now we can hook into the  attribute and use the assigned value to set the element’s  property, based in  units:h1 {
+  color: attr(data-size px, 16);
+}The fallback value is optional and might not be necessary depending on your use case.This is a mind-blowing one. If you’ve ever wanted a way to style a sticky element when it’s in a “stuck” state, then you already know how cool it is to have something like this. Adam Argyle takes the classic pattern of an alphabetical list and applies styles to the letter heading when it sticks to the top of the viewport. The same is true of elements with scroll snapping and elements that are scrolling containers.In other words, we can style elements when they are “stuck”, when they are “snapped”, and when they are “scrollable”.Quick little example that you’ll want to open in a Chromium browser:The general idea (and that’s all I know for now) is that we register a container… you know, a container that we can query. We give that container a  that is set to the type of scrolling we’re working with. In this case, we’re working with sticky positioning where the element “sticks” to the top of the page..sticky-nav {
+  container-type: scroll-state;
+}A container can’t query itself, so that basically has to be a wrapper around the element we want to stick. Menus are a little funny because we have the  element and usually stuff it with an unordered list of links. So, our  can be the container we query since we’re effectively sticking an unordered list to the top of the page.<nav class="sticky-nav">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Blog</a></li>
+  </ul>
+</nav>We can put the sticky logic directly on the  since it’s technically holding what gets stuck:.sticky-nav {
+  container-type: scroll-state; /* set a scroll container query */
+  position: sticky; /* set sticky positioning */
+  top: 0; /* stick to the top of the page */
+}I supposed we could use the  shorthand if we were working with multiple containers and needed to distinguish one from another with a . Either way, now that we’ve defined a container, we can query it using ! In this case, we declare the type of container we’re querying:@container scroll-state() { }And we tell it the state we’re looking for:@container scroll-state(stuck: top) {If we were working with a sticky footer instead of a menu, then we could say  instead. But the kicker is that once the  element sticks to the top, we get to apply styles to it in the  block, like so:.sticky-nav {
+  border-radius: 12px;
+  container-type: scroll-state;
+  position: sticky;
+  top: 0;
+
+  /* When the nav is in a "stuck" state */
+  @container scroll-state(stuck: top) {
+    border-radius: 0;
+    box-shadow: 0 3px 10px hsl(0 0 0 / .25);
+    width: 100%;
+  }
+}It seems to work when nesting other selectors in there. So, for example, we can change the links in the menu when the navigation is in its stuck state:.sticky-nav {
+  /* Same as before */
+
+  a {
+    color: #000;
+    font-size: 1rem;
+  }
+
+  /* When the nav is in a "stuck" state */
+  @container scroll-state(stuck: top) {
+    /* Same as before */
+
+    a {
+      color: orangered;
+      font-size: 1.5rem;
+    }
+  }
+}So, yeah. As I was saying, it must be pretty cool to be on the Chrome developer team and get ahead of stuff like this, as it’s released. Big ol’ thanks to Bramus and Adam for consistently cluing us in on what’s new and doing the great work it takes to come up with such amazing demos to show things off.]]></content:encoded></item><item><title>Keeping the page interactive while a View Transition is running</title><link>https://css-tricks.com/keeping-the-page-interactive-while-a-view-transition-is-running/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Fri, 31 Jan 2025 14:11:00 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[When using View Transitions you’ll notice the page becomes unresponsive to clicks while a View Transition is running. […] This happens because of the  pseudo element – the one that contains all animated snapshots – gets overlayed on top of the document and captures all the clicks.::view-transition /* 👈 Captures all the clicks! */
+└─ ::view-transition-group(root)
+   └─ ::view-transition-image-pair(root)
+      ├─ ::view-transition-old(root)
+      └─ ::view-transition-new(root)The trick? It’s that sneaky little  property! Slapping it directly on the  allows us to click “under” the pseudo-element, meaning the full page is interactive even while the view transition is running.::view-transition {
+  pointer-events: none;
+}I always, always,  forget about , so thanks to Bramus for posting this little snippet. I also appreciate the additional note about removing the  element from participating in the view transition::root {
+  view-transition-name: none;
+}He quotes the spec noting the reason why snapshots do not respond to hit-testing:Elements participating in a transition need to skip painting in their DOM location because their image is painted in the corresponding  pseudo-element instead. Similarly, hit-testing is skipped because the element’s DOM location does not correspond to where its contents are rendered.]]></content:encoded></item><item><title>A WebAssembly compiler in 192 bytes</title><link>https://javascriptweekly.com/issues/721</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[ — Take your knowledge to the next level with the most loved JavaScript course in the industry. Deepen your understanding of the most important aspects of JavaScript. This highly rated video course goes under the hood, looking at callbacks, higher-order functions, object-oriented JS, and more.]]></content:encoded></item><item><title>The Mistakes of CSS</title><link>https://css-tricks.com/the-mistakes-of-css/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Thu, 30 Jan 2025 14:31:08 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Surely you have seen a CSS property and thought “Why?” For example:Why doesn’t  work on all elements, and why is it “-” anyways?Why do we need  to animate to ?You are not alone. CSS was born in 1996 (it can legally order a beer, you know!) and was initially considered a way to style documents; I don’t think anyone imagined everything CSS would be expected to do nearly 30 years later. If we had a time machine, many things would be done differently to match conventions or to make more sense. Heck, even the CSS Working Group admits to wanting a time-traveling contraption… in the specifications! If we had a time machine, this property wouldn’t need to exist.If by some stroke of opportunity, I was given free rein to rename some things in CSS, a couple of ideas come to mind, but if you want more, you can find an ongoing list of mistakes made in CSS… by the CSS Working Group! Take, for example, :Not quite a mistake, because it was a reasonable default for the 90s, but it would be more helpful since then if  defaulted to .Why not fix them? Sadly, it isn’t as easy as  something. People already built their websites with these quirks in mind, and changing them would break those sites. Consider it technical debt.This is why I think the CSS Working Group deserves an onslaught of praise. Designing new features that are immutable once shipped has to be a nerve-wracking experience that involves inexact science. It’s not that we haven’t seen the specifications change or evolve in the past — they most certainly have — but the value of getting things right the first time is a beast of burden.]]></content:encoded></item><item><title>What on Earth is the `types` Descriptor in View Transitions?</title><link>https://css-tricks.com/what-on-earth-is-the-types-descriptor-in-view-transitions/</link><author>Juan Diego Rodríguez</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/01/custom-view-transition.mp4" length="" type=""/><pubDate>Wed, 29 Jan 2025 14:13:53 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Have you ever stumbled upon something new and went to research it just to find that there is little-to-no information about it? It’s a mixed feeling: confusing and discouraging because there is no apparent direction, but also exciting because it’s probably new to lots of people, not just you. Something like that happened to me while writing an Almanac’s entry for the  at-rule and its  descriptor.You may already know about Cross-Document View Transitions: With a few lines of CSS, they allow for transitions between two pages, something that in the past required a single-app framework with a side of animation library. In other words, lots of JavaScript.@view-transition {
+  navigation: auto;
+}That’s it! And  is the only descriptor we need. In fact, it’s the only descriptor available for the  at-rule, right? Well, turns out there is  descriptor, a lesser-known brother, and one that probably envies how much attention  gets: the .What do people say about ?Cross-Documents View Transitions are still fresh from the oven, so it’s normal that people haven’t fully dissected every aspect of them, especially since they introduce a  of new stuff: a new at-rule, a couple of new properties and tons of pseudo-elements and pseudo-classes. However, it still surprises me the little mention of . Some documentation fails to even name it among the valid   descriptors. Luckily, though, the CSS specification does offer a little clarification about it:The  descriptor sets the active types for the transition when capturing or performing the transition.To be more precise,  can take a space-separated list with the names of the active types (as ), or  if there aren’t valid active types for that page.Value: So the following values would work inside :@view-transition {
+  navigation: auto;
+  types: bounce;
+}
+
+/* or a list */
+
+@view-transition {
+  navigation: auto;
+  types: bounce fade rotate;
+}Yes, but what exactly are “active” types? That word “active” seems to be doing a lot of heavy lifting in the CSS specification’s definition and I want to unpack that to better understand what it means.Active types in view transitions A cross-fade animation for every page is good, but a common thing we need to do is change the transition depending on the pages we are navigating between. For example, on paginated content, we could slide the content to the right when navigating forward and to the left when navigating backward. In a social media app, clicking a user’s profile picture could persist the picture throughout the transition. All this would mean defining several transitions in our CSS, but doing so would make them conflict with each other in one big slop. What we need is a way to define several transitions, but only pick one depending on how the user navigates the page. Active types define which transition gets used and which elements should be included in it. In CSS, they are used through :active-view-transition-type(), a pseudo-class that matches an element if it has a specific active type. Going back to our last example, we defined the document’s active type as . We could enclose that  animation behind an :active-view-transition-type(bounce), such that it only triggers on that page./* This one will be used! */
+html:active-view-transition-type(bounce) {
+  &::view-transition-old(page) {
+    /* Custom Animation */
+  }
+
+  &::view-transition-new(page) {
+    /* Custom Animation */
+  }
+}This prevents other view transitions from running if they don’t match any active type:/* This one won't be used! */
+html:active-view-transition-type(slide) {
+  &::view-transition-old(page) {
+    /* Custom Animation */
+  }
+
+  &::view-transition-new(page) {
+    /* Custom Animation */
+  }
+}
+I asked myself whether this triggers the transition when going to the page, when out of the page, or in both instances. Turns out it only limits the transition when , so the last bounce animation is only triggered when navigating toward a page with a  value on its  descriptor, but not when leaving that page. This allows for custom transitions depending on which page we are going to.The following demo has two pages that share a stylesheet with the  and  view transitions, both respectively enclosed behind an :active-view-transition-type(bounce) and :active-view-transition-type(slide) like the last example. We can control which page uses which view transition through the  descriptor.The first page uses the  animation:@view-transition {
+  navigation: auto;
+  types: bounce;
+}The second page uses the  animation:@view-transition {
+  navigation: auto;
+  types: slide;
+}The  descriptor is used more in JavaScriptThe main problem is that we can only control the transition depending on the page we’re navigating to, which puts a major cap on how much we can customize our transitions. For instance, the pagination and social media examples we looked at aren’t possible just using CSS, since we need to know where the user is coming from. Luckily, using the  descriptor is just one of three ways that active types can be populated. Per spec, they can be:Passed as part of the arguments to startViewTransition(callbackOptions)Mutated at any time, using the transition’s typesDeclared for a cross-document view transition, using the  descriptor.The first option is when starting a view transition from JavaScript, but we want to trigger them when the user navigates to the page by themselves (like when clicking a link). The third option is using the  descriptor which we already covered. The second option is the right one for this case! Why? It lets us set the active transition type on demand, and we can perform that change just before the transition happens using the  event. That means we can get the user’s start and end page from JavaScript and then set the correct active type for that case.I must admit, I am not the most experienced guy to talk about this option, so once I demo the heck out of different transitions with active types I’ll come back with my findings! In the meantime, I encourage you to read about active types here if you are like me and want  on view transitions:]]></content:encoded></item><item><title>Computing with tuple types in TypeScript</title><link>https://2ality.com/2025/01/typescript-tuples.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[JavaScript’s Arrays are so flexible that TypeScript provides two different kinds of types for handling them:Array types for arbitrary-length sequences of values that all have the same type – e.g.: Tuple types for fixed-length sequences of values where each one may have a different type – e.g.: [number, string, boolean]In this blog post, we look at the latter – especially how to compute with tuples at the type level.]]></content:encoded></item><item><title>This Week In React #219: CRA, Next.js, Remix, Tremor, SaaS-Starter, Local-First, JSDom, 2n8, RN-Windows, OTA, Polygen, Audio API, Debugging, Shopify, Bottom Tabs, Reanimated, Tailwind, Standard Schema, TypeScript...</title><link>https://thisweekinreact.com/newsletter/219</link><author></author><category>frontend</category><pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[It's been a fairly quiet week compared with the previous one, and I couldn't pick any headliner!The most important news for our ecosystem is probably the official deprecation of Create React App. There's also Tailwind v4 and Standard Schema v1.I'm quite excited by the upcoming TypeScript 5.8  flag that forbids usage of features such as enums. This is the path toward making your app compatible Node.js built-in support, and maybe browsers too in the future.Check our partner conf dotJS 2025 - 🇫🇷 Paris - 03 April - Speakers announced! Ryan Dahl, creator of Node.js, Sarah Drasner, Director of Engineering at Google and Wes Bos, co-host of Syntax.fm podcast. Get 15% off tickets with code "TWIR”.As always, thanks for supporting us on your favorite platform:Convex is the all-in-one platform that gives you everything you need to build, launch, and scale a production-ready backend.And that’s just the beginning. With Convex, you can:Easily schedule functions and write cron jobsWrite efficient server functionsGenerate your backend with your favorite AI coding toolReactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.]]></content:encoded></item><item><title>Revisiting CSS Multi-Column Layout</title><link>https://css-tricks.com/revisiting-css-multi-column-layout/</link><author>Andy Clarke</author><category>frontend</category><pubDate>Mon, 27 Jan 2025 15:35:44 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Honestly, it’s difficult for me to come to terms with, but almost 20 years have passed since I wrote my first book, . In it, I explained how and why to use what was the then-emerging Multi-Column Layoutmodule.Perhaps because, before the web, I’d worked in print, I was over-excited at the prospect of dividing content into columns without needing extra markup purely there for presentation. I’ve used Multi-Column Layout regularly ever since. Yet, CSS Columns remains one of the most underused CSS layout tools. I wonder why that is?Holes in the specificationFor a long time, there were, and still are, plenty of holes in Multi-Column Layout. As Rachel Andrew — now a specification editor — noted in her article five years ago:“The column boxes created when you use one of the column properties can’t be targeted. You can’t address them with JavaScript, nor can you style an individual box to give it a background colour or adjust the padding and margins. All of the column boxes will be the same size. The only thing you can do is add a rule between columns.”She’s right. And that’s  true. You can’t style columns, for example, by alternating background colours using some sort of  pseudo-class selector. You can add a  between columns using  values like , , and , and who can forget those evergreen  and  styles? But you can’t apply  values to a , which seems odd as they were introduced at roughly the same time. The Multi-Column Layout is imperfect, and there’s plenty I wish it could do in the future, but that doesn’t explain why most people ignore what it can do today.Patchy browser implementation for a long timeLegacy browsers simply ignored the column properties they couldn’t process. But, when Multi-Column Layout was first launched, most designers and developers had yet to accept that websites needn’t look the same in every browser.Early on, support for Multi-Column Layout was patchy. However, browsers caught up over time, and although there are still discrepancies — especially in controlling content breaks — Multi-Column Layout has now been implemented widely. Yet, for some reason, many designers and developers I speak to feel that CSS Columns remain broken. Yes, there’s plenty that browser makers should do to improve their implementations, but that shouldn’t prevent people from using the solid parts today.Maybe the main reason designers and developers haven’t embraced Multi-Column Layout as they have CSS Grid and Flexbox isn’t in the specification or its implementation but in its usability. Rachel pointed this out in her article:“One reason we don’t see multicol used much on the web is that it would be very easy to end up with a reading experience which made the reader scroll in the block dimension. That would mean scrolling up and down vertically for those of us using English or another vertical writing mode. This is not a good reading experience!”That’s true. No one would enjoy repeatedly scrolling up and down to read a long passage of content set in columns. She went on:“Neither of these things is ideal, and using multicol on the web is something we need to think about very carefully in terms of the amount of content we might be aiming to flow into our columns.”But, let’s face it, thinking very carefully is what designers and developers should always be doing.Sure, if you’re dumb enough to dump a large amount of content into columns without thinking about its design, you’ll end up serving readers a poor experience. But why would you do that when headlines, images, and quotes can span columns and reset the column flow, instantly improving readability? Add to that container queries and newer unit values for text sizing, and there really isn’t a reason to avoid using Multi-Column Layout any longer.A brief refresher on properties and valuesLet’s run through a refresher. There are two ways to flow content into multiple columns; first, by defining the number of columns you need using the  property:Second, and often best, is specifying the column width, leaving a browser to decide how many columns will fit along the inline axis. For example, I’m using  to specify that my columns are over . A browser creates as many  columns as possible to fit and then shares any remaining space between them.Then, there is the gutter (or ) between columns, which you can specify using any length unit. I prefer using rem units to maintain the gutters’ relationship to the text size, but if your gutters need to be , you can leave this out, as that’s a browser’s default gap.The final column property is that divider (or ) to the gutters, which adds visual separation between columns. Again, you can set a thickness and use  values like , , and .These examples will be seen whenever you encounter a Multi-Column Layout tutorial, including CSS-Tricks’ own Almanac. The Multi-Column Layout syntax is one of the simplest in the suite of CSS layout tools, which is another reason why there are few reasons not to use it.Multi-Column Layout is even more relevant todayWhen I wrote  and first explained the emerging Multi-Column Layout, there were no rem or viewport units, no  or other advanced selectors, no container queries, and no routine use of media queries because responsive design hadn’t been invented.We didn’t have  or  for adjusting text sizes, and there was no CSS Grid or Flexible Box Layout for precise control over a layout. Now we do, and all these properties help to make Multi-Column Layout even more relevant today.Now, you can use rem or viewport units combined with  and  to adapt the text size inside CSS Columns. You can use  to specify when columns are created, depending on the type of content they contain. Or you might use container queries to implement several columns only when a container is large enough to display them. Of course, you can also combine a Multi-Column Layout with CSS Grid or Flexible Box Layout for even more imaginative layout designs.Using Multi-Column Layout todayMy challenge was to implement a flexible article layout without media queries which adapts not only to screen size but also whether or not a  is present. To improve the readability of running text in what would potentially be too-long lines, it should be set in columns to narrow the measure. And, as a final touch, the text size should adapt to the width of the container, not the viewport.The HTML for this layout is rudimentary. One , one , and one  (or not:)<section>
+  <main>
+    <h1>About Patty</h1>
+    <p>…</p>
+  </main>
+
+  <figure>
+    <img>
+  </figure>
+</section>I started by adding Multi-Column Layout styles to the  element using the  property to set the width of each column to  (characters). The  and automatic inline margins reduce the content width and center it in the viewport:main {
+  margin-inline: auto;
+  max-width: 100ch;
+  column-width: 40ch;
+  column-gap: 3rem;
+  column-rule: .5px solid #98838F;
+}Next, I applied a flexible box layout to the  only if it  a direct descendant which is a :section:has(> figure) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 3rem;
+}This next min-width: min(100%, 30rem) — applied to both the  and  — is a combination of the  property and the  CSS function. The  function allows you to specify two or more values, and a browser will choose the smallest value from them. This is incredibly useful for responsive layouts where you want to control the size of an element based on different conditions:section:has(> figure) main {
+  flex: 1;
+  margin-inline: 0;
+  min-width: min(100%, 30rem);
+}
+
+section:has(> figure) figure {
+  flex: 4;
+  min-width: min(100%, 30rem);
+}What’s efficient about this implementation is that Multi-Column Layout styles are applied throughout, with no need for media queries to switch them on or off.Adjusting text size in relation to column width helps improve readability. This has only recently become easy to implement with the introduction of container queries, their associated values including , , , and . And the  function. Fortunately, you don’t have to work out these text sizes manually as ClearLeft’s Utopia will do the job for you.My headlines and paragraph sizes are clamped to their minimum and maximum rem sizes and between them text is fluid depending on their container’s inline size:h1 { font-size: clamp(5.6526rem, 5.4068rem + 1.2288cqi, 6.3592rem); }
+
+h2 { font-size: clamp(1.9994rem, 1.9125rem + 0.4347cqi, 2.2493rem); }
+
+p { font-size: clamp(1rem, 0.9565rem + 0.2174cqi, 1.125rem); }So, to specify the  as the container on which those text sizes are based, I applied a container query for its inline size:main {
+  container-type: inline-size;
+}Open the final result in a desktop browser, when you’re in front of one. It’s a flexible article layout without media queries which adapts to screen size and the presence of a . Multi-Column Layout sets text in columns to narrow the measure and the text size adapts to the width of its container, not the viewport.Modern CSS is solving many prior problemsAlmost every article I’ve ever read about Multi-Column Layout focuses on its flaws, especially usability. CSS-Tricks’ own Geoff Graham even mentioned the scrolling up and down issue when he asked, “When Do You Use CSS Columns?”“But an entire long-form article split into columns? I love it in newspapers but am hesitant to scroll down a webpage to read one column, only to scroll back up to do it again.”Fortunately, the  property — which enables headlines, images, and quotes to span columns, resets the column flow, and instantly improves readability — now has solid support in browsers:h1, h2, blockquote {
+  column-span: all; 
+}But the solution to the scrolling up and down issue isn’t purely technical. It also requires content design. This means that content creators and designers must think carefully about the frequency and type of spanning elements, dividing a Multi-Column Layout into shallower sections, reducing the need to scroll and improving someone’s reading experience.Another prior problem was preventing headlines from becoming detached from their content and figures, dividing their images and captions between columns. Thankfully, the  property now also has widespread support, so orphaned images and captions are now a thing of the past:figure {
+  break-after: column;
+}Open this final example in a desktop browser:You should take a fresh look at Multi-Column LayoutMulti-Column Layout isn’t a shiny new tool. In fact, it remains one of the most underused layout tools in CSS. It’s had, and still has, plenty of problems, but they haven’t reduced its usefulness or its ability to add an extra level of refinement to a product or website’s design. Whether you haven’t used Multi-Column Layout in a while or maybe have never tried it, now’s the time to take a fresh look at Multi-Column Layout.]]></content:encoded></item><item><title>Positioning Text Around Elements With CSS Offset</title><link>https://css-tricks.com/positioning-text-around-elements-with-css-offset/</link><author>Preethi</author><category>frontend</category><pubDate>Fri, 24 Jan 2025 14:59:25 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[When it comes to positioning elements on a page, including text, there are many ways to go about it in CSS — the literal  property with corresponding  properties, , ,  (limited browser support at the moment), and so forth. The  property is another one that belongs in that list.The  property is typically used for animating an element along a predetermined path. For instance, the square in the following example traverses a circular path:<div class="circle">
+  <div class="square"></div>
+</div>@property --p {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+.square {
+  offset: top 50% right 50% circle(50%) var(--p);
+  transition: --p 1s linear;
+
+  /* Equivalent to:
+    offset-position: top 50% right 50%;
+    offset-path: circle(50%);
+    offset-distance: var(--p); */
+
+  /* etc. */
+}
+
+.circle:hover .square{ --p: 100%; }A registered CSS custom property () is used to set and animate the offset distance of the square element. The animation is possible because an element can be positioned at any point in a given path using . and maybe you didn’t know this, but  is a shorthand property comprised of the following constituent properties: The path’s starting point The shape along which the element can be moved A distance along the path on which the element is moved The rotation angle of an element relative to its anchor point and offset path A position within the element that’s aligned to the pathThe  property is the one that’s important to what we’re trying to achieve. It accepts a shape value — including SVG shapes or CSS shape functions — as well as reference boxes of the containing element to create the path.Reference boxes? Those are an element’s dimensions according to the CSS Box Model, including , , , as well as SVG contexts, such as the , , and . These simplify how we position elements along the edges of their containing elements. Here’s an example: all the small squares below are placed in the default top-left corner of their containing elements’ . In contrast, the small circles are positioned along the top-right corner ( into their containing elements’ square perimeter) of the , , and , respectively.<div class="big">
+  <div class="small circle"></div>
+  <div class="small square"></div>
+  <p>She sells sea shells by the seashore</p>
+</div>
+
+<div class="big">
+  <div class="small circle"></div>
+  <div class="small square"></div>
+  <p>She sells sea shells by the seashore</p>
+</div>
+
+<div class="big">
+  <div class="small circle"></div>
+  <div class="small square"></div>
+  <p>She sells sea shells by the seashore</p>
+</div>.small {
+  /* etc. */
+  position: absolute;
+
+  &.square {
+    offset: content-box;
+    border-radius: 4px;
+  }
+
+  &.circle { border-radius: 50%; }
+}
+
+.big {
+  /* etc. */
+  contain: layout; /* (or position: relative) */
+
+  &:nth-of-type(1) {
+    .circle { offset: content-box 25%; }
+  }
+
+  &:nth-of-type(2) {
+    border: 20px solid rgb(170 232 251);
+    .circle { offset: border-box 25%; }
+  }
+
+  &:nth-of-type(3) {
+    padding: 20px;
+    .circle { offset: padding-box 25%; }
+  }
+} You can separate the element’s offset-positioned layout context if you don’t want to allocated space for it inside its containing parent element. That’s how I’ve approached it in the example above so that the paragraph text inside can sit flush against the edges. As a result, the offset positioned elements (small squares and circles) are given their own contexts using , which removes them from the normal document flow.This method, positioning relative to reference boxes, makes it easy to place elements like notification dots and ornamental ribbon tips along the periphery of some UI module. It further simplifies the placement of texts along a containing block’s edges, as  can also rotate elements along the path, thanks to . A simple example shows the date of an article placed at a block’s right edge:<article>
+  <h1>The Irreplaceable Value of Human Decision-Making in the Age of AI</h1>
+  <!-- paragraphs -->
+  <div class="date">Published on 11<sup>th</sup> Dec</div>
+  <cite>An excerpt from the HBR article</cite>
+</article>article {
+  container-type: inline-size;
+  /* etc. */
+}
+
+.date {
+  offset: padding-box 100cqw 90deg / left 0 bottom -10px;
+  
+  /*
+    Equivalent to:
+    offset-path: padding-box;
+    offset-distance: 100cqw; (100% of the container element's width)
+    offset-rotate: 90deg;
+    offset-anchor: left 0 bottom -10px;
+  */
+}As we just saw, using the  property with a reference box path  container units is even more efficient — you can easily set the offset distance based on the containing element’s width or height. I’ll include a reference for learning more about container queries and container query units in the “Further Reading” section at the end of this article.There’s also the  property that’s used in that last example. It provides the anchor for the element’s displacement and rotation — for instance, the 90 degree rotation in the example happens from the element’s bottom-left corner. The  property can also be used to move the element either inward or outward from the reference box by adjusting  values — for instance, the  arguments pull the element’s bottom edge outwards from its containing element’s . This enhances the precision of placements, also demonstrated below.<figure>
+  <div class="big">4</div>
+  <div class="small">number four</div>
+</figure>.small {
+  width: max-content;
+  offset: content-box 90% -54deg / center -3rem;
+
+  /*
+    Equivalent to:
+    offset-path: content-box;
+    offset-distance: 90%;
+    offset-rotate: -54deg;
+    offset-anchor: center -3rem;
+  */
+
+  font-size: 1.5rem;
+  color: navy;
+}As shown at the beginning of the article, offset positioning is animateable, which allows for dynamic design effects, like this:<article>
+  <figure>
+    <div class="small one">17<sup>th</sup> Jan. 2025</div>
+    <span class="big">Seminar<br>on<br>Literature</span>
+    <div class="small two">Tickets Available</div>
+  </figure>
+</article>@property --d {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+.small {
+  /* other style rules */
+  offset: content-box var(--d) 0deg / left center;
+
+  /*
+    Equivalent to:
+    offset-path: content-box;
+    offset-distance: var(--d);
+    offset-rotate: 0deg;
+    offset-anchor: left center;
+  */
+
+  transition: --d .2s linear;
+
+  &.one { --d: 2%; }
+  &.two { --d: 70%; }
+}
+
+article:hover figure {
+  .one { --d: 15%;  }
+  .two { --d: 80%;  }
+}Whether for graphic designs like text along borders, textual annotations, or even dynamic texts like error messaging, CSS offset is an easy-to-use option to achieve all of that. We can position the elements along the reference boxes of their containing parent elements, rotate them, and even add animation if needed.]]></content:encoded></item><item><title>Bun&apos;s on a roll with v1.2</title><link>https://javascriptweekly.com/issues/720</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[ — A fast and flexible DataGrid for building modern web apps. Key features and virtualized rendering are included in the core grid module. Pick & choose special features to keep your app small. Built for JavaScript, extended to Angular, React, and Vue.Wijmo From MESCIUS inc. ]]></content:encoded></item><item><title>JavaScript Temporal is coming</title><link>https://developer.mozilla.org/en-US/blog/javascript-temporal-is-coming/</link><author>brian-smith</author><category>dev</category><category>official</category><category>frontend</category><enclosure url="https://developer.mozilla.org/en-US/blog/javascript-temporal-is-coming/featured.png" length="" type=""/><pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate><source url="https://developer.mozilla.org/en-US/blog/">MDN Blog</source><content:encoded><![CDATA[A new way to handle dates and times is being added to JavaScript. Let's take a look at Temporal, what problems it solves, the current state, and what you'll find in the new documentation about it on MDN.
+]]></content:encoded></item><item><title>Template literal types in TypeScript: parsing during type checking and more</title><link>https://2ality.com/2025/01/template-literal-types.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we take a closer look at template literal types in TypeScript: While their syntax is similar to JavaScript’s template literals, they operate at the type level. Their use cases include:Static syntax checking for string literalsTransforming the casing of property names (e.g. from hyphen case to camel case)Concisely specifying large string literal union types]]></content:encoded></item><item><title>Some Things You Might Not Know About Custom Counter Styles</title><link>https://css-tricks.com/some-things-you-might-not-know-about-custom-counter-styles/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 23 Jan 2025 17:21:15 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I was reading through Juan’s recent Almanac entry for the  at-rule and I’ll be darned if he didn’t uncover and unpack some extremely interesting things that we can do to style lists, notably the list marker. You’re probably already aware of the  pseudo-element. You’ve more than likely dabbled with custom counters using  and . Or maybe your way of doing things is to wipe out the  (careful when doing that!) and hand-roll a marker on the list item’s  pseudo.But have you toyed around with ? Turns out it does a lot of heavy lifting and opens up new ways of working with lists and list markers.You can style the marker of just one list itemThis is called a “fixed”  set to a specific item.@counter-style style-fourth-item {
+  system: fixed 4;
+  symbols: "💠";
+  suffix: " ";
+}
+
+li {
+  list-style: style-fourth-item;
+}You can assign characters to specific markersIf you go with an “additive” , then you can define which symbols belong to which list items.@counter-style dice {
+  system: additive;
+  additive-symbols: 6 "⚅", 5 "⚄", 4 "⚃", 3 "⚂", 2 "⚁", 1 "⚀";
+  suffix: " ";
+}
+
+li {
+  list-style: dice;
+}Notice how the  repeats once it reaches the end of the cycle and begins a new series based on the first item in the pattern. So, for example, there are six sides to typical dice and we start rolling two dice on the seventh list item, totaling seven.You can add a prefix and suffix to list markersA long while back, Chris showed off a way to insert punctuation at the end of a list marker using the list item’s  pseudo:ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+
+  li {
+    counter-increment: my-awesome-counter;
+
+    &::before {
+      content: counter(my-awesome-counter) ") ";
+    }
+  }
+}That’s much easier these days with :@counter-style parentheses {
+  system: extends decimal;
+  prefix: "(";
+  suffix: ") ";
+}You can style multiple ranges of list itemsLet’s say you have a list of 10 items but you only want to style items 1-3. We can set a  for that:@counter-style single-range {
+  system: extends upper-roman;
+  suffix: ".";
+  range: 1 3;
+}
+
+li {
+  list-style: single-range;
+}We can even  our own dice example from earlier:@counter-style dice {
+  system: additive;
+  additive-symbols: 6 "⚅", 5 "⚄", 4 "⚃", 3 "⚂", 2 "⚁", 1 "⚀";
+  suffix: " ";
+}
+
+@counter-style single-range {
+  system: extends dice;
+  suffix: ".";
+  range: 1 3;
+}
+
+li {
+  list-style: single-range;
+}Another way to do that is to use the  keyword as the first value:@counter-style dice {
+  system: additive;
+  additive-symbols: 6 "⚅", 5 "⚄", 4 "⚃", 3 "⚂", 2 "⚁", 1 "⚀";
+  suffix: " ";
+}
+
+@counter-style single-range {
+  system: extends dice;
+  suffix: ".";
+  range: infinite 3;
+}
+
+li {
+  list-style: single-range;
+}Speaking of , you can set it as the second value and it will count up infinitely for as many list items as you have.Maybe you want to style two ranges at a time and include items 6-9. I’m not sure why the heck you’d want to do that but I’m sure you (or your HIPPO) have got good reasons.@counter-style dice {
+  system: additive;
+  additive-symbols: 6 "⚅", 5 "⚄", 4 "⚃", 3 "⚂", 2 "⚁", 1 "⚀";
+  suffix: " ";
+}
+
+@counter-style multiple-ranges {
+  system: extends dice;
+  suffix: ".";
+  range: 1 3, 6 9;
+}
+
+li {
+  list-style: multiple-ranges;
+}You can add padding around the list markersYou ever run into a situation where your list markers are unevenly aligned? That usually happens when going from, say, a single digit to a double-digit. You can  the marker with extra characters to line things up./* adds leading zeroes to list item markers */
+@counter-style zero-padded-example {
+  system: extends decimal;
+  pad: 3 "0";
+}Now the markers will always be aligned… well, up to 999 items.I just thought those were some pretty interesting ways to work with list markers in CSS that run  (get it?!) to how I’ve traditionally approached this sort of thing. And with  becoming Baseline “newly available” in September 2023, it’s well-supported in browsers.]]></content:encoded></item><item><title>This Week In React #218: React-Scan, Server Functions, Portals, Forms, Storybook, React Aria, Unpic, React Native 0.77, Reanimated, Expo, EAS, Legend-List, Shadowlist, Document Picker, BottomTabs, Swift, Bun, Rspack, Vitest, Biome, ESLint...</title><link>https://thisweekinreact.com/newsletter/218</link><author></author><category>frontend</category><pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This is a crazy week, we have a lot of major releases coming from everywhere, in all the sections of this newsletter, that it's impossible to cover them all as they deserve.I'm particularly excited about the React Native ecosystem improving CSS compatibility with v0.77 and Reanimated v4. This is awesome news for cross-platform development compatibility.The frontend ecosystem is on fire too 🔥 with awesome releases such as Bun 1.2, Rspack 1.2, Vitest 3.0.And, Tailwind v4 is expected to drop anytime soon too ! (just after I hit send of course 😅)As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.This is the first official release of React Scan, a new React performance tool that has been trending on social platforms lately with many great demos from its creator Aiden Bai. It’s easy to install and helps you find unwanted React re-renders with a great DX, a bit like “why-did-you-update” on steroids. Related podcast: 🎙️ JavaScript Jabber - Optimizing React with React Scan.Meticulous creates and maintains an exhaustive suite of e2e ui tests with  developer effort.This quote from the CTO of Traba sums the product up best: "Meticulous has fundamentally changed the way we approach frontend testing in our web applications, fully eliminating the need to write any frontend tests. The software gives us confidence that every change will be completely regression tested, allowing us to ship more quickly with significantly fewer bugs in our code. The platform is easy to use and reduces the barrier to entry for backend-focused devs to contribute to our frontend codebase."Meticulous is used by companies like Lattice, Bilt Rewards, Power and many others.This post from our CTO sets out the context of why exhaustive testing can double engineering velocity.As planned, the next React Native version just dropped. It notably ships with:CSS support improvement: , , , and Support for Android 15 edge-to-edge and 16KB memory page size (perf improvement)iOS init template with Swift AppDelegateGood news for Expo users: SDK 52 already supports v0.77, alongside many infrastructure packages (Screens, RNGH, Reanimated). For React 19 support, we’ll have to wait v0.78, but I could come sooner than you expect!Reanimated 4 is in beta, and it’s a huge one! 🔥 The animation core has been revamped. You can now just animate things, with regular CSS, on the native thread, thanks to newly added support for:This is particularly exciting for React Native micro-interactions with greatly reduced boilerplate, and the ability to ship cross-platform animations. The existing worklet APIs remains retrocompatible and relevant for more advanced needs. However, the New Architecture is now a requirement.]]></content:encoded></item><item><title>ECMAScript proposal: RegExp escaping</title><link>https://2ality.com/2025/01/regexp-escape.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The ECMAScript proposal “RegExp escaping” (by Jordan Harband and Kevin Gibbons) specifies a function  that, given a string , creates an escaped version that matches  – if interpreted as a regular expression.This proposal is currently at stage 3.]]></content:encoded></item><item><title>TypeScript enums: use cases and alternatives</title><link>https://2ality.com/2025/01/typescript-enum-patterns.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we take a closer look at TypeScript enums:What are their use cases?What are the alternatives if we don’t want to use them?The blog post concludes with recommendations for what to use when.]]></content:encoded></item></channel></rss>
