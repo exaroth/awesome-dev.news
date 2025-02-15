@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>Conditional types in TypeScript</title><link>https://2ality.com/2025/02/conditional-types-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In TypeScript, conditional types let us make decisions (think if-then-else expressions) – which is especially useful in generic types. They are also an essential tool for working with union types because they let use “loop” over them. Read on if you want to know how all of that works.]]></content:encoded></item><item><title>Handwriting an SVG Heart, With Our Hearts</title><link>https://css-tricks.com/handwriting-an-svg-heart-with-our-hearts/</link><author>Ryan Trimble</author><category>frontend</category><pubDate>Fri, 14 Feb 2025 13:25:12 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[According to local grocery stores, it’s the Valentine’s Day season again, and what better way to express our love than with the symbol of love: . A while back on CSS-Tricks, we shared several ways to draw hearts, and the response was dreamy. Check out all these amazing, heart-filled submissions in this collection on CodePen:Temani Afif’s CSS Shapes site offers a super modern heart using only CSS:Now, to show  love, I wanted to do something personal, something crafty, something with a mild amount of effort.Handwriting a love note is a classic romantic gesture, but have you considered handwriting an SVG? We won’t need some fancy vector drawing tool to express our love. Instead, we can open a blank HTML document and add an  tag:We’ll need a way to see what we are doing inside the “SVG realm” (as I like to call it), which is what the  attribute provides. The 2D plane upon which vector graphics render is as infinite as our love, quite literally, complete with an x- and y-axis and all (like from math class).We’ll set the start coordinates as  and end coordinates as  to make a handsome, square . Oh, and by the way, we don’t concern ourselves over pixels,  values, or any other unit types; this is , and we play by our own rules.We add in these coordinates to the  as a string of values:<svg viewBox="0 0 10 10">
+
+</svg>Now we can begin drawing our heart,  our heart. Let’s make a line. To do that, we’ll need to know a lot more about coordinates, and where to stick ’em. We’re able to draw a line with many points using the  element, which defines paths using the  attribute. SVG path commands are difficult to memorize, but the effort means you care. The path commands are:, , , , , , We’re only interested in drawing line segments for now, so together we’ll explore the first two:  and . MDN romantically describes MoveTo as picking up a drawing instrument, such as a pen or pencil: we aren’t yet drawing anything, just moving our pen to the point where we want to begin our confession of love.We’ll  the coordinates of  represented in the  attribute as :<svg viewBox="0 0 10 10">
+  <path d="M2,2" />
+</svg>Not surprising then to find that  is akin to putting pen to paper and  from one point to another. Let’s draw the first segment of our heart by drawing a  with coordinates , represented as  next in the  attribute:<svg viewBox="0 0 10 10">
+  <path d="M2,2 L4,4" />
+</svg>We’ll add a final line segment as another LineTo  with coordinates , again appended to the  attribute as :<svg viewBox="0 0 10 10">
+  <path d="M2,2 L4,4 L6,2" />
+</svg>If you stop to preview what we’ve accomplished so far, you may be confused as it renders an upside-down triangle; that’s not quite a heart yet, Let’s fix that.SVG shapes apply a  by default, which we can remove with :<svg viewBox="0 0 10 10">
+  <path d="M2,2 L4,4 L6,2" fill="none" />
+</svg>Rather than filling in the shape, instead, let’s display our line path by adding a , adding color to our heart.<svg viewBox="0 0 10 10">
+  <path 
+    d="M2,2 L4,4 L6,2" 
+    fill="none" 
+    stroke="rebeccapurple" />
+</svg>Next, add some weight to the stroke by increasing the :<svg viewBox="0 0 10 10">
+  <path 
+    d="M2,2 L4,4 L6,2" 
+    fill="none" 
+    stroke="rebeccapurple" 
+    stroke-width="4" />
+</svg>Finally, apply a  of  (sorry, no time for  jokes) to round off the start and end points of our line path, giving us that classic symbol of love:<svg viewBox="0 0 10 10">
+  <path 
+    d="M2,2 L4,4 L6,2" 
+    fill="none"
+    stroke="rebeccapurple"
+    stroke-width="4"
+    stroke-linecap="round" />
+</svg>. Now all that’s left to do is send it to that special someone. ]]></content:encoded></item><item><title>It&apos;s time to go ESM-only</title><link>https://javascriptweekly.com/issues/723</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[🤯 Pfft, vehicle data is a joke without CarsXE. API goes brrrrr. VIN decoding, plate lookup, market value reports. Get Serious!]]></content:encoded></item><item><title>Mapped types in TypeScript</title><link>https://2ality.com/2025/02/mapped-types-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[A mapped type is a loop over keys that produces an object or tuple type and looks as follows:{[]: }
+In this blog post, we examine how mapped types work and see examples of using them. Their most importing use cases are transforming objects and mapping tuples.]]></content:encoded></item><item><title>Scroll Driven Animations Notebook</title><link>https://css-tricks.com/scroll-driven-animations-notebook/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 13 Feb 2025 13:24:29 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[One of his latest is a notebook of scroll-driven animations. They’re all impressive as heck, as you’d expect from Adam. But it’s the simplicity of the first few examples that I love most. Here I am recreating two of the effects in a CodePen, which you’ll want to view in the latest version of Chrome for support.This is a perfect example of how a scroll-driven animation is simply a normal CSS animation, just tied to scrolling instead of the document’s default timeline, which starts on render. We’re talking about the same set of keyframes:@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+}All we have to do to trigger scrolling is call the animation and assign it to the timeline:li {
+  animation: var(--animation) linear both;
+  animation-timeline: view();
+}Notice how there’s no duration set on the animation. There’s no need to since we’re dealing with a scroll-based timeline instead of the document’s timeline. We’re using the  function instead of the  function, which acts sort of like JavsScript’s Intersection Observer where scrolling is based on where the element comes into view and intersects the scrollable area.It’s easy to drop your jaw and ooo and ahh all over Adam’s demos, especially as they get more advanced. But just remember that we’re still working with plain ol’ CSS animations. The difference is the timeline they’re on.]]></content:encoded></item><item><title>Typecasting and Viewport Transitions in CSS With tan(atan2())</title><link>https://css-tricks.com/typecasting-and-viewport-transitions-in-css-with-tanatan2/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Wed, 12 Feb 2025 14:15:28 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[We’ve been able to get the length of the viewport in CSS since… … 2013! Surprisingly, that was more than a decade ago. Getting the viewport width is as easy these days as easy as writing , but what does that translate to, say, in ? What about the other properties, like those that take a percentage, an angle, or an integer?Think about changing an element’s opacity, rotating it, or setting an animation progress based on the screen size. We would first need the  — which isn’t currently possible in CSS, right?What I am about to say isn’t a groundbreaking discovery, it was first described amazingly by Jane Ori in 2023. In short, we can use a weird hack (or feature) involving the  and  trigonometric functions to typecast a length (such as the viewport) to an integer. This opens  new layout possibilities, but my first experience was while writing an Almanac entry in which I just wanted to make an image’s opacity responsive.Resize the CodePen and the image will get more transparent as the screen size gets smaller, of course with some boundaries, so it doesn’t become invisible:This is the simplest we can do, but there is a lot more. Take, for example, this demo I did trying to combine many viewport-related effects. Resize the demo and the page feels alive: objects move, the background changes and the text smoothly wraps in place.I think it’s really cool, but I am no designer, so that’s the best my brain could come up with. Still, it may be too much for an introduction to this typecasting hack, so as a middle-ground, I’ll focus only on the title transition to showcase how all of it works:The idea behind this is to convert  to radians (a way to write angles) using , and then back to its original value using , with the perk of coming out as an integer. It should be achieved like this::root {
+  --int-width: tan(atan2(100vw, 1px));
+}But! Browsers aren’t too keep on this method, so a lot more wrapping is needed to make it work across all browsers. The following may seem like magic (or nonsense), so I recommend reading Jane’s post to better understand it, but this way it will work in all browsers:@property --100vw {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+
+:root {
+  --100vw: 100vw;
+  --int-width: calc(10000 * tan(atan2(var(--100vw), 10000px)));
+}Don’t worry too much about it. What’s important is our precious  variable, which holds the viewport size as an integer!Wideness: One number to rule them allRight now we have the viewport as an integer, but that’s just the first step. That integer isn’t super useful by itself. We oughta convert it to something else next since:different properties have different units, andwe want each property to go from a start value to an end value.Think about an image’s  going from  to , an object rotating from  to , or an element’s  going from  to . We want to interpolate between these values as  gets bigger, but right now it’s just an integer that usually ranges between  to , which is inflexible and can’t be easily converted to any of the end values.The best solution is to turn  into a number that goes from  to . So, as the screen gets bigger, we can multiply it by the desired end value. Lacking a better name, I call this “0-to-1” value . If we have , all the last examples become possible:/* If `--wideness is 0.5 */
+
+.element {
+  opacity: var(--wideness); /* is 0.5 */
+  translate: rotate(calc(wideness(400px, 1200px) * 360deg)); /* is 180deg */
+  offset-distance: calc(var(--wideness) * 100%); /* is 50% */
+}So  is a value between  to  that represents how wide the screen is:  represents when the screen is narrow, and  represents when it’s wide. But we still have to set what those values mean in the viewport. For example, we may want  to be  and  to be , our viewport transitions will run between these values. Anything below and above is clamped to  and , respectively.In CSS, we can write that as follows::root {
+  /* Both bounds are unitless */
+  --lower-bound: 400; 
+  --upper-bound: 1200;
+
+  --wideness: calc(
+    (clamp(var(--lower-bound), var(--int-width), var(--upper-bound)) - var(--lower-bound)) / (var(--upper-bound) - var(--lower-bound))
+  );
+}Besides easy conversions, the  variable lets us define the lower and upper limits in which the transition should run. And what’s even better, we can set the transition zone at a middle spot so that the user can see it in its full glory. Otherwise, the screen would need to be  so that  reaches  and who knows how wide to reach .We got the . What’s next?For starters, the title’s markup is divided into spans since there is no CSS-way to select specific words in a sentence:<h1><span>Resize</span> and <span>enjoy!</span></h1>And since we will be doing the line wrapping ourselves, it’s important to unset some defaults:h1 {
+  position: absolute; /* Keeps the text at the center */
+  white-space: nowrap; /* Disables line wrapping */
+}The transition should work without the base styling, but it’s just too plain-looking. They are below if you want to copy them onto your stylesheet:And just as a recap, our current hack looks like this:@property --100vw {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+
+:root {
+  --100vw: 100vw;
+  --int-width: calc(10000 * tan(atan2(var(--100vw), 10000px)));
+  --lower-bound: 400;
+  --upper-bound: 1200;
+
+  --wideness: calc(
+    (clamp(var(--lower-bound), var(--int-width), var(--upper-bound)) - var(--lower-bound)) / (var(--upper-bound) - var(--lower-bound))
+  );
+}OK, enough with the set-up. It’s time to use our new values and make the viewport transition. We first gotta identify  the title should be rearranged for smaller screens: as you saw in the initial demo, the first  goes up and right, while the second  does the opposite and goes down and left. So, the end position for both spans translates to the following values:h1 {
+  span:nth-child(1) {
+    display: inline-block; /* So transformations work */
+    position: relative;
+    bottom: 1.2lh;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  span:nth-child(2) {
+    display: inline-block; /* So transformations work */
+    position: relative;
+    bottom: -1.2lh;
+    left: -50%;
+    transform: translate(50%);
+  }
+}Before going forward, both formulas are basically the same, but with different signs. We can rewrite them at once bringing one new variable: . It will be either  or  and define which direction to run the transition:h1 {
+  span {
+    display: inline-block;
+    position: relative;
+    bottom: calc(1.2lh * var(--direction));
+    left: calc(50% * var(--direction));
+    transform: translate(calc(-50% * var(--direction)));
+    }
+
+  span:nth-child(1) {
+    --direction: 1;
+  }
+
+  span:nth-child(2) {
+    --direction: -1;
+  }
+}
+The next step would be bringing  into the formula so that the values change as the screen resizes. However, we can’t just multiply everything by . Why? Let’s see what happens if we do:span {
+  display: inline-block;
+  position: relative;
+  bottom: calc(var(--wideness) * 1.2lh * var(--direction));
+  left: calc(var(--wideness) * 50% * var(--direction));
+  transform: translate(calc(var(--wideness) * -50% * var(--direction)));
+}As you’ll see, everything is backwards! The words wrap when the screen is too wide, and unwrap when the screen is too narrow:Unlike our first examples, in which the transition ends as  increases from  to , we want to complete the transition as  decreases from  to , i.e. while the screen gets smaller the properties need to reach their end value. This isn’t a big deal, as we can rewrite our formula as a subtraction, in which the subtracting number gets bigger as  increases:span {
+  display: inline-block;
+  position: relative;
+  bottom: calc((1.2lh - var(--wideness) * 1.2lh) * var(--direction));
+  left: calc((50% - var(--wideness) * 50%) * var(--direction));
+  transform: translate(calc((-50% - var(--wideness) * -50%) * var(--direction)));
+}And now everything moves in the right direction while resizing the screen!However, you will notice how words move in a straight line and some words overlap while resizing. We can’t allow this since a user with a specific screen size may get stuck at that point in the transition. Viewport transitions are cool, but not at the expense of ruining the experience for certain screen sizes.Instead of moving in a straight line, words should move in a curve such that they pass around the central word. Don’t worry, making a curve here is easier than it looks: just move the spans twice as fast in the x-axis as they do in the y-axis. This can be achieved by multiplying  by , although we have to cap it at  so it doesn’t overshoot past the final value.span {
+ display: inline-block;
+ position: relative;
+ bottom: calc((1.2lh - var(--wideness) * 1.2lh) * var(--direction));
+ left: calc((50% - min(var(--wideness) * 2, 1) * 50%) * var(--direction));
+ transform: translate(calc((-50% - min(var(--wideness) * 2, 1) * -50%) * var(--direction)));
+}Look at that beautiful curve, just avoiding the central text:This is just the beginning!It’s surprising how powerful having the viewport as an integer can be, and what’s even crazier, the last example is one of the most basic transitions you could make with this typecasting hack. Once you do the initial setup, I can imagine a lot more possible transitions, and  is so useful, it’s like having a new CSS feature right now.I expect to see more about “Viewport Transitions” in the future because they do make websites feel more “alive” than adaptive.]]></content:encoded></item><item><title>This Week In React #221: State of React, React Router, Rsbuild, ProseMirror, Redux, React Hook Form, Base UI, RSC, React Admin | AI &amp; RN, Expo, Strict DOM, Polygen, Ignite, New Arch, Radon, macOS, Universal RSC, Gesture Handler | TypeScript, Prettier, esbuild...</title><link>https://thisweekinreact.com/newsletter/221</link><author></author><category>frontend</category><pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[Cyril and Matthieu from Theodo Apps here 👋, standing in for Seb to bring you the latest news from React and React Native!This week we’ve been carefully reading the State of React 2024 survey results, and also found quite a few interesting articles. Things have been quieter when it comes to new releases.Check our partner conf App.js, happening May 28-30 in 🇵🇱 Kraków! The biggest React Native and Expo-focused conference gives us a 15% discount with code "TWIR". Want to submit a talk? Hurry—CFP is closing soon!As always, thanks for supporting us on your favorite platform:When you wake up in the morning how many different yaml files do you want to manage? With EAS Workflows, you have .• Automate builds• Run e2e tests• Submit to stores• GitHub triggers, lint checks, slack notifications...so much moreWith EAS Workflows you can  all your builds/updates/submissions. Package up all the commands in a workflow and go drink a coffee. You deserve it.The results of State of React 2024 are out. It is a gold mine of information and we can’t possibly talk about everything here but here are a few highlights:Of the “new” React features, Server Components are the most popular with 40% of the ~7000 respondents having “used it”, probably thanks to Next.js… is the most disliked React API, and is going away!Have you heard about React’s Taint API? It looks like 80% of React devs have not, which is understandable since it’s experimental.There’s not that much movement in the #1 spot: Next.js, TanStack Query, Axios, Jest, and Zod are still the most frequently used.A few rising stars: Zustand and Vitest got more users, TanStack Start is #1 in interest even though almost no one has used it yet.Deploying Next.js apps on Vercel is easy, but optimizing hosting costs? That’s a different story.Join Chris Lojniewski and Jakub Dakowicz of Pagepro on  for a deep analysis of Vercel cost optimization strategies. Learn how to identify what drives your costs and reduce them with  like adjusting prefetching to avoid excessive function calls, choosing proper rendering methods, and trimming unnecessary data transfers.They’ll also show you how to minimize reliance on Vercel’s premium features with feature externalization - offloading analytics, image optimization, and password protection. Plus, they’ll break down when enterprise pricing is worth considering and when you’re better off with alternatives. .We don't talk too much about LLMs in this newsletter (we guess you already hear about it more than enough 😅) but with all the announcements this week we thought it was a good time to give you an update.The big news:  to add (React-)Native mobile apps support to Bolt. Right now you can preview your AI-generated apps on the web, but you need to download the code to go further. They plan to add an integration with EAS to deploy to production in the future.Some competitors also had things to announce:]]></content:encoded></item><item><title>Micro Frontends with Angular and Native Federation</title><link>https://blog.angular.dev/micro-frontends-with-angular-and-native-federation-7623cfc5f413?source=rss----447683c3d9a3---4</link><author>Manfred Steyer</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Mon, 10 Feb 2025 15:02:31 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[Enterprise-scale software systems are often implemented by several cross-functional teams. To enable such teams to provide new features efficiently, it is desirable to minimize the need for coordination between them. This calls for a modularization that verticalizes the system into low-coupled areas individual teams can take care of.There are several possibilities for implementing such high-level modules (also called verticals). For instance, they can be implemented using a respective folder structure or in the form of several libraries in a Monorepo. Micro Frontends go one step further and designate a separate application for each vertical. This architectural style promises several advantages, such as a high amount of team autonomy, but it also comes with numerous challenges.The first part of this article provides a critical overview of the benefits and drawbacks of Micro Frontends in the space of single-page applications. The second part discusses how such an architecture can be implemented with Native Federation, a community project built upon web standards that provide close integration with the Angular CLI.Motivation Behind Micro FrontendsLike Micro Services, Micro Frontends promise several advantages, both technically and with respect to the organization. As applying Micro Frontend architectures results in several smaller applications, testing, performance tuning, and isolating faults in one part of the overarching system becomes more effortless, according to several sources.However, the increased team autonomy was the main reason for applying this architectural style in the numerous cases I was involved in as a consultant. Individual teams are not blocked by waiting for other teams and can deploy separately anytime. This might not be a significant concern in a vast number of projects. Still, as soon as we talk about multi-team projects in a corporate environment with long communication paths and decision times, this aspect quickly becomes vital for the project’s success.Teams can also make their own decisions that best fit their goals — architecturally and technology-wise. Mixing multiple client-side frameworks in the same application is considered an anti-pattern and should be avoided. However, it can help to create a migration path over to a new stack in the long run. The concern in corporate environments is that we find software solutions that usually outlive the average technology stackSince Micro Frontends result in separate build processes, combining them with incremental builds, where only changed applications need to be rebuilt, has a massive potential for build-time improvements. For instance, the well-known Nx build system provides this option. Interestingly, this feature can also be used without applying other aspects such as aligning teams with individual applications or separate deployments. There is debate about whether leveraging this tempting option automatically leads to micro frontend architectures.A system consisting of several smaller applications can provide further organizational advantages: It’s easier to onboard new members and scale the development by adding further micro frontends. Team autonomy also leads to faster release cycles.Challenges to keep in mindEvery architectural decision has consequences that need to be evaluated, and Micro Frontends are no exception. Besides the positive consequences outlined above, there are also several negative ones to consider.For instance, individually developed Micro Frontends can diverge in UI/UX, leading to an inconsistent appearance. Also, loading several applications increases the number of bundles that need to be downloaded, adversely affecting loading times and increasing the memory pressure.Splitting an application into low-coupled parts might be a best practice in general. However, it is often hard to define the boundaries between verticals clearly enough to implement them as individual applications. Also, while having several small applications at first glance simplifies the implementation, integrating them into an overarching solution brings additional complexity.This leads to one of the biggest challenges I have seen in practice: we are moving away from a compile-time integration towards a runtime integration. This has severe consequences because we cannot easily foresee problems that might arise when individually developed and deployed applications start interacting at runtime. Besides the chance of technical conflicts, we also have to see that the current generation of SPA frameworks has not been built with such an operation mode in mind.Instead, modern SPA frameworks, especially Angular, have been developed to focus on compile time optimizations. A powerful compiler leverages type checks to identify technical conflicts and emits efficient source code optimized for tree-shaking. Furthermore, the CLI in the Angular space provides a highly optimized build process. An off-label usage necessary for implementing Micro Frontends undermines some of these achievements.Angular Does Not Officially Support Micro FrontendsFor all the outlined reasons, the Angular team recommends checking if alternatives, like implementing the individual verticals in Monorepos, which can be compiled together, are suitable. For instance, Google adopted this approach years ago and manages all its products and libraries in a single Monorepo.Of course, there are also ways to compensate for the disadvantages outlined here, and some of them, like establishing a design system to help with a consistent UI/UX or lazy loading individual system parts, might be needed in general. More details on such compensation strategies can be found in this survey of more than 150 Micro Frontend practitioners.All architectural decisions have benefits and drawbacks and should be evaluated with those considerations if you are going to implement a solution. If such an evaluation reveals that Micro Frontends provide more advantages than alternatives for achieving your very goals, the following sections provide you a well-lit path for implementing this architectural pattern with Angular.Micro Frontends with FederationModule Federation is a popular technology for implementing Micro Frontends and sharing dependencies. Shipped initially with webpack 5, it comes with a tooling-agnostic runtime and provides compile-time integration into  and . Besides the usage of the vite dev server, these technologies are currently not supported by the Angular CLI. However, promising community solutions like and AnalogJS allow them to be used with Angular. Nx and my CLI-plugin provide an effortless integration.Module Federation enables an application to load parts of other separately built and deployed applications lazily. The loading application is referred to as the host; the integrated ones are called remotes:Federation, if permitted by the library version, can share dependencies like Angular or RxJS between the host and remotes. There are several configuration options for preventing version mismatches. Since MF can only decide which dependencies to share at runtime, tree-shaking for shared parts is not possible.To inform the host about the remotes and their shared dependencies, Module Federation creates a metadata file, the so-called remote entry, during the build. This file needs to be loaded into the host.To fully decouple the idea of Federation from specific bundlers, I started the project Native Federation several years ago. Its API surface is very similar to that of Module Federation. The focus is on portability and standards like ECMAScript modules and Import Maps. Its compile time acts as a wrapper around existing bundlers. For the communication with the bundler, it uses an exchangeable adapter:The integration into the Angular CLI directly delegates to Angular’s  that leverages the fast bundler esbuild, and is the foundation for several current features like partial hydration. Because of its architecture, Native Federation can also be ported to further builders or other innovations the CLI might provide in the long run.For integrating Micro Frontends built with Angular’s webpack-based builder, there is a bridging solution allowing the loading of such remotes into a Native Federation host. This solution enables the gradual adoption of the CLI’s new  and permits the sharing of dependencies between the two kinds of Federation. One of the features added recently is support for SSR and Hydration, which is vital for performance-critical applications like public portals and web shops.Native Federation for Angular is close to the CLI’s , but its compilation mode is for shared dependencies differs. While it works well for packages that align with Angular’s Package Format, which is the case for all libraries built with the CLI, other libraries might provide some challenges, especially older ones that still use CommonJS or older conventions for providing metadata.Using Native Federation in AngularFor the setup Native Federation provides a schematic:ng add @angular-architects/native-federation --project mfe1 --port 4201 --type remoteThe switch  defines the kind of the application. Possible options are , , and . The latter is a host configured with a configuration file (federation manifest) during application start. This manifest informs the application of the locations of the remotes and can be switched out by another manifest during deployment:{    "mfe1" : "http://localhost:4201/remoteEntry.json"The key, in this case, is a short name the host uses to refer to the Micro Frontend. The value is the location of the remote entry with the metadata mentioned above. Alternatively, the manifest can be replaced by a service that informs the host of the current location of all deployed remotes and acts as a Micro Frontend registry.The schematic configures the Native Federation builder delegation to the  and creates a configuration file :const { withNativeFederation, shareAll }     = require('@angular-architects/native-federation/config');module.exports = withNativeFederation({    './Component': './projects/mfe1/src/app/app.component.ts',    ...shareAll({}),    'rxjs/ajax',    'rxjs/testing',    // Add further packages you don't need at runtimeThe configuration assigns a unique name to the remote or host and defines which dependencies to share. Instead of providing an exhaustive list of all the dependencies to share, the configuration uses the helper function , which adds all dependencies found in the project’s . The skip list is used to opt out of sharing some of them or their secondary entry points.Remotes also define exposed EcmaScript modules that can be loaded into the shell. For this, the  node maps the paths of the modules to short names such as  in the example shown.The schematic also adds code to initialize Native Federation to the . For the host, this code points to the federation manifest:import { initFederation } from '@angular-architects/native-federation';initFederation('federation.manifest.json')  .catch(err => console.error(err))  .then(_ => import('./bootstrap'))  .catch(err => console.error(err));After initializing federation, the file , also created by the schematic, is loaded. It contains the usual code for bootstrapping Angular, e.g., via  when the application uses Standalone Components.To load a component or routing configuration exposed by a remote, traditional lazy loading is combined with Native Federation’s  function:import { loadRemoteModule } from '@angular-architects/native-federation';export const APP_ROUTES: Routes = [  [...]    path: 'flights',      loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),];Here,  is the key defined in the manifest, and  points to the respective exposed module in the remote’s federation configuration.More information on Native Federation can be found in this blog article and in the project’s readme, which also links to a tutorial.Micro Frontends promise significant advantages for enterprise-scale applications, such as enhanced team autonomy and independent deployment. These benefits make this architectural style particularly appealing in multi-team corporate environments where streamlined communication and rapid development cycles are critical. Additionally, they support gradual migration to new technologies and optimize build times by leveraging incremental builds.However, these advantages come with trade-offs. Micro Frontends can lead to inconsistent UI/UX, increased load times, and complex runtime integrations. Defining clear vertical boundaries and managing inter-application communication add to the challenge. Furthermore, frameworks like Angular, designed for compile-time optimization, face limitations in runtime integration scenarios. The Angular team, therefore, recommends alternatives such as splitting an application into libraries managed within a Monorepo, which aligns better with Angular’s strengths in type safety and efficient compilation.Module Federation has emerged as a popular solution to address some challenges by enabling lazy loading and dependency sharing. Native Federation builds on these concepts with a focus on standards and portability. It provides a seamless integration into the Angular CLI and its performant esbuild-based , which is also the foundation for advanced features like SSR and hydration.Together with this team at , Manfred Steyer helps companies around the globe establish maintainable Angular-based Architectures. He is a trainer, consultant, and Google Developer Expert (GDE) and writes for O’Reilly, the German Java Magazin, windows.developer, and Heise Developer. Furthermore, he regularly speaks at conferences.]]></content:encoded></item><item><title>Organizing Design System Component Patterns With CSS Cascade Layers</title><link>https://css-tricks.com/organizing-design-system-component-patterns-with-css-cascade-layers/</link><author>Ryan Trimble</author><category>frontend</category><pubDate>Mon, 10 Feb 2025 14:06:52 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’m trying to come up with ways to make components more customizable, more efficient, and easier to use and understand, and I want to describe a pattern I’ve been leaning into using CSS Cascade Layers.I enjoy organizing code and find cascade layers a fantastic way to organize code explicitly as the cascade looks at it. The neat part is, that as much as it helps with “top-level” organization, cascade layers can be nested, which allows us to author more precise styles based on the cascade.The only downside here is your imagination, nothing stops us from over-engineering CSS. And to be clear, you may very well consider what I’m about to show you as a form of over-engineering. I think I’ve found a balance though, keeping things simple yet organized, and I’d like to share my findings.Let’s explore a pattern for writing components in CSS using a button as an example. Buttons are one of the more popular components found in just about every component library. There’s good reason for that popularity because buttons can be used for a variety of use cases, including:performing actions, like opening a drawer,navigating to different sections of the UI, andholding some form of state, such as  or .And buttons come in several different flavors of markup, like , , and . There are even more ways to make buttons than that, if you can believe it.On top of that, different buttons perform different functions and are often styled accordingly so that a button for one type of action is distinguished from another. Buttons also respond to state changes, such as when they are hovered, active, and focused. If you have ever written CSS with the BEM syntax, we can sort of think  within the context of cascade layers..button {}
+.button-primary {}
+.button-secondary {}
+.button-warning {}
+/* etc. */Okay, now, let’s write some code. Specifically, let’s create a few different types of buttons. We’ll start with a  class that we can set on any element that we want to be styled as, well, a button! We already know that buttons come in different flavors of markup, so a generic  class is the most reusable and extensible way to select one or all of them..button {
+  /* Styles common to all buttons */
+}This is where we can insert our very first cascade layer! Remember, the reason we want a cascade layer in the first place is that it allows us to set the CSS Cascade’s reading order when evaluating our styles. We can tell CSS to evaluate one layer first, followed by another layer, then another — all according to the order we want. This is an incredible feature that grants us superpower control over which styles “win” when applied by the browser.We’ll call this layer  because, well, buttons are a type of component. What I like about this naming is that it is generic enough to support other components in the future as we decide to expand our design system. It scales with us while maintaining a nice separation of concerns with other styles we write down the road that maybe aren’t specific to components./* Components top-level layer */
+@layer components {
+  .button {
+    /* Styles common to all buttons */
+  }
+}Here is where things get a little weird. Did you know you can  cascade layers  classes? That’s totally a thing. So, check this out, we can introduce a new layer inside the  class that’s already inside its own layer. Here’s what I mean:/* Components top-level layer */
+@layer components {
+
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      /* Styles */
+    }
+  }
+}This is how the browser interprets that layer within a layer at the end of the day:@layer components {
+  @layer elements {
+    .button {
+      /* button styles... */
+    }
+  }
+}So far, we’ve established a  class inside of a cascade layer that’s designed to hold any type of  in our design system. Inside that  is another cascade layer, this one for selecting the different types of buttons we might encounter in the markup. We talked earlier about buttons being , , or  and this is how we can individually select style each type.We can use the  pseudo-selector function as that is akin to saying, “If this  an  element, then apply these styles.”/* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      /* styles common to all buttons */
+
+      &:is(a) {
+        /* <a> specific styles */
+      }
+
+      &:is(button) {
+        /* <button> specific styles */
+      }
+
+      /* etc. */
+    }
+  }
+}Defining default button stylesI’m going to fill in our code with the common styles that apply to all buttons. These styles sit at the top of the  layer so that they are applied to any and all buttons, regardless of the markup. Consider them default button styles, so to speak./* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      background-color: darkslateblue;
+      border: 0;
+      color: white;
+      cursor: pointer;
+      display: grid;
+      font-size: 1rem;
+      font-family: inherit;
+      line-height: 1;
+      margin: 0;
+      padding-block: 0.65rem;
+      padding-inline: 1rem;
+      place-content: center;
+      width: fit-content;
+    }
+  }
+}Defining button state stylesWhat should our default buttons do when they are hovered, clicked, or in focus? These are the different  that the button might take when the user interacts with them, and we need to style those accordingly.I’m going to create a new cascade sub-layer directly under the  sub-layer called, creatively, :/* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      /* Styles common to all buttons */
+    }
+
+    /* Component states layer */
+    @layer states {
+      /* Styles for specific button states */
+    }
+  }
+}Pause and reflect here. What states should we target? What do we want to change for each of these states?Some states may share similar property changes, such as  and  having the same background color. Luckily, CSS gives us the tools we need to tackle such problems, using the  function to group property changes based on the state. Why  instead of ?  comes with zero specificity, meaning it’s a lot easier to override than , which takes the specificity of the element with the highest specificity score in its arguments. Maintaining low specificity is a virtue when it comes to writing scalable, maintainable CSS./* Component states layer */
+@layer states {
+  &:where(:hover, :focus-visible) {
+    /* button hover and focus state styles */
+  }
+}But how do we update the button’s styles in a  way? What I mean by that is how do we make sure that the button  like it’s hovered or in focus? We could just slap a new background color on it, but ideally, the color should be related to the  set in the  layer.So, let’s refactor things a bit. Earlier, I set the  element’s  to . I want to reuse that color, so it behooves us to make that into a CSS variable so we can update it once and have it apply everywhere. Relying on variables is yet another virtue of writing scalable and maintainable CSS.I’ll create a new variable called --button-background-color that is initially set to  and then set it on the default button styles:/* Component elements layer */
+@layer elements {
+  --button-background-color: darkslateblue;
+
+  background-color: var(--button-background-color);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  display: grid;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1;
+  margin: 0;
+  padding-block: 0.65rem;
+  padding-inline: 1rem;
+  place-content: center;
+  width: fit-content;
+}Now that we have a color stored in a variable, we can set that same variable on the button’s hovered and focused states in our other layer, using the relatively new  function to convert  to a lighter color when the button is hovered or in focus.Back to our  layer! We’ll first mix the color in a new CSS variable called :/* Component states layer */
+@layer states {
+  &:where(:hover, :focus-visible) {
+    /* custom property only used in state */
+    --state-background-color: color-mix(
+      in srgb, 
+      var(--button-background-color), 
+      white 10%
+    );
+  }
+}We can then apply that color as the background color by updating the  property./* Component states layer */
+@layer states {
+  &:where(:hover, :focus-visible) {
+    /* custom property only used in state */
+    --state-background-color: color-mix(
+      in srgb, 
+      var(--button-background-color), 
+      white 10%
+    );
+
+    /* applying the state background-color */
+    background-color: var(--state-background-color);
+  }
+}Defining modified button stylesAlong with  and  layers, you may be looking for some sort of variation in your components, such as . That’s because not all buttons are going to look like your default button. You might want one with a green background color for the user to confirm a decision. Or perhaps you want a red one to indicate danger when clicked. So, we can take our existing default button styles and modify them for those specific use cases If we think about the order of the cascade — always flowing from top to bottom — we don’t want the modified styles to affect the styles in the states layer we just made. So, let’s add a new  layer in between  and :/* Components top-level layer */
+@layer components {
+
+  .button {
+  /* Component elements layer */
+  @layer elements {
+    /* etc. */
+  }
+
+  /* Component modifiers layer */
+  @layer modifiers {
+    /* new layer! */
+  }
+
+  /* Component states layer */
+  @layer states {
+    /* etc. */
+  }
+}Similar to how we handled , we can now update the --button-background-color variable for each button modifier. We could modify the styles further, of course, but we’re keeping things fairly straightforward to demonstrate how this system works.We’ll create a new class that modifies the  of the default button from  to . Again, we can rely on the  selector because we want the added specificity in this case. That way, we override the default button style with the modifier class. We’ll call this class  (green is a “successful” color) and feed it to :/* Component modifiers layer */
+@layer modifiers {
+  &:is(.success) {
+    --button-background-color: darkgreen;
+  }
+}If we add the  class to one of our buttons, it becomes  instead  which is exactly what we want. And since we already do some -ing in the  layer, we’ll automatically inherit those hover and focus styles, meaning  is lightened in those states./* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      --button-background-color: darkslateblue;
+
+      background-color: var(--button-background-color);
+      /* etc. */
+
+    /* Component modifiers layer */
+    @layer modifiers {
+      &:is(.success) {
+        --button-background-color: darkgreen;
+      }
+    }
+
+    /* Component states layer */
+    @layer states {
+      &:where(:hover, :focus) {
+        --state-background-color: color-mix(
+          in srgb,
+          var(--button-background-color),
+          white 10%
+        );
+
+        background-color: var(--state-background-color);
+      }
+    }
+  }
+}We can refactor any CSS property we need to modify into a CSS custom property, which gives us a lot of room for customization./* Components top-level layer */
+@layer components {
+  .button {
+    /* Component elements layer */
+    @layer elements {
+      --button-background-color: darkslateblue;
+
+      --button-border-width: 1px;
+      --button-border-style: solid;
+      --button-border-color: transparent;
+      --button-border-radius: 0.65rem;
+
+      --button-text-color: white;
+
+      --button-padding-inline: 1rem;
+      --button-padding-block: 0.65rem;
+
+      background-color: var(--button-background-color);
+      border: 
+        var(--button-border-width) 
+        var(--button-border-style) 
+        var(--button-border-color);
+      border-radius: var(--button-border-radius);
+      color: var(--button-text-color);
+      cursor: pointer;
+      display: grid;
+      font-size: 1rem;
+      font-family: inherit;
+      line-height: 1;
+      margin: 0;
+      padding-block: var(--button-padding-block);
+      padding-inline: var(--button-padding-inline);
+      place-content: center;
+      width: fit-content;
+    }
+
+    /* Component modifiers layer */
+    @layer modifiers {
+      &:is(.success) {
+        --button-background-color: darkgreen;
+      }
+
+      &:is(.ghost) {
+        --button-background-color: transparent;
+        --button-text-color: black;
+        --button-border-color: darkslategray;
+        --button-border-width: 3px;
+      }
+    }
+
+    /* Component states layer */
+    @layer states {
+      &:where(:hover, :focus) {
+        --state-background-color: color-mix(
+          in srgb,
+          var(--button-background-color),
+          white 10%
+        );
+
+        background-color: var(--state-background-color);
+      }
+    }
+  }
+}P.S. Look closer at that demo and check out how I’m adjusting the button’s background using  — then go read Sara Joy’s “Come to the  Side” for a thorough rundown of how that works!What do you think? Is this something you would use to organize your styles? I can see how creating a system of cascade layers could be overkill for a small project with few components. But even a little toe-dipping into things like we just did illustrates how much power we have when it comes to managing — and even taming — the CSS Cascade. Buttons are deceptively complex but we saw how few styles it takes to handle everything from the default styles to writing the styles for their states and modified versions.]]></content:encoded></item><item><title>Make Any File a Template Using This Hidden macOS Tool</title><link>https://css-tricks.com/make-any-file-a-template-using-this-hidden-macos-tool/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Mon, 10 Feb 2025 13:54:00 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Stationery Pad is a handy way to nix a step in your workflow if you regularly use document templates on your Mac. The long-standing Finder feature essentially tells a file’s parent application to open a copy of it by default, ensuring that the original file remains unedited.This works for any kind of file, including HTML, CSS, JavaScriprt, or what have you. You can get there with + or right-click and select “Get info.”]]></content:encoded></item><item><title>TypeScript: extracting parts of composite types via infer</title><link>https://2ality.com/2025/02/typescript-infer-operator.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore how we can extract parts of composite types via the  operator.It helps if you are loosely familiar with conditional types. You can check out section “Conditional types” in “Tackling TypeScript” to read up on them.]]></content:encoded></item><item><title>TypeDoc: testing code examples in doc comments</title><link>https://2ality.com/2025/02/testing-typedoc-examples.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 9 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[TypeDoc now lets us refer to parts of other files via . In this blog post, I explain how that works and why it’s useful.]]></content:encoded></item></channel></rss>

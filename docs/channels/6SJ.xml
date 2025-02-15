@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Go</title><link>https://www.awesome-dev.news</link><description></description><item><title>Built a cli tool for generating .gitignore files</title><link>https://www.reddit.com/r/golang/comments/1iq1ivv/built_a_cli_tool_for_generating_gitignore_files/</link><author>/u/SoaringSignificant</author><category>dev</category><category>reddit</category><category>go</category><pubDate>Sat, 15 Feb 2025 13:38:59 +0000</pubDate><source url="https://www.reddit.com/r/golang/top/?sort=top&amp;t=day&amp;limit=6">Reddit - Go</source><content:encoded><![CDATA[I built this mostly as an excuse to play around with Charmbracelet’s libraries like Bubble Tea and make a nice TUI, but it also solves the annoying problem of constantly looking up .gitignore templates. It’s a simple CLI tool that lets you grab templates straight from GitHub, TopTal, or even your own custom repository, all from the terminal. You can search through templates using a TUI interface, combine multiple ones like mixing Go and CLion, and even save your own locally so you don’t have to redo them every time. If you’re always setting up new projects and find yourself dealing with .gitignore files over and over, this just makes life a bit easier, hopefully. If that sounds useful, check it out here and give it a try. And if you’ve got ideas to make the TUI better or want to add something cool, feel free to open a PR. Always happy to get feedback or contributions!]]></content:encoded></item><item><title>ED25519 Digital Signatures In Go</title><link>https://www.reddit.com/r/golang/comments/1iq1i84/ed25519_digital_signatures_in_go/</link><author>/u/mejaz-01</author><category>dev</category><category>reddit</category><category>go</category><pubDate>Sat, 15 Feb 2025 13:37:59 +0000</pubDate><source url="https://www.reddit.com/r/golang/top/?sort=top&amp;t=day&amp;limit=6">Reddit - Go</source><content:encoded><![CDATA[   submitted by    /u/mejaz-01 ]]></content:encoded></item><item><title>what do you use golang for?</title><link>https://www.reddit.com/r/golang/comments/1ipykyd/what_do_you_use_golang_for/</link><author>/u/Notalabel_4566</author><category>dev</category><category>reddit</category><category>go</category><pubDate>Sat, 15 Feb 2025 10:24:28 +0000</pubDate><source url="https://www.reddit.com/r/golang/top/?sort=top&amp;t=day&amp;limit=6">Reddit - Go</source><content:encoded><![CDATA[Is there any other major use than web development?]]></content:encoded></item><item><title>Webassembly and go 2025</title><link>https://www.reddit.com/r/golang/comments/1ipu4wd/webassembly_and_go_2025/</link><author>/u/KosekiBoto</author><category>dev</category><category>reddit</category><category>go</category><pubDate>Sat, 15 Feb 2025 05:00:37 +0000</pubDate><source url="https://www.reddit.com/r/golang/top/?sort=top&amp;t=day&amp;limit=6">Reddit - Go</source><content:encoded><![CDATA[so I found this video and was thinking about doing something similar for my game as a means to implement modding, however I also stumbled upon a 3 y/o post when looking into it essentially stating that it's a bad idea and I wasn't able to really find anything on the state of go wasm, so can someone please enlighten me as to the current state of WASM and Go, thank you   submitted by    /u/KosekiBoto ]]></content:encoded></item><item><title>GitHub - Clivern/Peanut: 🐺 Deploy Databases and Services Easily for Development and Testing Pipelines.</title><link>https://github.com/Clivern/Peanut</link><author>/u/Clivern</author><category>dev</category><category>reddit</category><category>go</category><pubDate>Fri, 14 Feb 2025 21:07:48 +0000</pubDate><source url="https://www.reddit.com/r/golang/top/?sort=top&amp;t=day&amp;limit=6">Reddit - Go</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Shutdown Go server</title><link>https://www.reddit.com/r/golang/comments/1ipj5zn/shutdown_go_server/</link><author>/u/Kennedy-Vanilla</author><category>dev</category><category>reddit</category><category>go</category><pubDate>Fri, 14 Feb 2025 19:46:42 +0000</pubDate><source url="https://www.reddit.com/r/golang/top/?sort=top&amp;t=day&amp;limit=6">Reddit - Go</source><content:encoded><![CDATA[Hi, recently I saw that many people shutdown their servers like this or similarserverCtx, serverStopCtx serverCtx, serverStopCtx := context.WithCancel(context.Background()) sig := make(chan os.Signal, 1) signal.Notify(sig, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT) go func() { <-sig shutdownCtx, cancelShutdown := context.WithTimeout(serverCtx, 30*time.Second) defer cancelShutdown() go func() { <-shutdownCtx.Done() if shutdownCtx.Err() == context.DeadlineExceeded { log.Fatal("graceful shutdown timed out.. forcing exit.") } }() err := server.Shutdown(shutdownCtx) if err != nil { log.Printf("error shutting down server: %v", err) } serverStopCtx() }() log.Printf("Server starting on port %s...\n", port) err = server.ListenAndServe() if err != nil && err != http.ErrServerClosed { log.Printf("error starting server: %v", err) os.Exit(1) } <-serverCtx.Done() log.Println("Server stopped") } := context.WithCancel(context.Background()) sig := make(chan os.Signal, 1) signal.Notify(sig, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT) go func() { <-sig shutdownCtx, cancelShutdown := context.WithTimeout(serverCtx, 30*time.Second) defer cancelShutdown() go func() { <-shutdownCtx.Done() if shutdownCtx.Err() == context.DeadlineExceeded { log.Fatal("graceful shutdown timed out.. forcing exit.") } }() err := server.Shutdown(shutdownCtx) if err != nil { log.Printf("error shutting down server: %v", err) } serverStopCtx() }() log.Printf("Server starting on port %s...\n", port) err = server.ListenAndServe() if err != nil && err != http.ErrServerClosed { log.Printf("error starting server: %v", err) os.Exit(1) } <-serverCtx.Done() log.Println("Server stopped") Is it necessary? Like it's so many code for the simple operation   submitted by    /u/Kennedy-Vanilla ]]></content:encoded></item><item><title>Extensible Wasm Applications with Go</title><link>https://go.dev/blog/wasmexport</link><author>Cherry Mui</author><category>dev</category><category>official</category><category>go</category><pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
+      Cherry Mui
+      13 February 2025
+      Go 1.24 enhances its WebAssembly (Wasm) capabilities with the
+addition of the  directive and the ability to build a reactor
+for WebAssembly System Interface (WASI).
+These features enable Go developers to export Go functions to Wasm,
+facilitating better integration with Wasm hosts and expanding the possibilities
+for Go-based Wasm applications.WebAssembly and the WebAssembly System InterfaceWebAssembly (Wasm) is a binary instruction format
+that was initially created for web browsers, providing the execution of
+high-performance, low-level code at speeds approaching native performance.
+Since then, Wasm’s utility has expanded, and it is now used in various
+environments beyond the browser.
+Notably, cloud providers offer services that directly execute Wasm
+executables, taking advantage of the
+WebAssembly System Interface (WASI) system call API.
+WASI allows these executables to interact with system resources.Go first added support for compiling to Wasm in the 1.11 release, through the
+ port.
+Go 1.21 added a new port targeting the WASI preview 1 syscall API through the
+new  port.Exporting Go Functions to Wasm with Go 1.24 introduces a new compiler directive, , which allows
+developers to export Go functions to be called from outside of the
+Wasm module, typically from a host application that runs the Wasm runtime.
+This directive instructs the compiler to make the annotated function available
+as a Wasm export
+in the resulting Wasm binary.To use the  directive, simply add it to a function definition://go:wasmexport add
+func add(a, b int32) int32 { return a + b }
+With this, the Wasm module will have an exported function named  that
+can be called from the host.This is analogous to the cgo  directive,
+which makes the function available to be called from C,
+though  uses a different, simpler mechanism.A WASI reactor is a WebAssembly module that operates continuously, and
+can be called upon multiple times to react on events or requests.
+Unlike a “command” module, which terminates after its main function finishes,
+a reactor instance remains live after initialization, and its exports remain
+accessible.With Go 1.24, one can build a WASI reactor with the  build
+flag.$ GOOS=wasip1 GOARCH=wasm go build -buildmode=c-shared -o reactor.wasm
+The build flag signals to the linker not to generate the  function
+(the entry point for a command module), and instead generate an
+ function, which performs runtime and package initialization,
+along with any exported functions and their dependencies.
+The  function must be called before any other exported functions.
+The  function will not be automatically invoked.To use a WASI reactor, the host application first initializes it by calling
+, then simply invoke the exported functions.
+Here is an example using Wazero, a Go-based Wasm runtime
+implementation:// Create a Wasm runtime, set up WASI.
+r := wazero.NewRuntime(ctx)
+defer r.Close(ctx)
+wasi_snapshot_preview1.MustInstantiate(ctx, r)
+
+// Configure the module to initialize the reactor.
+config := wazero.NewModuleConfig().WithStartFunctions("_initialize")
+
+// Instantiate the module.
+wasmModule, _ := r.InstantiateWithConfig(ctx, wasmFile, config)
+
+// Call the exported function.
+fn := wasmModule.ExportedFunction("add")
+var a, b int32 = 1, 2
+res, _ := fn.Call(ctx, api.EncodeI32(a), api.EncodeI32(b))
+c := api.DecodeI32(res[0])
+fmt.Printf("add(%d, %d) = %d\n", a, b, c)
+
+// The instance is still alive. We can call the function again.
+res, _ = fn.Call(ctx, api.EncodeI32(b), api.EncodeI32(c))
+fmt.Printf("add(%d, %d) = %d\n", b, c, api.DecodeI32(res[0]))
+The  directive and the reactor build mode allow applications to
+be extended by calling into Go-based Wasm code.
+This is particularly valuable for applications that have adopted Wasm as a
+plugin or extension mechanism with well-defined interfaces.
+By exporting Go functions, applications can leverage the Go Wasm modules to
+provide functionality without needing to recompile the entire application.
+Furthermore, building as a reactor ensures that the exported functions can be
+called multiple times without requiring reinitialization, making it suitable
+for long-running applications or services.Supporting rich types between the host and the clientGo 1.24 also relaxes the constraints on types that can be used as input and
+result parameters with  functions.
+For example, one can pass a bool, a string, a pointer to an , or a
+pointer to a struct which embeds  and contains supported
+field types
+(see the documentation for detail).
+This allows Go Wasm applications to be written in a more natural and ergonomic
+way, and removes some unnecessary type conversions.While Go 1.24 has made significant enhancements to its Wasm capabilities,
+there are still some notable limitations.Wasm is a single-threaded architecture with no parallelism.
+A  function can spawn new goroutines.
+But if a function creates a background goroutine, it will not continue
+executing when the  function returns, until calling back into
+the Go-based Wasm module.While some type restrictions have been relaxed in Go 1.24, there are still
+limitations on the types that can be used with  and
+ functions.
+Due to the unfortunate mismatch between the 64-bit architecture of the client
+and the 32-bit architecture of the host, it is not possible to pass pointers in
+memory.
+For example, a  function cannot take a pointer to a struct that
+contains a pointer-typed field.The addition of the ability to build a WASI reactor and export Go functions to
+Wasm in Go 1.24 represent a significant step forward for Go’s WebAssembly
+capabilities.
+These features empower developers to create more versatile and powerful Go-based
+Wasm applications, opening up new possibilities for Go in the Wasm ecosystem.]]></content:encoded></item><item><title>Go 1.24 arrives</title><link>https://golangweekly.com/issues/542</link><author></author><category>dev</category><category>go</category><pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate><source url="https://golangweekly.com/">Golang Weekly</source><content:encoded><![CDATA[DB Fiddle is a handy online database 'sandbox' for playing with various versions of MySQL, Postgres, and SQLite direct from the browser.]]></content:encoded></item><item><title>Go 1.24 is released!</title><link>https://go.dev/blog/go1.24</link><author>Junyang Shao, on behalf of the Go team</author><category>dev</category><category>official</category><category>go</category><pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
+      Junyang Shao, on behalf of the Go team
+      11 February 2025
+      Today the Go team is excited to release Go 1.24,
+which you can get by visiting the download page.Go 1.24 comes with many improvements over Go 1.23. Here are some of the notable
+changes; for the full list, refer to the release notes.Several performance improvements in the runtime have decreased CPU overhead
+by 2–3% on average across a suite of representative benchmarks. These
+improvements include a new builtin  implementation based on
+Swiss Tables, more efficient
+memory allocation of small objects, and a new runtime-internal mutex
+implementation.The  command now provides a mechanism for tracking tool dependencies for a
+module. Use  to add a  directive to the current module. Use
+ to run the tools declared with the  directive.
+Read more on the go command in the release notes.The new  analyzer in  subcommand reports common mistakes in
+declarations of tests, fuzzers, benchmarks, and examples in test packages.
+Read more on vet in the release notes.Standard library additionsImproved WebAssembly supportGo 1.24 adds a new  directive for Go programs to export
+functions to the WebAssembly host, and supports building a Go program as a WASI
+reactor/library.
+Read more on WebAssembly in the release notes.Please read the Go 1.24 release notes for the complete and
+detailed information. Don’t forget to watch for follow-up blog posts that
+will go in more depth on some of the topics mentioned here!Thank you to everyone who contributed to this release by writing code and
+documentation, reporting bugs, sharing feedback, and testing the release
+candidates. Your efforts helped to ensure that Go 1.24 is as stable as possible.
+As always, if you notice any problems, please file an issue.]]></content:encoded></item></channel></rss>
