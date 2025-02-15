@@ -26,17 +26,18 @@ https://hnrss.org/frontpage?points=75 "~HN" ! hn
 https://hnrss.org/show?points=60 "~Show HN" ! dev hn
 
 http://rss.slashdot.org/Slashdot/slashdotDevelopers "~Slashdot - Dev" ! dev slashdot
-https://github.blog/rss "~Dev - Github Blog" ! official
+https://github.blog/rss "~Github Blog" ! official
 https://engineering.fb.com/feed/ "~Facebook engineering" ! dev official
 https://netflixtechblog.com/feed "~Netflix Tech Blog" ! dev official
+https://fly.io/blog/feed.xml "~Fly.io blog" ! dev
 
 # programming
 https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" ! dev reddit
-https://blog.janestreet.com/feed.xml "~Dev - Jane Street" ! dev
-https://newsletter.systemdesign.one/feed "~Dev - System Design Newsletter" ! dev
+https://blog.janestreet.com/feed.xml "~Jane Street" ! dev
+https://newsletter.systemdesign.one/feed "~System Design Newsletter" ! dev
 
 # infosec
-https://portswigger.net/research/rss "~Dev - PortSwitgger Research" ! infosec
+https://portswigger.net/research/rss "~PortSwitgger Research" ! infosec
 https://googleprojectzero.blogspot.com/feeds/posts/default "Google Project Zero" ! infosec
 https://blogs.cisco.com/security/feed "Cisco Security Blog" ! infosec
 http://krebsonsecurity.com/feed/ "Krebs on Security" ! infosec
@@ -57,7 +58,7 @@ https://blog.miguelgrinberg.com/feed "Miguel Grinberg" ! dev python
 
 
 # rust
-https://blog.rust-lang.org/feed "~Dev - Rust Blog" ! dev official rust
+https://blog.rust-lang.org/feed "~Rust Blog" ! dev official rust
 https://www.youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w "~Let's get Rusty" ! dev rust video learning
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "~Jon Gjengset" ! dev rust video learning
 https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! dev rust reddit
@@ -68,11 +69,11 @@ https://poignardazur.github.io/feed "Olivier Faure blog" ! dev rust blog
 https://this-week-in-rust.org/rss.xml "This week in Rust" ! dev rust
 
 # linux
-https://archlinux.org/feeds/news/ "~Dev - Arch Linux News" ! linux
-http://static.fsf.org/fsforg/rss/blogs.xml "~Dev - Free Software Foundation" ! linux
+https://archlinux.org/feeds/news/ "~Arch Linux News" ! linux
+http://static.fsf.org/fsforg/rss/blogs.xml "~Free Software Foundation" ! linux
 https://www.reddit.com/r/linux/top/.rss?sort=top&t=day&limit=6 "~Reddit - Linux" ! linux reddit
-https://www.cyberciti.com/atom/atom.xml "~Dev - NixCraft" ! blog linux
-http://rss.slashdot.org/Slashdot/slashdotLinux "~Dev - Slashdot - Linux" ! slashdot linux
+https://www.cyberciti.com/atom/atom.xml "~NixCraft" ! blog linux
+http://rss.slashdot.org/Slashdot/slashdotLinux "~Slashdot - Linux" ! slashdot linux
 
 # frontend
 https://developer.mozilla.org/en-US/blog/rss.xml "~MDN Blog" ! dev official frontend
@@ -163,7 +164,8 @@ https://www.phoronix.com/rss.php ! tech
 https://spectrum.ieee.org/customfeeds/feed/all-topics/rss ! tech
 https://www.techdirt.com/feed/ ! tech
 https://www.eff.org/rss/updates.xml ! tech
-https://www.404media.co/rss "~Dev - 404" ! tech
+https://www.404media.co/rss "~404" ! tech
+https://www.quantamagazine.org/rss "Quanta Magazine" ! tech
 
 # podcast
 https://changelog.com/podcast/feed "~Podcast - Changelog" ! podcast
