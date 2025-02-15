@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Kubernetes</title><link>https://konrad.website/liveboat-github-runner/</link><description></description><item><title>Career transition in to Kubernetes</title><link>https://www.reddit.com/r/kubernetes/comments/1iq1ka1/career_transition_in_to_kubernetes/</link><author>/u/Similar-Secretary-86</author><category>reddit</category><category>k8s</category><category>devops</category><pubDate>Sat, 15 Feb 2025 13:41:05 +0000</pubDate><source url="https://www.reddit.com/r/kubernetes/top/?sort=top&amp;t=day&amp;limit=6">Kubernetes</source><content:encoded><![CDATA["I've spent the last six months working with Docker and Kubernetes to deploy my application on Kubernetes, and I've successfully achieved that. Now, I'm looking to transition into a Devops Gonna purchase kode cloud pro for an year is worth for money ? Start from scratch like linux then docker followed by kubernetes then do some certification Any guidance here would be appreciated ]]></content:encoded></item><item><title>My new blog post comparing networking in EKS vs. GKE</title><link>https://www.reddit.com/r/kubernetes/comments/1ipz55k/my_new_blog_post_comparing_networking_in_eks_vs/</link><author>/u/jumiker</author><category>reddit</category><category>k8s</category><category>devops</category><pubDate>Sat, 15 Feb 2025 11:06:09 +0000</pubDate><source url="https://www.reddit.com/r/kubernetes/top/?sort=top&amp;t=day&amp;limit=6">Kubernetes</source><content:encoded><![CDATA[   submitted by    /u/jumiker ]]></content:encoded></item><item><title>Deep Dive into VPA Recommender</title><link>https://www.reddit.com/r/kubernetes/comments/1ipylpu/deep_dive_into_vpa_recommender/</link><author>/u/erik_zilinsky</author><category>reddit</category><category>k8s</category><category>devops</category><pubDate>Sat, 15 Feb 2025 10:26:04 +0000</pubDate><source url="https://www.reddit.com/r/kubernetes/top/?sort=top&amp;t=day&amp;limit=6">Kubernetes</source><content:encoded><![CDATA[I wanted to understand how the Recommender component of the VPA (Vertical Pod Autoscaler) works - specifically, how it aggregates CPU/Memory samples and calculates recommendations. So, I checked its source code and ran some debugging sessions.Based on my findings, I wrote a blog post about it, which might be helpful if you're interested in how the Recommender's main loop works under the hood.]]></content:encoded></item><item><title>Container Networking - Kubernetes with Calico</title><link>https://www.reddit.com/r/kubernetes/comments/1ipw9bu/container_networking_kubernetes_with_calico/</link><author>/u/tkr_2020</author><category>reddit</category><category>k8s</category><category>devops</category><pubDate>Sat, 15 Feb 2025 07:25:55 +0000</pubDate><source url="https://www.reddit.com/r/kubernetes/top/?sort=top&amp;t=day&amp;limit=6">Kubernetes</source><content:encoded><![CDATA[: VLAN 10: VLAN 20When traffic flows from VLAN 10 to VLAN 20, the outer IP header shows:The inner IP header reflects:The firewall administrator notices that both the source and destination ports appear as , indicating they are set to . This prevents the creation of granular security policies, as all ports must be permitted.Could you please advise on how to set specific source and destination ports at the outer IP layer to allow the firewall administrator to apply more granular and secure policies?]]></content:encoded></item><item><title>How do I configure Minikube to use my local IP address instead of the cluster IP?</title><link>https://www.reddit.com/r/kubernetes/comments/1ipr3i1/how_do_i_configure_minikube_to_use_my_local_ip/</link><author>/u/Own_Appointment5630</author><category>reddit</category><category>k8s</category><category>devops</category><pubDate>Sat, 15 Feb 2025 02:02:58 +0000</pubDate><source url="https://www.reddit.com/r/kubernetes/top/?sort=top&amp;t=day&amp;limit=6">Kubernetes</source><content:encoded><![CDATA[Hi there!! How can I configure Minikube on Windows (using Docker) to allow my Spring Boot pods to connect to a remote database on the same network as my local machine? When I create the deployment, the pods use the same IP as the Minikube cluster which gets rejected by the database. Is there any way that Minikube uses my local IP in order to connect correctly?.]]></content:encoded></item><item><title>For those managing or working with multiple clusters, do you use a combined kubeconfig file or separate by cluster?</title><link>https://www.reddit.com/r/kubernetes/comments/1ipg99n/for_those_managing_or_working_with_multiple/</link><author>/u/trouphaz</author><category>reddit</category><category>k8s</category><category>devops</category><pubDate>Fri, 14 Feb 2025 17:44:13 +0000</pubDate><source url="https://www.reddit.com/r/kubernetes/top/?sort=top&amp;t=day&amp;limit=6">Kubernetes</source><content:encoded><![CDATA[I wonder if I'm in the minority. I have been keeping my kubeconfigs separate per cluster for years while I know others that combine everything to a single file. I started doing this because I didn't fully grasp yaml when I started and when I had an issue with the kubeconfig, I didn't have any idea on how to repair it. So I'd have to fully recreate it.So, each cluster has its own kubeconfig file named for the cluster's name and I have a function that'll set my KUBECONFIG variable to the file using the cluster name.sc() { CLUSTER_NAME="${1}" export KUBECONFIG="~/.kube/${CLUSTER_NAME}" } ]]></content:encoded></item><item><title>Black, Indigenous, and People of Color (BIPOC) Initiative Meeting - 2025-02-11</title><link>https://www.youtube.com/watch?v=eHa6GhK7L0I</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/eHa6GhK7L0I?version=3" length="" type=""/><pubDate>Fri, 14 Feb 2025 13:59:30 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon Europe in London from April 1 - 4, 2025. Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>ChatLoopBackOff Episode 46 (Dragonfly)</title><link>https://www.youtube.com/watch?v=gd6HRgr8KcA</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/gd6HRgr8KcA?version=3" length="" type=""/><pubDate>Fri, 14 Feb 2025 05:56:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Dragonfly, a CNCF Incubating project, is an open-source, cloud-native image and file distribution system optimized for large-scale data delivery. It is designed to enhance the efficiency, speed, and reliability of distributing container images and other data files across distributed systems. 
+
+This CNCF project is for organizations looking to improve the speed, efficiency, and reliability of artifact distribution in cloud-native environments. Join CNCF Ambassador Nitish Kumar as he explores how it works, Kubernetes integration, as well as its simplified setup and usage.]]></content:encoded></item><item><title>The Cloud Controller Manager Chicken and Egg Problem</title><link>https://kubernetes.io/blog/2025/02/14/cloud-controller-manager-chicken-egg-problem/</link><author></author><category>official</category><category>k8s</category><category>devops</category><pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate><source url="https://kubernetes.io/">Kubernetes Blog</source><content:encoded><![CDATA[Kubernetes 1.31
+completed the largest migration in Kubernetes history, removing the in-tree
+cloud provider. While the component migration is now done, this leaves some additional
+complexity for users and installer projects (for example, kOps or Cluster API) . We will go
+over those additional steps and failure points and make recommendations for cluster owners.
+This migration was complex and some logic had to be extracted from the core components,
+building four new subsystems.One of the most critical functionalities of the cloud controller manager is the node controller,
+which is responsible for the initialization of the nodes.As you can see in the following diagram, when the  starts, it registers the 
+object with the apiserver, Tainting the node so it can be processed first by the
+cloud-controller-manager. The initial  is missing the cloud-provider specific information,
+like the Node Addresses and the Labels with the cloud provider specific information like the
+Node, Region and Instance type information.sequenceDiagram
+autonumber
+rect rgb(191, 223, 255)
+Kubelet->>+Kube-apiserver: Create Node
+Note over Kubelet: Taint: node.cloudprovider.kubernetes.io
+Kube-apiserver->>-Kubelet: Node Created
+end
+Note over Kube-apiserver: Node is Not Ready Tainted, Missing Node Addresses*, ...
+Note over Kube-apiserver: Send Updates
+rect rgb(200, 150, 255)
+Kube-apiserver->>+Cloud-controller-manager: Watch: New Node Created
+Note over Cloud-controller-manager: Initialize Node:Cloud Provider Labels, Node Addresses, ...
+Cloud-controller-manager->>-Kube-apiserver: Update Node
+end
+Note over Kube-apiserver: Node is Ready
+This new initialization process adds some latency to the node readiness. Previously, the kubelet
+was able to initialize the node at the same time it created the node. Since the logic has moved
+to the cloud-controller-manager, this can cause a chicken and egg problem
+during the cluster bootstrapping for those Kubernetes architectures that do not deploy the
+controller manager as the other components of the control plane, commonly as static pods,
+standalone binaries or daemonsets/deployments with tolerations to the taints and using
+ (more on this below)Examples of the dependency problemAs noted above, it is possible during bootstrapping for the cloud-controller-manager to be
+unschedulable and as such the cluster will not initialize properly. The following are a few
+concrete examples of how this problem can be expressed and the root causes for why they might
+occur.These examples assume you are running your cloud-controller-manager using a Kubernetes resource
+(e.g. Deployment, DaemonSet, or similar) to control its lifecycle. Because these methods
+rely on Kubernetes to schedule the cloud-controller-manager, care must be taken to ensure it
+will schedule properly.Example: Cloud controller manager not scheduling due to uninitialized taintAs noted in the Kubernetes documentation, when the kubelet is started with the command line
+flag --cloud-provider=external, its corresponding  object will have a no schedule taint
+named node.cloudprovider.kubernetes.io/uninitialized added. Because the cloud-controller-manager
+is responsible for removing the no schedule taint, this can create a situation where a
+cloud-controller-manager that is being managed by a Kubernetes resource, such as a 
+or , may not be able to schedule.If the cloud-controller-manager is not able to be scheduled during the initialization of the
+control plane, then the resulting  objects will all have the
+node.cloudprovider.kubernetes.io/uninitialized no schedule taint. It also means that this taint
+will not be removed as the cloud-controller-manager is responsible for its removal. If the no
+schedule taint is not removed, then critical workloads, such as the container network interface
+controllers, will not be able to schedule, and the cluster will be left in an unhealthy state.Example: Cloud controller manager not scheduling due to not-ready taintThe next example would be possible in situations where the container network interface (CNI) is
+waiting for IP address information from the cloud-controller-manager (CCM), and the CCM has not
+tolerated the taint which would be removed by the CNI."The Node controller detects whether a Node is ready by monitoring its health and adds or removes this taint accordingly."One of the conditions that can lead to a  resource having this taint is when the container
+network has not yet been initialized on that node. As the cloud-controller-manager is responsible
+for adding the IP addresses to a  resource, and the IP addresses are needed by the container
+network controllers to properly configure the container network, it is possible in some
+circumstances for a node to become stuck as not ready and uninitialized permanently.This situation occurs for a similar reason as the first example, although in this case, the
+node.kubernetes.io/not-ready taint is used with the no execute effect and thus will cause the
+cloud-controller-manager not to run on the node with the taint. If the cloud-controller-manager is
+not able to execute, then it will not initialize the node. It will cascade into the container
+network controllers not being able to run properly, and the node will end up carrying both the
+node.cloudprovider.kubernetes.io/uninitialized and node.kubernetes.io/not-ready taints,
+leaving the cluster in an unhealthy state.There is no one “correct way” to run a cloud-controller-manager. The details will depend on the
+specific needs of the cluster administrators and users. When planning your clusters and the
+lifecycle of the cloud-controller-managers please consider the following guidance:For cloud-controller-managers running in the same cluster, they are managing.Use host network mode, rather than the pod network: in most cases, a cloud controller manager
+will need to communicate with an API service endpoint associated with the infrastructure.
+Setting “hostNetwork” to true will ensure that the cloud controller is using the host
+networking instead of the container network and, as such, will have the same network access as
+the host operating system. It will also remove the dependency on the networking plugin. This
+will ensure that the cloud controller has access to the infrastructure endpoint (always check
+your networking configuration against your infrastructure provider’s instructions).Use a scalable resource type.  and  are useful for controlling the
+lifecycle of a cloud controller. They allow easy access to running multiple copies for redundancy
+as well as using the Kubernetes scheduling to ensure proper placement in the cluster. When using
+these primitives to control the lifecycle of your cloud controllers and running multiple
+replicas, you must remember to enable leader election, or else your controllers will collide
+with each other which could lead to nodes not being initialized in the cluster.Target the controller manager containers to the control plane. There might exist other
+controllers which need to run outside the control plane (for example, Azure’s node manager
+controller). Still, the controller managers themselves should be deployed to the control plane.
+Use a node selector or affinity stanza to direct the scheduling of cloud controllers to the
+control plane to ensure that they are running in a protected space. Cloud controllers are vital
+to adding and removing nodes to a cluster as they form a link between Kubernetes and the
+physical infrastructure. Running them on the control plane will help to ensure that they run
+with a similar priority as other core cluster controllers and that they have some separation
+from non-privileged user workloads.
+It is worth noting that an anti-affinity stanza to prevent cloud controllers from running
+on the same host is also very useful to ensure that a single node failure will not degrade
+the cloud controller performance.Ensure that the tolerations allow operation. Use tolerations on the manifest for the cloud
+controller container to ensure that it will schedule to the correct nodes and that it can run
+in situations where a node is initializing. This means that cloud controllers should tolerate
+the node.cloudprovider.kubernetes.io/uninitialized taint, and it should also tolerate any
+taints associated with the control plane (for example, node-role.kubernetes.io/control-plane
+or node-role.kubernetes.io/master). It can also be useful to tolerate the
+node.kubernetes.io/not-ready taint to ensure that the cloud controller can run even when the
+node is not yet available for health monitoring.For cloud-controller-managers that will not be running on the cluster they manage (for example,
+in a hosted control plane on a separate cluster), then the rules are much more constrained by the
+dependencies of the environment of the cluster running the cloud-controller-manager. The advice
+for running on a self-managed cluster may not be appropriate as the types of conflicts and network
+constraints will be different. Please consult the architecture and requirements of your topology
+for these scenarios.This is an example of a Kubernetes Deployment highlighting the guidance shown above. It is
+important to note that this is for demonstration purposes only, for production uses please
+consult your cloud provider’s documentation.apiVersion: apps/v1
+kind: Deployment
+metadata:
+labels:
+app.kubernetes.io/name: cloud-controller-manager
+name: cloud-controller-manager
+namespace: kube-system
+spec:
+replicas: 2
+selector:
+matchLabels:
+app.kubernetes.io/name: cloud-controller-manager
+strategy:
+type: Recreate
+template:
+metadata:
+labels:
+app.kubernetes.io/name: cloud-controller-manager
+annotations:
+kubernetes.io/description: Cloud controller manager for my infrastructure
+spec:
+containers: # the container details will depend on your specific cloud controller manager
+- name: cloud-controller-manager
+command:
+- /bin/my-infrastructure-cloud-controller-manager
+- --leader-elect=true
+- -v=1
+image: registry/my-infrastructure-cloud-controller-manager@latest
+resources:
+requests:
+cpu: 200m
+memory: 50Mi
+hostNetwork: true # these Pods are part of the control plane
+nodeSelector:
+node-role.kubernetes.io/control-plane: ""
+affinity:
+podAntiAffinity:
+requiredDuringSchedulingIgnoredDuringExecution:
+- topologyKey: "kubernetes.io/hostname"
+labelSelector:
+matchLabels:
+app.kubernetes.io/name: cloud-controller-manager
+tolerations:
+- effect: NoSchedule
+key: node-role.kubernetes.io/master
+operator: Exists
+- effect: NoExecute
+key: node.kubernetes.io/unreachable
+operator: Exists
+tolerationSeconds: 120
+- effect: NoExecute
+key: node.kubernetes.io/not-ready
+operator: Exists
+tolerationSeconds: 120
+- effect: NoSchedule
+key: node.cloudprovider.kubernetes.io/uninitialized
+operator: Exists
+- effect: NoSchedule
+key: node.kubernetes.io/not-ready
+operator: Exists
+When deciding how to deploy your cloud controller manager it is worth noting that
+cluster-proportional, or resource-based, pod autoscaling is not recommended. Running multiple
+replicas of a cloud controller manager is good practice for ensuring high-availability and
+redundancy, but does not contribute to better performance. In general, only a single instance
+of a cloud controller manager will be reconciling a cluster at any given time.]]></content:encoded></item><item><title>Kubernetes History Inspector, with Kakeru Ishii</title><link>http://sites.libsyn.com/419861/kubernetes-history-inspector-with-kakeru-ishii</link><author>gdevs.podcast@gmail.com (gdevs.podcast@gmail.com)</author><category>podcast</category><category>k8s</category><category>devops</category><enclosure url="https://traffic.libsyn.com/secure/e780d51f-f115-44a6-8252-aed9216bb521/KPOD247.mp3?dest-id=3486674" length="" type=""/><pubDate>Thu, 13 Feb 2025 11:23:00 +0000</pubDate><source url="https://kubernetespodcast.com/">Kubernetes Podcast</source><content:encoded><![CDATA[Kakeru is the initiator of the Kubernetes History Inspector or KHI. An open source tool that allows you to visualise Kubernetes Logs and troubleshoot issues. We discussed what the tool does, how it's built and what was the motivation behind Open sourcing it.Do you have something cool to share? Some questions? Let us know: News of the week ]]></content:encoded></item><item><title>Sandbox environments: Creating efficient and isolated testing realms</title><link>https://www.youtube.com/watch?v=fh7-lQVmX-o</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/fh7-lQVmX-o?version=3" length="" type=""/><pubDate>Thu, 13 Feb 2025 06:00:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon Europe in London from April 1 - 4, 2025. Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>KitOps: AI Model Packaging Standards</title><link>https://www.youtube.com/watch?v=1TD-e_wVe4Q</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/1TD-e_wVe4Q?version=3" length="" type=""/><pubDate>Thu, 13 Feb 2025 06:00:00 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Chat with us on Discord:  https://discord.gg/Tapeh8agYy
+
+Check out our repos:
+KitOps      https://github.com/jozu-ai/kitops
+PyKitOps Python Library  https://github.com/jozu-ai/pykitops
+KitOps MLFlow Plugin   https://github.com/jozu-ai/mlflow-jozu-plugin]]></content:encoded></item><item><title>CNL: Optimizing Kyverno policy enforcement performance for large clusters</title><link>https://www.youtube.com/watch?v=DWmCAUCs3bc</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/DWmCAUCs3bc?version=3" length="" type=""/><pubDate>Mon, 10 Feb 2025 18:13:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon Europe in London from April 1 - 4, 2025. Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>ChatLoopBackOff Episode 45 (CRI-O)</title><link>https://www.youtube.com/watch?v=--eJZu3Zkbw</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/--eJZu3Zkbw?version=3" length="" type=""/><pubDate>Fri, 7 Feb 2025 06:19:59 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[CRI-O, a CNCF Graduated project, is designed to be lightweight, focusing solely on Kubernetes needs’, reducing resource overhead compared to general-purpose container runtimes. 
+
+It improves security by leveraging OCI (Open Container Initiative) standards, integrating seamlessly with tools like seccomp, SELinux, and AppArmor for enhanced isolation and compliance. With robust support for OCI-compliant image formats and runtimes like runc, CRI-O ensures compatibility with a wide range of container images. Join CNCF Ambassador Marvin Beckers test CRI-O’s efficiency, as it minimizes the feature set to what Kubernetes requires, leading to faster startup times and reduced complexity.]]></content:encoded></item><item><title>Cloud Native Live: What&apos;s latest in KubeArmor v1.5</title><link>https://www.youtube.com/watch?v=OUNEu3h2V3c</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/OUNEu3h2V3c?version=3" length="" type=""/><pubDate>Thu, 6 Feb 2025 06:04:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon Europe in London from April 1 - 4, 2025. Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>AI for observability</title><link>https://www.youtube.com/watch?v=IIz8Xpyebug</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/IIz8Xpyebug?version=3" length="" type=""/><pubDate>Thu, 6 Feb 2025 06:00:19 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon Europe in London from April 1 - 4, 2025. Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>TOC Meeting 2025-02-04</title><link>https://www.youtube.com/watch?v=R3H_ceqR6Us</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/R3H_ceqR6Us?version=3" length="" type=""/><pubDate>Tue, 4 Feb 2025 22:26:39 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>ChatLoopBackOff Episode 44 (k3s)</title><link>https://www.youtube.com/watch?v=6vYfJ6MM9_o</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/6vYfJ6MM9_o?version=3" length="" type=""/><pubDate>Fri, 31 Jan 2025 05:50:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[K3s, a CNCF Sandbox project, is a lightweight, certified Kubernetes distribution designed for simplicity, minimal resource consumption, and ease of use. Its small binary size, pre-bundled dependencies, and single-command installation make it ideal for edge computing, IoT, and development environments. 
+
+K3s feature low hardware requirements, support for ARM devices, and optimized performance, so it runs seamlessly on resource-constrained systems. Join CNCF Ambassador Aditya Soni while he explores how K3s ensures compatibility with Kubernetes tools while lowering the complexity and cost of deployment.]]></content:encoded></item><item><title>Deaf and Hard of Hearing WG Meeting - 2025-01-28</title><link>https://www.youtube.com/watch?v=Rndt_zS6v_w</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/Rndt_zS6v_w?version=3" length="" type=""/><pubDate>Thu, 30 Jan 2025 15:09:58 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon Europe in London from April 1 - 4, 2025. Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>Linkerd, with William Morgan</title><link>http://sites.libsyn.com/419861/linkerd-with-william-morgan</link><author>gdevs.podcast@gmail.com (gdevs.podcast@gmail.com)</author><category>podcast</category><category>k8s</category><category>devops</category><enclosure url="https://traffic.libsyn.com/secure/e780d51f-f115-44a6-8252-aed9216bb521/KPod246.mp3?dest-id=3486674" length="" type=""/><pubDate>Wed, 29 Jan 2025 00:25:00 +0000</pubDate><source url="https://kubernetespodcast.com/">Kubernetes Podcast</source><content:encoded><![CDATA[William Morgan is the CEO of Buoyant, the company behind Linkerd. You worked at Twitter before as a software engineer and engineering manager and you have a long experience in the field.Do you have something cool to share? Some questions? Let us know: News of the week  Links from the interview ]]></content:encoded></item><item><title>ASL Container</title><link>https://www.youtube.com/watch?v=meUtsFU7ndo</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/meUtsFU7ndo?version=3" length="" type=""/><pubDate>Mon, 27 Jan 2025 17:27:18 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>ASL Autoscaling 2</title><link>https://www.youtube.com/watch?v=cGONmC1smaM</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/cGONmC1smaM?version=3" length="" type=""/><pubDate>Mon, 27 Jan 2025 17:11:27 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>ASL Reliability</title><link>https://www.youtube.com/watch?v=pQluo2FG2eA</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/pQluo2FG2eA?version=3" length="" type=""/><pubDate>Mon, 27 Jan 2025 17:10:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>ASL Serverless 2</title><link>https://www.youtube.com/watch?v=rbyBgXqCN2k</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/rbyBgXqCN2k?version=3" length="" type=""/><pubDate>Mon, 27 Jan 2025 17:10:26 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Spotlight on SIG Architecture: Enhancements</title><link>https://kubernetes.io/blog/2025/01/21/sig-architecture-enhancements/</link><author></author><category>official</category><category>k8s</category><category>devops</category><pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate><source url="https://kubernetes.io/">Kubernetes Blog</source><content:encoded><![CDATA[This is the fourth interview of a SIG Architecture Spotlight series that will cover the different
+subprojects, and we will be covering SIG Architecture:
+Enhancements.In this SIG Architecture spotlight we talked with Kirsten
+Garrison, lead of the Enhancements subproject.The Enhancements subprojectFrederico (FSM): Hi Kirsten, very happy to have the opportunity to talk about the Enhancements
+subproject. Let's start with some quick information about yourself and your role.: I’m a lead of the Enhancements subproject of SIG-Architecture and
+currently work at Google. I first got involved by contributing to the service-catalog project with
+the help of Carolyn Van Slyck. With time, I joined the Release
+team,
+eventually becoming the Enhancements Lead and a Release Lead shadow. While on the release team, I
+worked on some ideas to make the process better for the SIGs and Enhancements team (the opt-in
+process) based on my team’s experiences. Eventually, I started attending Subproject meetings and
+contributing to the Subproject’s work.FSM: You mentioned the Enhancements subproject: how would you describe its main goals and areas of
+intervention?FSM: The improvement of the KEP process was (and is) one in which SIG Architecture was heavily
+involved. Could you explain the process to those that aren’t aware of it?: Every release, the SIGs let the
+Release Team know which features they intend to work on to be put into the release. As mentioned
+above, the prerequisite for these changes is a KEP - a standardized design document that all authors
+must fill out and approve in the first weeks of the release cycle. Most features will move
+through 3
+phases:
+alpha, beta and finally GA so approving a feature represents a significant commitment for the SIG.The KEP serves as the full source of truth of a feature. The KEP
+template
+has different requirements based on what stage a feature is in, but it generally requires a detailed
+discussion of the design and the impact as well as providing artifacts of stability and
+performance. The KEP takes quite a bit of iterative work between authors, SIG reviewers, api review
+team and the Production Readiness Review team before it is approved. Each set of reviewers is
+looking to make sure that the proposal meets their standards in order to have a stable and
+performant Kubernetes release. Only after all approvals are secured, can an author go forth and
+merge their feature in the Kubernetes code base.FSM: I see, quite a bit of additional structure was added. Looking back, what were the most
+significant improvements of that approach?: In general, I think that the improvements with the most impact had to do with focusing on
+the core intent of the KEP. KEPs exist not just to memorialize designs, but provide a structured way
+to discuss and come to an agreement about different facets of the change. At the core of the KEP
+process is communication and consideration.To that end, some of the significant changes revolve around a more detailed and accessible KEP
+template. A significant amount of work was put in over time to get the
+k/enhancements repo into its current form -- a
+directory structure organized by SIG with the contours of the modern KEP template (with
+Proposal/Motivation/Design Details subsections). We might take that basic structure for granted
+today, but it really represents the work of many people trying to get the foundation of this process
+in place over time.As Kubernetes matures, we’ve needed to think about more than just the end goal of getting a single
+feature merged. We need to think about things like: stability, performance, setting and meeting user
+expectations. And as we’ve thought about those things the template has grown more detailed. The
+addition of the Production Readiness Review was major as well as the enhanced testing requirements
+(varying at different stages of a KEP’s lifecycle).: We’re currently working on two things:Creating a Process KEP template. Sometimes people want to harness the KEP process for
+significant changes that are more process oriented rather than feature oriented. We want to
+support this because memorializing changes is important and giving people a better tool to do so
+will only encourage more discussion and transparency. While our template changes aim to be as non-disruptive as possible, we
+believe that it will be easier to track and communicate those changes to the community better with
+a versioned KEP template and the policies that go alongside such versioning.Both features will take some time to get right and fully roll out (just like a KEP feature) but we
+believe that they will both provide improvements that will benefit the community at large.FSM: You mentioned improvements: I remember when project boards for Enhancement tracking were
+introduced in recent releases, to great effect and unanimous applause from release team members. Was
+this a particular area of focus for the subproject?: The Subproject provided support to the Release Team’s Enhancement team in the migration away
+from using the spreadsheet to a project board. The collection and tracking of enhancements has
+always been a logistical challenge. During my time on the Release Team, I helped with the transition
+to an opt-in system of enhancements, whereby the SIG leads "opt-in" KEPs for release tracking. This
+helped to enhance communication between authors and SIGs before any significant work was undertaken
+on a KEP and removed toil from the Enhancements team. This change used the existing tools to avoid
+introducing too many changes at once to the community. Later, the Release Team approached the
+Subproject with an idea of leveraging GitHub Project Boards to further improve the collection
+process. This was to be a move away from the use of complicated spreadsheets to using repo-native
+labels on k/enhancement issues and project boards.FSM: That surely adds an impact on simplifying the workflow...: Removing sources of friction and promoting clear communication is very important to the
+Enhancements Subproject. At the same time, it’s important to give careful consideration to
+decisions that impact the community as a whole. We want to make sure that changes are balanced to
+give an upside and while not causing any regressions and pain in the rollout. We supported the
+Release Team in ideation as well as through the actual migration to the project boards. It was a
+great success and exciting to see the team make high impact changes that helped everyone involved in
+the KEP process!FSM: For those reading that might be curious and interested in helping, how would you describe the
+required skills for participating in the sub-project?: Familiarity with KEPs either via experience or taking time to look through the
+kubernetes/enhancements repo is helpful. All are welcome to participate if interested - we can take
+it from there.FSM: Excellent! Many thanks for your time and insight -- any final comments you would like to
+share with our readers?: The Enhancements process is one of the most important parts of Kubernetes and requires
+enormous amounts of coordination and collaboration of people and teams across the project to make it
+successful. I’m thankful and inspired by everyone’s continued hard work and dedication to making the
+project great. This is truly a wonderful community.]]></content:encoded></item></channel></rss>
