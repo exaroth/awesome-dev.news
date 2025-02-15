@@ -7,7 +7,7 @@ prepopulate-query-feeds yes
 show-read-feeds no
 confirm-mark-all-feeds-read yes
 confirm-mark-feed-read no
-keep-articles-days 30
+keep-articles-days 7
 
 ignore-article "*" "title =~ \"Sponsor\""
 ignore-article "*" "title =~ \"Advertisement\""
