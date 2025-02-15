@@ -1,152 +1,180 @@
-"query:Dev News:tags # \"dev\" and age < 2 and unread = \"yes\""
-"query:Tech News:tags # \"tech\" and age < 2 and unread = \"yes\""
-"query:World News:tags # \"news\" and age < 1 and unread = \"yes\""
-"query:Podcasts:tags # \"podcast\" and unread = \"yes\""
-"query:Youtube:tags # \"yt\""
+"query:Latest:age < 1 and tags !# \"reddit\" and tags !# \"trending\" and tags !# \"echojs\" and tags !# \"googledev\""
+"query:Tech:tags # \"tech\" and age < 2 "
+"query:AI:tags # \"ai\""
+"query:Linux and Unix:tags # \"linux\""
+"query:DevOps:tags # \"devops\""
+"query:Programming:tags # \"dev\""
+"query:JS/Frontend:tags # \"frontend\""
+"query:Infosec:tags # \"infosec\""
+"query:Rust:tags # \"rust\""
+"query:Go:tags # \"go\""
+"query:Python:tags # \"python\""
+"query:Kubernetes:tags # \"k8s\""
+"query:Learning:tags # \"learning\""
+"query:HN:tags # \"hn\""
+"query:Reddit:tags # \"reddit\""
+"query:EchoJS:tags # \"echojs\""
+"query:Video:tags # \"video\""
+"query:Podcasts:tags # \"podcast\""
+"query:Blog:tags # \"blog\""
+"query:Official News:tags # \"official\""
+https://developers.googleblog.com/rss/ "~Google Developers" googledev
+https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml "~Github Trending" trending
 
-https://hnrss.org/best "~HN" dev hn
-https://hnrss.org/show?points=60 "~HN Show" dev hn
-https://hnrss.org/frontpage?points=75 "~HN Front" dev hn
+https://hnrss.org/frontpage?points=75 "~HN" ! hn
+https://hnrss.org/show?points=60 "~Show HN" ! dev hn
+https://www.echojs.com/rss "~EchoJS" ! echojs
 
-http://rss.slashdot.org/Slashdot/slashdotLinux "~Dev - Slashdot - Linux" dev slashdot
-http://rss.slashdot.org/Slashdot/slashdotDevelopers "~Dev - Slashdot - Dev" dev slashdot
-https://www.cyberciti.com/atom/atom.xml "~Dev - NixCraft" dev
-http://aphyr.com/posts.atom "~Dev - Aphyr" dev
-https://kubernetes.io/feed.xml "~Dev - Kubernetes Blog" dev k8s
-http://blog.golang.org/feed.atom "~Dev - Golang Blog" dev go
-https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" dev reddit go
-https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" dev reddit rust
-https://www.reddit.com/r/linux/top/.rss?sort=top&t=day&limit=6 "~Reddit - Linux" dev reddit
-https://www.reddit.com/r/kubernetes/top/.rss?sort=top&t=day&limit=6 "~Reddit - Kubernetes" dev reddit k8s
-https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" dev reddit
-https://blog.pythonlibrary.org/feed "~Dev - Python Blog" dev python
-https://blog.codinghorror.com/rss/ "~Dev - Coding Horror" dev
-https://www.youtube.com/feeds/videos.xml?channel_id=UCvqbFHwN-nwalWPjPUKpvTA "~Dev - CNCF" dev k8s
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Dev - Fireship" dev
-https://www.youtube.com/feeds/videos.xml?channel_id=UCIat2Cdg661wF5DQDWTQAmg "~Dev - Probabl" dev ml
-https://medium.com/@kyodo-tech/feed "~Dev - Kyodo-Tech" dev
-https://increment.com/feed.xml "~Dev - Stripe Increment" dev
-https://jvns.ca/atom.xml "~Dev - Julia Evans" dev
-https://martinfowler.com/feed.atom "~Dev - Martin Fowler" dev
-https://benhoyt.com/writings/rss.xml "~Dev - Ben Hoyt" dev
-https://highscalability.com/feed "~Dev - High Scalability" dev
-https://blog.cleancoder.com/atom.xml "~Dev - Uncle Bob" dev
-https://transactional.blog/feed.xml "~Dev - Transactional" dev
-https://newsletter.systemdesign.one/feed "~Dev - System Design Newsletter" dev
-https://blog.algomaster.io/feed "~Dev - Algomaster" dev
-https://vnotes.pages.dev/atom.xml "~Dev - vladkens" dev
+http://rss.slashdot.org/Slashdot/slashdotDevelopers "~Slashdot - Dev" ! dev slashdot
+https://github.blog/rss "~Github Blog" ! official
+https://engineering.fb.com/feed/ "~Facebook engineering" ! dev official
+https://netflixtechblog.com/feed "~Netflix Tech Blog" ! dev official
 
+# programming (general)
+https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" ! dev reddit
+https://blog.janestreet.com/feed.xml "~Jane Street" ! dev
+https://newsletter.systemdesign.one/feed "~System Design Newsletter" ! dev learning
+
+# infosec
+https://portswigger.net/research/rss "~Dev - PortSwitgger Research" ! infosec
+https://googleprojectzero.blogspot.com/feeds/posts/default "Google Project Zero" ! infosec
+https://blogs.cisco.com/security/feed "Cisco Security Blog" ! infosec
+http://krebsonsecurity.com/feed/ "Krebs on Security" ! infosec
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMIqrmh2lMdzhlCPK5ahsAg "Darknet diaries" ! infosec video podcast
+https://isc.sans.edu/rssfeed_full.xml "Sans Edu Diaries" ! infosec
+https://risky.biz/feeds/risky-business/ "Risky Business blog" ! infosec podcast
+https://feeds.buzzsprout.com/2153215.rss "Down the Security Rabbit Hole Podcast" ! infosec podcast
+http://www.schneier.com/blog/index.rdf "Schneider on Security" ! infosec blog
+
+# python
+https://blog.python.org/feeds/posts/default?alt=rss "Python official news" ! dev official python
+https://blog.pythonlibrary.org/feed "Python Blog" ! dev official python
+https://pythonbytes.fm/subscribe/rss "Python bytes" ! dev python podcast
+https://talkpython.fm/subscribe/rss "Talk Python" ! dev python podcast
+https://realpython.com/atom.xml "Real Python Blog" ! dev python
+https://planetpython.org/rss20.xml "Planet Python blog" ! dev python
+https://blog.miguelgrinberg.com/feed "Miguel Grinberg" ! dev python
+
+
+# rust
+https://blog.rust-lang.org/feed "~Rust Blog" ! dev official rust
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w "~Let's get Rusty" ! dev rust video learning
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "~Jon Gjengset" ! dev rust video learning
+https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! dev rust reddit
+https://blog.m-ou.se/index.xml "Mara blog" ! dev rust blog
+https://fasterthanli.me/index.xml "Faster than time blog" ! dev rust blog
+https://matklad.github.io/feed "Matklad blog" ! dev rust blog
+https://poignardazur.github.io/feed "Olivier Faure blog" ! dev rust blog
+https://this-week-in-rust.org/rss.xml "This week in Rust" ! dev rust
+
+# linux
+https://archlinux.org/feeds/news/ "~Arch Linux News" ! linux
+http://static.fsf.org/fsforg/rss/blogs.xml "~Free Software Foundation" ! linux
+https://www.reddit.com/r/linux/top/.rss?sort=top&t=day&limit=6 "~Reddit - Linux" ! linux reddit
+https://www.cyberciti.com/atom/atom.xml "~NixCraft" ! blog linux
+http://rss.slashdot.org/Slashdot/slashdotLinux "~Slashdot - Linux" ! slashdot linux
+
+# frontend
+https://developer.mozilla.org/en-US/blog/rss.xml "~MDN Blog" ! dev official frontend
+https://blog.vuejs.org/feed.rss "~Vue point" ! dev frontend
+https://blog.angular.dev/feed "~Angular official" ! dev official frontend
+https://cprss.s3.amazonaws.com/javascriptweekly.com.xml "~Javascript Weekly" ! dev frontend
+https://davidwalsh.name/feed "~David Walsh blog" ! frontend blog
+https://thisweekinreact.com/newsletter/rss.xml "~This week in react" ! frontend
+https://css-tricks.com/feed/ "~CSS Tricks blog" ! frontend
+https://feeds.feedburner.com/24ways "~24 ways" ! frontend
+https://blog.chromium.org/feeds/posts/default "~Chromium Blog" ! frontend official
+
+# k8s
+https://kubernetes.io/feed.xml "~Kubernetes Blog" ! official k8s devops
+https://www.reddit.com/r/kubernetes/top/.rss?sort=top&t=day&limit=6 "~Kubernetes" ! reddit k8s devops
+https://kubernetespodcast.com/feeds/audio.xml "~Kubernetes Podcast" ! podcast k8s devops
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvqbFHwN-nwalWPjPUKpvTA "~CNCF" ! k8s devops video
+
+# devops
+https://blog.devops.dev/feed "~Devops.dev blog" ! devops
+https://devops.com/feed/ "~DevOps.com" ! devops
+https://www.devopsbulletin.com/feed "~DevOps bulletin" ! devops
+https://www.docker.com/blog/rss "~Docker blog" ! docker devops
+
+# golang
+http://blog.golang.org/feed.atom "~Golang Blog" ! dev official go
+http://aphyr.com/posts.atom "~Aphyr" ! dev go
+https://changelog.com/gotime/feed "~Go Time" ! podcast go
+https://dave.cheney.net/rss "~Dave Cheney" ! dev go
+https://cprss.s3.amazonaws.com/golangweekly.com.xml "~Golang Weekly" ! dev go
+https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" ! dev reddit go
+
+
+# AI
+https://anchor.fm/s/174cb1b8/podcast/rss "~MLOps podcast" ! podcast ai
+https://www.topbots.com/feed "~TopBots" ! dev ai
+https://bair.berkeley.edu/blog/feed "~Bair Blog" ! dev ai
+https://www.datasciencecentral.com/feed "~Data Science Central" ! dev ai
+https://towardsdatascience.com/feed "~Towards Data Science" ! dev ai
+https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg "~Two Minute Papers" ! dev ai
+https://jalammar.github.io/feed "~Jay Alammar" ! dev ai blog
+https://www.youtube.com/feeds/videos.xml?channel_id=UCIat2Cdg661wF5DQDWTQAmg "~Probabl" ! dev ai video learning
+https://newsletter.languagemodels.co/feed "~LLM.newsletter" ! dev ai
+https://www.philschmid.de/rss "~Phil Shmid" ! dev ai blog
+https://www.reddit.com/r/MachineLearning/top/.rss?sort=top&t=day&limit=3 "~Reddit - ML" ! dev ai reddit
+https://www.reddit.com/r/artificial/top/.rss?sort=top&t=day&limit=3 "~Reddit - AI" ! dev ai reddit
+https://www.deepmind.com/blog/rss.xml "~Google Deep Mind blog" ! dev ai
+https://aws.amazon.com/blogs/machine-learning/feed/ "~AWS AI blog" ! dev ai
+https://www.kdnuggets.com/feed "~KDNuggets blog" ! dev ai
+https://blog.tensorflow.org/feeds/posts/default?alt=rss "~TensorFlow blog" ! dev ai
+https://rss.arxiv.org/atom/cs "~Arxiv RSS" ! dev ai
+
+# video
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5_QAB65IbajYkL6hzoY-gg "~System Design Fight club" ! dev video learning
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgY3bHW4qHKq9aC4i3nO-0g "~Core Dump yt" ! video learning
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4QZ_LsYcvcq7qOsOhpAX4A "~Cold Fusion" ! tech video
+https://www.youtube.com/feeds/videos.xml?channel_id=UCs_tLP3AiwYKwdUHpltJPuA "~GOTO Conferences yt" ! video learning
+https://www.youtube.com/feeds/videos.xml?channel_id=UCR-DXc1voovS8nhAvccRZhg "~Jeff Goerling yt channel" ! tech video
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Fireship" ! tech video
+https://www.youtube.com/feeds/videos.xml?channel_id=UCeLvlbC754U6FyFQbKc0UnQ "~Anton Putra" ! dev video
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnHX5FjwtQpxkCGziuh4NJA "~Logan Smith" ! dev video
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjRVKSokBHlljocLdnUD9pg "~Sreekanth" ! dev video
+
+# blogs
+https://medium.com/@kyodo-tech/feed "~Kyodo-Tech" ! dev blog
+https://increment.com/feed.xml "~Stripe Increment" ! blog
+https://jvns.ca/atom.xml "~Julia Evans" ! blog
+https://martinfowler.com/feed.atom "~Martin Fowler" ! dev blog
+https://benhoyt.com/writings/rss.xml "~Ben Hoyt" ! dev blog
+https://highscalability.com/feed "~High Scalability" ! devops blog
+https://bitfieldconsulting.com/posts?format=rss "~Bitfield" ! dev blog go
+https://transactional.blog/feed.xml "~Transactional" ! dev blog
+https://blog.codinghorror.com/rss/ "~Coding Horror" ! dev blog
+https://blog.algomaster.io/feed "~Algomaster" ! dev blog learning
+https://vnotes.pages.dev/atom.xml "~vladkens" ! dev blog
+https://lord.io/feed "~Lord.io blog" ! dev blog
+https://lucumr.pocoo.org/feed.atom "~Armin Ronacher Blog" ! dev blog
+https://addyosmani.com/rss.xml "~Addy Osmani Blog" ! dev blog
+https://feeds.feedburner.com/2ality "~Axel Raushmayer" ! dev frontend blog
+https://overreacted.io/rss.xml "~Dan Abramov" ! dev frontend blog
+
+# general tech
 https://techcrunch.com/feed/ ! tech
 http://rss.slashdot.org/Slashdot/slashdotMain ! tech
 https://www.codeproject.com/WebServices/ArticleRSS.aspx ! tech
 https://feeds.arstechnica.com/arstechnica/technology-lab ! tech
 https://hackernoon.com/feed "~Tech - HackerNoon" ! tech
-https://www.gamespot.com/feeds/reviews ! tech
 https://www.phoronix.com/rss.php ! tech
 https://spectrum.ieee.org/customfeeds/feed/all-topics/rss ! tech
+https://www.techdirt.com/feed/ ! tech
+https://www.eff.org/rss/updates.xml ! tech
+https://www.404media.co/rss "~404" ! tech
 
-https://access.acast.com/rss/theeconomistmorningbriefing/default "~News - Daily Brief" news
-https://www.youtube.com/feeds/videos.xml?channel_id=UCknLrEdhRCp1aegoMqRaCZg "~News - DW" news" !
-https://www.youtube.com/feeds/videos.xml?channel_id=UC52X5wxOL_s5yw0dQk7NtgA "~News - AP" news" !
-https://www.youtube.com/feeds/videos.xml?channel_id=UCK7tptUDHh-RYDsdxO1-5QQ "~News - Wall Street Journal" ! news
-https://www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg "~News - Bloomberg " ! news
-https://www.youtube.com/feeds/videos.xml?channel_id=UChqUTb7kYRX8-EiaN3XFrSQ "~News - Reuters " ! news
-https://www.reddit.com/r/worldnews/top/.rss?sort=top&t=day&limit=10 "~News - Reddit - World News" news reddit
-https://www.reddit.com/r/europe/top/.rss?sort=top&t=day&limit=10 "~News - Reddit - Europe" news reddit
-
-https://access.acast.com/rss/c939f8d1-c4bc-478e-8bb9-e5343f9a7ab5/default "~Podcast - HistoryHit" ! podcast
-https://changelog.com/gotime/feed "~Podcast - Go Time" ! podcast
+# podcast
 https://changelog.com/podcast/feed "~Podcast - Changelog" ! podcast
 https://feeds.buzzsprout.com/2105116.rss "~Podcast - Cmd+Shift+Left" ! podcast
-https://www.youtube.com/feeds/videos.xml?channel_id=UCzQUP1qoWDoEbmsQxvdjxgQ "~Podcast - Joe Rogan" ! podcast
-https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKyawb77ixDdsGog4iWA "~Podcast - Lex Fridman" ! podcast
-https://www.youtube.com/feeds/videos.xml?channel_id=UCl9StMQ79LtEvlrskzjoYbQ "~Podcast - Closer to Truth" ! podcast
 https://softwareengineeringdaily.com/category/podcast/feed "~Podcast - Software Engineering Daily" ! podcast
 https://feeds.simplecast.com/L9810DOa "~Podcast - Signals and Threads" ! podcast
 https://feeds.transistor.fm/on-the-metal-0294649e-ec23-4eab-975a-9eb13fd94e06 "~Podcast - On the Metal" ! podcast
 https://link.chtbl.com/corecursive?id=corecursive&platform=rss "~Podcast - CoRecursive" ! podcast
-https://anchor.fm/s/174cb1b8/podcast/rss "~Podcast - MLOps" ! podcast
 https://www.youtube.com/feeds/videos.xml?channel_id=UCfuj1MM5p37CRzWYPv_PsWA "~Podcast - CodeTalks" ! podcast
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmYAQDZIQGm_kPvemBc_qwg "~Podcast - DevConfs" ! podcast
 
 
-# Astrum
-https://www.youtube.com/feeds/videos.xml?channel_id=UC-9b7aDP6ZN0coj9-xFnrtw ! yt
-# Channel 5 with Andrew Callaghan
-https://www.youtube.com/feeds/videos.xml?channel_id=UC-AQKm7HUNMmxjdS371MSwg ! yt
-# Real Science
-https://www.youtube.com/feeds/videos.xml?channel_id=UC176GAQozKKjhz62H8u9vQQ ! yt
-# Mustard
-https://www.youtube.com/feeds/videos.xml?channel_id=UC1ZBQ-F-yktYD4m5AzM6pww ! yt
-# Imperial War Museums
-https://www.youtube.com/feeds/videos.xml?channel_id=UC3uAjWoLZ4bSi6qI9SjALxA ! yt
-# ColdFusion
-https://www.youtube.com/feeds/videos.xml?channel_id=UC4QZ_LsYcvcq7qOsOhpAX4A ! yt
-# System Design Fight Club
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5_QAB65IbajYkL6hzoY-gg ! yt
-# GEOPOP
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5_npTvQVSZ28Kc8wvffPew ! yt
-# Sarcasmitron
-https://www.youtube.com/feeds/videos.xml?channel_id=UC6WD1VImCVeOuNccuqDzAdA ! yt
-# PBS Space Time
-https://www.youtube.com/feeds/videos.xml?channel_id=UC7_gcs09iThXybpVgjHZ_7g ! yt
-# Timeline - World History Documentaries
-https://www.youtube.com/feeds/videos.xml?channel_id=UC88lvyJe7aHZmcvzvubDFRg ! yt
-# Patrick Boyle
-https://www.youtube.com/feeds/videos.xml?channel_id=UCASM0cgfkJxQ1ICmRilfHLw ! yt
-# Chyrosran22
-https://www.youtube.com/feeds/videos.xml?channel_id=UCD0y51PJfvkZNe3y3FR5riw ! yt
-# SEA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCG9ShGbASoiwHwFcLcAh9EA ! yt
-# Veritasium
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA ! yt
-# Vox
-https://www.youtube.com/feeds/videos.xml?channel_id=UCLXo7UDZvByw2ixzpQCufnA ! yt
-# Internet Historian
-https://www.youtube.com/feeds/videos.xml?channel_id=UCR1D15p_vdP3HkrH8wgjQRw ! yt
-# Real Engineering
-https://www.youtube.com/feeds/videos.xml?channel_id=UCR1IuLEqb6UEA_zQ81kwXfg ! yt
-# LEMMiNO
-https://www.youtube.com/feeds/videos.xml?channel_id=UCRcgy6GzDeccI7dkbbBna3Q ! yt
-# Fall of Civilizations
-https://www.youtube.com/feeds/videos.xml?channel_id=UCT6Y5JJPKe_JDMivpKgVXew ! yt
-# Bloomberg Originals
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUMZ7gohGI9HcU9VNsr2FJQ ! yt
-# DW Documentary
-https://www.youtube.com/feeds/videos.xml?channel_id=UCW39zufHfsuGgpLviKh297Q ! yt
-# History Hit
-https://www.youtube.com/feeds/videos.xml?channel_id=UCZwU2G-KVl-P-O-B35chZOQ ! yt
-# Weird History
-https://www.youtube.com/feeds/videos.xml?channel_id=UCc-N24Y5OA0gqbjBwe1ttfA ! yt
-# BBC Earth Science
-https://www.youtube.com/feeds/videos.xml?channel_id=UCdsOTr6SmDrxuWE7sJFrkhQ ! yt
-# Great Art Explained
-https://www.youtube.com/feeds/videos.xml?channel_id=UCePDFpCr78_qmVtpoB1Axaw ! yt
-# Core Dump
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgY3bHW4qHKq9aC4i3nO-0g ! yt
-# Ben Laude
-https://www.youtube.com/feeds/videos.xml?channel_id=UCnSFlVqRyNfIJDsmpkcY57w ! yt
-# The Canvas
-https://www.youtube.com/feeds/videos.xml?channel_id=UCqTHx0ObkFZ97KO2SWUuz9w ! yt
-# Horses
-https://www.youtube.com/feeds/videos.xml?channel_id=UCrx2zrPjhGRi9TwszZiLwEg ! yt
-# Royal Armouries
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsMX-XuiEkBi4-GDrYuniWg ! yt
-# Kurzgesagt – In a Nutshell
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q ! yt
-# GOTO Conferences
-https://www.youtube.com/feeds/videos.xml?channel_id=UCs_tLP3AiwYKwdUHpltJPuA ! yt
-# TED-Ed
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA ! yt
-# Folding Ideas
-https://www.youtube.com/feeds/videos.xml?channel_id=UCyNtlmLB73-7gtlBz00XOQQ ! yt
-# Dan Carlin
-https://www.youtube.com/feeds/videos.xml?channel_id=UC3RcjbuyF5M1U4R62zjE3hg ! yt
-# PBS Eons
-https://www.youtube.com/feeds/videos.xml?channel_id=UCzR-rom72PHN9Zg7RML9EbA ! yt
-# PBS
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgyeJxD05YnoDquRMNBfBqw ! yt
-# Frontline
-https://www.youtube.com/feeds/videos.xml?channel_id=UC3ScyryU9Oy9Wse3a8OAmYQ ! yt
-# StarTalk
-https://www.youtube.com/feeds/videos.xml?channel_id=UCqoAEDirJPjEUFcF2FklnBA ! yt
+https://zig.news/rss "~Zig News" ! dev zig
