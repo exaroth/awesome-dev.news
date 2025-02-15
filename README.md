@@ -6,7 +6,7 @@ Awesome Dev News
 
 This is source repository for `awesome-dev.news` site - created using `Liveboat` page generator.
 
-If You'd like to host your own, custom version of this page see [Liveboat Github Runner](https://github.com/exaroth/liveboat-github-runner) for Github Pages hosting or [Liveboat](https://github.com/exaroth/liveboat) repo for everything else.
+If you'd like to host your own, custom version of this page see [Liveboat Github Runner](https://github.com/exaroth/liveboat-github-runner) for Github Pages hosting or [Liveboat](https://github.com/exaroth/liveboat) repo for everything else.
 
 
 ## Contributing
