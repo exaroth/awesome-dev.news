@@ -19,6 +19,7 @@
 "query:Official News:tags # \"official\""
 https://developers.googleblog.com/rss/ "~Google Developers" googledev
 https://www.echojs.com/rss "~EchoJS" echojs
+https://dev.to/feed/ "~Dev.to" devto
 https://rss.arxiv.org/atom/cs "~Arxiv" arxiv
 https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml "~Github Trending" trending
 
@@ -35,26 +36,28 @@ https://fly.io/blog/feed.xml "~Fly.io blog" ! dev
 https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" ! dev reddit
 https://blog.janestreet.com/feed.xml "~Jane Street" ! dev
 https://newsletter.systemdesign.one/feed "~System Design Newsletter" ! dev
+https://www.oreilly.com/radar/topics/software-engineering/feed/index.xml "~Oreilly software dev" ! dev
 
 # infosec
 https://portswigger.net/research/rss "~PortSwitgger Research" ! infosec
-https://googleprojectzero.blogspot.com/feeds/posts/default "Google Project Zero" ! infosec
-https://blogs.cisco.com/security/feed "Cisco Security Blog" ! infosec
-http://krebsonsecurity.com/feed/ "Krebs on Security" ! infosec
-https://www.youtube.com/feeds/videos.xml?channel_id=UCMIqrmh2lMdzhlCPK5ahsAg "Darknet diaries" ! infosec video podcast
-https://isc.sans.edu/rssfeed_full.xml "Sans Edu Diaries" ! infosec
-https://risky.biz/feeds/risky-business/ "Risky Business blog" ! infosec podcast
-https://feeds.buzzsprout.com/2153215.rss "Down the Security Rabbit Hole Podcast" ! infosec podcast
-http://www.schneier.com/blog/index.rdf "Schneider on Security" ! infosec blog
+https://googleprojectzero.blogspot.com/feeds/posts/default "~Google Project Zero" ! infosec
+https://blogs.cisco.com/security/feed "~Cisco Security Blog" ! infosec
+http://krebsonsecurity.com/feed/ "~Krebs on Security" ! infosec
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMIqrmh2lMdzhlCPK5ahsAg "~Darknet diaries" ! infosec video podcast
+https://isc.sans.edu/rssfeed_full.xml "~Sans Edu Diaries" ! infosec
+https://risky.biz/feeds/risky-business/ "~Risky Business blog" ! infosec podcast
+https://www.oreilly.com/radar/topics/security/feed/index.xml "~Oreilly security" ~ infosec
+https://feeds.buzzsprout.com/2153215.rss "~Down the Security Rabbit Hole Podcast" ! infosec podcast
+http://www.schneier.com/blog/index.rdf "~Schneider on Security" ! infosec blog
 
 # python
-https://blog.python.org/feeds/posts/default?alt=rss "Python official news" ! dev official python
-https://blog.pythonlibrary.org/feed "Python Blog" ! dev official python
-https://pythonbytes.fm/subscribe/rss "Python bytes" ! dev python podcast
-https://talkpython.fm/subscribe/rss "Talk Python" ! dev python podcast
-https://realpython.com/atom.xml "Real Python Blog" ! dev python
-https://planetpython.org/rss20.xml "Planet Python blog" ! dev python
-https://blog.miguelgrinberg.com/feed "Miguel Grinberg" ! dev python
+https://blog.python.org/feeds/posts/default?alt=rss "~Python official news" ! dev official python
+https://blog.pythonlibrary.org/feed "~Python Blog" ! dev official python
+https://pythonbytes.fm/subscribe/rss "~Python bytes" ! dev python podcast
+https://talkpython.fm/subscribe/rss "~Talk Python" ! dev python podcast
+https://realpython.com/atom.xml "~Real Python Blog" ! dev python
+https://planetpython.org/rss20.xml "~Planet Python blog" ! dev python
+https://blog.miguelgrinberg.com/feed "~Miguel Grinberg" ! dev python
 
 
 # rust
@@ -62,10 +65,10 @@ https://blog.rust-lang.org/feed "~Rust Blog" ! dev official rust
 https://www.youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w "~Let's get Rusty" ! dev rust video learning
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "~Jon Gjengset" ! dev rust video learning
 https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! dev rust reddit
-https://blog.m-ou.se/index.xml "Mara blog" ! dev rust blog
-https://fasterthanli.me/index.xml "Faster than time blog" ! dev rust blog
-https://matklad.github.io/feed "Matklad blog" ! dev rust blog
-https://poignardazur.github.io/feed "Olivier Faure blog" ! dev rust blog
+https://blog.m-ou.se/index.xml "~Mara blog" ! dev rust blog
+https://fasterthanli.me/index.xml "~Faster than time blog" ! dev rust blog
+https://matklad.github.io/feed "~Matklad blog" ! dev rust blog
+https://poignardazur.github.io/feed "~Olivier Faure blog" ! dev rust blog
 https://this-week-in-rust.org/rss.xml "This week in Rust" ! dev rust
 
 # linux
@@ -97,6 +100,8 @@ https://blog.devops.dev/feed "~Devops.dev blog" ! devops
 https://devops.com/feed/ "~DevOps.com" ! devops
 https://www.devopsbulletin.com/feed "~DevOps bulletin" ! devops
 https://www.docker.com/blog/rss "~Docker blog" ! docker devops
+https://www.oreilly.com/radar/topics/cloud/feed/index.xml "~Oreilly cloud" ! devops
+https://aws.amazon.com/blogs/aws/feed/ "~AWS blog" ! devops
 
 # golang
 http://blog.golang.org/feed.atom "~Golang Blog" ! dev official go
@@ -124,6 +129,7 @@ https://www.deepmind.com/blog/rss.xml "~Google Deep Mind blog" ! dev ai
 https://aws.amazon.com/blogs/machine-learning/feed/ "~AWS AI blog" ! dev ai
 https://www.kdnuggets.com/feed "~KDNuggets blog" ! dev ai
 https://blog.tensorflow.org/feeds/posts/default?alt=rss "~TensorFlow blog" ! dev ai
+https://www.oreilly.com/radar/topics/ai-ml/feed/index.xml "~Oreilly ML" ! dev ai
 
 # video
 https://www.youtube.com/feeds/videos.xml?channel_id=UC5_QAB65IbajYkL6hzoY-gg "~System Design Fight club" ! dev video learning
@@ -146,13 +152,15 @@ https://highscalability.com/feed "~High Scalability" ! devops blog
 https://bitfieldconsulting.com/posts?format=rss "~Bitfield" ! dev blog go
 https://transactional.blog/feed.xml "~Transactional" ! dev blog
 https://blog.codinghorror.com/rss/ "~Coding Horror" ! dev blog
-https://blog.algomaster.io/feed "~Algomaster" ! dev blog learning
 https://vnotes.pages.dev/atom.xml "~vladkens" ! dev blog
 https://lord.io/feed "~Lord.io blog" ! dev blog
 https://lucumr.pocoo.org/feed.atom "~Armin Ronacher Blog" ! dev blog
 https://addyosmani.com/rss.xml "~Addy Osmani Blog" ! dev blog
 https://feeds.feedburner.com/2ality "~Axel Raushmayer" ! dev frontend blog
 https://overreacted.io/rss.xml "~Dan Abramov" ! dev frontend blog
+
+# learning
+https://blog.algomaster.io/feed "~Algomaster" ! dev learning
 
 # general tech
 https://techcrunch.com/feed/ ! tech
@@ -174,5 +182,5 @@ https://softwareengineeringdaily.com/category/podcast/feed "~Podcast - Software 
 https://feeds.simplecast.com/L9810DOa "~Podcast - Signals and Threads" ! podcast
 https://feeds.transistor.fm/on-the-metal-0294649e-ec23-4eab-975a-9eb13fd94e06 "~Podcast - On the Metal" ! podcast
 https://link.chtbl.com/corecursive?id=corecursive&platform=rss "~Podcast - CoRecursive" ! podcast
-https://www.youtube.com/feeds/videos.xml?channel_id=UCfuj1MM5p37CRzWYPv_PsWA "~Podcast - CodeTalks" ! podcast
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmYAQDZIQGm_kPvemBc_qwg "~Podcast - DevConfs" ! podcast
+https://www.youtube.com/feeds/videos.xml?channel_id=UCfuj1MM5p37CRzWYPv_PsWA "~Podcast - CodeTalks" ! podcast
