@@ -1,4 +1,4 @@
-"query:Latest:age < 1 and tags !# \"reddit\" and tags !# \"trending\" and tags !# \"echojs\" and tags !# \"googledev\""
+"query:Latest:age < 1 and tags !# \"reddit\" and tags !# \"trending\" and tags !# \"echojs\" and tags !# \"googledev\" and tags !# \"devto\""
 "query:Tech:tags # \"tech\" and age < 2 "
 "query:AI:tags # \"ai\""
 "query:Linux and Unix:tags # \"linux\""
