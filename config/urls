@@ -55,6 +55,7 @@ https://blog.python.org/feeds/posts/default?alt=rss "~Python official news" ! de
 https://blog.pythonlibrary.org/feed "~Python Blog" ! dev official python
 https://pythonbytes.fm/subscribe/rss "~Python bytes" ! dev python podcast
 https://talkpython.fm/subscribe/rss "~Talk Python" ! dev python podcast
+https://dev.to/feed/tag/python "~Dev.to Python" ! dev python
 https://realpython.com/atom.xml "~Real Python Blog" ! dev python
 https://planetpython.org/rss20.xml "~Planet Python blog" ! dev python
 https://blog.miguelgrinberg.com/feed "~Miguel Grinberg" ! dev python
@@ -66,6 +67,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w "~L
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "~Jon Gjengset" ! dev rust video learning
 https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! dev rust reddit
 https://blog.m-ou.se/index.xml "~Mara blog" ! dev rust blog
+https://dev.to/feed/tag/rust "~Dev.to Rust" ! dev rust
 https://fasterthanli.me/index.xml "~Faster than time blog" ! dev rust blog
 https://matklad.github.io/feed "~Matklad blog" ! dev rust blog
 https://poignardazur.github.io/feed "~Olivier Faure blog" ! dev rust blog
@@ -107,6 +109,7 @@ https://aws.amazon.com/blogs/aws/feed/ "~AWS blog" ! devops
 http://blog.golang.org/feed.atom "~Golang Blog" ! dev official go
 http://aphyr.com/posts.atom "~Aphyr" ! dev go
 https://changelog.com/gotime/feed "~Go Time" ! podcast go
+https://dev.to/feed/tag/go "~Dev.to Go" ! dev go
 https://dave.cheney.net/rss "~Dave Cheney" ! dev go
 https://cprss.s3.amazonaws.com/golangweekly.com.xml "~Golang Weekly" ! dev go
 https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" ! dev reddit go
@@ -120,6 +123,7 @@ https://www.datasciencecentral.com/feed "~Data Science Central" ! dev ai
 https://towardsdatascience.com/feed "~Towards Data Science" ! dev ai
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg "~Two Minute Papers" ! dev ai
 https://jalammar.github.io/feed "~Jay Alammar" ! dev ai blog
+https://dev.to/feed/tag/ai "~Dev.to AI" ! ai
 https://www.youtube.com/feeds/videos.xml?channel_id=UCIat2Cdg661wF5DQDWTQAmg "~Probabl" ! dev ai video learning
 https://newsletter.languagemodels.co/feed "~LLM.newsletter" ! dev ai
 https://www.philschmid.de/rss "~Phil Shmid" ! dev ai blog
