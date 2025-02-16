@@ -31,6 +31,8 @@ https://github.blog/rss "~Github Blog" ! official
 https://engineering.fb.com/feed/ "~Facebook engineering" ! dev official
 https://netflixtechblog.com/feed "~Netflix Tech Blog" ! dev official
 https://fly.io/blog/feed.xml "~Fly.io blog" ! dev
+https://www.uber.com/blog/rss/ "~Uber engineering" ! official
+https://neovim.io/news.xml "~Neovim news" ~official
 
 # programming
 https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" ! dev reddit
@@ -101,6 +103,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCvqbFHwN-nwalWPjPUKpvTA "~C
 https://blog.devops.dev/feed "~Devops.dev blog" ! devops
 https://devops.com/feed/ "~DevOps.com" ! devops
 https://www.devopsbulletin.com/feed "~DevOps bulletin" ! devops
+https://aws.amazon.com/blogs/devops/feed/ "~AWS DevOps blog" ! devops
 https://www.docker.com/blog/rss "~Docker blog" ! docker devops
 https://www.oreilly.com/radar/topics/cloud/feed/index.xml "~Oreilly cloud" ! devops
 https://aws.amazon.com/blogs/aws/feed/ "~AWS blog" ! devops
