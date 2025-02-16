@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>Beyond Chat: Bringing Models to The Canvas • Lu Wilson • YOW! 2024</title><link>https://www.youtube.com/watch?v=pLvMsGG7zE8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/pLvMsGG7zE8?version=3" length="" type=""/><pubDate>Sat, 15 Feb 2025 13:01:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>Getting Buy-In: Overcoming Larman&apos;s Law • Allen Holub • YOW! 2024</title><link>https://www.youtube.com/watch?v=XwhF_xbVpIQ</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/XwhF_xbVpIQ?version=3" length="" type=""/><pubDate>Sun, 16 Feb 2025 13:00:46 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
+https://yowcon.com
+
+Allen Holub - Helps You Build Software Better & Build Better Software; Author of 10 Books & Hundreds of Articles @AllenHolub 
+
+RESOURCES
+https://bsky.app/profile/allenholub.bsky.social
+https://mstdn.social/@allenholub
+https://twitter.com/allenholub
+https://holub.com
+https://www.linkedin.com/in/allenholub
+
+Links
+https://miro.com/app/board/uXjVL6ZfQvA=/
+https://www.craiglarman.com/wiki/index.php?title=Larman%27s_Laws_of_Organizational_Behavior
+
+ABSTRACT
+Larman's Law states, "Organizations are implicitly optimized to avoid changing the status quo…" The third law is particularly relevant: 'Any change initiative will be derided as “purist,” "theoretical," “revolutionary," " “religion,” and “needing pragmatic customization for local concerns”—which deflects from addressing weaknesses and the manager/specialist status quo.'
+
+You need to overcome that resistance to use innovative approaches like no-estimation or mob/ensemble programming.
+
+Devs, however, almost always go about that the wrong way. Senior management is rarely interested in the mechanics of what you're doing. They're interested in the bottom line, how the new approaches change how the business is managed, and whether the inevitable disruption is worth it.
+
+In this talk, you'll learn how to convince the “suits” (and your clients) that innovation is a good thing. You'll learn how to create a business case for innovation that overcomes the resistance of Larman's Law. [...]
+
+TIMECODES
+00:00 Intro
+01:48 Larman's Laws of organizational behavior
+12:36 Bottom up
+20:20 Top down
+24:42 Business case
+36:10 Value stream mapping
+39:12 Mob programming
+53:00 Summary
+53:57 Outro
+
+Read the full abstract here:
+https://yowcon.com/brisbane-2024/sessions/3470
+
+RECOMMENDED BOOKS
+Allen Holub • Holub on Patterns • https://amzn.to/3Q1hwTX
+Allen Holub • Compiler design in C • https://amzn.to/4b0vXS9
+Allen Holub • Enough Rope to Shoot Yourself in the Foot • https://amzn.to/4hFIL2m
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#LarmansLaw #CraigLarman #EnsembleProgramming #TechLead #TechLeadership #PsychologicalSafety #SkunkWorks #ValueStreamMapping #AllenHolub #YOWcon
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Beyond Chat: Bringing Models to The Canvas • Lu Wilson • YOW! 2024</title><link>https://www.youtube.com/watch?v=pLvMsGG7zE8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/pLvMsGG7zE8?version=3" length="" type=""/><pubDate>Sat, 15 Feb 2025 13:01:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
 https://yowcon.com
 
 Lu Wilson - Software Engineer at tldraw @TodePond 
@@ -167,7 +227,7 @@ Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https:/
 
 SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>ChatLoopBackOff Episode 46 (Dragonfly)</title><link>https://www.youtube.com/watch?v=gd6HRgr8KcA</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/gd6HRgr8KcA?version=3" length="" type=""/><pubDate>Fri, 14 Feb 2025 05:56:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Dragonfly, a CNCF Incubating project, is an open-source, cloud-native image and file distribution system optimized for large-scale data delivery. It is designed to enhance the efficiency, speed, and reliability of distributing container images and other data files across distributed systems. 
 
-This CNCF project is for organizations looking to improve the speed, efficiency, and reliability of artifact distribution in cloud-native environments. Join CNCF Ambassador Nitish Kumar as he explores how it works, Kubernetes integration, as well as its simplified setup and usage.]]></content:encoded></item><item><title>A Cheap Jammer That Disrupted Airport Communications</title><link>https://www.youtube.com/watch?v=n_izoDLdUW0</link><author>Jack Rhysider</author><category>Darknet diaries</category><category>infosec</category><category>video</category><category>podcast</category><enclosure url="https://www.youtube.com/v/n_izoDLdUW0?version=3" length="" type=""/><pubDate>Thu, 13 Feb 2025 17:00:54 +0000</pubDate><source url="https://www.youtube.com/channel/UCMIqrmh2lMdzhlCPK5ahsAg">Jack Rhysider</source><content:encoded><![CDATA[A Cheap Jammer That Disrupted Airport Communications
+This CNCF project is for organizations looking to improve the speed, efficiency, and reliability of artifact distribution in cloud-native environments. Join CNCF Ambassador Nitish Kumar as he explores how it works, Kubernetes integration, as well as its simplified setup and usage.]]></content:encoded></item><item><title>A Cheap Jammer That Disrupted Airport Communications</title><link>https://www.youtube.com/watch?v=n_izoDLdUW0</link><author>Jack Rhysider</author><category>infosec</category><category>video</category><category>podcast</category><enclosure url="https://www.youtube.com/v/n_izoDLdUW0?version=3" length="" type=""/><pubDate>Thu, 13 Feb 2025 17:00:54 +0000</pubDate><source url="https://www.youtube.com/channel/UCMIqrmh2lMdzhlCPK5ahsAg">Darknet diaries</source><content:encoded><![CDATA[A Cheap Jammer That Disrupted Airport Communications
 
 #podcast #airport #privacy 
 
@@ -389,7 +449,7 @@ Use code YT25 for 25% off PRO access
 
 - Why is Elon trying to buy OpenAI?
 - Latest trends in artificial Intelligence
-- Elon Musk vs Sam Altman Feud Explained]]></content:encoded></item><item><title>A Wild Website Where People Lose Millions of Dollars</title><link>https://www.youtube.com/watch?v=_GUYYeVImVY</link><author>Jack Rhysider</author><category>Darknet diaries</category><category>infosec</category><category>video</category><category>podcast</category><enclosure url="https://www.youtube.com/v/_GUYYeVImVY?version=3" length="" type=""/><pubDate>Tue, 11 Feb 2025 17:00:40 +0000</pubDate><source url="https://www.youtube.com/channel/UCMIqrmh2lMdzhlCPK5ahsAg">Jack Rhysider</source><content:encoded><![CDATA[A Wild Website Where People Lose Millions of Dollars
+- Elon Musk vs Sam Altman Feud Explained]]></content:encoded></item><item><title>A Wild Website Where People Lose Millions of Dollars</title><link>https://www.youtube.com/watch?v=_GUYYeVImVY</link><author>Jack Rhysider</author><category>infosec</category><category>video</category><category>podcast</category><enclosure url="https://www.youtube.com/v/_GUYYeVImVY?version=3" length="" type=""/><pubDate>Tue, 11 Feb 2025 17:00:40 +0000</pubDate><source url="https://www.youtube.com/channel/UCMIqrmh2lMdzhlCPK5ahsAg">Darknet diaries</source><content:encoded><![CDATA[A Wild Website Where People Lose Millions of Dollars
 
 #cybersecurity #podcast #crypto #memecoin 
 
@@ -600,45 +660,8 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Flipper Culture Is Wilder Than You Think</title><link>https://www.youtube.com/watch?v=GFB8IuWXK68</link><author>Jack Rhysider</author><category>Darknet diaries</category><category>infosec</category><category>video</category><category>podcast</category><enclosure url="https://www.youtube.com/v/GFB8IuWXK68?version=3" length="" type=""/><pubDate>Sun, 9 Feb 2025 17:00:15 +0000</pubDate><source url="https://www.youtube.com/channel/UCMIqrmh2lMdzhlCPK5ahsAg">Jack Rhysider</source><content:encoded><![CDATA[Flipper Culture Is Wilder Than You Think
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Flipper Culture Is Wilder Than You Think</title><link>https://www.youtube.com/watch?v=GFB8IuWXK68</link><author>Jack Rhysider</author><category>infosec</category><category>video</category><category>podcast</category><enclosure url="https://www.youtube.com/v/GFB8IuWXK68?version=3" length="" type=""/><pubDate>Sun, 9 Feb 2025 17:00:15 +0000</pubDate><source url="https://www.youtube.com/channel/UCMIqrmh2lMdzhlCPK5ahsAg">Darknet diaries</source><content:encoded><![CDATA[Flipper Culture Is Wilder Than You Think
 
 #flipping #truecrime #podcast 
 
-Listen to the full episode 🎙 Darknet Diaries Ep. 153: Bike Index]]></content:encoded></item><item><title>Lessons From the Design &amp; Implementation of a CSV Library • George Wilson • YOW! 2018</title><link>https://www.youtube.com/watch?v=5nZ1AiWWnUE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/5nZ1AiWWnUE?version=3" length="" type=""/><pubDate>Sun, 9 Feb 2025 13:00:13 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2018. #GOTOcon #YOW
-https://yowcon.com
-
-George Wilson - Functional Programming Engineer at CSIRO's Data61
-
-RESOURCES
-https://github.com/gwils
-https://wils.online
-https://www.linkedin.com/in/george-wilson-49a54457
-
-RECOMMENDED BOOKS
-Daniel Higginbotham • Clojure for the Brave and True • https://amzn.to/38tZjsF
-Ulisses Almeida • Learn Functional Programming with Elixir • https://amzn.to/389grn6
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B
-Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#CSVLibrary CSV #Haskell #FunctionalProgramming #Programming #Coding #FunctionalTraining #GeorgeWilson #Functional #HaskellTutorial #YOWcon
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+Listen to the full episode 🎙 Darknet Diaries Ep. 153: Bike Index]]></content:encoded></item></channel></rss>

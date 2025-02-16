@@ -89,26 +89,11 @@ complexity for users and installer projects (for example, kOps or Cluster API) .
 over those additional steps and failure points and make recommendations for cluster owners.
 This migration was complex and some logic had to be extracted from the core components,
 building four new subsystems.One of the most critical functionalities of the cloud controller manager is the node controller,
-which is responsible for the initialization of the nodes.As you can see in the following diagram, when the  starts, it registers the 
+which is responsible for the initialization of the nodes.As you can see in the following diagram, when the  starts, it registers the Node
 object with the apiserver, Tainting the node so it can be processed first by the
-cloud-controller-manager. The initial  is missing the cloud-provider specific information,
+cloud-controller-manager. The initial Node is missing the cloud-provider specific information,
 like the Node Addresses and the Labels with the cloud provider specific information like the
-Node, Region and Instance type information.sequenceDiagram
-autonumber
-rect rgb(191, 223, 255)
-Kubelet->>+Kube-apiserver: Create Node
-Note over Kubelet: Taint: node.cloudprovider.kubernetes.io
-Kube-apiserver->>-Kubelet: Node Created
-end
-Note over Kube-apiserver: Node is Not Ready Tainted, Missing Node Addresses*, ...
-Note over Kube-apiserver: Send Updates
-rect rgb(200, 150, 255)
-Kube-apiserver->>+Cloud-controller-manager: Watch: New Node Created
-Note over Cloud-controller-manager: Initialize Node:Cloud Provider Labels, Node Addresses, ...
-Cloud-controller-manager->>-Kube-apiserver: Update Node
-end
-Note over Kube-apiserver: Node is Ready
-This new initialization process adds some latency to the node readiness. Previously, the kubelet
+Node, Region and Instance type information.Chicken and egg problem sequence diagramThis new initialization process adds some latency to the node readiness. Previously, the kubelet
 was able to initialize the node at the same time it created the node. Since the logic has moved
 to the cloud-controller-manager, this can cause a chicken and egg problem
 during the cluster bootstrapping for those Kubernetes architectures that do not deploy the
@@ -132,9 +117,9 @@ will not be removed as the cloud-controller-manager is responsible for its remov
 schedule taint is not removed, then critical workloads, such as the container network interface
 controllers, will not be able to schedule, and the cluster will be left in an unhealthy state.Example: Cloud controller manager not scheduling due to not-ready taintThe next example would be possible in situations where the container network interface (CNI) is
 waiting for IP address information from the cloud-controller-manager (CCM), and the CCM has not
-tolerated the taint which would be removed by the CNI."The Node controller detects whether a Node is ready by monitoring its health and adds or removes this taint accordingly."One of the conditions that can lead to a  resource having this taint is when the container
+tolerated the taint which would be removed by the CNI."The Node controller detects whether a Node is ready by monitoring its health and adds or removes this taint accordingly."One of the conditions that can lead to a Node resource having this taint is when the container
 network has not yet been initialized on that node. As the cloud-controller-manager is responsible
-for adding the IP addresses to a  resource, and the IP addresses are needed by the container
+for adding the IP addresses to a Node resource, and the IP addresses are needed by the container
 network controllers to properly configure the container network, it is possible in some
 circumstances for a node to become stuck as not ready and uninitialized permanently.This situation occurs for a similar reason as the first example, although in this case, the
 node.kubernetes.io/not-ready taint is used with the no execute effect and thus will cause the

@@ -5,26 +5,11 @@ complexity for users and installer projects (for example, kOps or Cluster API) .
 over those additional steps and failure points and make recommendations for cluster owners.
 This migration was complex and some logic had to be extracted from the core components,
 building four new subsystems.One of the most critical functionalities of the cloud controller manager is the node controller,
-which is responsible for the initialization of the nodes.As you can see in the following diagram, when the  starts, it registers the 
+which is responsible for the initialization of the nodes.As you can see in the following diagram, when the  starts, it registers the Node
 object with the apiserver, Tainting the node so it can be processed first by the
-cloud-controller-manager. The initial  is missing the cloud-provider specific information,
+cloud-controller-manager. The initial Node is missing the cloud-provider specific information,
 like the Node Addresses and the Labels with the cloud provider specific information like the
-Node, Region and Instance type information.sequenceDiagram
-autonumber
-rect rgb(191, 223, 255)
-Kubelet->>+Kube-apiserver: Create Node
-Note over Kubelet: Taint: node.cloudprovider.kubernetes.io
-Kube-apiserver->>-Kubelet: Node Created
-end
-Note over Kube-apiserver: Node is Not Ready Tainted, Missing Node Addresses*, ...
-Note over Kube-apiserver: Send Updates
-rect rgb(200, 150, 255)
-Kube-apiserver->>+Cloud-controller-manager: Watch: New Node Created
-Note over Cloud-controller-manager: Initialize Node:Cloud Provider Labels, Node Addresses, ...
-Cloud-controller-manager->>-Kube-apiserver: Update Node
-end
-Note over Kube-apiserver: Node is Ready
-This new initialization process adds some latency to the node readiness. Previously, the kubelet
+Node, Region and Instance type information.Chicken and egg problem sequence diagramThis new initialization process adds some latency to the node readiness. Previously, the kubelet
 was able to initialize the node at the same time it created the node. Since the logic has moved
 to the cloud-controller-manager, this can cause a chicken and egg problem
 during the cluster bootstrapping for those Kubernetes architectures that do not deploy the
@@ -48,9 +33,9 @@ will not be removed as the cloud-controller-manager is responsible for its remov
 schedule taint is not removed, then critical workloads, such as the container network interface
 controllers, will not be able to schedule, and the cluster will be left in an unhealthy state.Example: Cloud controller manager not scheduling due to not-ready taintThe next example would be possible in situations where the container network interface (CNI) is
 waiting for IP address information from the cloud-controller-manager (CCM), and the CCM has not
-tolerated the taint which would be removed by the CNI."The Node controller detects whether a Node is ready by monitoring its health and adds or removes this taint accordingly."One of the conditions that can lead to a  resource having this taint is when the container
+tolerated the taint which would be removed by the CNI."The Node controller detects whether a Node is ready by monitoring its health and adds or removes this taint accordingly."One of the conditions that can lead to a Node resource having this taint is when the container
 network has not yet been initialized on that node. As the cloud-controller-manager is responsible
-for adding the IP addresses to a  resource, and the IP addresses are needed by the container
+for adding the IP addresses to a Node resource, and the IP addresses are needed by the container
 network controllers to properly configure the container network, it is possible in some
 circumstances for a node to become stuck as not ready and uninitialized permanently.This situation occurs for a similar reason as the first example, although in this case, the
 node.kubernetes.io/not-ready taint is used with the no execute effect and thus will cause the
@@ -483,7 +468,7 @@ class ArrayPassedToActiveRecordFinder extends TaintTracking::Configuration {
 from ArrayPassedToActiveRecordFinder config, DataFlow::Node source, DataFlow::Node sink
 where config.hasFlow(source, sink) and config.paramsUsedAfterLookups(source)
 select source, sink.getLocation()
-CodeQL can be very useful for product security engineering teams to detect and prevent vulnerabilities at scale. We use a combination of queries that run in CI using our query pack and one-off queries run through MRVA to find potential vulnerabilities and communicate them to engineers. CodeQL isn’t only useful for finding security vulnerabilities, though; it is also useful for detecting the presence or absence of security controls that are defined in code. This saves our security team time by surfacing certain security problems automatically, and saves our engineers time by detecting them earlier in the development process.Writing custom CodeQL queriesWe have a large number of articles and resources for writing custom CodeQL queries. If you haven’t written custom CodeQL queries before, here are some resources to help get you started:Michael Recachinas, GitHub Staff Security Engineer, also contributed to this blog post.]]></content:encoded></item><item><title>Python 3.14.0 alpha 5 is out</title><link>https://pythoninsider.blogspot.com/2025/02/python-3140-alpha-5-is-out.html</link><author>Hugo</author><category>Python official news</category><category>dev</category><category>official</category><category>python</category><pubDate>Tue, 11 Feb 2025 19:41:00 +0000</pubDate><source url="https://pythoninsider.blogspot.com/">Python Insider</source><content:encoded><![CDATA[Here comes the antepenultimate alpha.This is an early developer preview of Python
+CodeQL can be very useful for product security engineering teams to detect and prevent vulnerabilities at scale. We use a combination of queries that run in CI using our query pack and one-off queries run through MRVA to find potential vulnerabilities and communicate them to engineers. CodeQL isn’t only useful for finding security vulnerabilities, though; it is also useful for detecting the presence or absence of security controls that are defined in code. This saves our security team time by surfacing certain security problems automatically, and saves our engineers time by detecting them earlier in the development process.Writing custom CodeQL queriesWe have a large number of articles and resources for writing custom CodeQL queries. If you haven’t written custom CodeQL queries before, here are some resources to help get you started:Michael Recachinas, GitHub Staff Security Engineer, also contributed to this blog post.]]></content:encoded></item><item><title>Python 3.14.0 alpha 5 is out</title><link>https://pythoninsider.blogspot.com/2025/02/python-3140-alpha-5-is-out.html</link><author>Hugo</author><category>dev</category><category>official</category><category>python</category><pubDate>Tue, 11 Feb 2025 19:41:00 +0000</pubDate><source url="https://pythoninsider.blogspot.com/">Python official news</source><content:encoded><![CDATA[Here comes the antepenultimate alpha.This is an early developer preview of Python
 3.14Python 3.14 is still in development. This release, 3.14.0a5, is the
 fifth of seven planned alpha releases.Alpha releases are intended to make it easier to test the current
 state of new features and bug fixes and to test the release process.During the alpha phase, features may be added up until the start of
