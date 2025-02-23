@@ -35,7 +35,6 @@ https://www.uber.com/blog/rss/ "~Uber engineering" ! official
 https://neovim.io/news.xml "~Neovim news" ~official
 
 # programming
-https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" ! dev reddit
 https://blog.janestreet.com/feed.xml "~Jane Street" ! dev
 https://newsletter.systemdesign.one/feed "~System Design Newsletter" ! dev
 https://www.oreilly.com/radar/topics/software-engineering/feed/index.xml "~Oreilly software dev" ! dev
@@ -67,7 +66,6 @@ https://blog.miguelgrinberg.com/feed "~Miguel Grinberg" ! dev python
 https://blog.rust-lang.org/feed "~Rust Blog" ! dev official rust
 https://www.youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w "~Let's get Rusty" ! dev rust video learning
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "~Jon Gjengset" ! dev rust video learning
-https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! dev rust reddit
 https://blog.m-ou.se/index.xml "~Mara blog" ! dev rust blog
 https://dev.to/feed/tag/rust "~Dev.to Rust" ! dev rust devto
 https://fasterthanli.me/index.xml "~Faster than time blog" ! dev rust blog
@@ -78,9 +76,9 @@ https://this-week-in-rust.org/rss.xml "This week in Rust" ! dev rust
 # linux
 https://archlinux.org/feeds/news/ "~Arch Linux News" ! linux
 http://static.fsf.org/fsforg/rss/blogs.xml "~Free Software Foundation" ! linux
-https://www.reddit.com/r/linux/top/.rss?sort=top&t=day&limit=6 "~Reddit - Linux" ! linux reddit
 https://www.cyberciti.com/atom/atom.xml "~NixCraft" ! blog linux
 http://rss.slashdot.org/Slashdot/slashdotLinux "~Slashdot - Linux" ! slashdot linux
+https://feeds.jupiterbroadcasting.com/lup "~Linux Unplugged" ! linux podcast
 
 # frontend
 https://developer.mozilla.org/en-US/blog/rss.xml "~MDN Blog" ! dev official frontend
@@ -95,7 +93,6 @@ https://blog.chromium.org/feeds/posts/default "~Chromium Blog" ! frontend offici
 
 # k8s
 https://kubernetes.io/feed.xml "~Kubernetes Blog" ! official k8s devops
-https://www.reddit.com/r/kubernetes/top/.rss?sort=top&t=day&limit=6 "~Kubernetes" ! reddit k8s devops
 https://kubernetespodcast.com/feeds/audio.xml "~Kubernetes Podcast" ! podcast k8s devops
 https://www.youtube.com/feeds/videos.xml?channel_id=UCvqbFHwN-nwalWPjPUKpvTA "~CNCF" ! k8s devops video
 
@@ -115,7 +112,6 @@ https://changelog.com/gotime/feed "~Go Time" ! podcast go
 https://dev.to/feed/tag/go "~Dev.to Go" ! dev go devto
 https://dave.cheney.net/rss "~Dave Cheney" ! dev go
 https://cprss.s3.amazonaws.com/golangweekly.com.xml "~Golang Weekly" ! dev go
-https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" ! dev reddit go
 
 
 # AI
@@ -130,8 +126,6 @@ https://dev.to/feed/tag/ai "~Dev.to AI" ! ai devto
 https://www.youtube.com/feeds/videos.xml?channel_id=UCIat2Cdg661wF5DQDWTQAmg "~Probabl" ! dev ai video learning
 https://newsletter.languagemodels.co/feed "~LLM.newsletter" ! dev ai
 https://www.philschmid.de/rss "~Phil Shmid" ! dev ai blog
-https://www.reddit.com/r/MachineLearning/top/.rss?sort=top&t=day&limit=3 "~Reddit - ML" ! dev ai reddit
-https://www.reddit.com/r/artificial/top/.rss?sort=top&t=day&limit=3 "~Reddit - AI" ! dev ai reddit
 https://www.deepmind.com/blog/rss.xml "~Google Deep Mind blog" ! dev ai
 https://aws.amazon.com/blogs/machine-learning/feed/ "~AWS AI blog" ! dev ai
 https://www.kdnuggets.com/feed "~KDNuggets blog" ! dev ai
@@ -165,6 +159,15 @@ https://lucumr.pocoo.org/feed.atom "~Armin Ronacher Blog" ! dev blog
 https://addyosmani.com/rss.xml "~Addy Osmani Blog" ! dev blog
 https://feeds.feedburner.com/2ality "~Axel Raushmayer" ! dev frontend blog
 https://overreacted.io/rss.xml "~Dan Abramov" ! dev frontend blog
+
+# reddit
+https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! reddit
+https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" ! reddit
+https://www.reddit.com/r/linux/top/.rss?sort=top&t=day&limit=6 "~Reddit - Linux" ! reddit
+https://www.reddit.com/r/kubernetes/top/.rss?sort=top&t=day&limit=6 "~Kubernetes" ! devops
+https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" ! go
+https://www.reddit.com/r/MachineLearning/top/.rss?sort=top&t=day&limit=3 "~Reddit - ML" ! reddit
+https://www.reddit.com/r/artificial/top/.rss?sort=top&t=day&limit=3 "~Reddit - AI" ! reddit
 
 # learning
 https://blog.algomaster.io/feed "~Algomaster" ! dev learning
