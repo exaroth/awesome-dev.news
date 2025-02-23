@@ -164,8 +164,8 @@ https://overreacted.io/rss.xml "~Dan Abramov" ! dev frontend blog
 https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! reddit
 https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" ! reddit
 https://www.reddit.com/r/linux/top/.rss?sort=top&t=day&limit=6 "~Reddit - Linux" ! reddit
-https://www.reddit.com/r/kubernetes/top/.rss?sort=top&t=day&limit=6 "~Kubernetes" ! devops
-https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" ! go
+https://www.reddit.com/r/kubernetes/top/.rss?sort=top&t=day&limit=6 "~Kubernetes" ! reddit
+https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" ! reddit
 https://www.reddit.com/r/MachineLearning/top/.rss?sort=top&t=day&limit=3 "~Reddit - ML" ! reddit
 https://www.reddit.com/r/artificial/top/.rss?sort=top&t=day&limit=3 "~Reddit - AI" ! reddit
 
