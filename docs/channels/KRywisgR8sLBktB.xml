@@ -1,220 +1,291 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
-  }
-</style>
-
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
-
-    <!-- Repeat for all properties -->
-  </div>
-</div>
-
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>Functions in CSS?!</title><link>https://css-tricks.com/functions-in-css/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Mon, 3 Mar 2025 13:34:22 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[A much-needed disclaimer:You (kinda) can use functions now! I know, it isn’t the most pleasant feeling to finish reading about a new feature just for the author to say “And we’ll hopefully see it in a couple of years”. Luckily, right now you can use an (incomplete) version of CSS functions in Chrome Canary behind an experimental flag, although who knows when we’ll get to use them in a production environment.Arguments, defaults, and returns!I was drinking coffee when I read the news on Chrome prototyping functions in CSS and… I didn’t spit it or anything. I was excited, but thought “functions” in CSS would be just like mixins in Sass — you know, patterns for establishing reusable patterns. That’s cool but is really more or less syntactic sugar for writing less CSS.But I looked at the example snippet a little more closely and that’s when the coffee nearly came shooting out my mouth.Arguments?! Return values?! That’s worth spitting my coffee out for! I had to learn more about them, and luckily, the spec is clearly written, which you can find right here. What’s crazier, you can use functions right now in Chrome Canary! So, after reading and playing around, here are my key insights on what you need to know about CSS Functions.What exactly is a function in CSS?I like this definition from the spec:Custom functions allow authors the same power as custom properties, but parameterizedThey are used in the same places you would use a custom property, but functions return different things depending on the argument we pass. The syntax for the most basic function is the  at-rule, followed by the name of the function as a  + @function --dashed-border() {
+ /* ... */
+}A function without arguments is like a custom property, so meh… To make them we can pass arguments inside the parenthesis, also as s@function --dashed-border(--color) {
+ /* ... */
+}We can use the  descriptor to return something based on our argument:@function --dashed-border(--color) {
+   result: 2px dashed var(--color);
 }
 
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+div {
+   border: --dashed-border(blue); /* 2px dashed blue */
+}We can even use defaults! Just write a colon () followed by the default value for that argument.@function --dashed-border(--color: red) {
+   result: 2px dashed var(--color);
 }
 
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
-
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
+div {
+  border: --dashed-border(); /* 2px dashed red */
+}Functions can have type-checkingFunctions can have type-checking for arguments and return values, which will be useful whenever we want to interpolate a value just like we do with variables created with , and once we have inline conditionals, to make different calculations depending on the argument type.To add argument types, we pass a syntax component. That is the type enclosed in angle brackets, where color is  and length is , just to name a couple. There are also syntax multipliers like plus () to accept a space-separated list of that type.@function --custom-spacing(--a <length>) { /* ... */ } /* e.g. 10px */
+@function --custom-background(--b <color>) { /* ... */ } /* e.g. hsl(50%, 30% 50%) */
+@function --custom-margin(--c <length>+) { /* ... */ } /* e.g. 10px 2rem 20px */If instead, we want to define the type of the return value, we can write the  keyword followed by the syntax component:@function --progression(--current, --total) returns <percentage> {
+  result: calc(var(--current) / var(--total) * 100%);
+}Just a little exception for types: if we want to accept more than one type using the syntax combinator (|), we’ll have to enclose the types in a  wrapper function:@function --wideness(--d type(<number> | <percentage>)) { /* ... */ }Functions can have list argumentsWhile it doesn’t currently seem to work in Canary, we’ll be able in the future to take lists as arguments by enclosing them inside curly braces. So, this example from the spec passes a list of values like  and gets its maximum to perform a sum.@function --max-plus-x(--list, --x) {
+  result: calc(max(var(--list)) + var(--x));
 }
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
+div {
+  width: --max-plus-x({ 1px, 7px, 2px }, 3px); /* 10px */
+}I wonder then, will it be possible to select a specific element from a list? And also define how long should the list should be? Say we want to only accept lists that contain four elements, then select each individually to perform some calculation and return it. Many questions here!Early returns aren’t possibleThat’s correct, early returns aren’t possible. This isn’t something defined in the spec that hasn’t been prototyped, but something that simply won’t be allowed. So, if we have two returns, one enclosed early behind a  or  at-rule and one outside at the end, the last result will always be returned:@function --suitable-font-size() {
+  @media (width > 1000px) {
+    result: 20px;
+  }
+  result: 16px; /* This always returns 16px */
+}We have to change the order of the returns, leaving the conditional  for last. This doesn’t make a lot of sense in other programming languages, where the function ends after returning something, but there is a reason the C in CSS stands for Cascade: this order allows the conditional result to override the last result which is very CSS-y is nature:@function --suitable-font-size() {
+  result: 16px;
+
+  @media (width > 1000px) {
+    result: 20px;
+  }
+}Imagining the possibilitiesHere I wanted everyone to chip in and write about the new things we could make using functions. So the team here at CSS-Tricks put our heads together and thought about some use cases for functions. Some are little helper functions we’ll sprinkle a lot throughout our CSS, while others open new possibilities. Remember, all of these examples should be viewed in Chrome Canary until support expands to other browsers.Here’s a basic helper function from Geoff that sets fluid type:@function --fluid-type(--font-min, --font-max) {
+  result: clamp(var(--font-min), 4vw + 1rem, var(--font-max));
 }
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+h2 {
+  font-size: --fluid-type(24px, 36px);
+}This one is from Ryan, who is setting the width with an intrinsic container function — notice the default arguments.@function --intrinsic-container(--inline-margin: 1rem, --max-width: 60ch) {
+  result: min(100% - var(--inline-margin), var(--max-width));
+}And check out this second helper function from Ryan to create grid layouts:@function --layout-sidebar(--sidebar-width: 10ch) {
+  result: 1fr;
+
+  @media (width > 640px) {
+    result: fit-content(var(--sidebar-width)) minmax(min(50vw, 30ch), 1fr);
+  }
+}This is one of those snippets I’m always grabbing from Steph Eckles’ smolcss site, and having a function would be so much easier. Actually,  of the snippets on Steph’s site would be awesome functions.This one is from . When I made that demo using  to create viewport transitions, I used a helper property called  to get the screen width as a decimal between  to . At that moment, I wished for a function form of . As I described it back then:You pass a lower and upper bound as pixels, and it will return a  to  value depending on how wide the screen is. So for example, if the screen is ,  would return  since it’s the middle pointI thought I would never see it, but now I can make it myself! Using that wideness function, I can move an element through its  as the screen goes from  to :.marker {
+  offset-path: path("M 5 5 m -4, 0 a 4,4 0 1,0 8,0 a 4,4 0 1,0 -8,0"); /* Circular Orbit */
+  offset-distance: calc(--wideness(400, 800) * 100%); /* moves the element when the screen goes from 400px to 800px */
+}…use local variables. Although I tried them and they seem to work.…use recursive functions (they crash!),…update a function and let the appropriate styles change,…use  in cascade layers, or in the CSS Object Model (CSSOM),…use “the Iverson bracket functions … so any  queries or similar will need to be made using helper custom properties (on  or similar).”After reading what on earth an Iverson bracket is, I understood that we currently can’t have a return value behind a  or  rule. For example, this snippet from the spec shouldn’t work:@function --suitable-font-size() {
+  result: 16px;
+
+  @media (width > 1000px) {
+    result: 20px;
+  }
+} Although, upon testing, it seems like it’s supported now. Still, we can use a provisional custom property and return it at the end if it isn’t working for you:@function --suitable-font-size() {
+  --size: 16px;
+
+  @media (width > 600px) {
+    --size: 20px;
+  }
+
+  result: var(--size);
+}
+What about mixins? Soon, they’ll be here. According to the spec:At this time, this specification only defines custom functions, which operate at the level of CSS values. It is expected that it will define “mixins” later, which are functions that operate at the style rule level.I say it with confidence: functions will bring an enormous change to CSS, not in the sense that we’ll write it any differently — we won’t use functions to center a , but they will simplify hack-ish CSS and open  of new possibilities. There’ll be a time when our cyborg children ask us from their education pods, “Is it true you guys didn’t have functions in CSS?” And we’ll answer “No, Zeta-5 ∀umina™, we didn’t” while shedding a tear. And that will blow their ZetaPentium© Gen 31 Brain chips. That is if CSS lasts long enough, but in the meantime, I am happy to change my site’s font with a function.]]></content:encoded></item><item><title>My sales pitch for TypeScript</title><link>https://2ality.com/2025/03/typescript-sales-pitch.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 2 Mar 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[Roughly, TypeScript is JavaScript plus type information. The latter is removed before TypeScript code is executed by JavaScript engines. Therefore, writing and deploying TypeScript is more work. Is that added work worth it? In this blog post, I’m going to argue that yes, it is. Read it if you are skeptical about TypeScript but interested in giving it a chance.]]></content:encoded></item><item><title>A CSS-Only Star Rating Component and More! (Part 1)</title><link>https://css-tricks.com/a-css-only-star-rating-component-and-more-part-1/</link><author>Temani Afif</author><category>frontend</category><pubDate>Fri, 28 Feb 2025 14:03:32 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Creating a star rating component is a classic exercise in web development. It has been done and re-done many times using different techniques. We usually need a small amount of JavaScript to pull it together, but what about a CSS-only implementation? Yes, it is possible!Cool, right? In addition to being CSS-only, the HTML code is nothing but a single element:<input type="range" min="1" max="5">An input range element is the perfect candidate here since it allows a user to select a numeric value between two boundaries (the  and ). Our goal is to style that native element and transform it into a star rating component without additional markup or any script! We will also create more components at the end, so follow along. This article will only focus on the CSS part. While I try my best to consider UI, UX, and accessibility aspects, my component is not perfect. It may have some drawbacks (bugs, accessibility issues, etc), so please use it with caution.You probably know it but styling native elements such as inputs is a bit tricky due to all the default browser styles and also the different internal structures. If, for example, you inspect the code of an input range you will see a different HTML between Chrome (or Safari, or Edge) and Firefox.Luckily, we have some common parts that I will rely on. I will target two different elements: the  (the input itself) and the  (the one you slide with your mouse to update the value).Our CSS will mainly look like this:input[type="range"] {
+  /* styling the main element */
+}
+
+input[type="range" i]::-webkit-slider-thumb {
+  /* styling the thumb for Chrome, Safari and Edge */
+}
+
+input[type="range"]::-moz-range-thumb {
+  /* styling the thumb for Firefox */
+}The only drawback is that we need to repeat the styles of the thumb element twice. Don’t try to do the following:input[type="range" i]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+  /* styling the thumb */
+}This doesn’t work because the whole selector is invalid. Chrome & Co. don’t understand the  part and Firefox doesn’t understand the  part. For the sake of simplicity, I will use the following selector for this article:input[type="range"]::thumb {
+  /* styling the thumb */
+}But the demo contains the real selectors with the duplicated styles. Enough introduction, let’s start coding!Styling the main element (the star shape)We start by defining the size:input[type="range"] {
+  --s: 100px; /* control the size*/
+  
+  height: var(--s);
+  aspect-ratio: 5;
+  
+  appearance: none; /* remove the default browser styles */
+}If we consider that each star is placed within a square area, then for a 5-star rating we need a width equal to five times the height, hence the use of .That  value is also the value defined as the  attribute for the input element.<input type="range" min="1" max="5">input[type="range"] {
+  --s: 100px; /* control the size*/
+  
+  height: var(--s);
+  aspect-ratio: attr(max type(<number>));
+  
+  appearance: none; /* remove the default browser styles */
+}Now you can control the number of stars by simply adjusting the  attribute. This is great because the  attribute is also used by the browser internally, so updating that value will control our implementation as well as the browser’s behavior.The next step is to use a CSS  to create the stars. We need the shape to repeat five times (or more depending on the  value) so the mask size should be equal to  or  or simply  since by default the height will be equal to .input[type="range"] {  
+  --s: 100px; /* control the size*/
+  
+  height: var(--s);
+  aspect-ratio: attr(max type(<number>));
+  
+  appearance: none; /* remove the default browser styles */
+
+  mask-image: /* ... */;
+  mask-size: var(--s);
+}What about the  property you might ask? I think it’s no surprise that I tell you it will require a few gradients, but it could also be SVG instead. This article is about creating a star-rating component but I would like to keep the star part kind of generic so you can easily replace it with any shape you want. That’s why I say “and more” in the title of this post. We will see later how using the same code structure we can get a variety of different variations.Here is a demo showing two different implementations for the star. One is using gradients and the other is using an SVG.In this case, the SVG implementation looks cleaner and the code is also shorter but keep both approaches in your back pocket because a gradient implementation can do a better job in some situations.Styling the thumb (the selected value)Let’s now focus on the thumb element. Take the last demo then click the stars and notice the position of the thumb.The good thing is that the thumb is always within the area of a given star for all the values (from  to ), but the position is different for each star. It would be good if the position is always the same, regardless of the value. Ideally, the thumb should always be at the center of the stars for consistency.Here is a figure to illustrate the position and how to update it.The lines are the position of the thumb for each value. On the left, we have the default positions where the thumb goes from the left edge to the right edge of the main element. On the right, if we restrict the position of the thumb to a smaller area by adding some spaces on the sides, we get much better alignment. That space is equal to half the size of one star, or . We can use padding for this:input[type="range"] {  
+  --s: 100px; /* control the size */
+  
+  height: var(--s);
+  aspect-ratio: attr(max type(<number>));
+  padding-inline: calc(var(--s) / 2);
+  box-sizing: border-box;
+  
+  appearance: none; /* remove the default browser styles */
+
+  mask-image: ...;
+  mask-size: var(--s);
+}It’s better but not perfect because I am not accounting for the thumb size, which means we don’t have true centering. It’s not an issue because I will make the size of the thumb very small with a width equal to .input[type="range"]::thumb {
+  width: 1px;
+  height: var(--s);  
+
+  appearance: none; /* remove the default browser styles */ 
+}The thumb is now a thin line placed at the center of the stars. I am using a red color to highlight the position but in reality, I don’t need any color because it will be transparent.You may think we are still far from the final result but we are almost done! One property is missing to complete the puzzle: .The  property allows us to draw decorations outside an element thanks to its outset feature. For this reason, I made the thumb small and transparent. The coloration will be done using . I will use a gradient with two solid colors as the source:linear-gradient(90deg, gold 50%, grey 0);And we write the following:border-image: linear-gradient(90deg, gold 50%, grey 0) fill 0 // 0 100px;The above means that we extend the area of the  from each side of the element by  and the gradient will fill that area. In other words, each color of the gradient will cover half of that area, which is .Do you see the logic? We created a kind of overflowing coloration on each side of the thumb — a coloration that will logically follow the thumb so each time you click a star it slides into place!Now instead of  let’s use a very big value:We are getting close! The coloration is filling all the stars but we don’t want it to be in the middle but rather across the entire selected star. For this, we update the gradient a bit and instead of using , we use . We add an offset equal to half the width of a star which means the first color will take more space and our star rating component is perfect!We can still optimize the code a little where instead of defining a height for the thumb, we keep it  and we consider the vertical outset of  to spread the coloration.input[type="range"]::thumb{
+  width: 1px;
+  border-image: 
+    linear-gradient(90deg, gold calc(50% + var(--s) / 2), grey 0)
+    fill 0 // var(--s) 500px;
+  appearance: none;
+}We can also write the gradient differently using a conic gradient instead:input[type="range"]::thumb{
+  width: 1px;
+  border-image: 
+    conic-gradient(at calc(50% + var(--s) / 2), grey 50%, gold 0)
+    fill 0 // var(--s) 500px;
+  appearance: none;
+}The full code of our component is this:<input type="range" min="1" max="5">input[type="range"] {  
+  --s: 100px; /* control the size*/
+  
+  height: var(--s);
+  aspect-ratio: attr(max type(<number>));
+  padding-inline: calc(var(--s) / 2); 
+  box-sizing: border-box; 
+  appearance: none; 
+  mask-image: /* ... */; /* either an SVG or gradients */
+  mask-size: var(--s);
+}
+
+input[type="range"]::thumb {
+  width: 1px;
+  border-image: 
+    conic-gradient(at calc(50% + var(--s) / 2), grey 50%, gold 0)
+    fill 0//var(--s) 500px;
+  appearance: none;
+}That’s all! A few lines of CSS code and we have a nice rating star component!What about having a granularity of half a star as a rating? It’s something common and we can do it with the previous code by making a few adjustments.First, we update the input element to increment in half s instead of full steps:<input type="range" min=".5" step=".5" max="5">By default, the step is equal to  but we can update it to  (or any value) then we update the  value to  as well. On the CSS side, we change the padding from  to , and we do the same for the offset inside the gradient.input[type="range"] {  
+  --s: 100px; /* control the size*/
+  
+  height: var(--s);
+  aspect-ratio: attr(max type(<number>));
+  padding-inline: calc(var(--s) / 4); 
+  box-sizing: border-box; 
+  appearance: none; 
+  mask-image: ...; /* either SVG or gradients */
+  mask-size: var(--s);
+}
+
+input[type="range"]::thumb{
+  width: 1px;
+  border-image: 
+    conic-gradient(at calc(50% + var(--s) / 4),grey 50%, gold 0)
+    fill 0 // var(--s) 500px;
+  appearance: none;
+}The difference between the two implementations is a factor of one-half which is also the  value. That means we can use  and create a generic code that works for both cases.input[type="range"] {  
+  --s: 100px; /* control the size*/
+  
+  --_s: calc(attr(step type(<number>),1) * var(--s) / 2);
+  height: var(--s);
+  aspect-ratio: attr(max type(<number>));
+  padding-inline: var(--_s);
+  box-sizing: border-box; 
+  appearance: none; 
+  mask-image: ...; /* either an SVG or gradients */
+  mask-size: var(--s);
+}
+
+input[type="range"]::thumb{
+  width: 1px;
+  border-image: 
+    conic-gradient(at calc(50% + var(--_s)),gold 50%,grey 0)
+    fill 0//var(--s) 500px;
+  appearance: none;
+}Here is a demo where modifying the step is all that you need to do to control the granularity. Don’t forget that you can also control the number of stars using the  attribute.Using the keyboard to adjust the ratingAs you may know, we can adjust the value of an input range slider using a keyboard, so we can control the rating using the keyboard as well. That’s a good thing but there is a caveat. Due to the use of the  property, we no longer have the default outline that indicates keyboard focus which is an accessibility concern for those who rely on keyboard input.For a better user experience and to make the component more accessible, it’s good to display an outline on focus. The easiest solution is to add an extra wrapper:<span>
+  <input type="range" min="1" max="5">
+</span>That will have an outline when the input inside has focus:span:has(:focus-visible) {
+  outline: 2px solid;
+}Try to use your keyboard in the below example to adjust both ratings:Another idea is to consider a more complex  configuration that keeps a small area around the element visible to show the outline:mask: 
+  /* ... */ 0/var(--s),
+  conic-gradient(from 90deg at 2px 2px,#0000 25%,#000 0) 
+   0 0/calc(100% - 2px) calc(100% - 2px);I prefer using this last method because it maintains the single-element implementation but maybe your HTML structure allows you to add focus on an upper element and you can keep the mask configuration simple. It totally depends!As I said earlier, what we are making is more than a star rating component. You can easily update the mask value to use any shape you want.Here is an example where I am using an SVG of a heart instead of a star.This time I am using a PNG image as a mask. If you are not comfortable using SVG or gradients you can use a transparent image instead. As long as you have an SVG, a PNG, or gradients, there is no limit on what you can do with this as far as shapes go.I am not repeating a specific shape in that last example, but am using a complex  configuration to create a signal shape.We started with a star rating component and ended with a bunch of cool examples. The title could have been “How to style an input range element” because this is what we did. We upgraded a native component without any script or extra markup, and with only a few lines of CSS.What about you? Can you think about another fancy component using the same code structure? Share your example in the comment section!]]></content:encoded></item><item><title>Doom for TypeScript types</title><link>https://javascriptweekly.com/issues/725</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[✏️ Whenever we include more than a few links about TypeScript, we get complaints from people who  We get that, we love you folks, and we're aware. TypeScript isn't our  but we do cover it, including critical pieces. That in mind, prepare yourself for our top feature... but the rest of the issue is mostly JavaScript, promise! 😅__Peter Cooper, your editor]]></content:encoded></item><item><title>What is TypeScript? An overview for JavaScript programmers</title><link>https://2ality.com/2025/02/what-is-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[Read this blog post if you are a JavaScript programmer and want to get a rough idea of what using TypeScript is like (think first step before learning more details). You’ll get answers to the following questions:How is TypeScript code different from JavaScript code?How is TypeScript code run?How does TypeScript help during editing in an IDE?Note: This blog post does not explain why TypeScript is useful. If you want to know more about that, you can read my TypeScript sales pitch.]]></content:encoded></item><item><title>Using &amp; Styling the Details Element</title><link>https://css-tricks.com/using-styling-the-details-element/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 26 Feb 2025 16:07:14 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Now that we’re 5+ years into , we know more about it than ever before. I thought I’d round that information up so it’s in one place I can reference in the future without having to search the site — and other sites — to find it.<details>
+  Open and close the element to toggle this content.
+</details>That “details” label is a default. We can insert a  element to come up with something custom:<details>
+  <summary>Toggle content</summary>
+  Open and close the element to toggle this content.
+</details>From here, the world is sorta our oyster because we can stuff any HTML we want inside the element:<details>
+  <summary>Toggle content</summary>
+  <p>Open and close the element to toggle this content.</p>
+  <img src="path/to/image.svg" alt="">
+</details>The content is (sorta) searchableThe trouble with tucking content inside an element like this is that it’s hidden by default. Early on, this was considered an inaccessible practice because the content was undetected by in-page searching (like using + on the page), but that’s since changed, at least in Chrome, which will open the  element and reveal the content if it discovers a matched term.That’s unfortunately not the case in Firefox and Safari, both of which skip the content stuffed inside a closed  element when doing in-page searches at the time I’m writing this. But it’s even more nuanced than that because Firefox (testing 134.0.1) matches searches when the  element is open, while Safari (testing 18.1) skips it altogether. That could very well change by the end of this year since searchability is one of the items being tackled in Interop 2025.So, as for now, it’s a good idea to keep important content out of a  element when possible. For example,  is often used as a pattern for Frequently Asked Questions, where each “question” is an expandable “answer” that reveals additional information. That might not be the best idea if that content should be searchable on the page, at least for now.All we have to do is give each  a matching  attribute:<details name="notes">
+  <summary>Open Note</summary>
+  <p> ... </p>
+</details>
+<details name="notes"> <!-- etc. --> </details>
+<details name="notes"> <!-- etc. --> </details>
+<details name="notes"> <!-- etc. --> </details>This allows the elements to behave a lot more like true accordions, where one panel collapses when another expands.The marker is that little triangle that indicates whether the  element is open or closed. We can use the  pseudo-element to style it, though it does come with constraints, namely that all we can do is change the color and font size, at least in Chrome and Firefox which both fully support . Safari partially supports it in the sense that it works for ordered and unordered list items (e.g., ), but not for  (e.g., ).Let’s look at an example that styles the markers for both  and an unordered list. At the time I’m writing this, Chrome and Firefox support styling the  in both places, but Safari only works with the unordered list.Notice how the  selector in that last example selects both the  element  the unordered list element. We need to scope the selector to the  element if we want to target just that marker, right?/* This doesn't work! */
+details::marker { 
+  /* styles */
+}Nope! Instead, we need to scope it to the  element. That’s what the marker is actually attached to./* This does work */
+summary::marker { 
+  /* styles */
+}You might think that we can style the marker even if we were to leave the summary out of the markup. After all, HTML automatically inserts one for us by default. But that’s not the case. The  element has to be present in the markup for it to match styles. You’ll see in the following demo that I’m using a generic  selector that should match both  elements, but only the second one matches because it contains a  in the HTML. Again, only Chrome and Firefox support for the time being:You might also think that we can swap out the triangle for something else since that’s something we can absolutely do with list items by way of the  property:/* Does not work! */
+summary::marker {
+  list-style-type: square;
+}…but alas, that’s not the case. An article over at web.dev says that it does work, but I’ve been unsuccessful at getting a proper example to work in any browser.That isn’t to say it  work that way, but the specification isn’t explicit about it, so I have no expectations one way or another. Perhaps we’ll see an edit in a future specification that gets specific with  and to what extent CSS can modify the marker. Or maybe we won’t. It would be nice to have some way to chuck the triangle in favor of something else.And what about removing the marker altogether? All we need to do is set the  property on it with an empty string value and !Once the marker is gone, you could decide to craft your own custom marker with CSS by hooking into the  element’s  pseudo-element.Just take note that Safari displays both the default marker and the custom one since it does not support the  pseudo-element at the time I’m writing this. You’re probably as tired reading that as I am typing it. 🤓Let’s say all you need to do is slap a background color on the content inside the  element. You could select the entire thing and set a background on it:details {
+  background: oklch(95% 0.1812 38.35);
+}That’s cool, but it would be better if it only set the background color when the element is in an  state. We can use an attribute selector for that:details[open] {
+  background: oklch(95% 0.1812 38.35);
+}OK, but what about the  element? What if you don’t want that included in the background? Well, you could wrap the content in a  and select that instead:details[open] div {
+  background: oklch(95% 0.1812 38.35);
+}What’s even better is using the  pseudo-element as a selector. This way, we can select everything inside the  element without reaching for more markup:::details-content {
+  background: oklch(95% 0.1812 38.35);
+}There’s no need to include  in the selector since  is only ever selectable in the context of a  element. So, it’s like we’re implicitly writing .The  pseudo is still gaining browser support when I’m writing this, so it’s worth keeping an eye on it and using it cautiously in the meantime.Animate the opening and closingClick a default  element and it immediately snaps open and closed. I’m not opposed to that, but there are times when it might look (and feel) nice to transition like a smooth operator between the open and closed states. It used to take some clever hackery to pull this off, as Louis Hoebregts demonstrated using the Web Animations API several years back. Robin Rendle shared another way that uses a CSS animation:details[open] p {
+  animation: animateDown 0.2s linear forwards;
+}
+
+@keyframes animateDown {
+  0% {
+    opacity: 0;
+    transform: translatey(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}He sprinkled in a little JavaScript to make his final example fully interactive, but you get the idea:Notice what’s happening in there. Robin selects the paragraph element inside the  element when it is in an  state then triggers the animation. And that animation uses clever positioning to make it happen. That’s because there’s no way to know exactly how tall the paragraph — or the parent  element — is when expanded. We have to use explicit sizing, padding, and positioning to pull it all together.But guess what? Since then, we got a  gift from CSS that allows us to animate an element from zero height to its auto (i.e., intrinsic) height, even if we don’t know the exact value of that auto height in advance. We start with zero height and clip the overflow so nothing hangs out. And since we have the  pseudo, we can directly select that rather than introducing more markup to the HTML.::details-content {
+  transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+  height: 0;
+  overflow: clip;
+}Now we can opt into auto-height transitions using the  property which was created just to enable transitions to keyword values, such as . We set it on the  element so that it’s available everywhere, though you could scope it directly to a more specific instance if you’d like.:root {
+  interpolate-size: allow-keywords;
+}Next up, we select the  element in its  state and set the  height to :[open]::details-content {
+  height: auto;
+}We can make it so that this only applies if the browser supports auto-height transitions:@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  [open]::details-content {
+    height: auto;
+  }
+}And finally, we set the transition on the  pseudo to activate it:::details-content {
+  transition: height 0.5s ease;
+  height: 0;
+  overflow: clip;
+}
+
+/* Browser supports interpolate-size */
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  [open]::details-content {
+    height: auto;
+  }
+}But wait! Notice how the animation works when opening , but things snap back when closing it. Bramus notes that we need to include the  property in the transition because (1) it is implicitly set on the element and (2) it maps to a hidden state when the  element is closed. That’s what causes the content to snap to hidden when closing the . So, let’s add  to our list of transitions:::details-content {
+  transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+  height: 0;
+  overflow: clip;
+}
+
+/* Browser supports interpolate-size */
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  [open]::details-content {
+    height: auto;
+  }
+}Note the  keyword which we need to set since  is a property that only supports discrete animations and transitions.Chris has a demo that uses  as a system for floating footnotes in content. I forked it and added the  attribute to each footnote so that they close when another one is opened.Bramus with a slick-looking horizontal accordion forked from another example. Note how the  element is used as a flex container:Chris with another clever trick that uses  to play and pause animated GIF image files. It’s doesn’t actually “pause” but the effect makes it seem like it does.Ryan Trimble with styling  as a dropdown menu and then using anchor positioning to set where the content opens.]]></content:encoded></item><item><title>This Week In React #223: TanStack, React Router, React-Scan, Bun, Next.js, INP, Storybook | State of RN, Nitro Views, Reanimated, Gesture Handler, Screens, AWS-LC, QuickPush, Metro | TC39, CSS, TypeScript, Observables...</title><link>https://thisweekinreact.com/newsletter/223</link><author></author><category>frontend</category><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[: A good mix of content and many community articles, but no major announcements.: The 2024 survey results are out, infra libraries now support RN 0.78, and Nitro Views have been released!: Several TC39 proposals are progressing—my favorites are  and .I'm trying something new, let me know if you like the intro to be split by section like above.Check our partner StrapiConf - 🇫🇷 Paris - 13 May. Strapi is a popular headless CMS in the React ecosystem, and like me, it's French 🥐! Get a 10% discount with code "TWIR".As always, thanks for supporting us on your favorite platform:React-admin is the go-to framework for building B2B apps—because let’s be real, nobody dreams of writing yet another CRUD screen. Here’s why thousands of developers swear by it:🔌  Connects to any API—because commitment issues aren't just for relationships.🧩  More pre-built components than your project has TODOs.🛠  If you don’t like it, change it. We won’t take it personally (*wipes away tears*).💻 Great Developer Experience: Makes you feel like a coding rockstar, minus the groupies (unless you count rubber ducks).With 7 years in production and 1 million daily users, react-admin is a sure bet. So why don’t you try it out yourself?Meticulous creates and maintains an exhaustive suite of e2e ui tests with  developer effort. Dropbox, Bilt Rewards, Lattice and hundreds of engineering organizations rely on Meticulous for their frontend testing.This quote from the CTO of Traba sums the product up best: "Meticulous has fundamentally changed the way we approach frontend testing in our web applications, fully eliminating the need to write any frontend tests. The software gives us confidence that every change will be completely regression tested, allowing us to ship more quickly with significantly fewer bugs in our code."This post from our CTO, who formerly led a large engineering group at Palantir, sets out the context of why exhaustive testing can double engineering velocity.The survey results are out and I’m super proud that among all the React Native resources, this newsletter got the highest positivity score. Thank you ❤️!I can’t summarize the whole survey, but here are a few things I discovered:61% of RN devs came from React (web)iOS and Android remain the most common RN targets, but the Web also has a 22% market shareLibraries with the most positive sentiment are: Reanimated, TanStack Query, Zustand, React Navigation, Expo Router, Skia.No clear winner in terms of styling. Devs like the built-in APIs such as StyleSheet and inline styles.]]></content:encoded></item><item><title>Simple TypeScript playgrounds via node --watch</title><link>https://2ality.com/2025/02/node-watch-typescript-playground.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[Now that Node.js has built-in support for TypeScript, we can use it as the foundation of simple playgrounds that let us interactively explore TypeScript code.]]></content:encoded></item></channel></rss>

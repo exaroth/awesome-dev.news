@@ -1,333 +1,245 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>How to debug code with GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/how-to-debug-code-with-github-copilot/</link><author>Jeimy Ruiz</author><category>official</category><pubDate>Fri, 21 Feb 2025 17:00:49 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Debugging is an essential part of a developer’s workflow—but it’s also one of the most time consuming. What if AI could streamline the process, helping you analyze, fix, and document code faster? Enter GitHub Copilot, your AI-powered coding assistant.GitHub Copilot isn’t just for writing code—it’s also a powerful tool for debugging. Whether you’re troubleshooting in your IDE, using Copilot Chat’s slash commands like , or reviewing pull requests (PR) on github.com, GitHub Copilot offers flexible, intelligent solutions to speed up your debugging process. And with the free version of GitHub Copilot, available to all personal GitHub accounts, you can start exploring these features today.In this guide, we’ll explore how to debug code with GitHub Copilot, where to use it in your workflow, and best practices to get the most out of its capabilities. Whether you’re new to GitHub Copilot or looking to deepen your skills, this guide has something for you.Debugging code with GitHub Copilot: surfaces and workflowsDebugging code with GitHub Copilot can help you tackle issues faster while enhancing your understanding of the codebase. Whether you’re fixing syntax errors, refactoring inefficient code, or troubleshooting unexpected behavior, GitHub Copilot can provide valuable insights in your debugging journey.So, how exactly does this work? “GitHub Copilot is recognizing patterns and suggesting solutions based on what it has learned,” says Christopher Harrison, Senior Developer Advocate. “Once you’ve identified the problem area, you can turn to GitHub Copilot and ask, ‘I’m giving this input but getting this output—what’s wrong?’ That’s where GitHub Copilot really shines.”Let’s explore how GitHub Copilot can help you debug your code across different surfaces, from your IDE to github.com and even pull requests.Copilot Chat acts as an interactive AI assistant, helping you debug issues with natural language queries. And with Copilot Free, you get 50 chat messages per month. With Copilot Chat, you can:Get real-time explanations: Ask “Why is this function throwing an error?” and Copilot Chat will analyze the code and provide insights.  Use slash commands for debugging: Try  to generate a potential solution or  for a step-by-step breakdown of a complex function. (More on this later!)   Refactor code for efficiency: If your implementation is messy or inefficient, Copilot Chat can suggest cleaner alternatives. Christopher explains, “Refactoring improves the readability of code, making it easier for both developers and GitHub Copilot to understand. And if code is easier to understand, it’s easier to debug and spot problems.”  Walk through errors interactively: Describe your issue in chat and get tailored guidance without ever having to leave your IDE. When working in popular IDEs like VS Code or JetBrains, GitHub Copilot offers real-time suggestions as you type. It helps by: For example, if you declare a variable but forget to initialize it, GitHub Copilot can suggest a correction.   Encounter a syntax error? GitHub Copilot can suggest a fix in seconds, ensuring your code stays error-free.   By analyzing your workspace, GitHub Copilot provides solutions tailored to your codebase and project structure.GitHub Copilot extends beyond your IDE, offering debugging assistance directly on github.com via Copilot Chat, particularly in repositories and discussions. With this feature, you can:Troubleshoot code in repositories: Open a file, highlight a problematic section, and use Copilot Chat to analyze it.   If you’re unsure how to verify a function, GitHub Copilot can suggest test cases based on existing code.  Understand unfamiliar code: Reviewing an open-source project or a teammate’s PR? Ask GitHub Copilot to summarize a function or explain its logic.4. For pull request assistanceGitHub Copilot can also streamline debugging within PRs, ensuring code quality before merging.Suggest improvements in PR comments: GitHub Copilot can review PRs and propose fixes directly in the conversation.   Struggling to describe your changes? Greg Larkin, Senior Service Delivery Engineer, says, “I use GitHub Copilot in the PR creation process to generate a summary of the changes in my feature branch compared to the branch I’m merging into. That can be really helpful when I’m struggling to figure out a good description, so that other people understand what I did.”   Not sure why a change was made? Ask GitHub Copilot to summarize what’s different between commits.  Catch edge cases before merging: Use  to identify potential issues and  to generate missing test cases.   If a PR contains redundant or inefficient code, GitHub Copilot can suggest optimized alternatives.By integrating Copilot into your PR workflow, you can speed up code reviews while maintaining high-quality standards. Just be sure to pair it with peer expertise for the best results.Slash commands turn GitHub Copilot into an on-demand debugging assistant, helping you solve issues faster, get more insights, and improve your code quality. Here are some of the most useful slash commands for debugging:1. Use /help to get guidance on using GitHub Copilot effectivelyThe  slash command provides guidance on how to interact with GitHub Copilot effectively, offering tips on structuring prompts, using slash commands, and maximizing GitHub Copilot’s capabilities.: Type  in Copilot Chat to receive suggestions on your current task, whether it’s debugging, explaining code, or generating test cases.  : Need a refresher on what GitHub Copilot can do? Use  to access a quick guide to slash commands like  and .2. Use /fix to suggest and apply fixesThe  command is a go-to tool for resolving code issues by allowing you to highlight a block of problematic code or describe an error. Select the code causing issues, type , and let Copilot Chat generate suggestions.   If you have a broken API call, use  to get a corrected version with appropriate headers or parameters.3. Use /explain to understand code and errorsThe  command breaks down complex code or cryptic error messages into simpler, more digestible terms. Highlight the code or error message you want clarified, type , and Copilot Chat will provide an explanation. It will explain the function’s purpose, how it processes the data, potential edge cases, and any possible bugs or issues.    Encounter a “NullPointerException”? Use  to understand why it occurred and how to prevent it.4. Use /tests to generate testsTesting is key to identifying bugs, and the  command helps by generating test cases based on your code. Use  on a function or snippet, and Copilot Chat will generate relevant test cases.   Apply  to a sorting function, and Copilot Chat might generate unit tests for edge cases like empty arrays or null inputs.5. Use /doc to generate or improve documentationThere are long-term benefits to having good text documentation—for developers and GitHub Copilot, which can draw context from it—because it makes your codebase that much more searchable. By using the  command with Copilot Free, you can even ask GitHub Copilot to write a summary of specific code blocks within your IDE.The  command helps you create or refine documentation for your code, which is critical when debugging or collaborating with others. Clear documentation provides context for troubleshooting, speeds up issue resolution, and helps fellow developers understand your code faster. Highlight a function, class, or file, type  and right-click to see the context menu, and Copilot Chat will generate comprehensive comments or documentation.   Apply  to a function, and Copilot Chat will generate inline comments detailing its purpose, parameters, and expected output.By mastering these commands, you can streamline your debugging workflow and resolve issues faster without switching between tools or wasting time on manual tasks.Best practices for debugging code with GitHub CopilotProvide clear context for better resultsProviding the right context helps GitHub Copilot generate even more relevant debugging suggestions. As Christopher explains, “The better that Copilot is able to understand what you’re trying to do and how you’re trying to do it, the better the responses are that it’s able to give to you.”Since GitHub Copilot analyzes your code within the surrounding scope, ensure your files are well structured and that relevant dependencies are included. If you’re using Copilot Chat, reference specific functions, error messages, or logs to get precise answers instead of generic suggestions. Working across multiple files? Use the  command to point GitHub Copilot in the right direction and give it more context for your prompt and intended goal.Ask, refine, and optimize in real timeInstead of treating GitHub Copilot as a one-and-done solution, refine its suggestions by engaging in a back-and-forth process. Greg says, “I find it useful to ask GitHub Copilot for three or four different options on how to fix a problem or to analyze for performance. The more detail you provide about what you’re after—whether it’s speed, memory efficiency, or another constraint—the better the result.”This iterative approach can help you explore alternative solutions you might not have considered, leading to more robust and efficient code.Master the art of specific promptsThe more specific your prompt, the better GitHub Copilot’s response. Instead of asking “What’s wrong with this function?” try “Why is this function returning undefined when the input is valid?” GitHub Copilot performs best when given clear, detailed queries—this applies whether you’re requesting a fix, asking for an explanation, or looking for test cases to verify your changes.By crafting precise prompts and testing edge cases, you can use GitHub Copilot to surface potential issues before they become production problems.Try a structured approach with progressive debuggingNext, try a step-by-step approach to your debugging process! Instead of immediately applying fixes, use GitHub Copilot’s commands to first understand the issue, analyze potential causes, and then implement a solution. This structured workflow—known as —helps you gain deeper insights into your code while ensuring that fixes align with the root cause of the problem.Start with the slash command  on a problematic function to understand the issue.  Use the slash command  to help with configuring interactive debugging.  Finally, apply the slash command  to generate possible corrections.📌  If a function in your React app isn’t rendering as expected, start by running  on the relevant JSX or state logic, then use  to identify mismanaged props, and finally, apply  for a corrected implementation.Some issues require multiple levels of debugging and refinement. By combining commands, you can move from diagnosis to resolution even faster.Use  to understand and resolve issues quickly.  Apply  to find failing tests and generate new ones.Fixing a broken function: Run the slash command  to understand why it fails, then use the slash command  to generate a corrected version.   Use the slash command  to identify and fix failing tests, then use the slash command  to generate additional unit tests for the highlighted code. Remember, slash commands are most effective when they’re used in the appropriate context, combined with clear descriptions of the problem, are part of a systematic debugging approach, and followed up with verification and testing.GitHub Copilot is a powerful tool that enhances your workflow, but it doesn’t replace the need for human insight, critical thinking, and collaboration. As Greg points out, “GitHub Copilot can essentially act as another reviewer, analyzing changes and providing comments. Even so, it doesn’t replace human oversight. Having multiple perspectives on your code is crucial, as different reviewers will spot issues that others might miss.”By combining GitHub Copilot’s suggestions with human expertise and rigorous testing, you can debug more efficiently while maintaining high-quality, reliable code.]]></content:encoded></item><item><title>Engaging with the developer community on our approach to content moderation</title><link>https://github.blog/news-insights/policy-news-and-insights/engaging-with-the-developer-community-on-our-approach-to-content-moderation/</link><author>Margaret Tucker</author><category>official</category><pubDate>Thu, 20 Feb 2025 17:00:22 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[At GitHub, we’re committed to keeping our community informed about how we govern our platform. That means being transparent about content moderation and involving users in the development of our site policies. Today we’re announcing that our Transparency Center and repo have been updated with data for all of 2024.Our developer-first approach to content moderation is adapted to the unique environment of code collaboration and has evolved to meet specific needs through a suite of content moderation tools. We’ve discussed the nuances and challenges of moderating a code collaboration platform in the Journal of Online Trust and Safety in an effort to be transparent about our own practices and contribute to the research base of platform studies.We want to bring this discussion directly to the developers that make GitHub what it is. Recently, we attended FOSDEM, Europe’s largest free and open source developer conference. We connected with developers and presented a deep dive into how our approach to platform moderation has been informed by the values of the FOSS community. You can watch the video of the talk here. We’ll also be presenting this talk on March 8 at SCaLE 22x, the 22nd Annual Southern California Linux Expo in Pasadena, CA. We don’t want to just share our own work—we want to hear directly from developers and maintainers about the challenges you’re facing.Developers are an important stakeholder in how we moderate our platform, and we want to hear from you. Check out our site-policy repo to contribute constructive ideas, questions, and feedback to make our policies better. We also welcome participation in our developer-policy repo where you can share public policy opportunities and challenges to advance developers’ rights to innovation, collaboration, and equal opportunity.]]></content:encoded></item><item><title>Announcing Rust 1.85.0 and Rust 2024</title><link>https://blog.rust-lang.org/2025/02/20/Rust-1.85.0.html</link><author>The Rust Release Team</author><category>dev</category><category>official</category><category>rust</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[The Rust team is happy to announce a new version of Rust, 1.85.0. This stabilizes the 2024 edition as well.
-Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust installed via , you can get 1.85.0 with:If you'd like to help us out by testing future releases, you might consider updating locally to use the beta channel () or the nightly channel (). Please report any bugs you might come across!We are excited to announce that the Rust 2024 Edition is now stable!
-Editions are a mechanism for opt-in changes that may otherwise pose a backwards compatibility risk. See the edition guide for details on how this is achieved, and detailed instructions on how to migrate.This is the largest edition we have released. The edition guide contains detailed information about each change, but as a summary, here are all the changes:The guide includes migration instructions for all new features, and in general
-transitioning an existing project to a new edition.
-In many cases  can automate the necessary changes. You may even find that no changes in your code are needed at all for 2024!Note that automatic fixes via  are very conservative to avoid ever changing the semantics of your code. In many cases you may wish to keep your code the same and use the new semantics of Rust 2024; for instance, continuing to use the  macro matcher, and ignoring the conversions of conditionals because you want the new 2024 drop order semantics. The result of  should not be considered a recommendation, just a conservative conversion that preserves behavior. people came together to create this edition. We'd like to thank them all for their hard work!Rust now supports asynchronous closures like  which return futures when called. This works like an  which can also capture values from the local environment, just like the difference between regular closures and functions. This also comes with 3 analogous traits in the standard library prelude: , , and .In some cases, you could already approximate this with a regular closure and an asynchronous block, like . However, the future returned by such an inner block is not able to borrow from the closure captures, but this does work with  closures:let mut vec: Vec<String> = vec![];
-
-let closure = async || {
-    vec.push(ready(String::from("")).await);
-};
-It also has not been possible to properly express higher-ranked function signatures with the  traits returning a , but you can write this with the  traits:use core::future::Future;
-async fn f<Fut>(_: impl for<'a> Fn(&'a u8) -> Fut)
-where
-    Fut: Future<Output = ()>,
-{ todo!() }
-
-async fn f2(_: impl for<'a> AsyncFn(&'a u8))
-{ todo!() }
-
-async fn main() {
-    async fn g(_: &u8) { todo!() }
-    f(g).await;
-    //~^ ERROR mismatched types
-    //~| ERROR one type is more general than the other
-
-    f2(g).await; // ok!
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>GitHub for Beginners: How to get started with GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/github-for-beginners-how-to-get-started-with-github-copilot/</link><author>Kedasha Kerr</author><category>official</category><pubDate>Mon, 3 Mar 2025 14:00:39 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Welcome to season two of GitHub for Beginners! Last season, we introduced you to GitHub and helped you go from beginner to confidently using the platform. This season, we’re continuing your journey by leading you into the world of AI with GitHub Copilot.Imagine having a pair programmer who never takes a break and knows plenty of programming languages. That’s Copilot, which is powered by a number of large language models (LLMs) that you can choose from and is the industry’s most widely adopted AI coding tool. Today, we’ll be exploring everything you need to know to get started using it.Get you up and running with GitHub Copilot  Give you an overview of the different usage tiers from free to enterprise  Help you use GitHub Copilot for the very first time! GitHub Copilot is an AI pair programmer that helps you write code faster. It’s designed to help with programming tasks and acts as your assistant while working in your editor and on github.com.In addition to code completion, GitHub Copilot can help you:Write code using natural language prompts  Understand shell commands  Describe changes in your pull requests  You can use GitHub Copilot with a variety of programming languages, and it’s available in VS Code, Visual Studio, JetBrains IDEs, Neovim, XCode, on GitHub Mobile, in your terminals, and on github.com!This leads us to our next question: how do you access GitHub Copilot?What are the different tiers of GitHub Copilot?Before using GitHub Copilot, you need to have a GitHub account and—if you want more than the free version—a Copilot license.There are four options available:If you’ve never used GitHub Copilot before, sign up for the free tier to give it a try! Once you do that, you can install and use GitHub Copilot in your IDE and on github.com.How to install GitHub Copilot in VS Code and JetBrainsHow you install GitHub Copilot depends on what IDE you’re using. GitHub Copilot currently works with several IDEs on the market—but for the purpose of this article, we’ll focus on two popular IDEs: VS Code and JetBrains.Navigate to the Extensions Marketplace and search for “GitHub Copilot.” Click on the “GitHub Copilot” extension, authored by GitHub and then click Install. This will install two extensions: GitHub Copilot and GitHub Copilot Chat.  Once installed, sign into VS Code with your GitHub account that has access to GitHub Copilot. (If you didn’t previously authorize VS Code in your GitHub account, you’ll need to sign in to GitHub in VS Code.)  A few helpful notes in case you run into any issues:You can sign in to GitHub in VS Code by selecting the “Accounts” menu in the Activity Bar, and then “Sign in to Sync Settings” to use GitHub Copilot.  In your browser, you can grant GitHub the necessary permissions needed for GitHub Copilot. Click “Continue” to authorize VS Code to approve.When you return to your editor, you’ll notice a Copilot icon at the top next to the Command Center, and a Copilot icon in the bar at the bottom of the editor window. If you click the icon at the bottom, it might ask you to select the account you want to use, then show menu options and display a ready status.If you see Copilot icons next to the Command Center and at the bottom of the VS Code window, you’ve successfully installed GitHub Copilot and are ready to use it.If you’re using a JetBrains IDE:We’ll be using PyCharm to install GitHub Copilot in JetBrains IDE. Here’s how:Open your editor of choice and navigate to the plugins marketplace. Search for “GitHub Copilot” and click Install, then restart your IDE.   When you open a project, you’ll see a Copilot icon on both the right side of your editor and the bottom, with a “ready” status. Once you see two icons on the left: GitHub Copilot with a question mark and another with a chat icon, you’ll know you successfully installed GitHub Copilot.Select the first icon, GitHub Copilot with a question mark, to get an overview of what GitHub Copilot is, along with a welcome message.  Select the second icon, GitHub Copilot with a chat icon, to find help for programming-related inquiries. A few notes that may be helpful:If you didn’t previously authorize JetBrains in your GitHub account, you’ll need to sign in to GitHub in your editor.  Alternatively, you can click on the Copilot icon at the bottom and select “Login to GitHub.”  In your browser, you can grant GitHub the necessary permissions needed for GitHub Copilot. Click “copy and open” to approve the permissions needed.  Press  or  to paste the code, click continue and finally select “Authorize GitHub Copilot plugin.”Return to your editor and you will see a message that GitHub Copilot has been successfully installed.Now, it’s time to authorize GitHub Copilot Chat.Click on the chat icon and click the “Authorize” button.   Select “Copy and Open” and paste the code in your browser.   Click “Authorize GitHub Copilot for JetBrains IDEs.”  Return to your editor and you should see a greeting from GitHub Copilot Chat.Once you’ve completed these steps, you’re ready to use GitHub Copilot in JetBrains.We now have Copilot installed in our editors, so let’s explore how to use features like code complete. In our example, we’ll be using Python in VS Code.Here’s a short walkthrough on using code complete in GitHub Copilot:Create a new file called .   Type  and press . Copilot will suggest code based on what it believes you want to do. For example, since the file is named  Copilot will provide code for validating an email.  Click the tab key and accept the suggestion.  Hit the  key to have Copilot provide the main function to run the code.  Hover over the suggested code, then click the arrows to see multiple suggestions.  Click on the three dots (…) at the end of the suggestion and select “Open Completions Panel” to see even more suggestions.One thing to keep in mind: because we’re using Copilot for inline code completion, the gray text represents ghost text with Copilot’s suggestions. If you try this later and get a different response, no worries! When working with GitHub Copilot or any LLM, responses are nondeterministic—which means a different result may be generated every time (so you may get a different result than what’s shown in the examples).GitHub Copilot Chat can provide more context into the code and what it means. Maybe you’re seeing the code for the first time and need to be brought up to speed quickly.Open Copilot Chat, type , and hit . Copilot will give you a detailed explanation of what’s happening in the code. You’ll see that Copilot Chat has a view of the currently opened file as indicated by the eye icon next to the file name at the bottom of the chat window.Let’s take a look at another example. Imagine you want to improve the regex and allow users to enter multiple email addresses.Open Copilot Chat and type, “allows users to enter email multiple addresses for validation and also improve the regex to be more robust.” Once you send the request, Copilot will give you a plan, an updated code block, and a list of suggested changes. Hover over the code block, click the “Apply in Editor” button to accept the changes, and GitHub Copilot will make the updates for you.What’s the difference between GitHub Copilot and other copilots?Time to address the elephant in the room: what’s the difference between GitHub Copilot and all the other copilots out there?Well, GitHub Copilot is specifically designed for programming. And because it works where you work—both in your editor and on github.com—there’s no need to go back and forth between your browser or another app and your code. You’re able to stay focused without having to context switch between your editor and your AI assistant. And remember, when you hear “GitHub Copilot,” it’s referring to your personal AI pair programmer.Thanks for joining our deep dive into GitHub Copilot.If you want to watch this demo in action, we’ve created a YouTube tutorial that accompanies this blog.  Join us for the next part of the series where we’ll walk through essential features of GitHub Copilot. ]]></content:encoded></item><item><title>February Project Goals Update</title><link>https://blog.rust-lang.org/2025/03/03/Project-Goals-Feb-Update.html</link><author>Rémy Rakic, Niko Matsakis, Santiago Pastorino</author><category>dev</category><category>official</category><category>rust</category><pubDate>Mon, 3 Mar 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[ This work continues our drive to improve support for async programming in Rust. In 2024H2 we stabilized async closures; explored the generator design space; and began work on the  crate, an experimental proc-macro to provide dynamic dispatch for async functions in traits. In 2025H1 our plan is to deliver (1) improved support for async-fn-in-traits, completely subsuming the functionality of the  crate; (2) progress towards sync and async generators, simplifying the creation of iterators and async data streams; (3) and improve the ergonomics of , making lower-level async coding more approachable. These items together start to unblock the creation of the next generation of async libraries in the wider ecosystem, as progress there has been blocked on a stable solution for async traits and streams. The biggest news is that Rust 1.85 is stable and includes two major features that impact Async Rust. The first is async closures, which has been on many people's wish lists for a long time and was expertly moved forward by @compiler-errors over the last year.The second feature included in 1.85 is the new lifetime capture rules as part of Rust 2024 edition. This should substantially improve the experience of using async Rust anytime a user writes , as it removes the need for  or similar bounds in most cases. It will also lead to an easier to understand language, since those bounds only worked by exploiting the more subtle rules of  in a way that runs contrary to their actual semantic role in the language. In the 2024 Edition, the subtle rule is gone and we capture all input lifetimes by default, with the ability to use  syntax to opt out. See this blog post for more. The lang team also held a design meeting to review the design for generators, with the outcome of the last one being that we will implement a  macro (exact path TBD) in the compiler, as a lang team experiment that allows the use of the  syntax. We decided to go in this direction because we want to reserve  for self-borrowing and perhaps lending generators, and aren't yet decided on which subset of features to expose under that syntax. This decision interacts with ongoing compiler development that isn't ready yet to enable experimentation with lending.Our hope is that in the meantime, by shipping  we will give people the chance to start using generators in their own code and better understand which limitations people hit in practice.As you may have noticed, I'm not talking about async generators here. Those are the ultimate goal for the async initiative, but we felt the first step should be clarifying the state of synchronous generators so we can build on that when talking about async ones.dynosaur v0.1.3 was released, with another release in the works. We think we are approaching a 1.0 release real soon now (tm). At this point you should be able to try it on your crate to enable dyn dispatch for traits with  and other  methods. If you need to use it together with , you may need to wait until the next release when #55 is fixed. May 15, 2025 marks the 10-year anniversary of Rust's 1.0 release; it also marks 10 years since the creation of the Rust subteams. At the time there were 6 Rust teams with 24 people in total. There are now 57 teams with 166 people. In-person All Hands meetings are an effective way to help these maintainers get to know one another with high-bandwidth discussions. This year, the Rust project will be coming together for RustWeek 2025, a joint event organized with RustNL. Participating project teams will use the time to share knowledge, make plans, or just get to know one another better. One particular goal for the All Hands is reviewing a draft of the Rust Vision Doc, a document that aims to take stock of where Rust is and lay out high-level goals for the next few years. Planning is proceeding well. In addition to Rust maintainers, we are inviting all project goal owners to attend the All Hands (note that the accompanying RustWeek conference is open to the public, it's just the All Hands portion that is invitation only). There are currently over 100 project members signed up to attend.For those invited to the All Hands:Travel funds may be available if you are unable to finance travel through your employer. Get in touch for details.Please participate in the brainstorm for how best to use the All Hands time in the all-hands-2025 Zulip stream.If you do plan to attend,  please purchase your travel + hotels in a timely fashion as the discount rates will expire. We established the precise set of 2025H1 deliverables and we have been tracking them and have begun making progress towards them. Rustdoc has been updated to support extracting doc tests so that the Kernel can execute them in a special environment (this was previously done with a big hack) and RFL is in the process of trying to us that new support. The first PR towards the implementation of RFC #3716 has landed and the ARM team has begun reading early drafts of the design doc for  with the cargo team.We are also working to finalize the stabilization of the language features that were developed in 2024H2, as two late-breaking complications arose. The first (an interaction between casting of raw pointers and arbitrary self types) is expected to be resolved by limiting the casts of raw pointers, which previously accepted some surprising code. We identified that only a very small set of crates relied on this bug/misfeature; we expect nonetheless to issue a forwards compatibility warning. We are also resolving an issue where  was found to reveal the existence of some unstable impls in the stdlib. looking for people that want to help do a bit of refactoring. Please reach out through the project-stable-mir zulip channel or repository.]]></content:encoded></item><item><title>Rust participates in Google Summer of Code 2025</title><link>https://blog.rust-lang.org/2025/03/03/Rust-participates-in-GSoC-2025.html</link><author>Jakub Beránek, Jack Huey and Paul Lenz</author><category>dev</category><category>official</category><category>rust</category><pubDate>Mon, 3 Mar 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[We are happy to announce that the Rust Project will again be participating in Google Summer of Code (GSoC) 2025, same as last year. If you're not eligible or interested in participating in GSoC, then most of this post likely isn't relevant to you; if you are, this should contain some useful information and links.Google Summer of Code (GSoC) is an annual global program organized by Google that aims to bring new contributors to the world of open-source. The program pairs organizations (such as the Rust Project) with contributors (usually students), with the goal of helping the participants make meaningful open-source contributions under the guidance of experienced mentors.The organizations that have been accepted into the program have been announced by Google. The GSoC applicants now have several weeks to discuss project ideas with mentors. Later, they will send project proposals for the projects that they found the most interesting. If their project proposal is accepted, they will embark on a several month journey during which they will try to complete their proposed project under the guidance of an assigned mentor.We have prepared a list of project ideas that can serve as inspiration for potential GSoC contributors that would like to send a project proposal to the Rust organization. However, applicants can also come up with their own project ideas. You can discuss project ideas or try to find mentors in the #gsoc Zulip stream. We have also prepared a proposal guide that should help you with preparing your project proposals.You can start discussing the project ideas with Rust Project mentors and maintainers immediately, but you might want to keep the following important dates in mind:The project proposal application period starts on March 24, 2025. From that date you can submit project proposals into the GSoC dashboard.The project proposal application period ends on  at 18:00 UTC. Take note of that deadline, as there will be no extensions!If you are interested in contributing to the Rust Project, we encourage you to check out our project idea list and send us a GSoC project proposal! Of course, you are also free to discuss these projects and/or try to move them forward even if you do not intend to (or cannot) participate in GSoC. We welcome all contributors to Rust, as there is always enough work to do.Last year was our first time participating in GSoC, and it was a success! This year we are very excited to participate again. We hope that participants in the program can improve their skills, but also would love for this to bring new contributors to the Project and increase the awareness of Rust in general. Like last year, we expect to publish blog posts in the future with updates about our participation in the program.]]></content:encoded></item><item><title>Announcing Rustup 1.28.0</title><link>https://blog.rust-lang.org/2025/03/02/Rustup-1.28.0.html</link><author>The Rustup Team</author><category>dev</category><category>official</category><category>rust</category><pubDate>Sun, 2 Mar 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[The rustup team is happy to announce the release of rustup version 1.28.0.
+Rustup is the recommended tool to install Rust, a programming language that is empowering everyone to build reliable and efficient software.What's new in rustup 1.28.0This new release of rustup has been a long time in the making and comes with substantial changes.Before digging into the details, it is worth mentioning that Chris Denton has joined the team.
+Chris has a lot of experience contributing to Windows-related parts of the Rust Project -- expertise we were previously lacking -- so we're happy to have him on board to help address Windows-specific issues.The following improvements might require changes to how you use rustup:rustup will no longer automatically install the active toolchain if it is not installed.To ensure its installation, run  with no arguments.The following command installs the active toolchain both before and after this change:
+rustup show active-toolchain || rustup toolchain install
+# Or, on older versions of PowerShell:
+rustup show active-toolchain; if ($LASTEXITCODE -ne 0) { rustup toolchain install }
+Installing a host-incompatible toolchain via  or  will
+now be rejected unless you explicitly add the  flag.Rustup now officially supports the following host platforms:loongarch64-unknown-linux-muslThis release also comes with various quality-of-life improvements, to name a few:'s output format has been cleaned up, making it easier to find out about your toolchains' status. now accepts a flag and a topic at the same time, enabling quick navigation to specific parts of more books.rustup's  subcommands now support more aliases such as  and .Basic support for nushell has been added.We have additionally made the following internal changes:The default download backend has been changed from reqwest with native-tls to reqwest with rustls.
+ and  can still be used to change the download backend
+if the new backend causes issues. If issues do happen, please let us know.The default backend now uses rustls-platform-verifier to verify server certificates, taking
+advantage of the platform's certificate store on platforms that support it.When creating proxy links, rustup will now try symlinks first and fall back to hardlinks,
+as opposed to trying hardlinks first.A new  environment variable can be used to control tracing-based logging in
+rustup binaries. See the dev guide for more details.The overall design of the website has been updated to better align with the Rust Project's branding.It is now possible to download the prebuilt  installer for the  host platform via https://win.rustup.rs/aarch64.Further details are available in the changelog!If you have a previous version of rustup installed, getting rustup 1.28.0 is as easy as stopping any programs which may be using Rustup (e.g. closing your IDE) and running:Rustup will also automatically update itself at the end of a normal toolchain update:If you don't have it already, you can get rustup from the appropriate page on our website.Rustup releases can come with problems not caused by rustup itself but just due to having a new release.
+As such, we recommend paying attention to the following potential issues in particular:Anti-malware scanners might be blocking rustup or stopping it from creating or copying files
+(especially when installing , since it contains many small files).In your CI environment, rustup might fail when trying to perform a self-update.This is a known issue,
+and in the case where this issue does occur, we recommend applying the following workaround at the beginning of your workflow:$ rustup set auto-self-update disable
+Also, starting from 1.28.0, rustup will no longer attempt to self-update in CI environments,
+so this workaround should not be necessary in the future.These issues should be automatically resolved in a few weeks when the anti-malware scanners are updated to be aware of the new rustup release,
+and the hosted version is updated across all CI runners.Thanks again to all the contributors who made rustup 1.28.0 possible!]]></content:encoded></item><item><title>NFTables mode for kube-proxy</title><link>https://kubernetes.io/blog/2025/02/28/nftables-kube-proxy/</link><author></author><category>official</category><category>k8s</category><category>devops</category><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><source url="https://kubernetes.io/">Kubernetes Blog</source><content:encoded><![CDATA[A new nftables mode for kube-proxy was introduced as an alpha feature
+in Kubernetes 1.29. Currently in beta, it is expected to be GA as of
+1.33. The new mode fixes long-standing performance problems with the
+iptables mode and all users running on systems with reasonably-recent
+kernels are encouraged to try it out. (For compatibility reasons, even
+once nftables becomes GA, iptables will still be the .)Why nftables? Part 1: data plane latencyThe iptables API was designed for implementing simple firewalls, and
+has problems scaling up to support Service proxying in a large
+Kubernetes cluster with tens of thousands of Services.In general, the ruleset generated by kube-proxy in iptables mode has a
+number of iptables rules proportional to the sum of the number of
+Services and the total number of endpoints. In particular, at the top
+level of the ruleset, there is one rule to test each possible Service
+IP (and port) that a packet might be addressed to:# If the packet is addressed to 172.30.0.41:80, then jump to the chain
+# KUBE-SVC-XPGD46QRK7WJZT7O for further processing
+-A KUBE-SERVICES -m comment --comment "namespace1/service1:p80 cluster IP" -m tcp -p tcp -d 172.30.0.41 --dport 80 -j KUBE-SVC-XPGD46QRK7WJZT7O
+# If the packet is addressed to 172.30.0.42:443, then...
+-A KUBE-SERVICES -m comment --comment "namespace2/service2:p443 cluster IP" -m tcp -p tcp -d 172.30.0.42 --dport 443 -j KUBE-SVC-GNZBNJ2PO5MGZ6GT
+# etc...
+-A KUBE-SERVICES -m comment --comment "namespace3/service3:p80 cluster IP" -m tcp -p tcp -d 172.30.0.43 --dport 80 -j KUBE-SVC-X27LE4BHSL4DOUIK
+This means that when a packet comes in, the time it takes the kernel
+to check it against all of the Service rules is  in the number
+of Services. As the number of Services increases, both the average and
+the worst-case latency for the first packet of a new connection
+increases (with the difference between best-case, average, and
+worst-case being mostly determined by whether a given Service IP
+address appears earlier or later in the  chain).By contrast, with nftables, the normal way to write a ruleset like
+this is to have a  rule, using a "verdict map" to do the
+dispatch:table ip kube-proxy {
+# The service-ips verdict map indicates the action to take for each matching packet.
+map service-ips {
+type ipv4_addr . inet_proto . inet_service : verdict
+comment "ClusterIP, ExternalIP and LoadBalancer IP traffic"
+elements = { 172.30.0.41 . tcp . 80 : goto service-ULMVA6XW-namespace1/service1/tcp/p80,
+172.30.0.42 . tcp . 443 : goto service-42NFTM6N-namespace2/service2/tcp/p443,
+172.30.0.43 . tcp . 80 : goto service-4AT6LBPK-namespace3/service3/tcp/p80,
+... }
 }
-Hiding trait implementations from diagnosticsThe new #[diagnostic::do_not_recommend] attribute is a hint to the compiler to not show the annotated trait implementation as part of a diagnostic message. For library authors, this is a way to keep the compiler from making suggestions that may be unhelpful or misleading. For example:pub trait Foo {}
-pub trait Bar {}
-
-impl<T: Foo> Bar for T {}
-
-struct MyType;
-
-fn main() {
-    let _object: &dyn Bar = &MyType;
+# Now we just need a single rule to process all packets matching an
+# element in the map. (This rule says, "construct a tuple from the
+# destination IP address, layer 4 protocol, and destination port; look
+# that tuple up in "service-ips"; and if there's a match, execute the
+# associated verdict.)
+chain services {
+ip daddr . meta l4proto . th dport vmap @service-ips
 }
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
- --> src/main.rs:9:29
-  |
-9 |     let _object: &dyn Bar = &MyType;
-  |                             ^^^^ the trait `Foo` is not implemented for `MyType`
-  |
-note: required for `MyType` to implement `Bar`
- --> src/main.rs:4:14
-  |
-4 | impl<T: Foo> Bar for T {}
-  |         ---  ^^^     ^
-  |         |
-  |         unsatisfied trait bound introduced here
-  = note: required for the cast from `&MyType` to `&dyn Bar`
-For some APIs, it might make good sense for you to implement , and get  indirectly by that blanket implementation. For others, it might be expected that most users should implement  directly, so that  suggestion is a red herring. In that case, adding the diagnostic hint will change the error message like so:#[diagnostic::do_not_recommend]
-impl<T: Foo> Bar for T {}
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
-  --> src/main.rs:10:29
-   |
-10 |     let _object: &dyn Bar = &MyType;
-   |                             ^^^^ the trait `Bar` is not implemented for `MyType`
-   |
-   = note: required for the cast from `&MyType` to `&dyn Bar`
- and  for tuplesEarlier versions of Rust implemented convenience traits for iterators of  tuple pairs to behave like , with  in 1.56 and  in 1.79. These have now been  to more tuple lengths, from singleton  through to 12 items long, . For example, you can now use  to fanout into multiple collections at once:use std::collections::{LinkedList, VecDeque};
-fn main() {
-    let (squares, cubes, tesseracts): (Vec<_>, VecDeque<_>, LinkedList<_>) =
-        (0i32..10).map(|i| (i * i, i.pow(3), i.pow(4))).collect();
-    println!("{squares:?}");
-    println!("{cubes:?}");
-    println!("{tesseracts:?}");
+...
 }
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-[0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
-[0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561]
-Updates to  has been deprecated for years, because it can give surprising results in some Windows configurations if the  environment variable is set (which is not the normal configuration on Windows). We had previously avoided changing its behavior, out of concern for compatibility with code depending on this non-standard configuration. Given how long this function has been deprecated, we're now updating its behavior as a bug fix, and a subsequent release will remove the deprecation for this function.These APIs are now stable in const contextsMany people came together to create Rust 1.85.0. We couldn't have done it without all of you. Thanks!]]></content:encoded></item><item><title>Testing concurrent code with testing/synctest</title><link>https://go.dev/blog/synctest</link><author>Damien Neil</author><category>dev</category><category>official</category><category>go</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
-      Damien Neil
-      19 February 2025
-      One of Go’s signature features is built-in support for concurrency.
-Goroutines and channels are simple and effective primitives for
-writing concurrent programs.However, testing concurrent programs can be difficult and error prone.In Go 1.24, we are introducing a new, experimental
- package
-to support testing concurrent code. This post will explain the motivation behind
-this experiment, demonstrate how to use the synctest package, and discuss its potential future.In Go 1.24, the  package is experimental and
-not subject to the Go compatibility promise.
-It is not visible by default.
-To use it, compile your code with  set in your environment.Testing concurrent programs is difficultTo begin with, let us consider a simple example.The  function
-arranges for a function to be called in its own goroutine after a context is canceled.
-Here is a possible test for :func TestAfterFunc(t *testing.T) {
-    ctx, cancel := context.WithCancel(context.Background())
-
-    calledCh := make(chan struct{}) // closed when AfterFunc is called
-    context.AfterFunc(ctx, func() {
-        close(calledCh)
-    })
-
-    // TODO: Assert that the AfterFunc has not been called.
-
-    cancel()
-
-    // TODO: Assert that the AfterFunc has been called.
-}
-We want to check two conditions in this test:
-The function is not called before the context is canceled,
-and the function  called after the context is canceled.Checking a negative in a concurrent system is difficult.
-We can easily test that the function has not been called ,
-but how do we check that it  be called?A common approach is to wait for some amount of time before
-concluding that an event will not happen.
-Let’s try introducing a helper function to our test which does this.// funcCalled reports whether the function was called.
-funcCalled := func() bool {
-    select {
-    case <-calledCh:
-        return true
-    case <-time.After(10 * time.Millisecond):
-        return false
-    }
-}
-
-if funcCalled() {
-    t.Fatalf("AfterFunc function called before context is canceled")
-}
-
-cancel()
-
-if !funcCalled() {
-    t.Fatalf("AfterFunc function not called after context is canceled")
-}
-This test is slow:
-10 milliseconds isn’t a lot of time, but it adds up over many tests.This test is also flaky:
-10 milliseconds is a long time on a fast computer,
-but it isn’t unusual to see pauses lasting several seconds
-on shared and overloaded
-CI
-systems.We can make the test less flaky at the expense of making it slower,
-and we can make it less slow at the expense of making it flakier,
-but we can’t make it both fast and reliable.Introducing the testing/synctest packageThe  package solves this problem.
-It allows us to rewrite this test to be simple, fast, and reliable,
-without any changes to the code being tested.The package contains only two functions:  and . calls a function in a new goroutine.
-This goroutine and any goroutines started by it
-exist in an isolated environment which we call a .
- waits for every goroutine in the current goroutine’s bubble
-to block on another goroutine in the bubble.Let’s rewrite our test above using the  package.func TestAfterFunc(t *testing.T) {
-    synctest.Run(func() {
-        ctx, cancel := context.WithCancel(context.Background())
-
-        funcCalled := false
-        context.AfterFunc(ctx, func() {
-            funcCalled = true
-        })
-
-        synctest.Wait()
-        if funcCalled {
-            t.Fatalf("AfterFunc function called before context is canceled")
-        }
-
-        cancel()
-
-        synctest.Wait()
-        if !funcCalled {
-            t.Fatalf("AfterFunc function not called after context is canceled")
-        }
-    })
-}
-This is almost identical to our original test,
-but we have wrapped the test in a  call
-and we call  before asserting that the function has been called or not.The  function waits for every goroutine in the caller’s bubble to block.
-When it returns, we know that the context package has either called the function,
-or will not call it until we take some further action.This test is now both fast and reliable.The test is simpler, too:
-we have replaced the  channel with a boolean.
-Previously we needed to use a channel to avoid a data race between
-the test goroutine and the  goroutine,
-but the  function now provides that synchronization.The race detector understands  calls,
-and this test passes when run with .
-If we remove the second  call,
-the race detector will correctly report a data race in the test.Concurrent code often deals with time.Testing code that works with time can be difficult.
-Using real time in tests causes slow and flaky tests,
-as we have seen above.
-Using fake time requires avoiding  package functions,
-and designing the code under test to work with
-an optional fake clock.The  package makes it simpler to test code that uses time.Goroutines in the bubble started by  use a fake clock.
-Within the bubble, functions in the  package operate on the
-fake clock. Time advances in the bubble when all goroutines are
-blocked.To demonstrate, let’s write a test for the
- function.
- creates a child of a context,
-which expires after a given timeout.func TestWithTimeout(t *testing.T) {
-    synctest.Run(func() {
-        const timeout = 5 * time.Second
-        ctx, cancel := context.WithTimeout(context.Background(), timeout)
-        defer cancel()
-
-        // Wait just less than the timeout.
-        time.Sleep(timeout - time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != nil {
-            t.Fatalf("before timeout, ctx.Err() = %v; want nil", err)
-        }
-
-        // Wait the rest of the way until the timeout.
-        time.Sleep(time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != context.DeadlineExceeded {
-            t.Fatalf("after timeout, ctx.Err() = %v; want DeadlineExceeded", err)
-        }
-    })
-}
-We write this test just as if we were working with real time.
-The only difference is that we wrap the test function in ,
-and call  after each  call to wait for the context
-package’s timers to finish running.A key concept in  is the bubble becoming .
-This happens when every goroutine in the bubble is blocked,
-and can only be unblocked by another goroutine in the bubble.When a bubble is durably blocked:If there is an outstanding  call, it returns.Otherwise, time advances to the next time that could unblock a goroutine, if any.Otherwise, the bubble is deadlocked and  panics.A bubble is not durably blocked if any goroutine is blocked
-but might be woken by some event from outside the bubble.The complete list of operations which durably block a goroutine is:a send or receive on a nil channela send or receive blocked on a channel created within the same bubblea select statement where every case is durably blockingOperations on a  are not durably blocking.It is common for functions to acquire a global mutex.
-For example, a number of functions in the reflect package
-use a global cache guarded by a mutex.
-If a goroutine in a synctest bubble blocks while acquiring
-a mutex held by a goroutine outside the bubble,
-it is not durably blocked—it is blocked, but will be unblocked
-by a goroutine from outside its bubble.Since mutexes are usually not held for long periods of time,
-we simply exclude them from ’s consideration.Channels created within a bubble behave differently from ones created outside.Channel operations are durably blocking only if the channel is bubbled
-(created in the bubble).
-Operating on a bubbled channel from outside the bubble panics.These rules ensure that a goroutine is durably blocked only when
-communicating with goroutines within its bubble.External I/O operations, such as reading from a network connection,
-are not durably blocking.Network reads may be unblocked by writes from outside the bubble,
-possibly even from other processes.
-Even if the only writer to a network connection is also in the same bubble,
-the runtime cannot distinguish between a connection waiting for more data to arrive
-and one where the kernel has received data and is in the process of delivering it.Testing a network server or client with synctest will generally
-require supplying a fake network implementation.
-For example, the  function
-creates a pair of s that use an in-memory network connection
-and can be used in synctest tests.The  function starts a goroutine in a new bubble.
-It returns when every goroutine in the bubble has exited.
-It panics if the bubble is durably blocked
-and cannot be unblocked by advancing time.The requirement that every goroutine in the bubble exit before Run returns
-means that tests must be careful to clean up any background goroutines
-before completing.Let’s look at another example, this time using the 
-package to test a networked program.
-For this example, we’ll test the  package’s handling of
-the 100 Continue response.An HTTP client sending a request can include an “Expect: 100-continue”
-header to tell the server that the client has additional data to send.
-The server may then respond with a 100 Continue informational response
-to request the rest of the request,
-or with some other status to tell the client that the content is not needed.
-For example, a client uploading a large file might use this feature to
-confirm that the server is willing to accept the file before sending it.Our test will confirm that when sending an “Expect: 100-continue” header
-the HTTP client does not send a request’s content before the server
-requests it, and that it does send the content after receiving a
-100 Continue response.Often tests of a communicating client and server can use a
-loopback network connection. When working with ,
-however, we will usually want to use a fake network connection
-to allow us to detect when all goroutines are blocked on the network.
-We’ll start this test by creating an  (an HTTP client) that uses
-an in-memory network connection created by .func Test(t *testing.T) {
-    synctest.Run(func() {
-        srvConn, cliConn := net.Pipe()
-        defer srvConn.Close()
-        defer cliConn.Close()
-        tr := &http.Transport{
-            DialContext: func(ctx context.Context, network, address string) (net.Conn, error) {
-                return cliConn, nil
-            },
-            // Setting a non-zero timeout enables "Expect: 100-continue" handling.
-            // Since the following test does not sleep,
-            // we will never encounter this timeout,
-            // even if the test takes a long time to run on a slow machine.
-            ExpectContinueTimeout: 5 * time.Second,
-        }
-We send a request on this transport with the “Expect: 100-continue” header set.
-The request is sent in a new goroutine, since it won’t complete until the end of the test.        body := "request body"
-        go func() {
-            req, _ := http.NewRequest("PUT", "http://test.tld/", strings.NewReader(body))
-            req.Header.Set("Expect", "100-continue")
-            resp, err := tr.RoundTrip(req)
-            if err != nil {
-                t.Errorf("RoundTrip: unexpected error %v", err)
-            } else {
-                resp.Body.Close()
-            }
-        }()
-We read the request headers sent by the client.        req, err := http.ReadRequest(bufio.NewReader(srvConn))
-        if err != nil {
-            t.Fatalf("ReadRequest: %v", err)
-        }
-Now we come to the heart of the test.
-We want to assert that the client will not send the request body yet.We start a new goroutine copying the body sent to the server into a ,
-wait for all goroutines in the bubble to block, and verify that we haven’t read anything
-from the body yet.If we forget the  call, the race detector will correctly complain
-about a data race, but with the  this is safe.        var gotBody strings.Builder
-        go io.Copy(&gotBody, req.Body)
-        synctest.Wait()
-        if got := gotBody.String(); got != "" {
-            t.Fatalf("before sending 100 Continue, unexpectedly read body: %q", got)
-        }
-We write a “100 Continue” response to the client and verify that it now sends the
-request body.        srvConn.Write([]byte("HTTP/1.1 100 Continue\r\n\r\n"))
-        synctest.Wait()
-        if got := gotBody.String(); got != body {
-            t.Fatalf("after sending 100 Continue, read body %q, want %q", got, body)
-        }
-And finally, we finish up by sending the “200 OK” response to conclude the request.We have started several goroutines during this test.
-The  call will wait for all of them to exit before returning.        srvConn.Write([]byte("HTTP/1.1 200 OK\r\n\r\n"))
-    })
-}
-This test can be easily extended to test other behaviors,
-such as verifying that the request body is not sent if the server does not ask for it,
-or that it is sent if the server does not respond within a timeout.We are introducing 
-in Go 1.24 as an  package.
-Depending on feedback and experience
-we may release it with or without amendments,
-continue the experiment,
-or remove it in a future version of Go.The package is not visible by default.
-To use it, compile your code with  set in your environment.We want to hear your feedback!
-If you try out ,
-please report your experiences, positive or negative,
-on go.dev/issue/67434.]]></content:encoded></item><item><title>Protecting user data through source code analysis at scale</title><link>https://engineering.fb.com/2025/02/18/security/protecting-user-data-through-source-code-analysis/</link><author></author><category>dev</category><category>official</category><pubDate>Tue, 18 Feb 2025 20:30:49 +0000</pubDate><source url="https://engineering.fb.com/">Facebook engineering</source><content:encoded><![CDATA[detect potential scraping vectorsturning our attack vector criteria into static analysis rules# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.GET['viewer_id']
-target = request.GET['target_id']
-	count = request.GET['count']
-	if(can_see(viewer, target)):
-		followers = load_followers(target, count)
-		return followers
-
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.Get['viewer_id']
-	target = request.GET['target_id']
-	count = min(request.GET['count'], MAX_FOLLOWERS_RESULTS)
-	if(can_see(viewer, target)):
-	    followers = load_followers(target, count)
-		return followers
-
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...]]></content:encoded></item></channel></rss>
+Since there's only a single rule, with a roughly  map lookup,
+packet processing time is more or less constant regardless of cluster
+size, and the best/average/worst cases are very similar:But note the huge difference in the vertical scale between the
+iptables and nftables graphs! In the clusters with 5000 and 10,000
+Services, the p50 (average) latency for nftables is about the same as
+the p01 (approximately best-case) latency for iptables. In the 30,000
+Service cluster, the p99 (approximately worst-case) latency for
+nftables manages to beat out the p01 latency for iptables by a few
+microseconds! Here's both sets of data together, but you may have to
+squint to see the nftables results!:Why nftables? Part 2: control plane latencyWhile the improvements to data plane latency in large clusters are
+great, there's another problem with iptables kube-proxy that often
+keeps users from even being able to grow their clusters to that size:
+the time it takes kube-proxy to program new iptables rules when
+Services and their endpoints change.With both iptables and nftables, the total size of the ruleset as a
+whole (actual rules, plus associated data) is  in the combined
+number of Services and their endpoints. Originally, the iptables
+backend would rewrite every rule on every update, and with tens of
+thousands of Services, this could grow to be hundreds of thousands of
+iptables rules. Starting in Kubernetes 1.26, we began improving
+kube-proxy so that it could skip updating  of the unchanged
+rules in each update, but the limitations of  as an
+API meant that it was still always necessary to send an update that's
+ in the number of Services (though with a noticeably smaller
+constant than it used to be). Even with those optimizations, it can
+still be necessary to make use of kube-proxy's  config
+option to ensure that it doesn't spend every waking second trying to
+push iptables updates.The nftables APIs allow for doing much more incremental updates, and
+when kube-proxy in nftables mode does an update, the size of the
+update is only  in the number of Services and endpoints that
+have changed since the last sync, regardless of the total number of
+Services and endpoints. The fact that the nftables API allows each
+nftables-using component to have its own private table also means that
+there is no global lock contention between components like with
+iptables. As a result, kube-proxy's nftables updates can be done much
+more efficiently than with iptables.(Unfortunately I don't have cool graphs for this part.)All that said, there are a few reasons why you might not want to jump
+right into using the nftables backend for now.First, the code is still fairly new. While it has plenty of unit
+tests, performs correctly in our CI system, and has now been used in
+the real world by multiple users, it has not seen anything close to as
+much real-world usage as the iptables backend has, so we can't promise
+that it is as stable and bug-free.Second, the nftables mode will not work on older Linux distributions;
+currently it requires a 5.13 or newer kernel. Additionally, because of
+bugs in early versions of the  command line tool, you should not
+run kube-proxy in nftables mode on nodes that have an old (earlier
+than 1.0.0) version of  in the host filesystem (or else
+kube-proxy's use of nftables may interfere with other uses of nftables
+on the system).Third, you may have other networking components in your cluster, such
+as the pod network or NetworkPolicy implementation, that do not yet
+support kube-proxy in nftables mode. You should consult the
+documentation (or forums, bug tracker, etc.) for any such components
+to see if they have problems with nftables mode. (In many cases they
+will not; as long as they don't try to directly interact with or
+override kube-proxy's iptables rules, they shouldn't care whether
+kube-proxy is using iptables or nftables.) Additionally, observability
+and monitoring tools that have not been updated may report less data
+for kube-proxy in nftables mode than they do for kube-proxy in
+iptables mode.Finally, kube-proxy in nftables mode is intentionally not 100%
+compatible with kube-proxy in iptables mode. There are a few old
+kube-proxy features whose default behaviors are less secure, less
+performant, or less intuitive than we'd like, but where we felt that
+changing the default would be a compatibility break. Since the
+nftables mode is opt-in, this gave us a chance to fix those bad
+defaults without breaking users who weren't expecting changes. (In
+particular, with nftables mode, NodePort Services are now only
+reachable on their nodes' default IPs, as opposed to being reachable
+on all IPs, including , with iptables mode.) The
+kube-proxy documentation has more information about this, including
+information about metrics you can look at to determine if you are
+relying on any of the changed functionality, and what configuration
+options are available to get more backward-compatible behavior.Ready to try it out? In Kubernetes 1.31 and later, you just need to
+pass  to kube-proxy (or set  in
+your kube-proxy config file).You can also convert existing clusters from iptables (or ipvs) mode to
+nftables by updating the kube-proxy configuration and restarting the
+kube-proxy pods. (You do not need to reboot the nodes: when restarting
+in nftables mode, kube-proxy will delete any existing iptables or ipvs
+rules, and likewise, if you later revert back to iptables or ipvs
+mode, it will delete any existing nftables rules.)As mentioned above, while nftables is now the  kube-proxy mode,
+it is not the , and we do not yet have a plan for changing
+that. We will continue to support the iptables mode for a long time.The future of the IPVS mode of kube-proxy is less certain: its main
+advantage over iptables was that it was faster, but certain aspects of
+the IPVS architecture and APIs were awkward for kube-proxy's purposes
+(for example, the fact that the  device needs to have
+ Service IP address assigned to it), and some parts of
+Kubernetes Service proxying semantics were difficult to implement
+using IPVS (particularly the fact that some Services had to have
+different endpoints depending on whether you connected to them from a
+local or remote client). And now, the nftables mode has the same
+performance as IPVS mode (actually, slightly better), without any of
+the downsides:(In theory the IPVS mode also has the advantage of being able to use
+various other IPVS functionality, like alternative "schedulers" for
+balancing endpoints. In practice, this ended up not being very useful,
+because kube-proxy runs independently on every node, and the IPVS
+schedulers on each node had no way of sharing their state with the
+proxies on other nodes, thus thwarting the effort to balance traffic
+more cleverly.)While the Kubernetes project does not have an immediate plan to drop
+the IPVS backend, it is probably doomed in the long run, and people
+who are currently using IPVS mode should try out the nftables mode
+instead (and file bugs if you think there is missing functionality in
+nftables mode that you can't work around).]]></content:encoded></item><item><title>Faster Go maps with Swiss Tables</title><link>https://go.dev/blog/swisstable</link><author>Michael Pratt</author><category>dev</category><category>official</category><category>go</category><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
+      Michael Pratt
+      26 February 2025
+      The hash table is a central data structure in computer science, and it provides the implementation for the map type in many languages, including Go.The concept of a hash table was first described by Hans Peter Luhn in 1953 in an internal IBM memo that suggested speeding up search by placing items into “buckets” and using a linked list for overflow when buckets already contain an item.
+Today we would call this a hash table using chaining.With data structures that have been around this long, it’s easy to think that they must be “done”; that we know everything there is to know about them and they can’t be improved anymore.
+That’s not true!
+Computer science research continues to make advancements in fundamental algorithms, both in terms of algorithmic complexity and taking advantage of modern CPU hardware.
+For example, Go 1.19 switched the  package from a traditional quicksort, to pattern-defeating quicksort, a novel sorting algorithm from Orson R. L. Peters, first described in 2015.Go 1.24 includes a completely new implementation of the built-in map type, based on the Swiss Table design.
+In this blog post we’ll look at how Swiss Tables improve upon traditional hash tables, and at some of the unique challenges in bringing the Swiss Table design to Go’s maps.Open-addressed hash tableSwiss Tables are a form of open-addressed hash table, so let’s do a quick overview of how a basic open-addressed hash table works.In an open-addressed hash table, all items are stored in a single backing array.
+We’ll call each location in the array a .
+The slot to which a key belongs is primarily determined by the , .
+The hash function maps each key to an integer, where the same key always maps to the same integer, and different keys ideally follow a uniform random distribution of integers.
+The defining feature of open-addressed hash tables is that they resolve collisions by storing the key elsewhere in the backing array.
+So, if the slot is already full (a ), then a  is used to consider other slots until an empty slot is found.
+Let’s take a look at a sample hash table to see how this works.Below you can see a 16-slot backing array for a hash table, and the key (if any) stored in each slot.
+The values are not shown, as they are not relevant to this example.To insert a new key, we use the hash function to select a slot.
+Since there are only 16 slots, we need to restrict to this range, so we’ll use  as the target slot.
+Suppose we want to insert key  and .
+Slot 7 is empty, so we simply insert 98 there.
+On the other hand, suppose we want to insert key  and .
+Slot 3 is a collision because it already contains key 56.
+Thus we cannot insert here.We use a probe sequence to find another slot.
+There are a variety of well-known probe sequences.
+The original and most straightforward probe sequence is , which simply tries successive slots in order.So, in the  example, since slot 3 is in use, we would consider slot 4 next, which is also in use.
+So too is slot 5.
+Finally, we’d get to empty slot 6, where we’d store key 25.Lookup follows the same approach.
+A lookup of key 25 would start at slot 3, check whether it contains key 25 (it does not), and then continue linear probing until it finds key 25 in slot 6.This example uses a backing array with 16 slots.
+What happens if we insert more than 16 elements?
+If the hash table runs out of space, it will grow, usually by doubling the size of the backing array.
+All existing entries are reinserted into the new backing array.Open-addressed hash tables don’t actually wait until the backing array is completely full to grow because as the array gets more full, the average length of each probe sequence increases.
+In the example above using key 25, we must probe 4 different slots to find an empty slot.
+If the array had only one empty slot, the worst case probe length would be O(n).
+That is, you may need to scan the entire array.
+The proportion of used slots is called the , and most hash tables define a  (typically 70-90%) at which point they will grow to avoid the extremely long probe sequences of very full hash tables.The Swiss Table design is also a form of open-addressed hash table.
+Let’s see how it improves over a traditional open-addressed hash table.
+We still have a single backing array for storage, but we will break the array into logical  of 8 slots each.
+(Larger group sizes are possible as well. More on that below.)In addition, each group has a 64-bit  for metadata.
+Each of the 8 bytes in the control word corresponds to one of the slots in the group.
+The value of each byte denotes whether that slot is empty, deleted, or in use.
+If it is in use, the byte contains the lower 7 bits of the hash for that slot’s key (called ).Insertion works as follows:Compute  and break the hash into two parts: the upper 57-bits (called ) and the lower 7 bits (called ).The upper bits () are used to select the first group to consider:  in this case, as there are only 2 groups.Within a group, all slots are equally eligible to hold the key. We must first determine whether any slot already contains this key, in which case this is an update rather than a new insertion.If no slot contains the key, then we look for an empty slot to place this keyIf no slot is empty, then we continue the probe sequence by searching the next group.Lookup follows the same basic process.
+If we find an empty slot in step 4, then we know an insertion would have used this slot and can stop the search.Step 3 is where the Swiss Table magic happens.
+We need to check whether any slot in a group contains the desired key.
+Naively, we could just do a linear scan and compare all 8 keys.
+However, the control word lets us do this more efficiently.
+Each byte contains the lower 7 bits of the hash () for that slot.
+If we determine which bytes of the control word contain the  we are looking for, we’ll have a set of candidate matches.In other words, we want to do a byte-by-byte equality comparison within the control word.
+For example, if we are looking for key 32, where , the operation we want looks like so.This is an operation supported by SIMD hardware, where a single instruction performs parallel operations on independent values within a larger value (). In this case, we can implement this operation using a set of standard arithmetic and bitwise operations when special SIMD hardware is not available.The result is a set of candidate slots.
+Slots where  does not match do not have a matching key, so they can be skipped.
+Slots where  does match are potential matches, but we must still check the entire key, as there is potential for collisions (1/128 probability of collision with a 7-bit hash, so still quite low).This operation is very powerful, as we have effectively performed 8 steps of a probe sequence at once, in parallel.
+This speeds up lookup and insertion by reducing the average number of comparisons we need to perform.
+This improvement to probing behavior allowed both the Abseil and Go implementations to increase the maximum load factor of Swiss Table maps compared to prior maps, which lowers the average memory footprint.Go’s built-in map type has some unusual properties that pose additional challenges to adopting a new map design.
+Two were particularly tricky to deal with.When a hash table reaches its maximum load factor, it needs to grow the backing array.
+Typically this means the next insertion doubles the size of the array, and copies all entries to the new array.
+Imagine inserting into a map with 1GB of entries.
+Most insertions are very fast, but the one insertion that needs to grow the map from 1GB to 2GB will need to copy 1GB of entries, which will take a long time.Go is frequently used for latency-sensitive servers, so we don’t want operations on built-in types that can have arbitrarily large impact on tail latency.
+Instead, Go maps grow incrementally, so that each insertion has an upper bound on the amount of growth work it must do.
+This bounds the latency impact of a single map insertion.Unfortunately, the Abseil (C++) Swiss Table design assumes all at once growth, and the probe sequence depends on the total group count, making it difficult to break up.Go’s built-in map addresses this with another layer of indirection by splitting each map into multiple Swiss Tables.
+Rather than a single Swiss Table implementing the entire map, each map consists of one or more independent tables that cover a subset of the key space.
+An individual table stores a maximum of 1024 entries.
+A variable number of upper bits in the hash are used to select which table a key belongs to.
+This is a form of , where the number of bits used increases as needed to differentiate the total number of tables.During insertion, if an individual table needs to grow, it will do so all at once, but other tables are unaffected.
+Thus the upper bound for a single insertion is the latency of growing a 1024-entry table into two 1024-entry tables, copying 1024 entries.Modification during iterationMany hash table designs, including Abseil’s Swiss Tables, forbid modifying the map during iteration.
+The Go language spec explicitly allows modifications during iteration, with the following semantics:If an entry is deleted before it is reached, it will not be produced.If an entry is updated before it is reached, the updated value will be produced.If a new entry is added, it may or may not be produced.A typical approach to hash table iteration is to simply walk through the backing array and produce values in the order they are laid out in memory.
+This approach runs afoul of the above semantics, most notably because insertions may grow the map, which would shuffle the memory layout.We can avoid the impact of shuffle during growth by having the iterator keep a reference to the table it is currently iterating over.
+If that table grows during iteration, we keep using the old version of the table and thus continue to deliver keys in the order of the old memory layout.Does this work with the above semantics?
+New entries added after growth will be missed entirely, as they are only added to the grown table, not the old table.
+That’s fine, as the semantics allow new entries not to be produced.
+Updates and deletions are a problem, though: using the old table could produce stale or deleted entries.This edge case is addressed by using the old table only to determine the iteration order.
+Before actually returning the entry, we consult the grown table to determine whether the entry still exists, and to retrieve the latest value.This covers all the core semantics, though there are even more small edge cases not covered here.
+Ultimately, the permissiveness of Go maps with iteration results in iteration being the most complex part of Go’s map implementation.In microbenchmarks, map operations are up to 60% faster than in Go 1.23.
+Exact performance improvement varies quite a bit due to the wide variety of operations and uses of maps, and some edge cases do regress compared to Go 1.23.
+Overall, in full application benchmarks, we found a geometric mean CPU time improvement of around 1.5%.There are more map improvements we want to investigate for future Go releases.
+For example, we may be able to increase the locality of operations on maps that are not in the CPU cache.We could also further improve the control word comparisons.
+As described above, we have a portable implementation using standard arithmetic and bitwise operations.
+However, some architectures have SIMD instructions that perform this sort of comparison directly.
+Go 1.24 already uses 8-byte SIMD instructions for amd64, but we could extend support to other architectures.
+More importantly, while standard instructions operate on up to 8-byte words, SIMD instructions nearly always support at least 16-byte words.
+This means we could increase the group size to 16 slots, and perform 16 hash comparisons in parallel instead of 8.
+This would further decrease the average number of probes required for lookups.A Swiss Table-based Go map implementation has been a long time coming, and involved many contributors.
+I want to thank YunHao Zhang (@zhangyunhao116), PJ Malloy (@thepudds), and @andy-wm-arthur for building initial versions of a Go Swiss Table implementation.
+Peter Mattis (@petermattis) combined these ideas with solutions to the Go challenges above to build github.com/cockroachdb/swiss, a Go-spec compliant Swiss Table implementation.
+The Go 1.24 built-in map implementation is heavily based on Peter’s work.
+Thank you to everyone in the community that contributed!]]></content:encoded></item><item><title>How Meta is translating its Java codebase to Kotlin</title><link>https://engineering.fb.com/2025/02/25/android/how-meta-is-translating-its-java-codebase-to-kotlin/</link><author></author><category>dev</category><category>official</category><pubDate>Tue, 25 Feb 2025 19:00:59 +0000</pubDate><source url="https://engineering.fb.com/">Facebook engineering</source><content:encoded><![CDATA[So how do you translate roughly tens of millions of lines of Java code to Kotlin? On this episode of the Meta Tech Podcast, Pascal Hartig sits down with Eve and Jocelyn, two software engineers on Meta’s Mobile Infra Codebases Team, to talk about taking on this challenge. They share some of the unexpected difficulties along the way, how they avoid nullability issues, and how they’re generating idiomatic code for Meta’s internal frameworks.Download or listen to the podcast episode below:
+You can also find the episode wherever you get your podcasts, including:The Meta Tech Podcast is a podcast, brought to you by Meta, where we highlight the work Meta’s engineers are doing at every level – from low-level frameworks to end-user features.And if you’re interested in learning more about career opportunities at Meta visit the Meta Careers page.]]></content:encoded></item><item><title>Community managers in action: Leading a developer community for good</title><link>https://github.blog/open-source/social-impact/community-managers-in-action-leading-a-developer-community-for-good/</link><author>Cynthia Lo</author><category>official</category><pubDate>Tue, 25 Feb 2025 17:00:18 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Managing communities has always been something I wanted to explore. This year, I finally decided to take on every opportunity to do so. And it has been an incredible journey filled with challenges that have pushed me to develop new skills and learn in unexpected ways. One of the most impactful experiences has been joining Social Income as a community manager through the GitHub DPG Open Source Community Manager Program.Damilola Oladele is one of 55 community managers that completed GitHub’s Digital Public Goods (DPG) Open Source Community Manager Program this year, giving him the training and experience needed to start off his career. And this is exactly how this program is intended to work. Its dual purpose is to support DPGs by building their communities of contributors to help achieve their missions, while growing the experience and network of aspiring community managers.Before joining the program, I knew nothing about DPGs. So, if like me you’re unfamiliar with DPGs, they are open source solutions—including software, data, and AI models that adhere to the DPG Standard. This standard ensures alignment with the UN’s Sustainable Development Goals (SDGs) while complying with privacy laws and harm prevention practices. DPGs play a vital role in creating equitable systems by reducing vendor lock-in and fostering local innovation.Damilola, along with his fellow community managers, were all connected with a specific DPG that needed support engaging external contributors. They learned the in’s and out’s of that specific organization, as well as the best way they could help contribute to their mission.For two months, I’ve been leading efforts to highlight the Social Income community volunteers and contributors. One of my tasks was developing a webpage using the GitHub REST API to display the public repository insights of Social Income. This includes showing a list of contributors and a table of open issues. This effort makes the community more visible and welcoming to new collaborators.Moving forward, I’ll be working on developing and implementing strategies for the long-term growth and sustained engagement of Social Income’s open source community. Additionally, I will continue contributing code and assisting with onboarding new developers.After the first few months of workshop sessions, Damilola was paired with Social Income and applied the skills learned in the program’s training course to actual projects outlined by this DPG. Being passionate about this work, Damilola has continued supporting their mission even after the completion of the program.Building on the pilot program, Damilola and his fellow community managers benefitted from an even stronger curriculum and structure this year, ensuring success for both participants and DPGs. Some highlights include:Acceptance of six times more community managers into the cohort compared to last year   including “Community growth and sustainability,” “Effective communication strategies with GitHub Actions,” and “Documentation and non-code contributions”  Worked on  with open source organizations like OpenFn and OpenSSP.If you’re looking to gain skills as a community manager and are passionate about using open source for good, we’d love for you to join us! Keep an eye on our website for more information about the next cohort.In the meantime, we have plenty of open source projects that need your support. Check out For Good First Issue to contribute to a project that’s having a positive impact in the world.]]></content:encoded></item></channel></rss>
