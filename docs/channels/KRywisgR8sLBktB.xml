@@ -1,220 +1,203 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
-  }
-</style>
-
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
-
-    <!-- Repeat for all properties -->
-  </div>
-</div>
-
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
-
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
-
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
-
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>Seamless data fetching with httpResource</title><link>https://blog.angular.dev/seamless-data-fetching-with-httpresource-71ba7c4169b9?source=rss----447683c3d9a3---4</link><author>Matthieu Riegler</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Fri, 7 Mar 2025 15:02:52 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[Fantastic new APIs are coming to Angular. Two years ago, we proposed making Angular a reactive web framework powered by signals. Since then, the team has shipped a number of signal-based features in the framework: reactive primitives like signal & computed, reactive inputs including model, signal queries, bidirectional RxJS conversion utilities, and migration tooling.We have a solid foundation for reactivity in Angular. Now, we’re ready to begin the next phase of the reactivity journey: the world of asynchronous state. In v19 we shipped the experimental resource() API for developers to try out in advance of the dedicated RFC.The resource API makes it possible to expose results of asynchronous operations as signals. For most applications, developers make HTTP requests for the data their applications need. We recognize this and have built a new API to help facilitate this primary use case — introducing httpResource 🎉.httpResource is built on top of the resource primitive and uses HttpClient as loader. It acts as a  for @angular/common/http. It makes HTTP requests through the Angular HTTP stack, including interceptors. As the underlying stack remains the same, testing will rely on the same tools.Here we are defining an httpResource with currentUserId as a reactive parameter.currentUserId = getCurrentUserId(); // returns a signaluser = httpResource(() => `/api/user/${currentUserId()}`); // A reactive function as argumentBy default, an httpResource will perform a GET request and return an unknown typed JSON response.It is important to note that httpResource differs from the HttpClient as it initiates the request eagerly (unlike the HttpClient Observable-based requests which must be subscribed).Like resource, it configures a reactive request. If any of the source signals in the request computation change, a new HTTP request will be made.For more advanced requests, it is possible to define a request object similar to HttpClient‘s request.user = httpResource(() => ({  url: `/api/user/${currentUserId()}`,  headers: {  },    'fast': 'yes',  reportProgress: true,  transferCache: true,While the resource pattern is meant only for retrieving asynchronous data, httpResource will allow any request method (like POST in the previous example). This still doesn’t mean that you should be using httpResource to change data on the server. For instance, if you need to submit form data, use the HttpClient methods.An httpResource will return and parse the response as JSON but it is possible to use it for other return types.The API has multiple dedicated methods available for other response types:httpResource.text(() => ({ … })); // returns a text in value()httpResource.blob(() => ({ … })); // returns a Blob object in value()httpResource.arrayBuffer(() => ({ … })); // returns an ArrayBuffer in value()An httpResource , similar to other `resource`, exposes several signals:value() — which contains the result of the http request (when successful) and is programmatically overwritablestatus() — with the status of the resource (idle, loading, error etc)error() — with the request error / parsing errorisLoading() — which is true while the request is pendingIt also includes dedicated signals for metadata about the response:​​headers() — with the response’s headersstatusCode() — with the response’s status codeprogress() — with the progress of the request (if required in the request object)These new signals streamline the writing of requests by exposing this useful information without requiring a specific argument like for the HttpClient to request the HttpResponse.Embracing the Ecosystem for Type SafetyWhen performing http requests we often want to ensure that the data we receive conforms the shape that we expect. This is commonly known as schema validation.In the JavaScript ecosystem we often reach out for battle-tested libraries like Zod or Valibot for schema validation. The httpResource offers direct integration for those libraries by using the parse parameter. The returned type of this parse function will provide the type to the resource itself, ensuring type safety alongside the schema validation.The following example uses Zod to parse and validate the response from the StarWars API. The resource is then typed the same as the output type of the Zod’s parsing.export class AppComponent {  id = signal(1);  swPersonResource = httpResource(    () => `https://swapi.dev/api/people/${this.id()}`,    { parse: starWarsPersonSchema.parse }  );const starWarsPersonSchema = z.object({  name: z.string(),  height: z.number({ coerce: true }),  edited: z.string().datetime(),  films: z.array(z.string()),});The httpResource is available as a part of the Angular v19.2 release. This is an experimental API and is not ready for production because the shape of this API can still change before it is promoted to stable. With that in mind, we would love for you to try out the API and let us know what you think. You can learn more about this API, resource and more in the RFC on GitHub.Thank you for being a part of the Angular community and we look forward to continuing the reactivity journey together. Happy coding!]]></content:encoded></item><item><title>A CSS-Only Star Rating Component and More! (Part 2)</title><link>https://css-tricks.com/a-css-only-star-rating-component-and-more-part-2/</link><author>Temani Afif</author><category>frontend</category><pubDate>Fri, 7 Mar 2025 13:14:12 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[In the last article, we created a CSS-only star rating component using the CSS  and  properties, as well as the newly enhanced  function. We ended with CSS code that we can easily adjust to create component variations, including a heart rating and volume control.This second article will study a different approach that gives us more flexibility. Instead of the  trick we used in the first article, we will rely on scroll-driven animations!Here is the same star rating component with the new implementation. And since we’re treading in experimental territory, you’ll want to view this in Chrome 115+ while we wait for Safari and Firefox support:Do you spot the difference between this and the final demo in the first article? This time, I am updating the color of the stars based on how many of them are selected — something we cannot do using the  trick!I highly recommend you read the first article before jumping into this second part if you missed it, as I will be referring to concepts and techniques that we explored over there. At the time of writing, only Chrome 115+ and Edge 115+ fully support the features we will be using in this article, so please use either one of those as you follow along.You might be wondering why we’re talking about scroll-driven animation when there’s nothing to scroll to in the star rating component. Scrolling? Animation? It’s even more confusing when you read the MDN explainer for scroll-driven animations:It allows you to animate property values based on a progression along a scroll-based timeline instead of the default time-based document timeline. This means that you can animate an element by scrolling a scrollable element, rather than just by the passing of time.But if you keep reading you will see that we have two types of scroll-based timelines: scroll progress timelines and . In our case, we are going to use the second one; a view progress timeline, and here is how MDN describes it:You progress this timeline based on the change in visibility of an element (known as the subject) inside a scroller. The visibility of the subject inside the scroller is tracked as a percentage of progress — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller, and 100% when it reaches the opposite edge.Things start to make more sense if we consider the thumb element as  and the input element as . After all, the thumb moves within the input area, so its visibility changes. We can track that movement as a percentage of progress and convert it to a value we can use to style the input element. We are essentially going to implement the equivalent of document.querySelector("input").value in JavaScript but with vanilla CSS!Now that we have an idea of how this works, let’s see how everything translates into code.@property --val {
+  syntax: "<number>";
   inherits: true;
+  initial-value: 0; 
 }
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
+input[type="range"] {
+  --min: attr(min type(<number>));
+  --max: attr(max type(<number>));
+
+  timeline-scope: --val;
+  animation: --val linear both;
+  animation-timeline: --val;
+  animation-range: entry 100% exit 0%;
+  overflow: hidden;
 }
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+@keyframes --val {
+  0%   { --val: var(--max) }
+  100% { --val: var(--min) }
+}
+
+input[type="range"]::thumb {
+  view-timeline: --val inline;
+}I know, this is a lot of strange syntax! But we will dissect each line and you will see that it’s not all that complex at the end of the day.We start by defining  i.e. the thumb element, and for this we use the  shorthand property. From the MDN page, we can read:The CSSshorthand property is used to define a named view progress timeline, which is progressed through based on the change in visibility of an element (known as the subject) inside a scrollable element (scroller).  is set on the subject.I think it’s self-explanatory. The view timeline name is  and the axis is  since we’re working along the horizontal x-axis.Next, we define , i.e. the input element, and for this, we use  (or ). This part is the easiest but also the one you will forget the most so let me insist on this: don’t forget to define overflow on the scroller!I insist on this because your code will work fine without defining overflow, but the values won’t be good. The reason is that the scroller exists but will be defined by the browser (depending on your page structure and your CSS) and most of the time it’s not the one you want. So let me repeat it another time: Next up, we create an animation that animates the  variable between the input’s  and  values. Like we did in the first article, we are using the newly-enhanced  function to get those values. See that? The “animation” part of the scroll-driven animation, an animation we link to the view timeline we defined on the subject using . And to be able to animate a variable we register it using .Note the use of  which is another tricky feature that’s easy to overlook. By default, named view timelines are scoped to the element where they are defined and its descendant. In our case, the input is a parent element of the thumb so it cannot access the named view timeline. To overcome this, we increase the scope using . Again, from MDN: is given the name of a timeline defined on a descendant element; this causes the scope of the timeline to be increased to the element that  is set on and any of its descendants. In other words, that element and any of its descendant elements can now be controlled using that timeline.Never forget about this! Sometimes everything is correctly defined but nothing is working because you forget about the scope.There’s something else you might be wondering:Why are the keyframes values inverted? Why is the  is set to  and the  set to ?To understand this, let’s first take the following example where you can scroll the container horizontally to reveal a red circle inside of it.Initially, the red circle is hidden on the right side. Once we start scrolling, it appears from the right side, then disappears to the left as you continue scrolling towards the right. We scroll from left to right but our actual movement is from right to left.In our case, we don’t have any scrolling since our subject (the thumb) will not overflow the scroller (the input) but the main logic is the same. The starting point is the right side and the ending point is the left side. In other words, the animation starts when the thumb is on the right side (the input’s  value) and will end when it’s on the left side (the input’s  value).The last piece of the puzzle is the following  line of code:animation-range: entry 100% exit 0%;By default, the animation starts when the subject starts to enter the scroller from the right and ends when the subject has completely exited the scroller from the left. This is not good because, as we said, the thumb will not overflow the scroller, so it will  reach the start and the end of the animation.To rectify this we use the  property to make the start of the animation when the subject has completely entered the scroller from the right () and the end of the animation when the subject starts to exit the scroller from the left ().To summarize, the thumb element will move within input’s area and that movement is used to control the progress of an animation that animates a variable between the input’s  and  attribute values. We have our replacement for document.querySelector("input").value in JavaScript!What’s going on with all the  instances everywhere? Is it the same thing each time?I am deliberately using the same  everywhere to confuse you a little and push you to try to understand what is going on. We usually use the dashed ident () notation to define custom properties (also called CSS variables) that we later call with . This is still true but that same notation can be used to name other things as well.In our examples we have three different things named :The  that is animated and registered using . It contains the selected value and is used to style the input.The  defined by  and used by .The  named  and called by .Here is the same code written with different names for more clarity:@property --val {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0; 
+}
+
+input[type="range"] {
+  --min: attr(min type(<number>));
+  --max: attr(max type(<number>));
+
+  timeline-scope: --timeline;
+  animation: value_update linear both;
+  animation-timeline: --timeline;
+  animation-range: entry 100% exit 0%;
+  overflow: hidden;
+}
+
+@keyframes value_update {
+  0%   { --val: var(--max) }
+  100% { --val: var(--min) }
+}
+
+input[type="range"]::thumb {
+  view-timeline: --timeine inline;
+}All that we have done up to now is get the selected value of the input range — which is honestly about 90% of the work we need to do. What remains is some basic styles and code taken from what we made in the first article.If we omit the code from the previous section and the code from the previous article here is what we are left with:input[type="range"] {
+  background: 
+    linear-gradient(90deg,
+      hsl(calc(30 + 4 * var(--val)) 100% 56%) calc(var(--val) * 100% / var(--max)),
+      #7b7b7b 0
+    );
+}
+input[type="range"]::thumb {
+  opacity: 0;
+}We make the thumb invisible and we define a gradient on the main element to color in the stars. No surprise here, but the gradient uses the same  variable that contains the selected value to inform how much is colored in.When, for example, you select three stars, the  variable will equal  and the color stop of the first color will equal  , or , meaning three stars are colored in. That same color is also dynamic as I am using the  function where the first argument (the hue) is a function of  as well.Here is the full demo, which you will want to open in Chrome 115+ at the time I’m writing this:And guess what? This implementation works with half stars as well without the need to change the CSS. All you have to do is update the input’s attributes to work in half increments. <input type="range" min=".5" step=".5" max="5">That’s it! We have our rating star component that you can easily control by adjusting the attributes.If we look past the browser support factor, I consider this version better than the  approach we used in the first article. The  version is simpler and does the job pretty well, but it’s limited in what it can do. While our goal is to create a star rating component, it’s good to be able to do more and be able to style an input range as you want.With scroll-driven animations, we have more flexibility since the idea is to first get the value of the input and then use it to style the element. I know it’s not easy to grasp but don’t worry about that. You will face scroll-driven animations more often in the future and it will become more familiar with time. This example will look easy to you in good time.Worth noting, that the code used to get the value is a generic code that you can easily reuse even if you are not going to style the input itself. Getting the value of the input is independent of styling it.Many techniques are involved to create that demo and one of them is using scroll-driven animations to get the input value and show it inside the tooltip!And why not a wavy range slider?This one is a bit crazy but it illustrates how far we go with styling an input range! So, even if your goal is not to create a star rating component, there are a lot of use cases where such a technique can be really useful.I hope you enjoyed this brief two-part series. In addition to a star rating component made with minimal code, we have explored a lot of cool and modern features, including the  function, CSS , and scroll-driven animations. It’s still early to adopt all of these features in production because of browser support, but it’s a good time to explore them and see what can be done soon using only CSS.]]></content:encoded></item><item><title>The current state of JavaScript on the Web</title><link>https://javascriptweekly.com/issues/726</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 7 Mar 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[Meet Harmony - An open source library for composing consistent and highly performant platforms from independent business features.🏎️ Cut Integration Time – CarsXE’s API ensures minimal setup and faster deployment for your project. Learn more.Working with in-app PDFs can be frustrating. Try Nutrient’s PDF SDK which handles problems effortlessly, so you don’t have to spend time fixing them. Used by ~1 billion end users in more than 150 different countries.]]></content:encoded></item><item><title>Maybe don’t use custom properties in shorthand properties</title><link>https://css-tricks.com/maybe-dont-use-custom-properties-in-shorthand-properties/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 6 Mar 2025 16:33:55 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[That an invalid custom property invalidates the entire declaration isn’t surprising, but I didn’t consider it until I saw one of my declarations break. I guess it’s just good to know that, especially if you’re working a lot with custom properties.This easily qualifies as a “gotcha” in CSS and is a good reminder that the cascade doesn’t know everything all at the same time. If a custom property is invalid, the cascade won’t ignore it, and it gets evaluated, which invalidates the declaration. And if we set an invalid custom property on a shorthand property that combines several constituent properties — like how  and  are both shorthand for a bunch of other properties — then the entire declaration becomes invalid, including all of the implied constituents. No bueno indeed.So, maybe don’t use custom properties in shorthand properties or use custom properties but don’t use shorthand properties.]]></content:encoded></item><item><title>Angular 19.2 Is Now Available</title><link>https://blog.angular.dev/angular-19-2-is-now-available-673ec70aea12?source=rss----447683c3d9a3---4</link><author>Angular</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Wed, 5 Mar 2025 16:55:07 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[And we’re back with Angular’s latest minor release, version 19.2, bringing new APIs and experimental features to empower developers on their next great app.Expanding reactivity beyond synchronousIn Angular v19 we released the experimental resource API, continuing our reactivity story to a new chapter — asynchronous reactivity.With this release, we’re thrilled to introduce two significant updates: asynchronous reactivity with the new httpResource and resource streaming with rxResource APIs.Developers have been able to use signals for synchronous state in Angular since their introduction in Angular v16. At the same time developers have been curious as to how they can leverage the power, readability and maintainability of signals for asynchronous dependencies. The resource API makes it possible to interact with asynchronous data sources while leveraging the developer experience and ergonomics of signals. The resource API is a foundational building block for incorporating asynchronous actions like data fetching in Angular.Here’s an example of how you can use resourcein your application:/*  component.tsreadonly id = signal(1);readonly todoResource = resource({  request: ()=> ({id: this.id()}),  loader: async ({request}) => (await fetch(    `https://jsonplaceholder.typicode.com/todos/${request.id}`)).json(),  component.html<p>{{ todoResource.value() }}</p>If the id value updates, the loader reactively triggers the defined asynchronous operation . Then, in the template for the component, the current value can be accessed via .value().While this API is helpful, one might naturally conclude that they should use this API to fetch data asynchronously. Thanks to Mattieu Rigler for his helpful contributions, we now have another great new API for you to try out: httpResourceUsed for fetching data, the experimental httpResource API creates a low friction reactive way to fetch data over HTTP. httpResource participates in Angular’s reactivity system with signals. Here’s an example of using it in action:// returns a signalcurrentUserId = getCurrentUserId();// A reactive function as argumentuser = httpResource(() => `/api/user/${currentUserId()}`); Here, httpResource reacts to changes in the signal currentUserId. When currentUserId updates, httpResource triggers a new asynchronous request. Because the API leverages HttpClientit gives you access to features such as interceptors.While we’re on the topic of asynchronous requests there’s one more update that we think you’ll really enjoy. We’ve added support for streaming multiple responses using the rxResource API. Check out this example:/*  component.ts   Using a BehaviorSubject and an setInterval to create a stream of values  that generates a new value every 1000ms readonly subject = new BehaviorSubject<number>(1);readonly intervalId = setInterval(() => {  this.subject.next(this.subject.value + 1);/* rxResource will stream values as they arrive */readonly resource = rxResource({  loader: () => this.subject,}); component.html Display the latest values that have been returned*/  <p>{{ resource.value() }}</p>This could be helpful in scenarios where you are connecting to an endpoint that returns multiple values.Better template ergonomics and moreThe Angular template authoring experience just keeps improving. Angular templates now support untagged template literal expressions, making string concatenation and escaping single or double quote strings easier.For example, it’s less cumbersome to dynamically interpolate a value from your class into your template. Check out this example:<div [class]="`layout col-${colWidth}`"></div>This improved experience makes interpolating values even smoother.This isn’t the only update we’re launching in Angular v19.2 — there are new migrations such as being able to migrate to convert to self closing tags (thanks eneajaho!), supporting the Set type in forms, adding skip hydration diagnostic and so much more. If you’d like to see even more updates from Angular v19.2, be sure to check out the change log on GitHub.Get the latest and greatest from Angular todayAngular v19.2 is ready for your applications today so go ahead, update and go build great apps.]]></content:encoded></item><item><title>Grouping Selection List Items Together With CSS Grid</title><link>https://css-tricks.com/grouping-selection-list-items-together-with-css-grid/</link><author>Preethi</author><category>frontend</category><pubDate>Wed, 5 Mar 2025 13:16:32 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Grouping selected items is a design choice often employed to help users quickly grasp which items are selected and unselected. For instance, checked-off items move up the list in to-do lists, allowing users to focus on the remaining tasks when they revisit the list.We’ll design a UI that follows a similar grouping pattern. Instead of simply rearranging the list of selected items, we’ll also lay them out horizontally using CSS Grid. This further distinguishes between the selected and unselected items.We’ll explore two approaches for this. One involves using , which is suitable when the selected items don’t exceed the grid container’s boundaries, ensuring a stable layout. In contrast, CSS Grid’s  keyword provides another approach that offers greater flexibility.The HTML is the same for both methods:<ul>
+  <li>
+    <label>
+      <input type="checkbox" />
+      <div class=icon>🍱</div>
+      <div class=text>Bento</div>
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="checkbox" />
+      <div class=icon>🍡</div>
+      <div class=text>Dangos</div>
+    </label>
+  </li>
+  <!-- more list items -->
+</ul>The markup consists of an unordered list (). However, we don’t necessarily have to use  and  elements since the layout of the items will be determined by the CSS grid properties. Note that I am using an implicit  around the  elements mostly as a way to avoid needing an extra wrapper around things, but that explicit labels are generally better supported by assistive technologies.ul {
+  width: 250px;
+  display: grid;
+  gap: 14px 10px;
+  grid-template-columns: repeat(auto-fill, 40px);
+  justify-content: center;
+  /* etc. */
+}The  element, which contains the items, has a  style rule, turning it into a grid container. It also has gaps of  and  between its grid rows and columns. The grid content is justified (inline alignment) to .The  property specifies how column tracks will be sized in the grid. Initially, all items will be in a single column. However, when items are selected, they will be moved to the first row, and each selected item will be in its own column. The key part of this declaration is the  value.The  value is added where the repeat count goes in the  function. This ensures the columns repeat, with each column’s track sizing being the given size in  ( in our example), that will fit inside the grid container’s boundaries.For now, let’s make sure that the list items are positioned in a single column:li {
+  width: inherit;
+  grid-column: 1;
+  /* Equivalent to: 
+      grid-column-start: 1;
+      grid-column-end: auto; */
+  /* etc. */
+}When an item is checked, that is when an  element  a  checkbox, we’re selecting that. And when we do, the  is given a  that puts it in the first row, and its column will be auto-placed within the grid in the first row as per the value of the  property of the grid container (). This causes the selected items to group at the top of the list and be arranged horizontally:li {
+  width: inherit;
+  grid-column: 1;
+  /* etc. */
+  &:has(:checked) {
+    grid-area: 1;
+    /* Equivalent to: 
+      grid-row-start: 1;
+      grid-column-start: auto;
+      grid-row-end: auto;
+      grid-column-end: auto; */
+    width: 40px;
+    /* etc. */
+  }
+  /* etc. */
+}And that gives us our final result! Let’s compare that with the second method I want to show you.Method 2: Using the  keywordWe won’t be needing the  property now. Here’s the new  style ruleset:ul {
+  width: 250px;
+  display: grid;
+  gap: 14px 10px;
+  justify-content: center;
+  justify-items: center;
+  /* etc. */
+}The inclusion of  will help with the alignment of grid items as we’ll see in a moment. Here are the updated styles for the  element:li {
+  width: inherit;
+  grid-column: 1 / span 6;
+  /* Equivalent to: 
+     grid-column-start: 1;
+     grid-column-end: span 6; */
+  /* etc. */
+}As before, each item is placed in the first column, but now they also  six column tracks (since there are six items). This ensures that when multiple columns appear in the grid, as items are selected, the following unselected items remain in a single column under the selected items — now the unselected items span across multiple column tracks. The  declaration will keep the items aligned to the center.li {
+  width: inherit;
+  grid-column: 1 / span 6;
+  /* etc. */
+  &:has(:checked) {
+    grid-area: 1;
+    width: 120px;
+    /* etc. */
+  }
+  /* etc. */
+}The width of the selected items has been increased from the previous example, so the layout of the selection UI can be viewed for when the selected items overflow the container.The order of selected and unselected items will remain the same as the source order. If the on-screen order needs to match the user’s selection, dynamically assign an incremental  value to the items as they are selected.onload = ()=>{
+  let i=1;
+  document.querySelectorAll('input').forEach((input)=>{
+    input.addEventListener("click", () => {
+      input.parentElement.parentElement.style.order = input.checked ? i++ : (i--, 0);
+    });
+  });
+}CSS Grid helps make both approaches very flexible without a ton of configuration. By using  to place items on either axis (rows or columns), the selected items can be easily grouped within the grid container without disturbing the layout of the unselected items in the same container, for as long as the selected items don’t overflow the container.If they do overflow the container, using the  approach helps maintain the layout irrespective of how long the group of selected items gets in a given axis. Some design alternatives for the UI are grouping the selected items at the end of the list, or swapping the horizontal and vertical structure.]]></content:encoded></item><item><title>This Week In React #224: Next.js, TanStack Form, Astro, RTK, State Machine, Remix, StyleX | Lynx, Entreprise, SwiftUI, VisionOS, Windows, Hermes, Expo | Node.js, TypeScript, ArkType, Nitro, BetterAuth</title><link>https://thisweekinreact.com/newsletter/224</link><author></author><category>frontend</category><pubDate>Wed, 5 Mar 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[: A cool Next.js release improving the DX, and TanStack Form launching a stable v1.: The field is getting more competitive, with ByteDance, Callstack and early signals of Vercel mobile activity.: TypeScript support keeps improving!Check our partner conf React-Summit - 🇳🇱 Amsterdam - 13 & 17 June - The biggest React conf worldwide! Use promo code TWIR for 10% off tickets.As always, thanks for supporting us on your favorite platform:In the age of code generation, you need a backend that you can confidently generate with AI platforms. Convex is by far and away best in class in this respect.This is because Convex is just TypeScript, allowing you to write queries as code that are automatically transactional, cached, and realtime.And that’s just the beginning. With Convex, you can:Easily schedule functions and write cron jobsWrite efficient server functionsVercel released a new minor version of Next.js, with major DX improvements. Highlights include:Redesigned error UI and improved stack traces: A redesigned debugging experience leveraging the brand-new React  APIStreaming metadata: Async metadata will no longer block page rendering or client-side page transitionsTurbopack performance improvements: Faster compile times and reduced memory usageReact View Transitions (experimental): Experimental support for React's new View Transitions APINode.js Middleware (experimental): Experimental support for using the Node.js runtime in MiddlewareA new TanStack library, years in the making, has just been released as stable. The announcement post highlights an interesting subset of its features:Framework agnostic, headless: Supports 5 frameworks, including React used in the post's examplesExtreme type safety: I must admit  is a pretty cool APISchema validation: Support for Zod, Valibot, ArkType, Standard SchemaAsync validation, built-in debouncing, AbortSignalIsomorphic, multi-platform: share validation logic across client/serverJoin Lazar from Sentry for a hands-on session where you’ll build it, break it, debug it, and fix it. You’ll set up Sentry, track errors, use Session Replay and Tracing, and leverage some good ol’ AI to find and fix issues fast.ByteDance just announced Lynx, their native cross-platform technology. It’s used extensively in their production apps, including TikTok! With React bindings, it’s a serious competitor to React Native, and support for other frameworks is expected. The architectural choices are interesting, with a dual-thread model and different runtimes. It has support for some CSS and Web APIs that even React Native still doesn’t have and uses convenient built-in JSX intrinsic elements like .The feature set at launch is impressive, but there are also some surprising things you might dislike, such as using React 17 / Preact, or custom elements on the web. Time will tell whether the technology lives up to its promise and can truly compete with the established player. In any case, competition is healthy.]]></content:encoded></item><item><title>Unions and intersections of object types in TypeScript</title><link>https://2ality.com/2025/03/object-type-union-intersection.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Tue, 4 Mar 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore what unions and intersections of object types can be used for in TypeScript.]]></content:encoded></item><item><title>Functions in CSS?!</title><link>https://css-tricks.com/functions-in-css/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Mon, 3 Mar 2025 13:34:22 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[A much-needed disclaimer:You (kinda) can use functions now! I know, it isn’t the most pleasant feeling to finish reading about a new feature just for the author to say “And we’ll hopefully see it in a couple of years”. Luckily, right now you can use an (incomplete) version of CSS functions in Chrome Canary behind an experimental flag, although who knows when we’ll get to use them in a production environment.Arguments, defaults, and returns!I was drinking coffee when I read the news on Chrome prototyping functions in CSS and… I didn’t spit it or anything. I was excited, but thought “functions” in CSS would be just like mixins in Sass — you know, patterns for establishing reusable patterns. That’s cool but is really more or less syntactic sugar for writing less CSS.But I looked at the example snippet a little more closely and that’s when the coffee nearly came shooting out my mouth.Arguments?! Return values?! That’s worth spitting my coffee out for! I had to learn more about them, and luckily, the spec is clearly written, which you can find right here. What’s crazier, you can use functions right now in Chrome Canary! So, after reading and playing around, here are my key insights on what you need to know about CSS Functions.What exactly is a function in CSS?I like this definition from the spec:Custom functions allow authors the same power as custom properties, but parameterizedThey are used in the same places you would use a custom property, but functions return different things depending on the argument we pass. The syntax for the most basic function is the  at-rule, followed by the name of the function as a  + @function --dashed-border() {
+ /* ... */
+}A function without arguments is like a custom property, so meh… To make them we can pass arguments inside the parenthesis, also as s@function --dashed-border(--color) {
+ /* ... */
+}We can use the  descriptor to return something based on our argument:@function --dashed-border(--color) {
+   result: 2px dashed var(--color);
+}
+
+div {
+   border: --dashed-border(blue); /* 2px dashed blue */
+}We can even use defaults! Just write a colon () followed by the default value for that argument.@function --dashed-border(--color: red) {
+   result: 2px dashed var(--color);
+}
+
+div {
+  border: --dashed-border(); /* 2px dashed red */
+}Functions can have type-checkingFunctions can have type-checking for arguments and return values, which will be useful whenever we want to interpolate a value just like we do with variables created with , and once we have inline conditionals, to make different calculations depending on the argument type.To add argument types, we pass a syntax component. That is the type enclosed in angle brackets, where color is  and length is , just to name a couple. There are also syntax multipliers like plus () to accept a space-separated list of that type.@function --custom-spacing(--a <length>) { /* ... */ } /* e.g. 10px */
+@function --custom-background(--b <color>) { /* ... */ } /* e.g. hsl(50%, 30% 50%) */
+@function --custom-margin(--c <length>+) { /* ... */ } /* e.g. 10px 2rem 20px */If instead, we want to define the type of the return value, we can write the  keyword followed by the syntax component:@function --progression(--current, --total) returns <percentage> {
+  result: calc(var(--current) / var(--total) * 100%);
+}Just a little exception for types: if we want to accept more than one type using the syntax combinator (|), we’ll have to enclose the types in a  wrapper function:@function --wideness(--d type(<number> | <percentage>)) { /* ... */ }Functions can have list argumentsWhile it doesn’t currently seem to work in Canary, we’ll be able in the future to take lists as arguments by enclosing them inside curly braces. So, this example from the spec passes a list of values like  and gets its maximum to perform a sum.@function --max-plus-x(--list, --x) {
+  result: calc(max(var(--list)) + var(--x));
+}
+
+div {
+  width: --max-plus-x({ 1px, 7px, 2px }, 3px); /* 10px */
+}I wonder then, will it be possible to select a specific element from a list? And also define how long should the list should be? Say we want to only accept lists that contain four elements, then select each individually to perform some calculation and return it. Many questions here!Early returns aren’t possibleThat’s correct, early returns aren’t possible. This isn’t something defined in the spec that hasn’t been prototyped, but something that simply won’t be allowed. So, if we have two returns, one enclosed early behind a  or  at-rule and one outside at the end, the last result will always be returned:@function --suitable-font-size() {
+  @media (width > 1000px) {
+    result: 20px;
+  }
+  result: 16px; /* This always returns 16px */
+}We have to change the order of the returns, leaving the conditional  for last. This doesn’t make a lot of sense in other programming languages, where the function ends after returning something, but there is a reason the C in CSS stands for Cascade: this order allows the conditional result to override the last result which is very CSS-y is nature:@function --suitable-font-size() {
+  result: 16px;
+
+  @media (width > 1000px) {
+    result: 20px;
+  }
+}Imagining the possibilitiesHere I wanted everyone to chip in and write about the new things we could make using functions. So the team here at CSS-Tricks put our heads together and thought about some use cases for functions. Some are little helper functions we’ll sprinkle a lot throughout our CSS, while others open new possibilities. Remember, all of these examples should be viewed in Chrome Canary until support expands to other browsers.Here’s a basic helper function from Geoff that sets fluid type:@function --fluid-type(--font-min, --font-max) {
+  result: clamp(var(--font-min), 4vw + 1rem, var(--font-max));
+}
+
+h2 {
+  font-size: --fluid-type(24px, 36px);
+}This one is from Ryan, who is setting the width with an intrinsic container function — notice the default arguments.@function --intrinsic-container(--inline-margin: 1rem, --max-width: 60ch) {
+  result: min(100% - var(--inline-margin), var(--max-width));
+}And check out this second helper function from Ryan to create grid layouts:@function --layout-sidebar(--sidebar-width: 10ch) {
+  result: 1fr;
+
+  @media (width > 640px) {
+    result: fit-content(var(--sidebar-width)) minmax(min(50vw, 30ch), 1fr);
+  }
+}This is one of those snippets I’m always grabbing from Steph Eckles’ smolcss site, and having a function would be so much easier. Actually,  of the snippets on Steph’s site would be awesome functions.This one is from . When I made that demo using  to create viewport transitions, I used a helper property called  to get the screen width as a decimal between  to . At that moment, I wished for a function form of . As I described it back then:You pass a lower and upper bound as pixels, and it will return a  to  value depending on how wide the screen is. So for example, if the screen is ,  would return  since it’s the middle pointI thought I would never see it, but now I can make it myself! Using that wideness function, I can move an element through its  as the screen goes from  to :.marker {
+  offset-path: path("M 5 5 m -4, 0 a 4,4 0 1,0 8,0 a 4,4 0 1,0 -8,0"); /* Circular Orbit */
+  offset-distance: calc(--wideness(400, 800) * 100%); /* moves the element when the screen goes from 400px to 800px */
+}…use local variables. Although I tried them and they seem to work.…use recursive functions (they crash!),…update a function and let the appropriate styles change,…use  in cascade layers, or in the CSS Object Model (CSSOM),…use “the Iverson bracket functions … so any  queries or similar will need to be made using helper custom properties (on  or similar).”After reading what on earth an Iverson bracket is, I understood that we currently can’t have a return value behind a  or  rule. For example, this snippet from the spec shouldn’t work:@function --suitable-font-size() {
+  result: 16px;
+
+  @media (width > 1000px) {
+    result: 20px;
+  }
+} Although, upon testing, it seems like it’s supported now. Still, we can use a provisional custom property and return it at the end if it isn’t working for you:@function --suitable-font-size() {
+  --size: 16px;
+
+  @media (width > 600px) {
+    --size: 20px;
+  }
+
+  result: var(--size);
+}
+What about mixins? Soon, they’ll be here. According to the spec:At this time, this specification only defines custom functions, which operate at the level of CSS values. It is expected that it will define “mixins” later, which are functions that operate at the style rule level.I say it with confidence: functions will bring an enormous change to CSS, not in the sense that we’ll write it any differently — we won’t use functions to center a , but they will simplify hack-ish CSS and open  of new possibilities. There’ll be a time when our cyborg children ask us from their education pods, “Is it true you guys didn’t have functions in CSS?” And we’ll answer “No, Zeta-5 ∀umina™, we didn’t” while shedding a tear. And that will blow their ZetaPentium© Gen 31 Brain chips. That is if CSS lasts long enough, but in the meantime, I am happy to change my site’s font with a function.]]></content:encoded></item></channel></rss>

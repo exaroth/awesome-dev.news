@@ -1,333 +1,497 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>How to debug code with GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/how-to-debug-code-with-github-copilot/</link><author>Jeimy Ruiz</author><category>official</category><pubDate>Fri, 21 Feb 2025 17:00:49 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Debugging is an essential part of a developer’s workflow—but it’s also one of the most time consuming. What if AI could streamline the process, helping you analyze, fix, and document code faster? Enter GitHub Copilot, your AI-powered coding assistant.GitHub Copilot isn’t just for writing code—it’s also a powerful tool for debugging. Whether you’re troubleshooting in your IDE, using Copilot Chat’s slash commands like , or reviewing pull requests (PR) on github.com, GitHub Copilot offers flexible, intelligent solutions to speed up your debugging process. And with the free version of GitHub Copilot, available to all personal GitHub accounts, you can start exploring these features today.In this guide, we’ll explore how to debug code with GitHub Copilot, where to use it in your workflow, and best practices to get the most out of its capabilities. Whether you’re new to GitHub Copilot or looking to deepen your skills, this guide has something for you.Debugging code with GitHub Copilot: surfaces and workflowsDebugging code with GitHub Copilot can help you tackle issues faster while enhancing your understanding of the codebase. Whether you’re fixing syntax errors, refactoring inefficient code, or troubleshooting unexpected behavior, GitHub Copilot can provide valuable insights in your debugging journey.So, how exactly does this work? “GitHub Copilot is recognizing patterns and suggesting solutions based on what it has learned,” says Christopher Harrison, Senior Developer Advocate. “Once you’ve identified the problem area, you can turn to GitHub Copilot and ask, ‘I’m giving this input but getting this output—what’s wrong?’ That’s where GitHub Copilot really shines.”Let’s explore how GitHub Copilot can help you debug your code across different surfaces, from your IDE to github.com and even pull requests.Copilot Chat acts as an interactive AI assistant, helping you debug issues with natural language queries. And with Copilot Free, you get 50 chat messages per month. With Copilot Chat, you can:Get real-time explanations: Ask “Why is this function throwing an error?” and Copilot Chat will analyze the code and provide insights.  Use slash commands for debugging: Try  to generate a potential solution or  for a step-by-step breakdown of a complex function. (More on this later!)   Refactor code for efficiency: If your implementation is messy or inefficient, Copilot Chat can suggest cleaner alternatives. Christopher explains, “Refactoring improves the readability of code, making it easier for both developers and GitHub Copilot to understand. And if code is easier to understand, it’s easier to debug and spot problems.”  Walk through errors interactively: Describe your issue in chat and get tailored guidance without ever having to leave your IDE. When working in popular IDEs like VS Code or JetBrains, GitHub Copilot offers real-time suggestions as you type. It helps by: For example, if you declare a variable but forget to initialize it, GitHub Copilot can suggest a correction.   Encounter a syntax error? GitHub Copilot can suggest a fix in seconds, ensuring your code stays error-free.   By analyzing your workspace, GitHub Copilot provides solutions tailored to your codebase and project structure.GitHub Copilot extends beyond your IDE, offering debugging assistance directly on github.com via Copilot Chat, particularly in repositories and discussions. With this feature, you can:Troubleshoot code in repositories: Open a file, highlight a problematic section, and use Copilot Chat to analyze it.   If you’re unsure how to verify a function, GitHub Copilot can suggest test cases based on existing code.  Understand unfamiliar code: Reviewing an open-source project or a teammate’s PR? Ask GitHub Copilot to summarize a function or explain its logic.4. For pull request assistanceGitHub Copilot can also streamline debugging within PRs, ensuring code quality before merging.Suggest improvements in PR comments: GitHub Copilot can review PRs and propose fixes directly in the conversation.   Struggling to describe your changes? Greg Larkin, Senior Service Delivery Engineer, says, “I use GitHub Copilot in the PR creation process to generate a summary of the changes in my feature branch compared to the branch I’m merging into. That can be really helpful when I’m struggling to figure out a good description, so that other people understand what I did.”   Not sure why a change was made? Ask GitHub Copilot to summarize what’s different between commits.  Catch edge cases before merging: Use  to identify potential issues and  to generate missing test cases.   If a PR contains redundant or inefficient code, GitHub Copilot can suggest optimized alternatives.By integrating Copilot into your PR workflow, you can speed up code reviews while maintaining high-quality standards. Just be sure to pair it with peer expertise for the best results.Slash commands turn GitHub Copilot into an on-demand debugging assistant, helping you solve issues faster, get more insights, and improve your code quality. Here are some of the most useful slash commands for debugging:1. Use /help to get guidance on using GitHub Copilot effectivelyThe  slash command provides guidance on how to interact with GitHub Copilot effectively, offering tips on structuring prompts, using slash commands, and maximizing GitHub Copilot’s capabilities.: Type  in Copilot Chat to receive suggestions on your current task, whether it’s debugging, explaining code, or generating test cases.  : Need a refresher on what GitHub Copilot can do? Use  to access a quick guide to slash commands like  and .2. Use /fix to suggest and apply fixesThe  command is a go-to tool for resolving code issues by allowing you to highlight a block of problematic code or describe an error. Select the code causing issues, type , and let Copilot Chat generate suggestions.   If you have a broken API call, use  to get a corrected version with appropriate headers or parameters.3. Use /explain to understand code and errorsThe  command breaks down complex code or cryptic error messages into simpler, more digestible terms. Highlight the code or error message you want clarified, type , and Copilot Chat will provide an explanation. It will explain the function’s purpose, how it processes the data, potential edge cases, and any possible bugs or issues.    Encounter a “NullPointerException”? Use  to understand why it occurred and how to prevent it.4. Use /tests to generate testsTesting is key to identifying bugs, and the  command helps by generating test cases based on your code. Use  on a function or snippet, and Copilot Chat will generate relevant test cases.   Apply  to a sorting function, and Copilot Chat might generate unit tests for edge cases like empty arrays or null inputs.5. Use /doc to generate or improve documentationThere are long-term benefits to having good text documentation—for developers and GitHub Copilot, which can draw context from it—because it makes your codebase that much more searchable. By using the  command with Copilot Free, you can even ask GitHub Copilot to write a summary of specific code blocks within your IDE.The  command helps you create or refine documentation for your code, which is critical when debugging or collaborating with others. Clear documentation provides context for troubleshooting, speeds up issue resolution, and helps fellow developers understand your code faster. Highlight a function, class, or file, type  and right-click to see the context menu, and Copilot Chat will generate comprehensive comments or documentation.   Apply  to a function, and Copilot Chat will generate inline comments detailing its purpose, parameters, and expected output.By mastering these commands, you can streamline your debugging workflow and resolve issues faster without switching between tools or wasting time on manual tasks.Best practices for debugging code with GitHub CopilotProvide clear context for better resultsProviding the right context helps GitHub Copilot generate even more relevant debugging suggestions. As Christopher explains, “The better that Copilot is able to understand what you’re trying to do and how you’re trying to do it, the better the responses are that it’s able to give to you.”Since GitHub Copilot analyzes your code within the surrounding scope, ensure your files are well structured and that relevant dependencies are included. If you’re using Copilot Chat, reference specific functions, error messages, or logs to get precise answers instead of generic suggestions. Working across multiple files? Use the  command to point GitHub Copilot in the right direction and give it more context for your prompt and intended goal.Ask, refine, and optimize in real timeInstead of treating GitHub Copilot as a one-and-done solution, refine its suggestions by engaging in a back-and-forth process. Greg says, “I find it useful to ask GitHub Copilot for three or four different options on how to fix a problem or to analyze for performance. The more detail you provide about what you’re after—whether it’s speed, memory efficiency, or another constraint—the better the result.”This iterative approach can help you explore alternative solutions you might not have considered, leading to more robust and efficient code.Master the art of specific promptsThe more specific your prompt, the better GitHub Copilot’s response. Instead of asking “What’s wrong with this function?” try “Why is this function returning undefined when the input is valid?” GitHub Copilot performs best when given clear, detailed queries—this applies whether you’re requesting a fix, asking for an explanation, or looking for test cases to verify your changes.By crafting precise prompts and testing edge cases, you can use GitHub Copilot to surface potential issues before they become production problems.Try a structured approach with progressive debuggingNext, try a step-by-step approach to your debugging process! Instead of immediately applying fixes, use GitHub Copilot’s commands to first understand the issue, analyze potential causes, and then implement a solution. This structured workflow—known as —helps you gain deeper insights into your code while ensuring that fixes align with the root cause of the problem.Start with the slash command  on a problematic function to understand the issue.  Use the slash command  to help with configuring interactive debugging.  Finally, apply the slash command  to generate possible corrections.📌  If a function in your React app isn’t rendering as expected, start by running  on the relevant JSX or state logic, then use  to identify mismanaged props, and finally, apply  for a corrected implementation.Some issues require multiple levels of debugging and refinement. By combining commands, you can move from diagnosis to resolution even faster.Use  to understand and resolve issues quickly.  Apply  to find failing tests and generate new ones.Fixing a broken function: Run the slash command  to understand why it fails, then use the slash command  to generate a corrected version.   Use the slash command  to identify and fix failing tests, then use the slash command  to generate additional unit tests for the highlighted code. Remember, slash commands are most effective when they’re used in the appropriate context, combined with clear descriptions of the problem, are part of a systematic debugging approach, and followed up with verification and testing.GitHub Copilot is a powerful tool that enhances your workflow, but it doesn’t replace the need for human insight, critical thinking, and collaboration. As Greg points out, “GitHub Copilot can essentially act as another reviewer, analyzing changes and providing comments. Even so, it doesn’t replace human oversight. Having multiple perspectives on your code is crucial, as different reviewers will spot issues that others might miss.”By combining GitHub Copilot’s suggestions with human expertise and rigorous testing, you can debug more efficiently while maintaining high-quality, reliable code.]]></content:encoded></item><item><title>Engaging with the developer community on our approach to content moderation</title><link>https://github.blog/news-insights/policy-news-and-insights/engaging-with-the-developer-community-on-our-approach-to-content-moderation/</link><author>Margaret Tucker</author><category>official</category><pubDate>Thu, 20 Feb 2025 17:00:22 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[At GitHub, we’re committed to keeping our community informed about how we govern our platform. That means being transparent about content moderation and involving users in the development of our site policies. Today we’re announcing that our Transparency Center and repo have been updated with data for all of 2024.Our developer-first approach to content moderation is adapted to the unique environment of code collaboration and has evolved to meet specific needs through a suite of content moderation tools. We’ve discussed the nuances and challenges of moderating a code collaboration platform in the Journal of Online Trust and Safety in an effort to be transparent about our own practices and contribute to the research base of platform studies.We want to bring this discussion directly to the developers that make GitHub what it is. Recently, we attended FOSDEM, Europe’s largest free and open source developer conference. We connected with developers and presented a deep dive into how our approach to platform moderation has been informed by the values of the FOSS community. You can watch the video of the talk here. We’ll also be presenting this talk on March 8 at SCaLE 22x, the 22nd Annual Southern California Linux Expo in Pasadena, CA. We don’t want to just share our own work—we want to hear directly from developers and maintainers about the challenges you’re facing.Developers are an important stakeholder in how we moderate our platform, and we want to hear from you. Check out our site-policy repo to contribute constructive ideas, questions, and feedback to make our policies better. We also welcome participation in our developer-policy repo where you can share public policy opportunities and challenges to advance developers’ rights to innovation, collaboration, and equal opportunity.]]></content:encoded></item><item><title>Announcing Rust 1.85.0 and Rust 2024</title><link>https://blog.rust-lang.org/2025/02/20/Rust-1.85.0.html</link><author>The Rust Release Team</author><category>dev</category><category>official</category><category>rust</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[The Rust team is happy to announce a new version of Rust, 1.85.0. This stabilizes the 2024 edition as well.
-Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust installed via , you can get 1.85.0 with:If you'd like to help us out by testing future releases, you might consider updating locally to use the beta channel () or the nightly channel (). Please report any bugs you might come across!We are excited to announce that the Rust 2024 Edition is now stable!
-Editions are a mechanism for opt-in changes that may otherwise pose a backwards compatibility risk. See the edition guide for details on how this is achieved, and detailed instructions on how to migrate.This is the largest edition we have released. The edition guide contains detailed information about each change, but as a summary, here are all the changes:The guide includes migration instructions for all new features, and in general
-transitioning an existing project to a new edition.
-In many cases  can automate the necessary changes. You may even find that no changes in your code are needed at all for 2024!Note that automatic fixes via  are very conservative to avoid ever changing the semantics of your code. In many cases you may wish to keep your code the same and use the new semantics of Rust 2024; for instance, continuing to use the  macro matcher, and ignoring the conversions of conditionals because you want the new 2024 drop order semantics. The result of  should not be considered a recommendation, just a conservative conversion that preserves behavior. people came together to create this edition. We'd like to thank them all for their hard work!Rust now supports asynchronous closures like  which return futures when called. This works like an  which can also capture values from the local environment, just like the difference between regular closures and functions. This also comes with 3 analogous traits in the standard library prelude: , , and .In some cases, you could already approximate this with a regular closure and an asynchronous block, like . However, the future returned by such an inner block is not able to borrow from the closure captures, but this does work with  closures:let mut vec: Vec<String> = vec![];
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>Seamless data fetching with httpResource</title><link>https://blog.angular.dev/seamless-data-fetching-with-httpresource-71ba7c4169b9?source=rss----447683c3d9a3---4</link><author>Matthieu Riegler</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Fri, 7 Mar 2025 15:02:52 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[Fantastic new APIs are coming to Angular. Two years ago, we proposed making Angular a reactive web framework powered by signals. Since then, the team has shipped a number of signal-based features in the framework: reactive primitives like signal & computed, reactive inputs including model, signal queries, bidirectional RxJS conversion utilities, and migration tooling.We have a solid foundation for reactivity in Angular. Now, we’re ready to begin the next phase of the reactivity journey: the world of asynchronous state. In v19 we shipped the experimental resource() API for developers to try out in advance of the dedicated RFC.The resource API makes it possible to expose results of asynchronous operations as signals. For most applications, developers make HTTP requests for the data their applications need. We recognize this and have built a new API to help facilitate this primary use case — introducing httpResource 🎉.httpResource is built on top of the resource primitive and uses HttpClient as loader. It acts as a  for @angular/common/http. It makes HTTP requests through the Angular HTTP stack, including interceptors. As the underlying stack remains the same, testing will rely on the same tools.Here we are defining an httpResource with currentUserId as a reactive parameter.currentUserId = getCurrentUserId(); // returns a signaluser = httpResource(() => `/api/user/${currentUserId()}`); // A reactive function as argumentBy default, an httpResource will perform a GET request and return an unknown typed JSON response.It is important to note that httpResource differs from the HttpClient as it initiates the request eagerly (unlike the HttpClient Observable-based requests which must be subscribed).Like resource, it configures a reactive request. If any of the source signals in the request computation change, a new HTTP request will be made.For more advanced requests, it is possible to define a request object similar to HttpClient‘s request.user = httpResource(() => ({  url: `/api/user/${currentUserId()}`,  headers: {  },    'fast': 'yes',  reportProgress: true,  transferCache: true,While the resource pattern is meant only for retrieving asynchronous data, httpResource will allow any request method (like POST in the previous example). This still doesn’t mean that you should be using httpResource to change data on the server. For instance, if you need to submit form data, use the HttpClient methods.An httpResource will return and parse the response as JSON but it is possible to use it for other return types.The API has multiple dedicated methods available for other response types:httpResource.text(() => ({ … })); // returns a text in value()httpResource.blob(() => ({ … })); // returns a Blob object in value()httpResource.arrayBuffer(() => ({ … })); // returns an ArrayBuffer in value()An httpResource , similar to other `resource`, exposes several signals:value() — which contains the result of the http request (when successful) and is programmatically overwritablestatus() — with the status of the resource (idle, loading, error etc)error() — with the request error / parsing errorisLoading() — which is true while the request is pendingIt also includes dedicated signals for metadata about the response:​​headers() — with the response’s headersstatusCode() — with the response’s status codeprogress() — with the progress of the request (if required in the request object)These new signals streamline the writing of requests by exposing this useful information without requiring a specific argument like for the HttpClient to request the HttpResponse.Embracing the Ecosystem for Type SafetyWhen performing http requests we often want to ensure that the data we receive conforms the shape that we expect. This is commonly known as schema validation.In the JavaScript ecosystem we often reach out for battle-tested libraries like Zod or Valibot for schema validation. The httpResource offers direct integration for those libraries by using the parse parameter. The returned type of this parse function will provide the type to the resource itself, ensuring type safety alongside the schema validation.The following example uses Zod to parse and validate the response from the StarWars API. The resource is then typed the same as the output type of the Zod’s parsing.export class AppComponent {  id = signal(1);  swPersonResource = httpResource(    () => `https://swapi.dev/api/people/${this.id()}`,    { parse: starWarsPersonSchema.parse }  );const starWarsPersonSchema = z.object({  name: z.string(),  height: z.number({ coerce: true }),  edited: z.string().datetime(),  films: z.array(z.string()),});The httpResource is available as a part of the Angular v19.2 release. This is an experimental API and is not ready for production because the shape of this API can still change before it is promoted to stable. With that in mind, we would love for you to try out the API and let us know what you think. You can learn more about this API, resource and more in the RFC on GitHub.Thank you for being a part of the Angular community and we look forward to continuing the reactivity journey together. Happy coding!]]></content:encoded></item><item><title>Four steps toward building an open source community</title><link>https://github.blog/open-source/maintainers/four-steps-toward-building-an-open-source-community/</link><author>Klint Finley</author><category>official</category><pubDate>Thu, 6 Mar 2025 17:00:25 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Open source projects generally begin with a problem to be solved. If it’s a problem a lot of people have, it may gain traction. Eventually you might have many people contributing. Before you know it, your project might turn into more than just a project, but a community.That requires you as a maintainer to think differently about what you’re doing. It’s no longer just about writing code, but about facilitating relationships.In this article, we’ll explore four steps to take to help your open source project evolve into a healthy community.1. Lay the ground work earlyIt’s never too early to start thinking about community. The Astro team had community building in mind from the very beginning of the project. “It was one of the first things we focused on once we had a minimum viable product (MVP) together,” Astro co-creator Fred Schott told us in a Q&A on open source community building.There’s quite a bit you can do to prepare before people start showing up. Among the most important is creating contributor guidelines and adopting a code of conduct. “You’d be surprised at how early contributor guidelines come in handy,” Schott says. “You need to answer questions like ‘How do I clone the repo?’ or ‘How do I get the packages installed?'” These basic things might seem obvious. But maintainers have been in their codebases for so long that they forget how hard it can be for new people to get started.Many maintainers think a code of conduct isn’t something they need to worry about when the project is small and conflicts between contributors have yet to arise. But it’s best to have clearly articulated expectations and a plan for what to do if someone violates them  they are needed. “If you care about outside contributions at all, you should have a code of conduct, regardless of size,” Schott says. “It’s more about intent: If your goal is to build a community or encourage outside contributors on your project, then you’ll want a code of conduct. If your repo is meant to be a solo project, then I think you’re fine to skip it.”2. Meet people where they areBuilding your own community spaces on platforms like Discord, Slack, and GitHub Discussions is important, but in the early days you need to meet people where they are. Graphile co-maintainer Jem Gillam says the team used F5bot to watch for mentions of Graphile across the web and social media so the team could answer questions and join conversations where they were already taking place. Eventually, as a project grows, a community will cohere in a particular place.Think offline, too. Conferences and meetups are a great way to meet current and potential users and contributors. “I go to conferences and let people know that we’re looking for contributors and that we’ll walk anyone through submitting their first pull request,” says  dbatools creator and maintainer Chrissy LeMaire. “I entice people by letting them know they can safely cut their teeth with us.”Having a code of conduct is one thing. But it’s more important to conduct yourself the way you want your community to act. Schott emphasizes the importance of being patient with new users. “If you’re dismissive of the problems people face, they’ll leave,” he says. “First impressions are important.”It’s important to set the right tone. “If there’s something that has come up that’s really negative, we tend to give it time—we don’t react in the moment,” Gillam says. The team strives to assume good intent because often people might come across more harshly than they intend, especially if they’re not writing in their native language. “It’s very easy for people to think they have a silly question, but we encourage people to ask them anyway because if one person has a particular question other people probably do as well,” Gillam says.LeMaire recommends being open about what you don’t know and where you personally struggle. She livestreamed her work on Twitch to show people that even as a Microsoft Most Valuable Professional and GitHub Star she still struggled and made mistakes. “I show people that it’s OK not to know everything and that they don’t have to use the most intimidating or complicated tools to be effective,” she says.4. Spotlight your contributorsBe sure to show your appreciation for your contributors. You can thank them in the README file on your repo. LeMaire set up a LinkedIn company for dbatools and told contributors they were welcome to add themselves. It helped contributors spotlight their contributions outside of GitHub, and even helped some find jobs.Don’t forget to recognize the non-code contributors as well. “Our documentation used to assume that core contributors were technical contributors, so we had some technical requirements,” Schott explains. Initially, the Astro project required someone to make “significant code contributions” to become a core contributor. Now the team evalutates non-code contributions when considering whether to promote someone to core contributor status.“People contribute in lots of different ways, from documentation to community support,” Schott says. “We’ve updated our expectations accordingly.”]]></content:encoded></item><item><title>From unique to cleanups and weak: new low-level tools for efficiency</title><link>https://go.dev/blog/cleanups-and-weak</link><author>Michael Knyszek</author><category>dev</category><category>official</category><category>go</category><pubDate>Thu, 6 Mar 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
+      Michael Knyszek
+      6 March 2025
+      In last year’s blog post about the  package, we alluded
+to some new features then in proposal review, and we’re excited to share that as
+of Go 1.24 they are now available to all Go developers.
+These new features are the 
+function, which queues up a function to
+run when an object is no longer reachable, and the 
+type, which safely points to an object without
+preventing it from being garbage collected.
+Together, these two features are powerful enough to build your own 
+package!
+Let’s dig into what makes these features useful, and when to use them.Note: these new features are advanced features of the garbage collector.
+If you’re not already familiar with basic garbage collection concepts, we
+strongly recommend reading the introduction of our garbage collector
+guide.If you’ve ever used a finalizer, then the concept of a cleanup will be
+familiar.
+A finalizer is a function, associated with an allocated object by calling
+, that is later
+called by the garbage collector some time after the object becomes unreachable.
+At a high level, cleanups work the same way.Let’s consider an application that makes use of a memory-mapped file, and see
+how cleanups can help.//go:build unix
 
-let closure = async || {
-    vec.push(ready(String::from("")).await);
-};
-It also has not been possible to properly express higher-ranked function signatures with the  traits returning a , but you can write this with the  traits:use core::future::Future;
-async fn f<Fut>(_: impl for<'a> Fn(&'a u8) -> Fut)
-where
-    Fut: Future<Output = ()>,
-{ todo!() }
-
-async fn f2(_: impl for<'a> AsyncFn(&'a u8))
-{ todo!() }
-
-async fn main() {
-    async fn g(_: &u8) { todo!() }
-    f(g).await;
-    //~^ ERROR mismatched types
-    //~| ERROR one type is more general than the other
-
-    f2(g).await; // ok!
+type MemoryMappedFile struct {
+    data []byte
 }
-Hiding trait implementations from diagnosticsThe new #[diagnostic::do_not_recommend] attribute is a hint to the compiler to not show the annotated trait implementation as part of a diagnostic message. For library authors, this is a way to keep the compiler from making suggestions that may be unhelpful or misleading. For example:pub trait Foo {}
-pub trait Bar {}
 
-impl<T: Foo> Bar for T {}
+func NewMemoryMappedFile(filename string) (*MemoryMappedFile, error) {
+    f, err := os.Open(filename)
+    if err != nil {
+        return nil, err
+    }
+    defer f.Close()
 
-struct MyType;
+    // Get the file's info; we need its size.
+    fi, err := f.Stat()
+    if err != nil {
+        return nil, err
+    }
 
-fn main() {
-    let _object: &dyn Bar = &MyType;
-}
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
- --> src/main.rs:9:29
-  |
-9 |     let _object: &dyn Bar = &MyType;
-  |                             ^^^^ the trait `Foo` is not implemented for `MyType`
-  |
-note: required for `MyType` to implement `Bar`
- --> src/main.rs:4:14
-  |
-4 | impl<T: Foo> Bar for T {}
-  |         ---  ^^^     ^
-  |         |
-  |         unsatisfied trait bound introduced here
-  = note: required for the cast from `&MyType` to `&dyn Bar`
-For some APIs, it might make good sense for you to implement , and get  indirectly by that blanket implementation. For others, it might be expected that most users should implement  directly, so that  suggestion is a red herring. In that case, adding the diagnostic hint will change the error message like so:#[diagnostic::do_not_recommend]
-impl<T: Foo> Bar for T {}
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
-  --> src/main.rs:10:29
-   |
-10 |     let _object: &dyn Bar = &MyType;
-   |                             ^^^^ the trait `Bar` is not implemented for `MyType`
-   |
-   = note: required for the cast from `&MyType` to `&dyn Bar`
- and  for tuplesEarlier versions of Rust implemented convenience traits for iterators of  tuple pairs to behave like , with  in 1.56 and  in 1.79. These have now been  to more tuple lengths, from singleton  through to 12 items long, . For example, you can now use  to fanout into multiple collections at once:use std::collections::{LinkedList, VecDeque};
-fn main() {
-    let (squares, cubes, tesseracts): (Vec<_>, VecDeque<_>, LinkedList<_>) =
-        (0i32..10).map(|i| (i * i, i.pow(3), i.pow(4))).collect();
-    println!("{squares:?}");
-    println!("{cubes:?}");
-    println!("{tesseracts:?}");
-}
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-[0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
-[0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561]
-Updates to  has been deprecated for years, because it can give surprising results in some Windows configurations if the  environment variable is set (which is not the normal configuration on Windows). We had previously avoided changing its behavior, out of concern for compatibility with code depending on this non-standard configuration. Given how long this function has been deprecated, we're now updating its behavior as a bug fix, and a subsequent release will remove the deprecation for this function.These APIs are now stable in const contextsMany people came together to create Rust 1.85.0. We couldn't have done it without all of you. Thanks!]]></content:encoded></item><item><title>Testing concurrent code with testing/synctest</title><link>https://go.dev/blog/synctest</link><author>Damien Neil</author><category>dev</category><category>official</category><category>go</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
-      Damien Neil
-      19 February 2025
-      One of Go’s signature features is built-in support for concurrency.
-Goroutines and channels are simple and effective primitives for
-writing concurrent programs.However, testing concurrent programs can be difficult and error prone.In Go 1.24, we are introducing a new, experimental
- package
-to support testing concurrent code. This post will explain the motivation behind
-this experiment, demonstrate how to use the synctest package, and discuss its potential future.In Go 1.24, the  package is experimental and
-not subject to the Go compatibility promise.
-It is not visible by default.
-To use it, compile your code with  set in your environment.Testing concurrent programs is difficultTo begin with, let us consider a simple example.The  function
-arranges for a function to be called in its own goroutine after a context is canceled.
-Here is a possible test for :func TestAfterFunc(t *testing.T) {
-    ctx, cancel := context.WithCancel(context.Background())
-
-    calledCh := make(chan struct{}) // closed when AfterFunc is called
-    context.AfterFunc(ctx, func() {
-        close(calledCh)
+    // Extract the file descriptor.
+    conn, err := f.SyscallConn()
+    if err != nil {
+        return nil, err
+    }
+    var data []byte
+    connErr := conn.Control(func(fd uintptr) {
+        // Create a memory mapping backed by this file.
+        data, err = syscall.Mmap(int(fd), 0, int(fi.Size()), syscall.PROT_READ, syscall.MAP_SHARED)
     })
-
-    // TODO: Assert that the AfterFunc has not been called.
-
-    cancel()
-
-    // TODO: Assert that the AfterFunc has been called.
+    if connErr != nil {
+        return nil, connErr
+    }
+    if err != nil {
+        return nil, err
+    }
+    mf := &MemoryMappedFile{data: data}
+    cleanup := func(data []byte) {
+        syscall.Munmap(data) // ignore error
+    }
+    runtime.AddCleanup(mf, cleanup, data)
+    return mf, nil
 }
-We want to check two conditions in this test:
-The function is not called before the context is canceled,
-and the function  called after the context is canceled.Checking a negative in a concurrent system is difficult.
-We can easily test that the function has not been called ,
-but how do we check that it  be called?A common approach is to wait for some amount of time before
-concluding that an event will not happen.
-Let’s try introducing a helper function to our test which does this.// funcCalled reports whether the function was called.
-funcCalled := func() bool {
-    select {
-    case <-calledCh:
-        return true
-    case <-time.After(10 * time.Millisecond):
-        return false
+A memory-mapped file has its contents mapped to memory, in this case, the
+underlying data of a byte slice.
+Thanks to operating-system magic, reads and writes to the byte slice directly
+access the contents of the file.
+With this code, we can pass around a , and when it’s
+no longer referenced, the memory mapping we created will get cleaned up.Notice that  takes three arguments: the address of a
+variable to attach the cleanup to, the cleanup function itself, and an argument
+to the cleanup function.
+A key difference between this function and  is that the
+cleanup function takes a different argument than the object we’re attaching the
+cleanup to.
+This change fixes some problems with finalizers.It’s no secret that finalizers
+are difficult to use correctly.
+For example, objects to which finalizers are attached must not be involved
+in any reference cycles (even a pointer to itself is too much!), otherwise the
+object will never be reclaimed and the finalizer will never run, causing a
+leak.
+Finalizers also significantly delay reclamation of memory.
+It takes at a minumum two full garbage collection cycles to reclaim the
+memory for a finalized object: one to determine that it’s unreachable, and
+another to determine that it’s still unreachable after the finalizer
+executes.The problem is that finalizers resurrect the objects they’re attached
+to.
+The finalizer doesn’t run until the object is unreachable, at which point it is
+considered “dead.”
+But since the finalizer is called with a pointer to the object, the garbage
+collector must prevent the reclamation of that object’s memory, and instead must
+generate a new reference for the finalizer, making it reachable, or “live,” once
+more.
+That reference may even remain after the finalizer returns, for example if the
+finalizer writes it to a global variable or sends it across a channel.
+Object resurrection is problematic because it means the object, and everything
+it points to, and everything those objects point to, and so on, is reachable,
+even if it would otherwise have been collected as garbage.We solve both of these problems by not passing the original object to the
+cleanup function.
+First, the values the object refers to don’t need to be kept specially
+reachable by the garbage collector, so the object can still be reclaimed even
+if it’s involved in a cycle.
+Second, since the object is not needed for the cleanup, its memory can be
+reclaimed immediately.Returning to our memory-mapped file example, suppose we notice that our program
+frequently maps the same files over and over, from different goroutines that are
+unaware of each other.
+This is fine from a memory perspective, since all these mappings will share
+physical memory, but it results in lots of unnecessary system calls to map and
+unmap the file.
+This is especially bad if each goroutine reads only a small section of each
+file.So, let’s deduplicate the mappings by filename.
+(Let’s assume that our program only reads from the mappings, and the files
+themselves are never modified or renamed once created.
+Such assumptions are reasonable for system font files, for example.)We could maintain a map from filename to memory mapping, but then it becomes
+unclear when it’s safe to remove entries from that map.
+We could  use a cleanup, if it weren’t for the fact that the map entry
+itself will keep the memory-mapped file object alive.Weak pointers solve this problem.
+A weak pointer is a special kind of pointer that the garbage collector ignores
+when deciding whether an object is reachable.
+Go 1.24’s new weak pointer type,
+, has a  method that
+returns either a real pointer if the object is still reachable, or  if it
+is not.If we instead maintain a map that only  points to the memory-mapped
+file, we can clean up the map entry when nobody’s using it anymore!
+Let’s see what this looks like.var cache sync.Map // map[string]weak.Pointer[MemoryMappedFile]
+
+func NewCachedMemoryMappedFile(filename string) (*MemoryMappedFile, error) {
+    var newFile *MemoryMappedFile
+    for {
+        // Try to load an existing value out of the cache.
+        value, ok := cache.Load(filename)
+        if !ok {
+            // No value found. Create a new mapped file if needed.
+            if newFile == nil {
+                var err error
+                newFile, err = NewMemoryMappedFile(filename)
+                if err != nil {
+                    return nil, err
+                }
+            }
+
+            // Try to install the new mapped file.
+            wp := weak.Make(newFile)
+            var loaded bool
+            value, loaded = cache.LoadOrStore(filename, wp)
+            if !loaded {
+                runtime.AddCleanup(newFile, func(filename string) {
+                    // Only delete if the weak pointer is equal. If it's not, someone
+                    // else already deleted the entry and installed a new mapped file.
+                    cache.CompareAndDelete(filename, wp)
+                }, filename)
+                return newFile, nil
+            }
+            // Someone got to installing the file before us.
+            //
+            // If it's still there when we check in a moment, we'll discard newFile
+            // and it'll get cleaned up by garbage collector.
+        }
+
+        // See if our cache entry is valid.
+        if mf := value.(weak.Pointer[MemoryMappedFile]).Value(); mf != nil {
+            return mf, nil
+        }
+
+        // Discovered a nil entry awaiting cleanup. Eagerly delete it.
+        cache.CompareAndDelete(filename, value)
     }
 }
-
-if funcCalled() {
-    t.Fatalf("AfterFunc function called before context is canceled")
+This example is a little complicated, but the gist is simple.
+We start with a global concurrent map of all the mapped files we made.
+NewCachedMemoryMappedFile consults this map for an existing mapped
+file, and if that fails, creates and tries to insert a new mapped file.
+This could of course fail as well since we’re racing with other insertions, so
+we need to be careful about that too, and retry.
+(This design has a flaw in that we might wastefully map the same file multiple
+times in a race, and we’ll have to throw it away via the cleanup added by
+.
+This is probably not a big deal most of the time.
+Fixing it is left as an exercise for the reader.)Let’s look at some useful properties of weak pointers and cleanups exploited by
+this code.Firstly, notice that weak pointers are comparable.
+Not only that, weak pointers have a stable and independent identity, which
+remains even after the objects they point to are long gone.
+This is why it is safe for the cleanup function to call ’s
+, which compares the , and a crucial reason
+this code works at all.Secondly, observe that we can add multiple independent cleanups to a single
+ object.
+This allows us to use cleanups in a composable way and use them to build
+generic data structures.
+In this particular example, it might be more efficient to combine
+NewCachedMemoryMappedFile with  and
+have them share a cleanup.
+However, the advantage of the code we wrote above is that it can be rewritten
+in a generic way!type Cache[K comparable, V any] struct {
+    create func(K) (*V, error)
+    m     sync.Map
 }
 
-cancel()
-
-if !funcCalled() {
-    t.Fatalf("AfterFunc function not called after context is canceled")
+func NewCache[K comparable, V any](create func(K) (*V, error)) *Cache[K, V] {
+    return &Cache[K, V]{create: create}
 }
-This test is slow:
-10 milliseconds isn’t a lot of time, but it adds up over many tests.This test is also flaky:
-10 milliseconds is a long time on a fast computer,
-but it isn’t unusual to see pauses lasting several seconds
-on shared and overloaded
-CI
-systems.We can make the test less flaky at the expense of making it slower,
-and we can make it less slow at the expense of making it flakier,
-but we can’t make it both fast and reliable.Introducing the testing/synctest packageThe  package solves this problem.
-It allows us to rewrite this test to be simple, fast, and reliable,
-without any changes to the code being tested.The package contains only two functions:  and . calls a function in a new goroutine.
-This goroutine and any goroutines started by it
-exist in an isolated environment which we call a .
- waits for every goroutine in the current goroutine’s bubble
-to block on another goroutine in the bubble.Let’s rewrite our test above using the  package.func TestAfterFunc(t *testing.T) {
-    synctest.Run(func() {
-        ctx, cancel := context.WithCancel(context.Background())
 
-        funcCalled := false
-        context.AfterFunc(ctx, func() {
-            funcCalled = true
-        })
-
-        synctest.Wait()
-        if funcCalled {
-            t.Fatalf("AfterFunc function called before context is canceled")
-        }
-
-        cancel()
-
-        synctest.Wait()
-        if !funcCalled {
-            t.Fatalf("AfterFunc function not called after context is canceled")
-        }
-    })
-}
-This is almost identical to our original test,
-but we have wrapped the test in a  call
-and we call  before asserting that the function has been called or not.The  function waits for every goroutine in the caller’s bubble to block.
-When it returns, we know that the context package has either called the function,
-or will not call it until we take some further action.This test is now both fast and reliable.The test is simpler, too:
-we have replaced the  channel with a boolean.
-Previously we needed to use a channel to avoid a data race between
-the test goroutine and the  goroutine,
-but the  function now provides that synchronization.The race detector understands  calls,
-and this test passes when run with .
-If we remove the second  call,
-the race detector will correctly report a data race in the test.Concurrent code often deals with time.Testing code that works with time can be difficult.
-Using real time in tests causes slow and flaky tests,
-as we have seen above.
-Using fake time requires avoiding  package functions,
-and designing the code under test to work with
-an optional fake clock.The  package makes it simpler to test code that uses time.Goroutines in the bubble started by  use a fake clock.
-Within the bubble, functions in the  package operate on the
-fake clock. Time advances in the bubble when all goroutines are
-blocked.To demonstrate, let’s write a test for the
- function.
- creates a child of a context,
-which expires after a given timeout.func TestWithTimeout(t *testing.T) {
-    synctest.Run(func() {
-        const timeout = 5 * time.Second
-        ctx, cancel := context.WithTimeout(context.Background(), timeout)
-        defer cancel()
-
-        // Wait just less than the timeout.
-        time.Sleep(timeout - time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != nil {
-            t.Fatalf("before timeout, ctx.Err() = %v; want nil", err)
-        }
-
-        // Wait the rest of the way until the timeout.
-        time.Sleep(time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != context.DeadlineExceeded {
-            t.Fatalf("after timeout, ctx.Err() = %v; want DeadlineExceeded", err)
-        }
-    })
-}
-We write this test just as if we were working with real time.
-The only difference is that we wrap the test function in ,
-and call  after each  call to wait for the context
-package’s timers to finish running.A key concept in  is the bubble becoming .
-This happens when every goroutine in the bubble is blocked,
-and can only be unblocked by another goroutine in the bubble.When a bubble is durably blocked:If there is an outstanding  call, it returns.Otherwise, time advances to the next time that could unblock a goroutine, if any.Otherwise, the bubble is deadlocked and  panics.A bubble is not durably blocked if any goroutine is blocked
-but might be woken by some event from outside the bubble.The complete list of operations which durably block a goroutine is:a send or receive on a nil channela send or receive blocked on a channel created within the same bubblea select statement where every case is durably blockingOperations on a  are not durably blocking.It is common for functions to acquire a global mutex.
-For example, a number of functions in the reflect package
-use a global cache guarded by a mutex.
-If a goroutine in a synctest bubble blocks while acquiring
-a mutex held by a goroutine outside the bubble,
-it is not durably blocked—it is blocked, but will be unblocked
-by a goroutine from outside its bubble.Since mutexes are usually not held for long periods of time,
-we simply exclude them from ’s consideration.Channels created within a bubble behave differently from ones created outside.Channel operations are durably blocking only if the channel is bubbled
-(created in the bubble).
-Operating on a bubbled channel from outside the bubble panics.These rules ensure that a goroutine is durably blocked only when
-communicating with goroutines within its bubble.External I/O operations, such as reading from a network connection,
-are not durably blocking.Network reads may be unblocked by writes from outside the bubble,
-possibly even from other processes.
-Even if the only writer to a network connection is also in the same bubble,
-the runtime cannot distinguish between a connection waiting for more data to arrive
-and one where the kernel has received data and is in the process of delivering it.Testing a network server or client with synctest will generally
-require supplying a fake network implementation.
-For example, the  function
-creates a pair of s that use an in-memory network connection
-and can be used in synctest tests.The  function starts a goroutine in a new bubble.
-It returns when every goroutine in the bubble has exited.
-It panics if the bubble is durably blocked
-and cannot be unblocked by advancing time.The requirement that every goroutine in the bubble exit before Run returns
-means that tests must be careful to clean up any background goroutines
-before completing.Let’s look at another example, this time using the 
-package to test a networked program.
-For this example, we’ll test the  package’s handling of
-the 100 Continue response.An HTTP client sending a request can include an “Expect: 100-continue”
-header to tell the server that the client has additional data to send.
-The server may then respond with a 100 Continue informational response
-to request the rest of the request,
-or with some other status to tell the client that the content is not needed.
-For example, a client uploading a large file might use this feature to
-confirm that the server is willing to accept the file before sending it.Our test will confirm that when sending an “Expect: 100-continue” header
-the HTTP client does not send a request’s content before the server
-requests it, and that it does send the content after receiving a
-100 Continue response.Often tests of a communicating client and server can use a
-loopback network connection. When working with ,
-however, we will usually want to use a fake network connection
-to allow us to detect when all goroutines are blocked on the network.
-We’ll start this test by creating an  (an HTTP client) that uses
-an in-memory network connection created by .func Test(t *testing.T) {
-    synctest.Run(func() {
-        srvConn, cliConn := net.Pipe()
-        defer srvConn.Close()
-        defer cliConn.Close()
-        tr := &http.Transport{
-            DialContext: func(ctx context.Context, network, address string) (net.Conn, error) {
-                return cliConn, nil
-            },
-            // Setting a non-zero timeout enables "Expect: 100-continue" handling.
-            // Since the following test does not sleep,
-            // we will never encounter this timeout,
-            // even if the test takes a long time to run on a slow machine.
-            ExpectContinueTimeout: 5 * time.Second,
-        }
-We send a request on this transport with the “Expect: 100-continue” header set.
-The request is sent in a new goroutine, since it won’t complete until the end of the test.        body := "request body"
-        go func() {
-            req, _ := http.NewRequest("PUT", "http://test.tld/", strings.NewReader(body))
-            req.Header.Set("Expect", "100-continue")
-            resp, err := tr.RoundTrip(req)
-            if err != nil {
-                t.Errorf("RoundTrip: unexpected error %v", err)
-            } else {
-                resp.Body.Close()
+func (c *Cache[K, V]) Get(key K) (*V, error) {
+    var newValue *V
+    for {
+        // Try to load an existing value out of the cache.
+        value, ok := cache.Load(key)
+        if !ok {
+            // No value found. Create a new mapped file if needed.
+            if newValue == nil {
+                var err error
+                newValue, err = c.create(key)
+                if err != nil {
+                    return nil, err
+                }
             }
-        }()
-We read the request headers sent by the client.        req, err := http.ReadRequest(bufio.NewReader(srvConn))
-        if err != nil {
-            t.Fatalf("ReadRequest: %v", err)
+
+            // Try to install the new mapped file.
+            wp := weak.Make(newValue)
+            var loaded bool
+            value, loaded = cache.LoadOrStore(key, wp)
+            if !loaded {
+                runtime.AddCleanup(newValue, func(key K) {
+                    // Only delete if the weak pointer is equal. If it's not, someone
+                    // else already deleted the entry and installed a new mapped file.
+                    cache.CompareAndDelete(key, wp)
+                }, key)
+                return newValue, nil
+            }
         }
-Now we come to the heart of the test.
-We want to assert that the client will not send the request body yet.We start a new goroutine copying the body sent to the server into a ,
-wait for all goroutines in the bubble to block, and verify that we haven’t read anything
-from the body yet.If we forget the  call, the race detector will correctly complain
-about a data race, but with the  this is safe.        var gotBody strings.Builder
-        go io.Copy(&gotBody, req.Body)
-        synctest.Wait()
-        if got := gotBody.String(); got != "" {
-            t.Fatalf("before sending 100 Continue, unexpectedly read body: %q", got)
+
+        // See if our cache entry is valid.
+        if mf := value.(weak.Pointer[V]).Value(); mf != nil {
+            return mf, nil
         }
-We write a “100 Continue” response to the client and verify that it now sends the
-request body.        srvConn.Write([]byte("HTTP/1.1 100 Continue\r\n\r\n"))
-        synctest.Wait()
-        if got := gotBody.String(); got != body {
-            t.Fatalf("after sending 100 Continue, read body %q, want %q", got, body)
-        }
-And finally, we finish up by sending the “200 OK” response to conclude the request.We have started several goroutines during this test.
-The  call will wait for all of them to exit before returning.        srvConn.Write([]byte("HTTP/1.1 200 OK\r\n\r\n"))
-    })
+
+        // Discovered a nil entry awaiting cleanup. Eagerly delete it.
+        cache.CompareAndDelete(key, value)
+    }
 }
-This test can be easily extended to test other behaviors,
-such as verifying that the request body is not sent if the server does not ask for it,
-or that it is sent if the server does not respond within a timeout.We are introducing 
-in Go 1.24 as an  package.
-Depending on feedback and experience
-we may release it with or without amendments,
-continue the experiment,
-or remove it in a future version of Go.The package is not visible by default.
-To use it, compile your code with  set in your environment.We want to hear your feedback!
-If you try out ,
-please report your experiences, positive or negative,
-on go.dev/issue/67434.]]></content:encoded></item><item><title>Protecting user data through source code analysis at scale</title><link>https://engineering.fb.com/2025/02/18/security/protecting-user-data-through-source-code-analysis/</link><author></author><category>dev</category><category>official</category><pubDate>Tue, 18 Feb 2025 20:30:49 +0000</pubDate><source url="https://engineering.fb.com/">Facebook engineering</source><content:encoded><![CDATA[detect potential scraping vectorsturning our attack vector criteria into static analysis rules# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.GET['viewer_id']
-target = request.GET['target_id']
-	count = request.GET['count']
-	if(can_see(viewer, target)):
-		followers = load_followers(target, count)
-		return followers
+Despite our best efforts, cleanups and weak pointers can still be error-prone.
+To guide those considering using finalizers, cleanups, and weak pointers, we
+recently updated the guide to the garbage
+collector with some advice
+about using these features.
+Take a look next time you reach for them, but also carefully consider whether
+you need to use them at all.
+These are advanced tools with subtle semantics and, as the guide says, most
+Go code benefits from these features indirectly, not from using them directly.
+Stick to the use-cases where these features shine, and you’ll be alright.For now, we’ll call out some of the issues that you are more likely to run into.First, the object the cleanup is attached to must be reachable from neither
+the cleanup function (as a captured variable) nor the argument to the cleanup
+function.
+Both of these situations result in the cleanup never executing.
+(In the special case of the cleanup argument being exactly the pointer passed
+to ,  will panic, as a signal to the
+caller that they should not use cleanups the same way as finalizers.)Second, when weak pointers are used as map keys, the weakly referenced object
+must not be reachable from the corresponding map value, otherwise the object
+will continue to remain live.
+This may seem obvious when deep inside of a blog post about weak pointers, but
+it’s an easy subtlety to miss.
+This problem inspired the entire concept of an
+ephemeron to resolve it, which is a
+potential future direction.Thirdly, a common pattern with cleanups is that a wrapper object is needed, like
+we see here with our  example.
+In this particular case, you could imagine the garbage collector directly
+tracking the mapped memory region and passing around the inner .
+Such functionality is possible future work, and an API for it has been recently
+proposed.Lastly, both weak pointers and cleanups are inherently non-deterministic, their
+behavior depending intimately on the design and dynamics of the garbage
+collector.
+The documentation for cleanups even permits the garbage collector never to run
+cleanups at all.
+Effectively testing code that uses them can be tricky, but it is
+possible.Weak pointers have been brought up as a feature for Go since nearly the
+beginning, but for years were not prioritized by the Go team.
+One reason for that is that they are subtle, and the design space of weak
+pointers is a minefield of decisions that can make them even harder to use.
+Another is that weak pointers are a niche tool, while simultaneously adding
+complexity to the language.
+We already had experience with how painful  could be to use.
+But there are some useful programs that are not expressible without them, and
+the  package and the reasons for its existence really emphasized that.With generics, the hindsight of finalizers, and insights from all the great work
+since done by teams in other languages like C# and Java, the designs for weak
+pointers and cleanups came together quickly.
+The desire to use weak pointers with finalizers raised additional questions,
+and so the design for  quickly came together as well.I want to thank everyone in the community who contributed feedback on the
+proposal issues and filed bugs when the features became available.
+I also want to thank David Chase for thoroughly thinking through weak
+pointer semantics with me, and I want to thank him, Russ Cox, and Austin
+Clements for their help with the design of .
+I want to thank Carlos Amedee for his work on getting 
+implemented, polished, landed for Go 1.24.
+And finally I want to thank Carlos Amedee and Ian Lance Taylor for their work
+replacing  with  throughout the
+standard library for Go 1.25.]]></content:encoded></item><item><title>Video: How to run dependency audits with GitHub Copilot</title><link>https://github.blog/developer-skills/github/video-how-to-run-dependency-audits-with-github-copilot/</link><author>Andrea Griffiths</author><category>official</category><pubDate>Wed, 5 Mar 2025 18:03:54 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Every software project faces the inevitable challenge of dependency management. Over time, dependencies become outdated, leading to security vulnerabilities. Others go unused, needlessly bloating build times. For many development teams, addressing these issues means running manual scripts, reviewing output files, and hoping nothing falls through the cracks.I recently transformed this error-prone manual process into an automated solution using a few tools on GitHub—GitHub Copilot, GitHub Actions, and Dependabot, to be specific (just in case you’re wondering). Here’s how you can do the same!So, let’s jump in (and make sure to watch the video above, too!).The problem with manual dependency auditsMost teams start with a simple approach to dependency management. This often includes a Bash script that runs periodically. Here’s what our manual script looks like:#!/bin/bash
+echo "Starting manual dependency audit..."
 
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.Get['viewer_id']
-	target = request.GET['target_id']
-	count = min(request.GET['count'], MAX_FOLLOWERS_RESULTS)
-	if(can_see(viewer, target)):
-	    followers = load_followers(target, count)
-		return followers
+# List all dependencies
+echo "Installed dependencies:"
+npm list --depth=0 > deps.txt
+cat deps.txt
 
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...]]></content:encoded></item></channel></rss>
+# Check for outdated ones
+echo -e "\nChecking outdated dependencies..."
+npm outdated > outdated.txt
+cat outdated.txt
+
+# Guess at unused ones (very crude)
+echo -e "\nLooking for potentially unused dependencies..."
+for dep in $(npm list --depth=0 | grep '├──' | cut -d' ' -f2 | cut -d@ -f1); do
+    if ! find . -type f -name "*.js" -o -name "*.tsx" -o -name "*.ts" | xargs grep -l "$dep" > /dev/null 2>&1; then
+        echo "$dep might be unused"
+    fi
+done
+
+echo "Done! Check deps.txt and outdated.txt manually. Phew that was a lot of work!"
+This approach has several limitations, including:It’s manual, so someone has to remember to run it (and let’s be honest, I often forget to run these in my own codebases).  The unused dependency check is crude, and often inaccurate.  Results are scattered across multiple output files.  It’s not integrated with workflows or CI/CD pipelines.There has to be a better way than this—right?How to simplify dependency audits on GitHubLuckily there is, in fact, a better solution than manual Bash script if you’re working on GitHub—and it starts with using a combination of our AI developer tool, GitHub Copilot, our automation and CI/CD tool. GitHub Actions, and Dependabot, our automated dependency tool.Here’s a step-by-step guide you can use to do this.Step 1: Use GitHub Copilot to create the action“Create a GitHub Action for dependency auditing with depcheck and issue posting. And a separate Dependabot workflow for managing outdated dependencies.”Remember our original bash script? With just a prompt, I shared the context (package.json and our manual script) and asked it to create an action that uses the dependency checker tool depcheck for more accurate detection of unused dependencies.Step 2: GitHub Copilot writes the GitHub ActionTo implement this GitHub Action, GitHub Copilot creates the new workflow file in .github/workflows/dependency-audit.yml. Here’s the workflow file Copilot helped create:name: Dependency Audit
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # Run weekly on Mondays
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install depcheck
+        run: npm install -g depcheck
+
+      - name: Run depcheck for unused dependencies
+        run: depcheck --json > unused-deps.json
+
+      - name: Run npm audit
+        run: npm audit --json > security-audit.json
+
+      - name: Generate report
+        run: |
+          echo "# Dependency Audit Report $(date)" > report.md
+          echo "## Unused Dependencies" >> report.md
+          cat unused-deps.json | jq -r '.dependencies[]' >> report.md
+          echo "## Security Issues" >> report.md
+          cat security-audit.json | jq '.metadata.vulnerabilities' >> report.md
+
+      - name: Create issue if problems found
+        uses: peter-evans/create-issue-from-file@v4
+        if: ${{ success() }}
+        with:
+          title: Weekly Dependency Audit
+          content-filepath: ./report.md
+          labels: maintenance, dependencies
+Step 3: Enable Dependabot# .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+The result: a fully automated dependency auditWith that, our dependency management is now fully automated. Let’s recap how it works:Our custom action uses depcheck to accurately identify unused dependencies.  Dependabot creates pull requests for outdated packages, complete with changelogs and risk assessments.  Security vulnerabilities are detected and reported weekly.  Everything is documented in GitHub Issues for team visibility.This approach not only saves time but also significantly reduces the security risks and performance issues that stem from poorly managed dependencies.By combining the AI capabilities of GitHub Copilot with GitHub Actions and Dependabot, we’ve turned a tedious manual task into an automated, integrated solution that keeps our codebase lean and secure. And I’ll take those time savings to do something more interesting, like unraveling the mystery of those weird goats in the TV show . Or who knows, maybe I’ll finally figure out what macrodata refinement even means in that show (does anyone have any idea yet? Season two is killing me).]]></content:encoded></item><item><title>Not just for developers: How product and security teams can use GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/not-just-for-developers-how-product-and-security-teams-can-use-github-copilot/</link><author>Akash Sharma</author><category>official</category><pubDate>Wed, 5 Mar 2025 17:00:06 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[In today’s fast-paced world where collaboration between technical and non-technical teams is vital, tools like GitHub Copilot are proving to be indispensable. These AI-powered tools are no longer just the secret weapons of developers—they’re becoming essential productivity boosters for product managers, program managers, security professionals, scrum masters, community managers, and quality analysts alike.While Copilot is widely praised for its role as a pair programmer, its potential stretches far beyond writing code. From automating tedious tasks to making complex processes more accessible, this tool is transforming how non-technical professionals tackle their daily challenges.Let’s take a look at how GitHub Copilot makes it easier for teams to work smarter, solve problems faster, and accomplish more together. 💪When working in GitHub, writing Markdown is a necessity. Whether you’re adding documentation, creating a report, opening an issue, or starting a discussion on GitHub, it’s all done in Markdown. This can be overwhelming when getting started, as Markdown requires familiarity with its syntax to add elements like headers, tables, lists, hyperlinks, and images, to name a few.Copilot can significantly ease this process by generating a template to work from, allowing you to focus on the content rather than the formatting. For example, let’s say you’re tasked with creating a fresh new README for your team’s repository. You can quickly generate a template using a prompt like this:Create a README file for my team's GitHub repo.
+The file should include sections for our team's objective, a link to our project's roadmap, and a team roster.
+The team roster should include small versions of our GitHub profile pictures, using ashtom as a placeholder, as well as the person's name and role.
+Copilot can also take raw, unstructured data and format it into Markdown. For example, maybe you have some notes captured in a separate application and you’re looking to move those notes into GitHub. Skip the intricate reformatting step by asking Copilot to do it for you:Reformat the following content into Markdown code:
+
+<paste in raw unstructured notes>
+And within seconds you’ll have a new version of your notes that are ready to make their way into a Markdown file, issue, or discussion:Reviewing content with CopilotOn top of helping you write and format content, Copilot can review content for typos, style, and clarity. And let’s face it, after working on the same document for hours a second set of eyes can go a long way. To start a Copilot review, highlight all of the text that you want Copilot to analyze, right click and select the  sub-menu and click .You can further customize Copilot’s review instructions by configuring the Copilot Chat settings in VS Code. This is great when you want Copilot to critique your work in specific ways like having Copilot assume a certain role, or encouraging Copilot to think about a specific target audience.Automating reporting and spreadsheet manipulationWorking with spreadsheets is a crucial yet time-consuming task for many professionals, especially project managers and security analysts. Whether it’s tracking project progress, generating compliance reports, or analyzing security logs, manually processing data can be a tedious and error-prone process.With GitHub Copilot, you can automate these repetitive tasks, streamline data manipulation, and generate reports faster—all with AI-assisted code suggestions. With just a beginner level understanding of Python, Copilot can teach you how to code as it helps you write a script to process and manipulate your files. Let’s take a look at how to do that in action, starting with a prompt that clarifies your experience and intent:Create a Python script that parses this CSV file and creates new CSV files for each unique Assignee with their tasks.
+Let's think step by step. Explain the steps as if I have no prior experience with python. I'm using MacOS.
+Copilot explains how to perform the data manipulation with Python, as well as how to create and run a Python script. And if you run into an error, Copilot can help explain why it occurred and what you should do about it.Understanding code in natural languageNon-technical team members often encounter snippets of code that seem like a foreign language. If you’re a community manager, for example, you might need help interpreting code while moderating discussions, assisting users, or collaborating with developers. Copilot Chat can translate that code into clear, simple language, helping you to understand its purpose without a computer science degree:Before: if (user.isAdmin) { grantAccess(); }After Copilot Chat: “This code checks if a user is an admin and grants them access if they are.”Copilot is also great at explaining what a GitHub Actions workflow does. While Actions is a great automation tool, there is certainly a learning curve associated with creating workflows. Copilot can act as a mentor, explaining what each part of the workflow does for those who are new and eager to learn.Take for example, this simple prompt to learn about an Actions workflow that has something to do with stale issues and pull requests:What does this workflow file do? Explain it as if I had no prior GitHub Actions experience.
+Creating GitHub Issue templatesIssue templates are a great way to streamline the collection of information in a consistent fashion by providing a template in Markdown. Issue forms provide a more user-friendly method for gathering that information, but require knowledge of YAML and specific keywords. Copilot can help elevate your issue template game by providing the YAML boilerplate code needed for issue forms.Start by prompting Copilot with an outline of what you want to achieve, being as specific as possible about default labels, assignees, and the form fields you want to include. Test out the look and feel of the template by adding it as a  file under the  directory in a GitHub repository.Create the yml for a GitHub issue template using issue forms. Include a default title of "[REQUEST SHORT DESCRIPTION]".
+Assign the issue to CallMeGreg with the default label "New Request".
+Include a section for the request description, and a drop down for which product it rolls up to: Web, Mobile, or Desktop. Add a field for priority: High, Medium, Low.
+Remember to ask follow up questions to fix errors, adjust styling, add ghost text, change the order of the fields… you’re the pilot! In a matter of seconds you can wind up with an issue template like this:Learn how to contribute in GitHubProper collaboration in GitHub requires an understanding of a few concepts, like branching and pull requests. Creating a branch in a Git repository allows you to create a separate copy of the codebase to work on new changes. Once the work on a branch is complete, a pull request is created to propose merging the changes back into the main codebase.Whether you’re making updates to the repository’s documentation, or suggesting your very first code change in a shared space, following these practices facilitates peer review and allows team members to discuss and review the changes before they are made official.The good news is that Copilot can teach you these concepts by providing a step-by-step guide for your first contribution. For example, navigate to https://github.com/copilot and try this prompt:I want to make my first contriibution to a GitHub repository. I want to do all of my work in the GitHub UI.
+Help me get started with branching and pull requests. Explain step by step.
+For those folks in developer-adjacent roles (looking at you data analysts and security engineers 👀) remembering the right commands, subcommands, and flags in the Command Line Interface (CLI) can be hard. You might have found yourself asking questions like:“What are the right  values again?”“How did I recursively search for a file that one time?”“What does that alphabet soup after a  command do anyway?”And with Copilot, answers to all of these questions and more are at your fingertips. With Copilot in the CLI, you can ask for explanations, or even have Copilot generate a new command, without the context switching associated with a web search.Here’s an example of that simplicity in action:gh copilot explain "tar –xvzf filename.tar.gz"
+Or perhaps you can’t remember the exact syntax for a command you’ve run before. Copilot can help get you there by describing what you want to achieve in natural language, like this:gh copilot suggest "recursively find all csv files in this directory"
+A new era of collaboration has begun. GitHub Copilot isn’t just for developers—it’s a productivity powerhouse for everyone. By automating tedious tasks, simplifying complex processes, and bridging the gap between technical and non-technical teams, Copilot acts as a mentor and force multiplier.So, why not let Copilot help you work smarter, not harder? Whether you’re a product manager, security professional, or community manager, there’s a use case waiting to transform your workflow.Got a use case to share or feedback on how Copilot has helped your team? Join the conversation in our community discussion and let us know how you’re using Copilot to boost productivity!Let’s embrace the future of collaboration together. 💪]]></content:encoded></item><item><title>Angular 19.2 Is Now Available</title><link>https://blog.angular.dev/angular-19-2-is-now-available-673ec70aea12?source=rss----447683c3d9a3---4</link><author>Angular</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Wed, 5 Mar 2025 16:55:07 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[And we’re back with Angular’s latest minor release, version 19.2, bringing new APIs and experimental features to empower developers on their next great app.Expanding reactivity beyond synchronousIn Angular v19 we released the experimental resource API, continuing our reactivity story to a new chapter — asynchronous reactivity.With this release, we’re thrilled to introduce two significant updates: asynchronous reactivity with the new httpResource and resource streaming with rxResource APIs.Developers have been able to use signals for synchronous state in Angular since their introduction in Angular v16. At the same time developers have been curious as to how they can leverage the power, readability and maintainability of signals for asynchronous dependencies. The resource API makes it possible to interact with asynchronous data sources while leveraging the developer experience and ergonomics of signals. The resource API is a foundational building block for incorporating asynchronous actions like data fetching in Angular.Here’s an example of how you can use resourcein your application:/*  component.tsreadonly id = signal(1);readonly todoResource = resource({  request: ()=> ({id: this.id()}),  loader: async ({request}) => (await fetch(    `https://jsonplaceholder.typicode.com/todos/${request.id}`)).json(),  component.html<p>{{ todoResource.value() }}</p>If the id value updates, the loader reactively triggers the defined asynchronous operation . Then, in the template for the component, the current value can be accessed via .value().While this API is helpful, one might naturally conclude that they should use this API to fetch data asynchronously. Thanks to Mattieu Rigler for his helpful contributions, we now have another great new API for you to try out: httpResourceUsed for fetching data, the experimental httpResource API creates a low friction reactive way to fetch data over HTTP. httpResource participates in Angular’s reactivity system with signals. Here’s an example of using it in action:// returns a signalcurrentUserId = getCurrentUserId();// A reactive function as argumentuser = httpResource(() => `/api/user/${currentUserId()}`); Here, httpResource reacts to changes in the signal currentUserId. When currentUserId updates, httpResource triggers a new asynchronous request. Because the API leverages HttpClientit gives you access to features such as interceptors.While we’re on the topic of asynchronous requests there’s one more update that we think you’ll really enjoy. We’ve added support for streaming multiple responses using the rxResource API. Check out this example:/*  component.ts   Using a BehaviorSubject and an setInterval to create a stream of values  that generates a new value every 1000ms readonly subject = new BehaviorSubject<number>(1);readonly intervalId = setInterval(() => {  this.subject.next(this.subject.value + 1);/* rxResource will stream values as they arrive */readonly resource = rxResource({  loader: () => this.subject,}); component.html Display the latest values that have been returned*/  <p>{{ resource.value() }}</p>This could be helpful in scenarios where you are connecting to an endpoint that returns multiple values.Better template ergonomics and moreThe Angular template authoring experience just keeps improving. Angular templates now support untagged template literal expressions, making string concatenation and escaping single or double quote strings easier.For example, it’s less cumbersome to dynamically interpolate a value from your class into your template. Check out this example:<div [class]="`layout col-${colWidth}`"></div>This improved experience makes interpolating values even smoother.This isn’t the only update we’re launching in Angular v19.2 — there are new migrations such as being able to migrate to convert to self closing tags (thanks eneajaho!), supporting the Set type in forms, adding skip hydration diagnostic and so much more. If you’d like to see even more updates from Angular v19.2, be sure to check out the change log on GitHub.Get the latest and greatest from Angular todayAngular v19.2 is ready for your applications today so go ahead, update and go build great apps.]]></content:encoded></item><item><title>Title Launch Observability at Netflix Scale</title><link>https://netflixtechblog.com/title-launch-observability-at-netflix-scale-8efe69ebd653?source=rss----2615bd06b42e---4</link><author>Netflix Technology Blog</author><category>dev</category><category>official</category><pubDate>Wed, 5 Mar 2025 01:24:53 +0000</pubDate><source url="https://netflixtechblog.com/?source=rss----2615bd06b42e---4">Netflix Tech Blog</source><content:encoded><![CDATA[Part 3: System Strategies and ArchitectureThis blog post is a continuation of Part 2, where we cleared the ambiguity around title launch observability at Netflix. In this installment, we will explore the strategies, tools, and methodologies that were employed to achieve comprehensive title observability at scale.Defining the observability endpointTo create a comprehensive solution, we decided to introduce observability endpoints first. Each microservice involved in our  that integrated with our observability solution had to introduce a new “Title Health” endpoint. Our goal was for each new endpoint to adhere to a few principles:Accurate reflection of production behaviorStandardization across all endpointsAnswering the Insight Triad: “Healthy” or not, why not and how to fix it.Accurately Reflecting Production BehaviorA key part of our solution is insights into production behavior, which necessitates our requests to the endpoint result in traffic to the real service functions that mimics the same pathways the traffic would take if it came from the usual callers.In order to allow for this mimicking, many systems implement an “event” handling, where they convert our request into a call to the real service with properties enabled to log when titles are filtered out of their response and why. Building services that adhere to software best practices, such as Object-Oriented Programming (OOP), the SOLID principles, and modularization, is crucial to have success at this stage. Without these practices, service endpoints may become tightly coupled to business logic, making it challenging and costly to add a new endpoint that seamlessly integrates with the observability solution while following the same production logic.To standardize communication between our observability service and the personalization stack’s observability endpoints, we’ve developed a stable proto request/response format. This centralized format, defined and maintained by our team, ensures all endpoints adhere to a consistent protocol. As a result, requests are uniformly handled, and responses are processed cohesively. This standardization enhances adoption within the personalization stack, simplifies the system, and improves understanding and debuggability for engineers.To efficiently understand the health of a title and triage issues quickly, all implementations of the observability endpoint must answer: is the title eligible for this phase of promotion, if not — why is it not eligible, and what can be done to fix any problems.The end-users of this observability system are Launch Managers, whose job it is to ensure smooth title launches. As such, they must be able to quickly see whether there is a problem, what the problem is, and how to solve it. Teams implementing the endpoint must provide as much information as possible so that a non-engineer (Launch Manager) can understand the root cause of the issue and fix any title setup issues as they arise. They must also provide enough information for partner engineers to identify the problem with the underlying service in cases of system-level issues.These requirements are captured in the following protobuf object that defines the endpoint response.We’ve distilled our comprehensive solution into the following key steps, capturing the essence of our approach:Establish observability endpoints across all services within our Personalization and Discovery Stack.Implement proactive monitoring for each of these endpoints.Track real-time title impressions from the Netflix UI.Store the data in an optimized, highly distributed datastore.Offer easy-to-integrate APIs for our dashboard, enabling stakeholders to track specific titles effectively.“Time Travel” to validate ahead of time.In the following sections, we will explore each of these concepts and components as illustrated in the diagram above.Proactive monitoring through scheduled collectors jobsOur Title Health microservice runs a scheduled collector job every 30 minutes for most of our personalization stack.For each Netflix row we support (such as Trending Now, Coming Soon, etc.), there is a dedicated collector. These collectors retrieve the relevant list of titles from our catalog that qualify for a specific row by interfacing with our catalog services. These services are informed about the expected subset of titles for each row, for which we are assessing title health.Once a collector retrieves its list of candidate titles, it orchestrates batched calls to assigned row services using the above standardized schema to retrieve all the relevant health information of the titles. Additionally, some collectors will instead poll our kafka queue for impressions data.Real-time Title Impressions and Kafka QueueIn addition to evaluating title health via our personalization stack services, we also keep an eye on how our recommendation algorithms treat titles by reviewing impressions data. It’s essential that our algorithms treat all titles equitably, for each one has limitless potential.This data is processed from a real-time impressions stream into a Kafka queue, which our title health system regularly polls. Specialized collectors access the Kafka queue every two minutes to retrieve impressions data. This data is then aggregated in minute(s) intervals, calculating the number of impressions titles receive in near-real-time, and presented as an additional health status indicator for stakeholders.Data storage and distribution through Hollow FeedsNetflix Hollow is an Open Source java library and toolset for disseminating in-memory datasets from a single producer to many consumers for high performance read-only access. Given the shape of our data, hollow feeds are an excellent strategy to distribute the data across our service boxes.Once collectors gather health data from partner services in the personalization stack or from our impressions stream, this data is stored in a dedicated Hollow feed for each collector. Hollow offers numerous features that help us monitor the overall health of a Netflix row, including ensuring there are no large-scale issues across a feed publish. It also allows us to track the history of each title by maintaining a per-title data history, calculate differences between previous and current data versions, and roll back to earlier versions if a problematic data change is detected.Observability Dashboard using Health Check EngineWe maintain several dashboards that utilize our title health service to present the status of titles to stakeholders. These user interfaces access an endpoint in our service, enabling them to request the current status of a title across all supported rows. This endpoint efficiently reads from all available Hollow Feeds to obtain the current status, thanks to Hollow’s in-memory capabilities. The results are returned in a standardized format, ensuring easy support for future UIs.Additionally, we have other endpoints that can summarize the health of a title across subsets of sections to highlight specific member experiences.Time Traveling: Catching before launchTitles launching at Netflix go through several phases of pre-promotion before ultimately launching on our platform. For each of these phases, the first several hours of promotion are critical for the reach and effective personalization of a title, especially once the title has launched. Thus, to prevent issues as titles go through the launch lifecycle, our observability system needs to be capable of simulating traffic ahead of time so that relevant teams can catch and fix issues before they impact members. We call this capability .Many of the metadata and assets involved in title setup have specific timelines for when they become available to members. To determine if a title will be viewable at the start of an experience, we must simulate a request to a partner service as if it were from a future time when those specific metadata or assets are available. This is achieved by including a future timestamp in our request to the observability endpoint, corresponding to when the title is expected to appear for a given experience. The endpoint then communicates with any further downstream services using the context of that future timestamp.Throughout this series, we’ve explored the journey of enhancing title launch observability at Netflix. In Part 1, we identified the challenges of managing vast content launches and the need for scalable solutions to ensure each title’s success. Part 2 highlighted the strategic approach to navigating ambiguity, introducing “Title Health” as a framework to align teams and prioritize core issues. In this final part, we detailed the sophisticated system strategies and architecture, including observability endpoints, proactive monitoring, and “Time Travel” capabilities; all designed to ensure a thrilling viewing experience.By investing in these innovative solutions, we enhance the discoverability and success of each title, fostering trust with content creators and partners. This journey not only bolsters our operational capabilities but also lays the groundwork for future innovations, ensuring that every story reaches its intended audience and that every member enjoys their favorite titles on Netflix.Thank you for joining us on this exploration, and stay tuned for more insights and innovations as we continue to entertain the world.]]></content:encoded></item><item><title>Building multimodal AI for Ray-Ban Meta glasses</title><link>https://engineering.fb.com/2025/03/04/virtual-reality/building-multimodal-ai-for-ray-ban-meta-glasses/</link><author></author><category>dev</category><category>official</category><pubDate>Tue, 4 Mar 2025 21:24:18 +0000</pubDate><source url="https://engineering.fb.com/">Facebook engineering</source><content:encoded><![CDATA[With our Ray-Ban Meta glasses, multimodal AI helps the glasses see what the wearer is seeing. This means anyone wearing Ray-Ban Meta glasses can ask them questions about what they’re looking at. The glasses can provide information about a landmark, translate text you’re looking at, and many other features.But what does it take to bring AI into a wearable device?On this episode of the Meta Tech Podcast, meet Shane, a research scientist at Meta who has spent the last seven years focusing on computer vision and multimodal AI for wearables. Shane and his team have been behind cutting edge AI research like AnyMAL, a unified language model that can reason over an array of input signals including text, audio, video, and even IMU motion sensor data.Shane sits down with Pascal Hartig to share how his team is building foundational models for the Ray-Ban Meta glasses. They talk about the unique challenges of AI glasses and pushing the boundaries of AI-driven wearable technology.Whether you’re an engineer, a tech enthusiast, or simply curious, this episode has something for everyone!Download or listen to the episode below:
+You can also find the episode wherever you get your podcasts, including:The Meta Tech Podcast is a podcast, brought to you by Meta, where we highlight the work Meta’s engineers are doing at every level – from low-level frameworks to end-user features.And if you’re interested in learning more about career opportunities at Meta visit the Meta Careers page.The role of research scientist over time 3:03What’s Multi-Modal AI? 5:45Applying Multi-Modal AI in Meta’s products 7:21Acoustic modalities beyond speech 9:17Iterating on models 17:28How do we process a request from the glasses? 21:53Processing moving images 23:44Scaling to billions of users 26:01Where lies the optimization potential? 28:12Incorporating feedback 29:08Open-source influence 31:30Working with industry experts at Meta 36:18]]></content:encoded></item><item><title>A case for QLC SSDs in the data center</title><link>https://engineering.fb.com/2025/03/04/data-center-engineering/a-case-for-qlc-ssds-in-the-data-center/</link><author></author><category>dev</category><category>official</category><pubDate>Tue, 4 Mar 2025 17:00:26 +0000</pubDate><source url="https://engineering.fb.com/">Facebook engineering</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Finding leaked passwords with AI: How we built Copilot secret scanning</title><link>https://github.blog/engineering/platform-security/finding-leaked-passwords-with-ai-how-we-built-copilot-secret-scanning/</link><author>Ashwin Mohan</author><category>official</category><pubDate>Tue, 4 Mar 2025 17:00:24 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[In October 2024, we announced the general availability of Copilot secret scanning, leveraging AI to detect generic passwords in users’ codebases. This post describes how Copilot secret scanning works under the hood, the challenges we ran into when developing it, and the framework we use for testing and iteration.What is Copilot secret scanning?Copilot secret scanning is a feature of GitHub Secret Protection, which protects millions of repositories on GitHub by detecting hundreds of pattern types through our partner program. The precision of these detections is paramount for security teams and developers when dealing with security alerts. Historically, our detection approach has relied on regular expressions, which is an effective method for identifying secrets with strict, provider-minted formats. However, this method struggles with the nuanced and varied structures of generic passwords, often generating excessive noise for security teams and developers.We now detect generic passwords with GitHub Copilot, using AI to analyze context—such as the usage and location of a potential secret—to limit noise and deliver relevant alerts that are critical to the health and security of your repositories.Getting to the point where we were confident in our password precision was a journey over many test cases, prompt iterations, and model changes. Let’s dive in to explore what we learned along the way and find out where we’re going.The private preview highlighted a problem early on: unconventional file types and structuresAt the core of Copilot secret scanning lies a request to a large language model (LLM), expressed through an LLM prompt consisting of:General information about the type of vulnerability, in this case passwords.  The source code location and contents of the file where we believe the vulnerability may exist.  A strict JSON format specification for the model output, to allow for automated processing.Our first iteration of the prompt used the few-shot prompting technique, which provides the LLM with example inputs and outputs to demonstrate how to perform the task. We wanted a resource-effective model to run the detections at scale and landed on GPT-3.5-Turbo. In parallel, we developed a basic offline evaluation framework, including manually curated test cases with both positive and negative findings, to help us validate that our approach was sound before deploying it to customers.We deployed this first iteration to our private preview participants and immediately noticed a problem. While it worked reasonably well at identifying credentials in our offline evaluation, it would fail spectacularly in some customer repositories. The model had difficulty interpreting file types and structures not typically seen in the conventional coding languages and patterns that LLMs train on.This experience revealed the complexity of the problem and the limiting nature of LLMs. We had to reevaluate our approach.The road to public preview: Improving offline evaluation and promptingIn response to these initial results, we enhanced the offline evaluation framework in a few key ways. First, we added reports from private preview participants to increase the diversity of our test cases. Next, we enhanced the framework so that we could visually identify and analyze deviations resulting from model or prompt changes. This allowed us to better see the impact of customizing different steps in our prompting strategy. Finally, we leveraged the GitHub Code Security team’s evaluation processes to create a data collection pipeline, and used GPT-4 to create our own test cases based on learnings from existing secret scanning alerts in open source repositories.This improved offline evaluation and gave us the breadth needed to measure both precision and recall. Precision is the ability to find secrets more accurately, with concerns to the false positive rate, while recall is the ability to find secrets more reliably, with concerns to the false negative rate.From here, we ran a series of experiments to evaluate detection quality:What if we tried a different model?  What if we ran the prompt multiple times and somehow combined the responses?   What if we ran two different prompts on two different models in sequence?  How do we better handle the nondeterministic nature of LLM responses?More specifically, we started experimenting with a few different mechanisms to improve our detection with the LLM.We tried voting (asking the model the same question many times), which allowed for more deterministic responses but had no material impact on our precision.We also tried using a larger model (GPT-4) trained on a larger set of parameters as a confirming scanner, to validate the accuracy of candidates found by GPT-3.5-Turbo. This helped improve precision without reducing our recall, but was also more resource intensive.We also tried a few different prompting strategies, such as Fill-in-the-Middle, Zero-Shot, and Chain-of-Thought. We ended up collaborating with our colleagues at Microsoft and used their MetaReflection technique, a novel offline reinforcement learning technique that allows experiential learnings from past trials to come up with a hybrid Chain of Thought (CoT) and few-shot prompt that improves precision with a small penalty in recall.We ultimately ended up using a combination of all these techniques and moved Copilot secret scanning into public preview, opening it widely to all GitHub Secret Protection customers. This brings us to our next hurdle: scale.Scaling out capacity for a public previewSecret scanning not only scans incoming Git pushes, but also your entire Git history on all branches. With each new customer, the necessary resources increase linearly. Rather than simply expanding LLM capacity, we focused on striking the most effective balance between value and cost to ensure optimal performance and efficiency. Before tackling how we managed the resources, we tried to find ways to reduce resource usage itself by:Identifying and excluding a class of changes from scanning (such as media files or language files that contain “test,” “mock,” or “spec” in the filepath), because we expected they would never contain credentials or they would be incomprehensible to the model.  Experimenting with newer models, such as GPT-4-Turbo and GPT-4o-mini, that were expected to be less resource intensive without compromising on performance and latency.   Experimenting with different context windows to find one that reduced resources without significantly increasing latency for the LLM to respond to our queries.   Making improvements to how we tokenize the content we want to scan, including retaining some memory of previous tokenizations while processing new parts of a file.While some of these efforts proved fruitful, such as limiting the content we scanned, other efforts were less effective. For example, breaking down content into smaller pieces didn’t have much of an impact, while using a more powerful model did.Ultimately, the most impactful change came from creating a workload-aware request management system that allowed us to maximize and equitably share LLM capacity against the variety of different workloads we run during scans.In building the system, we noticed a fundamental problem that needed addressing in our capacity management: assigning specific rate limits to individual workloads (such as scanning incoming Git commits or scanning the full history) was suboptimal. As each workload was tied to specific traffic patterns—Git commits, for example, tend to correlate with working hours, while full history scanning correlates with discrete events like a security manager or administrator enabling the feature on a new organization—it was easy to land in a situation where an individual workload could run into rate limits within its operational context, leaving additional resources available elsewhere unused.We drew significant inspiration from existing solutions in this space, such as Doorman, GitHub’s own Freno, and various other weighted, fair-priority, queue-related algorithms. We came up with an algorithm that allows us to set a range of limits for each workload, preventing the workload from completely overwhelming the LLM, while allowing it to tap into resources from other workloads going unused at the moment. This strategy was so effective at maximizing utilization that we ended up using it within Copilot Autofix and security campaigns as well.Mirror testing our way to general availabilityAchieving confidence in detection quality was crucial for moving Copilot secret scanning to general availability. We implemented a mirror testing framework that ran our prompt and filtering changes against a subset of repositories that participated in our public preview. Rescanning these repositories with our latest improvements allowed us to assess the change in real alert volumes and false positive resolutions, without impacting users.We found a huge drop in detections and false positives with very few missing real passwords. In some cases, we saw a 94% reduction in false positives across organizations! This before-and-after comparison indicated that all the different changes we made during private and public preview led to increased precision without sacrificing recall, and that we were ready to provide a reliable and efficient detection mechanism to all GitHub Secret Protection customers.Copilot secret scanning is now detecting passwords on nearly 35% of all GitHub Secret Protection repositories. We’re continuing to monitor performance and apply lessons learned as we leverage the tooling we created along the way: Security and development teams need accurate and actionable alerts without the noise—this is always our primary goal.  Including diverse test cases: We continue to incorporate examples based on learnings from customer feedback into our test bed as we refine our detection capabilities.   Effective resource management: We always need to balance scalability with performance.   Collaborative innovation: Partnering with other GitHub and Microsoft teams helps us push the boundaries of what Copilot can achieve.These learnings are also shared across Copilot Autofix, which continues to expand coverage for code scanning alerts and helps development teams remediate code scanning alerts quickly.Since our general availability launch, enablement for Copilot secret scanning has been included in security configurations, allowing you to control which repositories are detecting secrets across your organizations or enterprise. We’re dedicated to continuous improvement through ongoing monitoring, mirror testing, and approach refinement based on customer feedback and detection trends. Copilot secret scanning serves as a critical component for robust application security and will evolve to meet the dynamic needs of our users.Copilot secret scanning is a feature of , which offers enterprise-ready solutions for preventing accidental secret exposure in your repositories.  is available to purchase starting April 1, 2025.]]></content:encoded></item><item><title>Announcing rustup 1.28.1</title><link>https://blog.rust-lang.org/2025/03/04/Rustup-1.28.1.html</link><author>The Rustup Team</author><category>dev</category><category>official</category><category>rust</category><pubDate>Tue, 4 Mar 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[The rustup team is happy to announce the release of rustup version 1.28.1.
+Rustup is the recommended tool to install Rust, a programming language that is empowering everyone to build reliable and efficient software.Challenges with rustup 1.28.0rustup 1.28.0 was a significant release with many changes, and there was a quick response from many
+folks that this release broke their processes. While we considered yanking the release, we worried
+that this would cause problems for people who had already updated to adopt some of the changes.
+Instead, we are rolling forward with 1.28.1 today and potentially further bugfix releases to
+address the feedback that comes in.We value all constructive feedback -- please keep it coming in the issue tracker. In particular,
+the change with regard to implicit toolchain installation is being discussed in this issue.What's new in rustup 1.28.1This release contains the following fixes:Automatic install is enabled by default but can be opted out by setting 
+environment variable to . pr#4214pr#4227rustup show active-toolchain will only print a single line, as it did in 1.27. pr#4221Fixed a bug in the reqwest backend that would erroneously timeout downloads after 30s. pr#4218Use relative symlinks for proxies. pr#4226If you have a previous version of rustup installed, getting rustup 1.28.1 is as easy as stopping
+any programs which may be using Rustup (e.g. closing your IDE) and running:Rustup will also automatically update itself at the end of a normal toolchain update:If you don't have it already, you can get rustup from the appropriate page on our website.Rustup releases can come with problems not caused by rustup itself but just due to having a new release.
+As such, we recommend paying attention to the following potential issues in particular:Anti-malware scanners might be blocking rustup or stopping it from creating or copying files
+(especially when installing , since it contains many small files).In your CI environment, rustup might fail when trying to perform a self-update.This is a known issue,
+and in the case where this issue does occur, we recommend applying the following workaround at the beginning of your workflow:$ rustup set auto-self-update disable
+Also, starting from 1.28.0, rustup will no longer attempt to self-update in CI environments,
+so this workaround should not be necessary in the future.These issues should be automatically resolved in a few weeks when the anti-malware scanners are updated to be aware of the new rustup release,
+and the hosted version is updated across all CI runners.Thanks to the rustup and t-release team members who came together to quickly address these issues.]]></content:encoded></item><item><title>Spotlight on SIG etcd</title><link>https://kubernetes.io/blog/2025/03/04/sig-etcd-spotlight/</link><author></author><category>official</category><category>k8s</category><category>devops</category><pubDate>Tue, 4 Mar 2025 00:00:00 +0000</pubDate><source url="https://kubernetes.io/">Kubernetes Blog</source><content:encoded><![CDATA[Frederico: Hello, thank you for the time! Let’s start with some introductions, could you tell us a
+bit about yourself, your role and how you got involved in Kubernetes. Hello, I am Benjamin. I am a SIG etcd Tech Lead and one of the etcd maintainers. I
+work for VMware, which is part of the Broadcom group. I got involved in Kubernetes & etcd & CSI
+(Container Storage Interface)
+because of work and also a big passion for open source. I have been working on Kubernetes & etcd
+(and also CSI) since 2020. Hey team, I’m James, a co-chair for SIG etcd and etcd maintainer. I work at Red Hat as a
+Specialist Architect helping people adopt cloud native technology. I got involved with the
+Kubernetes ecosystem in 2019. Around the end of 2022 I noticed how the etcd community and project
+needed help so started contributing as often as I could. There is a saying in our community that
+"you come for the technology, and stay for the people": for me this is absolutely real, it’s been a
+wonderful journey so far and I’m excited to support our community moving forward. Hey everyone, I'm Marek, the SIG etcd lead. At Google, I lead the GKE etcd team, ensuring
+a stable and reliable experience for all GKE users. My Kubernetes journey began with SIG
+Instrumentation, where I
+created and led the Kubernetes Structured Logging effort.
+I'm still the main project lead for Kubernetes Metrics Server,
+providing crucial signals for autoscaling in Kubernetes. I started working on etcd 3 years ago,
+right around the 3.5 release. We faced some challenges, but I'm thrilled to see etcd now the most
+scalable and reliable it's ever been, with the highest contribution numbers in the project's
+history. I'm passionate about distributed systems, extreme programming, and testing. Hi there, my name is Wenjia, I am the co-chair of SIG etcd and one of the etcd
+maintainers. I work at Google as an Engineering Manager, working on GKE (Google Kubernetes Engine)
+and GDC (Google Distributed Cloud). I have been working in the area of open source Kubernetes and
+etcd since the Kubernetes v1.10 and etcd v3.1 releases. I got involved in Kubernetes because of my
+job, but what keeps me in the space is the charm of the container orchestration technology, and more
+importantly, the awesome open source community.Frederico: Excellent, thank you. I'd like to start with the origin of the SIG itself: SIG etcd is
+a very recent SIG, could you quickly go through the history and reasons behind its creation?: Absolutely! SIG etcd was formed because etcd is a critical component of Kubernetes,
+serving as its data store. However, etcd was facing challenges like maintainer turnover and
+reliability issues. Creating a dedicated SIG
+allowed us to focus on addressing these problems, improving development and maintenance processes,
+and ensuring etcd evolves in sync with the cloud-native landscape.Frederico: And has becoming a SIG worked out as expected? Better yet, are the motivations you just
+described being addressed, and to what extent?: It's been a positive change overall. Becoming a SIG has brought more structure and
+transparency to etcd's development. We've adopted Kubernetes processes like KEPs
+(Kubernetes Enhancement Proposals
+and PRRs (Production Readiness Reviews,
+which has improved our feature development and release cycle.Frederico: On top of those, what would you single out as the major benefit that has resulted from
+becoming a SIG?: The biggest benefits for me was adopting Kubernetes testing infrastructure, tools like
+Prow and TestGrid. For large projects like
+etcd there is just no comparison to the default GitHub tooling. Having known, easy to use, clear
+tools is a major boost to the etcd as it makes it much easier for Kubernetes contributors to also
+help etcd.: Totally agree, while challenges remain, the SIG structure provides a solid foundation
+for addressing them and ensuring etcd's continued success as a critical component of the Kubernetes
+ecosystem.The positive impact on the community is another crucial aspect of SIG etcd's success that I’d like
+to highlight. The Kubernetes SIG structure has created a welcoming environment for etcd
+contributors, leading to increased participation from the broader Kubernetes community. We have had
+greater collaboration with other SIGs like SIG API
+Machinery,
+SIG Scalability,
+SIG Testing,
+SIG Cluster Lifecycle, etc.This collaboration helps ensure etcd's development aligns with the needs of the wider Kubernetes
+ecosystem. The formation of the etcd Operator Working Group
+under the joint effort between SIG etcd and SIG Cluster Lifecycle exemplifies this successful
+collaboration, demonstrating a shared commitment to improving etcd's operational aspects within
+Kubernetes.Frederico: Since you mentioned collaboration, have you seen changes in terms of contributors and
+community involvement in recent months?: Yes -- as showing in our
+unique PR author data
+we recently hit an all time high in March and are trending in a positive direction:Frederico: That's quite telling, thank you. In terms of the near future, what are the current
+priorities for SIG etcd?: Reliability is always top of mind -– we need to make sure etcd is rock-solid. We're also
+working on making etcd easier to use and manage for operators. And we have our sights set on making
+etcd a viable standalone solution for infrastructure management, not just for Kubernetes. Oh, and of
+course, scaling -– we need to ensure etcd can handle the growing demands of the cloud-native world.: I agree that reliability should always be our top guiding principle. We need to ensure
+not only correctness but also compatibility. Additionally, we should continuously strive to improve
+the understandability and maintainability of etcd. Our focus should be on addressing the pain points
+that the community cares about the most.Frederico: Are there any specific SIGs that you work closely with?: SIG API Machinery, for sure – they own the structure of the data etcd stores, so we're
+constantly working together. And SIG Cluster Lifecycle – etcd is a key part of Kubernetes clusters,
+so we collaborate on the newly created etcd operator Working group.: Other than SIG API Machinery and SIG Cluster Lifecycle that Marek mentioned above, SIG
+Scalability and SIG Testing is another group that we work closely with.Frederico: In a more general sense, how would you list the key challenges for SIG etcd in the
+evolving cloud native landscape?: Well, reliability is always a challenge when you're dealing with critical data. The
+cloud-native world is evolving so fast that scaling to meet those demands is a constant effort.Frederico: We're almost at the end of our conversation, but for those interested in in etcd, how
+can they get involved?: We'd love to have them! The best way to start is to join our
+SIG etcd meetings,
+follow discussions on the etcd-dev mailing list, and check
+out our GitHub issues. We're always looking for people to
+review proposals, test code, and contribute to documentation.: I love this question 😀 . There are numerous ways for people interested in contributing
+to SIG etcd to get involved and make a difference. Here are some key areas where you can help:: Tackle existing issues in the etcd codebase. Start with issues labeled "good first
+issue" or "help wanted" to find tasks that are suitable for newcomers.: Contribute to the development of new features and enhancements. Check the
+etcd roadmap and discussions to see what's being planned and where your skills might fit in.: Help ensure the quality of etcd by writing tests, reviewing code
+changes, and providing feedback.: Improve etcd's documentation by adding new content,
+clarifying existing information, or fixing errors. Clear and comprehensive documentation is
+essential for users and contributors.: Answer questions on forums, mailing lists, or Slack channels.
+Helping others understand and use etcd is a valuable contribution.: Start by joining the etcd community on Slack,
+attending SIG meetings, and following the mailing lists. This will
+help you get familiar with the project, its processes, and the
+people involved.: If you're new to open source or etcd, consider
+finding a mentor who can guide you and provide support. Stay tuned!
+Our first cohort of mentorship program was very successful. We will
+have a new round of mentorship program coming up.: Don't be afraid to start with small contributions. Even
+fixing a typo in the documentation or submitting a simple bug fix
+can be a great way to get involved.By contributing to etcd, you'll not only be helping to improve a
+critical piece of the cloud-native ecosystem but also gaining valuable
+experience and skills. So, jump in and start contributing!Frederico: Excellent, thank you. Lastly, one piece of advice that
+you'd like to give to other newly formed SIGs?: Absolutely! My advice would be to embrace the established
+processes of the larger community, prioritize collaboration with other
+SIGs, and focus on building a strong community.: Here are some tips I myself found very helpful in my OSS
+journey:: Open source development can take time. Don't get
+discouraged if your contributions aren't accepted immediately or if
+you encounter challenges.: The etcd community values collaboration and
+respect. Be mindful of others' opinions and work together to achieve
+common goals.: Contributing to open source should be
+enjoyable. Find areas that interest you and contribute in ways that
+you find fulfilling.Frederico: A great way to end this spotlight, thank you all!For more information and resources, please take a look at :]]></content:encoded></item><item><title>GitHub for Beginners: How to get started with GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/github-for-beginners-how-to-get-started-with-github-copilot/</link><author>Kedasha Kerr</author><category>official</category><pubDate>Mon, 3 Mar 2025 14:00:39 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Welcome to season two of GitHub for Beginners! Last season, we introduced you to GitHub and helped you go from beginner to confidently using the platform. This season, we’re continuing your journey by leading you into the world of AI with GitHub Copilot.Imagine having a pair programmer who never takes a break and knows plenty of programming languages. That’s Copilot, which is powered by a number of large language models (LLMs) that you can choose from and is the industry’s most widely adopted AI coding tool. Today, we’ll be exploring everything you need to know to get started using it.Get you up and running with GitHub Copilot  Give you an overview of the different usage tiers from free to enterprise  Help you use GitHub Copilot for the very first time! GitHub Copilot is an AI pair programmer that helps you write code faster. It’s designed to help with programming tasks and acts as your assistant while working in your editor and on github.com.In addition to code completion, GitHub Copilot can help you:Write code using natural language prompts  Understand shell commands  Describe changes in your pull requests  You can use GitHub Copilot with a variety of programming languages, and it’s available in VS Code, Visual Studio, JetBrains IDEs, Neovim, XCode, on GitHub Mobile, in your terminals, and on github.com!This leads us to our next question: how do you access GitHub Copilot?What are the different tiers of GitHub Copilot?Before using GitHub Copilot, you need to have a GitHub account and—if you want more than the free version—a Copilot license.There are four options available:If you’ve never used GitHub Copilot before, sign up for the free tier to give it a try! Once you do that, you can install and use GitHub Copilot in your IDE and on github.com.How to install GitHub Copilot in VS Code and JetBrainsHow you install GitHub Copilot depends on what IDE you’re using. GitHub Copilot currently works with several IDEs on the market—but for the purpose of this article, we’ll focus on two popular IDEs: VS Code and JetBrains.Navigate to the Extensions Marketplace and search for “GitHub Copilot.” Click on the “GitHub Copilot” extension, authored by GitHub and then click Install. This will install two extensions: GitHub Copilot and GitHub Copilot Chat.  Once installed, sign into VS Code with your GitHub account that has access to GitHub Copilot. (If you didn’t previously authorize VS Code in your GitHub account, you’ll need to sign in to GitHub in VS Code.)  A few helpful notes in case you run into any issues:You can sign in to GitHub in VS Code by selecting the “Accounts” menu in the Activity Bar, and then “Sign in to Sync Settings” to use GitHub Copilot.  In your browser, you can grant GitHub the necessary permissions needed for GitHub Copilot. Click “Continue” to authorize VS Code to approve.When you return to your editor, you’ll notice a Copilot icon at the top next to the Command Center, and a Copilot icon in the bar at the bottom of the editor window. If you click the icon at the bottom, it might ask you to select the account you want to use, then show menu options and display a ready status.If you see Copilot icons next to the Command Center and at the bottom of the VS Code window, you’ve successfully installed GitHub Copilot and are ready to use it.If you’re using a JetBrains IDE:We’ll be using PyCharm to install GitHub Copilot in JetBrains IDE. Here’s how:Open your editor of choice and navigate to the plugins marketplace. Search for “GitHub Copilot” and click Install, then restart your IDE.   When you open a project, you’ll see a Copilot icon on both the right side of your editor and the bottom, with a “ready” status. Once you see two icons on the left: GitHub Copilot with a question mark and another with a chat icon, you’ll know you successfully installed GitHub Copilot.Select the first icon, GitHub Copilot with a question mark, to get an overview of what GitHub Copilot is, along with a welcome message.  Select the second icon, GitHub Copilot with a chat icon, to find help for programming-related inquiries. A few notes that may be helpful:If you didn’t previously authorize JetBrains in your GitHub account, you’ll need to sign in to GitHub in your editor.  Alternatively, you can click on the Copilot icon at the bottom and select “Login to GitHub.”  In your browser, you can grant GitHub the necessary permissions needed for GitHub Copilot. Click “copy and open” to approve the permissions needed.  Press  or  to paste the code, click continue and finally select “Authorize GitHub Copilot plugin.”Return to your editor and you will see a message that GitHub Copilot has been successfully installed.Now, it’s time to authorize GitHub Copilot Chat.Click on the chat icon and click the “Authorize” button.   Select “Copy and Open” and paste the code in your browser.   Click “Authorize GitHub Copilot for JetBrains IDEs.”  Return to your editor and you should see a greeting from GitHub Copilot Chat.Once you’ve completed these steps, you’re ready to use GitHub Copilot in JetBrains.We now have Copilot installed in our editors, so let’s explore how to use features like code complete. In our example, we’ll be using Python in VS Code.Here’s a short walkthrough on using code complete in GitHub Copilot:Create a new file called .   Type  and press . Copilot will suggest code based on what it believes you want to do. For example, since the file is named  Copilot will provide code for validating an email.  Click the tab key and accept the suggestion.  Hit the  key to have Copilot provide the main function to run the code.  Hover over the suggested code, then click the arrows to see multiple suggestions.  Click on the three dots (…) at the end of the suggestion and select “Open Completions Panel” to see even more suggestions.One thing to keep in mind: because we’re using Copilot for inline code completion, the gray text represents ghost text with Copilot’s suggestions. If you try this later and get a different response, no worries! When working with GitHub Copilot or any LLM, responses are nondeterministic—which means a different result may be generated every time (so you may get a different result than what’s shown in the examples).GitHub Copilot Chat can provide more context into the code and what it means. Maybe you’re seeing the code for the first time and need to be brought up to speed quickly.Open Copilot Chat, type , and hit . Copilot will give you a detailed explanation of what’s happening in the code. You’ll see that Copilot Chat has a view of the currently opened file as indicated by the eye icon next to the file name at the bottom of the chat window.Let’s take a look at another example. Imagine you want to improve the regex and allow users to enter multiple email addresses.Open Copilot Chat and type, “allows users to enter email multiple addresses for validation and also improve the regex to be more robust.” Once you send the request, Copilot will give you a plan, an updated code block, and a list of suggested changes. Hover over the code block, click the “Apply in Editor” button to accept the changes, and GitHub Copilot will make the updates for you.What’s the difference between GitHub Copilot and other copilots?Time to address the elephant in the room: what’s the difference between GitHub Copilot and all the other copilots out there?Well, GitHub Copilot is specifically designed for programming. And because it works where you work—both in your editor and on github.com—there’s no need to go back and forth between your browser or another app and your code. You’re able to stay focused without having to context switch between your editor and your AI assistant. And remember, when you hear “GitHub Copilot,” it’s referring to your personal AI pair programmer.Thanks for joining our deep dive into GitHub Copilot.If you want to watch this demo in action, we’ve created a YouTube tutorial that accompanies this blog.  Join us for the next part of the series where we’ll walk through essential features of GitHub Copilot. ]]></content:encoded></item><item><title>February Project Goals Update</title><link>https://blog.rust-lang.org/2025/03/03/Project-Goals-Feb-Update.html</link><author>Rémy Rakic, Niko Matsakis, Santiago Pastorino</author><category>dev</category><category>official</category><category>rust</category><pubDate>Mon, 3 Mar 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[ This work continues our drive to improve support for async programming in Rust. In 2024H2 we stabilized async closures; explored the generator design space; and began work on the  crate, an experimental proc-macro to provide dynamic dispatch for async functions in traits. In 2025H1 our plan is to deliver (1) improved support for async-fn-in-traits, completely subsuming the functionality of the  crate; (2) progress towards sync and async generators, simplifying the creation of iterators and async data streams; (3) and improve the ergonomics of , making lower-level async coding more approachable. These items together start to unblock the creation of the next generation of async libraries in the wider ecosystem, as progress there has been blocked on a stable solution for async traits and streams. The biggest news is that Rust 1.85 is stable and includes two major features that impact Async Rust. The first is async closures, which has been on many people's wish lists for a long time and was expertly moved forward by @compiler-errors over the last year.The second feature included in 1.85 is the new lifetime capture rules as part of Rust 2024 edition. This should substantially improve the experience of using async Rust anytime a user writes , as it removes the need for  or similar bounds in most cases. It will also lead to an easier to understand language, since those bounds only worked by exploiting the more subtle rules of  in a way that runs contrary to their actual semantic role in the language. In the 2024 Edition, the subtle rule is gone and we capture all input lifetimes by default, with the ability to use  syntax to opt out. See this blog post for more. The lang team also held a design meeting to review the design for generators, with the outcome of the last one being that we will implement a  macro (exact path TBD) in the compiler, as a lang team experiment that allows the use of the  syntax. We decided to go in this direction because we want to reserve  for self-borrowing and perhaps lending generators, and aren't yet decided on which subset of features to expose under that syntax. This decision interacts with ongoing compiler development that isn't ready yet to enable experimentation with lending.Our hope is that in the meantime, by shipping  we will give people the chance to start using generators in their own code and better understand which limitations people hit in practice.As you may have noticed, I'm not talking about async generators here. Those are the ultimate goal for the async initiative, but we felt the first step should be clarifying the state of synchronous generators so we can build on that when talking about async ones.dynosaur v0.1.3 was released, with another release in the works. We think we are approaching a 1.0 release real soon now (tm). At this point you should be able to try it on your crate to enable dyn dispatch for traits with  and other  methods. If you need to use it together with , you may need to wait until the next release when #55 is fixed. May 15, 2025 marks the 10-year anniversary of Rust's 1.0 release; it also marks 10 years since the creation of the Rust subteams. At the time there were 6 Rust teams with 24 people in total. There are now 57 teams with 166 people. In-person All Hands meetings are an effective way to help these maintainers get to know one another with high-bandwidth discussions. This year, the Rust project will be coming together for RustWeek 2025, a joint event organized with RustNL. Participating project teams will use the time to share knowledge, make plans, or just get to know one another better. One particular goal for the All Hands is reviewing a draft of the Rust Vision Doc, a document that aims to take stock of where Rust is and lay out high-level goals for the next few years. Planning is proceeding well. In addition to Rust maintainers, we are inviting all project goal owners to attend the All Hands (note that the accompanying RustWeek conference is open to the public, it's just the All Hands portion that is invitation only). There are currently over 100 project members signed up to attend.For those invited to the All Hands:Travel funds may be available if you are unable to finance travel through your employer. Get in touch for details.Please participate in the brainstorm for how best to use the All Hands time in the all-hands-2025 Zulip stream.If you do plan to attend,  please purchase your travel + hotels in a timely fashion as the discount rates will expire. We established the precise set of 2025H1 deliverables and we have been tracking them and have begun making progress towards them. Rustdoc has been updated to support extracting doc tests so that the Kernel can execute them in a special environment (this was previously done with a big hack) and RFL is in the process of trying to use that new support. The first PR towards the implementation of RFC #3716 has landed and the ARM team has begun reading early drafts of the design doc for  with the cargo team.We are also working to finalize the stabilization of the language features that were developed in 2024H2, as two late-breaking complications arose. The first (an interaction between casting of raw pointers and arbitrary self types) is expected to be resolved by limiting the casts of raw pointers, which previously accepted some surprising code. We identified that only a very small set of crates relied on this bug/misfeature; we expect nonetheless to issue a forwards compatibility warning. We are also resolving an issue where  was found to reveal the existence of some unstable impls in the stdlib. looking for people that want to help do a bit of refactoring. Please reach out through the project-stable-mir zulip channel or repository.]]></content:encoded></item><item><title>Rust participates in Google Summer of Code 2025</title><link>https://blog.rust-lang.org/2025/03/03/Rust-participates-in-GSoC-2025.html</link><author>Jakub Beránek, Jack Huey and Paul Lenz</author><category>dev</category><category>official</category><category>rust</category><pubDate>Mon, 3 Mar 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[We are happy to announce that the Rust Project will again be participating in Google Summer of Code (GSoC) 2025, same as last year. If you're not eligible or interested in participating in GSoC, then most of this post likely isn't relevant to you; if you are, this should contain some useful information and links.Google Summer of Code (GSoC) is an annual global program organized by Google that aims to bring new contributors to the world of open-source. The program pairs organizations (such as the Rust Project) with contributors (usually students), with the goal of helping the participants make meaningful open-source contributions under the guidance of experienced mentors.The organizations that have been accepted into the program have been announced by Google. The GSoC applicants now have several weeks to discuss project ideas with mentors. Later, they will send project proposals for the projects that they found the most interesting. If their project proposal is accepted, they will embark on a several month journey during which they will try to complete their proposed project under the guidance of an assigned mentor.We have prepared a list of project ideas that can serve as inspiration for potential GSoC contributors that would like to send a project proposal to the Rust organization. However, applicants can also come up with their own project ideas. You can discuss project ideas or try to find mentors in the #gsoc Zulip stream. We have also prepared a proposal guide that should help you with preparing your project proposals.You can start discussing the project ideas with Rust Project mentors and maintainers immediately, but you might want to keep the following important dates in mind:The project proposal application period starts on March 24, 2025. From that date you can submit project proposals into the GSoC dashboard.The project proposal application period ends on  at 18:00 UTC. Take note of that deadline, as there will be no extensions!If you are interested in contributing to the Rust Project, we encourage you to check out our project idea list and send us a GSoC project proposal! Of course, you are also free to discuss these projects and/or try to move them forward even if you do not intend to (or cannot) participate in GSoC. We welcome all contributors to Rust, as there is always enough work to do.Last year was our first time participating in GSoC, and it was a success! This year we are very excited to participate again. We hope that participants in the program can improve their skills, but also would love for this to bring new contributors to the Project and increase the awareness of Rust in general. Like last year, we expect to publish blog posts in the future with updates about our participation in the program.]]></content:encoded></item></channel></rss>
