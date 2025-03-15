@@ -1,333 +1,351 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>How to debug code with GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/how-to-debug-code-with-github-copilot/</link><author>Jeimy Ruiz</author><category>official</category><pubDate>Fri, 21 Feb 2025 17:00:49 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Debugging is an essential part of a developer’s workflow—but it’s also one of the most time consuming. What if AI could streamline the process, helping you analyze, fix, and document code faster? Enter GitHub Copilot, your AI-powered coding assistant.GitHub Copilot isn’t just for writing code—it’s also a powerful tool for debugging. Whether you’re troubleshooting in your IDE, using Copilot Chat’s slash commands like , or reviewing pull requests (PR) on github.com, GitHub Copilot offers flexible, intelligent solutions to speed up your debugging process. And with the free version of GitHub Copilot, available to all personal GitHub accounts, you can start exploring these features today.In this guide, we’ll explore how to debug code with GitHub Copilot, where to use it in your workflow, and best practices to get the most out of its capabilities. Whether you’re new to GitHub Copilot or looking to deepen your skills, this guide has something for you.Debugging code with GitHub Copilot: surfaces and workflowsDebugging code with GitHub Copilot can help you tackle issues faster while enhancing your understanding of the codebase. Whether you’re fixing syntax errors, refactoring inefficient code, or troubleshooting unexpected behavior, GitHub Copilot can provide valuable insights in your debugging journey.So, how exactly does this work? “GitHub Copilot is recognizing patterns and suggesting solutions based on what it has learned,” says Christopher Harrison, Senior Developer Advocate. “Once you’ve identified the problem area, you can turn to GitHub Copilot and ask, ‘I’m giving this input but getting this output—what’s wrong?’ That’s where GitHub Copilot really shines.”Let’s explore how GitHub Copilot can help you debug your code across different surfaces, from your IDE to github.com and even pull requests.Copilot Chat acts as an interactive AI assistant, helping you debug issues with natural language queries. And with Copilot Free, you get 50 chat messages per month. With Copilot Chat, you can:Get real-time explanations: Ask “Why is this function throwing an error?” and Copilot Chat will analyze the code and provide insights.  Use slash commands for debugging: Try  to generate a potential solution or  for a step-by-step breakdown of a complex function. (More on this later!)   Refactor code for efficiency: If your implementation is messy or inefficient, Copilot Chat can suggest cleaner alternatives. Christopher explains, “Refactoring improves the readability of code, making it easier for both developers and GitHub Copilot to understand. And if code is easier to understand, it’s easier to debug and spot problems.”  Walk through errors interactively: Describe your issue in chat and get tailored guidance without ever having to leave your IDE. When working in popular IDEs like VS Code or JetBrains, GitHub Copilot offers real-time suggestions as you type. It helps by: For example, if you declare a variable but forget to initialize it, GitHub Copilot can suggest a correction.   Encounter a syntax error? GitHub Copilot can suggest a fix in seconds, ensuring your code stays error-free.   By analyzing your workspace, GitHub Copilot provides solutions tailored to your codebase and project structure.GitHub Copilot extends beyond your IDE, offering debugging assistance directly on github.com via Copilot Chat, particularly in repositories and discussions. With this feature, you can:Troubleshoot code in repositories: Open a file, highlight a problematic section, and use Copilot Chat to analyze it.   If you’re unsure how to verify a function, GitHub Copilot can suggest test cases based on existing code.  Understand unfamiliar code: Reviewing an open-source project or a teammate’s PR? Ask GitHub Copilot to summarize a function or explain its logic.4. For pull request assistanceGitHub Copilot can also streamline debugging within PRs, ensuring code quality before merging.Suggest improvements in PR comments: GitHub Copilot can review PRs and propose fixes directly in the conversation.   Struggling to describe your changes? Greg Larkin, Senior Service Delivery Engineer, says, “I use GitHub Copilot in the PR creation process to generate a summary of the changes in my feature branch compared to the branch I’m merging into. That can be really helpful when I’m struggling to figure out a good description, so that other people understand what I did.”   Not sure why a change was made? Ask GitHub Copilot to summarize what’s different between commits.  Catch edge cases before merging: Use  to identify potential issues and  to generate missing test cases.   If a PR contains redundant or inefficient code, GitHub Copilot can suggest optimized alternatives.By integrating Copilot into your PR workflow, you can speed up code reviews while maintaining high-quality standards. Just be sure to pair it with peer expertise for the best results.Slash commands turn GitHub Copilot into an on-demand debugging assistant, helping you solve issues faster, get more insights, and improve your code quality. Here are some of the most useful slash commands for debugging:1. Use /help to get guidance on using GitHub Copilot effectivelyThe  slash command provides guidance on how to interact with GitHub Copilot effectively, offering tips on structuring prompts, using slash commands, and maximizing GitHub Copilot’s capabilities.: Type  in Copilot Chat to receive suggestions on your current task, whether it’s debugging, explaining code, or generating test cases.  : Need a refresher on what GitHub Copilot can do? Use  to access a quick guide to slash commands like  and .2. Use /fix to suggest and apply fixesThe  command is a go-to tool for resolving code issues by allowing you to highlight a block of problematic code or describe an error. Select the code causing issues, type , and let Copilot Chat generate suggestions.   If you have a broken API call, use  to get a corrected version with appropriate headers or parameters.3. Use /explain to understand code and errorsThe  command breaks down complex code or cryptic error messages into simpler, more digestible terms. Highlight the code or error message you want clarified, type , and Copilot Chat will provide an explanation. It will explain the function’s purpose, how it processes the data, potential edge cases, and any possible bugs or issues.    Encounter a “NullPointerException”? Use  to understand why it occurred and how to prevent it.4. Use /tests to generate testsTesting is key to identifying bugs, and the  command helps by generating test cases based on your code. Use  on a function or snippet, and Copilot Chat will generate relevant test cases.   Apply  to a sorting function, and Copilot Chat might generate unit tests for edge cases like empty arrays or null inputs.5. Use /doc to generate or improve documentationThere are long-term benefits to having good text documentation—for developers and GitHub Copilot, which can draw context from it—because it makes your codebase that much more searchable. By using the  command with Copilot Free, you can even ask GitHub Copilot to write a summary of specific code blocks within your IDE.The  command helps you create or refine documentation for your code, which is critical when debugging or collaborating with others. Clear documentation provides context for troubleshooting, speeds up issue resolution, and helps fellow developers understand your code faster. Highlight a function, class, or file, type  and right-click to see the context menu, and Copilot Chat will generate comprehensive comments or documentation.   Apply  to a function, and Copilot Chat will generate inline comments detailing its purpose, parameters, and expected output.By mastering these commands, you can streamline your debugging workflow and resolve issues faster without switching between tools or wasting time on manual tasks.Best practices for debugging code with GitHub CopilotProvide clear context for better resultsProviding the right context helps GitHub Copilot generate even more relevant debugging suggestions. As Christopher explains, “The better that Copilot is able to understand what you’re trying to do and how you’re trying to do it, the better the responses are that it’s able to give to you.”Since GitHub Copilot analyzes your code within the surrounding scope, ensure your files are well structured and that relevant dependencies are included. If you’re using Copilot Chat, reference specific functions, error messages, or logs to get precise answers instead of generic suggestions. Working across multiple files? Use the  command to point GitHub Copilot in the right direction and give it more context for your prompt and intended goal.Ask, refine, and optimize in real timeInstead of treating GitHub Copilot as a one-and-done solution, refine its suggestions by engaging in a back-and-forth process. Greg says, “I find it useful to ask GitHub Copilot for three or four different options on how to fix a problem or to analyze for performance. The more detail you provide about what you’re after—whether it’s speed, memory efficiency, or another constraint—the better the result.”This iterative approach can help you explore alternative solutions you might not have considered, leading to more robust and efficient code.Master the art of specific promptsThe more specific your prompt, the better GitHub Copilot’s response. Instead of asking “What’s wrong with this function?” try “Why is this function returning undefined when the input is valid?” GitHub Copilot performs best when given clear, detailed queries—this applies whether you’re requesting a fix, asking for an explanation, or looking for test cases to verify your changes.By crafting precise prompts and testing edge cases, you can use GitHub Copilot to surface potential issues before they become production problems.Try a structured approach with progressive debuggingNext, try a step-by-step approach to your debugging process! Instead of immediately applying fixes, use GitHub Copilot’s commands to first understand the issue, analyze potential causes, and then implement a solution. This structured workflow—known as —helps you gain deeper insights into your code while ensuring that fixes align with the root cause of the problem.Start with the slash command  on a problematic function to understand the issue.  Use the slash command  to help with configuring interactive debugging.  Finally, apply the slash command  to generate possible corrections.📌  If a function in your React app isn’t rendering as expected, start by running  on the relevant JSX or state logic, then use  to identify mismanaged props, and finally, apply  for a corrected implementation.Some issues require multiple levels of debugging and refinement. By combining commands, you can move from diagnosis to resolution even faster.Use  to understand and resolve issues quickly.  Apply  to find failing tests and generate new ones.Fixing a broken function: Run the slash command  to understand why it fails, then use the slash command  to generate a corrected version.   Use the slash command  to identify and fix failing tests, then use the slash command  to generate additional unit tests for the highlighted code. Remember, slash commands are most effective when they’re used in the appropriate context, combined with clear descriptions of the problem, are part of a systematic debugging approach, and followed up with verification and testing.GitHub Copilot is a powerful tool that enhances your workflow, but it doesn’t replace the need for human insight, critical thinking, and collaboration. As Greg points out, “GitHub Copilot can essentially act as another reviewer, analyzing changes and providing comments. Even so, it doesn’t replace human oversight. Having multiple perspectives on your code is crucial, as different reviewers will spot issues that others might miss.”By combining GitHub Copilot’s suggestions with human expertise and rigorous testing, you can debug more efficiently while maintaining high-quality, reliable code.]]></content:encoded></item><item><title>Engaging with the developer community on our approach to content moderation</title><link>https://github.blog/news-insights/policy-news-and-insights/engaging-with-the-developer-community-on-our-approach-to-content-moderation/</link><author>Margaret Tucker</author><category>official</category><pubDate>Thu, 20 Feb 2025 17:00:22 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[At GitHub, we’re committed to keeping our community informed about how we govern our platform. That means being transparent about content moderation and involving users in the development of our site policies. Today we’re announcing that our Transparency Center and repo have been updated with data for all of 2024.Our developer-first approach to content moderation is adapted to the unique environment of code collaboration and has evolved to meet specific needs through a suite of content moderation tools. We’ve discussed the nuances and challenges of moderating a code collaboration platform in the Journal of Online Trust and Safety in an effort to be transparent about our own practices and contribute to the research base of platform studies.We want to bring this discussion directly to the developers that make GitHub what it is. Recently, we attended FOSDEM, Europe’s largest free and open source developer conference. We connected with developers and presented a deep dive into how our approach to platform moderation has been informed by the values of the FOSS community. You can watch the video of the talk here. We’ll also be presenting this talk on March 8 at SCaLE 22x, the 22nd Annual Southern California Linux Expo in Pasadena, CA. We don’t want to just share our own work—we want to hear directly from developers and maintainers about the challenges you’re facing.Developers are an important stakeholder in how we moderate our platform, and we want to hear from you. Check out our site-policy repo to contribute constructive ideas, questions, and feedback to make our policies better. We also welcome participation in our developer-policy repo where you can share public policy opportunities and challenges to advance developers’ rights to innovation, collaboration, and equal opportunity.]]></content:encoded></item><item><title>Announcing Rust 1.85.0 and Rust 2024</title><link>https://blog.rust-lang.org/2025/02/20/Rust-1.85.0.html</link><author>The Rust Release Team</author><category>dev</category><category>official</category><category>rust</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[The Rust team is happy to announce a new version of Rust, 1.85.0. This stabilizes the 2024 edition as well.
-Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust installed via , you can get 1.85.0 with:If you'd like to help us out by testing future releases, you might consider updating locally to use the beta channel () or the nightly channel (). Please report any bugs you might come across!We are excited to announce that the Rust 2024 Edition is now stable!
-Editions are a mechanism for opt-in changes that may otherwise pose a backwards compatibility risk. See the edition guide for details on how this is achieved, and detailed instructions on how to migrate.This is the largest edition we have released. The edition guide contains detailed information about each change, but as a summary, here are all the changes:The guide includes migration instructions for all new features, and in general
-transitioning an existing project to a new edition.
-In many cases  can automate the necessary changes. You may even find that no changes in your code are needed at all for 2024!Note that automatic fixes via  are very conservative to avoid ever changing the semantics of your code. In many cases you may wish to keep your code the same and use the new semantics of Rust 2024; for instance, continuing to use the  macro matcher, and ignoring the conversions of conditionals because you want the new 2024 drop order semantics. The result of  should not be considered a recommendation, just a conservative conversion that preserves behavior. people came together to create this edition. We'd like to thank them all for their hard work!Rust now supports asynchronous closures like  which return futures when called. This works like an  which can also capture values from the local environment, just like the difference between regular closures and functions. This also comes with 3 analogous traits in the standard library prelude: , , and .In some cases, you could already approximate this with a regular closure and an asynchronous block, like . However, the future returned by such an inner block is not able to borrow from the closure captures, but this does work with  closures:let mut vec: Vec<String> = vec![];
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>Implications of Global Privacy Control</title><link>https://developer.mozilla.org/en-US/blog/global-privacy-control/</link><author>lola-odelola</author><category>dev</category><category>official</category><category>frontend</category><enclosure url="https://developer.mozilla.org/en-US/blog/global-privacy-control/featured.png" length="" type=""/><pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate><source url="https://developer.mozilla.org/en-US/blog/">MDN Blog</source><content:encoded><![CDATA[Global Privacy Control (GPC) is on the way to becoming a formal privacy standard with the recent publication of its first working draft. Let's take a look at what the implications are for developers and users.]]></content:encoded></item><item><title>Python 3.14.0 alpha 6 is out</title><link>https://pythoninsider.blogspot.com/2025/03/python-3140-alpha-6-is-out.html</link><author>Hugo</author><category>dev</category><category>official</category><category>python</category><pubDate>Fri, 14 Mar 2025 17:27:00 +0000</pubDate><source url="https://pythoninsider.blogspot.com/">Python official news</source><content:encoded><![CDATA[Here comes the penultimate alpha.This is an early developer preview of Python
+3.14Python 3.14 is still in development. This release, 3.14.0a6, is the
+sixth of seven planned alpha releases.Alpha releases are intended to make it easier to test the current
+state of new features and bug fixes and to test the release process.During the alpha phase, features may be added up until the start of
+the beta phase (2025-05-06) and, if necessary, may be modified or
+deleted up until the release candidate phase (2025-07-22). Please keep
+in mind that this is a preview release and its use is
+ recommended for production environments.Many new features for Python 3.14 are still being planned and
+written. Among the new major new features and changes so far:The next pre-release of Python 3.14 will be the final alpha,
+3.14.0a7, currently scheduled for 2025-04-08.March 14 is celebrated as pi day, because 3.14 is an
+approximation of π. The day is observed by eating pies (savoury and/or
+sweet) and celebrating π. The first pi day was organised by physicist
+and tinkerer Larry Shaw of the San Francisco Exploratorium
+in 1988. It is also the International
+Day of Mathematics and Albert Einstein’s birthday. Let’s all eat
+some pie, recite some π, install and test some py, and wish a happy
+birthday to Albert, Loren and all the other pi day children!Thanks to all of the many volunteers who help make Python Development
+and these releases possible! Please consider supporting our efforts by
+volunteering yourself or through organisation contributions to the Python Software
+Foundation.Regards from Helsinki as fresh snow falls,Your release team, Hugo van Kemenade Ned Deily Steve Dower Łukasz Langa ]]></content:encoded></item><item><title>Highlights from Git 2.49</title><link>https://github.blog/open-source/git/highlights-from-git-2-49/</link><author>Taylor Blau</author><category>official</category><pubDate>Fri, 14 Mar 2025 17:19:46 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[The open source Git project just released Git 2.49 with features and bug fixes from over 89 contributors, 24 of them new. We last caught up with you on the latest in Git back when 2.48 was released.To celebrate this most recent release, here is GitHub’s look at some of the most interesting features and changes introduced since last time.Faster packing with name-hash v2Many times over this series of blog posts, we have talked about Git’s object storage model, where objects can be written individually (known as “loose” objects), or grouped together in packfiles. Git uses packfiles in a wide variety of functions, including local storage (when you repack or GC your repository), as well as when sending data to or from another Git repository (like fetching, cloning, or pushing).Storing objects together in packfiles has a couple of benefits over storing them individually as loose. One obvious benefit is that object lookups can be performed much more quickly in pack storage. When looking up a loose object, Git has to make multiple system calls to find the object you’re looking for, open it, read it, and close it. These system calls can be made faster using the operating system’s block cache, but because objects are looked up by a SHA-1 (or SHA-256) of their contents, this pseudo-random access isn’t very cache-efficient.But most interesting to our discussion is that since loose objects are stored individually, we can only compress their contents in isolation, and can’t store objects as deltas of other similar objects that already exist in your repository. For example, say you’re making a series of small changes to a large blob in your repository. When those objects are initially written, they are each stored individually and zlib compressed. But if the majority of the file’s content remains unchanged among edit pairs, Git can further compress these objects by storing successive versions as deltas of earlier ones. Roughly speaking, this allows Git to store the changes made to an object (relative to some other object) instead of multiple copies of nearly identical blobs.But how does Git figure out which pairs of objects are good candidates to store as delta-base pairs? One useful proxy is to compare objects that appear at similar paths. Git does this today by computing what it calls a “name hash”, which is effectively a sortable numeric hash that weights more heavily towards the final 16 non-whitespace characters in a filepath (source). This function comes from Linus all the way back in 2006, and excels at grouping functions with similar extensions (all ending in , , etc.), or files that were moved from one directory to another ( to ).But the existing name-hash implementation can lead to poor compression when there are many files that have the same basename but very different contents, like having many  files for different subsystems stored together in your repository. Git 2.49 introduces a new variant of the hash function that takes more of the directory structure into account when computing its hash. Among other changes, each layer of the directory hierarchy gets its own hash, which is downshifted and then XORed into the overall hash. This creates a hash function which is more sensitive to the whole path, not just the final 16 characters.This can lead to significant improvements both in packing performance, but also in the resulting pack’s overall size. For instance, using the new hash function was able to improve the time it took to repack  from ~96 seconds to ~34 seconds, and slimming down the resulting pack’s size from 439 MiB to just 160 MiB (source).While this feature isn’t (yet) compatible with Git’s reachability bitmaps feature, you can try it out for yourself using either ’s or ’s new  flag via the latest release.Backfill historical blobs in partial clonesHave you ever been working in a partial clone and gotten this unfriendly output?$ git blame README.md
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (1/1), 1.64 KiB | 8.10 MiB/s, done.
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (1/1), 1.64 KiB | 7.30 MiB/s, done.
+[...]
+What happened here? To understand the answer to that question, let’s work through an example scenario:Suppose that you are working in a partial clone that you cloned with . In this case, your repository is going to have all of its trees, commit, and annotated tag objects, but only the set of blobs which are immediately reachable from . Put otherwise, your local clone only has the set of blobs it needs to populate a full checkout at the latest revision, and loading any historical blobs will fault in any missing objects from wherever you cloned your repository.In the above example, we asked for a  of the file at path . In order to construct that blame, however, we need to see every historical version of the file in order to compute the diff at each layer to figure out whether or not a revision modified a given line. But here we see Git loading in each historical version of the object one by one, leading to bloated storage and poor performance.Git 2.49 introduces a new tool, , which can fault in any missing historical blobs from a  clone in a small number of batches. These requests use the new path-walk API (also introduced in Git 2.49) to group together objects that appear at the same path, resulting in much better delta compression in the packfile(s) sent back from the server. Since these requests are sent in batches instead of one-by-one, we can easily backfill all missing blobs in only a few packs instead of one pack per blob.After running  in the above example, our experience looks more like:$ git clone --sparse --filter=blob:none git@github.com:git/git.git[...] # downloads historical commits/trees/tags
+$ cd git
+$ git sparse-checkout add builtin
+[...] # downloads current contents of builtin/
+$ git backfill --sparse
+[...] # backfills historical contents of builtin/
+$ git blame -- builtin/backfill.c
+85127bcdeab (Derrick Stolee 2025-02-03 17:11:07 +0000   1) /* We need this macro to access core_apply_sparse_checkout */
+85127bcdeab (Derrick Stolee 2025-02-03 17:11:07 +0000   2) #define USE_THE_REPOSITORY_VARIABLE
+85127bcdeab (Derrick Stolee 2025-02-03 17:11:07 +0000   3)
+[...]
+But running  immediately after cloning a repository with  doesn’t bring much benefit, since it would have been more convenient to simply clone the repository without an object filter enabled in the first place. When using the backfill command’s  option (the default whenever the sparse checkout feature is enabled in your repository), Git will only download blobs that appear within your sparse checkout, avoiding objects that you wouldn’t checkout anyway.To try it out, run  in any  clone of a repository using Git 2.49 today!We discussed above that Git uses compression powered by zlib when writing loose objects, or individual objects within packs and so forth. zlib is an incredibly popular compression library, and has an emphasis on portability. Over the years, there have been a couple of popular forks (like intel/zlib and cloudflare/zlib) that contain optimizations not present in upstream zlib.
+The zlib-ng fork merges many of the optimizations made above, as well as removes dead code and workarounds for historical compilers from upstream zlib, placing a further emphasis on performance. For instance, zlib-ng has support for SIMD instruction sets (like SSE2, and AVX2) built-in to its core algorithms. Though zlib-ng is a drop-in replacement for zlib, the Git project needed to update its compatibility layer to accommodate zlib-ng.In Git 2.49, you can now build Git with zlib-ng by passing  when building with the GNU Make, or the  option when building with Meson. Early experimental results show a ~25% speed-up when printing the contents of all objects in the Git repository (from ~52.1 seconds down to ~40.3 seconds).This release marks a major milestone in the Git project with the first pieces of Rust code being checked in. Specifically, this release introduces two Rust crates: libgit-sys, and libgit which are low- and high-level wrappers around a small portion of Git’s library code, respectively.The Git project has long been evolving its code to be more library-oriented, doing things like replacing functions that exit the program with ones that return an integer and let the caller decide to exit or, cleaning up memory leaks, etc. This release takes advantage of that work to provide a proof-of-concept Rust crate that wraps part of Git’s  API.This isn’t a fully-featured wrapper around Git’s entire library interface, and there is still much more work to be done throughout the project before that can become a reality, but this is a very exciting step along the way.Speaking of the “libification” effort, there were a handful of other related changes that went into this release. The ongoing effort to move away from global variables like  continues, and many more commands in this release use the provided  instead of using the global one.This release also saw a lot of effort being put into squelching  warnings, which occur when a signed value is compared against an unsigned one. This can lead to surprising behavior when comparing, say, negative signed values against unsigned ones, where a comparison like  (which should return true) ends up returning false instead.Hopefully you won’t notice these changes in your day-to-day use of Git, but they are important steps along the way to bringing the project closer to being able to be used as a standalone library.Long-time readers might remember our coverage of Git 2.39 where we discussed ’s new  option. In case you’re new around here or could use a refresher, we’ve got you covered. The  option in  controls the behavior of unreachable objects which were pruned out of the repository. By default, pruned objects are simply deleted, but  allows you to move them off to the side in case you want to hold onto them for backup purposes, etc. is a fairly low-level command though, and most users will likely interact with Git’s garbage collection feature through . In large part,  is a wrapper around functionality that is implemented in , but up until this release,  didn’t expose its own command-line option to use . That changed in Git 2.49, where you can now experiment with this behavior via !You may have read that Git’s  feature is too fast for Formula One drivers. In case you haven’t, here are the details. If you’ve ever seen output like:$ git psuh
+git: 'psuh' is not a git command. See 'git --help'.
 
-let closure = async || {
-    vec.push(ready(String::from("")).await);
-};
-It also has not been possible to properly express higher-ranked function signatures with the  traits returning a , but you can write this with the  traits:use core::future::Future;
-async fn f<Fut>(_: impl for<'a> Fn(&'a u8) -> Fut)
-where
-    Fut: Future<Output = ()>,
-{ todo!() }
+The most similar command is
+push
+…then you have used Git’s autocorrect feature. But its configuration options don’t quite match the convention of other, similar options. For instance, in other parts of Git, specifying values like “true”, “yes”, “on”, or “1” for boolean-valued settings all meant the same thing. But  deviates from that trend slightly: it has special meanings for “never”, “immediate”, and “prompt”, but interprets a numeric value to mean that Git should automatically run whatever command it suggests after waiting that many deciseconds.So while you might have thought that setting  to “1” would enable the autocorrect behavior, you’d be wrong: it will instead run the corrected command before you can even blink your eyes. Git 2.49 changes the convention of  to interpret “1” like other boolean-valued commands, and positive numbers greater than 1 as it would have before. While you can’t specify that you want the autocorrect behavior in exactly 1 decisecond anymore, you probably never meant to anyway.You might be aware of ’s various options like  or . When given, these options allow you to clone a repository’s history leading up to a specific branch or tag instead of the whole thing. These options are often used in CI farms when they want to clone a specific branch or tag for testing.But what if you want to clone a specific revision that isn’t at any branches or tags in your repository, what do you do? Prior to Git 2.49, the only thing you could do is initialize an empty repository and fetch a specific revision after adding the repository you’re fetching from as a remote.Git 2.49 introduces a much more convenient method to round out the  and  options by adding a new  option that fetches history leading up to the specified revision, regardless of whether or not there is a branch or tag pointing at it.Speaking of remotes, you might know that the  command uses your repository’s configuration to store the list of remotes that it knows about. You might not know that there were actually two different mechanisms which preceded storing remotes in configuration files. In the very early days, remotes were configured via separate files in  (source). A couple of weeks later, the convention changed to use  instead of the  directory (source).Both conventions have long since been deprecated and replaced with the configuration-based mechanism we’re familiar with today (source, source). But Git has maintained support for them over the years as part of its backwards compatibility. When Git 3.0 is eventually released, these features will be removed entirely.If you want to learn more about Git’s upcoming breaking changes, you can read all about them in Documentation/BreakingChanges.adoc. If you really want to live on the bleeding edge, you can build Git with the  compile time switch, which compiles out features that will be removed in Git 3.0.]]></content:encoded></item><item><title>How GitHub engineers learn new codebases</title><link>https://github.blog/developer-skills/application-development/how-github-engineers-learn-new-codebases/</link><author>Brittany Ellich</author><category>official</category><pubDate>Thu, 13 Mar 2025 16:00:19 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[No matter where you are in your coding career, you will likely come across a new codebase or problem domain that is completely unfamiliar to you. Because codebases can be filled with many layers of design patterns, bugfixes, and temporary workarounds, learning a new one can be a time-consuming and frustrating process.Last year, I moved to a new team at GitHub. During my transition, I collected insights from colleagues about how they approach learning new technical spaces. A fascinating collection of strategies emerged, and I’m excited to share them!Below are the most effective methods I gathered, organized by approach. Whether you’re a seasoned engineer switching teams or a newcomer to the field, these strategies can help make your next codebase onboarding a little bit easier.Hands-on code explorationOne of the best ways to get started is working directly with the code itself:Start with “Good First Issues”: Begin your journey by tackling smaller, well-defined tasks. These issues are often carefully selected by the team that owns the codebase to help newcomers understand key components without becoming overwhelmed. They provide natural entry points into the system, while delivering immediate value to the team.  Learn with GitHub Copilot: Open up your Copilot Chat window next to the codebase as you’re exploring it. You can ask Copilot Chat your questions, and then use the  functionality for things that are difficult to understand. Learn more about using Copilot Chat in your development environment here. Here are some example queries that I have used with GitHub Copilot to enhance my understanding of a codebase:
+What will this function return if I give it X?  Summarize what this method is made to do  What are some potential gaps in the existing tests for this method?  Analyze telemetry and metrics: Modern applications generate vast amounts of performance and usage data. Study these metrics to understand how the system behaves in production, what patterns emerge during peak usage, and which components require the most attention. This data-driven approach provides invaluable context about the application’s real-world behavior.  : Make deliberate modifications to the code and observe their effects. Write new tests to verify your understanding, and intentionally break things (in development) to see how the system fails. This helps build an intuitive understanding of the application’s boundaries and failure modes.Knowledge sharing is often the fastest path to understanding:: Don’t just observe—actively participate in pairing sessions with experienced team members. Ask questions about their workflow, note which files they frequently access, and get to know their debugging strategies. Even if you’re mainly watching, you’ll absorb valuable context about how different pieces fit together.  : When assigned tasks, dig deep into the motivation behind them. Understanding the business context and technical rationale helps you make better architectural decisions and aids in future problem solving. Don’t be afraid to ask seemingly basic questions. They often lead to important insights.  Monitor team communications: Stay active in team chat channels and incident response discussions. Pay special attention to production alerts and how the team responds to them. This exposure helps you understand common failure patterns and builds muscle memory for handling incidents.Documentation and knowledge managementWriting and organizing information helps solidify understanding:Create personal documentation: Maintain a living document of your discoveries, questions, and insights. Document important code paths, architectural decisions, and system interfaces as you encounter them. This will become an invaluable reference and help identify gaps in your understanding.  : Create diagrams of system architecture, data flows, and entity relationships. Start with high-level “black boxes” and gradually fill in the details as your understanding grows. Visual representations often reveal patterns and relationships that aren’t obvious in the code. One tool that I use for this is Figma. I start with adding the basic blocks that I understand about a system and how they interact, and then continuously zoom in and out on different parts of the system to add to the map as I learn.  Gather information on the domain: One key to managing your knowledge of a codebase is to have a deep understanding of the domain. This can be gained from product owners, customer insights, or from industry best practices if the domain is generalizable enough. Deeply understanding the domain and what customers in that space find the most critical are key to learning a new codebase.One great way to verify your understanding of a topic is the ability to accurately explain it to others. If you created personal documentation, as recommended in the previous section, you can formalize it into guides and official documentation for future new members of your team:: Once you learn something new, document it for the next person. This forces you to organize what you’ve learned and often reveals areas where your understanding isn’t as complete as you thought.  Contribute to official documentation: When you find gaps in the existing documentation, take the initiative to improve it. This not only helps future team members but also validates your understanding with current experts. Learn more about writing documentation for your GitHub repository from our GitHub-flavored markdown guide.  Regularly reflect on your learning by answering these key questions:
+Can you describe the system in a few concise sentences?  How does it interact with adjacent systems?  What surprised you most during the learning process?  What aspects remain unclear?After all of these recommendations, I’ve found that my favorite way to learn a new codebase is through documenting it, and turning that documentation into something that others can use in the future. Writing things down forces me to structure my thoughts and identify gaps in my understanding.No matter how you learn, getting familiar with a new codebase can take some time. If you find that you need to brush up on your GitHub skills for any of these areas, check out this GitHub for Beginners video. Happy learning!]]></content:encoded></item><item><title>Sign in as anyone: Bypassing SAML SSO authentication with parser differentials</title><link>https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/</link><author>Peter Stöckli</author><category>official</category><pubDate>Wed, 12 Mar 2025 21:07:18 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Critical authentication bypass vulnerabilities (CVE-2025-25291 + CVE-2025-25292) were discovered in ruby-saml up to version 1.17.0. Attackers who are in possession of a single valid signature that was created with the key used to validate SAML responses or assertions of the targeted organization can use it to construct SAML assertions themselves and are in turn able to log in as any user. In other words, it could be used for an account takeover attack. Users of ruby-saml should update to version 1.18.0. References to libraries making use of ruby-saml (such as omniauth-saml) need also be updated to a version that reference a fixed version of ruby-saml.In this blog post, we detail newly discovered authentication bypass vulnerabilities in the ruby-saml library used for single sign-on (SSO) via SAML on the service provider (application) side. GitHub doesn’t currently use ruby-saml for authentication, but began evaluating the use of the library with the intention of using an open source library for SAML authentication once more. This library is, however, used in other popular projects and products. We discovered an exploitable instance of this vulnerability in GitLab, and have notified their security team so they can take necessary actions to protect their users against potential attacks.GitHub previously used the ruby-saml library up to 2014, but moved to our own SAML implementation due to missing features in ruby-saml at that time. Following bug bounty reports around vulnerabilities in our own implementation (such as CVE-2024-9487, related to encrypted assertions), GitHub recently decided to explore the use of ruby-saml again. Then in October 2024, a blockbuster vulnerability dropped: an authentication bypass in ruby-saml (CVE-2024-45409) by ahacker1. With tangible evidence of exploitable attack surface, GitHub’s switch to ruby-saml had to be evaluated more thoroughly now. As such, GitHub started a private bug bounty engagement to evaluate the security of the ruby-saml library. We gave selected bug bounty researchers access to GitHub test environments using ruby-saml for SAML authentication. In tandem, the GitHub Security Lab also reviewed the attack surface of the ruby-saml library.As is not uncommon when multiple researchers are looking at the same code, both ahacker1, a participant in the GitHub bug bounty program, and I noticed the same thing during code review: ruby-saml was using two different XML parsers during the code path of signature verification. Namely, REXML and Nokogiri. While REXML is an XML parser implemented in pure Ruby, Nokogiri provides an easy-to-use wrapper API around different libraries like libxml2, libgumbo and Xerces (used for JRuby). Nokogiri supports parsing of XML and HTML. It looks like Nokogiri was added to ruby-saml to support canonicalization and potentially other things REXML didn’t support at that time.We both inspected the same code path in the  of  and found that the signature element to be verified is first read via REXML, and then also with Nokogiri’s XML parser. So, if REXML and Nokogiri could be tricked into retrieving different signature elements for the same XPath query it might be possible to trick ruby-saml into verifying the wrong signature. It looked like there could be a potential authentication bypass due to a !The reality was actually more complicated than this.Roughly speaking, four stages were involved in the discovery of this authentication bypass:Discovering that two different XML parsers are used during code review.  Establishing if and how a parser differential could be exploited.  Finding an actual parser differential for the parsers in use.  Leveraging the parser differential to create a full-blown exploit.To prove the security impact of this vulnerability, it was necessary to complete all four stages and create a full-blown authentication bypass exploit.Quick recap: how SAML responses are validatedSecurity assertion markup language (SAML) responses are used to transport information about a signed-in user from the identity provider (IdP) to the service provider (SP) in XML format. Often the only important information transported is a username or an email address. When the HTTP POST binding is used, the SAML response travels from the IdP to the SP via the browser of the end user. This makes it obvious why there has to be some sort of signature verification in play to prevent the user from tampering with the message.Let’s have a quick look at what a simplified SAML response looks like:Note: in the response above the XML namespaces were removed for better readability.As you might have noticed: the main part of a simple SAML response is its assertion element (A), whereas the main information contained in the assertion is the information contained in the  element (B) (here the NameID containing the username: admin). A real assertion typically contains more information (e.g.  and  dates as part of a  element.)Normally, the  (A) (without the whole  part) is canonicalized and then compared against the  (C) and the  (D) is canonicalized and verified against the  (E). In this sample, the assertion of the SAML response is signed, and in other cases the whole SAML response is signed.Searching for parser differentialsWe learned that ruby-saml used two different XML parsers (REXML and Nokogiri) for validating the SAML response. Now let’s have a look at the verification of the signature and the digest comparison.
+The focus of the following explanation lies on the  method inside of .Inside that method, there’s a broad XPath query with REXML for the first signature element inside the SAML document:sig_element = REXML::XPath.first(
+  @working_copy,
+  "//ds:Signature",
+  {"ds"=>DSIG}
+)
+Hint: When reading the code snippets, you can tell the difference between queries for REXML and Nokogiri by looking at how they are called. REXML methods are prefixed with , whereas Nokogiri methods are called on .Later, the actual  is read from this element:base64_signature = REXML::XPath.first(
+  sig_element,
+  "./ds:SignatureValue",
+  {"ds" => DSIG}
+)
+signature = Base64.decode64(OneLogin::RubySaml::Utils.element_text(base64_signature))
+Note: the name of the  element might be a bit confusing. While it contains the actual signature in the  node it also contains the part that is actually signed in the  node. Most importantly the  element contains the digest (hash) of the assertion and information about the used key.So, an actual  element could look like this (removed namespace information for better readability):<Signature>
+    <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+        <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+        <Reference URI="#_SAMEID">
+            <Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <DigestValue>Su4v[..]</DigestValue>
+        </Reference>
+    </SignedInfo>
+    <SignatureValue>L8/i[..]</SignatureValue>
+    <KeyInfo>
+        <X509Data>
+            <X509Certificate>MIID[..]</X509Certificate>
+        </X509Data>
+    </KeyInfo>
+</Signature>
+Later in the same method () there’s again a query for the Signature(s)—but this time with Nokogiri.noko_sig_element = document.at_xpath('//ds:Signature', 'ds' => DSIG)
+Then the  element is taken from that signature and canonicalized:noko_signed_info_element = noko_sig_element.at_xpath('./ds:SignedInfo', 'ds' => DSIG)
 
-async fn f2(_: impl for<'a> AsyncFn(&'a u8))
-{ todo!() }
+canon_string = noko_signed_info_element.canonicalize(canon_algorithm)
+Let’s remember this  contains the canonicalized  element.The  element is then also extracted with REXML: signed_info_element = REXML::XPath.first(
+        sig_element,
+        "./ds:SignedInfo",
+        { "ds" => DSIG }
+ )
+From this  element the  node is read:ref = REXML::XPath.first(signed_info_element, "./ds:Reference", {"ds"=>DSIG})
+reference_nodes = document.xpath("//*[@ID=$id]", nil, { 'id' => extract_signed_element_id })
+The method extract_signed_element_idextracts the signed element id with help of REXML. From the previous authentication bypass (CVE-2024-45409), there’s now a check that only one element with the same ID can exist.The first of the  is taken and canonicalized:hashed_element = reference_nodes[0][..]canon_hashed_element = hashed_element.canonicalize(canon_algorithm, inclusive_namespaces)
+The  is then hashed:hash = digest_algorithm.digest(canon_hashed_element)
+The  to compare it against is then extracted with REXML:encoded_digest_value = REXML::XPath.first(
+        ref,
+        "./ds:DigestValue",
+        { "ds" => DSIG }
+      )
+digest_value = Base64.decode64(OneLogin::RubySaml::Utils.element_text(encoded_digest_value))
+Finally, the  (built from the element extracted by Nokogiri) is compared against the  (extracted with REXML):unless digests_match?(hash, digest_value)
+The  extracted some lines ago (a result of an extraction with Nokogiri) is later verified against (extracted with REXML).unless cert.public_key.verify(signature_algorithm.new, signature, canon_string)
+In the end, we have the following constellation:The assertion is extracted and canonicalized with Nokogiri, and then hashed. In contrast, the hash against which it will be compared is extracted with REXML.  The SignedInfo element is extracted and canonicalized with Nokogiri - it is then verified against the SignatureValue, which was extracted with REXML.Exploiting the parser differentialThe question is: is it possible to create an XML document where REXML sees one signature and Nokogiri sees another?Ahacker1, participating in the bug bounty, was faster to produce a working exploit using a parser differential. Among other things, ahacker1 was inspired by the XML roundtrips vulnerabilities published by Mattermost’s Juho Forsén in 2021.Not much later, I produced an exploit using a different parser differential with the help of Trail of Bits’ Ruby fuzzer called ruzzy.Both exploits result in an authentication bypass. Meaning that an attacker, who is in possession of a single valid signature that was created with the key used to validate SAML responses or assertions of the targeted organization, can use it to construct assertions for any users which will be accepted by ruby-saml. Such a signature can either come from a signed assertion or response from another (unprivileged) user or in certain cases, it can even come from signed metadata of a SAML identity provider (which can be publicly accessible).An exploit could look like this. Here, an additional Signature was added as part of the  element that is only visible to Nokogiri:The  element (A) from the signature that is visible to Nokogiri is canonicalized and verified against the  (B) that was extracted from the signature seen by REXML.The assertion is retrieved via Nokogiri by looking for its ID. This assertion is then canonicalized and hashed (C). The hash is then compared to the hash contained in the  (D). This DigestValue was retrieved via REXML. This DigestValue has no corresponding signature.So, two things take place:A valid SignedInfo with DigestValue is verified against a valid signature. (which checks out)  A fabricated canonicalized assertion is compared against its calculated digest. (which checks out as well)This allows an attacker, who is in possession of a valid signed assertion for any (unprivileged) user, to fabricate assertions and as such impersonate any other user.Check for errors when using NokogiriParts of the currently known, undisclosed exploits can be stopped by checking for Nokogiri parsing errors on SAML responses. Sadly, those errors do not result in exceptions, but need to be checked on the  member of the parsed document:doc = Nokogiri::XML(xml) do |config|
+  config.options = Nokogiri::XML::ParseOptions::STRICT | Nokogiri::XML::ParseOptions::NONET
+end
 
-async fn main() {
-    async fn g(_: &u8) { todo!() }
-    f(g).await;
-    //~^ ERROR mismatched types
-    //~| ERROR one type is more general than the other
-
-    f2(g).await; // ok!
+raise "XML errors when parsing: " + doc.errors.to_s if doc.errors.any?
+While this is far from a perfect fix for the issues at hand, it renders at least one exploit infeasible.We are not aware of any reliable indicators of compromise. While we’ve found a potential indicator of compromise, it only works in debug-like environments and to publish it, we would have to reveal too many details about how to implement a working exploit so we’ve decided that it’s better not to publish it. Instead, our best recommendation is to look for suspicious logins via SAML on the service provider side from IP addresses that do not align with the user’s expected location.SAML and XML signatures:as confusing as it getsSome might say it’s hard to integrate systems with SAML. That might be true. However, it’s even harder to write implementations of SAML using XML signatures in a secure way. As others have stated before: it’s probably best to disregard the specifications, as following them doesn’t help build secure implementations.
+To rehash how the validation works if the SAML assertion is signed, let’s have a look at the graphic below,  depicting a simplified SAML response. The assertion, which transports the protected information, contains a signature. Confusing, right?To complicate it even more: What is even signed here? The whole assertion? No!What’s signed is the  element and the  element contains a . This  is the hash of the canonicalized assertion with the signature element removed before the canonicalization. This two-stage verification process can lead to implementations that have a disconnect between the verification of the hash and the verification of the signature. This is the case for these Ruby-SAML parser differentials: while the hash and the signature check out on their own, they have no connection. The hash is actually a hash of the assertion, but the signature is a signature of a different  element containing another hash. What you actually want is a direct connection between the hashed content, the hash, and the signature. (And once the verification is done you only want to retrieve information from the exact part that was actually verified.) Or, alternatively, use a less complicated standard to transport a cryptographically signed username between two systems - but here we are.In this case, the library already extracted the  and used it to verify the signature of its canonicalized string,. However, it did not use it to obtain the digest value. If the library had used the content of the already extracted  to obtain the digest value, it would have been secure in this case even with two XML parsers in use.As shown once again: relying on two different parsers in a security context can be tricky and error-prone. That being said: exploitability is not automatically guaranteed in such cases. As we have seen in this case, checking for Nokogiri errors could not have prevented the parser differential, but could have stopped at least one practical exploitation of it.The initial fix for the authentication bypasses does not remove one of the XML parsers to prevent API compatibility problems. As noted, the more fundamental issue was the disconnect between verification of the hash and verification of the signature, which was exploitable via parser differentials. The removal of one of the XML parsers was already planned for other reasons, and will likely come as part of a major release in combination with additional improvements to strengthen the library. If your company relies on open source software for business-critical functionality, consider sponsoring them to help fund their future development and bug fix releases.If you’re a user of ruby-saml library, make sure to update to the latest version, 1.18.0, containing fixes for CVE-2025-25291 and CVE-2025-25292. References to libraries making use of ruby-saml (such as omniauth-saml) need also be updated to a version that reference a fixed version of ruby-saml. We will publish a proof of concept exploit at a later date in the GitHub Security Lab repository.Special thanks to Sixto Martín, maintainer of ruby-saml, and Jeff Guerra from the GitHub Bug Bounty program.
+Special thanks also to ahacker1 for giving inputs to this blog post.2024-11-04: Bug bounty report demonstrating an authentication bypass was reported against a GitHub test environment evaluating ruby-saml for SAML authentication.  2024-11-04: Work started to identify and test potential mitigations.  2024-11-12: A second authentication bypass was found by Peter that renders the planned mitigations for the first useless.  2024-11-13: Initial contact with Sixto Martín, maintainer of ruby-saml.  2024-11-14: Both parser differentials are reported to ruby-saml, the maintainer responds immediately.  2024-11-14: The work on potential patches by the maintainer and ahacker1 begins. (One of the initial ideas was to remove one of the XML parsers, but this was not feasible without breaking backwards compatibility).  2025-02-04: ahacker1 proposes a non-backwards compatible fix.  2025-02-06: ahacker1 also proposes a backwards compatible fix.  2025-02-12: The 90 days deadline of GitHub Security Lab advisories ends.  2025-02-16: The maintainer starts working on a fix with the idea to be backwards-compatible and easier to understand.  2025-02-17: Initial contact with GitLab to coordinate a release of their on-prem product with the release of the ruby-saml library.  2025-03-12: A fixed version of ruby-saml was released.]]></content:encoded></item><item><title>GitHub Availability Report: February 2025</title><link>https://github.blog/news-insights/company-news/github-availability-report-february-2025/</link><author>Jakub Oleksy</author><category>official</category><pubDate>Wed, 12 Mar 2025 19:59:17 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[In February, we experienced two incidents that resulted in degraded performance across GitHub services.February 25 14:25 UTC (lasting 2 hours and 19 minutes)On February 25, 2025, between 14:25 UTC and 16:44 UTC, email and web notifications experienced delivery delays. At the peak of the incident, the delay resulted in ~10% of all notifications taking over 10 minutes to be delivered, with the remaining ~90% being delivered within 5-10 minutes. This incident was caused by worker pools running too close to capacity at peak times, resulting in a delay in queue processing.We mitigated the incident by scaling out the service to meet the demand. We’ve since established a higher baseline capacity to ensure no further delays occur, and we are improving our capacity planning to proactively manage our pool going forward.February 3 18:01 UTC (lasting 30 minutes)On February 3, 2025, at 18:01 UTC, an incident was declared due to failures in our Migration Tools. The root cause was traced to a deployment of a system component, which led to missing Docker images, causing a 100% outage for all users attempting migrations in this window. The issue was mitigated by rolling back to the previous stable version, restoring service within approximately 30 min.We have enhanced our test coverage and our workflows to ensure validation of critical dependencies.Please follow our status page for real-time updates on status changes and post-incident recaps. To learn more about what we’re working on, check out the GitHub Engineering Blog.]]></content:encoded></item><item><title>Traversal-resistant file APIs</title><link>https://go.dev/blog/osroot</link><author>Damien Neil</author><category>dev</category><category>official</category><category>go</category><pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[A path traversal vulnerability arises when an attacker can trick a program
+into opening a file other than the one it intended.
+This post explains this class of vulnerability,
+some existing defenses against it, and describes how the new
+ API added in Go 1.24 provides
+a simple and robust defense against unintentional path traversal.“Path traversal” covers a number of related attacks following a common pattern:
+A program attempts to open a file in some known location, but an attacker causes
+it to open a file in a different location.If the attacker controls part of the filename, they may be able to use relative
+directory components ("..") to escape the intended location:f, err := os.Open(filepath.Join(trustedLocation, "../../../../etc/passwd"))
+On Windows systems, some names have special meaning:// f will print to the console.
+f, err := os.Create(filepath.Join(trustedLocation, "CONOUT$"))
+If the attacker controls part of the local filesystem, they may be able to use
+symbolic links to cause a program to access the wrong file:// Attacker links /home/user/.config to /home/otheruser/.config:
+err := os.WriteFile("/home/user/.config/foo", config, 0o666)
+If the program defends against symlink traversal by first verifying that the intended file
+does not contain any symlinks, it may still be vulnerable to
+time-of-check/time-of-use (TOCTOU) races,
+where the attacker creates a symlink after the program’s check:// Validate the path before use.
+cleaned, err := filepath.EvalSymlinks(unsafePath)
+if err != nil {
+  return err
 }
-Hiding trait implementations from diagnosticsThe new #[diagnostic::do_not_recommend] attribute is a hint to the compiler to not show the annotated trait implementation as part of a diagnostic message. For library authors, this is a way to keep the compiler from making suggestions that may be unhelpful or misleading. For example:pub trait Foo {}
-pub trait Bar {}
-
-impl<T: Foo> Bar for T {}
-
-struct MyType;
-
-fn main() {
-    let _object: &dyn Bar = &MyType;
+if !filepath.IsLocal(cleaned) {
+  return errors.New("unsafe path")
 }
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
- --> src/main.rs:9:29
-  |
-9 |     let _object: &dyn Bar = &MyType;
-  |                             ^^^^ the trait `Foo` is not implemented for `MyType`
-  |
-note: required for `MyType` to implement `Bar`
- --> src/main.rs:4:14
-  |
-4 | impl<T: Foo> Bar for T {}
-  |         ---  ^^^     ^
-  |         |
-  |         unsatisfied trait bound introduced here
-  = note: required for the cast from `&MyType` to `&dyn Bar`
-For some APIs, it might make good sense for you to implement , and get  indirectly by that blanket implementation. For others, it might be expected that most users should implement  directly, so that  suggestion is a red herring. In that case, adding the diagnostic hint will change the error message like so:#[diagnostic::do_not_recommend]
-impl<T: Foo> Bar for T {}
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
-  --> src/main.rs:10:29
-   |
-10 |     let _object: &dyn Bar = &MyType;
-   |                             ^^^^ the trait `Bar` is not implemented for `MyType`
-   |
-   = note: required for the cast from `&MyType` to `&dyn Bar`
- and  for tuplesEarlier versions of Rust implemented convenience traits for iterators of  tuple pairs to behave like , with  in 1.56 and  in 1.79. These have now been  to more tuple lengths, from singleton  through to 12 items long, . For example, you can now use  to fanout into multiple collections at once:use std::collections::{LinkedList, VecDeque};
-fn main() {
-    let (squares, cubes, tesseracts): (Vec<_>, VecDeque<_>, LinkedList<_>) =
-        (0i32..10).map(|i| (i * i, i.pow(3), i.pow(4))).collect();
-    println!("{squares:?}");
-    println!("{cubes:?}");
-    println!("{tesseracts:?}");
+
+// Attacker replaces part of the path with a symlink.
+// The Open call follows the symlink:
+f, err := os.Open(cleaned)
+Another variety of TOCTOU race involves moving a directory that forms part of a path
+mid-traversal. For example, the attacker provides a path such as “a/b/c/../../etc/passwd”,
+and renames “a/b/c” to “a/b” while the open operation is in progress.Before we tackle path traversal attacks in general, let’s start with path sanitization.
+When a program’s threat model does not include attackers with access to the local file system,
+it can be sufficient to validate untrusted input paths before use.Unfortunately, sanitizing paths can be surprisingly tricky,
+especially for portable programs that must handle both Unix and Windows paths.
+For example, on Windows  reports ,
+because the path “\foo” is relative to the current drive.In Go 1.20, we added the 
+function, which reports whether a path is “local”. A “local” path is one which:does not escape the directory in which it is evaluated ("../etc/passwd" is not allowed);is not an absolute path ("/etc/passwd" is not allowed);is not empty ("" is not allowed);on Windows, is not a reserved name (“COM1” is not allowed).In Go 1.23, we added the 
+function, which converts a /-separated path into a local operating system path.Programs that accept and operate on potentially attacker-controlled paths should almost
+always use  or  to validate or sanitize those paths.Path sanitization is not sufficient when attackers may have access to part of
+the local filesystem.Multi-user systems are uncommon these days, but attacker access to the filesystem
+can still occur in a variety of ways.
+An unarchiving utility that extracts a tar or zip file may be induced
+to extract a symbolic link and then extract a file name that traverses that link.
+A container runtime may give untrusted code access to a portion of the local filesystem.Programs may defend against unintended symlink traversal by using the
+path/filepath.EvalSymlinks
+function to resolve links in untrusted names before validation, but as described
+above this two-step process is vulnerable to TOCTOU races.Before Go 1.24, the safer option was to use a package such as
+github.com/google/safeopen,
+that provides path traversal-resistant functions for opening a potentially-untrusted
+filename within a specific directory.In Go 1.24, we are introducing new APIs in the  package to safely open
+a file in a location in a traversal-resistent fashion.The new  type represents a directory somewhere
+in the local filesystem. Open a root with the 
+function:root, err := os.OpenRoot("/some/root/directory")
+if err != nil {
+  return err
 }
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-[0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
-[0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561]
-Updates to  has been deprecated for years, because it can give surprising results in some Windows configurations if the  environment variable is set (which is not the normal configuration on Windows). We had previously avoided changing its behavior, out of concern for compatibility with code depending on this non-standard configuration. Given how long this function has been deprecated, we're now updating its behavior as a bug fix, and a subsequent release will remove the deprecation for this function.These APIs are now stable in const contextsMany people came together to create Rust 1.85.0. We couldn't have done it without all of you. Thanks!]]></content:encoded></item><item><title>Testing concurrent code with testing/synctest</title><link>https://go.dev/blog/synctest</link><author>Damien Neil</author><category>dev</category><category>official</category><category>go</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
-      Damien Neil
-      19 February 2025
-      One of Go’s signature features is built-in support for concurrency.
-Goroutines and channels are simple and effective primitives for
-writing concurrent programs.However, testing concurrent programs can be difficult and error prone.In Go 1.24, we are introducing a new, experimental
- package
-to support testing concurrent code. This post will explain the motivation behind
-this experiment, demonstrate how to use the synctest package, and discuss its potential future.In Go 1.24, the  package is experimental and
-not subject to the Go compatibility promise.
-It is not visible by default.
-To use it, compile your code with  set in your environment.Testing concurrent programs is difficultTo begin with, let us consider a simple example.The  function
-arranges for a function to be called in its own goroutine after a context is canceled.
-Here is a possible test for :func TestAfterFunc(t *testing.T) {
-    ctx, cancel := context.WithCancel(context.Background())
+defer root.Close()
+ provides methods to operate on files within the root.
+These methods all accept filenames relative to the root,
+and disallow any operations that would escape from the root either
+using relative path components ("..") or symlinks.f, err := root.Open("path/to/file")
+ permits relative path components and symlinks that do not escape the root.
+For example,  is permitted. Filenames are resolved using the
+semantics of the local platform: On Unix systems, this will follow
+any symlink in “a” (so long as that link does not escape the root);
+while on Windows systems this will open “b” (even if “a” does not exist). currently provides the following set of operations:func (*Root) Create(string) (*File, error)
+func (*Root) Lstat(string) (fs.FileInfo, error)
+func (*Root) Mkdir(string, fs.FileMode) error
+func (*Root) Open(string) (*File, error)
+func (*Root) OpenFile(string, int, fs.FileMode) (*File, error)
+func (*Root) OpenRoot(string) (*Root, error)
+func (*Root) Remove(string) error
+func (*Root) Stat(string) (fs.FileInfo, error)
+In addition to the  type, the new
+ function
+provides a simple way to open a potentially-untrusted filename within a
+specific directory:f, err := os.OpenInRoot("/some/root/directory", untrustedFilename)
+The  type provides a simple, safe, portable API for operating with untrusted filenames.Caveats and considerationsOn Unix systems,  is implemented using the  family of system calls.
+A  contains a file descriptor referencing its root directory and will track that
+directory across renames or deletion. defends against symlink traversal but does not limit traversal
+of mount points. For example,  does not prevent traversal of
+Linux bind mounts. Our threat model is that  defends against
+filesystem constructs that may be created by ordinary users (such
+as symlinks), but does not handle ones that require root privileges
+to create (such as bind mounts).On Windows,  opens a handle referencing its root directory.
+The open handle prevents that directory from being renamed or deleted until the  is closed. prevents access to reserved Windows device names such as  and .On WASI, the  package uses the WASI preview 1 filesystem API,
+which are intended to provide traversal-resistent filesystem access.
+Not all WASI implementations fully support filesystem sandboxing,
+however, and ’s defense against traversal is limited to that provided
+by the WASI impementation.When GOOS=js, the  package uses the Node.js file system API.
+This API does not include the openat family of functions,
+and so  is vulnerable to TOCTOU (time-of-check-time-of-use) races in symlink
+validation on this platform.When GOOS=js, a  references a directory name rather than a file descriptor,
+and does not track directories across renames.Plan 9 does not have symlinks.
+On Plan 9, a  references a directory name and performs lexical sanitization of
+filenames. operations on filenames containing many directory components can be much more expensive
+than the equivalent non- operation. Resolving “..” components can also be expensive.
+Programs that want to limit the cost of filesystem operations can use  to
+remove “..” components from input filenames, and may want to limit the number of
+directory components.You should use  or  if:you are opening a file in a directory; ANDthe operation should not access a file outside that directory.For example, an archive extractor writing files to an output directory should use
+, because the filenames are potentially untrusted and it would be incorrect
+to write a file outside the output directory.However, a command-line program that writes output to a user-specified location
+should not use , because the filename is not untrusted and may
+refer to anywhere on the filesystem.As a good rule of thumb, code which calls  to combine a fixed directory
+and an externally-provided filename should probably use  instead.// This might open a file not located in baseDirectory.
+f, err := os.Open(filepath.Join(baseDirectory, filename))
 
-    calledCh := make(chan struct{}) // closed when AfterFunc is called
-    context.AfterFunc(ctx, func() {
-        close(calledCh)
-    })
-
-    // TODO: Assert that the AfterFunc has not been called.
-
-    cancel()
-
-    // TODO: Assert that the AfterFunc has been called.
-}
-We want to check two conditions in this test:
-The function is not called before the context is canceled,
-and the function  called after the context is canceled.Checking a negative in a concurrent system is difficult.
-We can easily test that the function has not been called ,
-but how do we check that it  be called?A common approach is to wait for some amount of time before
-concluding that an event will not happen.
-Let’s try introducing a helper function to our test which does this.// funcCalled reports whether the function was called.
-funcCalled := func() bool {
-    select {
-    case <-calledCh:
-        return true
-    case <-time.After(10 * time.Millisecond):
-        return false
+// This will only open files under baseDirectory.
+f, err := os.OpenInRoot(baseDirectory, filename)
+The  API is new in Go 1.24.
+We expect to make additions and refinements to it in future releases.The current implementation prioritizes correctness and safety over performance.
+Future versions will take advantage of platform-specific APIs, such as
+Linux’s , to improve performance where possible.There are a number of filesystem operations which  does not support yet, such as
+creating symbolic links and renaming files. Where possible, we will add support for these
+operations. A list of additional functions in progress is in
+go.dev/issue/67002.]]></content:encoded></item><item><title>Spotlight on SIG Apps</title><link>https://kubernetes.io/blog/2025/03/12/sig-apps-spotlight-2025/</link><author></author><category>official</category><category>k8s</category><category>devops</category><pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate><source url="https://kubernetes.io/">Kubernetes Blog</source><content:encoded><![CDATA[In our ongoing SIG Spotlight series, we dive into the heart of the Kubernetes project by talking to
+the leaders of its various Special Interest Groups (SIGs). This time, we focus on
+,
+the group responsible for everything related to developing, deploying, and operating applications on
+Kubernetes. Sandipan Panda
+(DevZero) had the opportunity to interview Maciej
+Szulik (Defense Unicorns) and Janet
+Kuo (Google), the chairs and tech leads of
+SIG Apps. They shared their experiences, challenges, and visions for the future of application
+management within the Kubernetes ecosystem.Sandipan: Hello, could you start by telling us a bit about yourself, your role, and your journey
+within the Kubernetes community that led to your current roles in SIG Apps?: Hey, my name is Maciej, and I’m one of the leads for SIG Apps. Aside from this role, you
+can also find me helping
+SIG CLI and also being one of
+the Steering Committee members. I’ve been contributing to Kubernetes since late 2014 in various
+areas, including controllers, apiserver, and kubectl.: Certainly! I'm Janet, a Staff Software Engineer at Google, and I've been deeply involved
+with the Kubernetes project since its early days, even before the 1.0 launch in 2015. It's been an
+amazing journey!My current role within the Kubernetes community is one of the chairs and tech leads of SIG Apps. My
+journey with SIG Apps started organically. I started with building the Deployment API and adding
+rolling update functionalities. I naturally gravitated towards SIG Apps and became increasingly
+involved. Over time, I took on more responsibilities, culminating in my current leadership roles.All following answers were jointly provided by Maciej and Janet.Sandipan: For those unfamiliar, could you provide an overview of SIG Apps' mission and objectives?
+What key problems does it aim to solve within the Kubernetes ecosystem?As described in our
+charter, we cover a
+broad area related to developing, deploying, and operating applications on Kubernetes. That, in
+short, means we’re open to each and everyone showing up at our bi-weekly meetings and discussing the
+ups and downs of writing and deploying various applications on Kubernetes.Sandipan: What are some of the most significant projects or initiatives currently being undertaken
+by SIG Apps?At this point in time, the main factors driving the development of our controllers are the
+challenges coming from running various AI-related workloads. It’s worth giving credit here to two
+working groups we’ve sponsored over the past years:Best practices and challengesSandipan: SIG Apps plays a crucial role in developing application management best practices for
+Kubernetes. Can you share some of these best practices and how they help improve application
+lifecycle management?Implementing health checks and readiness probes
+ensures that your applications are healthy and ready to serve traffic, leading to improved
+reliability and uptime. The above, combined with comprehensive logging, monitoring, and tracing
+solutions, will provide insights into your application's behavior, enabling you to identify and
+resolve issues quickly.Auto-scale your application based
+on resource utilization or custom metrics, optimizing resource usage and ensuring your
+application can handle varying loads.Use Deployment for stateless applications, StatefulSet for stateful applications, Job
+and CronJob for batch workloads, and DaemonSet for running a daemon on each node. Use
+Operators and CRDs to extend the Kubernetes API to automate the deployment, management, and
+lifecycle of complex applications, making them easier to operate and reducing manual
+intervention.Sandipan: What are some of the common challenges SIG Apps faces, and how do you address them?The biggest challenge we’re facing all the time is the need to reject a lot of features, ideas, and
+improvements. This requires a lot of discipline and patience to be able to explain the reasons
+behind those decisions.Sandipan: How has the evolution of Kubernetes influenced the work of SIG Apps? Are there any
+recent changes or upcoming features in Kubernetes that you find particularly relevant or beneficial
+for SIG Apps?The main benefit for both us and the whole community around SIG Apps is the ability to extend
+kubernetes with Custom Resource Definitions
+and the fact that users can build their own custom controllers leveraging the built-in ones to
+achieve whatever sophisticated use cases they might have and we, as the core maintainers, haven’t
+considered or weren’t able to efficiently resolve inside Kubernetes.Sandipan: What opportunities are available for new contributors who want to get involved with SIG
+Apps, and what advice would you give them?We get the question, "What good first issue might you recommend we start with?" a lot :-) But
+unfortunately, there’s no easy answer to it. We always tell everyone that the best option to start
+contributing to core controllers is to find one you are willing to spend some time with. Read
+through the code, then try running unit tests and integration tests focusing on that
+controller. Once you grasp the general idea, try breaking it and the tests again to verify your
+breakage. Once you start feeling confident you understand that particular controller, you may want
+to search through open issues affecting that controller and either provide suggestions, explaining
+the problem users have, or maybe attempt your first fix.Like we said, there are no shortcuts on that road; you need to spend the time with the codebase to
+understand all the edge cases we’ve slowly built up to get to the point where we are. Once you’re
+successful with one controller, you’ll need to repeat that same process with others all over again.Sandipan: How does SIG Apps gather feedback from the community, and how is this feedback
+integrated into your work?We always encourage everyone to show up and present their problems and solutions during our
+bi-weekly meetings. As long
+as you’re solving an interesting problem on top of Kubernetes and you can provide valuable feedback
+about any of the core controllers, we’re always happy to hear from everyone.Sandipan: Looking ahead, what are the key focus areas or upcoming trends in application management
+within Kubernetes that SIG Apps is excited about? How is the SIG adapting to these trends?Definitely the current AI hype is the major driving factor; as mentioned above, we have two working
+groups, each covering a different aspect of it.Sandipan: What are some of your favorite things about this SIG?Without a doubt, the people that participate in our meetings and on
+Slack, who tirelessly help triage issues, pull
+requests and invest a lot of their time (very frequently their private time) into making kubernetes
+great!SIG Apps is an essential part of the Kubernetes community, helping to shape how applications are
+deployed and managed at scale. From its work on improving Kubernetes' workload APIs to driving
+innovation in AI/ML application management, SIG Apps is continually adapting to meet the needs of
+modern application developers and operators. Whether you’re a new contributor or an experienced
+developer, there’s always an opportunity to get involved and make an impact.If you’re interested in learning more or contributing to SIG Apps, be sure to check out their SIG
+README and join their bi-weekly meetings.]]></content:encoded></item><item><title>Why Java endures: The foundation of modern enterprise development</title><link>https://github.blog/developer-skills/why-java-endures-the-foundation-of-modern-enterprise-development/</link><author>Andrea Griffiths</author><category>official</category><pubDate>Tue, 11 Mar 2025 16:00:01 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Here’s a true story: I learned Java after pretending to be an Android developer when I first started out in software development. While doing that, I quickly learned something important: Java isn’t just a convenient entry point into tech, it’s a strategic career choice.That’s why I want to examine what makes Java so interesting—and how you can either get started or brush up on your skills. After all, when you are trying to break into tech, especially when you’re coming from a non-traditional background like me (I began my career as an Army soldier and construction manager), you need a language that’s both learnable and employable. And, in my experience, knowing your way around Java opens doors that might otherwise stay closed to a newcomer.What is Java? And what’s the difference between Java and JavaScript?When we think about the programming languages that form the backbone of enterprise software development, Java is one of the first names that comes to mind. At its core, Java is a versatile, object-oriented programming language, rooted in its “write once, run anywhere” (WORA) strength. Thanks to the Java Virtual Machine (JVM), it powers the foundation for scalable, secure applications across nearly every industry.Despite sharing part of its name with JavaScript, Java serves a distinctly different purpose. JavaScript is a lightweight language used predominantly for front-end web development, backend work, and full-stack applications. Meanwhile, Java is a general purpose language that is used for everything from backend development to desktop applications, mobile apps, and large-scale enterprise applications.Today, Java powers everything from your Spotify playlist in Android mobile to the Cash App transaction to split your dinner check. In short, Java powers massive systems that process millions of data transactions every day.And let’s clear something up: if you’re picturing verbose enterprise code running on dusty servers, it’s time for an update. Java has evolved from its enterprise roots, where it was largely used for powering payroll systems and customer databases, into a versatile platform driving everything from backend services to gaming to AI-powered applications such as Netflix and LinkedIn.With a history spanning three decades, Java has proven itself as a reliable, versatile, and constantly evolving language that continues to be a top choice for developers around the world.So, what is it about Java that has not only endured but thrived in an environment full of constant change?To understand this resilience and versatility, let’s take a step back and look at where Java came from and how it has grown over the years.The birth of Java: write once, run anywhereJava’s story begins back in 1991 when a team of engineers at Sun Microsystems, led by James Gosling, set out to create a language for interactive television. First developed under the name Oak, the language that would be renamed Java was designed to be simple, robust, and platform independent, using a virtual machine—later called a Java Virtual Machine, or JVM—to run code anywhere.While that original project didn’t quite pan out, it laid the groundwork for something much bigger.In 1995, Java 1.0 was officially released, and with it came a revolutionary promise: “Write Once, Run Anywhere” (WORA). This principle meant Java code could be written once and then run on any device that supports the Java platform, without needing to be recompiled for each operating system.To fully appreciate the impact of this shift, it’s helpful to look back at the state of software development in the mid ‘90s.If you were a developer back then and you wanted your application to run on multiple operating systems (Windows, Mac, and Unix), you needed to write separate versions for each one. This meant learning the unique APIs, libraries, and quirks of each operating system—which was even more fun then than it is now (seriously, it was a slog). Updating and fixing had to be done platform by platform in a tedious grind like a messy game of Whac-A-Mole. One fix here, another patch there, and plenty of ways for things to go wrong.This fragmented approach was a significant barrier to building software for a wide, diverse audience. For enterprises looking to deploy applications across multiple environments, Java became an incredibly attractive choice. With the emergence of enterprise-focused frameworks like J2EE and Spring, coupled with strong corporate backing from Sun Microsystems and later Oracle, it provided the reliability and consistency that businesses needed.After 30 years, you might just say that Java has come a long way from its early days.Let’s take the release of Java 23 in September 2024 as an example. This update brought a host of new features and enhancements designed to make developers’ lives easier while keeping Java aligned with the needs of modern development. This included enhancements such as:, which allows primitive types like int and double to be used seamlessly with pattern matching and switch statements, simplifying code and reducing workarounds
+Markdown documentation comments (JEP 467), which lets developers  write Java Docs using Markdown syntax to create more readable documentation directly in the source codeOne of the most notable changes was the simplification of the language’s entry point for new developers. The classic “Hello, World!” program, which is often the first thing a developer writes when learning a new language, was streamlined to just a few lines of code. The traditional version required understanding several complex concepts right from the start.Need proof? Here’s the old way:public class HelloWorld {    // A class declaration that must match the file name
+    public static void main(String[] args) {    // The program's entry point
+        System.out.println("Hello, World!");    // The actual operation we want
     }
 }
-
-if funcCalled() {
-    t.Fatalf("AfterFunc function called before context is canceled")
+Each line introduced multiple new concepts—public classes, static methods, command-line arguments—before achieving the simple goal of just displaying some text.In contrast, Java 23 streamlines the syntax to its essential requirements:void main() {
+    System.out.println("Hello, World!");
 }
-
-cancel()
-
-if !funcCalled() {
-    t.Fatalf("AfterFunc function not called after context is canceled")
+Now, you might be thinking, “That’s not a big change!” But think about it from a beginner’s perspective. When you’re just starting out with programming, even small bits of boilerplate code can be confusing and overwhelming. You’re trying to understand new concepts and syntax, and every extra line of code is one more thing to decipher.But Java isn’t just for beginners. Java 23, for instance, brings powerful new features for more advanced uses, such as improved pattern matching and the evolution of record classes.With the evolution of record classes, Java facilitates the implementation of modern design patterns by providing concise and immutable data structures like lists or sets. These collections can’t be changed once created, which means there are no accidental edits. This makes them ideal for building scalable microservices or event-driven architectures, where data integrity and consistency are essential.On the other hand, the enhanced pattern matching supports primitive types, streamlining complex data handling while boosting performance by eliminating boxing overhead. This is especially critical for high-performance systems, such as financial platforms or data pipelines, where efficiency is not only key but required. Put another way, it’s the difference between a system that thrives under pressure and one that buckles.Here’s an example of how pattern matching has been enhanced in Java 23:switch (value) {
+    case int i when i > 0 -> "Positive";
+    case int i when i < 0 -> "Negative";
+    case int i when i == 0 -> "Zero";
+    default -> "Not a number";
 }
-This test is slow:
-10 milliseconds isn’t a lot of time, but it adds up over many tests.This test is also flaky:
-10 milliseconds is a long time on a fast computer,
-but it isn’t unusual to see pauses lasting several seconds
-on shared and overloaded
-CI
-systems.We can make the test less flaky at the expense of making it slower,
-and we can make it less slow at the expense of making it flakier,
-but we can’t make it both fast and reliable.Introducing the testing/synctest packageThe  package solves this problem.
-It allows us to rewrite this test to be simple, fast, and reliable,
-without any changes to the code being tested.The package contains only two functions:  and . calls a function in a new goroutine.
-This goroutine and any goroutines started by it
-exist in an isolated environment which we call a .
- waits for every goroutine in the current goroutine’s bubble
-to block on another goroutine in the bubble.Let’s rewrite our test above using the  package.func TestAfterFunc(t *testing.T) {
-    synctest.Run(func() {
-        ctx, cancel := context.WithCancel(context.Background())
+In this switch expression, the code checks both the type of the value and its specific value in one go. In older versions of Java, we had to use a series of if-else statements or a switch statement with multiple cases for each condition. But with this new syntax, the intent of the code is clear, and the logic is neatly encapsulated.The Java ecosystem: Building blocks for modern innovationIt’s hard to talk about Java’s impact on modern software development without turning to Minecraft, one of the world’s most successful video games with over 10 million players worldwide, which was originally built entirely in Java. While Java is often associated with enterprise computing, the original Minecraft: Java Edition demonstrates how the language’s core strengths translate across different domains.Consider how Minecraft generates its seemingly infinite worlds. The game engine uses Java’s object-oriented architecture to manage countless blocks, each with its own properties and behaviors. This mirrors how enterprise systems handle millions of business objects or how AI applications process vast datasets. Each block in Minecraft is essentially an object instance managed by Java’s efficient memory system—the same system that helps large-scale enterprise applications maintain performance under heavy loads.Java’s enduring success is due in large part to the comprehensive ecosystem that has evolved around it after decades of enterprise use. The ecosystem builds on a powerful universal foundation: the Java Class Library (JCL). Think of JCL as a shared toolbox that every Java developer can rely on, whether they’re building fraud detection algorithms in São Paulo or recommendation engines in San Francisco. Just as the coordinated universal time (UTC) synchronizes clocks globally, Java developers everywhere work with these same tested, reliable building blocks.This standardization has sparked a thriving global community that has built an expansive collection of open source tools on top of Java’s foundation. When developers face a new challenge, chances are the Java ecosystem already has a proven solution ready to use. For instance, when building enterprise applications, developers can leverage Spring’s dependency injection or Hibernate’s ORM capabilities, both of which extend the JCL’s fundamental database connectivity features.Spring Boot relies heavily on JCL to supercharge Spring, making it faster to build production ready applications. Here’s a spring boot example of how modern Java applications pull on the larger Java ecosystem to handle the common scenario of generating and sending personalized email-based notifications:@Service
+public class SmartEmailService extends BaseNotificationService {
+    private final EmailClient emailClient;
 
-        funcCalled := false
-        context.AfterFunc(ctx, func() {
-            funcCalled = true
-        })
+    @Autowired
+    public SmartEmailService(UserRepository users, AIModelClient aiModel, EmailClient emailClient) {
+        super(users, aiModel);
+        this.emailClient = Objects.requireNonNull(emailClient, "EmailClient cannot be null");
+    }
 
-        synctest.Wait()
-        if funcCalled {
-            t.Fatalf("AfterFunc function called before context is canceled")
-        }
+    @Override
+    public String generatePersonalizedMessage(String userId) {
+        User user = users.findById(userId)
+                .orElseThrow(() -> new UserNotFoundException("User not found: " + userId));
+        UserEngagement engagement = getUserEngagement(userId);
 
-        cancel()
+        var content = aiModel.generateContent(
+                user.getPreferences(),
+                engagement.getInteractionHistory(),
+                engagement.getResponseRates()
+        );
+        return content != null ? content : "Personalized message unavailable";
+    }
 
-        synctest.Wait()
-        if !funcCalled {
-            t.Fatalf("AfterFunc function not called after context is canceled")
-        }
-    })
+    @Override
+    public void send(String userId, String baseMessage) {
+        User user = users.findById(userId)
+                .orElseThrow(() -> new UserNotFoundException("User not found: " + userId));
+        String personalizedMessage = generatePersonalizedMessage(userId);
+        String finalMessage = combineMessages(baseMessage, personalizedMessage);
+
+        emailClient.sendEmail(user.getEmail(), finalMessage);
+    }
+
+    private String combineMessages(String base, String personalized) {
+        String trimmedBase = base != null ? base.trim() : "";
+        String trimmedPersonalized = personalized != null ? personalized.trim() : "";
+        if (trimmedBase.isEmpty()) return trimmedPersonalized;
+        if (trimmedPersonalized.isEmpty()) return trimmedBase;
+        return trimmedBase + "\n\n" + trimmedPersonalized;
+    }
 }
-This is almost identical to our original test,
-but we have wrapped the test in a  call
-and we call  before asserting that the function has been called or not.The  function waits for every goroutine in the caller’s bubble to block.
-When it returns, we know that the context package has either called the function,
-or will not call it until we take some further action.This test is now both fast and reliable.The test is simpler, too:
-we have replaced the  channel with a boolean.
-Previously we needed to use a channel to avoid a data race between
-the test goroutine and the  goroutine,
-but the  function now provides that synchronization.The race detector understands  calls,
-and this test passes when run with .
-If we remove the second  call,
-the race detector will correctly report a data race in the test.Concurrent code often deals with time.Testing code that works with time can be difficult.
-Using real time in tests causes slow and flaky tests,
-as we have seen above.
-Using fake time requires avoiding  package functions,
-and designing the code under test to work with
-an optional fake clock.The  package makes it simpler to test code that uses time.Goroutines in the bubble started by  use a fake clock.
-Within the bubble, functions in the  package operate on the
-fake clock. Time advances in the bubble when all goroutines are
-blocked.To demonstrate, let’s write a test for the
- function.
- creates a child of a context,
-which expires after a given timeout.func TestWithTimeout(t *testing.T) {
-    synctest.Run(func() {
-        const timeout = 5 * time.Second
-        ctx, cancel := context.WithTimeout(context.Background(), timeout)
-        defer cancel()
-
-        // Wait just less than the timeout.
-        time.Sleep(timeout - time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != nil {
-            t.Fatalf("before timeout, ctx.Err() = %v; want nil", err)
-        }
-
-        // Wait the rest of the way until the timeout.
-        time.Sleep(time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != context.DeadlineExceeded {
-            t.Fatalf("after timeout, ctx.Err() = %v; want DeadlineExceeded", err)
-        }
-    })
-}
-We write this test just as if we were working with real time.
-The only difference is that we wrap the test function in ,
-and call  after each  call to wait for the context
-package’s timers to finish running.A key concept in  is the bubble becoming .
-This happens when every goroutine in the bubble is blocked,
-and can only be unblocked by another goroutine in the bubble.When a bubble is durably blocked:If there is an outstanding  call, it returns.Otherwise, time advances to the next time that could unblock a goroutine, if any.Otherwise, the bubble is deadlocked and  panics.A bubble is not durably blocked if any goroutine is blocked
-but might be woken by some event from outside the bubble.The complete list of operations which durably block a goroutine is:a send or receive on a nil channela send or receive blocked on a channel created within the same bubblea select statement where every case is durably blockingOperations on a  are not durably blocking.It is common for functions to acquire a global mutex.
-For example, a number of functions in the reflect package
-use a global cache guarded by a mutex.
-If a goroutine in a synctest bubble blocks while acquiring
-a mutex held by a goroutine outside the bubble,
-it is not durably blocked—it is blocked, but will be unblocked
-by a goroutine from outside its bubble.Since mutexes are usually not held for long periods of time,
-we simply exclude them from ’s consideration.Channels created within a bubble behave differently from ones created outside.Channel operations are durably blocking only if the channel is bubbled
-(created in the bubble).
-Operating on a bubbled channel from outside the bubble panics.These rules ensure that a goroutine is durably blocked only when
-communicating with goroutines within its bubble.External I/O operations, such as reading from a network connection,
-are not durably blocking.Network reads may be unblocked by writes from outside the bubble,
-possibly even from other processes.
-Even if the only writer to a network connection is also in the same bubble,
-the runtime cannot distinguish between a connection waiting for more data to arrive
-and one where the kernel has received data and is in the process of delivering it.Testing a network server or client with synctest will generally
-require supplying a fake network implementation.
-For example, the  function
-creates a pair of s that use an in-memory network connection
-and can be used in synctest tests.The  function starts a goroutine in a new bubble.
-It returns when every goroutine in the bubble has exited.
-It panics if the bubble is durably blocked
-and cannot be unblocked by advancing time.The requirement that every goroutine in the bubble exit before Run returns
-means that tests must be careful to clean up any background goroutines
-before completing.Let’s look at another example, this time using the 
-package to test a networked program.
-For this example, we’ll test the  package’s handling of
-the 100 Continue response.An HTTP client sending a request can include an “Expect: 100-continue”
-header to tell the server that the client has additional data to send.
-The server may then respond with a 100 Continue informational response
-to request the rest of the request,
-or with some other status to tell the client that the content is not needed.
-For example, a client uploading a large file might use this feature to
-confirm that the server is willing to accept the file before sending it.Our test will confirm that when sending an “Expect: 100-continue” header
-the HTTP client does not send a request’s content before the server
-requests it, and that it does send the content after receiving a
-100 Continue response.Often tests of a communicating client and server can use a
-loopback network connection. When working with ,
-however, we will usually want to use a fake network connection
-to allow us to detect when all goroutines are blocked on the network.
-We’ll start this test by creating an  (an HTTP client) that uses
-an in-memory network connection created by .func Test(t *testing.T) {
-    synctest.Run(func() {
-        srvConn, cliConn := net.Pipe()
-        defer srvConn.Close()
-        defer cliConn.Close()
-        tr := &http.Transport{
-            DialContext: func(ctx context.Context, network, address string) (net.Conn, error) {
-                return cliConn, nil
-            },
-            // Setting a non-zero timeout enables "Expect: 100-continue" handling.
-            // Since the following test does not sleep,
-            // we will never encounter this timeout,
-            // even if the test takes a long time to run on a slow machine.
-            ExpectContinueTimeout: 5 * time.Second,
-        }
-We send a request on this transport with the “Expect: 100-continue” header set.
-The request is sent in a new goroutine, since it won’t complete until the end of the test.        body := "request body"
-        go func() {
-            req, _ := http.NewRequest("PUT", "http://test.tld/", strings.NewReader(body))
-            req.Header.Set("Expect", "100-continue")
-            resp, err := tr.RoundTrip(req)
-            if err != nil {
-                t.Errorf("RoundTrip: unexpected error %v", err)
-            } else {
-                resp.Body.Close()
-            }
-        }()
-We read the request headers sent by the client.        req, err := http.ReadRequest(bufio.NewReader(srvConn))
-        if err != nil {
-            t.Fatalf("ReadRequest: %v", err)
-        }
-Now we come to the heart of the test.
-We want to assert that the client will not send the request body yet.We start a new goroutine copying the body sent to the server into a ,
-wait for all goroutines in the bubble to block, and verify that we haven’t read anything
-from the body yet.If we forget the  call, the race detector will correctly complain
-about a data race, but with the  this is safe.        var gotBody strings.Builder
-        go io.Copy(&gotBody, req.Body)
-        synctest.Wait()
-        if got := gotBody.String(); got != "" {
-            t.Fatalf("before sending 100 Continue, unexpectedly read body: %q", got)
-        }
-We write a “100 Continue” response to the client and verify that it now sends the
-request body.        srvConn.Write([]byte("HTTP/1.1 100 Continue\r\n\r\n"))
-        synctest.Wait()
-        if got := gotBody.String(); got != body {
-            t.Fatalf("after sending 100 Continue, read body %q, want %q", got, body)
-        }
-And finally, we finish up by sending the “200 OK” response to conclude the request.We have started several goroutines during this test.
-The  call will wait for all of them to exit before returning.        srvConn.Write([]byte("HTTP/1.1 200 OK\r\n\r\n"))
-    })
-}
-This test can be easily extended to test other behaviors,
-such as verifying that the request body is not sent if the server does not ask for it,
-or that it is sent if the server does not respond within a timeout.We are introducing 
-in Go 1.24 as an  package.
-Depending on feedback and experience
-we may release it with or without amendments,
-continue the experiment,
-or remove it in a future version of Go.The package is not visible by default.
-To use it, compile your code with  set in your environment.We want to hear your feedback!
-If you try out ,
-please report your experiences, positive or negative,
-on go.dev/issue/67434.]]></content:encoded></item><item><title>Protecting user data through source code analysis at scale</title><link>https://engineering.fb.com/2025/02/18/security/protecting-user-data-through-source-code-analysis/</link><author></author><category>dev</category><category>official</category><pubDate>Tue, 18 Feb 2025 20:30:49 +0000</pubDate><source url="https://engineering.fb.com/">Facebook engineering</source><content:encoded><![CDATA[detect potential scraping vectorsturning our attack vector criteria into static analysis rules# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.GET['viewer_id']
-target = request.GET['target_id']
-	count = request.GET['count']
-	if(can_see(viewer, target)):
-		followers = load_followers(target, count)
-		return followers
-
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.Get['viewer_id']
-	target = request.GET['target_id']
-	count = min(request.GET['count'], MAX_FOLLOWERS_RESULTS)
-	if(can_see(viewer, target)):
-	    followers = load_followers(target, count)
-		return followers
-
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...]]></content:encoded></item></channel></rss>
+This code example shows a few core Java principles: interfaces define clear contracts, inheritance enables code reuse, and polymorphism allows for flexible implementations. Spring’s integration demonstrates how Java’s ecosystem offers solutions for common enterprise needs from dependency management to application configuration.By combining standardized foundations with powerful frameworks, Java allows developers to focus on solving business problems instead of reinventing basic infrastructure. This efficiency is part of the reason why Java remains the backbone of mission-critical systems across diverse industries.AI ready: Java’s role in AIWhile Python may dominate AI research headlines, Java’s robust ecosystem and reliability make it well suited for deploying AI solutions at scale in production environments. For instance, Uber’s Michelangelo machine learning platform extensively uses Java in its production infrastructure to serve real-time predictions, such as Uber Eats delivery times or ride demand forecasts across millions of requests daily, showcasing Java’s ability to handle high-throughput, low-latency workloads seamlessly.Moreover, through frameworks like Deeplearning4j, LangChain4J, and integrations with tools like TensorFlow, organizations can enhance their existing Java systems with AI capabilities rather than rebuilding from scratch.Consider a bank’s fraud detection system or an ecommerce platform’s recommendation engine: these are typically Java-based applications, and some organizations are experimenting with adding AI features to them. Rather than rewriting these critical systems in Python, which is a common language in AI, companies can use Java’s AI libraries to add intelligence, which helps avoid costly rebuilds while maintaining the security, reliability, and performance of the systems at hand.Learning Java: A strategic path to career growth in software developmentFor many developers—myself included—learning Java isn’t just a hobby, but a strategic career move. As one of the most in-demand languages in the job market, Java can open doors to a wide range of opportunities from developing Android apps to building financial trading systems to crafting large-scale web applications to building the next version of Minecraft (goals, am I right?).But learning any new language can be daunting—especially one with as much depth and breadth as Java. Fortunately, the resources for learning Java have never been better. Educators like Barry Burd, a professor at Drew University, are using Java’s new features, such as Records and Sealed Classes, to make the learning process smoother and more intuitive. Records eliminate the boilerplate of data classes, helping students focus on concepts rather than syntax, while Sealed Classes provide clear, enforceable hierarchies that make inheritance more understandable.“I’ve been revising my introductory Java book using Java 23’s Implicitly Declared Classes preview features, and as an author and educator, these features make my work much easier,”  Burd said in an interview with The New Stack. “Much of the verbose code in previous editions has gone by the wayside, which helps students concentrate on essential logic.”The rise of online learning platforms, coding bootcamps, and AI developer tools like GitHub Copilot has also made it easier to pick up practical Java skills. With GitHub Copilot Free, for instance, you can ask questions about a codebase via Copilot Chat and get detailed explanations about key topics—or try writing code yourself and use Copilot’s suggestions to learn how Java works on the ground.The future of Java: innovation meets stabilityMore than any specific feature or update, Java stands apart is its unwavering commitment to its core principles. Java has always been about empowering developers to write code that is robust, scalable, and maintainable.Looking for hands-on practice? Check out beginner-friendly Java OSS projects like Exercism Java Track (coding exercises) and Strongbox (an artifact manager). These projects on GitHub offer approachable codebases and opportunities to learn core Java skills while contributing to real software.If you’re developing enterprise-level systems or just starting in software development, Java provides a clear and rewarding path for growth (and did we mention it’s one of the most in-demand languages for professional developers?). Ready to add your code to it?Start learning Java with GitHub Copilot FreeOur free version of Copilot is included by default in personal GitHub accounts.Start using GitHub Copilot >]]></content:encoded></item><item><title>Full exposure: A practical approach to handling sensitive data leaks</title><link>https://github.blog/security/full-exposure-a-practical-approach-to-handling-sensitive-data-leaks/</link><author>Alexis Wales</author><category>official</category><pubDate>Mon, 10 Mar 2025 16:00:49 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[In the fast-paced world of software development, accidents can happen—even to the best of us. One such unfortunate event is the accidental leakage of sensitive data such as private or internal source code. When this occurs, companies often find themselves in a frantic rush to assess the situation, leading them down the rabbit hole of trying to determine just how exposed their sensitive data really is. However, this quest for degrees of exposure is a futile endeavor. There’s no such thing as “just a little bit exposed.” Instead, it’s better to opt for the more pragmatic approach: treat the exposure as full and complete from the moment it happens.The futility of chasing degrees of exposureImagine your company’s sensitive data accidentally ends up in the public domain. An employee, for example, mistakenly posted it to a public repository. Panic sets in, and the first instinct is often to try and measure the extent of the exposure. Who accessed it? For how long? Did anyone download it? These questions are perfectly logical, but they’ll lead you down a time-consuming and fruitless path.The reality is the moment your sensitive data is public, it’s out there for anyone to see. The internet is a vast and anonymous space, and trying to pinpoint the exact degree of exposure can quickly become an exercise in chasing shadows.Treating exposure as inevitableInstead of dwelling on the question of “how exposed” you are, we should assume the worst from the outset. Your sensitive data is fully exposed; consider it a given. Embrace this assumption, and you can start taking practical steps to mitigate the potential fallout.Practical steps for moving forward: If your sensitive data contained secrets such as API keys or personal access tokens, assume that these have been compromised. Immediately rotate these secrets to prevent unauthorized access. Some data may need to be removed entirely.
+: Focus on understanding the potential impact of the exposure. What vulnerabilities might arise from the leaked sensitive data? Perform a thorough security assessment to identify and address potential risks based on the premise that the sensitive data was fully exposed to the public.: Transparent communication with stakeholders, customers, and the public is essential. Inform them of the situation, the steps you’re taking to mitigate risks, and any potential actions they should take.: Consult with legal experts to understand any legal ramifications of the leak. This could include potential intellectual property issues or contractual obligations.The benefits of treating exposure as full: By assuming full exposure, you can act swiftly to mitigate risks and minimize potential damage.: There’s no ambiguity. You don’t waste time trying to determine the extent of exposure.: Rotating exposed secrets and conducting a thorough security assessment are prudent measures that enhance your overall security posture.When it comes to handling sensitive data leaks, it’s time to shift our default mindset. Instead of asking “how exposed,” we should embrace the assumption of full exposure. By doing so, we can respond more effectively and focus on what truly matters: securing our systems, protecting sensitive data, and maintaining the trust of our stakeholders. In the world of cybersecurity, assuming the worst from the outset is a pragmatic approach that benefits developers and organizations alike.Avoid the exposure of private or sensitive data.Check out our best practices for preventing data leaks in your organization.]]></content:encoded></item></channel></rss>
