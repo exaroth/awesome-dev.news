@@ -1,333 +1,559 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>How to debug code with GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/how-to-debug-code-with-github-copilot/</link><author>Jeimy Ruiz</author><category>official</category><pubDate>Fri, 21 Feb 2025 17:00:49 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Debugging is an essential part of a developer’s workflow—but it’s also one of the most time consuming. What if AI could streamline the process, helping you analyze, fix, and document code faster? Enter GitHub Copilot, your AI-powered coding assistant.GitHub Copilot isn’t just for writing code—it’s also a powerful tool for debugging. Whether you’re troubleshooting in your IDE, using Copilot Chat’s slash commands like , or reviewing pull requests (PR) on github.com, GitHub Copilot offers flexible, intelligent solutions to speed up your debugging process. And with the free version of GitHub Copilot, available to all personal GitHub accounts, you can start exploring these features today.In this guide, we’ll explore how to debug code with GitHub Copilot, where to use it in your workflow, and best practices to get the most out of its capabilities. Whether you’re new to GitHub Copilot or looking to deepen your skills, this guide has something for you.Debugging code with GitHub Copilot: surfaces and workflowsDebugging code with GitHub Copilot can help you tackle issues faster while enhancing your understanding of the codebase. Whether you’re fixing syntax errors, refactoring inefficient code, or troubleshooting unexpected behavior, GitHub Copilot can provide valuable insights in your debugging journey.So, how exactly does this work? “GitHub Copilot is recognizing patterns and suggesting solutions based on what it has learned,” says Christopher Harrison, Senior Developer Advocate. “Once you’ve identified the problem area, you can turn to GitHub Copilot and ask, ‘I’m giving this input but getting this output—what’s wrong?’ That’s where GitHub Copilot really shines.”Let’s explore how GitHub Copilot can help you debug your code across different surfaces, from your IDE to github.com and even pull requests.Copilot Chat acts as an interactive AI assistant, helping you debug issues with natural language queries. And with Copilot Free, you get 50 chat messages per month. With Copilot Chat, you can:Get real-time explanations: Ask “Why is this function throwing an error?” and Copilot Chat will analyze the code and provide insights.  Use slash commands for debugging: Try  to generate a potential solution or  for a step-by-step breakdown of a complex function. (More on this later!)   Refactor code for efficiency: If your implementation is messy or inefficient, Copilot Chat can suggest cleaner alternatives. Christopher explains, “Refactoring improves the readability of code, making it easier for both developers and GitHub Copilot to understand. And if code is easier to understand, it’s easier to debug and spot problems.”  Walk through errors interactively: Describe your issue in chat and get tailored guidance without ever having to leave your IDE. When working in popular IDEs like VS Code or JetBrains, GitHub Copilot offers real-time suggestions as you type. It helps by: For example, if you declare a variable but forget to initialize it, GitHub Copilot can suggest a correction.   Encounter a syntax error? GitHub Copilot can suggest a fix in seconds, ensuring your code stays error-free.   By analyzing your workspace, GitHub Copilot provides solutions tailored to your codebase and project structure.GitHub Copilot extends beyond your IDE, offering debugging assistance directly on github.com via Copilot Chat, particularly in repositories and discussions. With this feature, you can:Troubleshoot code in repositories: Open a file, highlight a problematic section, and use Copilot Chat to analyze it.   If you’re unsure how to verify a function, GitHub Copilot can suggest test cases based on existing code.  Understand unfamiliar code: Reviewing an open-source project or a teammate’s PR? Ask GitHub Copilot to summarize a function or explain its logic.4. For pull request assistanceGitHub Copilot can also streamline debugging within PRs, ensuring code quality before merging.Suggest improvements in PR comments: GitHub Copilot can review PRs and propose fixes directly in the conversation.   Struggling to describe your changes? Greg Larkin, Senior Service Delivery Engineer, says, “I use GitHub Copilot in the PR creation process to generate a summary of the changes in my feature branch compared to the branch I’m merging into. That can be really helpful when I’m struggling to figure out a good description, so that other people understand what I did.”   Not sure why a change was made? Ask GitHub Copilot to summarize what’s different between commits.  Catch edge cases before merging: Use  to identify potential issues and  to generate missing test cases.   If a PR contains redundant or inefficient code, GitHub Copilot can suggest optimized alternatives.By integrating Copilot into your PR workflow, you can speed up code reviews while maintaining high-quality standards. Just be sure to pair it with peer expertise for the best results.Slash commands turn GitHub Copilot into an on-demand debugging assistant, helping you solve issues faster, get more insights, and improve your code quality. Here are some of the most useful slash commands for debugging:1. Use /help to get guidance on using GitHub Copilot effectivelyThe  slash command provides guidance on how to interact with GitHub Copilot effectively, offering tips on structuring prompts, using slash commands, and maximizing GitHub Copilot’s capabilities.: Type  in Copilot Chat to receive suggestions on your current task, whether it’s debugging, explaining code, or generating test cases.  : Need a refresher on what GitHub Copilot can do? Use  to access a quick guide to slash commands like  and .2. Use /fix to suggest and apply fixesThe  command is a go-to tool for resolving code issues by allowing you to highlight a block of problematic code or describe an error. Select the code causing issues, type , and let Copilot Chat generate suggestions.   If you have a broken API call, use  to get a corrected version with appropriate headers or parameters.3. Use /explain to understand code and errorsThe  command breaks down complex code or cryptic error messages into simpler, more digestible terms. Highlight the code or error message you want clarified, type , and Copilot Chat will provide an explanation. It will explain the function’s purpose, how it processes the data, potential edge cases, and any possible bugs or issues.    Encounter a “NullPointerException”? Use  to understand why it occurred and how to prevent it.4. Use /tests to generate testsTesting is key to identifying bugs, and the  command helps by generating test cases based on your code. Use  on a function or snippet, and Copilot Chat will generate relevant test cases.   Apply  to a sorting function, and Copilot Chat might generate unit tests for edge cases like empty arrays or null inputs.5. Use /doc to generate or improve documentationThere are long-term benefits to having good text documentation—for developers and GitHub Copilot, which can draw context from it—because it makes your codebase that much more searchable. By using the  command with Copilot Free, you can even ask GitHub Copilot to write a summary of specific code blocks within your IDE.The  command helps you create or refine documentation for your code, which is critical when debugging or collaborating with others. Clear documentation provides context for troubleshooting, speeds up issue resolution, and helps fellow developers understand your code faster. Highlight a function, class, or file, type  and right-click to see the context menu, and Copilot Chat will generate comprehensive comments or documentation.   Apply  to a function, and Copilot Chat will generate inline comments detailing its purpose, parameters, and expected output.By mastering these commands, you can streamline your debugging workflow and resolve issues faster without switching between tools or wasting time on manual tasks.Best practices for debugging code with GitHub CopilotProvide clear context for better resultsProviding the right context helps GitHub Copilot generate even more relevant debugging suggestions. As Christopher explains, “The better that Copilot is able to understand what you’re trying to do and how you’re trying to do it, the better the responses are that it’s able to give to you.”Since GitHub Copilot analyzes your code within the surrounding scope, ensure your files are well structured and that relevant dependencies are included. If you’re using Copilot Chat, reference specific functions, error messages, or logs to get precise answers instead of generic suggestions. Working across multiple files? Use the  command to point GitHub Copilot in the right direction and give it more context for your prompt and intended goal.Ask, refine, and optimize in real timeInstead of treating GitHub Copilot as a one-and-done solution, refine its suggestions by engaging in a back-and-forth process. Greg says, “I find it useful to ask GitHub Copilot for three or four different options on how to fix a problem or to analyze for performance. The more detail you provide about what you’re after—whether it’s speed, memory efficiency, or another constraint—the better the result.”This iterative approach can help you explore alternative solutions you might not have considered, leading to more robust and efficient code.Master the art of specific promptsThe more specific your prompt, the better GitHub Copilot’s response. Instead of asking “What’s wrong with this function?” try “Why is this function returning undefined when the input is valid?” GitHub Copilot performs best when given clear, detailed queries—this applies whether you’re requesting a fix, asking for an explanation, or looking for test cases to verify your changes.By crafting precise prompts and testing edge cases, you can use GitHub Copilot to surface potential issues before they become production problems.Try a structured approach with progressive debuggingNext, try a step-by-step approach to your debugging process! Instead of immediately applying fixes, use GitHub Copilot’s commands to first understand the issue, analyze potential causes, and then implement a solution. This structured workflow—known as —helps you gain deeper insights into your code while ensuring that fixes align with the root cause of the problem.Start with the slash command  on a problematic function to understand the issue.  Use the slash command  to help with configuring interactive debugging.  Finally, apply the slash command  to generate possible corrections.📌  If a function in your React app isn’t rendering as expected, start by running  on the relevant JSX or state logic, then use  to identify mismanaged props, and finally, apply  for a corrected implementation.Some issues require multiple levels of debugging and refinement. By combining commands, you can move from diagnosis to resolution even faster.Use  to understand and resolve issues quickly.  Apply  to find failing tests and generate new ones.Fixing a broken function: Run the slash command  to understand why it fails, then use the slash command  to generate a corrected version.   Use the slash command  to identify and fix failing tests, then use the slash command  to generate additional unit tests for the highlighted code. Remember, slash commands are most effective when they’re used in the appropriate context, combined with clear descriptions of the problem, are part of a systematic debugging approach, and followed up with verification and testing.GitHub Copilot is a powerful tool that enhances your workflow, but it doesn’t replace the need for human insight, critical thinking, and collaboration. As Greg points out, “GitHub Copilot can essentially act as another reviewer, analyzing changes and providing comments. Even so, it doesn’t replace human oversight. Having multiple perspectives on your code is crucial, as different reviewers will spot issues that others might miss.”By combining GitHub Copilot’s suggestions with human expertise and rigorous testing, you can debug more efficiently while maintaining high-quality, reliable code.]]></content:encoded></item><item><title>Engaging with the developer community on our approach to content moderation</title><link>https://github.blog/news-insights/policy-news-and-insights/engaging-with-the-developer-community-on-our-approach-to-content-moderation/</link><author>Margaret Tucker</author><category>official</category><pubDate>Thu, 20 Feb 2025 17:00:22 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[At GitHub, we’re committed to keeping our community informed about how we govern our platform. That means being transparent about content moderation and involving users in the development of our site policies. Today we’re announcing that our Transparency Center and repo have been updated with data for all of 2024.Our developer-first approach to content moderation is adapted to the unique environment of code collaboration and has evolved to meet specific needs through a suite of content moderation tools. We’ve discussed the nuances and challenges of moderating a code collaboration platform in the Journal of Online Trust and Safety in an effort to be transparent about our own practices and contribute to the research base of platform studies.We want to bring this discussion directly to the developers that make GitHub what it is. Recently, we attended FOSDEM, Europe’s largest free and open source developer conference. We connected with developers and presented a deep dive into how our approach to platform moderation has been informed by the values of the FOSS community. You can watch the video of the talk here. We’ll also be presenting this talk on March 8 at SCaLE 22x, the 22nd Annual Southern California Linux Expo in Pasadena, CA. We don’t want to just share our own work—we want to hear directly from developers and maintainers about the challenges you’re facing.Developers are an important stakeholder in how we moderate our platform, and we want to hear from you. Check out our site-policy repo to contribute constructive ideas, questions, and feedback to make our policies better. We also welcome participation in our developer-policy repo where you can share public policy opportunities and challenges to advance developers’ rights to innovation, collaboration, and equal opportunity.]]></content:encoded></item><item><title>Announcing Rust 1.85.0 and Rust 2024</title><link>https://blog.rust-lang.org/2025/02/20/Rust-1.85.0.html</link><author>The Rust Release Team</author><category>dev</category><category>official</category><category>rust</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[The Rust team is happy to announce a new version of Rust, 1.85.0. This stabilizes the 2024 edition as well.
-Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust installed via , you can get 1.85.0 with:If you'd like to help us out by testing future releases, you might consider updating locally to use the beta channel () or the nightly channel (). Please report any bugs you might come across!We are excited to announce that the Rust 2024 Edition is now stable!
-Editions are a mechanism for opt-in changes that may otherwise pose a backwards compatibility risk. See the edition guide for details on how this is achieved, and detailed instructions on how to migrate.This is the largest edition we have released. The edition guide contains detailed information about each change, but as a summary, here are all the changes:The guide includes migration instructions for all new features, and in general
-transitioning an existing project to a new edition.
-In many cases  can automate the necessary changes. You may even find that no changes in your code are needed at all for 2024!Note that automatic fixes via  are very conservative to avoid ever changing the semantics of your code. In many cases you may wish to keep your code the same and use the new semantics of Rust 2024; for instance, continuing to use the  macro matcher, and ignoring the conversions of conditionals because you want the new 2024 drop order semantics. The result of  should not be considered a recommendation, just a conservative conversion that preserves behavior. people came together to create this edition. We'd like to thank them all for their hard work!Rust now supports asynchronous closures like  which return futures when called. This works like an  which can also capture values from the local environment, just like the difference between regular closures and functions. This also comes with 3 analogous traits in the standard library prelude: , , and .In some cases, you could already approximate this with a regular closure and an asynchronous block, like . However, the future returned by such an inner block is not able to borrow from the closure captures, but this does work with  closures:let mut vec: Vec<String> = vec![];
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>World Water Day: how GitHub Copilot is helping bring clean water to communities</title><link>https://github.blog/open-source/world-water-day-how-github-copilot-is-helping-bring-clean-water-to-communities/</link><author>Paull Young</author><category>official</category><pubDate>Thu, 20 Mar 2025 16:00:37 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[March 22 is World Water Day—a day intended to educate, inspire, and promote action around the importance of clean and safe water. For organizations like charity: water, this is their mission year-round. They’re working to help the more than 700 million people worldwide who don’t have access to clean water, and they’re finding innovative ways of using technology to do it.We’ve seen entire communities transformed with access to clean water and the impact that brings, like the ability to grow your own food and start a small community business. These things really start to accelerate once people are not spending their time retrieving clean water. - Christa Stelzmuller, chief technology officer at charity: waterHow tech is changing the tide of the water crisisWhat else makes charity: water’s approach unique? They have an in-house engineering team, making them an innovator in the nonprofit space. This enables them to manage their own systems, ensuring they function correctly and evolve to have the greatest impact on their mission. Their developers are dedicated to changing the tide of the water crisis, and they know how impactful their work can be.And they have used this innovative mindset to help them do what they call “reinventing charity.” They want to create a space based on trust, proof, and integrity that makes donors feel connected to something that’s happening half a world away. They’ve done this by putting every single project onto a map with GPS coordinates and photos. Now, everyone who gives can see exactly how they’re making a difference.The impact of GitHub Copilot on their missionGitHub is an integral part of how their team collaborates and scales, but the adoption of GitHub Copilot has completely changed their workflow. Now, engineers can spend more time focused on solving business problems and doing things that require creative human thought.Copilot is like a magical autocomplete, it lets us focus more on what is the actual challenge we’re trying to solve, rather than worrying about the syntax. - Jasdeep Gosal, director of engineering at charity: waterHere are their top three reasons why GitHub Copilot has been a gamechanger: they love the ease of telling it exactly what they want it to do    every person on the team uses it to test, helping them keep 99% spec coverage  Suggestions and corrections: they’re able to spend less time looking up syntax and correcting trivial errorsGitHub Copilot helps us code about 10% faster, which across a team of 8, is extremely effective. - Jasdeep Gosal, director of engineering at charity: waterAnother thing that helps this small but mighty team to get the job done is relying on the power of open source. They know that developers are rarely solving a truly unique problem, which is where open source libraries come into their workflow.Collaborating with the open source community is almost the same as collaborating with our own teammates. - Jasdeep Gosal, director of engineering at charity: waterFrom simplifying the workflow of a developer to having an impact on the global water crisis, technology and AI are reshaping the way we work. Dive into a better way of working by trying GitHub Copilot for free today, or if you are a nonprofit organization, check out GitHub for Nonprofits for exclusive discounts.GitHub and Microsoft are committed to charity: water’s work, which is why we have supported them, along with many other organizations, to help further their missions. We are dedicated to achieving our goal of replenishing more water than we consume by 2030, and invest in projects focused on land conservation, aquatic habitat restoration, water supply reliability, and water quality. Learn more about Microsoft’s Sustainability goals.]]></content:encoded></item><item><title>Video: How to create checklists in Markdown for easier task tracking</title><link>https://github.blog/developer-skills/github/video-how-to-create-checklists-in-markdown-for-easier-task-tracking/</link><author>Cassidy Williams</author><category>official</category><pubDate>Wed, 19 Mar 2025 17:06:07 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Have you ever wondered how the cool cats of the internet make Markdown checklists in their GitHub repositories, issues, and pull requests? Me too. And I’m here to say: you too can be a cool cat.Markdown checklists are handy for visualizing tasks that need to be done. Beyond that, GitHub can turn these checklists into task lists in your issues and pull requests to make your project tracking easier and better. Let’s learn how to make ‘em!How to create a checklist in MarkdownMaking a checklist is exactly like making a regular list in Markdown (a  starting each line), but you add  or  after the , like so:- This is a list item
+- This is another list item
+- [ ] This is an unchecked item 
+- [x] This is a checked item
+When the checklist is rendered, it looks like this:Feel free to use the short Markdown checklist template above to get a list going for yourself.Markdown checklists are a great way to keep track of tasks in your README files. For example, you could mark down which features might be missing or which aspects of your project need contributors. You can also use these checklists for documentation (like for noting docs coverage), notes, issues, or pull requests.The best part: GitHub adds extra functionality to your Markdown checklists — and I’ll get to that right…now!From checklist to task listA task list on GitHub is a glorified Markdown checklist, allowing you to do even more project planning and tracking when it’s in an issue or pull request.
+For example, let’s say you make an issue to add some features to a project of yours, like so:- [ ] Update dependencies
+- [ ] Add archiving feature 
+- [ ] Research design system
+It will render like this in the issue:It might look like a normal checklist, but if you hover over one of the bullet points, you’ll be able to drag and drop each task to re-order them:Or, if you hit the  menu on the right side, you can turn each of the individual checklist items into its own issue, sub-issue, or re-order from there!Turning those checklist items into issues and sub-issues means that you can turn that planned work into tracked tasks. Breaking down your existing issues into smaller pieces might seem daunting, but doing it in this way connects all the pieces together nicely as you break things up into more specific chunks.And let’s just say you did the exact same thing, but in a pull request. You still have the ability to re-order the tasks, and it will render the same way as it does in the issue:But now, because you’ve built this checklist in the pull request, you get more visibility into how many tasks have been completed and how many remain in the list of pull requests for your repository. Look just below the title of your pull request: You can see the status of your project right there!]]></content:encoded></item><item><title>IssueOps: Automate CI/CD (and more!) with GitHub Issues and Actions</title><link>https://github.blog/engineering/issueops-automate-ci-cd-and-more-with-github-issues-and-actions/</link><author>Nick Alteen</author><category>official</category><pubDate>Wed, 19 Mar 2025 16:00:24 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Software development is filled with repetitive tasks—managing issues, handling approvals, triggering CI/CD workflows, and more. But what if you could automate these types of tasks directly within GitHub Issues? That’s the promise of , a methodology that turns GitHub Issues into a command center for automation.Whether you’re a solo developer or part of an engineering team, IssueOps helps you streamline operations without ever leaving your repository.In this article, I’ll explore the concept of IssueOps using state-machine terminology and strategies to help you work more efficiently on GitHub. After all, who doesn’t love automation?IssueOps is the practice of using GitHub Issues, GitHub Actions, and pull requests (PR) as an interface for automating workflows. Instead of switching between tools or manually triggering actions, you can use issue comments, labels, and state changes to kick off CI/CD pipelines, assign tasks, and even deploy applications.Much like the various other  paradigms (ChatOps, ClickOps, and so on), IssueOps is a collection of tools, workflows, and concepts that, when applied to GitHub Issues, can automate mundane, repetitive tasks. The flexibility and power of issues, along with their relationship to pull requests, create a near limitless number of possibilities, such as managing approvals and deployments. All of this can really help to simplify your workflows on GitHub. I’m speaking from personal experience here.It’s important to note that IssueOps isn’t just a DevOps thing! Where DevOps offers a methodology to bring developers and operations into closer alignment, IssueOps is a workflow automation practice centered around GitHub Issues. IssueOps lets you run anything from complex CI/CD pipelines to a bed and breakfast reservation system. If you can interact with it via an API, there’s a good chance you can build it with IssueOps!There are lots of benefits to utilizing IssueOps. Here’s how it’s useful in practice:It’s event driven, so you can automate the boring stuff: IssueOps lets you automate workflows directly from GitHub Issues and pull requests, turning everyday interactions—from kicking off a CI/CD pipeline and managing approvals to updating project boards—into powerful triggers for GitHub Actions.
+It’s customizable, so you can tailor workflows to your needs: No two teams work the same way, and IssueOps is flexible enough to adapt. Whether you’re automating bug triage or triggering deployments, you can customize workflows based on event type and data provided.It’s transparent, so you can keep a record: All actions taken on an issue are logged in its timeline, creating an easy-to-follow record of what happened and when.It’s immutable, so you can audit whenever you need: Because IssueOps uses GitHub Issues and pull requests as a source of truth, every action leaves a record. No more chasing approvals in Slack or manually triggering workflows: IssueOps keeps everything structured, automated, and auditable right inside GitHub.Defining IssueOps workflows and how they’re like finite-state machinesMost IssueOps workflows follow the same basic pattern:A user opens an issue and provides information about a request  The issue is validated to ensure it contains the required information  The issue is submitted for processing  Approval is requested from an authorized user or team  The request is processed and the issue is closedSuppose you’re an administrator of an organization and want to reduce the overhead of managing team members. In this instance, you could use IssueOps to build an automated membership request and approval process. Within a workflow like this, you’d have several core steps:A user creates a request to be added to a team  The request is submitted for approval  An administrator approves or denies this request  The request is processed
+If , the user is added to the team  If , the user is not added to the team  The user is notified of the outcomeWhen designing your own IssueOps workflows, it can be very helpful to think of them as a finite-state machine: a model for how objects move through a series of states in response to external events. Depending on certain rules defined within the state machine, a number of different actions can take place in response to state changes. If this is a little too complex, you can also think of it like a flow chart.To apply this comparison to IssueOps, an issue is the  that is processed by a state machine. It changes  in response to . As the object changes state, certain  may be performed as part of a , provided any required conditions () are met. Once an  is reached, the issue can be closed.This breaks down into a few key concepts:: A point in an object’s lifecycle that satisfies certain condition(s).: An external occurrence that triggers a state change.: A link between two states that, when traversed by an object, will cause certain action(s) to be performed.: An atomic task that is performed when a transition is taken.: A condition that is evaluated when a trigger event occurs. A transition is taken only if all associated guard condition(s) are met.Here’s a simple state diagram for the example I discussed above.Now, let’s dive into the state machine in more detail!Key concepts behind state machinesThe benefit of breaking your workflow down into these components is that you can look for edge cases, enforce conditions, and create a robust, reliable result.Within a state machine, a  defines the current status of an object. As the object transitions through the state machine, it will change states in response to external events. When building IssueOps workflows, common states for issues include opened, submitted, approved, denied, and closed.These should suffice as the core states to consider when building our workflows in our team membership example above.In a state machine, an  can be any form of interaction with the object and its current state. When building your own IssueOps, you should consider events from both the user and GitHub points of view.In our team membership request example, there are several events that can trigger a change in state. The request can be created, submitted, approved, denied, or processed.In this example, a user interacting with an issue—such as adding labels, commenting, or updating milestones—can also change its state. In GitHub Actions, there are many events that can trigger your workflows (see events that trigger workflows).Here are a few interactions, or events, that would affect our example IssueOps workflow when it comes to managing team members: As you can see, the same GitHub workflow trigger can apply to multiple events in our state machine. Because of this, validation is key. Within your workflows, you should check both the type of event and the information provided by the user. In this case, we can conditionally trigger different workflow steps based on the content of the  event.jobs:
+  approve:
+    name: Process Approval
+    runs-on: ubuntu-latest
 
-let closure = async || {
-    vec.push(ready(String::from("")).await);
-};
-It also has not been possible to properly express higher-ranked function signatures with the  traits returning a , but you can write this with the  traits:use core::future::Future;
-async fn f<Fut>(_: impl for<'a> Fn(&'a u8) -> Fut)
-where
-    Fut: Future<Output = ()>,
-{ todo!() }
+    if: ${{ startsWith(github.event.comment.body, '.approve') }}
 
-async fn f2(_: impl for<'a> AsyncFn(&'a u8))
-{ todo!() }
+    # ...
 
-async fn main() {
-    async fn g(_: &u8) { todo!() }
-    f(g).await;
-    //~^ ERROR mismatched types
-    //~| ERROR one type is more general than the other
+  deny:
+    name: Process Denial
+    runs-on: ubuntu-latest
 
-    f2(g).await; // ok!
-}
-Hiding trait implementations from diagnosticsThe new #[diagnostic::do_not_recommend] attribute is a hint to the compiler to not show the annotated trait implementation as part of a diagnostic message. For library authors, this is a way to keep the compiler from making suggestions that may be unhelpful or misleading. For example:pub trait Foo {}
-pub trait Bar {}
+    if: ${{ startsWith(github.event.comment.body, '.deny') }}
 
-impl<T: Foo> Bar for T {}
+    # ...
+A  is simply the change from one state to another. In our example, for instance, a transition occurs when someone opens an issue. When a request meets certain conditions, or guards, the change in state can take place. When the transition occurs, some actions or processing may take place, as well.With our example workflow, you can think of the transitions themselves as the lines connecting different nodes in the state diagram. Or the lines connecting boxes in a flow chart. are conditions that must be verified before an event can trigger a transition to a different state. In our case, we know the following guards must be in place:A request should not transition to an Approved state unless an administrator comments  on the issue.  A request should not transition to a Denied state unless an administrator comments  on the issue.What about after the request is approved and the user is added to the team? This is referred to as an . There are no conditions that must be met, so the transition happens immediately!Lastly,  are specific tasks that are performed during a transition. They may affect the object itself, but this is not a requirement in our state machine. In our example, the following actions may take place at different times:Administrators are notified that a request has been submitted  The user is added to the requested team  The user is notified of the outcomeA real-world example: Building a team membership workflow with IssueOpsNow that all of the explanation is out of the way, let’s dive into building our example! For reference, we’ll focus on the GitHub Actions workflows involved in building this automation. There are some additional repository and permissions settings involved that are discussed in more detail in these IssueOps docs.GitHub issue forms let you create standardized, formatted issues based on a set of form fields. Combined with the issue-ops/parser action, you can get reliable, machine-readable JSON from issue body Markdown. For our example, we are going to create a simple form that accepts a single input: the team where we want to add the user.name: Team Membership Request
+description: Submit a new membership request
+title: New Team Membership Request
+labels:
+  - team-membership
+body:
+  - type: input
+    id: team
+    attributes:
+      label: Team Name
+      description: The team name you would like to join
+      placeholder: my-team
+    validations:
+      required: true
+When issues are created using this form, they will be parsed into JSON, which can then be passed to the rest of the IssueOps workflow.With a machine-readable issue body, we can run additional validation checks to ensure the information provided follows any rules we might have in place. For example, we can’t automatically add a user to a team if the team doesn’t exist yet! That is where the issue-ops/validator action comes into play. Using an issue form template and a custom validation script, we can confirm the existence of the team ahead of time.module.exports = async (field) =&gt; {
+  const { Octokit } = require('@octokit/rest')
+  const core = require('@actions/core')
 
-struct MyType;
+  const github = new Octokit({
+    auth: core.getInput('github-token', { required: true })
+  })
 
-fn main() {
-    let _object: &dyn Bar = &MyType;
-}
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
- --> src/main.rs:9:29
-  |
-9 |     let _object: &dyn Bar = &MyType;
-  |                             ^^^^ the trait `Foo` is not implemented for `MyType`
-  |
-note: required for `MyType` to implement `Bar`
- --> src/main.rs:4:14
-  |
-4 | impl<T: Foo> Bar for T {}
-  |         ---  ^^^     ^
-  |         |
-  |         unsatisfied trait bound introduced here
-  = note: required for the cast from `&MyType` to `&dyn Bar`
-For some APIs, it might make good sense for you to implement , and get  indirectly by that blanket implementation. For others, it might be expected that most users should implement  directly, so that  suggestion is a red herring. In that case, adding the diagnostic hint will change the error message like so:#[diagnostic::do_not_recommend]
-impl<T: Foo> Bar for T {}
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
-  --> src/main.rs:10:29
-   |
-10 |     let _object: &dyn Bar = &MyType;
-   |                             ^^^^ the trait `Bar` is not implemented for `MyType`
-   |
-   = note: required for the cast from `&MyType` to `&dyn Bar`
- and  for tuplesEarlier versions of Rust implemented convenience traits for iterators of  tuple pairs to behave like , with  in 1.56 and  in 1.79. These have now been  to more tuple lengths, from singleton  through to 12 items long, . For example, you can now use  to fanout into multiple collections at once:use std::collections::{LinkedList, VecDeque};
-fn main() {
-    let (squares, cubes, tesseracts): (Vec<_>, VecDeque<_>, LinkedList<_>) =
-        (0i32..10).map(|i| (i * i, i.pow(3), i.pow(4))).collect();
-    println!("{squares:?}");
-    println!("{cubes:?}");
-    println!("{tesseracts:?}");
-}
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-[0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
-[0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561]
-Updates to  has been deprecated for years, because it can give surprising results in some Windows configurations if the  environment variable is set (which is not the normal configuration on Windows). We had previously avoided changing its behavior, out of concern for compatibility with code depending on this non-standard configuration. Given how long this function has been deprecated, we're now updating its behavior as a bug fix, and a subsequent release will remove the deprecation for this function.These APIs are now stable in const contextsMany people came together to create Rust 1.85.0. We couldn't have done it without all of you. Thanks!]]></content:encoded></item><item><title>Testing concurrent code with testing/synctest</title><link>https://go.dev/blog/synctest</link><author>Damien Neil</author><category>dev</category><category>official</category><category>go</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
-      Damien Neil
-      19 February 2025
-      One of Go’s signature features is built-in support for concurrency.
-Goroutines and channels are simple and effective primitives for
-writing concurrent programs.However, testing concurrent programs can be difficult and error prone.In Go 1.24, we are introducing a new, experimental
- package
-to support testing concurrent code. This post will explain the motivation behind
-this experiment, demonstrate how to use the synctest package, and discuss its potential future.In Go 1.24, the  package is experimental and
-not subject to the Go compatibility promise.
-It is not visible by default.
-To use it, compile your code with  set in your environment.Testing concurrent programs is difficultTo begin with, let us consider a simple example.The  function
-arranges for a function to be called in its own goroutine after a context is canceled.
-Here is a possible test for :func TestAfterFunc(t *testing.T) {
-    ctx, cancel := context.WithCancel(context.Background())
+  try {
+    // Check if the team exists
+    core.info(`Checking if team '${field}' exists`)
 
-    calledCh := make(chan struct{}) // closed when AfterFunc is called
-    context.AfterFunc(ctx, func() {
-        close(calledCh)
+    await github.rest.teams.getByName({
+      org: process.env.GITHUB_REPOSITORY_OWNER ?? '',
+      team_slug: field
     })
 
-    // TODO: Assert that the AfterFunc has not been called.
-
-    cancel()
-
-    // TODO: Assert that the AfterFunc has been called.
-}
-We want to check two conditions in this test:
-The function is not called before the context is canceled,
-and the function  called after the context is canceled.Checking a negative in a concurrent system is difficult.
-We can easily test that the function has not been called ,
-but how do we check that it  be called?A common approach is to wait for some amount of time before
-concluding that an event will not happen.
-Let’s try introducing a helper function to our test which does this.// funcCalled reports whether the function was called.
-funcCalled := func() bool {
-    select {
-    case <-calledCh:
-        return true
-    case <-time.After(10 * time.Millisecond):
-        return false
+    core.info(`Team '${field}' exists`)
+    return 'success'
+  } catch (error) {
+    if (error.status === 404) {
+      // If the team does not exist, return an error message
+      core.error(`Team '${field}' does not exist`)
+      return `Team '${field}' does not exist`
+    } else {
+      // Otherwise, something else went wrong...
+      throw error
     }
+  }
 }
+When included in our IssueOps workflow, this adds any validation error(s) to the comment on the issue.The main “entrypoint” of this workflow occurs when a user creates or edits their team membership request issue. This workflow should focus heavily on validating any user inputs! For example, what should happen if the user inputs a team that does not exist?In our state machine, this workflow is responsible for handling everything up to the  state. Any time an issue is created, edited, or updated, it will re-run validation to ensure the request is ready to be processed. In this case, an additional guard condition is introduced. Before the request can be submitted, the user must comment with  after validation has passed.name: Process Issue Open/Edit
 
-if funcCalled() {
-    t.Fatalf("AfterFunc function called before context is canceled")
-}
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
 
-cancel()
+permissions:
+  contents: read
+  id-token: write
+  issues: write
 
-if !funcCalled() {
-    t.Fatalf("AfterFunc function not called after context is canceled")
-}
-This test is slow:
-10 milliseconds isn’t a lot of time, but it adds up over many tests.This test is also flaky:
-10 milliseconds is a long time on a fast computer,
-but it isn’t unusual to see pauses lasting several seconds
-on shared and overloaded
-CI
-systems.We can make the test less flaky at the expense of making it slower,
-and we can make it less slow at the expense of making it flakier,
-but we can’t make it both fast and reliable.Introducing the testing/synctest packageThe  package solves this problem.
-It allows us to rewrite this test to be simple, fast, and reliable,
-without any changes to the code being tested.The package contains only two functions:  and . calls a function in a new goroutine.
-This goroutine and any goroutines started by it
-exist in an isolated environment which we call a .
- waits for every goroutine in the current goroutine’s bubble
-to block on another goroutine in the bubble.Let’s rewrite our test above using the  package.func TestAfterFunc(t *testing.T) {
-    synctest.Run(func() {
-        ctx, cancel := context.WithCancel(context.Background())
+jobs:
+  validate:
+    name: Validate Request
+    runs-on: ubuntu-latest
 
-        funcCalled := false
-        context.AfterFunc(ctx, func() {
-            funcCalled = true
-        })
+    # This job should only be run on issues with the `team-membership` label.
+    if: ${{ contains(github.event.issue.labels.*.name, 'team-membership') }}
 
-        synctest.Wait()
-        if funcCalled {
-            t.Fatalf("AfterFunc function called before context is canceled")
-        }
+    steps:
+      # This is required to ensure the issue form template and any validation
+      # scripts are included in the workspace.
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
 
-        cancel()
+      # Since this workflow includes custom validation scripts, we need to
+      # install Node.js and any dependencies.
+      - name: Setup Node.js
+        id: setup-node
+        uses: actions/setup-node@v4
 
-        synctest.Wait()
-        if !funcCalled {
-            t.Fatalf("AfterFunc function not called after context is canceled")
-        }
-    })
-}
-This is almost identical to our original test,
-but we have wrapped the test in a  call
-and we call  before asserting that the function has been called or not.The  function waits for every goroutine in the caller’s bubble to block.
-When it returns, we know that the context package has either called the function,
-or will not call it until we take some further action.This test is now both fast and reliable.The test is simpler, too:
-we have replaced the  channel with a boolean.
-Previously we needed to use a channel to avoid a data race between
-the test goroutine and the  goroutine,
-but the  function now provides that synchronization.The race detector understands  calls,
-and this test passes when run with .
-If we remove the second  call,
-the race detector will correctly report a data race in the test.Concurrent code often deals with time.Testing code that works with time can be difficult.
-Using real time in tests causes slow and flaky tests,
-as we have seen above.
-Using fake time requires avoiding  package functions,
-and designing the code under test to work with
-an optional fake clock.The  package makes it simpler to test code that uses time.Goroutines in the bubble started by  use a fake clock.
-Within the bubble, functions in the  package operate on the
-fake clock. Time advances in the bubble when all goroutines are
-blocked.To demonstrate, let’s write a test for the
- function.
- creates a child of a context,
-which expires after a given timeout.func TestWithTimeout(t *testing.T) {
-    synctest.Run(func() {
-        const timeout = 5 * time.Second
-        ctx, cancel := context.WithTimeout(context.Background(), timeout)
-        defer cancel()
+      # Install dependencies from `package.json`.
+      - name: Install Dependencies
+        id: install
+        run: npm install
 
-        // Wait just less than the timeout.
-        time.Sleep(timeout - time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != nil {
-            t.Fatalf("before timeout, ctx.Err() = %v; want nil", err)
-        }
+      # GitHub App authentication is required if you want to interact with any
+      # resources outside the scope of the repository this workflow runs in.
+      - name: Get GitHub App Token
+        id: token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.ISSUEOPS_APP_ID }}
+          private-key: ${{ secrets.ISSUEOPS_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
 
-        // Wait the rest of the way until the timeout.
-        time.Sleep(time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != context.DeadlineExceeded {
-            t.Fatalf("after timeout, ctx.Err() = %v; want DeadlineExceeded", err)
-        }
-    })
-}
-We write this test just as if we were working with real time.
-The only difference is that we wrap the test function in ,
-and call  after each  call to wait for the context
-package’s timers to finish running.A key concept in  is the bubble becoming .
-This happens when every goroutine in the bubble is blocked,
-and can only be unblocked by another goroutine in the bubble.When a bubble is durably blocked:If there is an outstanding  call, it returns.Otherwise, time advances to the next time that could unblock a goroutine, if any.Otherwise, the bubble is deadlocked and  panics.A bubble is not durably blocked if any goroutine is blocked
-but might be woken by some event from outside the bubble.The complete list of operations which durably block a goroutine is:a send or receive on a nil channela send or receive blocked on a channel created within the same bubblea select statement where every case is durably blockingOperations on a  are not durably blocking.It is common for functions to acquire a global mutex.
-For example, a number of functions in the reflect package
-use a global cache guarded by a mutex.
-If a goroutine in a synctest bubble blocks while acquiring
-a mutex held by a goroutine outside the bubble,
-it is not durably blocked—it is blocked, but will be unblocked
-by a goroutine from outside its bubble.Since mutexes are usually not held for long periods of time,
-we simply exclude them from ’s consideration.Channels created within a bubble behave differently from ones created outside.Channel operations are durably blocking only if the channel is bubbled
-(created in the bubble).
-Operating on a bubbled channel from outside the bubble panics.These rules ensure that a goroutine is durably blocked only when
-communicating with goroutines within its bubble.External I/O operations, such as reading from a network connection,
-are not durably blocking.Network reads may be unblocked by writes from outside the bubble,
-possibly even from other processes.
-Even if the only writer to a network connection is also in the same bubble,
-the runtime cannot distinguish between a connection waiting for more data to arrive
-and one where the kernel has received data and is in the process of delivering it.Testing a network server or client with synctest will generally
-require supplying a fake network implementation.
-For example, the  function
-creates a pair of s that use an in-memory network connection
-and can be used in synctest tests.The  function starts a goroutine in a new bubble.
-It returns when every goroutine in the bubble has exited.
-It panics if the bubble is durably blocked
-and cannot be unblocked by advancing time.The requirement that every goroutine in the bubble exit before Run returns
-means that tests must be careful to clean up any background goroutines
-before completing.Let’s look at another example, this time using the 
-package to test a networked program.
-For this example, we’ll test the  package’s handling of
-the 100 Continue response.An HTTP client sending a request can include an “Expect: 100-continue”
-header to tell the server that the client has additional data to send.
-The server may then respond with a 100 Continue informational response
-to request the rest of the request,
-or with some other status to tell the client that the content is not needed.
-For example, a client uploading a large file might use this feature to
-confirm that the server is willing to accept the file before sending it.Our test will confirm that when sending an “Expect: 100-continue” header
-the HTTP client does not send a request’s content before the server
-requests it, and that it does send the content after receiving a
-100 Continue response.Often tests of a communicating client and server can use a
-loopback network connection. When working with ,
-however, we will usually want to use a fake network connection
-to allow us to detect when all goroutines are blocked on the network.
-We’ll start this test by creating an  (an HTTP client) that uses
-an in-memory network connection created by .func Test(t *testing.T) {
-    synctest.Run(func() {
-        srvConn, cliConn := net.Pipe()
-        defer srvConn.Close()
-        defer cliConn.Close()
-        tr := &http.Transport{
-            DialContext: func(ctx context.Context, network, address string) (net.Conn, error) {
-                return cliConn, nil
-            },
-            // Setting a non-zero timeout enables "Expect: 100-continue" handling.
-            // Since the following test does not sleep,
-            // we will never encounter this timeout,
-            // even if the test takes a long time to run on a slow machine.
-            ExpectContinueTimeout: 5 * time.Second,
-        }
-We send a request on this transport with the “Expect: 100-continue” header set.
-The request is sent in a new goroutine, since it won’t complete until the end of the test.        body := "request body"
-        go func() {
-            req, _ := http.NewRequest("PUT", "http://test.tld/", strings.NewReader(body))
-            req.Header.Set("Expect", "100-continue")
-            resp, err := tr.RoundTrip(req)
-            if err != nil {
-                t.Errorf("RoundTrip: unexpected error %v", err)
-            } else {
-                resp.Body.Close()
+      # Remove any labels and start fresh. This is important because the
+      # issue may have been closed and reopened.
+      - name: Remove Labels
+        id: remove-label
+        uses: issue-ops/labeler@v2
+        with:
+          action: remove
+          github_token: ${{ steps.token.outputs.token }}
+          labels: |
+            validated
+            approved
+            denied
+          issue_number: ${{ github.event.issue.number }}
+          repository: ${{ github.repository }}
+
+      # Parse the issue body into machine-readable JSON, so that it can be
+      # processed by the rest of the workflow.
+      - name: Parse Issue Body
+        id: parse
+        uses: issue-ops/parser@v4
+        with:
+          body: ${{ github.event.issue.body }}
+          issue-form-template: team-membership.yml
+          workspace: ${{ github.workspace }}
+
+      # Validate early and often! Validation should be run any time an issue is
+      # interacted with, to ensure that any changes to the issue body are valid.
+      - name: Validate Request
+        id: validate
+        uses: issue-ops/validator@v3
+        with:
+          add-comment: true
+          github-token: ${{ steps.token.outputs.token }}
+          issue-form-template: team-membership.yml
+          issue-number: ${{ github.event.issue.number }}
+          parsed-issue-body: ${{ steps.parse.outputs.json }}
+          workspace: ${{ github.workspace }}
+
+      # If validation passes, add the validated label to the issue.
+      - if: ${{ steps.validate.outputs.result == 'success' }}
+        name: Add Validated Label
+        id: add-label
+        uses: issue-ops/labeler@v2
+        with:
+          action: add
+          github_token: ${{ steps.token.outputs.token }}
+          labels: |
+            validated
+          issue_number: ${{ github.event.issue.number }}
+          repository: ${{ github.repository }}
+
+      # The `issue-ops/validator` action will automatically notify the user that
+      # the request was validated. However, you can optionally add instruction
+      # on what to do next.
+      - if: ${{ steps.validate.outputs.result == 'success' }}
+        name: Notify User (Success)
+        id: notify-success
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Hello! Your request has been validated successfully!
+
+            Please comment with `.submit` to submit this request.
+Once the issue is created, any further processing is triggered using issue comments—and this can be done with one workflow. However, to make things a bit easier to follow, we’ll break this into a few separate workflows.The first workflow handles the user submitting the request. The main task it performs is validating the issue body against the form template to ensure it hasn’t been modified.name: Process Submit Comment
+
+on:
+  issue_comment:
+    types:
+      - created
+
+permissions:
+  contents: read
+  id-token: write
+  issues: write
+
+jobs:
+  submit:
+    name: Submit Request
+    runs-on: ubuntu-latest
+
+    # This job should only be run when the following conditions are true:
+    #
+    # - A user comments `.submit` on the issue.
+    # - The issue has the `team-membership` label.
+    # - The issue has the `validated` label.
+    # - The issue does not have the `approved` or `denied` labels.
+    # - The issue is open.
+    if: |
+      startsWith(github.event.comment.body, '.submit') &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'team-membership') == true &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'approved') == false &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'denied') == false &amp;&amp;
+      github.event.issue.state == 'open'
+
+    steps:
+      # First, we are going to re-run validation. This is important because
+      # the issue body may have changed since the last time it was validated.
+
+      # This is required to ensure the issue form template and any validation
+      # scripts are included in the workspace.
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      # Since this workflow includes custom validation scripts, we need to
+      # install Node.js and any dependencies.
+      - name: Setup Node.js
+        id: setup-node
+        uses: actions/setup-node@v4
+
+      # Install dependencies from `package.json`.
+      - name: Install Dependencies
+        id: install
+        run: npm install
+
+      # GitHub App authentication is required if you want to interact with any
+      # resources outside the scope of the repository this workflow runs in.
+      - name: Get GitHub App Token
+        id: token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.ISSUEOPS_APP_ID }}
+          private-key: ${{ secrets.ISSUEOPS_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      # Remove the validated label. This will be re-added if validation passes.
+      - name: Remove Validated Label
+        id: remove-label
+        uses: issue-ops/labeler@v2
+        with:
+          action: remove
+          github_token: ${{ steps.token.outputs.token }}
+          labels: |
+            validated
+          issue_number: ${{ github.event.issue.number }}
+          repository: ${{ github.repository }}
+
+      # Parse the issue body into machine-readable JSON, so that it can be
+      # processed by the rest of the workflow.
+      - name: Parse Issue Body
+        id: parse
+        uses: issue-ops/parser@v4
+        with:
+          body: ${{ github.event.issue.body }}
+          issue-form-template: team-membership.yml
+          workspace: ${{ github.workspace }}
+
+      # Validate early and often! Validation should be run any time an issue is
+      # interacted with, to ensure that any changes to the issue body are valid.
+      - name: Validate Request
+        id: validate
+        uses: issue-ops/validator@v3
+        with:
+          add-comment: false # Don't add another validation comment.
+          github-token: ${{ steps.token.outputs.token }}
+          issue-form-template: team-membership.yml
+          issue-number: ${{ github.event.issue.number }}
+          parsed-issue-body: ${{ steps.parse.outputs.json }}
+          workspace: ${{ github.workspace }}
+
+      # If validation passed, add the validated and submitted labels to the issue.
+      - if: ${{ steps.validate.outputs.result == 'success' }}
+        name: Add Validated Label
+        id: add-label
+        uses: issue-ops/labeler@v2
+        with:
+          action: add
+          github_token: ${{ steps.token.outputs.token }}
+          labels: |
+            validated
+            submitted
+          issue_number: ${{ github.event.issue.number }}
+          repository: ${{ github.repository }}
+
+      # If validation succeeded, alert the administrator team so they can
+      # approve or deny the request.
+      - if: ${{ steps.validate.outputs.result == 'success' }}
+        name: Notify Admin (Success)
+        id: notify-success
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+             @issue-ops/admins! The request has been validated and is
+            ready for your review. Please comment with `.approve` or `.deny`
+            to approve or deny this request.
+If the request is denied, the user should be notified and the issue should close.name: Process Denial Comment
+
+on:
+  issue_comment:
+    types:
+      - created
+
+permissions:
+  contents: read
+  id-token: write
+  issues: write
+
+jobs:
+  submit:
+    name: Deny Request
+    runs-on: ubuntu-latest
+
+    # This job should only be run when the following conditions are true:
+    #
+    # - A user comments `.deny` on the issue.
+    # - The issue has the `team-membership` label.
+    # - The issue has the `validated` label.
+    # - The issue has the `submitted` label.
+    # - The issue does not have the `approved` or `denied` labels.
+    # - The issue is open.
+    if: |
+      startsWith(github.event.comment.body, '.deny') &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'team-membership') == true &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'submitted') == true &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'validated') == true &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'approved') == false &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'denied') == false &amp;&amp;
+      github.event.issue.state == 'open'
+
+    steps:
+      # This time, we do not need to re-run validation because the request is
+      # being denied. It can just be closed.
+
+      # However, we do need to confirm that the user who commented `.deny` is
+      # a member of the administrator team.
+      # GitHub App authentication is required if you want to interact with any
+      # resources outside the scope of the repository this workflow runs in.
+      - name: Get GitHub App Token
+        id: token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.ISSUEOPS_APP_ID }}
+          private-key: ${{ secrets.ISSUEOPS_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      # Check if the user who commented `.deny` is a member of the
+      # administrator team.
+      - name: Check Admin Membership
+        id: check-admin
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.token.outputs.token }}
+          script: |
+            try {
+              await github.rest.teams.getMembershipForUserInOrg({
+                org: context.repo.owner,
+                team_slug: 'admins',
+                username: context.actor,
+              })
+              core.setOutput('member', 'true')
+            } catch (error) {
+              if (error.status === 404) {
+                core.setOutput('member', 'false')
+              }
+              throw error
             }
-        }()
-We read the request headers sent by the client.        req, err := http.ReadRequest(bufio.NewReader(srvConn))
-        if err != nil {
-            t.Fatalf("ReadRequest: %v", err)
-        }
-Now we come to the heart of the test.
-We want to assert that the client will not send the request body yet.We start a new goroutine copying the body sent to the server into a ,
-wait for all goroutines in the bubble to block, and verify that we haven’t read anything
-from the body yet.If we forget the  call, the race detector will correctly complain
-about a data race, but with the  this is safe.        var gotBody strings.Builder
-        go io.Copy(&gotBody, req.Body)
-        synctest.Wait()
-        if got := gotBody.String(); got != "" {
-            t.Fatalf("before sending 100 Continue, unexpectedly read body: %q", got)
-        }
-We write a “100 Continue” response to the client and verify that it now sends the
-request body.        srvConn.Write([]byte("HTTP/1.1 100 Continue\r\n\r\n"))
-        synctest.Wait()
-        if got := gotBody.String(); got != body {
-            t.Fatalf("after sending 100 Continue, read body %q, want %q", got, body)
-        }
-And finally, we finish up by sending the “200 OK” response to conclude the request.We have started several goroutines during this test.
-The  call will wait for all of them to exit before returning.        srvConn.Write([]byte("HTTP/1.1 200 OK\r\n\r\n"))
-    })
-}
-This test can be easily extended to test other behaviors,
-such as verifying that the request body is not sent if the server does not ask for it,
-or that it is sent if the server does not respond within a timeout.We are introducing 
-in Go 1.24 as an  package.
-Depending on feedback and experience
-we may release it with or without amendments,
-continue the experiment,
-or remove it in a future version of Go.The package is not visible by default.
-To use it, compile your code with  set in your environment.We want to hear your feedback!
-If you try out ,
-please report your experiences, positive or negative,
-on go.dev/issue/67434.]]></content:encoded></item><item><title>Protecting user data through source code analysis at scale</title><link>https://engineering.fb.com/2025/02/18/security/protecting-user-data-through-source-code-analysis/</link><author></author><category>dev</category><category>official</category><pubDate>Tue, 18 Feb 2025 20:30:49 +0000</pubDate><source url="https://engineering.fb.com/">Facebook engineering</source><content:encoded><![CDATA[detect potential scraping vectorsturning our attack vector criteria into static analysis rules# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.GET['viewer_id']
-target = request.GET['target_id']
-	count = request.GET['count']
-	if(can_see(viewer, target)):
-		followers = load_followers(target, count)
-		return followers
 
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.Get['viewer_id']
-	target = request.GET['target_id']
-	count = min(request.GET['count'], MAX_FOLLOWERS_RESULTS)
-	if(can_see(viewer, target)):
-	    followers = load_followers(target, count)
-		return followers
+      # If the user is not a member of the administrator team, exit the
+      # workflow.
+      - if: ${{ steps.check-admin.outputs.member == 'false' }}
+        name: Exit
+        run: exit 0
 
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...]]></content:encoded></item></channel></rss>
+      # If the user is a member of the administrator team, add the denied label.
+      - name: Add Denied Label
+        id: add-label
+        uses: issue-ops/labeler@v2
+        with:
+          action: add
+          github_token: ${{ steps.token.outputs.token }}
+          labels: |
+            denied
+          issue_number: ${{ github.event.issue.number }}
+          repository: ${{ github.repository }}
+
+      # Notify the user that the request was denied.
+      - name: Notify User
+        id: notify
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            This request has been denied and will be closed.
+
+      # Close the issue as not planned.
+      - name: Close Issue
+        id: close
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.update({
+              issue_number: ${{ github.event.issue.number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed',
+              state_reason: 'not_planned'
+            })
+Finally, we need to handle request approval. In this case, we need to add the user to the team, notify them, and close the issue.name: Process Approval Comment
+
+on:
+  issue_comment:
+    types:
+      - created
+
+permissions:
+  contents: read
+  id-token: write
+  issues: write
+
+jobs:
+  submit:
+    name: Approve Request
+    runs-on: ubuntu-latest
+
+    # This job should only be run when the following conditions are true:
+    #
+    # - A user comments `.approve` on the issue.
+    # - The issue has the `team-membership` label.
+    # - The issue has the `validated` label.
+    # - The issue has the `submitted` label.
+    # - The issue does not have the `approved` or `denied` labels.
+    # - The issue is open.
+    if: |
+      startsWith(github.event.comment.body, '.approve') &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'team-membership') == true &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'submitted') == true &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'validated') == true &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'approved') == false &amp;&amp;
+      contains(github.event.issue.labels.*.name, 'denied') == false &amp;&amp;
+      github.event.issue.state == 'open'
+
+    steps:
+      # This time, we do not need to re-run validation because the request is
+      # being approved. It can just be processed.
+
+      # This is required to ensure the issue form template is included in the
+      # workspace.
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      # We do need to confirm that the user who commented `.approve` is a member
+      # of the administrator team. GitHub App authentication is required if you
+      # want to interact with any resources outside the scope of the repository
+      # this workflow runs in.
+      - name: Get GitHub App Token
+        id: token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.ISSUEOPS_APP_ID }}
+          private-key: ${{ secrets.ISSUEOPS_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      # Check if the user who commented `.approve` is a member of the
+      # administrator team.
+      - name: Check Admin Membership
+        id: check-admin
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.token.outputs.token }}
+          script: |
+            try {
+              await github.rest.teams.getMembershipForUserInOrg({
+                org: context.repo.owner,
+                team_slug: 'admins',
+                username: context.actor,
+              })
+              core.setOutput('member', 'true')
+            } catch (error) {
+              if (error.status === 404) {
+                core.setOutput('member', 'false')
+              }
+              throw error
+            }
+
+      # If the user is not a member of the administrator team, exit the
+      # workflow.
+      - if: ${{ steps.check-admin.outputs.member == 'false' }}
+        name: Exit
+        run: exit 0
+
+      # Parse the issue body into machine-readable JSON, so that it can be
+      # processed by the rest of the workflow.
+      - name: Parse Issue body
+        id: parse
+        uses: issue-ops/parser@v4
+        with:
+          body: ${{ github.event.issue.body }}
+          issue-form-template: team-membership.yml
+          workspace: ${{ github.workspace }}
+
+      - name: Add to Team
+        id: add
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.token.outputs.token }}
+          script: |
+            const parsedIssue = JSON.parse('${{ steps.parse.outputs.json }}')
+
+            await github.rest.teams.addOrUpdateMembershipForUserInOrg({
+              org: context.repo.owner,
+              team_slug: parsedIssue.team,
+              username: '${{ github.event.issue.user.login }}',
+              role: 'member'
+            })
+
+      - name: Notify User
+        id: notify
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            This request has been processed successfully!
+
+      - name: Close Issue
+        id: close
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.update({
+              issue_number: ${{ github.event.issue.number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed',
+              state_reason: 'completed'
+            })
+And there you have it! With a handful of standardized workflows, you have an end-to-end, issue-driven process in place to manage team membership. This can be extended as far as you want, including support for removing users, auditing access, and more. With IssueOps, the sky is the limit!Here’s the best thing about IssueOps: It brings another level of automation to a surface I’m constantly using—and that’s GitHub. By using issues and pull requests as control centers for workflows, teams can reduce friction, improve efficiency, and keep everything transparent. Whether you want to automate deployments, approvals, or bug triage, IssueOps makes it all possible, without ever leaving your repo.In my experience, it’s always best to start small and experiment with what works best for you. With just a bit of time, you’ll see your workflows get smoother with every commit (I know I have). Happy coding! ✨]]></content:encoded></item><item><title>Build AI-Powered Apps With Genkit and Angular</title><link>https://blog.angular.dev/build-ai-powered-apps-with-genkit-and-angular-707db8918c3a?source=rss----447683c3d9a3---4</link><author>Angular</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Tue, 18 Mar 2025 03:15:07 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[There has never been a better time to start building with AI and the state-of-the-art models available to developers everywhere. Building with AI is for everyone, especially web developers. The Firebase team at Google has just launched the 1.0 version of Genkit for Node.js which means that it is ready for production and ready to help you build the next generation of AI powered applications.Genkit is a framework designed to help you build AI-powered applications and features. It provides open source libraries for Node.js and Go as well as developer tools for testing and debugging. Genkit is designed as a server-side solution.With that in mind, how can Angular developers leverage Genkit? Let’sl explore some of the architectural options available to you.Connecting to Genkit in AngularBecause Genkit APIs are designed to be used on the server, it’s recommended to use a Node or Go based backend. For a Node-based backend, the most straightforward involves installing the necessary dependencies (genkit and @genkit-ai/googleai), selecting a model and sending a prompt. Here’s an example:import { genkit } from 'genkit';import { googleAI, gemini20Flash } from '@genkit-ai/googleai';  plugins: [googleAI()],  model: gemini20Flash, // Set default model});const { text } = await ai.generate('Why is AI awesome?');In an Angular app with SSR enabled, a Node backend is generated for you. You can add the connection code in the server.tsfile and create endpoints to communicate with the frontend of the Angular application./* server.ts *///… other required importsimport { genkit } from 'genkit';import { googleAI, gemini20Flash } from '@genkit-ai/googleai';const app = express();const commonEngine = new CommonEngine();const ai = genkit({  model: gemini20Flash, // Set default model// Create an API return the output of the prompt to the clientapp.get('/api/ai', (req, res, next) => {  ai.generate('Why is AI awesome?')    .then(({text}) => res.json(text))    .catch(next);export default app;Now a request to /api/ai returns a response from the Gemini 2.0 Flash model. Because Genkit supports a growing ecosystem of model providers this example can be updated to a different model. You can use Gemini through Google AI or Vertex AI, in addition to third-party providers like OpenAI, Anthropic, and more.The above example provides a good starting point, but we can expand on it and leverage even more features of Genkit. We can update the example to stream the response from the model with the streamFlow API./* Within the SampleComponent class, you can leverage the streamFlow API */…import { streamFlow } from 'genkit/beta/client';const url = 'http://127.0.0.1:3400/streamCharacters';export class SampleComponent {    try {      const response = streamFlow({url, input: parseInt(this.count()),});      for await (const chunk of response.stream) {        this.characters.set(chunk);      }    } catch (e) {    }}Streaming the response helps create the well-known “AI typing” style experience when interacting with the underlying models.On the server side, the implementation uses a structured response with a zod schema and the defineFlow API to create a flow that can be exposed from the server side and accessed from the client via HTTP. Here’s an example of defining a flow that creates a stream of different RPG game characters:export const streamCharacters = ai.defineFlow({    name: 'streamCharacters',    outputSchema: z.string(),    streamSchema: GameCharactersSchema,  },  async (count, { sendChunk }) => {    const { response, stream } = await ai.generateStream({    output: {      schema: GameCharactersSchema,    config: {    },    prompt: `Respond as JSON only. Generate ${count} different RPG game characters.`,  });  for await (const chunk of stream) {    buffer += chunk.content[0].text!;    if (buffer.length > 10) {      sendChunk(parse(maybeStripMarkdown(buffer), Allow.ALL));    }  return (await response).text;Testing and Debugging your AI Workflows and dataOne of the challenges of development with LLMs is the seemingly opaque nature of their interactions and missing observability piece. Genkit provides additional developer tooling to give you insights into what’s happening during your interactions with the model. Along with the Genkit CLI, there’s also the Genkit Developer UI. The Genkit Developer UI is a local web app that lets you run, debug, and test flows, prompts and other elements.Here’s the Developer UI in action:This post only covers a basic interaction with Genkit, there’s much more available to you through the robust API including:Multi-turn conversations with context managementTool use where the AI can call functions in your applicationHuman-in-the-loop workflows where AI and users collaborateContext-aware generation that leverages your application’s dataGenkit significantly simplifies AI model interaction and integration so you can focus on building incredible user experiences.With all of the great features recently released in Angular and the production-ready release of Genkit developers have the tools needed to build the next great ai-powered web applications today. The possibilities are vast and we can’t wait to see all the great things you’ll build.]]></content:encoded></item><item><title>Announcing Rust 1.85.1</title><link>https://blog.rust-lang.org/2025/03/18/Rust-1.85.1.html</link><author>The Rust Release Team</author><category>dev</category><category>official</category><category>rust</category><pubDate>Tue, 18 Mar 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[The Rust team has published a new point release of Rust, 1.85.1. Rust is a
+programming language that is empowering everyone to build reliable and
+efficient software.If you have a previous version of Rust installed via rustup, getting Rust
+1.85.1 is as easy as:If you don't have it already, you can get  from the
+appropriate page on our website.Fixed combined doctest compilationDue to a bug in the implementation, combined doctests did not work as intended in the stable 2024 Edition. Internal errors with feature stability caused rustdoc to automatically use its "unmerged" fallback method instead, like in previous editions.Those errors are now fixed in 1.85.1, realizing the performance improvement of combined doctest compilation as intended! See the backport issue for more details, including the risk analysis of making this behavioral change in a point release.1.85.1 also resolves a few regressions introduced in 1.85.0:Many people came together to create Rust 1.85.1. We couldn't have done it
+without all of you. Thanks!]]></content:encoded></item><item><title>GitHub for Beginners: Essential features of GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/github-for-beginners-essential-features-of-github-copilot/</link><author>Kedasha Kerr</author><category>official</category><pubDate>Mon, 17 Mar 2025 13:00:12 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Welcome back to our second GitHub for Beginners series, where we are diving into the world of GitHub Copilot. In our previous episode, we introduced you to GitHub Copilot and gave you some guidance on getting started. Hopefully you’ve had a chance to give it a try! Today we’re going to be looking at some of the essential features of Copilot, and provide you with tips on how to make the most out of your AI coding assistant.First, let’s go over a quick refresher. GitHub Copilot is an AI pair programmer that helps you write code. It is a generative AI, which means that it is capable of creating new content based on what it has learned. This also means that if you are following along through any demos, Copilot might offer different solutions in response to prompts. This is expected.Once you have access, you need to install the extension in your editor, authenticate it, and you’ll be good to go. For more introductory details, check out our first blog in the series.Now let’s take a look at some of the most essential features.Let’s say you wanted to create a rock, paper, scissors game in Python. First, create a new file called . At the top of the file, add the following comment:Create a Rock Paper Scissors game where the player inputs their choice and plays against a computer that randomly selects its move, with the game showing who won each round. Add a score counter that tracks player and computer wins, and allow the game to continue until the player types ‘quit’.
+Press the Enter key a couple of times. You will notice some gray,  text appearing after your cursor. This is called , and is the suggestion provided from GitHub Copilot. You can press Tab to accept the suggestion. Continue accepting lines until the suggestion defines a function (that is, starts with the  keyword).When you press the  key after the function definition, you’ll see ghost text defining the main function. Hover over the ghost text with your cursor to see different menu options available to you. You can accept a single word, tab through a few completions, or accept the current suggestion. You can also click on the three dots and select “Open Completions Panel.”The Completions panel shows a list of the many ways this code could be implemented. Scroll through the options and choose the suggestion that you want to use. Once you’ve decided on a suggestion, click the associated “Accept suggestion” button. This populates the code into your file.Finally, add a line to invoke the function. Remember that because Copilot is a generative AI, it will not always provide the same suggestions, even with the same prompt!After adding the code, open your terminal and enter python rock_paper_scissor.py to play the game. Try it out as long as you like and enter  when you’ve decided you’re done.Congratulations! You’ve just made a game with GitHub Copilot!Now that we have the base for our game, we want to improve it, and we’re going to use the inline chat feature of GitHub Copilot to accomplish this. In our demo, we had the following line:player_choice = input('Rock, Paper, Scissors or Quit: ').lower()
+However, we want players to have a little more flexibility. By highlighting this line of code and pressing either  or , we open up Copilot Inline Chat where we can enter a prompt. Let’s say we give Copilot this prompt:allow the user to enter r for rock, p for paper, and s for scissors
+Before sending this prompt to Copilot, notice the dropdown menu at the end of the prompt window. This dropdown enables you to choose which model you’d like to use to respond to the prompt. Copilot Chat uses different models, and new ones are being continuously added.After selecting your model, press enter, and watch as Copilot updates the code. Once the code is updated, you have the option to accept or discard the suggested changes. If you accept the changes, try running the game again in your terminal, and observe that now you can use single letters to make your choice.The inline chat feature is really good at helping you apply quick fixes to your code. If you want to work at a deeper level, you can use the full Copilot Chat experience for that.GitHub Copilot Chat can help you with code explanations, building out full minimum viable products (MVPs), writing tests, fixing errors in your terminals, and much more. To showcase the capabilities of Copilot Chat, we’re going to use it to create a graphical user interface (GUI) for our rock, paper, scissors game.First, click the chat icon in the left-hand bar of VS Code to open up the chat window. Enter the following prompt into the box provided:Create a simple GUI using a library like Tkinter for the game
+Note that as long as you keep your  file open, it will be listed at the bottom of the chat panel as the current file. This is known as the context, and it lets Copilot Chat know which game you are talking about. You could disable this by clicking the Close File icon shown after “Current file”. However, in this case, you want to make sure that Copilot Chat has the context of the correct file. The best practice is to let Copilot have the context of your currently-open file to generate relevant code.Just like with the inline chat prompt window, you can choose the model you want to use to respond to your prompt. Let’s use the Claude 3.5 Sonnet model and send the request.Copilot will respond in the chat window, and you will notice several things once it is complete. First, it identifies that it’s using the one file as a reference. Then it provides a plan of action and the code block. Finally, it provides the code citations that you can investigate if you choose to with the “View matches” link.In the Chat panel, you have a few options available. Going from left to right, here are what the different icons do at the bottom of the suggestion:Have the code read aloud to youRetry the same prompt to get a different responseDownvote the provided codeEdit the suggestion by using CopilotScroll up and examine the provided code block. When you hover over it with your cursor, three icons appear in the top-right corner. Going from left to right, this is what these buttons do:: Apply changes quickly in your code file with a single click—no need for copying and pasting!: Insert the code block into your current cursor position in the file.: Copy the generated code to your clipboard, so you can paste it in at your leisure.: Open up a dropdown menu with options for “Insert into Terminal” and “Insert into New File”. This will paste the code into the indicated locations.For now, click the Apply in Editor button to update the code. This updates the entire file. At the top of the file, you see options to accept the changes, discard them, and show or hide them. Click Accept Changes to have the editor finalize the changes to your file.Look at the changes and observe how your text-based game has now been changed to run with a GUI. Try running the code to see the changes in action!Slash commands are shortcuts to common prompts that we’ve found to be particularly helpful in day-to-day usage. You can use them in a Copilot Chat window to get explanations of code, fix code, create a new notebook, and more.In your Copilot Chat window, type forward slash (/). As soon as you do, Copilot provides a list of possible commands that you can use. For example, you could use the  command to have Copilot provide a full explanation of the code in your current file. You could also use  to get a list of available slash commands, as well as explanations of what they do. So if you’re ever stuck, just remember .If you’d like to see some of the more common slash commands without opening your editor, refer to our Copilot Chat cheat sheet.As we’ve already seen, context helps Copilot Chat provide answers that are targeted toward your specific goals. But what if you want to provide a context beyond your currently open file?You can use variables in the chat interface to provide additional context to help Copilot understand your requests. For example, you could use the  variable to specify a specific file or files that Copilot should use when it tries to resolve your prompt. Or you could use  to search through your codebase.Think of chat participants as experts with certain specialties. You can invoke a chat participant by typing  in the chat window, followed by the name of the participant you want to use. For example,  invokes a participant who has knowledge about your entire workspace. You could use this to determine where a function is defined in your project, or if you wanted to generate a detailed README of your project.Another frequently used participant is , who has context of all of the information in the terminal window integrated into VS Code. Perhaps the most common participant is  who has knowledge of your repository, pull requests, issues, and can search the web.Our Copilot Chat cheat sheet also lists some of the most common chat participants that folks use when interacting with Copilot Chat.Copilot Edits is one of the most recent and exciting features added to GitHub Copilot. With Copilot Edits, you can start a code session quickly to iterate on code changes using natural language. It allows you to edit multiple files at the same time, and combines the conversation flow of Copilot Chat with the fast feedback of inline chat together in one experience.Let’s use Copilot Edits to add a detailed scoreboard to the game we already have. To get started, click the GitHub Copilot button in VS Code to pull up the Copilot menu. Select “Open Copilot Edits”. In the box provided, enter the following prompt.Add a detailed scoreboard to track and display the number of ties, player wins, and computer wins for each round.
+Choose the model you want to use (we are continuing to use Claude 3.5 Sonnet), and then send the prompt. Once you do, you’ll see responses being streamed in. For now, just click “Accept” and run the game. See the GUI has been updated to keep track of stats for the game as you play.This example only has a single file in the project. Copilot Edits becomes even more powerful when you use it to edit multiple files at the same time. We’ll demonstrate that in another episode.Now that we’ve finished our game, it’s time to send it up to GitHub, so that the team can review it. In VS Code, click the source control button. Stage your changes and then click the button on the right-hand side of the commit message box that looks like a set of sparkles. This button uses GitHub Copilot to generate a commit message.You can take this a step further and have Copilot review your code before sending it to the rest of the team. To do this, highlight a section of code in your editor. A sparkle icon will appear at the top-left of the highlighted section. Click this icon and select the “Review using Copilot” option.Copilot provides you with an initial review of your code before you push it and ask for a final review from your team. You can also get this Copilot review through github.com, if that’s your preference.Not all IDEs are identical when it comes to GitHub Copilot, and different IDEs have different functionalities available. If you are using JetBrains IDEs, you have access to Copilot Code Complete and Copilot Chat.We just went over some of the most essential features of GitHub Copilot that will help you make the most of our AI pair programmer. As you can see, it’s a very powerful coding assistant that does more than just code completion.Want to try out some of the features for yourself?Give GitHub Copilot a try!]]></content:encoded></item></channel></rss>

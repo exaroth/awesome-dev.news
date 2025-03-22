@@ -1,220 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
-  }
-</style>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>Revisiting CSS border-image</title><link>https://css-tricks.com/revisiting-css-border-image/</link><author>Andy Clarke</author><category>frontend</category><pubDate>Fri, 21 Mar 2025 13:24:11 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[In my last article on “Revisiting CSS Multi-Column Layout”, I mentioned that almost twenty years have flown by since I wrote my first book, . In it, I explained how and why to use what were, at the time, an emerging CSS property.I was very excited about the possibilities this new property would offer. After all, we could now add images to the borders of any element, even table cells and rows (unless their borders had been set to collapse).Since then, I’ve used  regularly. Yet, it remains one of the most underused CSS tools, and I can’t, for the life of me, figure out why. Is it possible that people steer clear of  because its syntax is awkward and unintuitive? Perhaps it’s because most explanations don’t solve the type of creative implementation problems that most people need to solve. Most likely, it’s both.I’ve recently been working on a new website for Emmy-award-winning game composer Mike Worth. He hired me to create a highly graphical design that showcases his work, and I used  throughout.A brief overview of properties and valuesFirst, here’s a short refresher. Most  explanations begin with this highly illuminating code snippet:border-image: \[source\] [slice]/\[width]/[outset\] [repeat]This is shorthand for a set of  properties, but it’s best to deal with properties individually to grasp the concept more easily.I’ll start with the source of the bitmap or vector format image or CSS gradient to be inserted into the border space:border-image-source: url('/img/scroll.png');When I insert SVG images into a border, I have several choices as to how. I could use an external SVG file:border-image-source: url('/img/scroll.svg');border-image-source: url('data:image/svg+xml;base64,…');Instead, I can add the SVG code directly into the source URL value and save one unnecessary HTTP request:border-image-source: url('data:image/svg+xml;utf8,…');Finally, I could insert an entirely CSS-generated conical, linear, or radial gradient into my border:border-image-source: conical-gradient(…); It’s useful to remember that a browser renders a  above an element’s background and  but below its content. More on that a little later.Now that I’ve specified the source of a border image, I can apply it to a border by slicing it up and using the parts in different positions around an element. This can be the most baffling aspect for people new to .Most  explanations show an example where the pieces will simply be equally-sized, like this:However, a  can be developed from any shape, no matter how complex or irregular.Instead of simply inserting an image into a border and watching it repeat around an element, invisible cut-lines slice up a  into nine parts. These lines are similar to the slice guides found in graphics applications. The pieces are, in turn, inserted into the nine regions of an element’s border.The  property defines the size of each slice by specifying the distance from each edge of the image. I could use the same distance from every edge:I can combine top/bottom and left/right values:border-image-slice: 115 65;Or, I can specify distance values for all four cut-lines, running clockwise: top, right, bottom, left:border-image-slice: 65 65 115 125;The top-left of an image will be used on the top-left corner of an element’s border. The bottom-right will be used on the bottom-right, and so on.I don’t need to add units to  values when using a bitmap image as the browser correctly assumes bitmaps use pixels. The SVG  makes using them a little different, so I also prefer to specify their  and :<svg height="600px" width="600px">…</svg>Don’t forget to set the widths of these borders, as without them, there will be nowhere for a border’s image to display:border-image-width: 65px 65px 115px 125px;So far, I’ve used all four corners and sides of my image, but what about the center? By default, the browser will ignore the center of an image after it’s been sliced. But I can put it to use by adding the  keyword to my  value:border-image-slice: 65px 65px 115px 125px fill;With the corners of my border images in place, I can turn my attention to the edges between them. As you might imagine, the slice at the top of an image will be placed on the top edge. The same is true of the right, bottom, and left edges. In a flexible design, we never know how wide or tall these edges will be, so I can fine-tune how images will repeat or stretch when they fill an edge.: When a sliced image is flat or smooth, it can stretch to fill any height or width. Even a tiny  slice can stretch to hundreds or thousands of pixels without degrading.border-image-repeat: stretch;: If an image has texture, stretching it isn’t an option, so it can repeat to fill any height or width.border-image-repeat: repeat;: If an image has a pattern or shape that can’t be stretched and I need to match the edges of the repeat, I can specify that the repeat be . A browser will resize the image so that only whole pieces display inside an edge.border-image-repeat: round;: Similar to , when using the space property, only whole pieces will display inside an edge. But instead of resizing the image, a browser will add spaces into the repeat.border-image-repeat: space;When I need to specify a separate , , , or  value for each edge, I can use multiple keywords:border-image-repeat: stretch round;There can be times when I need an image to extend beyond an element’s . Using the  property, I can do just that. The simplest syntax extends the border image evenly on all sides by :border-image-outset: 10px;Of course, there being four borders on every element, I could also specify each outset individually:border-image-outset: 20px 10px; 
+/* or */
+border-image-outset: 20px 10px 0;Mike Worth is a video game composer who’s won an Emmy for his work. He loves ’90s animation — especially Disney’s  — and he asked me to create custom artwork and develop a bold, retro-style design.My challenge when developing for Mike was implementing my highly graphical design without compromising performance, especially on mobile devices. While it’s normal in CSS to accomplish the same goal in several ways, here,  often proved to be the most efficient.The easiest and most obvious place to start was creating buttons reminiscent of stone tablets with chipped and uneven edges.I created an SVG of the tablet shape and added it to my buttons using :button {
+  border-image-repeat: stretch;
+  border-image-slice: 10 10 10 10 fill;
+  border-image-source: url('data:image/svg+xml;utf8,…');
+  border-image-width: 20px;
+}I set the  on all edges to  and the center slice to  so these stone tablet-style buttons expand along with their content to any height or width.I want every aspect of Mike’s website design to express his brand. That means continuing the ’90s cartoon theme in his long-form content by turning it into a paper scroll.The markup is straightforward with just a single  element:<article>
+  <!-- ... -->
+</article>But, I struggled to decide how to implement the paper effect. My first thought was to divide my scroll into three separate SVG files (top, middle, and bottom) and use pseudo-elements to add the rolled up top and bottom parts of the scroll. I started by applying a vertically repeating graphic to the middle of my article:article {
+  padding: 10rem 8rem;
+  box-sizing: border-box;
+  /* Scroll middle */
+  background-image: url('data:image/svg+xml;utf8,…');
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: contain;
+}Then, I added two pseudo-elements, each containing its own SVG content:article:before {
+  display: block;
+  position: relative;
+  top: -30px;
+  /* Scroll top */
+  content: url('data:image/svg+xml;utf8,…');
+}
 
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
+article:after {
+  display: block;
+  position: relative;
+  top: 50px;
+  /* Scroll bottom */
+  content: url('data:image/svg+xml;utf8,…');
+}While this implementation worked as expected, using two pseudo-elements and three separate SVG files felt clumsy. However, using , one SVG, and no pseudo-elements feels more elegant and significantly reduces the amount of code needed to implement the effect.I started by creating an SVG of the complete tablet shape:And I worked out the position of the four cut-lines:Then, I inserted this single SVG into my article’s border by first selecting the source, slicing the image, and setting the top and bottom edges to  and the left and right edges to :article {
+  border-image-slice: 150 95 150 95 fill;
+  border-image-width: 150px 95px 150px 95px;
+  border-image-repeat: stretch round;
+  border-image-source: url('data:image/svg+xml;utf8,…');
+}The result is a flexible paper scroll effect which adapts to both the viewport width and any amount or type of content.My final challenge was implementing the action-packed graphic I’d designed for Mike Worth’s home page. This contains a foreground SVG featuring Mike’s orangutan mascot and a zooming background graphic:<section>
+  <!-- content -->
+  <div>...</div>
 
-    <!-- Repeat for all properties -->
+  <!-- ape -->
+  <div>
+    <svg>…</svg>
   </div>
-</div>
-
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+</section>I defined the  as a positioning context for its children:section {
+  position: relative;
+}Then, I absolutely positioned a pseudo-element and added the zooming graphic to its background:section:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-image: url('data:image/svg+xml;utf8,…');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}I wanted this graphic to spin and add subtle movement to the panel, so I applied a simple CSS animation to the pseudo-element:@keyframes spin-bg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+section:before {
+  animation: spin-bg 240s linear infinite;
+}Next, I added a CSS mask to fade the edges of the zooming graphic into the background. The CSS  property specifies a mask layer image, which can be a PNG image, an SVG image or mask, or a CSS gradient:section:before {
+  mask-image: radial-gradient(circle, rgb(0 0 0) 0%, rgb(0 0 0 / 0) 60%);
+  mask-repeat: no-repeat;
+}At this point, you might wonder where a border image could be used in this design. To add more interactivity to the graphic, I wanted to reduce its  and change its color — by adding a colored gradient overlay — when someone interacts with it. One of the simplest, but rarely-used, methods for applying an overlay to an element is using . First, I added a default  and added a brief :section:before {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+}Then, on hover, I reduced the  to  and added a :section:hover::before {
+  opacity: .5;
+  border-image: fill 0 linear-gradient(rgba(0,0,255,.25),rgba(255,0,0,1));
+}You may ponder why I’ve not used the other  values I explained earlier, so I’ll dissect that declaration. First is the  value, where zero pixels ensures that the eight corners and edges stay empty. The  keyword ensures the middle section is filled with the linear gradient. Second, the  is a CSS linear gradient that blends blue into red. A browser renders this  above the background but behind the content.Conclusion: You should take a fresh look at The  property is a powerful, yet often overlooked, CSS tool that offers incredible flexibility. By slicing, repeating, and outsetting images, you can create intricate borders, decorative elements, and even dynamic overlays with minimal code.In my work for Mike Worth’s website,  proved invaluable, improving performance while maintaining a highly graphical aesthetic. Whether used for buttons, interactive overlays, or larger graphic elements,  can create visually striking designs without relying on extra markup or multiple assets.If you’ve yet to experiment with , now’s the time to revisit its potential and add it to your design toolkit.Often referred to as one of the pioneers of web design, Andy Clarke has been instrumental in pushing the boundaries of web design and is known for his creative and visually stunning designs. His work has inspired countless designers to explore the full potential of product and website design.Andy’s written several industry-leading books, including , , and Art Direction for the Web. He’s also worked with businesses of all sizes and industries to achieve their goals through design.Visit Andy’s studio, Stuff & Nonsense, and check out his Contract Killer, the popular web design contract template trusted by thousands of web designers and developers.]]></content:encoded></item><item><title>The Rsdoctor will see you now</title><link>https://javascriptweekly.com/issues/728</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[SpreadJS from MESCIUS inc ]]></content:encoded></item><item><title>Quick Reminder That :is() and :where() Are Basically the Same With One Key Difference</title><link>https://css-tricks.com/quick-reminder-that-is-and-where-are-basically-the-same-with-one-key-difference/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 20 Mar 2025 13:51:29 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ve seen a handful of recent posts talking about the utility of the  relational pseudo-selector. No need to delve into the details other than to say it can help make compound selectors a lot more readable.:is(section, article, aside, nav) :is(h1, h2, h3, h4, h5, h6) {
+  color: #BADA55;
 }
 
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
-
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
+/* ... which would be the equivalent of: */
+section h1, section h2, section h3, section h4, section h5, section h6, 
+article h1, article h2, article h3, article h4, article h5, article h6, 
+aside h1, aside h2, aside h3, aside h4, aside h5, aside h6, 
+nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
+  color: #BADA55;
+}There’s just one catch: the specificity. The selector’s specificity matches the most specific selector in the function’s arguments. That’s not a big deal when working with a relatively flat style structure containing mostly element and class selectors, but if you toss an ID in there, then that’s the specificity you’re stuck with./* Specificity: 0 0 1 */
+:is(h1, h2, h3, h4, h5, h6) {
+  color: #BADA55;
 }
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
+/* Specificity: 1 0 0 */
+:is(h1, h2, h3, h4, h5, h6, #id) {
+  color: #BADA55;
+}What if you don’t want that? Some articles suggest nesting selectors instead which is cool but not quite with the same nice writing ergonomics. There’s where I want to point to the  selector instead! It’s the exact same thing as  but without the specificity baggage. It always carries a specificity score of zero. You might even think of it as a sort of specificity reset./* Specificity: 0 0 0 */
+:where(h1, h2, h3, h4, h5, h6) {
+  color: #BADA55;
 }
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+/* Specificity: 0 0 0 */
+:where(h1, h2, h3, h4, h5, h6, #id) {
+  color: #BADA55;
+}So, is there a certain selector hijacking your  specificity? You might want  instead.]]></content:encoded></item><item><title>This Week In React #226: Parcel, TanStack, Astro, React-Scan, React-Router | Worklets, Enterprise Framework, Perf, Expo UI, FlatList, BackgroundTask | Node.js, Oxc Minifier, Oxlint, Valibot</title><link>https://thisweekinreact.com/newsletter/226</link><author></author><category>frontend</category><pubDate>Wed, 19 Mar 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[Cyril and Matthieu from Theodo Apps here 👋, with some big updates in React and React Native!React Server Components are now supported in Parcel, making it a more viable bundler for modern apps. Callstack is working on a new React Native framework aimed at enterprise teams, promising better build caching. React Native Worklets is bringing real multithreading to React Native, finally decoupling it from animations. And React 19 migrations are picking up speed, with teams sharing insights on adapting to the changes.Exciting times ahead—let’s dive in! 🚀As always, thanks for supporting us on your favorite platform:With over 50k subscribers, it bridges the gap between product and engineering, helping you ship products users love.It covers topics like why deadlines suck, non-obvious behaviors that will kill your startup, and mistakes they learned the hard way. Best of all, it’s totally free.Parcel is an interesting thing: it’s a very robust and feature-complete bundler. While not used/supported by any major React framework, it doesn’t prevent it from moving forward, with v2.14.0 adding a few big features:Server Components with client, server, and static renderingIntegrated MDX support (using the rust lib )A  CLI that can be a replacement for A new React error overlayIf you’re “building your own framework” or have a niche use case, all this makes parcel even more attractive.Meticulous creates and maintains an exhaustive suite of e2e ui tests with  developer effort.Dropbox, Bilt Rewards, Lattice and hundreds of engineering organizations rely on Meticulous for their frontend testing.This quote from the CTO of Traba sums the product up best: "Meticulous has fundamentally changed the way we approach frontend testing in our web applications, fully eliminating the need to write any frontend tests. The software gives us confidence that every change will be completely regression tested, allowing us to ship more quickly with significantly fewer bugs in our code."This post from our CTO, who formerly led a large engineering group at Palantir, sets out the context of why exhaustive testing can double engineering velocity.React Native Worklets is a new library extracted from Reanimated that enables true multithreading in React Native. It lets you run JavaScript code on multiple runtimes. A new memory model introduces , , and  to handle data across runtimes.By decoupling multithreading from animations, Reanimated becomes leaner, which is especially beneficial for web apps aiming for smaller bundle sizes. At the same time, developers can now use multithreading for non-UI tasks like async storage, database operations, real-time audio processing, or AI-powered computations — without depending on an animation library.]]></content:encoded></item><item><title>Build AI-Powered Apps With Genkit and Angular</title><link>https://blog.angular.dev/build-ai-powered-apps-with-genkit-and-angular-707db8918c3a?source=rss----447683c3d9a3---4</link><author>Angular</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Tue, 18 Mar 2025 03:15:07 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[There has never been a better time to start building with AI and the state-of-the-art models available to developers everywhere. Building with AI is for everyone, especially web developers. The Firebase team at Google has just launched the 1.0 version of Genkit for Node.js which means that it is ready for production and ready to help you build the next generation of AI powered applications.Genkit is a framework designed to help you build AI-powered applications and features. It provides open source libraries for Node.js and Go as well as developer tools for testing and debugging. Genkit is designed as a server-side solution.With that in mind, how can Angular developers leverage Genkit? Let’sl explore some of the architectural options available to you.Connecting to Genkit in AngularBecause Genkit APIs are designed to be used on the server, it’s recommended to use a Node or Go based backend. For a Node-based backend, the most straightforward involves installing the necessary dependencies (genkit and @genkit-ai/googleai), selecting a model and sending a prompt. Here’s an example:import { genkit } from 'genkit';import { googleAI, gemini20Flash } from '@genkit-ai/googleai';  plugins: [googleAI()],  model: gemini20Flash, // Set default model});const { text } = await ai.generate('Why is AI awesome?');In an Angular app with SSR enabled, a Node backend is generated for you. You can add the connection code in the server.tsfile and create endpoints to communicate with the frontend of the Angular application./* server.ts *///… other required importsimport { genkit } from 'genkit';import { googleAI, gemini20Flash } from '@genkit-ai/googleai';const app = express();const commonEngine = new CommonEngine();const ai = genkit({  model: gemini20Flash, // Set default model// Create an API return the output of the prompt to the clientapp.get('/api/ai', (req, res, next) => {  ai.generate('Why is AI awesome?')    .then(({text}) => res.json(text))    .catch(next);export default app;Now a request to /api/ai returns a response from the Gemini 2.0 Flash model. Because Genkit supports a growing ecosystem of model providers this example can be updated to a different model. You can use Gemini through Google AI or Vertex AI, in addition to third-party providers like OpenAI, Anthropic, and more.The above example provides a good starting point, but we can expand on it and leverage even more features of Genkit. We can update the example to stream the response from the model with the streamFlow API./* Within the SampleComponent class, you can leverage the streamFlow API */…import { streamFlow } from 'genkit/beta/client';const url = 'http://127.0.0.1:3400/streamCharacters';export class SampleComponent {    try {      const response = streamFlow({url, input: parseInt(this.count()),});      for await (const chunk of response.stream) {        this.characters.set(chunk);      }    } catch (e) {    }}Streaming the response helps create the well-known “AI typing” style experience when interacting with the underlying models.On the server side, the implementation uses a structured response with a zod schema and the defineFlow API to create a flow that can be exposed from the server side and accessed from the client via HTTP. Here’s an example of defining a flow that creates a stream of different RPG game characters:export const streamCharacters = ai.defineFlow({    name: 'streamCharacters',    outputSchema: z.string(),    streamSchema: GameCharactersSchema,  },  async (count, { sendChunk }) => {    const { response, stream } = await ai.generateStream({    output: {      schema: GameCharactersSchema,    config: {    },    prompt: `Respond as JSON only. Generate ${count} different RPG game characters.`,  });  for await (const chunk of stream) {    buffer += chunk.content[0].text!;    if (buffer.length > 10) {      sendChunk(parse(maybeStripMarkdown(buffer), Allow.ALL));    }  return (await response).text;Testing and Debugging your AI Workflows and dataOne of the challenges of development with LLMs is the seemingly opaque nature of their interactions and missing observability piece. Genkit provides additional developer tooling to give you insights into what’s happening during your interactions with the model. Along with the Genkit CLI, there’s also the Genkit Developer UI. The Genkit Developer UI is a local web app that lets you run, debug, and test flows, prompts and other elements.Here’s the Developer UI in action:This post only covers a basic interaction with Genkit, there’s much more available to you through the robust API including:Multi-turn conversations with context managementTool use where the AI can call functions in your applicationHuman-in-the-loop workflows where AI and users collaborateContext-aware generation that leverages your application’s dataGenkit significantly simplifies AI model interaction and integration so you can focus on building incredible user experiences.With all of the great features recently released in Angular and the production-ready release of Genkit developers have the tools needed to build the next great ai-powered web applications today. The possibilities are vast and we can’t wait to see all the great things you’ll build.]]></content:encoded></item><item><title>Styling Counters in CSS</title><link>https://css-tricks.com/styling-counters-in-css/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Mon, 17 Mar 2025 16:25:04 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[The  or  descriptors define the characters used for the counter style, while  says how to use them.The valid  values are: will go through the characters set on  and repeat them. We can use just one character in the  to mimic a bullet list:@counter-style cyclic-example {
+  system: cyclic;
+  symbols: "⏵";
+  suffix: " ";
+}Or alternate between two or more characters:@counter-style cyclic-example {
+  system: cyclic;
+  symbols: "🔸" "🔹";
+  suffix: " ";
+} will write the characters in  descriptor just one time. In the last example, only the first two items will have a custom counter if set to , while the others will drop to their , which is decimal by default.@counter-style multiple-example {
+  system: fixed;
+  symbols: "🔸" "🔹";
+  suffix: " ";
+}We can set when the custom counters start by appending an  to the  value. For example, the following custom counter will start at the fourth item:@counter-style fixed-example {
+  system: fixed 4;
+  symbols: "💠";
+  suffix: " ";
+} will numerate list items using a  (base-2, base-8, base-16, etc.). Positional systems start at 0, so the first character at  will be used as 0, the next as 1, and so on. Knowing this, we can make an ordered list using non-decimal numerical systems like hexadecimal:@counter-style numeric-example {
+  system: numeric;
+  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "A" "B" "C" "D" "E" "F";
+  suffix: ". ";
+} will enumerate the list items using a custom alphabetical system. It’s similar to the numeric system but with the key difference that it doesn’t have a character for 0, so the next digits are just repeated. For example, if our  are  they will wrap to , then  and so on.Since there is no equivalent for 0 and negative values, they will drop down to their fallback.@counter-style alphabetic-example {
+  system: alphabetic;
+  symbols: "A" "B" "C";
+  suffix: ". ";
+} will go through the characters in  repeating them one more time each iteration. So for example, if our  are , it will go “A”, “B”, and “C”, double them in the next iteration as “AA”, “BB”, and “CC”, then triple them as “AAA”, “BBB”, “CCC” and so on.Since there is no equivalent for 0 and negative values, they will drop down to their fallback.@counter-style symbolic-example {
+  system: symbolic;
+  symbols: "A" "B" "C";
+  suffix: ". ";
+} will give characters a numerical value and add them together to get the counter representation. You can think of it as the way we usually count bills: if we have only $5, $2, and $1 bills, we will add them together to get the desired quantity, trying to keep the number of bills used at a minimum. So to represent 10, we will use two $5 bills instead of ten $1 bills.Since there is no equivalent for negative values, they will drop down to their fallback.@counter-style additive -example {
+  system: additive;
+  additive-symbols: 5 "5️⃣", 2 "2️⃣", 1 "1️⃣";
+  suffix: " ";
+}Notice how we use  when the system is , while we use just  for the previous systems. will create a custom style from another one but with modifications. To do so, it takes a  after the  value. For example, we could change the  counter style default’s  to a closing parenthesis ()`:@counter-style extends-example {
+  system: extends decimal;
+  suffix: ") ";
+}Per spec, “If a  uses the  system, it must not contain a  or  descriptor, or else the  rule is invalid.”The  descriptor allows us to create a custom representation for a list’s negative values. It can take one or two characters: The first one is prepended to the counter, and by default it’s the  (). The second one is appended to the symbol. For example, we could enclose negative representations into parenthesis :@counter-style negative-example {
+  system: extends decimal;
+  negative: "(" ")";
+}The  and  descriptors allow us to prepend and append, respectively, a character to the counter representation. We can use it to add a character at the beginning of each counter using :@counter-style prefix-suffix-example {
+  system: extends decimal;
+  prefix: "(";
+  suffix: ") ";
+}The  descriptor defines  range in which the counter style is used. We can define a bounded range by writing one  next to another. For example, a range of 2 4 will affect elements 2, 3, and 4:@counter-style range-example {
+  system: cyclic;
+  symbols: "‣";
+  suffix: " ";
+  range: 2 4;
+}On the other hand, using the  value we can unbound the range to one side. For example, we could write 3 so all items up to 3  have a counter style:@counter-style range-example {
+  system: alphabetic;
+  symbols: "A" "B" "C";
+  suffix: ". ";
+  range: infinite 3;
+}The  descriptor takes an  that represents the minimum width for the counter and a character to pad it. For example, a zero-padded counter style would look like the following:@counter-style pad-example {
+  system: extends decimal;
+  pad: 3 "0";
+}The  descriptor allows you to define which counter style should be used as a fallback whenever we can’t represent a specific count. For example, the following counter style is  and will fallback to  after the sixth item:@counter-style fallback-example {
+  system: fixed;
+  symbols: "⚀" "⚁" "⚂" "⚃";
+  fallback: lower-roman;
+}Lastly, the  descriptor hints to speech readers on how the counter style should be read. It can be: Uses the  default. reads an unordered list. By default,  systems are read as  reads the counter’s numeric value in the content language. By default, , , , and,  are read as . reads the counter representation as words. reads the counter representation letter by letter. By default,  is read as . It will use that counter’s  value.@counter-style speak-as-example {
+  system: extends decimal;
+  prefix: "Item ";
+  suffix: " is ";
+  speak-as: words;
+}The  function defines an only-use counter style without the need to do a whole , but at the cost of missing some features. It can be used inside the  property and the  and  functions.ol {
+  list-style-type: symbols(cyclic "🥬");
+}However, its browser support is appalling since it’s only supported in Firefox.]]></content:encoded></item></channel></rss>
