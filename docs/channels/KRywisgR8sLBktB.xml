@@ -1,220 +1,446 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>Automated Visual Regression Testing With Playwright</title><link>https://css-tricks.com/automated-visual-regression-testing-with-playwright/</link><author>Frederik Dohr</author><category>frontend</category><pubDate>Fri, 28 Mar 2025 15:04:24 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Comparing visual artifacts can be a powerful, if fickle, approach to automated testing. Playwright makes this seem simple for websites, but the details might take a little finessing.Recent downtime prompted me to scratch an itch that had been plaguing me for a while: The style sheet of a website I maintain has grown just a little unwieldy as we’ve been adding code while exploring new features. Now that we have a better idea of the requirements, it’s time for internal CSS refactoring to pay down some of our technical debt, taking advantage of modern CSS features (like using CSS nesting for more obvious structure). More importantly, a cleaner foundation should make it easier to introduce that dark mode feature we’re sorely lacking so we can finally respect users’ preferred color scheme.However, being of the apprehensive persuasion, I was reluctant to make large changes for fear of unwittingly introducing bugs. I needed something to guard against visual regressions while refactoring — except that means snapshot testing, which is notoriously slow and brittle.In this context, snapshot testing means taking screenshots to establish a reliable baseline against which we can compare future results. As we’ll see, those artifacts are influenced by a multitude of factors that might not always be fully controllable (e.g. timing, variable hardware resources, or randomized content). We also have to maintain state between test runs, i.e. save those screenshots, which complicates the setup and means our test code alone doesn’t fully describe expectations.Having procrastinated without a more agreeable solution revealing itself, I finally set out to create what I assumed would be a quick spike. After all, this wouldn’t be part of the regular test suite; just a one-off utility for this particular refactoring task.Fortunately, I had vague recollections of past research and quickly rediscovered Playwright’s built-in visual comparison feature. Because I try to select dependencies carefully, I was glad to see that Playwright seems not to rely on many external packages.The recommended setup with npm init playwright@latest does a decent job, but my minimalist taste had me set everything up from scratch instead. This do-it-yourself approach also helped me understand how the different pieces fit together.Given that I expect snapshot testing to only be used on rare occasions, I wanted to isolate everything in a dedicated subdirectory, called ; that will be our working directory from here on out. We’ll start with  to declare our dependencies, adding a few helper scripts (spoiler!) while we’re at it:{
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report",
+    "update": "playwright test --update-snapshots",
+    "reset": "rm -r ./playwright-report ./test-results ./viz.test.js-snapshots || true"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
   }
-</style>
+}If you don’t want  hidden in some subdirectory but also don’t want to burden the root project with this rarely-used dependency, you might resort to manually invoking npm install --no-save @playwright/test in the root directory when needed.With that in place,  downloads Playwright. Afterwards,  downloads a range of headless browsers. (We’ll use npm here, but you might prefer a different package manager and task runner.)We define our test environment via  with about a dozen basic Playwright settings:import { defineConfig, devices } from "@playwright/test";
 
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
+let BROWSERS = ["Desktop Firefox", "Desktop Chrome", "Desktop Safari"];
+let BASE_URL = "http://localhost:8000";
+let SERVER = "cd ../../dist && python3 -m http.server";
 
-    <!-- Repeat for all properties -->
-  </div>
-</div>
+let IS_CI = !!process.env.CI;
 
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
+export default defineConfig({
+  testDir: "./",
+  fullyParallel: true,
+  forbidOnly: IS_CI,
+  retries: 2,
+  workers: IS_CI ? 1 : undefined,
+  reporter: "html",
+  webServer: {
+    command: SERVER,
+    url: BASE_URL,
+    reuseExistingServer: !IS_CI
+  },
+  use: {
+    baseURL: BASE_URL,
+    trace: "on-first-retry"
+  },
+  projects: BROWSERS.map(ua => ({
+    name: ua.toLowerCase().replaceAll(" ", "-"),
+    use: { ...devices[ua] }
+  }))
+});Here we expect our static website to already reside within the root directory’s  folder and to be served at  (see ; I prefer Python there because it’s widely available). I’ve included multiple browsers for illustration purposes. Still, we might reduce that number to speed things up (thus our simple  list, which we then map to Playwright’s more elaborate  data structure). Similarly, continuous integration is YAGNI for my particular scenario, so that whole  dance could be discarded.Let’s turn to the actual tests, starting with a minimal  file:import { test, expect } from "@playwright/test";
+
+test("home page", async ({ page }) => {
+  await page.goto("/");
+  await expect(page).toHaveScreenshot();
+}); executes this little test suite (based on file-name conventions). The initial run always fails because it first needs to create baseline snapshots against which subsequent runs compare their results. Invoking  once more should report a passing test.Changing our site, e.g. by recklessly messing with build artifacts in , should make the test fail again. Such failures will offer various options to compare expected and actual visuals:We can also inspect those baseline snapshots directly: Playwright creates a folder for screenshots named after the test file ( in this case), with file names derived from the respective test’s title (e.g. home-page-desktop-firefox.png).Getting back to our original motivation, what we want is a test for every page. Instead of arduously writing and maintaining repetitive tests, we’ll create a simple web crawler for our website and have tests generated automatically; one for each URL we’ve identified.Playwright’s global setup enables us to perform preparatory work before test discovery begins: Determine those URLs and write them to a file. Afterward, we can dynamically generate our tests at runtime.While there are other ways to pass data between the setup and test-discovery phases, having a file on disk makes it easy to modify the list of URLs before test runs (e.g. temporarily ignoring irrelevant pages).The first step is to extend  by inserting  and exporting two of our configuration values:export let BROWSERS = ["Desktop Firefox", "Desktop Chrome", "Desktop Safari"];
+export let BASE_URL = "http://localhost:8000";
+
+// etc.
+
+export default defineConfig({
+  // etc.
+  globalSetup: require.resolve("./setup.js")
+});Although we’re using ES modules here, we can still rely on CommonJS-specific APIs like  and . It appears there’s some Babel transpilation happening in the background, so what’s actually being executed is probably CommonJS? Such nuances sometimes confuse me because it isn’t always obvious what’s being executed where.We can now reuse those exported values within a newly created , which spins up a headless browser to crawl our site (just because that’s easier here than using a separate HTML parser):import { BASE_URL, BROWSERS } from "./playwright.config.js";
+import { createSiteMap, readSiteMap } from "./sitemap.js";
+import playwright from "@playwright/test";
+
+export default async function globalSetup(config) {
+  // only create site map if it doesn't already exist
+  try {
+    readSiteMap();
+    return;
+  } catch(err) {}
+
+  // launch browser and initiate crawler
+  let browser = playwright.devices[BROWSERS[0]].defaultBrowserType;
+  browser = await playwright[browser].launch();
+  let page = await browser.newPage();
+  await createSiteMap(BASE_URL, page);
+  await browser.close();
+}This is fairly boring glue code; the actual crawling is happening within : determines URLs and writes them to disk. merely reads any previously created site map from disk. This will be our foundation for dynamically generating tests. (We’ll see later why this needs to be synchronous.)Fortunately, the website in question provides a comprehensive index of all pages, so my crawler only needs to collect unique local URLs from that index page:function extractLocalLinks(baseURL) {
+  let urls = new Set();
+  let offset = baseURL.length;
+  for(let { href } of document.links) {
+    if(href.startsWith(baseURL)) {
+      let path = href.slice(offset);
+      urls.add(path);
+    }
+  }
+  return Array.from(urls);
+}Wrapping that in a more boring glue code gives us our :import { readFileSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+
+let ENTRY_POINT = "/topics";
+let SITEMAP = join(__dirname, "./sitemap.json");
+
+export async function createSiteMap(baseURL, page) {
+  await page.goto(baseURL + ENTRY_POINT);
+  let urls = await page.evaluate(extractLocalLinks, baseURL);
+  let data = JSON.stringify(urls, null, 4);
+  writeFileSync(SITEMAP, data, { encoding: "utf-8" });
+}
+
+export function readSiteMap() {
+  try {
+    var data = readFileSync(SITEMAP, { encoding: "utf-8" });
+  } catch(err) {
+    if(err.code === "ENOENT") {
+      throw new Error("missing site map");
+    }
+    throw err;
+  }
+  return JSON.parse(data);
+}
+
+function extractLocalLinks(baseURL) {
+  // etc.
+}Now that we have our list of URLs, we basically just need a test file with a simple loop to dynamically generate corresponding tests:for(let url of readSiteMap()) {
+  test(`page at ${url}`, async ({ page }) => {
+    await page.goto(url);
+    await expect(page).toHaveScreenshot();
+  });
+}This is why  had to be synchronous above: Playwright doesn’t currently support top-level  within test files.In practice, we’ll want better error reporting for when the site map doesn’t exist yet. Let’s call our actual test file :import { readSiteMap } from "./sitemap.js";
+import { test, expect } from "@playwright/test";
+
+let sitemap = [];
+try {
+  sitemap = readSiteMap();
+} catch(err) {
+  test("site map", ({ page }) => {
+    throw new Error("missing site map");
+  });
+}
+
+for(let url of sitemap) {
+  test(`page at ${url}`, async ({ page }) => {
+    await page.goto(url);
+    await expect(page).toHaveScreenshot();
+  });
+}Getting here was a bit of a journey, but we’re pretty much done… unless we have to deal with reality, which typically takes a bit more tweaking.Because visual testing is inherently flaky, we sometimes need to compensate via special casing. Playwright lets us inject custom CSS, which is often the easiest and most effective approach. Tweaking …// etc.
+import { join } from "node:path";
+
+let OPTIONS = {
+  stylePath: join(__dirname, "./viz.tweaks.css")
+};
+
+// etc.
+  await expect(page).toHaveScreenshot(OPTIONS);
+// etc.… allows us to define exceptions in :/* suppress state */
+main a:visited {
+  color: var(--color-link);
+}
+
+/* suppress randomness */
+iframe[src$="/articles/signals-reactivity/demo.html"] {
+  visibility: hidden;
+}
+
+/* suppress flakiness */
+body:has(h1 a[href="/wip/unicode-symbols/"]) {
+  main tbody > tr:last-child > td:first-child {
+    font-size: 0;
+    visibility: hidden;
+  }
+}At this point, everything seemed hunky-dory to me, until I realized that my tests didn’t actually fail after I had changed some styling. That’s not good! What I hadn’t taken into account is that  only captures the viewport rather than the entire page. We can rectify that by further extending .export let WIDTH = 800;
+export let HEIGHT = WIDTH;
+
+// etc.
+
+  projects: BROWSERS.map(ua => ({
+    name: ua.toLowerCase().replaceAll(" ", "-"),
+    use: {
+      ...devices[ua],
+      viewport: {
+        width: WIDTH,
+        height: HEIGHT
+      }
+    }
+  }))…and then by adjusting ‘s test-generating loop:import { WIDTH, HEIGHT } from "./playwright.config.js";
+
+// etc.
+
+for(let url of sitemap) {
+  test(`page at ${url}`, async ({ page }) => {
+    checkSnapshot(url, page);
+  });
+}
+
+async function checkSnapshot(url, page) {
+  // determine page height with default viewport
+  await page.setViewportSize({
+    width: WIDTH,
+    height: HEIGHT
+  });
+  await page.goto(url);
+  await page.waitForLoadState("networkidle");
+  let height = await page.evaluate(getFullHeight);
+
+  // resize viewport for before snapshotting
+  await page.setViewportSize({
+    width: WIDTH,
+    height: Math.ceil(height)
+  });
+  await page.waitForLoadState("networkidle");
+  await expect(page).toHaveScreenshot(OPTIONS);
+}
+
+function getFullHeight() {
+  return document.documentElement.getBoundingClientRect().height;
+}Note that we’ve also introduced a waiting condition, holding until there’s no network traffic for a while in a crude attempt to account for stuff like lazy-loading images.Be aware that capturing the entire page is more resource-intensive and doesn’t always work reliably: You might have to deal with layout shifts or run into timeouts for long or asset-heavy pages. In other words: This risks exacerbating flakiness.So much for that quick spike. While it took more effort than expected (I believe that’s called “software development”), this might actually solve my original problem now (not a common feature of software these days). Of course, shaving this yak still leaves me itchy, as I have yet to do the actual work of scratching CSS without breaking anything. Then comes the real challenge: Retrofitting dark mode to an existing website. I just might need more downtime.]]></content:encoded></item><item><title>The tale of a bizarre bug encountered in Google Docs</title><link>https://javascriptweekly.com/issues/729</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[ — Join Jon Kuperman for this video course diving into Chrome's DevTools. You'll go beyond console.log(), learning how to inspect, debug, and audit your web apps — tracking performance, identifying bottlenecks, making performance gains, and more. Level up your DevTools skills.]]></content:encoded></item><item><title>Could JavaScript have synchronous await?</title><link>https://2ality.com/2025/03/sync-await.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In JavaScript, code has : It is either synchronous or asynchronous. In this blog post, we explore:The problems caused by thatHow to fix them via synchronous The two downsides that prevent synchronous  from being practical]]></content:encoded></item><item><title>This Week In React #227: Next.js, tRPC, React Query, React Router, StyledComponents, MUI, Base UI, Next Intl | React Native birthday, Lynx, EAS, Atlas, Reanimated, Audio, BottomTabs | CSS, Rsdoctor, Linters, Node</title><link>https://thisweekinreact.com/newsletter/227</link><author></author><category>frontend</category><pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week, you probably didn't miss the Next.js middleware drama, but that wasn't the only thing going on!We also got many great releases such as tRPC, React Query, Rsdoctor and more!Also, React Native is 10 years old today! 🥳As always, thanks for supporting us on your favorite platform:In the age of code generation, you need a backend that you can confidently generate with AI platforms. Convex is by far and away best in class in this respect.This is because Convex is just TypeScript, allowing you to write queries as code that are automatically transactional, cached, and realtime.And that’s just the beginning. With Convex, you can:Easily schedule functions and write cron jobsWrite efficient server functionsA few days ago, Vercel announced a critical 9.1 vulnerability in Next.js middleware system. With a simple but malicious  header, you can bypass the middleware, possibly exposing sensitive information. Patches are available for Next.js 12/13/14/15. Note that this vulnerability only affects self-hosted apps using  and  are affected. Customers of major serverless cloud providers are either not affected (Vercel, Netlify), or protection can be turned on (Cloudflare).It's worth noting that even though Next.js middleware shouldn’t have this vulnerability, it is not the recommended place to manage user sessions and protect routes, and shouldn’t be the only line of defense in your Next.js app. The middleware is more designed to perform lightweight optimistic checks, eventually rewriting/redirecting without hitting any DB.This security event has caused a lot of drama in the ecosystem, which I'd rather not comment on much. Vercel could have handled the situation better, and they plan to do better in the future. I’ll let you make your own opinion based on various resources, and there’s too many, so this is just a subset:Clerk's new experimental package for using Clerk in your AI agent workflows. Manage users, orgs, and more with Vercel AI SDK + LangChain support. Try it now: npm install @clerk/agent-toolkitReact Native turns 10! 🎉🤯A huge shoutout to everyone who made it happen! Let’s take the opportunity to listen again to this podcast episode with Christopher Chedeau (Vjeux, co-creator of React Native) where he explains the backstory of React Native, and how this great project could easily have died without ambitious people willing to bet on it.Also a shoutout to the amazing React Native community—tight-knit, always pushing forward, tackling challenges, and building the future of native declarative UI together 🚀To the next promising decade! 🥂This week we have 2 videos, you need to click 😂]]></content:encoded></item><item><title>Case Study: Combining Cutting-Edge CSS Features Into a “Course Navigation” Component</title><link>https://css-tricks.com/case-study-combining-cutting-edge-css-features-into-a-course-navigation-component/</link><author>Daniel Schwarz</author><category>frontend</category><pubDate>Tue, 25 Mar 2025 12:47:18 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[It solved a UX problem I was facing on a project, so I’ve adapted it to the needs of an online course — a “course navigator” if you will — and built upon it. And today I’m going to pick it apart and show you how it all works:You can see I’m imagining this as some sort of navigation that you might find in an online learning management system that powers an online course. To summarize what this component does, it:links to all course lessons,smoothly scrolls to anchored lesson headings,indicates how much of the current lesson has been read,toggles between light and dark modes, andsits fixed at the bottom and collapses on scroll.Also, while not a feature, we won’t be using JavaScript. You might think that’s impossible, but the spate of CSS features that have recently shipped make all of this possible with vanilla CSS, albeit using bleeding-edge techniques that are only fully supported by Chrome at the time I’m writing this. So, crack open the latest version and let’s do this together!We’re looking at a disclosure widget (the  element) pinned to the bottom of the page with fixed positioning. Behind it? A course lesson (or something of that effect) wrapped in an  with s on the headings for same-page anchoring. Clicking on the disclosure’s  toggles the course navigation, which is wrapped in a  pseudo-element. This navigation links to other lessons but also scrolls to the aforementioned headings of the current lesson.The  contains a label (since it functions as a toggle-disclosure button), the name of the current lesson, the distance scrolled, and a dark mode toggle.<details>
+  
+  <!-- The toggle (flex →) -->
   <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
+    <span><!-- Toggle label --></span>
+    <span><!-- Current lesson + % read --></span>
+    <label><!-- Light/dark-mode toggle --></label>
   </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
+  
+  <!-- ::details-content -->
+    <!-- Course navigation -->
+  <!-- /::details-content -->
+    
+</details>
 
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
+<article>
+  <h1 id="sectionA">Section A</h1>
+  <p>...</p>
+  <h2 id="sectionB">Section B</h2>
+  <p>...</p>
+  <h2 id="sectionC">Section C</h2>
+  <p>...</p>
+</article>First, we’ll place the disclosure with fixed positioning so that it’s pinned to the bottom of the page:details {
+  position: fixed;
+  inset: 24px; /* Use as margin */
+  place-self: end center; /* y x */
+}Setting up CSS-only dark mode (the new way)There are certain scenarios where dark mode is better for accessibility, especially for the legibility of long-form content, so let’s set that up.First, the HTML. We have an ugly checkbox input that’s hidden thanks to its  attribute, followed by an  which’ll be a better-looking faux checkbox once we’ve sprinkled on some Font Awesome, followed by a  for the checkbox’s text label. All of this is then wrapped in an actual , which is wrapped by the . We wrap the label’s content in a  so that flexbox s get applied between everything.Functionally, even though the checkbox is hidden, it toggles whenever its label is clicked. And on that note, it might be a good idea to place an explicit  on this label, just to be 100% sure that screen readers announce a label, since implicit labels don’t always get picked up.<details>
+
+  <summary>
+    
+    <!-- ... -->
+        
+    <label aria-label="Dark mode">
+      <input type="checkbox" hidden>
+      <i></i>
+      <span>Dark mode</span>
+    </label>
+        
+  </summary>
+    
+  <!-- ... -->
+  
+</details>Next we need to put the right icons in there, subject to a little conditional logic. Rather than use Font Awesome’s HTML classes and have to mess around with CSS overwrites, we’ll use Font Awesome’s CSS properties with our rule logic, as follows:If the  element is followed by (notice the next-sibling combinator) a checked checkbox, we’ll display a checked checkbox icon in it. If it’s followed by an unchecked checkbox, we’ll display an  checkbox icon in it. It’s still the same rule logic even if you don’t use Font Awesome./* Copied from Font Awesome’s CSS */
+i::before {
+  font-style: normal;
+  font-family: "Font Awesome 6 Free";
+  display: inline-block;
+  width: 1.25em; /* Prevents content shift when swapping to differently sized icons by making them all have the same width (this is equivalent to Font Awesome’s .fa-fw class) */
+}
+
+/* If followed by a checked checkbox... */
+input[type=checkbox]:checked + i::before {
+  content: "\f058";
+  font-weight: 900;
+}
+
+/* If followed by an unchecked checkbox... */
+input[type=checkbox]:not(:checked) + i::before {
+  content: "\f111";
+  font-weight: 400;
+}We need to implement the modes at the root level (again, using a little conditional logic). If the root  the checked checkbox, apply . If the root does  the  checkbox, then we apply ./* If the root has a checked checkbox... */
+:root:has(input[type=checkbox]:checked) {
+  color-scheme: dark;
+}
+
+/* If the root does not have a checked checkbox... */
+:root:not(:has(input[type=checkbox]:checked)) {
+  color-scheme: light;
+}If you toggle the checkbox, your web browser’s UI will already toggle between light and dark color schemes. Now let’s make sure that our demo does the same thing using the  CSS function, which takes two values — the light mode color and then the dark mode color. You can utilize this function instead of any color data type (later on we’ll even use it within a conic gradient).In the demo I’m using the same HSL color throughout but with different lightness values, then flipping the lightness values based on the mode:color: light-dark(hsl(var(--hs) 90%), hsl(var(--hs) 10%));
+background: light-dark(hsl(var(--hs) 10%), hsl(var(--hs) 90%));I don’t think the  function is any better than swapping out CSS variables, but I don’t believe it’s any worse either. Totally up to you as far as which approach you choose.Now let’s display the amount read as defined by the scroll progress, first, as what I like to call a “progress pie” and then, second, as a plain-text percentage. These’ll go in the middle part of the :<details>
+
+  <summary>
+    
+    <!-- ... -->
+      
+    <span>
+      <span id="progress-pie"></span>
+      <span>1. LessonA</span>
+      <span id="progress-percentage"></span>
+    </span>
+        
+    <!-- ... -->
+
+  </summary>
+    
+  <!-- ... -->
+    
+</details>What we need is to display the percentage and allow it to “count” as the scroll position changes. Normally, this is squarely in JavaScript territory. But now that we can define our own custom properties, we can establish a variable called  that is formatted as an integer that defaults to a value of . This provides CSS with the context it needs to read and interpolate the value between  and , which is the maximum value we want to support.So, first, we define the variable as a custom property:@property --percentage {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}Then we define the animation in keyframes so that the value of  is updated from  to :@keyframes updatePercentage {
+  to {
+    --percentage: 100;
   }
+}And, finally, we apply the animation on the root element::root {
+  animation: updatePercentage;
+  animation-timeline: scroll();
+  counter-reset: percentage var(--percentage);
+}Since we’re dealing with an integer, we can target the  pseudo-element and place the percentage value inside of it using the  property and a little  hacking (followed by the percentage symbol):#progress-percentage::before {
+  content: counter(percentage) "%";
+  min-width: 40px; display: inline-block; /* Prevents content shift */
+}The progress pie is just as straightforward. It’s a conic gradient made up of two colors that are positioned using  and the scroll percentage! This means that you’ll need that  variable as an actual percentage, but you can convert it into such by multiplying it by  (calc(var(--percentage) * 1%))!#progress-pie {
+  aspect-ratio: 1;
+  background: conic-gradient(hsl(var(--hs) 50%) calc(var(--percentage) * 1%), light-dark(hsl(var(--hs) 90%), hsl(var(--hs) 10%)) 0%);
+  border-radius: 50%; /* Make it a circle */
+  width: 17px; /* Same dimensions as the icons */
+}Creating a (good) course navigationNow for the table contents containing the nested lists of lesson sections within them, starting with some resets. While there are more resets in the demo and more lines of code overall, two specific resets are vital to the UX of this component.First, here’s an example of how the nested lists are marked up:<details>
 
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
+  <summary>
+    <!-- ... -->
+  </summary>
+  
+  <ol>
+    <li class="active">
+      <a>LessonA</a>
+      <ol>
+        <li><a href="#sectionA">SectionA</a></li>
+        <li><a href="#sectionB">SectionB</a></li>
+        <li><a href="#sectionC">SectionC</a></li>
+      </ol>
+    </li>
+    <li><a>LessonB</a></li>
+    <li><a>LessonC</a></li>
+  </ol>
+    
+</details>Let’s reset the list spacing in CSS:ol {
+  padding-left: 0;
+  list-style-position: inside;
+} ensures that the parent list and all nested lists snap to the left side of the disclosure, minus any padding you might want to add. Don’t worry about the indentation of nested lists — we have something planned for those. list-style-position: inside ensures that the  snap to the side, rather than the text, causing the markers to overflow.After that, we slap  on the s of nested  elements since we don’t need the lesson section titles to be numbered. We’re only using nested lists for semantics, and nested  lists specifically because a different type of list marker (e.g., bullets) would cause vertical misalignment between the course’s lesson titles and the lesson section titles.ol ol li::marker {
+  color: transparent;
+}details {
+  /* The default color */
+  color: light-dark(hsl(var(--hs) 90%), hsl(var(--hs) 10%));
+}
 
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
+/* <li>s without .active that’re direct descendants of the parent <ol> */
+ol:has(ol) > li:not(.active) {
+  /* A less intense color */
+  color: light-dark(hsl(var(--hs) 80%), hsl(var(--hs) 20%));
+}
 
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
+/* Also */
+a {
+  color: inherit;
+}One more thing… those anchor links scroll users to specific headings, right? So, putting  on the root to enables smooth scrolling between them. And that percentage-read tracker that we created? Yep, that’ll work here as well.:root {
+  scroll-behavior: smooth; /* Smooth anchor scrolling */
+  scroll-padding-top: 20px; /* A scroll offset, basically */
+}Transitioning the disclosure:root {
+  interpolate-size: allow-keywords;
+}I recommend setting  on  to prevent the content from overflowing the disclosure as it transitions in and out:details::details-content {
+  overflow-y: clip;
+}Another option is sliding the content out and  fading it in (and vice-versa), but you’ll need to be quite specific about the transition’s setup.First, for the “before” and “after” states, you’ll need to target both  and , because vaguely targeting  and then overwriting the transitioning styles with  doesn’t allow us to reverse the transition.After that, slap the same  on both but with different values for the transition delays so that the fade happens after when opening but before when closing.Finally, you’ll also need to specify which properties are transitioned. We could simply put the  keyword in there, but that is neither performant nor allows us to set the transition durations and delays for each property. So we’ll list them individually instead in a comma-separated list. Notice that we’re specifically transitioning the  and using the  keyword because it is a discrete property. this is why we opted into interpolate-size: allow-keywords earlier.details:not([open])::details-content {
+  height: 0;
+  opacity: 0;
+  padding: 0 42px;
+  filter: blur(10px);
+  border-top: 0 solid light-dark(hsl(var(--hs) 30%), hsl(var(--hs) 70%));
+  transition:
+    height 300ms 300ms, 
+    padding-top 300ms 300ms, 
+    padding-bottom 300ms 300ms, 
+    content-visibility 300ms 300ms allow-discrete, 
+    filter 300ms 0ms, 
+    opacity 300ms 0ms;
+}
 
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
+details[open]::details-content {
+  height: auto;
+  opacity: 1;
+  padding: 42px;
+  filter: blur(0);
+  border-top: 1px solid light-dark(hsl(var(--hs) 30%), hsl(var(--hs) 70%));
+  transition: 
+    height 300ms 0ms, 
+    padding-top 300ms 0ms, 
+    padding-bottom 300ms 0ms, 
+    content-visibility 300ms 0ms allow-discrete, 
+    filter 300ms 300ms, 
+    opacity 300ms 300ms;
+}Giving the summary a label and iconsPreceding the current lesson’s title, percentage read, and dark mode toggle, the  element needs a label that helps describe what it does. I went with “Navigate course” and included an  saying the same thing so that screen readers didn’t announce all that other stuff.<details>
+  <summary aria-label="Navigate course">
+    <span>
+      <i></i>
+      <span>Navigate course</span>
+    </span>
     
     <!-- ... -->
 
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+  </summary>
+  
+  <!-- ... -->
+</details>In addition, the summary gets  so that we can easily separate the three sections with a , which also removes the summary’s default marker, allowing you to use your own. (Again, I’m using Font Awesome in the demo.)i::before {
+  width: 1.25em;
+  font-style: normal;
+  display: inline-block;
+  font-family: "Font Awesome 6 Free";
 }
 
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+details i::before {
+  content: "\f0cb"; /* fa-list-ol */
 }
 
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
+details[open] i::before {
+  content: "\f00d"; /* fa-xmark */
+}
+
+
+/* For older Safari */
+summary::-webkit-details-marker {
+   display: none;
+}And finally, if you’re pro- for most interactive elements, you’ll want to use it on the summary and manually make sure that the checkbox’s label inherits it, as it doesn’t do that automatically.summary {
+  cursor: pointer;
+}
+
+label {
+  cursor: inherit;
+}Giving the disclosure an auto-closure mechanismA tiny bit of JavaScript couldn’t hurt though, could it? I know I said this is a no-JavaScript deal, but this one-liner will automatically close the disclosure when the mouse leaves it:document.querySelector("details").addEventListener("mouseleave", e => e.target.removeAttribute("open"));Annoying or useful? I’ll let you decide.Setting the preferred color scheme automaticallySetting the preferred color scheme automatically is certainly useful, but if you like to avoid JavaScript wherever possible, I don’t think users will be too mad for not offering this feature. Either way, the following conditional snippet checks if the user’s preferred color scheme is “dark” by evaluating the relevant CSS media query (prefers-color-scheme: dark) using  and . If the condition is met, the checkbox gets checked, and then the CSS handles the rest.if (window.matchMedia("prefers-color-scheme: dark").matches) {
+  document.querySelector("input[type=checkbox]").checked = true;
+}This has been fun! It’s such a blessing we can combine all of these cutting-edge CSS features, not just into one project but into a single component. To summarize, that includes:a course navigator that shows the current lesson, all other lessons, and smooth scrolls between the different headings,a percentage-scrolled tracker that shows the amount read in plain text and as a conic gradient… ,a light/dark-mode toggle (with some optional JavaScript that detects the preferred color scheme), and it isall packed into a single, floating, animated, native disclosure component.The newer CSS features we covered in the process:interpolate-size: allow-keywords for transitioning between  and smooth scrolling by way of dark mode magic using the  functiona progress chart made with a styling the  pseudo-elementanimating the  elementThanks to Jhey for the inspiration! If you’re not following Jhey on Bluesky or X, you’re missing out. You can also see his work on CodePen, some of which he has talked about right here on CSS-Tricks.]]></content:encoded></item><item><title>Easy way to upload, transform and deliver files and images (Sponsored)</title><link>https://davidwalsh.name/easy-way-to-upload-transform-and-deliver-files-and-images</link><author>David Walsh</author><category>frontend</category><category>blog</category><pubDate>Mon, 24 Mar 2025 22:58:30 +0000</pubDate><source url="https://davidwalsh.name/">David Walsh blog</source><content:encoded><![CDATA[Managing media is a really difficult task if you try to do all of it yourself, especially if the media comes from other sources.  The file can be submitted in any state and size, but what if you need something really specific?  You can code it all yourself or you can use an awesome service like Filestack, a utility to upload, transform, and deliver that media in the most optimal style imaginable!The first step in the Filestack journey is signing up for free. You’ll get at 21 day free trial and can cancel at any time.  Once signed up, you’ll have full access to the Filestack libraries of code. You’ll also want to spend time catching up on the Filestack documentation, which is a developer’s dream — code samples and detailed usage information.Allowing your users to take advantage of easy uploading with Filestack starts with the // Using JavaScript
+const client = filestack.init("apikey");
+const picker = client.picker(); 
+picker.open();
+The result is an elegant, highly functional, and feature filled file uploading UI component:This great utility integrates with 20+ popular services like Google Drive, Dropbox, GitHub, Facebook, Instagram, and more. As the Filestack picker also illustrates, users can take advantage of the ease of dragging and dropping files to upload.  If you prefer to do your uploading on the back end, you can use the Filestack Python library:from filestack import Client
+
+client = Client(APIKEY)
+
+store_params = {
+    'location': 's3', 
+    'path': 'folder/subfolder/',
+    'upload_tags': {
+          "foo":"bar"
     }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
-
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
 }
+filelink = client.upload(filepath='path/to/filename.jpg', store_params=store_params)
+Unlike many services, Filestack provides a number of code libraries to make the developer experience much easier. With files uploaded, it’s time to transform!Users can upload any type of file at any size or format, so the ability to quickly and easily transform file that file into something more to the developer’s liking is key. Transformations can be applied to videos, images, and even documents.  Transformations can also be done on in real time or via sync workflows.For example, you can resize and manipulate images by adjusting URL parameters:// Resize an image to have a width of 300px
+https://cdn.filestackcontent.com/resize=width:300/pdn7PhZdT02GoYZCVYeF
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
-}
+// Add a color filter, rotate the image, and add a "polaroid" border to the image
+https://cdn.filestackcontent.com/resize=width:300/sepia=tone:80/polaroid/pdn7PhZdT02GoYZCVYeF
+So what else can be done with transformations beside file dimension and effects?  Lots!Enhancing: Upscale and remove red eye effectsBorders & Effects: Rounded corners, vignette, polaroid, torn edges, shadowsFilters: Sharpen, blur, b&w, Sepia, oil paint, pixelate, and moreFacial Detection: detect, crop, pixelate, and blur facesFile Type: format conversion, animation (image to GIF), ASCII, collage, QR code, screenshotDocuments: PDF create and convert, document to imageAll of these commands can be combined to completely transform any file into exactly what you’d like to present to your users!  And if you’d prefer to have a UI for users to transform media themselves, you can!With the files uploaded and transforms completed, the last step is delivering to clients. That delivery is incredibly important, as reliability and fast rendering can impact user retention and business conversion.Filestack’s CDN caches Filestack URLs the first time they are accessed, such as in the case of storage aliases or transformations. The cached copy of any unique Filestack URL will live for 30 days – it will then be re-cached only when it is requested again.Filestack’s platform is incredibly flexible, powerful, and useful.  From the start of uploading, to transforming into a custom file, and delivering that file quickly, Filestack is a great platform that takes those files from start to finish; from source to consumer!]]></content:encoded></item><item><title>Support Logical Shorthands in CSS</title><link>https://css-tricks.com/support-logical-shorthands-in-css/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Mon, 24 Mar 2025 14:06:19 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[There’s a bit of a blind spot when working with CSS logical properties concerning shorthands. Miriam explains:Logical properties are a great way to optimize our sites in advance, without any real effort.But what if we want to set multiple properties at once? This is where shorthands like  and  become useful. But they are currently limited to setting physical dimension. Logical properties are great, but they still feel like a second-class feature of the language.There are a few 2-value shorthands that have been implemented, like  for setting both the  and margins. I find those extremely useful and concise. But the existing 4-value shorthands feel stuck in the past. It’s surprising that a  shorthand can’t set the , and the  shorthand doesn’t include . Is there any way to update those shorthand properties so that they can be used to set logical dimensions?She ends with the money question, whether we can do anything about it. We’re currently in a position of having to choose between supporting flow-relative terms like  and  with longhand properties and the ergonomic benefits of writing shorthand properties that are evaluated as physical terms like , , , and . Those of us writing CSS for a while likely have the muscle memory to adapt accordingly, but it’s otherwise a decision that has real consequences, particularly for multi-lingual sites.Note that Miriam says this is something the CSS Working Group has been working on since 2017. And there’s a little momentum to pick it up and do something about it. The first thing you can do is support Miriam’s work — everything she does with the CSS Working Group (and it’s a lot) is a labor of love and relies on sponsorships, so chipping in is one way to push things forward.The other thing you can do is chime into Miriam’s proposal that she published in 2021. I think it’s a solid idea. We can’t simply switch from physical to flow-relative terms in shorthand properties without triggering compatibility issues, so having some sort of higher-level instruction for CSS at the top of the stylesheet, perhaps as an at-rule that specifies which “mode” we’re in.<coordinate-mode> = [ logical | physical ] or [ relative | absolute ] or ...
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+@mode <coordinate-mode>; /* must come after @import and before any style rules */
+
+@mode <coordinate-mode> { <stylesheet> }
+
+selector {
+  property: value  !<coordinate-mode>;
+}Perhaps naming aside, it seems pretty reasonable, eh?]]></content:encoded></item></channel></rss>
