@@ -1,220 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
-  }
-</style>
-
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
-
-    <!-- Repeat for all properties -->
-  </div>
-</div>
-
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>A New “Web” Readiness Report</title><link>https://css-tricks.com/a-new-web-readiness-report/</link><author>Juan Diego Rodríguez</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/03/juandivideo2.mp4" length="" type=""/><pubDate>Fri, 4 Apr 2025 13:05:22 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[The beauty of research is finding yourself on a completely unrelated topic mere minutes from opening your browser. It happened to me while writing an Almanac entry on , an at-rule that we probably won’t ever use and is often regarded as a legacy piece of CSS. Maybe that’s why there wasn’t a lot of info about it until I found a 2010s post on  by Divya Manian. The post was incredibly enlightening, but that’s beside the point; what’s important is that in Divya’s blog, there were arrows on the sides to read the previous and next posts:What’s HTML 5 Readiness?!HTML 5 Readiness was a site created by Paul Irish and Divya Manian that showed the browser support for several web features through the lens of a rainbow of colors. The features were considered (at the time)  or  stuff, such as media queries, transitions, video and audio tags, etc. As each browser supported a feature, a section of the rainbow would be added.I think it worked from 2010 to 2013, although it showed browser support data from 2008. I can’t describe how nostalgic it made me feel; it reminded me of simpler times when even SVGs weren’t fully supported. What almost made me shed a tear was thinking that, if this tool was updated today, all of the features would be colored in a full rainbow.It got me thinking: there are so many new features coming to CSS (many that haven’t shipped to any browser) that there could be a new HTML5 Readiness with all of them. That’s why I set myself to do exactly that last weekend, a  2025 that holds each of the features coming to HTML and CSS I am most excited about.Right now, it looks kinda empty, but as time goes we will hopefully see how the rainbow grows: Even though it was a weekend project, I took the opportunity to dip my toes into a couple of things I wanted to learn. Below are also some snippets I think are worth sharing.The data is sourced from BaselineMy first thought was to mod the  web component made by the Chrome team because I have been wanting to use it since it came out. In short, it lets you embed the support data for a web feature directly into your blog. Not long ago, in fact, Geoff added it as a WordPress block in CSS-Tricks, which has been super useful while writing the Almanac:However, I immediately realized that using the  would be needlessly laborious, so I instead pulled the data from the Web Features API — https://api.webstatus.dev/v1/features/ — and displayed it myself. You can find all the available features in the GitHub repo.Another feature I have been wanting to learn more about was Web Components, and since Geoff recently published his notes on Scott Jehl’s course Web Components Demystified, I thought it was the perfect chance. In this case, each ray would be a web component with a simple live cycle:Read the feature ID from a  attribute.Fetch its data from the Web Features API.Display its support as a list.Said and done! The simplified version of that code looks something like the following:class BaselineRay extends HTMLElement {
+  constructor() {
+    super();
   }
 
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
+  static get observedAttributes() {
+    return ["data-feature"];
   }
 
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
+  attributeChangedCallback(property, oldValue, newValue) {
+    if (oldValue !== newValue) {
+      this[property] = newValue;
     }
   }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
 
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
+  async #fetchFeature(endpoint, featureID) {
+    // Fetch Feature Function
+  }
 
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
+  async connectedCallback() {
+    // Call fetchFeature and Output List
+  }
+}
+
+customElements.define("baseline-ray", BaselineRay);Animations with the Web Animation APII must admit, I am not too design-savvy (I hope it isn’t that obvious), so what I lacked in design, I made up with some animations. When the page initially loads, a welcome animation is easily achieved with a couple of timed keyframes. However, the animation between the rainbow and list layouts is a little more involved since it depends on the user’s input, so we have to trigger them with JavaScript.At first, I thought it would be easier to do them with Same-Document View Transitions, but I found myself battling with the browser’s default transitions and the lack of good documentation beyond Chrome’s posts. That’s why I decided on the Web Animation API, which lets you trigger transitions in a declarative manner. and A while ago, I wrote about the  and  functions. As their names imply, they return the current index of an element among its sibling, and the total amount of siblings, respectively. While Chrome announced its intent to ship both functions, I know it will be a while until they reach baseline support, but I still needed them to rotate and move each ray.In that same post, I talked about three options to polyfill each function. The first two were CSS-only, but this time I took the simplest JavaScript way which observes the number of rays and adds custom properties with its index and total count. Sure, it’s a bit overkill since the amount of rays doesn’t change, but pretty easy to implement:const elements = document.querySelector(".rays");
+
+const updateCustomProperties = () => {
+  let index = 0;
+
+  for (let element of elements.children) {
+    element.style.setProperty("--sibling-index", index);
+    index++;
+  }
+
+  elements.style.setProperty("--sibling-count", elements.children.length - 1);
+};
+
+updateCustomProperties();
+
+const observer = new MutationObserver(updateCustomProperties);
+const config = {attributes: false, childList: true, subtree: false};
+observer.observe(elements, config);With this, I could position each ray in a 180-degree range:baseline-ray ul{
+  --position: calc(180 / var(--sibling-count) * var(--sibling-index) - 90);
+  --rotation: calc(var(--position) * 1deg);
+     
+  transform: translateX(-50%) rotate(var(--rotation)) translateY(var(--ray-separation));
+  transform-origin: bottom center;
+}The selection is JavaScript-lessIn the browser captions, if you hover over a specific browser, that browser’s color will pop out more in the rainbow while the rest becomes a little transparent. Since in my HTML, the caption element isn’t anyway near the rainbow (as a parent or a sibling), I thought I would need JavaScript for the task, but then I remembered I could simply use the  selector.It works by detecting whenever the closest parent of both elements (it could be , , or the whole ) has a . item with a  pseudo-class. Once detected, we increase the size of each ray section of the same browser, while decreasing the opacity of the rest of the ray sections.What’s left now is to wait! I hope people can visit the page from time to time and see how the rainbow grows. Like the original HTML 5 Readiness page, I also want to take a snapshot at the end of the year to see how it looks until each feature is fully supported. Hopefully, it won’t take long, especially seeing the browser’s effort to ship things faster and improve interoperability.Also, let me know if you think a feature is missing! I tried my best to pick exciting features without baseline support.]]></content:encoded></item><item><title>The JavaScript trademark fight rumbles on</title><link>https://javascriptweekly.com/issues/730</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 4 Apr 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>SMIL on?</title><link>https://css-tricks.com/smil-on/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 2 Apr 2025 12:37:19 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I was chatting with Andy Clarke the other day about a new article he wants to write about SVG animations.“I’ve read some things that said that SMIL might be a dead end.” He said. “Whaddya think?”Unfortunately, support for SMIL is waning in WebKit, and has never (nor will likely ever) exist for Microsoft’s IE or Edge browsers. Chrome was also in on the party and published an intent to deprecate SMIL, citing work in other browsers to support SVG animations in CSS. MDN linked to that same thread in its SMIL documentation when it published a deprecation warning.Now, I’m not saying that SMIL is perfectly alive and well. It could still very well be in the doldrums, especially when there are robust alternatives in CSS and JavaScript. But it’s also not dead in the water.]]></content:encoded></item><item><title>This Week In React #228: React 19.1, Next.js deployment, React-Email, Triplex, Tinybase, Rspack, i18n-check, React-Admin | 0.79 Golden RC, ExecuTorch, Unistyles, Xcode 16.3, macOS, Screens, Gesture Handler | TypeScript, TC39, WebKit, Intl.Collator, Vitest 3.1</title><link>https://thisweekinreact.com/newsletter/228</link><author></author><category>frontend</category><pubDate>Wed, 2 Apr 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[React 19.1 just dropped with better error handling and deeper integration for Server Components in Parcel. Meanwhile, Tailwind CSS 4.1 is right around the corner, and the community is buzzing with hot takes on CSS-in-JS. On the React Native side, the golden RC for 0.79 is out, and ExecuTorch v0.4.0 is landing soon with exciting AI features.As always, thanks for supporting us on your favorite platform:For a decade, we navigated the complexities of disconnected systems, facing integration headaches and scaling challenges. Our journey to build effectively at scale led us to a breakthrough: .Discover our 10-year story of pioneering composable architecture and how Harmony finally delivered the monolithic simplicity and distributed power we always envisioned, transforming our development from struggle to exponential progress.React 19.1 has been released this week, the most notable changes are:A new  API that will be used by frameworks to provide better error information in dev. It’s different from the existing component stacks in how it handles  and DOM nodes.The “React side” of Server Components support in Parcel, that works hand-in-hand with the new features in Parcel 2.14.An experimental  for prerendering React Server Components on the server.This release also includes a slew of minor changes and fixes, most of them related to Server Components or  boundaries.Sempahor is a React based SDK to launch fully-interactive dashboards in your customer-facing products.Semaphor helps you decouple analytics from your product code, so you can iterate quickly, and ship new insights independently — without needing to redeploy your app.The CPO of TalentsConnect sums it up best:"Semaphor has transformed our product and data team's workflow. They can now more quickly prototype and test new use cases directly in our application with our clients, significantly reducing feedback cycle time. Plus, Semaphor's styling options are outstanding, fitting seamlessly with our product's design"It’s been a quiet week in the React Native community—perhaps because all eyes are on the React Native Connection happening right now in Paris. Hopefully, we’ll have plenty of exciting topics to dive into next week 🤗]]></content:encoded></item><item><title>Crafting Strong DX With Astro Components and TypeScript</title><link>https://css-tricks.com/crafting-strong-dx-with-astro-components-and-typescript/</link><author>Bryan Robinson</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/03/typed-component-1.mp4" length="" type=""/><pubDate>Tue, 1 Apr 2025 13:50:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’m a big fan of Astro’s focus on developer experience (DX) and the onboarding of new developers. While the basic DX is strong, I can easily make a convoluted system that is hard to onboard my own developers to. I don’t want that to happen.If I have multiple developers working on a project, I want them to know exactly what to expect from every component that they have at their disposal. This goes double for myself in the future when I’ve forgotten how to work with my own system!To do that, a developer could go read each component and get a strong grasp of it before using one, but that feels like the onboarding would be incredibly slow. A better way would be to set up the interface so that as the developer is using the component, they have the right knowledge immediately available. Beyond that, it would bake in some defaults that don’t allow developers to make costly mistakes and alerts them to what those mistakes are before pushing code!Enter, of course, TypeScript. Astro comes with TypeScript set up out of the box. You don’t have to use it, but since it’s there, let’s talk about how to use it to craft a stronger DX for our development teams.I’ve also recorded a video version of this article that you can watch if that’s your jam. Check it out on YouTube for chapters and closed captioning.In this demo, we’re going to use a basic Astro project. To get this started, run the following command in your terminal and choose the “Minimal” template.This will create a project with an index route and a very simple “Welcome” component. For clarity, I recommend removing the  component from the route to have a clean starting point for your project.To add a bit of design, I’d recommend setting up Tailwind for Astro (though, you’re welcome to style your component however you would like including a style block in the component).Once this is complete, you’re ready to write your first component.Let’s start by defining exactly what options we want to provide in our developer experience.For this component, we want to let developers choose from any HTML heading level (H1-H6). We also want them to be able to choose a specific font size and font weight — it may seem obvious now, but we don’t want people choosing a specific heading level for the weight and font size, so we separate those concerns.Finally, we want to make sure that any additional HTML attributes can be passed through to our component. There are few things worse than having a component and then not being able to do basic functionality later.Let’s start by creating a simple component that allows the user to dynamically choose the HTML element they want to use. Create a new component at ./src/components/Heading.astro.---
+// ./src/component/Heading.astro
+const { as } = Astro.props;
+const As = as;
+---
+
+<As>
+  <slot />
+</As>To use a prop as a dynamic element name, we need the variable to start with a capital letter. We can define this as part of our naming convention and make the developer always capitalize this prop in their use, but that feels inconsistent with how most naming works within props. Instead, let’s keep our focus on the DX, and take that burden on for ourselves.In order to dynamically register an HTML element in our component, the variable must start with a capital letter. We can convert that in the frontmatter of our component. We then wrap all the children of our component in the  component by using Astro’s built-in  component.Now, we can use this component in our index route and render any HTML element we want. Import the component at the top of the file, and then add  and  elements to the route.---
+// ./src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import Heading from '../components/Heading.astro';
+
+---
+
+<Layout>
+  <Heading as="h1">Hello!</Heading>
+  <Heading as="h2">Hello world</Heading>
+</Layout>This will render them correctly on the page and is a great start.Adding more custom props as a developer interfaceLet’s clean up the element choosing by bringing it inline to our props destructuring, and then add in additional props for weight, size, and any additional HTML attributes.To start, let’s bring the custom element selector into the destructuring of the  object. At the same time, let’s set a sensible default so that if a developer forgets to pass this prop, they still will get a heading.---
+// ./src/component/Heading.astro
+const { as: As="h2" } = Astro.props;
+---
+
+<As>
+  <slot />
+</As>
+Next, we’ll get weight and size. Here’s our next design choice for our component system: do we make our developers know the class names they need to use or do we provide a generic set of sizes and do the mapping ourselves? Since we’re building a system, I think it’s important to move away from class names and into a more declarative setup. This will also future-proof our system by allowing us to change out the underlying styling and class system without affecting the DX.Not only do we future proof it, but we also are able to get around a limitation of Tailwind by doing this. Tailwind, as it turns out can’t handle dynamically-created class strings, so by mapping them, we solve an immediate issue as well.In this case, our sizes will go from small () to six times the size () and our weights will go from “light” to “bold”.Let’s start by adjusting our frontmatter. We need to get these props off the  object and create a couple objects that we can use to map our interface to the proper class structure.---
+// ./src/component/Heading.astro
+
+const weights = {
+    "bold": "font-bold",
+    "semibold": "font-semibold",
+    "medium": "font-medium",
+    "light": "font-light"
+}
+const sizes= {
+    "6xl": "text-6xl",
+    "5xl": "text-5xl",
+    "4xl": "text-4xl",
+    "3xl": "text-3xl",
+    "2xl": "text-2xl",
+    "xl": "text-xl",
+    "lg": "text-lg",
+    "md": "text-md",
+    "sm": "text-sm"
+}
+
+const { as: As="h2", weight="medium", size="2xl" } = Astro.props;
+---Depending on your use case, this amount of sizes and weights might be overkill. The great thing about crafting your own component system is that you get to choose and the only limitations are the ones you set for yourself.From here, we can then set the classes on our component. While we could add them in a standard  attribute, I find using Astro’s built-in  directive to be the cleaner way to programmatically set classes in a component like this. The directive takes an array of classes that can be strings, arrays themselves, objects, or variables. In this case, we’ll select the correct size and weight from our map objects in the frontmatter.---
+// ./src/component/Heading.astro
+
+const weights = {
+  bold: "font-bold",
+  semibold: "font-semibold",
+  medium: "font-medium",
+  light: "font-light",
+};
+const sizes = {
+  "6xl": "text-6xl",
+  "5xl": "text-5xl",
+  "4xl": "text-4xl",
+  "3xl": "text-3xl",
+  "2xl": "text-2xl",
+  xl: "text-xl",
+  lg: "text-lg",
+  md: "text-md",
+  sm: "text-sm",
+};
+
+const { as: As = "h2", weight = "medium", size = "2xl" } = Astro.props;
+---
+
+<As class:list={[
+  sizes[size], 
+  weights[weight]
+]}
+>
+  <slot />
+</As>
+Your front-end should automatically shift a little in this update. Now your font weight will be slightly thicker and the classes should be applied in your developer tools.From here, add the props to your index route, and find the right configuration for your app.---
+// ./src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import Heading from '../components/Heading.astro';
+---
+
+<Layout>
+  <Heading as="h1" size="6xl" weight="light">Hello!</Heading>
+  <Heading as="h3" size="xl" weight="bold">Hello world</Heading>
+</Layout>Our custom props are finished, but currently, we can’t use any default HTML attributes, so let’s fix that.We don’t know what sorts of attributes our developers will want to add, so let’s make sure they can add any additional ones they need.To do that, we can spread any other prop being passed to our component, and then add them to the rendered component.---
+// ./src/component/Heading.astro
+
+const weights = {
+  // etc.
+};
+const sizes = {
+  // etc.
+};
+
+const { as: As = "h2", weight = "medium", size = "md", ...attrs } = Astro.props;
+---
+
+<As class:list={[
+  sizes[size], 
+  weights[weight]
+]}
+{...attrs}
+>
+  <slot />
+</As>From here, we can add any arbitrary attributes to our element.---
+// ./src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import Heading from '../components/Heading.astro';
+
+---
+
+<Layout>
+  <Heading id="my-id" as="h1" size="6xl" weight="light">Hello!</Heading>
+  <Heading class="text-blue-500" as="h3" size="xl" weight="bold">Hello world</Heading>
+</Layout>I’d like to take a moment to truly appreciate one aspect of this code. Our , we add an  attribute. No big deal. Our , though, we’re adding an additional class. My original assumption when creating this was that this would conflict with the  set in our component. Astro takes that worry away. When the class is passed and added to the component, Astro knows to merge the class prop with the  directive and automatically makes it work. One less line of code!In many ways, I like to consider these additional attributes as “escape hatches” in our component library. Sure, we want our developers to use our tools exactly as intended, but sometimes, it’s important to add new attributes or push our design system’s boundaries. For this, we allow them to add their own attributes, and it can create a powerful mix.It looks done, but are we?At this point, if you’re following along, it might feel like we’re done, but we have two issues with our code right now: (1) our component has “red squiggles” in our code editor and (2) our developers can make a BIG mistake if they choose.The red squiggles come from type errors in our component. Astro gives us TypeScript and linting by default, and sizes and weights can’t be of . Not a big deal, but concerning depending on your deployment settings.The other issue is that our developers don’t have to choose a heading element for their heading. I’m all for escape hatches, but only if they don’t break the accessibility and SEO of my site.Imagine, if a developer used this with a  instead of an  on the page. What would happen?We don’t have to imagine, make the change and see.It looks identical, but now there’s no  element on the page. Our semantic structure is broken, and that’s bad news for many reasons. Let’s use typing to help our developers make the best decisions and know what options are available for each prop.To set up our types, first we want to make sure we handle any HTML attributes that come through. Astro, again, has our backs and has the typing we need to make this work. We can import the right HTML attribute types from Astro’s typing package. Import the type and then we can extend that type for our own props. In our example, we’ll select the  types, since that should cover most anything we need for our headings.Inside the  interface, we’ll also add our first custom type. We’ll specify that the  prop must be one of a set of strings, instead of just a basic string type. In this case, we want it to be – and nothing else.---
+// ./src/component/Heading.astro
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'h1'> {
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+
+//... The rest of the file
+---After adding this, you’ll note that in your index route, the  component should now have a red underline for the  property. When you hover over it, it will let you know that the  type does not allow for  and it will show you a list of acceptable strings.If you delete the , you should also now have the ability to see a list of what’s available as you try to add the string.While it’s not a big deal for the element selection, knowing what’s available is a much bigger deal to the rest of the props, since those are much more custom.Let’s extend the custom typing to show all the available options. We also denote these items as optional by using the before defining the type.While we could define each of these with the same type functionality as our  type, that doesn’t keep this future proofed. If we add a new size or weight, we’d have to make sure to update our type. To solve this, we can use a fun trick in TypeScript: .There are two helper functions in TypeScript that will help us convert our weights and sizes object maps into string literal types:: This helper takes an object and converts it to a type. For instance  would return type { bold: string, semibold: string, ...etc}: This helper function takes a type and returns a list of string literals from that type’s keys. For instance keyof type { bold: string, semibold: string, ...etc} would return "bold" | "semibold" | ...etc which is exactly what we want for both weights and sizes.---
+// ./src/component/Heading.astro
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'h1'> {
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  weight?: keyof typeof weights;
+  size?: keyof typeof sizes;
+}
+
+// ... The rest of the fileNow, when we want to add a size or weight, we get a dropdown list in our code editor showing exactly what’s available on the type. If something is selected, outside the list, it will show an error in the code editor helping the developer know what they missed.While none of this is necessary in the creation of Astro components, the fact that it’s built in and there’s no additional tooling to set up means that using it is very easy to opt into.I’m by no means a TypeScript expert, but getting this set up for each component takes only a few additional minutes and can save a lot of time for developers down the line (not to mention, it makes onboarding developers to your system much easier).]]></content:encoded></item><item><title>Worlds Collide: Keyframe Collision Detection Using Style Queries</title><link>https://css-tricks.com/worlds-collide-keyframe-collision-detection-using-style-queries/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 31 Mar 2025 14:59:47 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[A friend DMs Lee Meyer a CodePen by Manuel Schaller containing a pure CSS simulation of one of the world’s earliest arcade games, Pong, with both paddles participating automatically, in an endless loop. The demo reminds Lee of an arcade machine in attract mode awaiting a coin, and the iconic imagery awakens muscle memory from his misspent childhood, causing him to search his pocket in which he finds the token a spooky shopkeeper gave him last year at the CSS tricks stall in the haunted carnival. The token gleams like a power-up in the light of his laptop, which has a slot he never noticed. He feeds the token into the slot, and the CodePen reloads itself. A vertical range input and a life counter appear, allowing him to control the left paddle and play the game in Chrome using a cocktail of modern and experimental CSS features to implement collision detection in CSS animations. He recalls the spooky shopkeeper’s warning that playing with these features has driven some developers to madness, but the shopkeeper’s voice in Lee’s head whispers: “Too late, we are already playing.”CSS collision detection: Past and presentSo, maybe the experience of using modern CSS to add collision detection and interactivity to an animation wasn’t as much like a screenplay sponsored by CSS as I depicted in the intro above — but it did feel like magic compared to what Alex Walker had to go through in 2013 to achieve a similar effect. Hilariously, he describes his implementation as “a glittering city of hacks built on the banks of the ol’ Hack River. On the Planet Hack.“ Alex’s version of CSS Pong cleverly combines checkbox hacks, sibling selectors, and , whereas the CodePen below uses style queries to detect collisions. I feel it’s a nice illustration of how far CSS has come, and a testament to increased power and expressiveness of CSS more than a decade later. It shows how much power we get when combining new CSS features — in this case, that includes style queries, animatable custom properties, and animation timelines. The future CSS features of inline conditionals and custom functions might be able to simplify this code more.Collision detection with style queriesInteractive CSS animations with elements ricocheting off each other seems more plausible in 2025 and the code is somewhat sensible. While it’s unnecessary to implement Pong in CSS, and the CSS Working Group probably hasn’t been contemplating how to make that particular niche task easier, the increasing flexibility and power of CSS reinforce my suspicion that one day it will be a lifestyle choice whether to achieve any given effect with scripting or CSS.The demo is a similar number of lines of CSS to Alex’s 2013 implementation, but it didn’t feel much like a hack. It’s a demo of modern CSS features working together in the way I expected after reading the instruction booklet. Sometimes when reading introductory articles about the new features we are getting in CSS, it’s hard to appreciate how game-changing they are till you see several features working together. As often happens when pushing the boundaries of a technology, we are going to bump up against the current limitations of style queries and animations. But it’s all in good fun, and we’ll learn about these CSS features in more detail than if we had not attempted this crazy experiment.It does seem to work, and my 12-year-old and 7-year-old have both playtested it on my phone and laptop, so it gets the “works on Lee’s devices” seal of quality. Also, since Chrome now supports controlling animations using range inputs, we can make our game playable on mobile, unlike the 2013 version, which relied on . Temani Afif provides a great explanation of how and why view progress timelines can be used to style anything based on the value of a range input.Using style queries to detect if the paddle hit the ballThe ball follows a fixed path, and whether the player’s paddle intersects with the ball when it reaches our side is the only input we have into whether it continues its predetermined bouncy loop or the screen flashes red as the life counter goes down till we see the “Game Over” screen with the option to play again.This type of interactivity is what game designers call a quick time event. It’s still a game for sure, but five months ago, when I was young and naive, I mused in my article on animation timelines that the animation timeline feature could open the door for advanced games and interactive experiences in CSS. I wrote that a video game is just a “hyper-interactive animation.” Indeed, the above experiment shows that the new features in CSS allow us to respond to user input in sophisticated ways, but the demo also clarifies the difference between the kind of interactivity we can expect from the current incarnation of CSS versus scripting. The above experiment is more like if Pong were a game inside the old-school arcade game Dragon’s Lair, which was one giant quick time event. It only works because there are limited possible outcomes, but they are certainly less limited than what we used to be able to achieve in CSS.Since we know collision detection with the paddle is the only opportunity for the user to have a say in what happens next, let’s focus on that implementation. It will require more mental gymnastics than I would like, since container style queries only allow for name-value pairs with the same syntax as feature queries, meaning we can’t use “greater than” or “less than” operators when comparing numeric values like we do with container size queries which follow the same syntax as  size queries.The workaround below allows us to create style queries based on the ball position being in or out of the range of the paddle. If the ball hits our side, then by default, the play field will flash red and temporarily unpause the animation that decrements the life counter (more on that later). But if the ball hits our side and is within range of the paddle, we leave the life-decrementing animation paused, and make the field background green while the ball hits the paddle. Since we don’t have “greater than” or “less than” operators in style queries, we (ab)use the  function. If the result equals the first argument then that argument is less than or equal to the second; otherwise it’s greater than the second argument. It’s logical but made me wish for better comparison operators in style queries. Nevertheless, I was impressed that style queries allow the collision detection to be fairly readable, if a little more verbose than I would like.body {
+  --int-ball-position-x: round(down, var(--ball-position-x));
+  --min-ball-position-y-and-top-of-paddle: min(var(--ball-position-y) + var(--ball-height), var(--ping-position));
+  --min-ball-position-y-and-bottom-of-paddle: min(var(--ball-position-y), var(--ping-position) + var(--paddle-height));
+}
+
+@container style(--int-ball-position-x: var(--ball-left-boundary)) {
+  .screen {
+    --lives-decrement: running;
+      
+    .field {
+      background: red;
+    }
+  }
+}
+
+@container style(--min-ball-position-y-and-top-of-paddle: var(--ping-position)) and style(--min-ball-position-y-and-bottom-of-paddle: var(--ball-position-y)) and style(--int-ball-position-x: var(--ball-left-boundary)) {
+  .screen {
+    --lives-decrement: paused;
+
+    .field {
+      background: green;
+    }
+  }
+}Now that we can style our playing field based on whether the paddle hits the ball, we want to decrement the life counter if our paddle misses the ball, and display “Game Over” when we run out of lives. One way to achieve side effects in CSS is by pausing and unpausing keyframe animations that run forwards. These days, we can style things based on custom properties, which we can set in animations. Using this fact, we can take the power of paused animations to another level.
+body {
+  animation: ball 8s infinite linear, lives 80ms forwards steps(4) var(--lives-decrement);
+  --lives-decrement: paused;        
+}
+
+.lives::after {
+   content: var(--lives);
+}
+
+@keyframes lives {
+  0% {
+    --lives: "3";
+  }
+  25% {
+    --lives: "2";
+  }
+  75% {
+    --lives: "1";
+  }
+  100% {
+    --lives: "0";
+  }
+}
+
+@container style(--int-ball-position-x: var(--ball-left-boundary)) {
+  .screen {
+    --lives-decrement: running;
+      
+    .field {
+      background: red;
+    }
+  }
+}
+
+@container style(--min-ball-position-y-and-top-of-paddle: var(--ping-position)) and style(--min-ball-position-y-and-bottom-of-paddle: var(--ball-position-y)) and style(--int-ball-position-x: 8) {
+  .screen {
+    --lives-decrement: paused;
     
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
-
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
-
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
+    .field {
+      background: green;
     }
   }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
+}
 
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
+@container style(--lives: '0') {
+  .field {
+     display: none;
   }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
-}
-
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
-}
-
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+  
+  .game-over {
+     display: flex;
+  }
+}So when the ball hits the wall and isn’t in range of the paddle, the lives-decrementing animation is unpaused long enough to let it complete one step. Once it reaches zero we hide the play field and display the “Game Over” screen. What’s fascinating about this part of the experiment is that it shows that, using style queries, all properties become indirectly possible to control via animations, even when working with non-animatable properties. And this applies to properties that control whether other animations play. This article touches on why play state deliberately isn’t animatable and could be dangerous to animate, but we know what we are doing, right?Full disclosure: The play state approach did lead to hidden complexity in the choice of duration of the animations. I knew that if I chose too long a duration for the life-decrementing counter, it might not have time to proceed to the next step while the ball was hitting the wall, but if I chose too short a duration, missing the ball once might cause the player to lose more than one life.I made educated guesses of suitable durations for the ball bouncing and life decrementing, and I expected that when working with fixed-duration predictable animations, the life counter would either always work or always fail. I didn’t expect that my first attempt at the implementation intermittently failed to decrement the life counter at the same point in the animation loop. Setting the durations of both these related animations to multiples of eight seems to fix the problem, but why would predetermined animations exhibit unpredictable behavior?Forefeit the game before somebody else takes you out of the frameI have theories as to why the unpredictability of the collision detection seemed to be fixed by setting the ball animation to eight seconds and the lives animation to 80 milliseconds. Again, pushing CSS to its limits forces us to think deeper about how it’s working.CSS appears to suffer from timer drift, meaning if you set a keyframes animation to last for one second, it will sometimes take slightly under or over one second. When there is a different rate of change between the ball-bouncing and life-losing, it would make sense that the potential discrepancy between the two would be pronounced and lead to unpredictable collision detection. When the rate of change in both animations is the same, they would suffer about equally from timer drift, meaning the frames still synchronize predictably. Or at least I’m hoping the chance they don’t becomes negligible.Alex’s 2013 version of Pong uses  to move the ball even though it only moves in 2D. Alex recommends this whenever possible “for efficient animation rendering, offloading processing to the GPU for smoother visual effects.” Doing this may have been an alternative fix if it leads to more precise animation timing. There are tradeoffs so I wasn’t willing to go down that rabbit hole of trying to tune the animation performance in this article — but it could be an interesting focus for future research into CSS collision detection.Maybe style queries take a varying amount of time to kick in, leading to some form of a race condition. It is possible that making the ball-bouncing animation slower made this problem less likely.Maybe the bug remains lurking in the shadows somewhere. What did I expect from a hack I achieved using a magic token from a spooky shopkeeper? Haven’t I seen any eighties movie ever?You finish reading the article, and feel sure that the author’s rationale for his supposed fix for the bug is hogwash. Clearly, Lee has been driven insane by the allure of overpowering new CSS features, whereas you respect the power of CSS, but you also respect its limitations. You sit down to spend a few minutes with the collision detection CodePen to prove it is still broken, but then find other flaws in the collision detection, and you commence work on a fork that will be superior. Hey, speaking of timer drift, how is it suddenly 1 a.m.? Only a crazy person would stay up that late playing with CSS when they have to work the next day. “Madness,” repeats the spooky shopkeeper inside your head, and his laughter echoes somewhere in the night.This looping Pong CSS animation by Manuel Schaller gave me an amazing basis for adding the collision detection. His twitching paddle animations help give the illusion of playing against a computer opponent, so forking his CodePen let me focus on implementing the collision detection rather than reinventing Pong.This author is grateful to the junior testing team, comprised of his seven-year-old and twelve-year-old, who declared the CSS Pong implementation “pretty cool.” They also suggested the green and red flashes to signal collisions and misses.The intro and outro for this article were sponsored by the spooky shopkeeper who sells dangerous CSS tricks. He also sells frozen yoghurt, which he calls .]]></content:encoded></item></channel></rss>
