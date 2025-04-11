@@ -1,220 +1,179 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
-  }
-</style>
-
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
-
-    <!-- Repeat for all properties -->
-  </div>
-</div>
-
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>CSS-Tricks Chronicles XLIII</title><link>https://css-tricks.com/css-tricks-chronicles-xliii/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Fri, 11 Apr 2025 12:39:26 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Normally, I like to publish one of these updates every few months. But seeing as the last one dates back to September of last year, I’m well off that mark and figured it’s high time to put pen to paper. The fact is that a lot is happening around here at CSS-Tricks — and it’s all good stuff.In the last post of 2024, I said that filling the Almanac was a top priority heading into this year. We had recently refreshed the whole dang thing, complete with completely new sections for documenting CSS selectors, at-rules, and functions on top of the sections we already had for properties and pseudo-selectors. The only problem is that those new sections were pretty bare.Well, not only has this team stepped up to produce a bunch of new content for those new sections, but so have you. Together, we’ve published  since the start of 2025. Here they are in all their glory:What’s even better? There are currently fourteen more in the hopper that we’re actively working on. I certainly do not expect us to sustain this sort of pace all year. A lot of work goes into each and every entry. Plus, if all we ever did was write in Almanac, we would never get new articles and tutorials out to you, which is really what we’re all about around here.A lot of podcasts and eventsThose of you who know me know that I’m not the most social person in all the land. Yes, I like hanging out with folks and all that, but I tend to keep my activities to back-of-the-house stuff and prefer to stay out of view.So, that’s why it’s weird for me to call out a few recent podcast and event appearances. It’s not like I do these things all that often, but they are fun and I like to note them, even if its only for posterity.I hosted Smashing Meets Accessibility, a mini online conference that featured three amazing speakers talking about the ins and outs of WCAG conformance, best practices, and incredible personal experiences shaped by disability.I hosted Smashing Meets CSS, another mini conference from the wonderful Smashing Magazine team. I got to hang out with Adam Argyle, Julia Micene, and Miriam Suzanne, all of whom blew my socks off with their presentations and panel discussion on what’s new and possible in modern CSS.I’m co-hosting a brand-new podcast with Brad Frost called ! We recorded the first episode live in front of an audience that was allowed to speak up and participate in the conversation. The whole idea of the show is that we talk  about the things we tend to talk  about in our work as web designers and developers — the touchy-feely side of what we do. We covered so many heady topics, from desperation during layoffs to rediscovering purpose in your work.I was a guest on the  podcast, joining a panel of other front-enders to discuss angst in the face of recent technological developments. The speed and constant drive to market new technologies is dizzying and, to me at least, off-putting to the extent that I’ve questioned my entire place in it as a developer. What a blast getting to return to the podcast a second time and talk shop with a bunch of the most thoughtful, insightful people you’ll ever hear. I’ll share that when it’s published.A new guide on styling countersWe published it just the other week! I’ll be honest and say that a complete guide about styling counters in CSS was not the first thing that came to my mind when we started planning new ideas, but I’ll be darned if Juan didn’t demonstrate just how big a topic it is. There are so many considerations when it comes to styling counters — design! accessibility! semantics! — and the number of tools we have in CSS to style them is mind-boggling, including two functions that look very similar but have vastly different capabilities for creating custom counters —  and  (which are also freshly published in the Almanac).At the end of last year, I said I hoped to publish 1-2 new guides, and here we are in the first quarter of 2025 with our first one out in the wild! That gives me hope that we’ll be able to get another comprehensive guide out before the end of the year.I think the most exciting update of all is getting to recognize the folks who have published new articles with us since the last update. Please help me extend a huge round of applause to all the faces who have rolled up their sleeves and shared their knowledge with us.And, of course, nothing on this site would be possible without ongoing help from Juan Diego Rodriguez and Ryan Trimble. Those two not only do a lot of heavy lifting to keep the content machine fed, but they are also just two wonderful people who make my job a lot more fun and enjoyable. Seriously, guys, you mean a lot to this site and me!]]></content:encoded></item><item><title>Comparing Tauri and Electron</title><link>https://javascriptweekly.com/issues/731</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[There's speculation that the npm registry may have wiped all access tokens. If you're having problems, the status update recommends creating new tokens while they attempt to restore them.p5.js 2.0 looks like it'll be with us soon – its eighth beta has just landed. The release notes for beta 2 give an extensive idea of what's coming.]]></content:encoded></item><item><title>Default styles for h1 elements are changing</title><link>https://developer.mozilla.org/en-US/blog/h1-element-styles/</link><author>simon-pieters</author><category>dev</category><category>official</category><category>frontend</category><enclosure url="https://developer.mozilla.org/en-US/blog/h1-element-styles/featured.png" length="" type=""/><pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate><source url="https://developer.mozilla.org/en-US/blog/">MDN Blog</source><content:encoded><![CDATA[Browsers are starting to roll out changes in default UA styles for nested section headings. This post describes the incoming changes, how to identify if it's an issue on your websites, and hints for conformant and better-structured pages.
+]]></content:encoded></item><item><title>Tailwind’s @apply Feature is Better Than it Sounds</title><link>https://css-tricks.com/tailwinds-apply-feature-is-better-than-it-sounds/</link><author>Zell Liew</author><category>frontend</category><pubDate>Thu, 10 Apr 2025 12:39:43 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[By this point, it’s not a secret to most people that I like Tailwind.But, unknown to many people (who often jump to conclusions when you mention Tailwind), I don’t like vanilla Tailwind. In fact, I find most of it horrible and I shall refrain from saying further unkind words about it.But I recognize and see that Tailwind’s methodology has merits — lots of them, in fact — and they go a long way to making your styles more maintainable and performant.Today, I want to explore one of these merit-producing features that has been  undersold — Tailwind’s  feature.Tailwind’s  features lets you “apply” (or simply put, copy-and-paste) a Tailwind utility into your CSS.Most of the time, people showcase Tailwind’s  feature with one of Tailwind’s single-property utilities (which changes a single CSS declaration). When showcased this way,  doesn’t sound promising at all. It sounds downright stupid. So obviously, nobody wants to use it./* Input */
+.selector {
+  @apply p-4;
 }
 
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+/* Output */
+.selector {
+  padding: 1rem;
+}To make it worse, Adam Wathan recommends against using , so the uptake couldn’t be worse.Personally, I think Tailwind’s  feature is better than described.Tailwind’s  is like Sass’s If you have been around during the time where Sass is the dominant CSS processing tool, you’ve probably heard of Sass mixins. They are blocks of code that you can make — in advance — to copy-paste into the rest of your code.To create a mixin, you use To use a mixin, you use // Defining the mixin
+@mixin some-mixin() {
+  color: red; 
+  background: blue; 
 }
 
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
-
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
+// Using the mixin
+.selector {
+  @include some-mixin(); 
 }
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
+/* Output */
+.selector {
+  color: red; 
+  background: blue; 
+}Tailwind’s  feature works the same way. You can define Tailwind utilities in advance and use them later in your code./* Defining the utility */
+@utility some-utility {
+  color: red; 
+  background: blue; 
 }
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+/* Applying the utility */
+.selector {
+  @apply some-utility; 
+}
+
+/* Output */
+.selector {
+  color: red; 
+  background: blue; 
+}Tailwind utilities are much better than Sass mixinsTailwind’s utilities can be used directly in the HTML, so you don’t have to write a CSS rule for it to work.@utility some-utility {
+  color: red; 
+  background: blue; 
+}<div class="some-utility">...</div> On the contrary, for Sass mixins, you need to create an extra selector to house your  before using them in the HTML. That’s one extra step. Many of these extra steps add up to a lot.@mixin some-mixin() {
+  color: red; 
+  background: blue; 
+}
+
+.selector {
+  @include some-mixin(); 
+}
+
+/* Output */
+.selector {
+  color: red; 
+  background: blue; 
+}<div class="selector">...</div>Tailwind’s utilities can also be used with their responsive variants. This unlocks media queries straight in the HTML and can be a superpower for creating responsive layouts.<div class="utility1 md:utility2">…</div> A simple and practical exampleOne of my favorite — and most easily understood — examples of all time is a combination of two utilities that I’ve built for Splendid Layouts (a part of Splendid Labz):: makes a vertical layout: makes a horizontal layoutDefining these two utilities is easy.For , we can use flexbox with  set to .For , we use flexbox with  set to .@utility horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+@utility vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}After defining these utilities, we can use them directly inside the HTML. So, if we want to create a vertical layout on mobile and a horizontal one on tablet or desktop, we can use the following classes:<div class="vertical sm:horizontal">...</div>For those who are new to Tailwind,  here is a breakpoint variant that tells Tailwind to activate a class when it goes beyond a certain breakpoint. By default,  is set to , so the above HTML produces a vertical layout on mobile, then switches to a horizontal layout at .If you prefer traditional CSS over composing classes like the example above, you can treat  like Sass  and use them directly in your CSS.<div class="your-layout">...</div> .your-layout {
+  @apply vertical; 
+
+  @media (width >= 640px) {
+    @apply horizontal;
+  }
+}The beautiful part about both of these approaches is you can immediately see what’s happening with your layout — in plain English — without parsing code through a CSS lens. This means faster recognition and more maintainable code in the long run.Sass mixins are more powerful than Tailwind utilities because:They let you use multiple variables.They let you use other Sass features like  and  loops.@mixin avatar($size, $circle: false) {
+  width: $size;
+  height: $size;
+
+  @if $circle {
+    border-radius: math.div($size, 2);
+  }
+}On the other hand, Tailwind utilities don’t have these powers. At the very maximum, Tailwind can let you take in one variable through its functional utilities./* Tailwind Functional Utility */
+@utility tab-* { 
+  tab-size: --value(--tab-size-*);
+}Fortunately, we’re not affected by this “lack of power” much because we can take advantage of all modern CSS improvements — including CSS variables. This gives you a ton of room to create very useful utilities.Let’s go through another exampleA second example I often like to showcase is the  utility that lets you create grids with CSS Grid easily.We can declare a simple example here:@utility grid-simple {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: var(--gap, 1rem);
+}By doing this, we have effectively created a reusable CSS grid (and we no longer have to manually declare  everywhere).After we have defined this utility, we can use Tailwind’s arbitrary properties to adjust the number of columns on the fly.<div class="grid-simple [--cols:3]"> 
+  <div class="item">...</div>
+  <div class="item">...</div>
+  <div class="item">...</div>
+</div>To make the grid responsive, we can add Tailwind’s responsive variants with arbitrary properties so we only set  on a larger breakpoint.<div class="grid-simple sm:[--cols:3]"> 
+  <div class="item">...</div>
+  <div class="item">...</div>
+  <div class="item">...</div>
+</div>This makes your layouts very declarative. You can immediately tell what’s going on when you read the HTML.Now, on the other hand, if you’re uncomfortable with too much Tailwind magic, you can always use  to copy-paste the utility into your CSS. This way, you don’t have to bother writing  and  declarations every time you need a grid that  can create..your-layout {
+  @apply grid-simple; 
+  @media (width >= 640px) {
+    --cols: 3;
+  }
+}<div class="your-layout"> ... </div>By the way, using  this way is surprisingly useful for creating complex layouts! But that seems out of scope for this article, so I’ll be happy to show you an example another day.Tailwind’s utilities are very powerful by themselves, but they’re even more powerful if you allow yourself to use  (and allow yourself to detach from traditional Tailwind advice). By doing this, you gain access to Tailwind as a tool instead of it being a dogmatic approach.To make Tailwind’s utilities even more powerful, you might want to consider building utilities that can help you create layouts and nice visual effects quickly and easily.I’ve built a handful of these utilities for Splendid Labz, and I’m happy to share them with you if you’re interested! Just check out Splendid Layouts to see a subset of the utilities I’ve prepared.By the way, the utilities I showed you above are watered-down versions of the actual ones I’m using in Splendid Labz.One more note: When writing this, Splendid Layouts work with Tailwind 3, not Tailwind 4. I’m working on a release soon, so sign up for updates if you’re interested!You can probably tell by now that I’m using Tailwind in an unorthodox manner — one that CSS-loving people will likely enjoy. I’m writing up my detailed methodology where I share everything I know about making Tailwind work synergistically with CSS. If you enjoyed this post, you might enjoy . It’s still in pre-order mode, so get $20 off for a limited time.]]></content:encoded></item><item><title>Cascading Layouts: A Workshop on Resilient CSS Layouts</title><link>https://css-tricks.com/cascading-layouts-a-workshop-on-resilient-css-layouts/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 10 Apr 2025 11:26:00 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[If I were starting with CSS today for the very first time, I would first want to spend time understanding writing modes because that’s a great place to wrap your head around direction and document flow. But right after that, and even more excitedly so, I would jump right into  and get a firm grasp on layout strategies.And where would I learn that? There are lots of great resources out there. I mean, I have a full course called  that gets into all that. I’d say you’d do yourself justice getting that from Andy Bell’s  course as well.But, hey, here’s a brand new way to bone up on layout: Miriam Suzanne is running a workshop later this month.  is all about building more resilient and maintainable web layouts using modern CSS, without relying on third-party tools. Remember, Miriam works on CSS specifications, is a core contributor to Sass, and is just plain an all-around great educator. There are few, if any, who are more qualified to cover the ins and outs of CSS layout, and I can tell you that her work really helped inspire and inform the content in my course. The workshop is online, runs April 28-30, and is a whopping $ 100 off if you register by April 12.Just a taste of what’s included:]]></content:encoded></item><item><title>CSS Carousels</title><link>https://css-tricks.com/css-carousels/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 9 Apr 2025 13:00:24 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[ Buttons that the browser provides, as in literal  elements, that scroll the carousel content 85% of the area when clicked. The little dots that act as anchored links, as in literal  elements that scroll to a specific carousel item when clicked.<ul class="carousel">
+  <li>...</li>
+  <li>...</li>
+  <li>...</li>
+  <li>...</li>
+  <li>...</li>
+</ul>First, let’s set these up in a CSS auto grid that displays the list items in a single line:.carousel {
+  display: grid;
+  grid-auto-flow: column;
+}We can tailor this so that each list item takes up a specific amount of space, say , and insert a  between them:.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 40%;
+  gap: 2rem;
+}This gives us a nice scrolling area to advance through the list items by moving left and right. We can use CSS Scroll Snapping to ensure that scrolling stops on each item in the center rather than scrolling right past them..carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 40%;
+  gap: 2rem;
+
+  scroll-snap-type: x mandatory;
+
+  > li {
+    scroll-snap-align: center;
+  }
+}Kevin adds a little more flourish to the  so that it is easier to see what’s going on. Specifically, he adds a  to the entire thing as well as  for internal spacing.So far, what we have is a super simple slider of sorts where we can either scroll through items horizontally or click the left and right arrows in the scroller.We can add scroll buttons to the mix. We get two buttons, one to navigate one direction and one to navigate the other direction, which in this case is left and right, respectively. As you might expect, we get two new pseudo-elements for enabling and styling those buttons:Interestingly enough, if you crack open DevTools and inspect the scroll buttons, they are actually exposed with logical terms instead, ::scroll-button(inline-start) and ::scroll-button(inline-end).And both of those support the CSS  property, which we use to insert a label into the buttons. Let’s keep things simple and stick with “Left” and “Right” as our labels for now:.carousel::scroll-button(left) {
+  content: "Left";
+}
+.carousel::scroll-button(right) {
+  content: "Right";
+}Now we have two buttons above the carousel. Clicking them either advances the carousel left or right by 85%. Why 85%? I don’t know. And neither does Kevin. That’s just what it says in the specification. I’m sure there’s a good reason for it and we’ll get more light shed on it at some point.But clicking the buttons in this specific example will advance the scroll only one list item at a time because we’ve set scroll snapping on it to stop at each item. So, even though the buttons want to advance by 85% of the scrolling area, we’re telling it to stop at each item.Remember, this is only supported in Chrome at the time of writing:We can select both buttons together in CSS, like this:.carousel::scroll-button(left),
+.carousel::scroll-button(right) {
+  /* Styles */
+}Or we can use the Universal Selector:.carousel::scroll-button(*) {
+  /* Styles */
+}And we can even use newer CSS Anchor Positioning to set the left button on the carousel’s left side and the right button on the carousel’s right side:.carousel {
+  /* ... */
+  anchor-name: --carousel; /* define the anchor */
+}
+
+.carousel::scroll-button(*) {
+  position: fixed; /* set containment on the target */
+  position-anchor: --carousel; /* set the anchor */
+}
+
+.carousel::scroll-button(left) {
+  content: "Left";
+  position-area: center left;
+}
+.carousel::scroll-button(right) {
+  content: "Right";
+  position-area: center right;
+}Notice what happens when navigating all the way to the left or right of the carousel. The buttons are disabled, indicating that you have reached the end of the scrolling area. Super neat! That’s something that is normally in JavaScript territory, but we’re getting it for free.Let’s work on the scroll markers, or those little dots that sit below the carousel’s content. Each one is an  element anchored to a specific list item in the carousel so that, when clicked, you get scrolled directly to that item.We get a new pseudo-element for the entire group of markers called  that we can use to style and position the container. In this case, let’s set Flexbox on the group so that we can display them on a single line and place gaps between them in the center of the carousel’s inline size:.carousel::scroll-marker-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}We also get a new  property that lets us position the group either above () the carousel or below () it:.carousel {
+  /* ... */
+  scroll-marker-group: after; /* displayed below the content */
+}We can style the markers themselves with the new  pseudo-element:.carousel {
+  /* ... */
+
+  > li::scroll-marker {
+    content: "";
+    aspect-ratio: 1;
+    border: 2px solid CanvasText;
+    border-radius: 100%;
+    width: 20px;
+  }
+}When clicking on a marker, it becomes the “active” item of the bunch, and we get to select and style it with the  pseudo-class:li::scroll-marker:target-current {
+  background: CanvasText;
+}Take a moment to click around the markers. Then take a moment using your keyboard and appreciate that we can all of the benefits of focus states as well as the ability to cycle through the carousel items when reaching the end of the markers. It’s amazing what we’re getting for free in terms of user experience and accessibility.We can further style the markers when they are hovered or in focus:li::scroll-marker:hover,
+li::scroll-marker:focus-visible {
+  background: LinkText;
+}And we can “animate” the scrolling effect by setting  on the scroll snapping. Adam smartly applies it when the user’s motion preferences allow it:.carousel {
+  /* ... */
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}Buuuuut that seems to break scroll snapping a bit because the scroll buttons are attempting to slide things over by 85% of the scrolling space. Kevin had to fiddle with his  sizing to get things just right, but showed how Adam’s example took a different sizing approach. It’s a matter of fussing with things to get them just right.This is just a super early look at CSS Carousels. Remember that this is only supported in Chrome 135+ at the time I’m writing this, and it’s purely experimental. So, play around with it, get familiar with the concepts, and then be open-minded to changes in the future as the CSS Overflow Level 5 specification is updated and other browsers begin building support.]]></content:encoded></item><item><title>React for Two Computers</title><link>https://overreacted.io/react-for-two-computers/</link><author></author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 9 Apr 2025 00:00:00 +0000</pubDate><source url="https://overreacted.io/">Dan Abramov</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>This Week In React #229: React Conf, React Router, Next.js Adapters, Redwood, Apollo, Fastify, Vite, Waku | RN v0.79, Deep Imports, Builder Bob, Fingerprinting | TC39, Tailwind, Rspack, Rstest, Turborepo, Bun</title><link>https://thisweekinreact.com/newsletter/229</link><author></author><category>frontend</category><pubDate>Wed, 9 Apr 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week, I'm excited to introduce 2 new contributors to help me with the newsletter! here – you may already know us from libraries like Reanimated or Gesture Handler. We're happy to be among the authors of the This Week in React newsletter!We were about to call it a fairly calm week… until React Conf 2025 was officially announced and React Native 0.79 dropped with Swift-compatible native modules for iOS, faster app startup on Android, and many more. Let's dive in!As always, thanks for supporting us on your favorite platform:You didn’t spend years mastering React just to build CRUD apps on repeat. Yet here you are—facing another request for an admin panel and questioning your life choices.We've been there ourselves. That’s why we built —an open-source framework that handles the boring parts (data fetching, forms, auth, permissions…) so you can focus on the real dev work.Powered by Material UI, react-hook-form, react-router, react-query, and TypeScript, it lets you build admins on top of any REST/GraphQL API—fast.The React conference is happening on October 7-8, 2025 in Henderson, Nevada, 🇺🇸 US. It’s where the React & React Native team shares official announcements live.The only way to attend the conference in person is to win a ticket lottery that lets you purchase up to 2 tickets. Fortunately, if you’re not one of the lucky ones, the event will be livestreamed for free.With Microsoft AppCenter shutdown, choose the reliable and robust alternative that doesn't compromise on security, privacy or performance.AppZung CodePush delivers:✅ Seamless transition: One-command migration from AppCenter✅ Enterprise-grade security: Code signing, SAML SSO, IP allowlisting and more✅ Performance at scale: High-availability architecture with fast global CDN✅ Privacy-first approach: EU-based infrastructure with built-in GDPR compliance features✅ Dedicated support: Priority handling and satisfied customersOur platform is built by developers managing high-traffic applications who understand what's at stake when pushing critical updates.Recently, the React Native core team switched to more frequent release cycles, so this is a smaller release, but nonetheless exciting in terms of performance improvements. Here are the highlights:Metro: 3x faster cold startup and package exports supportJavaScriptCore (JSC) moving to a Community PackageiOS: Swift-Compatible Native Modules registrationAndroid: Faster app startup thanks to skipping the JS bundle compressionRemoval of Remote JS Debugging]]></content:encoded></item><item><title>Feeling Like I Have No Release: A Journey Towards Sane Deployments</title><link>https://css-tricks.com/feeling-like-i-have-no-release-a-journey-towards-sane-deployments/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 7 Apr 2025 14:41:53 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[When I was young and dinosaurs walked the earth, I worked on a software team that developed a web-based product for two years before ever releasing it. I don’t just mean we didn’t make it publicly available; we didn’t deploy it anywhere except for a test machine in the office, accessed by two internal testers, and this required a change to each tester’s hosts file. You don’t have to be an agile evangelist to spot the red flag. There’s “release early, release often,” which seemed revolutionary the first time I heard it after living under a waterfall for years, or there’s building so much while waiting so long to deploy that you guarantee weird surprises in a realistic deployment, let alone when you get feedback from real users. I’m told the first deployment experience to a web farm was very special.A tale of a dodgy deploymentBeing a junior, I was spared being involved in the first deployment. But towards the end of the first three-month cycle of fixes, the team leader asked me, “Would you be available on Tuesday at 2 a.m. to come to the office and do a deployment?”“Yep, sure, no worries.” I went home thinking what a funny dude my team leader was.So on Tuesday at 9 a.m., I show up and say good morning to the team leader and the architect, who sit together staring at one computer. I sit down at my dev machine and start typing.“Man, what happened?” the team leader says over the partition. “You said you’d be here at 2 a.m.”I look at him and see he is not smiling. I say, ”Oh. I thought you were joking.”“I was not joking, and we have a massive problem with the deployment.”I was junior and did not have the combined forty years of engineering experience of the team leader and architect, but what I had that they lacked was a well-rested brain, so I found the problem rather quickly: It was a code change the dev manager had made to the way we handled cookies, which didn’t show a problem on the internal test server but broke the world on the real web servers. Perhaps my finding the issue was the only thing that saved me from getting a stern lecture. By the time I left years later, it was just a funny story the dev manager shared in my farewell speech, along with nice compliments about what I had achieved for the company — I also accepted an offer to work for the company again later.Breaking news: Human beings need sleepI am sure the two seniors would have been capable of spotting the problem under different circumstances. They had a lot working against them: Sleep deprivation, together with the miscommunication about who would be present, would’ve contributed to feelings of panic, which the outage would’ve exacerbated after they powered through and deployed without me. More importantly, they didn’t know whether the problem was in the new code or human error in their manual deployment process of copying zipped binaries and website files to multiple servers, manually updating config files, comparing and updating database schemas — all in the wee hours of the morning.They were sleepily searching for a needle in a haystack of their own making. The haystack wouldn’t have existed if they had a proven automated deployment process, and if they could be sure the problem could only reside in the code they deployed. There was no reason everything they were doing couldn’t be scripted. They could’ve woken up at 6 a.m. instead of 2 a.m. to verify the automated release of the website before shifting traffic to it and fix any problems that became evident in their release without disrupting real users. The company would get a more stable website and the expensive developers would have more time to focus on developing.If you manually deploy overnight, and then drive, you’re a bloody idiotThe 2 a.m. deployments might seem funny if it wasn’t your night to attend and if you have a dark sense of humor. In the subsequent years, I attended many 2 a.m. deployments to atone for the one I slept through. The company paid for breakfast on those days, and if we proved the deployment was working, we could leave for the day and catch up on sleep, assuming we survived the drive home and didn’t end up sleeping forever.The manual deployment checklist was perpetually incomplete and out-of-date, yet the process was never blamed for snafus on deployment days. In reality, sometimes it was a direct consequence of the fallibility of manually working from an inaccurate checklist. Sometimes manual deployment wasn’t directly the culprit, but it made pinpointing the problem or deciding whether to roll back unnecessarily challenging. And you knew rolling back would mean forgoing your sleep again the next day so you’d have a mounting sleep debt working against you.I learned a lot from that team and the complex features I had the opportunity to build. But the deployment process was a step backward from my internship doing Windows programming because in that job I had to write installers so my code would work on user machines, which by nature of the task, I didn’t have access to. When web development removes that inherent limitation, it’s like a devil on your shoulder tempting you to do what seems easy in the moment and update production from your dev machine. You know you want to, especially when the full deployment process is hard and people want a fix straightaway. This is why if you automate deployments, you want to lock things down so that the automated process is the only way to deploy changes.As I became more senior and had more say in how these processes happened at my workplace, I started researching — and I found it easy to relate to the shots taken at manual deployers, such as this presentation titled “Octopus Deploy and how to stop deploying like an idiot” and Octopus Deploy founder Paul Stovell’s sentiments on how to deploy database updates: “Your database isn’t in source control? You don’t deserve one. Go use Excel.” This approach to giving developers a kick in their complacency reminds me of the long-running anti-drunk driving ads here in Australia with the slogan “If you drink then drive, you’re a bloody idiot,” which scared people straight by insulting them for destructive life choices.In the “Stop deploying like an idiot” talk, Damian Brady insults a hypothetical deployment manager at Acme Corp named Frank, who keeps being a hero by introducing risk and wasted time to a process that could be automated using Octopus, which would never make stupid mistakes like overwriting the config file.“Frank’s pretty proud of his process in general,” says Damian. “Frank’s an idiot.”Why are people like this?Frankly, some of the Franks I have worked with were something worse than idiots. Comedian Jim Jeffries has a bit in which he says he’d take a nice idiot over a clever bastard. Frank’s a cunning bastard wolf in idiotic sheep’s clothing — the demographic of people who work in software shows above average IQ, and a person appointed “deployment manager” will have googled the options to make this task easier, but he chose not to use them. The thing is, Frank gets to seem important, make other devs look and feel stupid when they try to follow his process while he’s on leave, and even when he is working he gets to take overseas trips to hang with clients because he is the only one who can get the product working on a new server. Companies must be careful which behaviors they reward, and Conway’s law applies to deployment processes.What I learned by being forced to do deployments manuallyI guess there is an argument for the team-building experiences in those 2 a.m. deployments, much like deployments in the military sense of the word may teach the troops some valuable life lessons, even if the purported reason for the battle isn’t the real reason, and the costs turn out to be higher than anyone expects.It reminds me of a tour I had the good fortune to take in 2023 of the Adobe San Jose offices, in which a “Photoshop floor” includes time capsule conference rooms representing different periods in Photoshop’s history, including a 90’s room with a working Macintosh Classic running Photoshop 1.0. The past is an interesting and instructive place to visit but not somewhere you’d want to live in 2025.Even so, my experience of Flintsones-style deployments gave me an appreciation for the ways a tool like Octopus Deploy automates everything I was forced to do manually in the past, which kept my motivation up when I was working through the teething problems once I was tasked with transforming a manual deployment process into an automated process. This appreciation for the value proposition of a tool like Octopus Deploy was why I later jumped at the opportunity to work for Octopus in 2021.What I learned working for Octopus DeployThe first thing I noticed was how friendly the devs were and the smoothness of the onboarding process, with only one small manual change to make the code run correctly in Docker on my dev box. The second thing I noticed was that this wasn’t heaven, and there were flaky integration tests, slow builds, and cake file output that hid the informative build errors. In fairness, at the time Octopus was in a period of learning how to upscale. There was a whole project I eventually joined to performance-tune the integration tests and Octopus itself. As an Octopus user, the product had seemed as close to magic as we were likely to find, compared to the hell we had to go through without a proper deployment tool. Yet there’s something heartening about knowing nobody has a flawless codebase, and even Octopus Deploy has some smelly code they have to deal with and suboptimal deployments of some stuff.Once I made my peace with the fact that there’s no silver bullet that magically and perfectly solves any aspect of software, including deployments, my hot take is that deploying like an idiot comes down to a mismatch between the tools you use to deploy and the reward in complexity reduced versus complexity added. Therefore, one example of deploying like an idiot is the story I opened with, in which team members routinely drove to the office at 2 a.m. to manually deploy a complicated website involving database changes, background processes, web farms, and SLAs. But another example of deploying like an idiot might be a solo developer with a side project who sets up Azure Devops to push to Octopus Deploy and pays more than necessary in money and cognitive load. Indeed, Octopus is a deceptively complex tool that can automate anything, not only deployments, but the complexity comes at the price of a learning curve and the risk of decision fatigue.For instance, when I used my “sharpening time” (the Octopus term for side-project time) to explore ways to deploy a JavaScript library, I found at least two different ways to do it in Octopus, depending on whether it’s acceptable to automate upgrading all your consumers to the latest version of your library or whether you need more control of versioning per consumer. Sidenote: the Angry Birds Octopus parody that Octopus marketing created to go with my “consumers of your JavaScript library as tenants” article was a highlight of my time at Octopus — I wish we could have made it playable like a Google Doodle.Nowadays I see automation as a spectrum for how automatic and sophisticated you need things to be, somewhat separate from the choice of tools. The challenge is locating that sweet spot, where automation makes your life easier versus the cost of licensing fees and the time and energy you need to devote to working on the deployment process. Octopus Deploy might be at one end of the spectrum of automated deployments when you need lots of control over a complicated automatic process. On the other end of the spectrum, the guy who runs Can I Use found that adopting git-ftp was a life upgrade from manually copying the modified files to his web server while keeping his process simple and not spending a lot of energy on more sophisticated deployment systems. Somewhere in the middle reside things like Bitbucket Pipelines or GitHub Actions, which are more automated and sophisticated than just git-ftp from your dev machine, but less complicated than Octopus together with TeamCity, which could be overkill on a simple project.The complexity of deployment might be something to consider when defining your architecture, similar to how planning poker can trigger a business to rethink the value of certain features once they obtain holistic feedback from the team on the overall cost. For instance, you might assume you need a database, but when you factor in the complexity it adds to roll-outs, you may be motivated to rethink whether your use case truly needs a database.What about serverless? Does serverless solve our problems given it’s supposed to eliminate the need to worry about how the server works?Reminder: Serverless isn’t serverlessIt should be uncontroversial to say that “serverless” is a misnomer, but how much this inaccuracy matters is debatable. I’ll give this analogy for why I think the name “serverless” is a problem: Early cars had a right to call themselves “horseless carriages” because they were a paradigm shift that meant your carriage could move without a horse. “Driverless cars” shouldn’t be called that, because they don’t remove the need for a driver; it’s just that the driver is an AI. “Self-driving car” is therefore a better name. Self-driving cars often work well, but completely ignoring the limitations of how they work can be fatal. When you unpack the term “serverless,” it’s like a purportedly horseless carriage still pulled by horse — but the driver claims his feeding and handling of the horse will be managed so well, the carriage will be so insulated from neighing and horse flatulence, passengers will feel as if the horse doesn’t exist. My counterargument is that the reality of the horse is bound to affect the passenger experience sooner or later.That serverless experience reminds me of a scene in the science fiction novel Rainbows End in which the curmudgeonly main character cuts open a car that isn’t designed to be serviced, only to find that all the components inside are labeled “No user-serviceable parts within.” He’s assured that even if he could cut open those parts, the car is “Russian dolls all the way down.” One of the other characters asks him: “Who’d want to change them once they’re made? Just trash ’em if they’re not working like you want.”I don’t want to seem like a curmudgeon — but my point is that while something like Firebase offers many conveniences and can simplify deployment and configuration, it can also move the problem to knowing which services are appropriate to pay extra for. And you may find your options are limited when things go wrong with a deployment or any other part of web development.Since I love self-referential twist endings, I’ll point out that even publishing an article like this has a variety of possible “deployment processes.” For instance, Octopus uses Jekyll for their blog. You make a branch with the markdown of your proposed blog post, and then marketing proposes changes before setting a publication date and merging. The relevant automated process will handle publication from there. This process has the advantage of using familiar tools for collaborating on changes to a file — but it might not feel approachable to teams not comfortable with Git, and it also might not be immediately apparent how to preview the final article as it will appear on the website.On the other hand, when I create an article for CSS-Tricks, I use Dropbox Paper to create my initial draft, then send it to Geoff Graham, who makes edits, for which I get notifications. Once we have confirmed via email that we’re happy with the article, he manually ports it to Markdown in WordPress, then sends me a link to a pre-live version on the site to check before the article is scheduled for publication. It’s a manual process, so I sometimes find problems even in this “release” of static content collaborated by only two people — but you gotta weigh how much risk there is of mistakes against how much value there would be in fully automating the process. With anything you have to publish on the web, keep searching for that sweet spot of elegance, risk, and the reward-to-effort ratio.]]></content:encoded></item></channel></rss>
