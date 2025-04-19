@@ -1,220 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>“Pretty” is in the eye of the beholder</title><link>https://css-tricks.com/pretty-is-in-the-eye-of-the-beholder/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Fri, 18 Apr 2025 12:12:35 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Hey, did you see the post Jen Simmons published about WebKit’s  implementation? It was added to Safari Technology Preview and can be tested now, as in, like, today. Slap this in a stylesheet and your paragraphs get a nice little makeover that improves the ragging, reduces hyphenation, eliminates typographic orphans at the end of the last line, and generally avoids large typographic rivers as a result. The first visual in the post tells the full story, showing how each of these is handled.That’s a lot of heavy lifting for a single value! And according to Jen, this is vastly different from Chromium’s implementation of the .According to an article by the Chrome team, Chromium only makes adjustments to the last four lines of a paragraph. It’s focused on preventing short last lines. It also adjusts hyphenation if consecutive hyphenated lines appear at the end of a paragraph.Jen suggests that performance concerns are the reason for the difference. It does sound like the  value does a lot of work, and you might imagine that would have a cumulative effect when we’re talking about long-form content where we’re handling hundreds, if not thousands, of lines of text. If it sounds like Safari cares less about performance, that’s not the case, as their approach is capable of handling the load.One thing to know as a developer, the performance of  is not affected by how many elements on the page it’s applied to. Perf concerns emerge as the  algorithm takes more and more lines into consideration as it calculates what to do. In WebKit-based browsers or apps, your text element would need to be many hundreds or thousands of lines long to see a performance hit — and that kind of content is unusual on the web. If your content is broken up into typical-length paragraphs, then you have no reason to worry. Use  as much as you want, and rely on our browser engineers to ensure your users will not experience any downsides.Great, carry on! But now you know that two major browsers have competing implementations of the same feature. I’ve been unclear on the terminology of  since it was specced, and now it truly seems that what is considered “pretty” really is in the eye of the beholder. And if you’re hoping to choose a side, don’t, because the specification is intentionally unopinionated in this situation, as it says (emphasis added):The user agent may among other things attempt to avoid excessively short last lines… but it should also improve the layout in additional ways. The precise set of improvements is user agent dependent, and may include things such as: reducing the variation in length between lines; avoiding typographic rivers; prioritizing different classes of soft wrap opportunities, hyphenation opportunities, or justification opportunities; avoiding hyphenation on too many consecutive lines.So, there you have it. One new feature. Two different approaches. Enjoy your new typographic powers. 💪]]></content:encoded></item><item><title>TC39: No to records and tuples, yes to enums</title><link>https://javascriptweekly.com/issues/732</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[Dan Abramov is back with JSX Over The Wire, a fantastic meditation on the evolution of passing data and behavior between servers and clients and how things could get even better.]]></content:encoded></item><item><title>So, You Want to Give Up CSS Pre- and Post-Processors…</title><link>https://css-tricks.com/so-you-want-to-give-up-css-pre-and-post-processors/</link><author>Zell Liew</author><category>frontend</category><pubDate>Thu, 17 Apr 2025 12:38:05 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[There was once upon a time when native CSS lacked many essential features, leaving developers to come up with all sorts of ways to make CSS easier to write over the years.These ways can mostly be categorized into two groups:Pre-processors include tools like Sass, Less, and Stylus. Like what the category’s name suggests, these tools let you write CSS in their syntax before compiling your code into valid CSS.Post-processors work the other way — you write non-valid CSS syntax into a CSS file, then post-processors will change those values into valid CSS.There are two major post-processors today:PostCSS is the largest kid on the block while Lightning CSS is a new and noteworthy one. We’ll talk about them both in a bit.I think post-processors have won the compiling gamePost-processors have always been on the verge of winning since PostCSS has always been a necessary tool in the toolchain.The most obvious (and most useful) PostCSS plugin for a long time is Autoprefixer — it creates vendor prefixes for you so you don’t have to deal with them./* Input */
+.selector {
+  transform: /* ... */; 
+}
+
+.selector {
+  -webkit-transform: /* ... */;
+  transform: /* ... */;
+}Arguably, we don’t need Autoprefixer much today because browsers are more interopable, but nobody wants to go without Autoprefixer because it eliminates our worries about vendor prefixing.What has really tilted the balance towards post-processors includes:Native CSS gaining essential featuresTailwind removing support for pre-processorsLet me expand on each of these.Native CSS gaining essential featuresCSS pre-processors existed in the first place because native CSS lacked features that were critical for most developers, including:Allowing users to break CSS into multiple files without additional fetch requestsConditionals like  and Native CSS has progressed a lot over the years. It has gained great browser support for the first two features:With just these two features, I suspect a majority of CSS users won’t even need to fire up pre-processors or post-processors. What’s more, The  function is coming to CSS in the future too.But, for the rest of us who needs to make maintenance and loading performance a priority, we still need the third feature — the ability to break CSS into multiple files. This can be done with Sass’s  feature or PostCSS’s  feature (provided by the  plugin). also contains plugins that can help you create conditionals, mixins, and functions should you need them.This brings us to Tailwind.Tailwind removing support for pre-processorsTailwind 4 has officially removed support for pre-processors. From Tailwind’s documentation:Tailwind CSS v4.0 is a full-featured CSS build tool designed for a specific workflow, and is not designed to be used with CSS pre-processors like Sass, Less, or Stylus. Think of Tailwind CSS itself as your pre-processor — you shouldn’t use Tailwind with Sass for the same reason you wouldn’t use Sass with Stylus. Since Tailwind is designed for modern browsers, you actually don’t need a pre-processor for things like nesting or variables, and Tailwind itself will do things like bundle your imports and add vendor prefixes.If you included Tailwind 4 via its most direct installation method, you won’t be able to use pre-processors with Tailwind.That’s because this one import statement makes Tailwind incompatible with Sass, Less, and Stylus.But, (fortunately), Sass lets you import CSS files if the imported file contains the  extension. So, if you wish to use Tailwind with Sass, you can. But it’s just going to be a little bit wordier.@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);Personally, I dislike Tailwind’s preflight styles so I exclude them from my files.@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);Either way, many people won’t know you can continue to use pre-processors with Tailwind. Because of this, I suspect pre-processors will get less popular as Tailwind gains more momentum.Now, beneath Tailwind is a CSS post-processor called Lightning CSS, so this brings us to talking about that.Lightning CSS is a post-processor can do many things that a modern developer needs — so it replaces most of the PostCSS tool chain including:Besides having a decent set of built-in features, it wins over PostCSS because it’s incredibly fast.Lightning CSS is over 100 times faster than comparable JavaScript-based tools. It can minify over 2.7 million lines of code per second on a single thread.Speed helps Lightning CSS win since many developers are speed junkies who don’t mind switching tools to achieve reduced compile times. But, Lightning CSS also wins because it has great distribution.It can be used directly as a Vite plugin (that many frameworks support). Ryan Trimble has a step-by-step article on setting it up with Vite if you need help.// vite.config.mjs
+export default {
+  css: {
+    transformer: 'lightningcss'
+  },
+  build: {
+    cssMinify: 'lightningcss'
   }
-</style>
+};If you need other PostCSS plugins, you can also include that as part of the PostCSS tool chain.// postcss.config.js
+// Import other plugins...
+import lightning from 'postcss-lightningcss'
 
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
-
-    <!-- Repeat for all properties -->
-  </div>
+export default {
+  plugins: [lightning, /* Other plugins */],
+}Many well-known developers have switched to Lightning CSS and didn’t look back. Chris Coyier says he’ll use a “super basic CSS processing setup” so you can be assured that you are probably not stepping in any toes if you wish to switch to Lightning, too.If you wanna ditch pre-processors todayYou’ll need to check the features you need. Native CSS is enough for you if you need:Lightning CSS is enough for you if you need: statements to break CSS into multiple filesTailwind (with ) is enough for you if you need:If you still need conditionals like ,  and other functions, it’s still best to stick with Sass for now. (I’ve tried and encountered interoperability issues between  and Lightning CSS that I shall not go into details here).That’s all I want to share with you today. I hope it helps you if you have been thinking about your CSS toolchain.]]></content:encoded></item><item><title>Using CSS backdrop-filter for UI Effects</title><link>https://css-tricks.com/using-css-backdrop-filter-for-ui-effects/</link><author>Preethi</author><category>frontend</category><pubDate>Wed, 16 Apr 2025 12:34:50 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[This article covers tips and tricks on effectively utilizing the CSS  property to style contemporary user interfaces. You’ll learn how to layer  among multiple elements, and integrate them with other CSS graphical effects to create elaborate designs.Below is a hodgepodge sample of what you can build based on everything we’ll cover in this article. More examples are coming up.The blurry, frosted glass effect is popular with developers and designers these days — maybe because Josh Comeau wrote a deep-dive about it somewhat recently — so that is what I will base my examples on. However, you can apply everything you learn here to any relevant . I’ll also be touching upon a few of them in my examples.What’s essential in a backdrop filter?The difference between the CSS  and  properties is the affected part of an element.  affects the backdrop of an element, and it requires a transparent or translucent background in the element for its effect to be visible. It’s important to remember these fundamentals when using a  for these reasons:to decide on the aesthetics,to be able to layer the  among multiple elements, andto combine  with other CSS effects.Design is subjective, but a little guidance can be helpful. If you’ve applied a  to a plain background and felt the result was unsatisfactory, it could be that it needed a few embellishments, like , or more often than not, it’s because the backdrop is too plain.Plain backdrops can be enhanced with  like , , and . Such  play with the luminosity and hue of an element’s backdrop, creating interesting designs. Textured backdrops complement distorting  like  and .<main>
+<div>
+  <section>
+    <h1>Weather today</h1>
+    Cloudy with a chance of meatballs. Ramenstorms at 3PM that will last for ten minutes.
+  </section>
 </div>
-
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
+</main>main {
+  background: center/cover url("image.jpg");
+  box-shadow: 0 0 10px rgba(154 201 255 / 0.6);
+  /* etc. */
+  
+  div {
+    backdrop-filter: blur(10px);
+    color: white;
+    /* etc. */
   }
+}Layering elements with backdrop filtersAs we just discussed,  require an element with a transparent or translucent background so that everything behind it, with the  applied, is visible.If you’re applying  on multiple elements that are layered above one another, set a translucent (not transparent) background to all elements except the bottommost one, which can be transparent or translucent, provided it has a backdrop. Otherwise, you won’t see the desired filter buildup.<main>
+<div>
+  <section>
+    <h1>Weather today</h1>
+    Cloudy with a chance of meatballs. Ramenstorms at 3PM that will last for ten minutes.
+  </section>
+  <p>view details</p>
+</div>
+</main>main {
+  background: center/cover url("image.jpg");
+  box-shadow: 0 0 10px rgba(154 201 255 / 0.6);
+  /* etc. */
 
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
+  div {
+    background: rgb(255 255 255 / .1);
+    backdrop-filter: blur(10px);
+    /* etc. */
 
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
+    p {
+      backdrop-filter: brightness(0) contrast(10);
+      /* etc. */
     }
   }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
+}When an element meets a certain criterion, it gets a  (not yet a standardized name). One criterion is when an element has a  effect (from  and ). I believe  can work well with other CSS effects that also use a  because they all affect the same backdrop.Of those effects, I find two interesting:  and . Combining  with  resulted in the most reliable outcome across the major browsers in my testing. When it’s done with , the  gets lost, so I won’t use it in my examples. However, I do recommend exploring  with .Backdrop filter with maskUnlike , CSS  affects the background and foreground (made of descendants) of an element. We can use that to our advantage and work around it when it’s not desired.<main>
+  <div>
+    <div class="bg"></div>
+    <section>
+     <h1>Weather today</h1>
+      Cloudy with a chance of meatballs. Ramenstorms at 3PM that will last for ten minutes. 
+    </section>
+  </div>
+</main>main {
+  background: center/cover url("image.jpg");
+  box-shadow: 0 0 10px rgba(154 201 255 / 0.6);
+  /* etc. */
+  
+  > div {
+      .bg {
+        backdrop-filter: blur(10px);
+        mask-image: repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 10px);
+        /* etc. */
+      }
+    /* etc. */
   }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
-
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
-
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
+}Backdrop filter for the foregroundWe have the  property to apply graphical effects to an element, including its foreground, so we don’t need  for such instances. However, if you want to apply a  to a foreground element and introduce elements within it that shouldn’t be affected by the filter, use a  instead.<main>
+  <div class="photo">
+    <div class="filter"></div>
+  </div>
   <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
+</main>.photo {
+  background: center/cover url("photo.jpg");
 
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
+  .filter {
+    backdrop-filter: blur(10px) brightness(110%);
+    mask-image: radial-gradient(white 5px, transparent 6px);
+    mask-size: 10px 10px;
+    transition: backdrop-filter .3s linear;
+    /* etc.*/
   }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
-}
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
-}
+  &:hover .filter {
+    backdrop-filter: none;
+    mask-image: none;
+  }
+}In the example below, hover over the blurred photo.There are plenty of ways to play with the effects of the CSS . If you want to layer the filters across stacked elements then ensure the elements on top are translucent. You can also combine the filters with other CSS standards that affect an element’s backdrop. Once again, here’s the set of UI designs I showed at the beginning of the article, that might give you some ideas on crafting your own.]]></content:encoded></item><item><title>JSX Over The Wire</title><link>https://overreacted.io/jsx-over-the-wire/</link><author></author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate><source url="https://overreacted.io/">Dan Abramov</source><content:encoded><![CDATA[Turning your API inside-out.]]></content:encoded></item><item><title>This Week In React #230: Next.js, Turbopack, Rspack, Activity, RSC, oRPC, tweakcn | Expo, Fantom, FlashList, SVG, Tracy, New Arch, Radon | TC39, Temporal, Zod, Bare, Rolldown, CSS Functions</title><link>https://thisweekinreact.com/newsletter/230</link><author></author><category>frontend</category><pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have a great Next.js release with significant build speed improvements. I'm also quite excited to see the activity around the upcoming React  component. Many great community blog posts to read too!React Native also has great releases with the new Expo SDK in beta, and the next version of FlashList in alpha.As always, thanks for supporting us on your favorite platform:When PostHog started, they were adamant they would never hire a product manager. They wanted engineers to wrestle with hard product problems. Product managers would just get in the way.They were (partially) wrong. They need product managers and couldn’t have shipped 8+ products or hit their revenue goals without them.A new minor version of Next.js is out, with highlights:Turbopack for builds (alpha): Faster production builds passing 8000+ tests (99%)Community support for Rspack (experimental): Alternative bundler with Webpack compatibilityClient Instrumentation hook: Early monitoring and analytics setupNavigation hooks: Control routing with  and TypeScript plugin improvements: Improved support for large codebasesIt’s great to see Next.js improving with faster bundling with Turbopack for builds, and opening up to Rspack as an alternative to Webpack. Both have different tradeoffs and use cases.See also these related resources:App.js Conf is  place to be if you want to meet the teams behind your favourite libraries & frameworks, pick their brains about the future of cross-platform development and connect with 500 like-minded devs and simply have fun!8 practical workshops to choose from3 days filled with knowledge, conference talks & networkingJoin us for the biggest React Native & Expo event of the year! 🚀]]></content:encoded></item><item><title>Next Level CSS Styling for Cursors</title><link>https://css-tricks.com/next-level-css-styling-for-cursors/</link><author>Declan Chidlow</author><category>frontend</category><pubDate>Mon, 14 Apr 2025 12:40:46 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[The cursor is a staple of the desktop interface but is scarcely touched by websites. This is for good reason. People expect their cursors to stay fairly consistent, and meddling with them can unnecessarily confuse users. Custom cursors also aren’t visible for people using touch interfaces — which excludes the majority of people.Custom cursors with JavaScriptCustom cursors with CSS are great, but we can take things to the next level with JavaScript. Using JavaScript, we can use an element as our cursor, which lets us style it however we would anything else. This lets us transition between cursor states, place dynamic text within the cursor, apply complex animations, and apply filters.In its most basic form, we just need a  that continuously positions itself to the cursor location. We can do this with the  event listener. While we’re at it, we may as well add a cool little effect when clicking via the  event listener.That’s wonderful. Now we’ve got a bit of a custom cursor going that scales on click. You can see that it is positioned based on the mouse coordinates relative to the page with JavaScript. We do still have our default cursor showing though, and it is important for our new cursor to indicate intent, such as changing when hovering over something clickable.We can disable the default cursor display completely by adding the CSS rule  to . Be aware that some browsers will show the cursor regardless if the document height isn’t 100% filled.We’ll also need to add  to our cursor element to prevent it from blocking our interactions, and we’ll show a custom effect when hovering certain elements by adding the  class.Very nice. That’s a lovely little circular cursor we’ve got here.Fallbacks, accessibility, and touchscreensPeople don’t need a cursor when interacting with touchscreens, so we can disable ours. And if we’re doing really funky things, we might also wish to disable our cursor for users who have the  preference set.We can do this without too much hassle:What we’re doing here is checking if the user is accessing the site with a touchscreen or if they prefer reduced motion and then only enabling the custom cursor if they aren’t. Because this is handled with JavaScript, it also means that the custom cursor will only show if the JavaScript is active, otherwise falling back to the default cursor functionality as defined by the browser.const isTouchDevice = "ontouchstart"in window || navigator.maxTouchPoints > 0;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+if (!isTouchDevice && !prefersReducedMotion && cursor) {
+  // Cursor implementation is here
+}Currently, the website falls back to the default cursors if JavaScript isn’t enabled, but we could set a fallback cursor more similar to our styled one with a bit of CSS. Progressive enhancement is where it’s at!Here we’re just using a very basic  by  base64-encoded circle. The  values position the cursor hotspot to the center.html {
+  cursor:
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0Jve
+D0iMCAwIDMyIDMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iYmxhY2siIC8+Cjwvc3ZnPg==")
+    16 16,
+    auto;
+}Obviously this is just the start. You can go ballistic and completely overhaul the cursor experience. You can make it invert what is behind it with a filter, you can animate it, you could offset it from its actual location, or anything else your heart desires.As a little bit of inspiration, some really cool uses of custom cursors include: switches out the default cursor for a custom eye graphic when hovering cards, which is tasteful and fits their brand.Iara Grinspun’s portfolio has a cursor implemented with JavaScript that is circular and slightly delayed from the actual position which makes it feel floaty. features a giant glowing orb containing text describing what you’re hovering over.Please do take care when replacing browser or native operating system features in this manner. The web is accessible by default, and we should take care to not undermine this. Use your power as a developer with taste and restraint.]]></content:encoded></item><item><title>Deploying TypeScript: recent advances and possible future directions</title><link>https://2ality.com/2025/04/deploying-typescript-present-future.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post we look at:The current best practice for deploying library packages: , , , , Recent new developments in compiling and deploying TypeScript: type stripping, isolated declarations, JSR, etc.What the future of deploying TypeScript might look like: type stripping in browsers, etc.]]></content:encoded></item></channel></rss>
