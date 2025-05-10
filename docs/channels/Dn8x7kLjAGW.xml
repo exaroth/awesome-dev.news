@@ -1,74 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>How Autonomy Saved One of Spotify’s Most Loved Features • Joakim Sunden • YOW! 2024</title><link>https://www.youtube.com/watch?v=6bzS5GW6Ad4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/6bzS5GW6Ad4?version=3" length="" type=""/><pubDate>Sun, 23 Feb 2025 13:00:15 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Level Up: Choosing The Technical Leadership Path • Patrick Kua • YOW! 2024</title><link>https://www.youtube.com/watch?v=yQXR2_fMIog</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/yQXR2_fMIog?version=3" length="" type=""/><pubDate>Sat, 10 May 2025 12:01:39 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
 https://yowcon.com
 
-Joakim Sundén - Founding Partner at Better Product Work & Co-Creator of the Spotify Model @joakimsunden-crisp 
-
-ORIGINAL TALK TITLE
-How Autonomy Saved One of Spotify’s Most Loved Features From Being Killed
+Patrick Kua - Founder of the Tech Lead Academy @thekua 
 
 RESOURCES
-https://bsky.app/profile/joakimsunden.bsky.social
-https://twitter.com/joakimsunden
-https://linkedin.com/in/joakimsunden
-https://joakimsunden.com
+https://hachyderm.io/@patkua
+https://twitter.com/patkua
+https://www.linkedin.com/in/patkua
+https://github.com/thekua
+https://patkua.com
 
 ABSTRACT
-"I would have killed that if it was just me, 100%,” said Spotify founder and CEO Daniel Ek about Discover Weekly, a feature that would become one of Spotify’s most loved product features, almost a brand in itself.
+Do you want to have more impact in your work?
+Do you want to grow in your career?
+Do you want to know what "good" technical leadership looks like?
 
-Designers and senior engineers were equally skeptical, but the team was still able to ship the feature.
-
-In this talk, you’ll learn how Spotify’s organisational culture of Agile management and autonomous teams enables innovation, using the Discover Weekly feature as an example. [...]
+Then come along to this talk where Pat Kua, who has been growing technical leaders for more than a decade, will share some practical advice on what it means to be a good technical leader, where to get started and how you can level up. [...]
 
 TIMECODES
 00:00 Intro
-02:14 Discover Weekly
-05:16 Spotify HQ
-06:12 Radio
-06:50 Discover
-09:54 Re-connecting the dots
-12:44 "Traditional" organizations
-15:06 Autonomous squad
-16:53 4 Risks in product development
-18:12 Focused on outcomes, not output
-19:11 Activities, epics, features, stories
-19:27 These bets have a low success rate
-21:03 Moving from opinions to data
-20:38 Alignment – Autonomy
-21:37 Aligned autonomy
-22:57 Gatekeeping vs facilitating context
-25:29 Iterate, iterate, iterate
-27:07 Daniel Ek
-27:32 Celebrate failure
-27:55 Limit blast radius
-28:37 Watching the data
-28:57 Watching the buzz
-29:28 Experiments
-32:59 Winning formula
-33:36 Conclusions
-38:13 Innovation can't be forced
-38:24 Outro
+01:45 Agenda
+02:28 Exploring technical leadership
+02:33 Story
+07:47 Lack of technical alignment
+10:16 Accidental complexity
+13:21 What is technical leadership?
+16:29 Technical alignment
+20:14 Who's accountable for tech leadership?
+21:33 Trident model
+28:10 Leadership skills
+30:39 Reasons for you
+31:24 Reason 1: Build different skills
+32:10 Reason 2: Shape the team environment
+33:06 Reason 3: Have greater impact
+33:56 Reason 4: See growth in others
+34:37 Reason 5: Work on more challenging problems
+34:44 How to get started
+39:03 Recipe
+39:43 Outro
 
 Download slides and read the full abstract here:
-https://yowcon.com/brisbane-2024/sessions/3442
+https://yowcon.com/brisbane-2024/sessions/3134
 
 RECOMMENDED BOOKS
-Joakim Sunden & Marcus Hammarberg • Kanban in Action • https://amzn.to/3n1Fmna
-Ron Kohavi, Diane Tang & Ya Xu • Trustworthy Online Controlled Experiments • https://amzn.to/3JlY4NZ
-Gene Kim, Jez Humble, Nicole Forsgren, Patrick Debois & John Willis • The DevOps Handbook • https://amzn.to/3C0Rj0C
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
-Jennifer Petoff, Niall Murphy, Betsy Beyer & Chris Jones • Site Reliability Engineering • https://amzn.to/3xYac2Q
-Marty Cagan • Inspired • https://amzn.to/3dPz7iq
-Marty Cagan • Empowered • https://amzn.to/42kuKAj
-Reed Hastings & Erin Meyer • No Rules Rules • https://amzn.to/3Cjottx
-Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps • https://amzn.to/3tCz1xO
-Fred Brooks Jr. • The Mythical Man-Month • https://amzn.to/31NJc5C
+Patrick Kua • Talking with Tech Leads • https://amzn.to/3ECO3xB
+Patrick Kua • The Retrospective Handbook • https://amzn.to/4jpxxQN
+Neal Ford, Rebecca Parsons & Patrick Kua • Building Evolutionary Architectures • https://amzn.to/42qXJV2
+Roger Fisher, William L. Ury & Bruce Patton • Getting to Yes • https://amzn.to/4iWdh8e
+Jon Gordon • The Power of Positive Leadership • https://amzn.to/3RTQLC0
+Jean Greaves, Travis Bradberry & Patrick M. Lencioni • Emotional Intelligence 2.0 • https://amzn.to/3RWeSQy
+Michael Bungay Stanier • The Coaching Habit • https://amzn.to/3RQNzah
+Douglas Stone & Sheila Heen • Thanks for the Feedback • https://amzn.to/3GJwCfD
+Grenny, Patterson, McMillan, Switzler & Gregory • Crucial Conversations • https://amzn.to/44ZKjAZ
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Spotify #SpotifyFeature #Autonomy #SoftwareEngineering #Programming #DiscoverWeekly #Agile #AgileDevelopment #JoakimSunden #Crisp #Kanban #Data #ContinuousImprovement #AlignedAutonomy #YOWcon
+#TechLeads #Teams #Culture #CompanyCulture #TeamCulture #Leadership #TechLeadership #TechnicalAlignment #PatrickKua #YOWcon
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -79,123 +69,62 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>GitHub Copilot - How It Works, How We Got Here, Where It&apos;s Going • Damian Brady • YOW! 2024</title><link>https://www.youtube.com/watch?v=ZUS7r3c3iGc</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ZUS7r3c3iGc?version=3" length="" type=""/><pubDate>Sat, 22 Feb 2025 13:00:46 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
-https://yowcon.com
-
-Damian Brady - Staff Developer Advocate at GitHub @damianbrady451 
-
-RESOURCES
-https://bsky.app/profile/@damovisa.me
-https://mastodon.social/@damovisa@hachyderm.io
-https://twitter.com/damovisa
-https://github.com/damovisa
-https://damianbrady.com.au
-
-Links
-https://githubnext.com
-
-ABSTRACT
-GitHub Copilot started life as code completion on steroids, but since its GA release in 2022, its capabilities have grown. GitHub Copilot now lives in more places than just your IDE. It's in your terminal, your browser, and in your pull requests. It can learn your entire codebase and help you understand it.
-
-In this session, we'll look at what Copilot is, what it's become, and how it works. We'll run through the software engineering lifecycle from idea to production and highlight all the areas where tools like Copilot can save you time and effort. Finally, we'll talk about how GitHub Copilot was created, how it's being improved, and a little about the future of AI tooling. [...]
-
-TIMECODES
-00:00 Intro
-01:38 GitHub Copilot
-05:21 GitHub Copilot journey
-09:36 SPACE framework
-16:26 Demo
-32:29 What's next?
-37:52 AI-native development
-45:17 Outro
-
-Download slides and read the full abstract here:
-https://yowcon.com/brisbane-2024/sessions/3444
-
-RECOMMENDED BOOKS
-Leo Porter & Daniel Zingaro • Learn AI-assisted Python Programming • https://amzn.to/3Pv3Hx7
-Pritesh Mistry • Github Copilot for Developers • https://amzn.to/3TupBSm Kurt Dowswell • Programming with GitHub Copilot • https://amzn.to/3TM2HaL
-Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#AI #GenAI #LLM #LargeLanguageModels #GitHubCopilot #RetrievalAugmentedGeneration #RAG #ChatGPT #SPACEframework #GitHubSpark #ReinforcementLearning #DamianBrady #YOWcon
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Efficiency Paradox: How to Save Yourself &amp; the World • Holly Cummins • GOTO 2024</title><link>https://www.youtube.com/watch?v=dU_WHead0oY</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/dU_WHead0oY?version=3" length="" type=""/><pubDate>Fri, 21 Feb 2025 13:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Developer Productivity With IntelliJ IDEA • Trisha Gee • GOTO 2024</title><link>https://www.youtube.com/watch?v=8ZRI3fFaMAw</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/8ZRI3fFaMAw?version=3" length="" type=""/><pubDate>Fri, 9 May 2025 12:00:25 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
 https://gotocph.com
 
-Holly Cummins - Senior Principal Software Engineer on the Red Hat Quarkus Team @Holly_Cummins 
+Trisha Gee - Lead Developer Evangelist at Gradle, Java Champion & Co-Author of "Getting to Know IntelliJ IDEA" @TrishaGee 
 
 RESOURCES
-https://hollycummins.com
-https://hollycummins.com/type/blog
-https://bsky.app/profile/hollycummins.com
-https://hachyderm.io/@holly_cummins
-https://twitter.com/holly_cummins
-https://github.com/holly-cummins
-https://linkedin.com/in/holly-k-cummins
+https://bsky.app/profile/trishagee.bsky.social
+https://twitter.com/trisha_gee
+https://www.linkedin.com/in/trishagee
+https://trishagee.com
+https://github.com/trishagee
+
+Links
+https://trishagee.com/presentations/developer-productivity-with-intellij-idea
+https://queue.acm.org/detail.cfm?id=3454124
+https://en.wikipedia.org/wiki/Flow_(psychology)#Satisfaction
+https://cdn2.hubspot.net/hubfs/4008838/Resources/The-2019-Tidelift-managed-open-source-survey-results.pdf
 
 ABSTRACT
-Inefficiency is ruining our planet and our lives. Efficiency is ruining our happiness, and weirdly, it’s also ruining our efficiency. Heeeeelppp!? What’s a techie to do? Zombie servers and slow code are a big climate problem, but the vrrrooom model gives us double-win hope. Holly walks through a range of techniques that can be used to find and eliminate software waste and reduce climate impacts.
+Developer productivity is a hot topic right now, but what does it mean? Is it all just about squeezing more lines of code out of us poor, overworked developers? Or could it, in fact, lead to developer joy?
 
-But machine efficiency isn’t much use without human efficiency. Surprisingly, sorting out machine efficiency often helps humans, too. For example, the Quarkus Java framework uses many interesting waste-reduction techniques. These optimisations have the dual benefit of speeding up computers, and also speeding up people.
+In this session, Trisha will show some of her favorite IntelliJ IDEA tips for improving her own productivity. She'll use these examples to talk about what productivity is, what it is not, and why it's even more important to us as developers than it is to the organizations that pay our salaries. And it's of course important to them, too!
 
-So far, so good, but we need to be careful we don’t end up accidentally optimising the wrong things, and making stuff worse. 100% utilisation is not sustainable for either humans, or people. It’s not even very efficient (what!?). Holly gives a brief tour of the brain’s default mode network, the latest business research, and queueing theory, to show why we actually achieve more when we do a bit less. [...]
+Attendees will gain a deeper understanding of how IntelliJ IDEA helps them to be effective, productive, and happy. Trisha wants you to look at your toolchain and ask yourself: Does this enable me to be creative and happy? [...]
 
 TIMECODES
 00:00 Intro
-02:47 Waste
-05:46 e-waste is killing the planet
-07:20 Zombie servers
-08:35 Data
-09:33 Solution: LightSwitchOps
-13:38 Solution: Faster code
-17:46 Case study: Quarkus
-18:49 Java dynamism
-21:59 How do we fix all this?
-25:26 Example: Logging
-26:04 Example: Hibernate
-26:26 Developer joy
-28:59 We have a solution
-30:52 How efficient can we get?
-33:36 Speed vs Resiliency
-38:15 The default mode network
-42:13 Inverse Jevon's paradox
-44:35 Hygge developers
-45:34 Conclusions
-46:12 Outro
+01:04 Demo: IntelliJ IDEA
+03:46 Was I productive?
+04:50 Demo: AI
+06:40 Productivity
+08:49 Demo: Writing code
+20:06 Demo: Understanding code
+28:44 Demo: Debugging
+33:39 Remove friction
+34:30 Collaboration
+35:26 Learning
+36:36 Flow
+38:38 What slows me down?
+41:20 Productivity is an investment
+42:04 Outro
 
 Download slides and read the full abstract here:
-https://gotocph.com/2024/sessions/3327
+https://gotocph.com/2024/sessions/3328
 
 RECOMMENDED BOOKS
-Anne Currie, Sarah Hsu, & Sara Bergman • Building Green Software • https://amzn.to/3UjSClv
-Marc Nuri San Felix • Full Stack Quarkus & React • https://amzn.to/4cXyRrh
-John Clingan & Ken Finnigan • Kubernetes Native Microservices with Quarkus & MicroProfile • https://amzn.to/4cWQ3wV
-Davi Vieira • Designing Hexagonal Architecture with Java • https://amzn.to/3Q4H3vU
-Ioannis Kolaxis • 101 Green Software • https://www.kolaxis.dev/book-green-software
-Mehdi Khosrow-Pour • Green Computing Strategies for Competitive Advantage and Business Sustainability • https://amzn.to/2YXbI7j
-Lässig, Kersting & Morik • Computational Sustainability • https://amzn.to/3APBW8r
-Carola Lilienthal • Sustainable Software Architecture • https://amzn.to/3yFXxoS
+Trisha Gee & Helen Scott • Getting to Know IntelliJ IDEA • https://amzn.to/3ZBgnGc
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
+Trisha Gee, Kathy Sierra & Bert Bates • Head First Java • https://amzn.to/3k59BJ6
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Quarkus #RedHatQuarkus #JavaDynamism #JevonsParadox #BuildingGreenSoftware #Sustainability #SustainableSoftware #CarbonEfficiency #LightSwitchOps #Efficiency #Decarbonization #GreenCloud #GreenComputing #GreenCoding #Programming #GreenSoftware #HollyCummins
+#IntelliJ #IntelliJIDEA #IDE #Productivity #ReadCode #Debugging #Debugger #SPACEframework #JetBrains #RunConfiguration #Debugger #ComputerScience #TrishaGee #SoftwareEngineering #Programming
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -206,46 +135,44 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Kafka Connect: Build &amp; Run Data Pipelines • Kate Stanley, Mickael Maison &amp; Danica Fine</title><link>https://www.youtube.com/watch?v=2S-CkeZVwK4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/2S-CkeZVwK4?version=3" length="" type=""/><pubDate>Fri, 21 Feb 2025 10:34:22 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How To Lead Through Transformation in Tech • Hannah Foxwell &amp; Charles Humble</title><link>https://www.youtube.com/watch?v=042HY4YiL5U</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/042HY4YiL5U?version=3" length="" type=""/><pubDate>Fri, 9 May 2025 09:35:23 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+gotopia.tech (https://gotopia.tech) 
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/341) 
-Kate Stanley - Principal Software Engineer at Red Hat & Co-Author of "Kafka Connect"
-Mickael Maison - Senior Principal Software Engineer at Red Hat & Co-Author of "Kafka Connect"
-Danica Fine - Lead Developer Advocate, Open Source at Snowflake
+Read the full transcription of this interview here
+ (https://gotopia.tech/articles/349) 
+Hannah Foxwell - Independent Consultant & Founder of "AI for the rest of us"
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
 
 RESOURCES
-Kate
- (https://x.com/KateStanley91) https://fosstodon.org/@katheris
- (https://github.com/katheris) https://www.linkedin.com
- (https://www.linkedin.com/in/katherine-kate-stanley-3796b579) 
-Mickael
-https://bsky.app/profile/mickaelmaison.bsky.social
-https://mas.to/@MickaelMaison
- (https://stackoverflow.com/users/1765189/mickael-maison) https://www.linkedin.com
- (https://www.linkedin.com/in/mickaelmaison) https://mickaelmaison.com
+Hannah
+https://bsky.app/profile/hannahfoxwell.net
+https://medium.com/@hannahfoxwell
+https://x.com/HannahFoxwell
+https://github.com/hannahfoxwell
+https://www.linkedin.com/in/hannah-foxwell
 
-Danica
-https://bsky.app/profile/thedanicafine.bsky.social
- (https://x.com/TheDanicaFine) https://data-folks.masto.host/@thedanicafine
-https://www.linkedin.com (https://www.linkedin.com/in/danica-fine) 
- (https://github.com/danicafine) https://linktr.ee/thedanicafine
-
-Links
-https://kafka.apache.org
-https://flink.apache.org
-https://debezium.io
-https://strimzi.io
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://linkedin.com/in/charleshumble
+https://mastodon.social/@charleshumble
+https://conissaunce.com
 
 DESCRIPTION
-Danica Fine together with the authors of “Kafka Connect” Kate Stanley and Mickael Maison, unpack Kafka Connect's game-changing power for building data pipelines—no tedious custom scripts needed! Kate and Mickael Maison discuss how they structured the book to help everyone, from data engineers to developers, tap into Kafka Connect’s strengths, including Change Data Capture (CDC), real-time data flow, and fail-safe reliability.
+Charles Humble and Hannah Foxwell explore the multifaceted challenges and opportunities presented by emerging technologies, modern work practices, and management dynamics.
 
+They emphasize the importance of methodologies like pair programming, flexible work designs, and inclusive team environments, especially for accommodating neurodiverse and introverted individuals.
+Foxwell introduces the “three-teams model” to guide new managers in aligning with direct reports, leadership peers, and cross-functional collaborators. She underscores the significance of equitable leadership through mentorship, coaching, and sponsorship, particularly for underrepresented groups.
+
+Exploring  AI’s potential, Foxwell highlights its transformative impact on software development and enterprise processes while cautioning against rushed adoption. She advocates for thoughtful experimentation and user-centric design, noting the need for cultural and structural shifts to fully realize AI’s benefits. Ultimately, the conversation centers on intentionality, empathy, and the need for organizations to balance innovation with human-centric practices. [...]
 
 RECOMMENDED BOOKS
-Kate Stanley & Mickael Maison • Kafka Connect
- (https://amzn.to/40Jq5Jz) Shapira, Palino, Sivaram & Petty • Kafka: The Definitive Guide
- (https://amzn.to/3ULdz8A) Viktor Gamov, Dylan Scott & Dave Klein • Kafka in Action (https://amzn.to/3CrB8KU) 
+Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
+ (https://amzn.to/47oAf3l) Jez Humble & David Farley • Continuous Delivery
+ (https://amzn.to/452ZRky) Barbara Oakley • A Mind For Numbers
+ (https://amzn.to/3Z2tjqi) Pooja K. Agarwal & Patrice M. Bain • Powerful Teaching
+ (https://amzn.to/4gmT5LS) Barbara Oakley & Olav Schewe • Learn Like a Pro
+ (https://amzn.to/3Z3gyf9) Daniel Kahneman • Thinking, Fast and Slow
+ (https://amzn.to/2XmJEtf) Matthew Skelton & Manuel Pais • Team Topolog (http://amzn.to/3sVLyLQ) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -261,125 +188,73 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Cloud Native Application Protection Platforms (CNAPPs) • Russ Miles &amp; James Lewis • GOTO 2025</title><link>https://www.youtube.com/watch?v=M7eXxRLsrFw</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/M7eXxRLsrFw?version=3" length="" type=""/><pubDate>Thu, 20 Feb 2025 13:00:34 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Building a Debugger • Sy Brand &amp; Tim Misiak • GOTO 2025</title><link>https://www.youtube.com/watch?v=lWPLgm52ICs</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/lWPLgm52ICs?version=3" length="" type=""/><pubDate>Thu, 8 May 2025 12:01:23 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here:
-https://gotopia.tech/episodes/358
+https://gotopia.tech/episodes/375
 
-Russ Miles - Engineering Manager, Chaos Engineering Practitioner & Co-Author of "Cloud Native Application Protection Platforms"
-James Lewis - Software Architect & Director at Thoughtworks
+Sy Brand - Author of "Building a Debugger" and C++ Developer Advocate at Microsoft @SyBrandPlusCats 
+Tim Misiak - Systems Engineer at Datadog and Co-Founder of Augmend @timmisiak 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russmiles.bsky.social
-https://github.com/russmiles
-https://www.linkedin.com/in/russmiles
+Sy
+https://bsky.app/profile/tartanllama.xyz
+https://mastodon.social/@TartanLlama
+https://x.com/tartanllama
+https://github.com/TartanLLama
+https://stackoverflow.com/users/496161/tartanllama
+https://uk.linkedin.com/in/sy-brand-36520857
+https://sybrand.ink
+https://blog.tartanllama.xyz
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://twitter.com/boicy
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Tim
+https://bsky.app/profile/timdbg.com
+https://x.com/timmisiak
+https://github.com/timmisiak
+https://www.linkedin.com/in/tim-misiak
+https://www.timdbg.com
 
 Links
-https://youtu.be/mTSu0clAP-c
-https://youtu.be/BX0TVzHOJgQ
-https://youtu.be/jqkwVmvIcG0
-https://youtu.be/tMzDMrBGJlI
-https://youtu.be/9omp-95zbzs
-https://youtu.be/xg6EFYdXU8w
-https://youtu.be/T7eG7UAMztA
-https://youtu.be/hBxV3Cr0lXY
-https://youtu.be/-5kK50d-duc
-https://youtu.be/vkxVaqS7q2Q
-https://youtu.be/dcp6YMAmI3M
-https://youtu.be/Pv0cfsastFs
+https://dwarfstd.org
+https://lldb.llvm.org
+https://rr-project.org
+https://undo.io
+https://youtu.be/MkbgZMCTUyU
+https://youtu.be/qmh7Uppd3x0
+https://youtu.be/HAFrggEDr5U
+https://youtu.be/jIZpKpLCOiU
+https://youtu.be/rZxIzrjvSGg
+https://youtu.be/30jNsCVLpAE
 
 DESCRIPTION
-In this episode of GOTO Book Club, James Lewis and Russ Miles discuss Cloud Native Application Protection Platforms (CNAPPs), focusing on how they promote collaboration across security and development teams.
+Tim Misiak interviews Sy Brand about their book "Building a Debugger". Sy, who works as a Microsoft C++ developer advocate with a background in GPU compilers and debuggers, discusses how implementing a debugger offers profound insights into computer systems.
 
-Russ shares insights from his book, emphasizing the importance of OODA loops, balancing innovation with safety in platform design, and the benefits of off-the-shelf versus custom CNAPP solutions. Looking ahead, he predicts platform engineering will evolve into a commercial strategy like AWS and that AI will augment human decision-making, enhancing creativity and collaboration in the engineering field.
+The conversation explores the unexpected complexities of debugging fundamentals like stack unwinding and code stepping, comparing approaches between Windows and Linux systems. They examine how debugging interfaces have evolved over time and the challenges posed by backward compatibility and language evolution.
 
-TIMECODES
-00:00 Intro
-00:59 Exploring Cloud Native Application Protection Platforms (CNAPPs)
-05:10 Collaboration & OODA Loops in cloud native security
-16:16 Bridging the gap between security & development
-32:06 Creating platforms that foster innovation & collaboration
-36:13 To build or to buy a CNAPP
-42:22 Predictions for platform engineering & AI in 2025
-44:52 Outro
-
-RECOMMENDED BOOKS
-Miles, Giguere & Smith • Cloud Native Application Protection Platforms • https://amzn.to/3X4Bq4h
-Mina, Warda, Marins & Miles • Digitalization of Financial Services in the Age of Cloud • https://amzn.to/4gIYsow
-Russ Miles • Learning Chaos Engineering • https://amzn.to/412KEzf
-Dan Pilone & Russ Miles • Head First Software Development • https://amzn.to/4i02JF0
-Kathy Sierra • Badass • https://amzn.to/4b9fb2V
-
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#CNAPP #CNAPPs #CloudNative #ProtectionPlatforms #PlatformEngineering #OODA #OODAloop #Collaboration #Security #RussMiles #JamesLewis #BookClub
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Top 10 Redis Use Cases</title><link>https://blog.algomaster.io/p/top-10-redis-use-cases</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/50f500e0-7b74-425b-b93e-68b8efbe86ae_1492x996.png" length="" type=""/><pubDate>Thu, 20 Feb 2025 05:45:47 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Redis (Remote Dictionary Server) is an open source, in-memory key-value data store that provides , making it an excellent choice for  applications.Its versatility and speed allow it to solve complex scalability challenges, making it a popular choice in design discussions and a valuable topic for .Redis supports a rich set of, including strings, hashes, lists, sets, and sorted sets. These structures, combined with powerful  like , , and enable Redis to handle many use cases requiring  and .In this article, we will explore the Top 10 Use Cases of Redis with real-world examples and code implementation.Caching is the most common use case of Redis. Since web applications frequently rely on databases, querying a database on every request can be slow and inefficient, leading to high response times and increased server load. solves this problem by storing frequently accessed data in memory, significantly reducing latency and offloading queries from the database.There are multiple caching strategies (read through, cache aside, write back etc.,) each suited for different use cases.The  pattern is widely used because it gives the application full control over caching logic.When a client requests data, the application first checks Redis.If the data exists in Redis (), it is returned instantly.If data is not found (), it is fetched from the database, stored in Redis for future requests, and returned to the client.Code Example: Caching API ResponsesTo prevent stale or outdated data, Redis allows setting  (), ensuring automatic eviction of cached entries.Most modern web applications are , meaning they don’t store session information directly on the server. However, to keep users logged in, maintain shopping carts, or track user preferences, web applications need a reliable session management system.Since Redis is andprovide  options, it’s a great choice for storing session data.The application generates a unique session ID for the user.It stores session data in Redis, using the session ID as the key.The session ID is sent to the user's browser as a .The application retrieves the session ID from the user's cookie.It fetches user data from Redis using the session ID.If a user is inactive for too long, Redis automatically deletes the session after a set expiration time ().This prevents stale session accumulation, optimizing memory usage.Code Example: Storing and Retrieving SessionsSince Redis is an in-memory database, all session data is lost if the server restarts.Redis allows saving session data to disk using snapshots () or AOF logging.However, reloading session data after a crash may take too long, causing delays.Using Redis Replication for High Availability (Recommended for Production)Sessions are replicated to a backup Redis instance.If the primary Redis server fails, the backup is promoted to take over.This ensures minimal downtime for user sessions.]]></content:encoded></item><item><title>GraphQL Federation - The @key to Your Platform API Strategy • Derek Kuc • GOTO 2024</title><link>https://www.youtube.com/watch?v=SrA543HT3bA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/SrA543HT3bA?version=3" length="" type=""/><pubDate>Wed, 19 Feb 2025 13:00:46 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Chicago 2024. #GOTOcon #GOTOchgo
-https://gotochgo.com
-
-Derek Kuc - Principal Software Engineer at Apollo GraphQL
-
-RESOURCES
-https://bsky.app/profile/dkuc.bsky.social
-https://www.linkedin.com/in/dariusz-kuc-244b673
-https://twitter.com/derek_kuc
-https://github.com/dariuszkuc
-
-ABSTRACT
-Many developers mistakenly view GraphQL as a graph database or as an alternative to REST. In reality, GraphQL’s greatest strength is its power to unify your existing APIs into a single, unified API.
-
-In this talk, learn how a federated GraphQL architecture can help you build a scalable platform that maximizes the value of your existing APIs. Learn how to leverage federation to create a flexible, resilient API strategy that evolves with your business needs. [...]
+Sy highlights areas for future advancement in debugging, particularly time travel debugging for non-deterministic issues and better tools for debugging optimized code. Throughout the interview, both experts share fascinating technical details that reveal why debugger implementation serves as an excellent path to deeper understanding of operating systems and hardware.
 
 TIMECODES
 00:00 Intro
-01:04 Experience APIs
-02:02 Strategy 1: No layer
-04:58 Strategy 2: Backend for frontend (BFF)
-08:15 Strategy 3: GraphQL federation
-09:15 What is GraphQL?
-20:00 Apollo federation
-22:59 GraphQL vs REST?
-23:24 GraphQL makes your APIs better
-32:00 How?
-34:34 Summary
-35:39 Outro
-
-Download slides and read the full abstract here:
-https://gotochgo.com/2024/sessions/3457
+00:46 How understanding systems unlocks better software
+11:42 Rethink debugging: Fixing ptrace, DWARF & adapting to modern languages
+21:03 Stepping through code: Unexpected complexity
+32:38 The future of debugging
+37:06 Outro
 
 RECOMMENDED BOOKS
-Gregor Hohpe • Platform Strategy • https://amzn.to/4cxfYdb
-Gregor Hohpe • The Software Architect Elevator • https://amzn.to/3F6d2ax
-Eve Porcello & Alex Banks • Learning GraphQL • https://amzn.to/3ZH1h2k
-Robin Wieruch • The Road to GraphQL • https://amzn.to/3rNwTa1
-Samer Buna • GraphQL in Action • https://amzn.to/3tm9ugB
+Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
+Charles Humble • Professional Skills for Software Engineers • https://www.conissaunce.com/professional-skills-shortcut
+Cathy O'Neil • Weapons of Math Destruction • https://amzn.to/42jYkba
+Jonathan B. Rosenberg • How Debuggers Work • https://amzn.to/3SnFHgv
+Nora Sandler • Writing a C Compiler • https://amzn.to/3Z6SMhU
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#GraphQL #GraphQLFederation #PlatformEngineering #PlatformStrategy #API #APIs #APIStrategy #ExperienceAPIs #BackendForFrontend #DerekKuc
+#Debugger #Debugging #SystemsProgramming #Linux #X64 #X86 #MicroProcessor #StackUnwinding #WriteADebugger #UndoDB #LLDB #ptrace #DWARFstd #Cpp #Rustlang #Csharp #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #SyBrand #TimMisiak #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -390,92 +265,135 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>When calibration beats metrics</title><link>https://www.youtube.com/watch?v=oOZr4kRJgFE</link><author>probabl</author><category>dev</category><category>ai</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/oOZr4kRJgFE?version=3" length="" type=""/><pubDate>Wed, 19 Feb 2025 10:01:01 +0000</pubDate><source url="https://www.youtube.com/channel/UCIat2Cdg661wF5DQDWTQAmg">Probabl</source><content:encoded><![CDATA[Having a classifier with great metrics is good, but it is not enough for it to be useful in production. One reason why it might still fail is because it could be that you are dealing with a badly calibrated model. The predictions might be fine, but the probability estimates can be way off. 
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Design Google Docs - System Design Interview</title><link>https://blog.algomaster.io/p/google-docs-system-design-interview</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F22241ad6-b64c-481e-bedf-da7a3a72bea8_2632x2032.png" length="" type=""/><pubDate>Thu, 8 May 2025 11:06:31 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Google Docs is a cloud-based word processor that allows multiple users to create, edit, and share documents in real-time via a web or mobile interface.To design a system like Google Docs, we must solve several complex challenges like:Real-time editing with low latencyConsistent document state across multiple usersConflict resolution when edits overlapEfficiently storing the documentsand fine-grained access controlAnd all of this needs to scale to  and thousands of concurrent document edits without sacrificing performance.In this article, we will explore the , and the  of a real-time collaborative editing system that supports all these features.Before diving into the architecture, let's summarize the core functional and non-functional requirements:1.1 Functional RequirementsCreate & Retrieve Documents: Users should be able to create new documents and retrieve them instantly. Multiple users should be able to edit the same document simultaneously, and view each other’s changes in real-time. The system should support full document structure and formatting including headings, bold/italic text, lists, hyperlinks, etc.Users should be able to see the cursor positions and presence of others. Users should be able to edit documents offline (e.g. without internet), and the system should automatically sync changes once they reconnect.Access Control and Sharing: Users should be able to share documents with specific permissions (view-only, comment, or edit).1.2 Non-Functional RequirementsEdits should be reflected to all participants within milliseconds The system should handle millions of users, and thousands of documents being edited concurrently. The system should keep a history of changes for each document, allowing users to view or revert to earlier versions. Despite concurrent edits, all users should eventually see the same final document state.Monthly Active Users (MAU): 100 million: ~50 million: ~1 millionAverage Documents per User: 20: 100M users × 20 docs = 2 billion documents: 100 KB (structured text with formatting, comments, metadata): 2B docs × 100 KB = ~200 TB (Terabytes): Assume 50 versions per document, and each version is a delta of ~1 KB: 2B docs × 50 × 1 KB = ~100 TBActive Collaborative Sessions at Peak: ~100KKeystrokes per User per Minute: 100Total Keystrokes/sec at Peak: 100K × 100 / 60 = ~167K operations/secEach of these keystrokes is typically sent as a separate operation to the server and then broadcast to all other collaborators on the same document.The architecture can be broken into several key components, as illustrated below:]]></content:encoded></item><item><title>Decision Dials • Venkat Subramaniam • GOTO 2024</title><link>https://www.youtube.com/watch?v=ZcR07FY3jDs</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ZcR07FY3jDs?version=3" length="" type=""/><pubDate>Wed, 7 May 2025 12:01:04 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Chicago 2024. #GOTOcon #GOTOchgo
+https://gotochgo.com
 
-In this video we talk about how to think about calibration and what it means.
+Venkat Subramaniam - Award-winning Author & Founder of Agile Developer, Inc.
 
+RESOURCES
+https://bsky.app/profile/venkats.bsky.social
+https://www.linkedin.com/in/vsubramaniam
+https://twitter.com/venkat_s
+https://github.com/venkats
+http://www.agiledeveloper.com
 
-Website: https://probabl.ai/
-LinkedIn: https://www.linkedin.com/company/probabl
-Twitter: https://x.com/probabl_ai
-Bluesky: https://bsky.app/profile/probabl.bsky.social
-Discord: https://discord.probabl.ai
+ABSTRACT
+Whether you are a programmer, a lead, an architect, a technical manager, or just a nice simple human being your day starts and ends with making decisions. It involves making many small decisions and may involve making some big ones too.
 
-We also host a podcast called Sample Space, which you can find on your favourite podcast player. All the links can be found here:
-https://rss.com/podcasts/sample-space/
+In this keynote we will talk about the art of decision making, the consequences of the choices we make, and tie that into the everyday architecture and design of enterprise systems. [...]
 
-#probabl]]></content:encoded></item><item><title>Beyond Storytelling: A Deep Dive into Wardley Mapping • Simon Wardley &amp; Charles Humble • GOTO 2025</title><link>https://www.youtube.com/watch?v=tMzDMrBGJlI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/tMzDMrBGJlI?version=3" length="" type=""/><pubDate>Tue, 18 Feb 2025 13:01:19 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+TIMECODES
+00:00 Intro
+00:38 Decisions
+13:57 Very few things are binary
+23:40 Evaluating trade offs
+31:54 Evolution of SW development
+39:35 Design principles
+47:28 Evaluate trade offs
+53:49 Takeaways
+55:32 Outro
+
+Download slides and read the full abstract here:
+https://gotochgo.com/2024/sessions/3361
+
+RECOMMENDED BOOKS
+Venkat Subramaniam • Cruising Along with Java • https://amzn.to/4dFuBwU
+Venkat Subramaniam • Programming Kotlin • https://amzn.to/2MIC8D1
+Venkat Subramaniam • Functional Programming in Java • https://amzn.to/3bzFNNQ
+Venkat Subramaniam • Pragmatic Scala • https://amzn.to/3oIEq35
+Venkat Subramaniam • Test-Driving JavaScript Applications • https://amzn.to/3i9CbmW
+Subramaniam & Hunt • Practices of an Agile Developer • https://amzn.to/2XjbWor
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#DecisionMaking #DecisionDials #BinaryDecision #EvolutionaryDesign #DesignByContract #DesignByCapability #EvolutionaryArchitecture #DesignPrinciples #Coupling #LowCoupling #OOPvsFP #FunctionalProgramming #VenkatSubramaniam
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Beyond the Cloud: The Local-First Software Revolution • Brooklyn Zelenka &amp; Julian Wood • GOTO 2025</title><link>https://www.youtube.com/watch?v=9gZMnJ2XPkM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/9gZMnJ2XPkM?version=3" length="" type=""/><pubDate>Tue, 6 May 2025 12:00:15 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
 https://gotopia.tech
 
 Read the full transcription of this interview here:
-https://gotopia.tech/articles/357
+https://gotopia.tech/articles/374
 
-Simon Wardley - Thought Lord, Mapper, Mostly Good @simonwardley 
-Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
+Brooklyn Zelenka - Author of Numerous Libraries Including Witchcraft & Founded the Vancouver Functional Programming Meetup @bezelenka 
+Julian Wood - Serverless Developer Advocate at AWS @julian_wood 
 
 RESOURCES
-Simon
-https://bsky.app/profile/swardley.bsky.social
-https://me.dm/@swardley
-https://twitter.com/swardley
-https://www.linkedin.com/in/simonwardley
-https://swardley.medium.com
+Brooklyn
+https://bsky.app/profile/expede.wtf
+https://octodon.social/@expede@types.pl
+https://github.com/expede
+https://www.linkedin.com/in/brooklynzelenka
+https://notes.brooklynzelenka.com
 
-Charles
-https://bsky.app/profile/charleshumble.bsky.social
-https://linkedin.com/in/charleshumble
-https://mastodon.social/@charleshumble
-https://conissaunce.com
+Julian
+https://bsky.app/profile/julianwood.com
+https://twitter.com/julian_wood
+http://www.wooditwork.com
+https://www.linkedin.com/in/julianrwood
 
 Links
-https://www.wardleymaps.com
-https://mapkeep.com
-https://miro.com
-https://youtu.be/WVAUHT-Jy-U
-https://youtu.be/FPfjHon2tFY
-https://youtu.be/ShAzlhS_TCg
-https://youtu.be/DnSogTnJlqk
-https://youtu.be/9w6YeNNJLkg
-https://youtu.be/LTFe7Zj-hzQ
-https://youtu.be/IlDIV5gaTP0
-https://youtu.be/2IW9L1uNMCs
-https://youtu.be/b7Nc_FJiosk
-https://youtu.be/LLZmTuTSEB8
-https://youtu.be/-z3ZB1ck_nk
-https://youtu.be/Gs1zUKrFCoY
-https://youtu.be/mUTx61t443A
-https://youtu.be/K2mx9ZaNDyE
+https://automerge.org
+https://discord.com/invite/zKGe4DCfgR
+https://www.robinsloan.com/notes/home-cooked-app
+https://github.com/ipvm-wg
+https://www.localfirst.fm
+https://localfirstweb.dev
+https://youtu.be/X6fPkRON3X8
+https://youtu.be/UDo9W4tt69c
+https://youtu.be/5AGEv0sAw6g
+https://youtu.be/_KvFapRkR9I
+https://youtu.be/ahyF8e9qKBc
+https://youtu.be/esMjP-7jlRE
+https://youtu.be/P-9FwZxO1zE
+https://youtu.be/zt9DFMkjkEA
+https://youtu.be/fxfjYD_5qUI
+https://youtu.be/lgHh4de_6ZI
+https://youtu.be/PxDRMpfyr5A
+https://youtu.be/sCybe9FAGOc
+https://youtu.be/8fi7uSYlOdc
+https://youtu.be/BD46Yv7ywvc
 
 DESCRIPTION
-Simon Wardley and Charles Humble discuss the development of Wardley Mapping, a visual framework that helps organizations understand and navigate technological evolution. Moving beyond traditional business storytelling, the interview explores how mapping enables better strategic decision-making through understanding component evolution, inertia, and gameplay, while also addressing current technological shifts in AI and cyber-physical systems. [...]
+Distributed systems researcher Brooklyn Zelenka unpacks the paradigm shift of local-first computing, where applications primarily run on users' devices and synchronize seamlessly without central servers.
+
+In a conversation with Julian Wood, she explains how this approach reduces latency, enables offline functionality, improves privacy through encryption, and democratizes app development—all while using sophisticated data structures. Perfect for collaborative tools and "cozy web" applications serving smaller communities, local-first software represents a fundamental rethinking of how we've built software for the past 30 years.
 
 TIMECODES
 00:00 Intro
-02:02 Storytelling vs mapping
-04:20 Understanding Wardley Maps
-19:38 Evolution & movement in technology
-26:31 Centralization vs decentralization
-31:05 Understanding inertia
-34:21 Strategic gameplay
-41:58 AI & the future of technology
-48:16 Outro
+00:47 Introduction to local-first computing
+03:19 Rethinking traditional software architecture
+13:47 Local-first implementation & data synchronization
+22:52 Security & use cases for local-first apps
+25:31 Getting started & future directions
+32:55 Outro
 
 RECOMMENDED BOOKS
-Simon Wardley • Wardley Maps • https://amzn.to/45U8Upr
-Simon Wardley • Wardley Mapping, The Knowledge • https://amzn.to/3XQEeDu
-Sun Tzu • The Art of War • https://amzn.to/2BqDeha
-Jonathan Allen & Thomas Blood • Reaching Cloud Velocity • https://amzn.to/3D20KkC
-Mark Craddock • Wardley Mapping Doctrine • https://amzn.to/4b3jRYb
-Susanne Kaiser • Adaptive Systems With Domain-Driven Design, Wardley Mapping & Team Topologies • https://amzn.to/3XTmNCc
-David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect • https://amzn.to/3VcHxC7
-Erik Schön • The Art Of Strategy • https://amzn.to/2UPzXPa
+Ford, Parsons, Kua & Sadalage • Building Evolutionary Architectures 2nd Edition • https://amzn.to/3lqr5Q8
+Ford, Richards, Sadalage & Dehghani • Software Architecture: The Hard Parts • https://amzn.to/3QeMgjR
+Mark Richards & Neal Ford • Fundamentals of Software Architecture • https://amzn.to/3wMBhoI
+Ford, Parsons & Kua • Building Evolutionary Architectures • https://amzn.to/3l0IOh2
+Neal Ford • Functional Thinking • https://amzn.to/3l6ND8M
+Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
+Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#WardleyMaps #WardleyMapping #Strategy #ArtOfStrategy #ArtOfWar #SunTzu #Inertia #Storytelling #WardleyMappingDoctrine #Patterns #Change #SimonWardley #CharlesHumble
+#LoFi #LocalFirst #LocalFirstSoftware #SoftwareArchitecture #DistributedSystems #DisorderlySystems #CloudInfrastructure #OAuth #CRDT #Cryptography #CodeAsData #BrooklynZelenka #JulianWood
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -486,28 +404,121 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Consistent Hashing Explained</title><link>https://blog.algomaster.io/p/consistent-hashing-explained</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/9d4c8499-0733-43fa-95f8-c3370c0ad2ea_1984x1462.png" length="" type=""/><pubDate>Tue, 18 Feb 2025 04:30:43 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[In a  where nodes (servers) are frequently , efficiently routing requests becomes challenging.A common approach is to use  and assign it to a server using , where N is the number of servers. However, this method is highly dependent on the number of servers, and any change in N can lead to , causing a major redistribution of keys (requests). addresses this issue by ensuring that only a small subset of keys need to be reassigned when nodes are added or removed.Popularized by , it has now become a fundamental technique in distributed databases like DynamoDB, Cassandra and ScyllaDB.In this article, we’ll explore what consistent hashing is, why it’s needed, how it works, and how to implement it in code.Meet  - a free adaptive AI IDE that transforms how you work, collaborating with you to run faster:Simply describe your project needs in natural language, and watch it build by TraeUpload your design files and let Trae assist in translating your visual concepts into clean, workable code.As you code, Trae learns your project patterns and provides contextually relevant suggestions to help you code more efficiently.Imagine you're building a high-traffic web application that serves millions of users daily. To handle the load efficiently, you distribute incoming requests across multiple backend servers using a .Your system consists of  (), and requests are assigned using a hash function that maps each user's IP address to a specific server.The process works like this:The load balancer takes a user’s IP address (or session ID).A  maps the IP to one of the backend servers by taking the sum of bytes in the IP address and computing  (since we have 5 servers).The request is routed to the assigned server, ensuring that the same user is always directed to the same server for session consistency.Everything Works Fine… Until You ScaleThis approach works as long as the number of servers remains constant. But what happens when you ?Scenario 1: Adding a New Server (S5)As traffic increases, you decide to  by adding a new backend server (). Now, the hash function must be modified to use  instead of since we have 6 servers now.This seemingly simple change completely disrupts the existing mapping, causing most users to be reassigned to different servers.This results into , leading to high overhead, and potential downtime.Scenario 2: Removing a Server (S4)Now, let’s say one of the servers () fails or is removed. The number of servers drops to 4, forcing the hash function to switch from  to .Even though only  server was removed, most users are reassigned to different servers. This can cause:Active users may be logged out or disconnected.Cached data becomes irrelevant, increasing database load.Severe performance degradation: The system may struggle to run efficiently.The Solution: Consistent Hashing offers a more scalable and efficient solution by ensuring that only a  are reassigned when scaling up or down.It performs really well when operated in dynamic environments, where the system scales up and down frequently.Consistent hashing is a distributed hashing technique used to efficiently distribute data across multiple nodes (servers, caches, etc.).It uses a  (hash ring) with a large and constant hash space.Both nodes (servers, caches, or databases) and keys (data items) are mapped to positions on this hash ring using a .Unlike modulo-based hashing, where changes in the number of nodes cause large-scale remapping, consistent hashing ensures that only a small fraction of keys are reassigned when a node is added or removed, making it highly scalable and efficient.In consistent hashing, when the number of nodes changes, only keys need to be reassigned, where  is the total number of keys and  is the total number of nodes.2.1 Constructing the Hash RingInstead of distributing keys based on , consistent hashing places both servers and keys on a circular hash ring.We use a large, fixed hash space ranging from  to  (assuming a 32-bit hash function).This creates a circular structure, where values wrap around after reaching the maximum limit.Placing Servers on the RingEach  is assigned a position on the hash ring by computing .Using the above example with , the hash function distributes them at different positions around the ring.When a key is added, its position is determined by computing .Example: a user’s request is assigned a position on the ring based on the hash of their IP address: We then move clockwise around the ring until we find the next available server.The key (or request) is assigned to this server for storage or retrieval. In case a key’s hash falls directly on a node’s position, it belongs to that node.Suppose we add a to the system.The position of  falls between  and  in the hash ring. takes over all keys (requests) that fall between  and , which were previously handled by .requests which were originally assigned to  will now be redirected to This demonstrates how consistent hashing efficiently redistributes keys with minimal disruption, ensuring that only a small subset of keys are reassigned when new servers are added.When a server, such as , fails or is removed from the system:All keys previously assigned to  are reassigned to the next available server in the ring ().Only the keys (requests) that were mapped to  need to move, while all other keys remain unaffected.This results in , unlike traditional hashing where removing a node would require reassigning most keys.In , each server is assigned  on the hash ring. However, this can lead to , especially when:The number of servers is small.Some servers accidentally get clustered together, creating .A server is , causing a sudden load shift to its immediate neighbor. are a technique used in consistent hashing to improve  and  by distributing data more evenly across servers.Instead of assigning one position per server, each physical server is assigned  (virtual nodes) on the hash ring.Each server is hashed multiple times to different locations on the ring.When a request (key) is hashed, it is assigned to the next virtual node in a clockwise direction.The request is then routed to the actual server associated with the virtual node.Assume we have three physical servers (S1, S2, S3). Without virtual nodes, their positions might be:S1 → Position 10
-S2 → Position 50
-S3 → Position 90If , all its keys must be reassigned to , which can create an overload.With , each server is hashed multiple times:S1-1 → Position 10
-S1-2 → Position 70
-S1-3 → Position 120
-S2-1 → Position 50
-S2-2 → Position 80
-S2-3 → Position 160
-S3-1 → Position 30
-S3-2 → Position 90
-S3-3 → Position 140Now, instead of just one point,  is represented at , making the distribution .If , its keys are more evenly redistributed among , rather than all going to .Stores hash values → server mappings. Uses  (replicas) for better load balancing.Maintains a  of hash values for efficient lookups.Tracks active physical servers.Calls  for each server, hashing it multiple times (based on ) to ensure even distribution.Uses  to convert strings into large integers for consistent placement on the hash ring.Generates multiple hash values for each server (, , etc.).Stores these in  and maintains a sorted order in  for fast lookup.Deletes the server’s hash values and its virtual nodes from  and .Hashes the input key and finds the closest  server using . Wraps around to the first node if necessary.If you found it valuable, hit a like ❤️ and consider subscribing for more such content every week.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>@LornaMitchell about #EngineeringDocumentation</title><link>https://www.youtube.com/watch?v=cY_Dn7EvIFk</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/cY_Dn7EvIFk?version=3" length="" type=""/><pubDate>Mon, 17 Feb 2025 13:01:01 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #GOTOcph #EngineeringDocumentation #Documentation #Diataxis #Automation #CICD #Vale #Teams #Team #ColleagueEnablement #SoftwareEngineering #Programming #LornaJaneMitchell #Viral #ViralShorts #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Sharding vs. Partitioning</title><link>https://blog.algomaster.io/p/sharding-vs-partitioning</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff725fe65-d580-4029-bd22-4b7ea239a228_1546x1090.png" length="" type=""/><pubDate>Tue, 6 May 2025 04:43:10 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[ and  are two of the most commonly confused concepts in system design.At first glance, they may seem similar, and people often use them interchangeably. But they are not the same.Both are techniques to divide and scale large databases; however, they differ in how the data is divided.Simply put typically means breaking down database tables while is about distributing data across .In this article, we’ll clear up the confusion between the two. You’ll learn:What each term really meansHow they work under the hoodReal-world examples with SQL and code is the process of splitting a large database table (or index) into smaller, more manageable chunks called , all within the .Each partition holds a subset of the data. This means the database can skip scanning the entire table and instead operate only on the relevant partition, which significantly improves performance for queries that filter on the .Partitioning is also great for . Instead of working on a huge monolithic table, you can operate on individual partitions when:Archiving or deleting old recordsReindexing subsets of dataEven though these partitions look and behave like separate sub-tables under the hood, your application still sees and interacts with them as .When you partition a table, each partition might be stored in a different physical file or disk location, but they almost always remain , managed by a .The database keeps an internal mapping of which partition holds which data, based on the  and the  you define.Example: Partitioning a  Table by MonthImagine you have a table called  that stores application logs with millions of rows. Each row has a  column.Instead of keeping all log entries in a single massive table, you can  using the  column as the partition key.So internally, the database will create partitions like: for January 2024 for February 2024 for March 2024...and so on.When you run a query that includes a filter on the partition key like:SELECT * FROM logs 
+WHERE timestamp BETWEEN '2024-03-01' AND '2024-03-31';The database knows it only needs to scan the  partition instead of scanning every row in the full  table. This is called , and it can drastically reduce disk I/O and speed up query execution.Also, if you want to delete logs older than a year, you can simply drop the entire partition:ALTER TABLE logs DETACH PARTITION logs_2023_03;
+DROP TABLE logs_2023_03;No need to delete rows one by one.Vertical vs. Horizontal PartitioningThere are two main forms of partitioning:  and  means splitting a table . Different sets of columns are stored in separate tables, but they’re still linked by the same primary key.Imagine a  table that looks like this:You might split this table into two:: , , : , , , Both tables use  as the primary key. The idea is that frequently accessed data (like name and email) stays in a compact, fast-to-query table, while less frequently accessed data (like user bios or settings) lives elsewhere.This kind of partitioning is often used to organize data based on access patterns, not necessarily to improve scalability or performance.You can think of vertical partitioning as a form of schema-level optimization. It is similar to , where you split data to avoid redundancy and improve manageability.Unlike horizontal partitioning, vertical partitioning usually requires . Many databases (like MySQL) don’t offer built-in features for vertical partitioning, so it’s typically handled at the application or schema level by database architects. means dividing a table . Each partition holds a subset of the rows, usually based on a condition like a value range or the result of a hash function.The table’s  across all partitions, only the data rows are split.Lets say, your  table grows to  and queries start to slow down.You could split it horizontally like this: Users with IDs from 1 to 100,000 Users with IDs from 100,001 to 200,000 Users with IDs from 200,001 to 300,000...and so on.Each partition contains different rows but follows the same structure as the original table.This approach helps improve performance and makes large datasets easier to manage. The database engine can skip irrelevant partitions during queries, reducing the amount of data it needs to scan.Horizontal partitioning is the most common form of partitioning in relational databases. In fact, when someone says “partitioning” without any qualifiers, they’re usually referring to horizontal partitioning.Example: Horizontal Partitioning in PostgreSQLAssume an e-commerce platform that stores millions of customer orders in a single  table. To keep queries fast and data manageable, you decide to horizontally partition the table by year using PostgreSQL’s native partitioning feature.Step 1: Create a Partitioned TableWe start by creating the parent table, partitioned by a  on the  column:CREATE TABLE orders (
+    order_id      SERIAL PRIMARY KEY,
+    customer_id   INT,
+    order_date    DATE,
+    amount        DECIMAL(10, 2)
+) PARTITION BY RANGE (order_date);This tells PostgreSQL that rows in the  table will be divided into multiple partitions based on the value of .Step 2: Create Child PartitionsNext, we define individual partitions for each year:-- Partition for 2024
+CREATE TABLE orders_2024 PARTITION OF orders
+    FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
+
+-- Partition for 2023
+CREATE TABLE orders_2023 PARTITION OF orders
+    FOR VALUES FROM ('2023-01-01') TO ('2024-01-01');
+
+-- Partition for older data (e.g., 2022 and below)
+CREATE TABLE orders_until_2022 PARTITION OF orders
+    FOR VALUES FROM (MINVALUE) TO ('2023-01-01');Now you have three partitions:Each one stores rows for a specific time range.When you insert rows into the parent  table, PostgreSQL automatically routes the data to the appropriate partition based on the .-- This goes into orders_2023
+INSERT INTO orders (customer_id, order_date, amount)
+VALUES (101, '2023-05-15', 299.99);
+
+-- This goes into orders_2024
+INSERT INTO orders (customer_id, order_date, amount)
+VALUES (202, '2024-03-10', 1299.00);When you run a query that filters on , PostgreSQL will only scan the relevant partition:SELECT * FROM orders
+WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31';This query touches , making it much faster than scanning the entire orders table.Common Horizontal Partitioning StrategiesIn , each partition is responsible for a continuous range of values from the partition key.: Partitioning a  table by month. → All records from January → All records from FebruaryThis approach is ideal when your queries frequently filter by date ranges or other numeric intervals. The database can quickly prune irrelevant partitions, making reads much faster.In , each partition is assigned a specific set of discrete values.: Partitioning a  table by region:Partition A → Partition B → REGION IN ('APAC', 'LATAM')This is useful when values don’t fall into neat ranges, but belong to known categories like countries, departments, or types.Here, a  is applied to the partition key to evenly distribute rows across a fixed number of partitions.This means user records are randomly and evenly spread across 4 partitions, helping prevent hotspots.Hash partitioning is great when:Your data doesn’t naturally group into ranges or listsYou want to achieve a You don't need to filter queries by specific rangesHowever, pruning is harder unless the filter condition aligns with the hash function.4. Composite PartitioningThis is a , combining two strategies, most commonly .First, partition a  table by  (range)Then, within each year, sub-partition by  (hash)This gives you the best of both worlds:Efficient pruning on high-level filters (like year)Even data distribution within each partitionIn traditional relational databases, partitioning is handled entirely by a single database server, even if partitions are stored across multiple disks or tablespaces.This means if that server goes down, all partitions become unavailable.However, some modern distributed SQL databases and extensions (like Citus forPostgreSQLextend this concept by allowing partitions to be distributed across multiple nodes. But at that point, you're no longer doing traditional partitioning. You’ve entered the world of .Let’s now dive into what sharding is, how it works, and the challenges it introduces. is the process of splitting your data and distributing them across multiple physically separate database servers (or instances).Each of these servers—called a —stores only a  of the overall dataset.At its core, sharding also involves  of data. What sets it apart is what happens next: those partitions are distributed across multiple servers. That’s the key difference between sharding and traditional partitioning.While  typically happens within a , sharding is designed for , also known as . Instead of scaling up by adding more resources to one machine, you scale out by adding more machines and distributing the load among them.You can think of sharding as a specialized form of horizontal partitioning—but extended across multiple servers.Sharding = Horizontal Partitioning + Distribution Across ServersEach shard behaves like a fully independent database. It stores, indexes, and queries its own slice of the data. From the application’s perspective, however, the collection of shards still represents .In a sharded setup, your data is split and distributed across multiple database servers. But how does the system know where each piece of data lives? : A self-contained database instance that stores a  of your overall data. Each shard functions like a mini-database handling its own portion of the workload.Shard Key (Partition Key): A column, or a combination of columns, used to decide  a particular record should be stored in. For example,  or  might serve as a shard key.Router / Application Logic: A mechanism that knows where to send queries or inserts. This could be built into your application logic or handled by a dedicated shard router or middleware layer.Central Metadata for Shard MappingTo keep everything organized, most sharded systems use a  that stores metadata about the shards. This metadata helps the system answer two key questions:Which shard holds the data for a given entity (like a user or order)?How do I connect to that shard (IP, port, credentials)?This metadata can live in:A special configuration table in a shared A distributed coordination system like , , or An  (e.g., Redis) that’s kept in sync with the primary metadataImagine a social media platform with hundreds of millions of users. Initially, you might store all user data in a single  table in one database:CREATE TABLE users (
+    user_id     BIGINT PRIMARY KEY,
+    username    TEXT,
+    email       TEXT,
+    bio         TEXT,
+    profile_pic TEXT,
+    created_at  TIMESTAMP
+);As your user base grows, this single database becomes a bottleneck:Vertical scaling hits hardware limitsThis is when you consider .Step 1: Define a Shard KeyYou choose  as the , because it's unique, evenly distributed, and present in nearly all user-related queries.Now, you decide to break your user base across , each hosted on a different database instance.Step 2: Choose a Sharding StrategyYou opt for  for simplicity.Shard A → Users with  from 1 to 25 millionShard B → 25 million to 50 millionShard C → 50 million to 75 millionShard D → 75 million to 100 millionEach shard has its own database server, like:Each one stores a separate copy of the  table, but only for its own range.You now maintain a  in a central configuration service (like Redis or a metadata DB):This map is consulted during every query to figure out .When a user logs in, your backend does something like:Your application connects only to the relevant shard for that request. No need to scan across all shards.Later, if you reach 200 million users, you can:Rebalance users if needed (using tools or background jobs)And none of your application servers need to be redeployed.Sharding helps you scale out, but it comes with its own set of complexities and trade-offs. Here are some of the most common challenges you’ll face:With sharding, you're no longer managing a single database. You're now dealing with multiple independent databases, each with its own data, indexes, and performance characteristics.Implement custom logic (or use middleware) to route queries based on the shard keyKeep your application aware of where each piece of data livesHandle edge cases like missing shard metadata or connection errorsIn short, your system design gets more powerful, but also more complicated.Running multiple shards means more moving parts:: You need to track the health, metrics, and errors of each shard separately: Every shard needs its own backup plan: High availability setups must be replicated for every shardThese tasks can grow quickly and require strong automation to stay manageable.Sharding works best when your queries are localized to a single shard.But what happens when you need a global view?Counting total users across all shardsGenerating system-wide analyticsSearching for a username that could exist in any shardIn such cases, your options are:Query each shard individually and aggregate results in your applicationUse a  or  (like Presto, Trino, or Citus)Maintain duplicate data or global indexes to speed up such operationsNone of these are simple. You need to design for cross-shard queries from the beginning if they’re important to your product.Eventually, a shard will outgrow its storage or compute limits.That’s when you need —the process of redistributing data across a new set of shards.Resharding can be painful:It may involve migrating millions of recordsRequires  to avoid impacting usersDemands  between routing logic, metadata, and database stateIf you're not using  or a flexible directory-based sharding scheme, resharding could involve downtime, data duplication, or complex rollback plans.Let’s wrap it up with the key takeaways:A  is a data-level concept. It refers to a subset of data in a database table.A  is a database-level concept. It refers to a full database instance responsible for a portion of the overall data. splits a large table into smaller parts, called partitions, within a single database server. (Partitioning = dividing data) takes it a step further by distributing those partitions across multiple database servers. (Sharding = dividing databases)You partition data to optimize performance inside a single machineYou shard when a single machine is no longer enough and you need to If you found it valuable, hit a like ❤️ and consider subscribing for more such content every week.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re finding this newsletter helpful and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>@ahuopjouwbuis about #IMEILogging in #AngryBirds</title><link>https://www.youtube.com/watch?v=NocdWBitQXY</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NocdWBitQXY?version=3" length="" type=""/><pubDate>Mon, 5 May 2025 12:00:46 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #Privacy #Crime #NationalSecurity #HumanRights #Security #CyberSecurity #BertHubert #GOTO
 
 Full version available here:
-https://youtu.be/Z5OrR99OpiY
+https://youtu.be/xtmc-gTSPeA
 
-Lorna Jane Mitchell - Head of Developer Advocate at Aiven & Writer for a Number of Outlets @LornaMitchell 
+Bert Hubert - Geeky Entrepreneur @ahuopjouwbuis 
 
-RECOMMENDED BOOK
-Kevlin Henney • 97 Things Every Programmer Should Know • https://amzn.to/2Yahf9U
-Henney & Monson-Haefel • 97 Things Every Software Architect Should Know • https://amzn.to/3pZuHsQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
-Michael Jackson • Software Requirements and Specifications • https://amzn.to/3ql2T14
+RESOURCES
+https://twitter.com/bert_hu_bert
+https://linkedin.com/in/bert-hubert-b05452
+https://berthub.eu
+
+RECOMMENDED BOOKS
+Liz Rice • Container Security • https://amzn.to/3oU4iJe
+Liz Rice • Kubernetes Security • https://www.oreilly.com/library/view/kubernetes-security/9781492039075
+Aaron Parecki • OAuth 2.0 Simplified • https://amzn.to/2A3IMOf
+Aaron Parecki • OAuth 2.0 Servers • https://amzn.to/3ecHEsz
+Aaron Parecki • The Little Book of OAuth 2.0 RFCs • https://amzn.to/3i7qnlC
+Erdal Ozkaya • Cybersecurity: The Beginner's Guide • https://amzn.to/2T6OIj3
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Side-Effects Are The Complexity Iceberg • Kris Jenkins • YOW! 2024</title><link>https://www.youtube.com/watch?v=_nG09Z_tdUU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/_nG09Z_tdUU?version=3" length="" type=""/><pubDate>Sun, 4 May 2025 12:00:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
+https://yowcon.com
+
+Kris Jenkins - Developer Advocate, Software Developer, Podcast Host, Conference Speaker & Geek @krisajenkins 
+
+RESOURCES
+https://bsky.app/profile/krisajenkins.bsky.social
+https://www.linkedin.com/in/krisjenkins
+https://twitter.com/krisajenkins
+https://github.com/krisajenkins
+http://blog.jenkster.com
+
+ABSTRACT
+Side-effects are insidious beasts. They make code harder to test, harder to use, and harder to compose. And yet to most programmers, they're almost completely invisible. And that means they sneak into our codebases without meeting any resistance.
+
+So let's take a closer look at side-effects and learn how to fight back. By training yourself to spot them, you can start to eliminate one of the sneakiest causes of software complexity. You'll understand why some code is naturally easier to test, and why some APIs are inherently harder to work with. (And you'll be able to write more of the good kinds!)
+
+Then, as we zoom out, you'll see why side-effects are the unifying force behind some of the most exciting ideas in modern programming, from immutable data structures and functional programming, through the latest developments in Java and the roots of Rust all the way to the evolution of event systems and high-scale databases.
+
+There's an iceberg of complexity hiding in your systems' side-effects and by the end of this talk you'll be able to spot it and have a raft of ideas for tackling it, from devops to database design and beyond. [...]
+
+TIMECODES
+00:00 Intro
+01:27 Let's talk about side effects
+06:03 APIs & contracts
+08:51 Hidden dependency graphs
+10:47 Data
+12:27 Programming is doomed
+12:46 What can we do about it?
+15:01 What if we went further?
+18:06 What about other side-effects?
+24:15 Functional programming
+31:06 So, let's talk about side effects
+32:50 Outro
+
+Download slides and read the full abstract here:
+https://yowcon.com/brisbane-2024/sessions/3592
+
+RECOMMENDED BOOKS
+Sandy Maguire • Thinking with Types • https://leanpub.com/thinking-with-types
+Edwin Brady • Type-Driven Development with Idris • https://amzn.to/432GZTi
+Maryann Kisamore • Basics Of Apache Kafka • https://amzn.to/3tkVYFD
+Mitch Seymour • Mastering Kafka Streams and ksqlDB • https://amzn.to/3HZ18wK
+Ted Dunning & Ellen Friedman • Streaming Architecture • https://amzn.to/3lhk3Kb
+Liz Rice • Container Security • https://amzn.to/3oU4iJe
+Neal Ford • Functional Thinking • https://amzn.to/3DdP35B
+Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
+Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Complexity #Testing #Rustlang #Haskell #Microservices #Types #TypeSystem #ModerTypeSystem #SoftwareDesign #Programming #SoftwareEngineering #KrisJenkins #YOWcon
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
