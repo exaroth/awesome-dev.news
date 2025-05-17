@@ -1,220 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>HTML Email Accessibility Report 2025</title><link>https://css-tricks.com/html-email-accessibility-report-2025/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Fri, 16 May 2025 14:38:19 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[This is the third full year for this report and we are disappointed to see the same issues as we have in previous years. The top 10 issues haven’t changed order since last year, apart from the addition of color contrast, which can be put down to a change in the testing and reporting.The results come from an analysis of 443,585 emails collected from the past year. According to EMC, only 21 emails passed all accessibility checks — and they were all written by the same author representing two different brands. And, further, that author represents one of the companies that not only sponsors the study, but develops the automated testing tool powering the analysis.Automated testing is the key here. That’s needed for a project looking at hundreds of thousands of emails, but it won’t surface everything, as noted:Email that pass our checks may still have accessibility issues that we cannot pick up through automated testing. For example, we check if an alt attribute is present on an image, but we do not check if the text is suitable for that image in the context of that message.The most common issues relate to internationalization, like leaving out the  (96% of emails) and  (98% of emails) attributes. But you’ll be familiar with most of what rounds up the top 10, because it lines up with WebAIM’s findings:Links must have discernible textElement has insufficient color contrastImages must have alternate textLink text should be descriptiveLinks must be distinguishable without relying on colorI appreciate that the report sheds a light on what accessibility features are supported by specific email clients, such as Gmail. The report outlines a set of 20 HTML, CSS, and ARIA features they look for and found that only one email client (SFR Mail?) of the 44 evaluated supports all of the features. Apple Mail and Samsung Email are apparently close behind, but the other 41? Not so much.AilSo, yeah. Email has a ways to go, like a small microcosm of the web itself.]]></content:encoded></item><item><title>The power of generators</title><link>https://javascriptweekly.com/issues/736</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[ — Dives into the complexities of the  keyword, explaining how its value is ultimately determined by the context in which a function is called, rather than where it’s defined. It’s been many years since we’ve covered this elementary topic, but this is a fantastic, fresh two-part take.]]></content:encoded></item><item><title>Scroll-Driven Animations Inside a CSS Carousel</title><link>https://css-tricks.com/scroll-driven-animations-inside-a-css-carousel/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 15 May 2025 12:30:59 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I was reflecting on what I learned about CSS Carousels recently. There’s a lot they can do right out of the box (and some things they don’t) once you define a scroll container and hide the overflow.Hey, isn’t there another fairly new CSS feature that works with scroll regions? Oh yes, that’s Scroll-Driven Animations. Shouldn’t that mean we can trigger an animation while scrolling through the items in a CSS carousel?Why yes, that’s exactly what it means. At least in Chrome at the time I’m playing with this:It’s as straightforward as you might expect: define your keyframes and apply them on the carousel items:@keyframes foo {
+  from {
+    height: 0;
   }
-</style>
-
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
-
-    <!-- Repeat for all properties -->
-  </div>
-</div>
-
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
+  to {
+    height: 100%;
+    font-size: calc(2vw + 1em);
   }
 }
 
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
+.carousel li {
+  animation: foo linear both;
+  animation-timeline: scroll(inline);
+}There are more clever ways to animate these things of course. But what’s interesting to me is that this demo now combines CSS Carousels  Scroll-Driven Animations. The only rub is that the demo also slaps CSS Scroll Snapping in there with smooth scrolling, which is effectively wiped out when applying the scroll animation.I thought I might work around that with a  timeline instead. That certainly makes for a smoother animation that is applied to each carousel item as they scroll into view, but no dice on smooth scrolling.]]></content:encoded></item><item><title>Styling console text in Node.js</title><link>https://2ality.com/2025/05/ansi-escape-sequences-nodejs.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore how we can style text that we log to the console in Node.js.Some of the examples use a Unix shell but most of the code should also work on Windows.]]></content:encoded></item><item><title>This Isn’t Supposed to Happen: Troubleshooting the Impossible</title><link>https://css-tricks.com/this-isnt-supposed-to-happen-troubleshooting-the-impossible/</link><author>John Rhea</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/05/cars.mov" length="" type=""/><pubDate>Wed, 14 May 2025 14:01:42 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I recently rebuilt my portfolio (johnrhea.com). After days and days of troubleshooting and fixing little problems on my local laptop, I uploaded my shiny new portfolio to the server — and triumphantly watched it not work at all…The browser parses and runs JavaScript, right? Maybe Chrome will handle something a little different from Firefox, but if the same code is on two different servers it should work the same in Chrome (or Firefox) no matter which server you look at, right? First, the dynamically generated stars wouldn’t appear and when you tried to play the game mode, it was just blank. No really terrible website enemies appeared, nor could they shoot any bad experience missiles at you, at least, not in the game mode, but I guess my buggy website literally sent a bad experience missile at you. Over on the page showing my work, little cars were supposed to zoom down the street, but they didn’t show up, either.Let me tell you, there was no crying or tears of any kind. I was very strong and thrilled, just thrilled, to accept the challenge of figuring out what was going on. I frantically googled things like “What could cause JavaScript to act differently on two servers?”, “Why would a server change how JavaScript works?”, and “Why does everyone think I’m crying when I’m clearly not?” But to no avail.There were some errors in the console, but not ones that made sense. I had an SVG element that we’ll call  (because that’s what I named it). I created it in vanilla JavaScript, added it to the page, and zoomed it down the gray strip approximating a street. (It’s a space theme where you can explore planets. It’s really cool. I swear.) I was setting transforms on  using  and it was erroring out.  was undefined.I went back to my code on my laptop. Executes flawlessly. No errors.To get past the initial error, I switched it from  to using  e.g. car.setAttribute('style', 'transform: translate(100px, 200px)');. This just got me to the next error.  was erroring out on some  attributes I was using to hold information about the , e.g.  would also come back undefined when I tried to access them. This latter technology has been supported in SVG elements since 2015, yet it was not working on the server, and worked fine locally. What the Hoobastank could be happening? (Yes, I’m referencing the 1990s band and, no, they have nothing to do with the issue. I just like saying… errr… writing… their name.)With search engines not being much help (mostly because the problem isn’t supposed to exist), I contacted my host thinking maybe some kind of server configuration was the issue. The very polite tech tried to help, checking for server errors and other simple misconfigurations, but there were no issues he could find. After reluctantly serving as my coding therapist and listening to my (tearless) bemoaning of ever starting a career in web development, he basically said they support JavaScript, but can’t really go into custom code, so best of luck. Well, thanks for nothing, person whom I will call Truckson! (That’s not his real name, but I thought “Carson” was too on the nose.)Next, and still without tears, I tried to explain my troubles to ChatGPT with the initial prompt: “Why would JavaScript on two different web servers act differently?” It was actually kind of helpful with a bunch of answers that turned out to be very wrong.Maybe there was an inline SVG vs SVG in an  issue? That wasn’t it.Could the browser be interpreting the page as plain text instead of HTML through some misconfiguration? Nope, it was pulling down HTML, and the headers were correct.Maybe the browser is in quirks mode? It wasn’t.Could the SVG element be created incorrectly? You can’t create an SVG element in HTML using document.createElement('svg') because SVG actually has a different namespace. Instead, you have to use document.createElementNS("http://www.w3.org/2000/svg", 'svg'); because SVG and HTML use similar, but very different, standards. Nope, I’d used the  function and the correct namespace. At several points during the chat session, ChatGPT started replies with, “Ah, now we’re getting spicy 🔥” as well as, “Ah, this is a juicy one. 🍇” (emojis included). It also used the word “bulletproof” a few times in what felt like a tech-bro kind of way. Plus there was a “BOOM. 💥 That’s the smoking gun right there”, as well as an “Ahhh okay, sounds like there’s still a small gremlin in the works.” I can’t decide whether I find this awesome, annoying, horrible, or scary. Maybe all four?Next, desperate, I gave our current/future robot overlord some of my code to give it context and show it that none of these were the issue. It still harped on the misconfiguration and kept having me output things to check if the car element was an SVG element. Again, locally it was an SVG element, but on the server it came back that it wasn’t.Maybe using  to add some SVG elements to the car element garbled the  element into not being an SVG element? ChatGPT volunteered to rewrite a portion of code to fix this. I put the new code into my system. It worked locally! Then I uploaded it to the server and… no dice. Same error was still happening.I wept openly. I mean… I swallowed my emotions in a totally healthy and very manly way. And that’s the end of the article, no redemption, no solution, no answer. Just a broken website and the loud sobs of a man who doesn’t cry… ever…Okay, you’re right. You know I wouldn’t leave you hanging like that. After the non-existent sob session, I complained to ChatGPT, it again gave me some console logs including having the  element print out its namespace and that’s when the answer came to me. You see the namespace for an SVG is this:http://www.w3.org/2000/svgWhat it actually printed was this:https://www.w3.org/2000/svgOne letter. That’s the difference.Normally you want everything to be secure, but that’s not really how namespaces work. And while the differences between these two strings is minimal, I might as well have written document.createElementNS("Gimme-them-SVGzers", "svg");. Hey, W3C, can I be on the namespace committee?But why was it different? You’d be really mad if you read this far and it was just a typo in my code. Right?You’ve invested some time into this article, and I already did the fake-out of having no answer. So, having a code typo would probably lead to riots in the streets and hoards of bad reviews.Don’t worry. The namespace was correct in my code, so where was that errant “s” coming from?I remembered turning on a feature in my host’s optimization plugin: automatically fix insecure pages. It goes through and changes insecure links to secure ones. In 99% of cases, it’s the right choice. But apparently it also changes namespace URLs in JavaScript code.I turned that feature off and suddenly I was traversing the galaxy, exploring planets with cars zooming down gray pseudo-elements, and firing lasers at really terrible websites instead of having a really terrible website. There were no tears (joyful or otherwise) nor were there celebratory and wildly embarrassing dance moves that followed.Have a similar crazy troubleshooting issue? Have you solved an impossible problem? Let me know in the comments.]]></content:encoded></item><item><title>This Week In React #234: TanStack DB, TanStack Query, React Router, Vite, Redux Toolkit, Parcel | 0.80 RC, Expo, Legal, Re.Pack, Skia, Radon IDE, Rive | Rslib, Composites, Lightning CSS, Accessibility, V8</title><link>https://thisweekinreact.com/newsletter/234</link><author></author><category>frontend</category><pubDate>Wed, 14 May 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[With a slightly quieter week, we come mostly with great articles we think you might like, alongside a few interesting releases! We're so excited about the Vite team working on RSC support, a new React Query proposal, in conjunction with the features coming in React Native 0.80, but there are still many new topics here to look at.As always, thanks for supporting us on your favorite platform:Some red flags PostHog has found in teams failing to ship fast: waiting for 1:1s to solve problems, needing other teams to approve your work, and sales outnumbering engineering 🚩A brand-new library from the TanStack team has been introduced in collaboration with ElectricSQL, which brings a lot of exciting features. It gives you a blazing fast query engine, fine-grained reactivity for minimal re-renders, robust transaction primitives and normalized data by default!It is built on TanStack Store and is working with and alongside TanStack Query, which extends its capabilities with collections, live queries and optimistic mutations.Set up subscriptions in your B2B or B2C app without writing custom payment code or building your own UI.Create a pricing page with the  componentConnect with Stripe—no manual API calls, no manual syncingManage plans and entitlements all within the Clerk dashboard helper to control access based on a customer’s plan, features, and permissionsManage user and subscription data all in one placeChiara Mooney from Microsoft described how they use React Native to implement the newest Copilot features in their flagship MS Office suite used .They are using it with the island architecture, a pattern embraced in the frontend ecosystem by frameworks such as Astro.Interesting to see how RN is used at the highest enterprise level on platforms which aren't just Android or iOS.]]></content:encoded></item><item><title>Using Pages CMS for Static Site Content Management</title><link>https://css-tricks.com/using-pages-cms-for-static-site-content-management/</link><author>Ryan Trimble</author><category>frontend</category><pubDate>Mon, 12 May 2025 12:42:10 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Friends, I’ve been on the hunt for a  content management system for static sites for… well, about as long as we’ve all been calling them “static sites,” honestly.I know, I know: there are a  of content management system options available, and while I’ve tested several, none have really been , y’know? Weird pricing models, difficult customization, some even end up becoming a  to manage.Also, I  enjoy building with site generators such as Astro or Eleventy, but pitching Markdown as the means of managing content is less-than-ideal for many “non-techie” folks.A few expectations for content management systems might include: The most important feature, why you might opt to use a content management system in the first place. Look, I’m just trying to update some HTML, I don’t want to think too much about database tables. CMS tools work best when multiple contributors work together, contributors who probably don’t know Markdown or what GitHub is. No website is the same, so we’ll need to be able to make custom fields for different types of content.Not a terribly long list of demands, I’d say; fairly reasonable, even. That’s why I was happy to discover Pages CMS.According to its own home page, Pages CMS is the “The No-Hassle CMS for Static Site Generators,” and I’ll to attest to that. Pages CMS has largely been developed by a single developer, Ronan Berder, but is open source, and accepting pull requests over on GitHub.Taking a lot of the “good parts” found in other CMS tools, and a single configuration file, Pages CMS combines things into a sleek user interface.Pages CMS includes lots of options for customization, you can upload media, make editable files, and create entire collections of content. Also, content can have all sorts of different fields, check the docs for the full list of supported types, as well as completely custom fields.There isn’t really a “back end” to worry about, as content is stored as flat files inside your git repository. Pages CMS provides folks the ability to manage the content within the repo, without needing to actually know how to use Git, and I think that’s neat.User Authentication works two ways: contributors can log in using GitHub accounts,  contributors can be invited by email, where they’ll receive a password-less, “magic-link,” login URL. This is nice, as GitHub accounts are less common outside of the dev world, shocking, I know.Oh, and Pages CMS has a  barrier for entry, as it’s free to use.Pages CMS and Astro content collectionsI’ve created a repository on GitHub with Astro and Pages CMS using Astro’s default blog starter, and made it available publicly, so feel free to clone and follow along.I’ve been a fan of Astro for a while, and Pages CMS works well alongside Astro’s content collection feature. Content collections make globs of data easily available throughout Astro, so you can hydrate content inside Astro pages. These globs of data can be from different sources, such as third-party APIs, but commonly as directories of Markdown files. Guess what Pages CMS is really good at? Managing directories of Markdown files!Content collections are set up by a collections configuration file. Check out the  file in the project, here we are defining a content collection named :import { glob } from 'astro/loaders';
+import { defineCollection, z } from 'astro:content';
 
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
+const blog = defineCollection({
+// Load Markdown in the `src/content/blog/` directory.
+loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    title: z.string(),
+   description: z.string(),
+    // Transform string to Date object
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    heroImage: z.string().optional(),
+  }),
+});
 
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
+export const collections = { blog };The  content collection checks the  directory for files matching the  file type, the Markdown file format. The  property is optional, however, Astro provides helpful type-checking functionality with Zod, ensuring data saved by Pages CMS works as expected in your Astro site.Alright, now that Astro knows where to look for  content, let’s take a look at the Pages CMS configuration file, :content:
+  - name: blog
+    label: Blog
+    path: src/content/blog
+    filename: '{year}-{month}-{day}-{fields.title}.md'
+    type: collection
+    view:
+      fields: [heroImage, title, pubDate]
+    fields:
+      - name: title
+        label: Title
+        type: string
 
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
+      - name: description
+        label: Description
+        type: text
 
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
-}
+      - name: pubDate
+        label: Publication Date
+        type: date
+        options:
+          format: MM/dd/yyyy
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
-}
+      - name: updatedDate
+        label: Last Updated Date
+        type: date
+        options:
+          format: MM/dd/yyyy
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+      - name: heroImage
+        label: Hero Image
+        type: image
+
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: site-settings
+    label: Site Settings
+    path: src/config/site.json
+    type: file
+    fields:
+      - name: title
+        label: Website title
+        type: string
+
+      - name: description
+        label: Website description
+        type: string
+        description: Will be used for any page with no description.
+
+      - name: url
+        label: Website URL
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+
+      - name: cover
+        label: Preview image
+        type: image
+        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+
+media:
+  input: public/media
+  output: /mediaThere is a lot going on in there, but inside the  section, let’s zoom in on the  object.- name: blog
+  label: Blog
+  path: src/content/blog
+  filename: '{year}-{month}-{day}-{fields.title}.md'
+  type: collection
+  view:
+    fields: [heroImage, title, pubDate]
+  fields:
+    - name: title
+      label: Title
+      type: string
+
+    - name: description
+      label: Description
+      type: text
+
+    - name: pubDate
+      label: Publication Date
+      type: date
+      options:
+        format: MM/dd/yyyy
+
+    - name: updatedDate
+      label: Last Updated Date
+      type: date
+      options:
+        format: MM/dd/yyyy
+
+    - name: heroImage
+      label: Hero Image
+      type: image
+
+    - name: body
+      label: Body
+      type: rich-textWe can point Pages CMS to the directory we want to save Markdown files using the  property, matching it up to the  location Astro looks for content.For the  we can provide a pattern template to use when Pages CMS saves the file to the content collection directory. In this case, it’s using the file date’s , , and , as well as the blog item’s title, by using  to reference the title field. The filename can be customized in many different ways, to fit your scenario.filename: '{year}-{month}-{day}-{fields.title}.md'The  property tells Pages CMS that this is a collection of files, rather than a single editable file (we’ll get to that in a moment).In our Astro content collection configuration, we define our  collection with the expectation that the files will contain a few bits of meta data such as: , , , and a few more properties.We can mirror those requirements in our Pages CMS  collection as . Each field can be customized for the type of data you’re looking to collect. Here, I’ve matched these fields up with the default Markdown frontmatter found in the Astro blog starter.fields:
+  - name: title
+    label: Title
+    type: string
+
+  - name: description
+    label: Description
+    type: text
+
+  - name: pubDate
+    label: Publication Date
+    type: date
+    options:
+      format: MM/dd/yyyy
+
+  - name: updatedDate
+    label: Last Updated Date
+    type: date
+    options:
+      format: MM/dd/yyyy
+
+  - name: heroImage
+    label: Hero Image
+    type: image
+
+  - name: body
+    label: Body
+    type: rich-textNow, every time we create a new  item in Pages CMS, we’ll be able to fill out each of these fields, matching the expected schema for Astro.Aside from collections of content, Pages CMS also lets you manage editable files, which is useful for a variety of things: site wide variables, feature flags, or even editable navigations.Take a look at the  object, here we are setting the  as , and the  includes the filename .- name: site-settings
+  label: Site Settings
+  path: src/config/site.json
+  type: file
+  fields:
+    - name: title
+      label: Website title
+      type: string
+
+    - name: description
+      label: Website description
+      type: string
+      description: Will be used for any page with no description.
+
+    - name: url
+      label: Website URL
+      type: string
+      pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+
+    - name: cover
+      label: Preview image
+      type: image
+      description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)The fields I’ve included are common site-wide settings, such as the site’s , , , and  image.Speaking of images, we can tell Pages CMS where to store media such as images and video.media:
+  input: public/media
+  output: /mediaThe  property explains where to store the files, in the  directory within our project.The  property is a helpful little feature that conveniently replaces the file path, specifically for tools that might require specific configuration. For example, Astro uses Vite under the hood, and Vite already knows about the  directory and complains if it’s included within file paths. Instead, we can set the  property so Pages CMS will only point image path locations starting at the inner  directory instead.To see what I mean, check out the test post in the  folder:---
+title: 'Test Post'
+description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
+pubDate: 05/03/2025
+heroImage: '/media/blog-placeholder-1.jpg'
+---The  now property properly points to  instead of .As far as configurations are concerned, Pages CMS can be as simple or as complex as necessary. You can add as many collections or editable files as needed, as well as customize the fields for each type of content. This gives you a lot of flexibility to create sites!Now that we have our Astro site set up, and a  file, we can connect our site to the Pages CMS online app. As the developer who controls the repository, browse to https://app.pagescms.org/ and sign in using your GitHub account.You should be presented with some questions about permissions, you may need to choose between giving access to all repositories or specific ones. Personally, I chose to only give access to a single repository, which in this case is my  repo.After providing access to the repo, head on back to the Pages CMS application, where you’ll see your project listed under the “Open a Project” headline.Clicking the open link will take you into the website’s dashboard, where we’ll be able to make updates to our site.Taking a look at our site’s dashboard, we’ll see a navigation on the left side, with some familiar things. is the collection we set up inside the  file, this will be where we we can add new entries to the blog. is the editable file we are using to make changes to site-wide variables. is where our images and other content will live. is a spot where we’ll be able to edit our  file directly. allows us to invite other folks to contribute content to the site.We can create a new blog post by clicking the  button in the top rightHere we can fill out all the fields for our blog content, then hit the  button.After saving, Pages CMS will create the Markdown file, store the file in the proper directory, and automatically commit the changes to our repository. This is how Pages CMS helps us manage our content without needing to use git directly.The only thing left to do is set up automated deployments through the service provider of your choice. Astro has integrations with providers like Netlify, Cloudflare Pages, and Vercel, but can be hosted anywhere you can run  applications.Astro is typically very fast to build (thanks to Vite), so while site updates won’t be , they will still be fairly quick to deploy. If your site is set up to use Astro’s server-side rendering capabilities, rather than a completely static site, the changes might be much faster to deploy.Using a template as reference, we checked out how Astro content collections work alongside Pages CMS. We also learned how to connect our project repository to the Pages CMS app, and how to make content updates through the dashboard. Finally, if you are able, don’t forget to set up an automated deployment, so content publishes quickly.]]></content:encoded></item></channel></rss>

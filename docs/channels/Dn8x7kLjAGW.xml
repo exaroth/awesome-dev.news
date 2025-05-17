@@ -1,128 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>How Autonomy Saved One of Spotify’s Most Loved Features • Joakim Sunden • YOW! 2024</title><link>https://www.youtube.com/watch?v=6bzS5GW6Ad4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/6bzS5GW6Ad4?version=3" length="" type=""/><pubDate>Sun, 23 Feb 2025 13:00:15 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Stop Drawing Pointless Arrows: Taming Complexity with Diagrams • David Khourshid • YOW! 2024</title><link>https://www.youtube.com/watch?v=d3hVTXrV7ms</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/d3hVTXrV7ms?version=3" length="" type=""/><pubDate>Sat, 17 May 2025 12:01:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
 https://yowcon.com
 
-Joakim Sundén - Founding Partner at Better Product Work & Co-Creator of the Spotify Model @joakimsunden-crisp 
-
-ORIGINAL TALK TITLE
-How Autonomy Saved One of Spotify’s Most Loved Features From Being Killed
+David Khourshid - Founder of Stately.ai @davidkpiano 
 
 RESOURCES
-https://bsky.app/profile/joakimsunden.bsky.social
-https://twitter.com/joakimsunden
-https://linkedin.com/in/joakimsunden
-https://joakimsunden.com
-
-ABSTRACT
-"I would have killed that if it was just me, 100%,” said Spotify founder and CEO Daniel Ek about Discover Weekly, a feature that would become one of Spotify’s most loved product features, almost a brand in itself.
-
-Designers and senior engineers were equally skeptical, but the team was still able to ship the feature.
-
-In this talk, you’ll learn how Spotify’s organisational culture of Agile management and autonomous teams enables innovation, using the Discover Weekly feature as an example. [...]
-
-TIMECODES
-00:00 Intro
-02:14 Discover Weekly
-05:16 Spotify HQ
-06:12 Radio
-06:50 Discover
-09:54 Re-connecting the dots
-12:44 "Traditional" organizations
-15:06 Autonomous squad
-16:53 4 Risks in product development
-18:12 Focused on outcomes, not output
-19:11 Activities, epics, features, stories
-19:27 These bets have a low success rate
-21:03 Moving from opinions to data
-20:38 Alignment – Autonomy
-21:37 Aligned autonomy
-22:57 Gatekeeping vs facilitating context
-25:29 Iterate, iterate, iterate
-27:07 Daniel Ek
-27:32 Celebrate failure
-27:55 Limit blast radius
-28:37 Watching the data
-28:57 Watching the buzz
-29:28 Experiments
-32:59 Winning formula
-33:36 Conclusions
-38:13 Innovation can't be forced
-38:24 Outro
-
-Download slides and read the full abstract here:
-https://yowcon.com/brisbane-2024/sessions/3442
-
-RECOMMENDED BOOKS
-Joakim Sunden & Marcus Hammarberg • Kanban in Action • https://amzn.to/3n1Fmna
-Ron Kohavi, Diane Tang & Ya Xu • Trustworthy Online Controlled Experiments • https://amzn.to/3JlY4NZ
-Gene Kim, Jez Humble, Nicole Forsgren, Patrick Debois & John Willis • The DevOps Handbook • https://amzn.to/3C0Rj0C
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
-Jennifer Petoff, Niall Murphy, Betsy Beyer & Chris Jones • Site Reliability Engineering • https://amzn.to/3xYac2Q
-Marty Cagan • Inspired • https://amzn.to/3dPz7iq
-Marty Cagan • Empowered • https://amzn.to/42kuKAj
-Reed Hastings & Erin Meyer • No Rules Rules • https://amzn.to/3Cjottx
-Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps • https://amzn.to/3tCz1xO
-Fred Brooks Jr. • The Mythical Man-Month • https://amzn.to/31NJc5C
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#Spotify #SpotifyFeature #Autonomy #SoftwareEngineering #Programming #DiscoverWeekly #Agile #AgileDevelopment #JoakimSunden #Crisp #Kanban #Data #ContinuousImprovement #AlignedAutonomy #YOWcon
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>GitHub Copilot - How It Works, How We Got Here, Where It&apos;s Going • Damian Brady • YOW! 2024</title><link>https://www.youtube.com/watch?v=ZUS7r3c3iGc</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ZUS7r3c3iGc?version=3" length="" type=""/><pubDate>Sat, 22 Feb 2025 13:00:46 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
-https://yowcon.com
-
-Damian Brady - Staff Developer Advocate at GitHub @damianbrady451 
-
-RESOURCES
-https://bsky.app/profile/@damovisa.me
-https://mastodon.social/@damovisa@hachyderm.io
-https://twitter.com/damovisa
-https://github.com/damovisa
-https://damianbrady.com.au
+https://bsky.app/profile/davidkpiano.bsky.social
+https://twitter.com/davidkpiano
+https://www.linkedin.com/in/davidkpiano
+https://github.com/davidkpiano
 
 Links
-https://githubnext.com
+https://youtu.be/y8OnoxKotPQ
+https://sqldbm.com
+https://database.build
+https://swimlanes.io
+https://github.com/statelyai/inspect
+https://appmap.io
+https://state.new
+https://stately.ai/docs
+https://www.figma.com/figjam
 
 ABSTRACT
-GitHub Copilot started life as code completion on steroids, but since its GA release in 2022, its capabilities have grown. GitHub Copilot now lives in more places than just your IDE. It's in your terminal, your browser, and in your pull requests. It can learn your entire codebase and help you understand it.
+Complexity in software doesn't have to be a black box. As features evolve, bugs get fixed, and edge cases emerge, understanding software can become increasingly challenging—not just for developers, but for the entire team.
 
-In this session, we'll look at what Copilot is, what it's become, and how it works. We'll run through the software engineering lifecycle from idea to production and highlight all the areas where tools like Copilot can save you time and effort. Finally, we'll talk about how GitHub Copilot was created, how it's being improved, and a little about the future of AI tooling. [...]
+In this talk, we'll explore how essential diagrams, like state machines, sequence diagrams, and entity relationship diagrams, can help manage that complexity. We'll also go a step further, discussing how these diagrams can remain synchronized with the code and how they can be analyzed to uncover logical flaws, potential issues, and missing use cases. [...]
 
 TIMECODES
 00:00 Intro
-01:38 GitHub Copilot
-05:21 GitHub Copilot journey
-09:36 SPACE framework
-16:26 Demo
-32:29 What's next?
-37:52 AI-native development
-45:17 Outro
+03:30 What is a diagram?
+10:01 UML: The good parts
+10:25 Entity-relationship diagrams
+14:01 Sequence diagrams
+21:53 State machines
+33:24 Diagrams reveal complexity
+34:36 Intention, audience & scope
+36:21 Making diagrams is easy
+36:59 Unlabeled objects
+37:24 Pointless arrows
+37:56 Too much detail
+38:29 Too little detail
+39:07 Mixing diagrams
+39:53 Hard to follow
+41:28 Symbol & color overuse
+42:42 Tools & resources
+45:29 Outro
 
 Download slides and read the full abstract here:
-https://yowcon.com/brisbane-2024/sessions/3444
+https://yowcon.com/brisbane-2024/sessions/3496
 
 RECOMMENDED BOOKS
-Leo Porter & Daniel Zingaro • Learn AI-assisted Python Programming • https://amzn.to/3Pv3Hx7
-Pritesh Mistry • Github Copilot for Developers • https://amzn.to/3TupBSm Kurt Dowswell • Programming with GitHub Copilot • https://amzn.to/3TM2HaL
-Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Heidi Helfand • Dynamic Reteaming • https://amzn.to/3Fvu5BA
+Abby Covert & Jenny Benevento • Stuck? Diagrams Help. • https://amzn.to/4doZR3G
+Ian Horrocks • Constructing the User Interface with Statecharts • https://amzn.to/4dge42x
+Carl Larson & Frank M J LaFasto • Teamwork • https://amzn.to/4cFWseQ
+Gene Kim & Steve Spear • Wiring the Winning Organization • https://amzn.to/3QJcfBp
+Ichak Adizes • Managing Corporate Lifecycles • https://amzn.to/3MjpRQV
+Henri Lipmanowicz & Keith McCandless • The Surprising Power of Liberating Structures • https://amzn.to/3AtmXXt
+Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#AI #GenAI #LLM #LargeLanguageModels #GitHubCopilot #RetrievalAugmentedGeneration #RAG #ChatGPT #SPACEframework #GitHubSpark #ReinforcementLearning #DamianBrady #YOWcon
+#Complexity #Diagrams #PointlessArrows #UML #UnifiedModelingLanguage #ObjectManagementGroup #StateMachines #SequenceDiagram #EntityRelationshipDiagram #DavidKhourshid #YOWcon
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -133,69 +74,61 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Efficiency Paradox: How to Save Yourself &amp; the World • Holly Cummins • GOTO 2024</title><link>https://www.youtube.com/watch?v=dU_WHead0oY</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/dU_WHead0oY?version=3" length="" type=""/><pubDate>Fri, 21 Feb 2025 13:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>I Don&apos;t Need Another Scrum Master, Get Me a Technical Coach! • Emily Bache • GOTO 2024</title><link>https://www.youtube.com/watch?v=x6yUGSmU8Nk</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/x6yUGSmU8Nk?version=3" length="" type=""/><pubDate>Fri, 16 May 2025 12:01:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
 https://gotocph.com
 
-Holly Cummins - Senior Principal Software Engineer on the Red Hat Quarkus Team @Holly_Cummins 
+Emily Bache - Samman Technical Coach at Bache Consulting @EmilyBache-tech-coach 
 
 RESOURCES
-https://hollycummins.com
-https://hollycummins.com/type/blog
-https://bsky.app/profile/hollycummins.com
-https://hachyderm.io/@holly_cummins
-https://twitter.com/holly_cummins
-https://github.com/holly-cummins
-https://linkedin.com/in/holly-k-cummins
+https://bsky.app/profile/emilybache.com
+https://twitter.com/emilybache
+https://www.linkedin.com/in/emilybache
+https://bacheconsulting.com
+https://github.com/emilybache
+
+Links
+https://en.wikipedia.org/wiki/Kanban_board
+https://www.vanderbilt.edu/advanced-institute
+https://marianhartman.com/hartman-models
+https://sammancoaching.org/kata_descriptions
+
 
 ABSTRACT
-Inefficiency is ruining our planet and our lives. Efficiency is ruining our happiness, and weirdly, it’s also ruining our efficiency. Heeeeelppp!? What’s a techie to do? Zombie servers and slow code are a big climate problem, but the vrrrooom model gives us double-win hope. Holly walks through a range of techniques that can be used to find and eliminate software waste and reduce climate impacts.
+We’ve had agile coaches and scrum masters working with software teams for years, but technical coaching is different. The focus is not so much on the process and ceremonies of an agile method, but more about how the code is getting written. It’s about raising code quality, learning faster, and better handling the complexity of modern software development.
 
-But machine efficiency isn’t much use without human efficiency. Surprisingly, sorting out machine efficiency often helps humans, too. For example, the Quarkus Java framework uses many interesting waste-reduction techniques. These optimisations have the dual benefit of speeding up computers, and also speeding up people.
+Software today is built by teams. There may be brilliant individuals and genius coders but in my experience the best designs come from a process of iteration and feedback. The best software developers share what they know and help more junior people to advance. It’s always been part of a Scrum Master’s role to encourage better teamwork and collaboration. It’s not wrong, it’s just not enough. Developers spend much of their time writing code, reviewing code and improving code. If we’re going to make a difference to the way software gets written we need coaches who also know how to code.
 
-So far, so good, but we need to be careful we don’t end up accidentally optimising the wrong things, and making stuff worse. 100% utilisation is not sustainable for either humans, or people. It’s not even very efficient (what!?). Holly gives a brief tour of the brain’s default mode network, the latest business research, and queueing theory, to show why we actually achieve more when we do a bit less. [...]
+I’m technical and I coach teams of developers. I work to influence coding decisions, spread skills and help people build better habits. In this talk I’d like to explain what a technical coach actually does and how this kind of coaching could help you and your development team. [...]
 
 TIMECODES
 00:00 Intro
-02:47 Waste
-05:46 e-waste is killing the planet
-07:20 Zombie servers
-08:35 Data
-09:33 Solution: LightSwitchOps
-13:38 Solution: Faster code
-17:46 Case study: Quarkus
-18:49 Java dynamism
-21:59 How do we fix all this?
-25:26 Example: Logging
-26:04 Example: Hibernate
-26:26 Developer joy
-28:59 We have a solution
-30:52 How efficient can we get?
-33:36 Speed vs Resiliency
-38:15 The default mode network
-42:13 Inverse Jevon's paradox
-44:35 Hygge developers
-45:34 Conclusions
-46:12 Outro
+00:40 Modern software development is complex
+03:10 Collaborative software design
+04:38 Feedback from the real world
+08:35 Technical leadership & skill
+11:00 Test-driven development
+13:37 Skill acquisition model
+22:49 Samman Method
+28:11 Tech coach vs tech lead
+35:01 Getting beyond Code Katas
+39:27 Summary
+41:26 Outro
 
 Download slides and read the full abstract here:
-https://gotocph.com/2024/sessions/3327
+https://gotocph.com/2024/sessions/3116
 
 RECOMMENDED BOOKS
-Anne Currie, Sarah Hsu, & Sara Bergman • Building Green Software • https://amzn.to/3UjSClv
-Marc Nuri San Felix • Full Stack Quarkus & React • https://amzn.to/4cXyRrh
-John Clingan & Ken Finnigan • Kubernetes Native Microservices with Quarkus & MicroProfile • https://amzn.to/4cWQ3wV
-Davi Vieira • Designing Hexagonal Architecture with Java • https://amzn.to/3Q4H3vU
-Ioannis Kolaxis • 101 Green Software • https://www.kolaxis.dev/book-green-software
-Mehdi Khosrow-Pour • Green Computing Strategies for Competitive Advantage and Business Sustainability • https://amzn.to/2YXbI7j
-Lässig, Kersting & Morik • Computational Sustainability • https://amzn.to/3APBW8r
-Carola Lilienthal • Sustainable Software Architecture • https://amzn.to/3yFXxoS
+Emily Bache • Technical Agile Coaching with the Samman Method • https://amzn.to/4iHarEp
+Emily Bache • The Coding Dojo Handbook • https://amzn.to/4bMin5c
+David Farley • Modern Software Engineering • https://amzn.to/3GI468M
+Jez Humble & Dave Farley • Continuous Delivery • https://amzn.to/3ocIHwd
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Quarkus #RedHatQuarkus #JavaDynamism #JevonsParadox #BuildingGreenSoftware #Sustainability #SustainableSoftware #CarbonEfficiency #LightSwitchOps #Efficiency #Decarbonization #GreenCloud #GreenComputing #GreenCoding #Programming #GreenSoftware #HollyCummins
+#TechnicalCoach #TechCoach #Samman #SammanTechnicalCoach #SoftwareTeams #CodeQuality #Complexity #Kata #CodeKata #CodeReview #TDD #ModernSoftwareEngineering #TodayInTech #EmilyBache
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -206,46 +139,50 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Kafka Connect: Build &amp; Run Data Pipelines • Kate Stanley, Mickael Maison &amp; Danica Fine</title><link>https://www.youtube.com/watch?v=2S-CkeZVwK4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/2S-CkeZVwK4?version=3" length="" type=""/><pubDate>Fri, 21 Feb 2025 10:34:22 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
-
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Unbundling the Enterprise • Stephen Fishman, Matt McLarty &amp; Erik Wilde</title><link>https://www.youtube.com/watch?v=zl1JSbWU7Oo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zl1JSbWU7Oo?version=3" length="" type=""/><pubDate>Fri, 16 May 2025 09:26:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+gotopia.tech/bookclub
+ (http://gotopia.tech/bookclub) 
 Read the full transcription of the interview here
- (https://gotopia.tech/episodes/341) 
-Kate Stanley - Principal Software Engineer at Red Hat & Co-Author of "Kafka Connect"
-Mickael Maison - Senior Principal Software Engineer at Red Hat & Co-Author of "Kafka Connect"
-Danica Fine - Lead Developer Advocate, Open Source at Snowflake
+ (https://gotopia.tech/episodes/350) 
+Stephen Fishman - Field CTO at Boomi & Co-Author of "Unbundling the Enterprise"
+Matt McLarty - CTO at Boomi & Co-Author of "Unbundling the Enterprise"
+Erik Wilde - Principal Consultant at INNOQ
 
 RESOURCES
-Kate
- (https://x.com/KateStanley91) https://fosstodon.org/@katheris
- (https://github.com/katheris) https://www.linkedin.com
- (https://www.linkedin.com/in/katherine-kate-stanley-3796b579) 
-Mickael
-https://bsky.app/profile/mickaelmaison.bsky.social
-https://mas.to/@MickaelMaison
- (https://stackoverflow.com/users/1765189/mickael-maison) https://www.linkedin.com
- (https://www.linkedin.com/in/mickaelmaison) https://mickaelmaison.com
+Stephen
+https://x.com/fistsOfReason
+https://www.linkedin.com/in/stephenhfishman
+https://github.com/StephenFishman
 
-Danica
-https://bsky.app/profile/thedanicafine.bsky.social
- (https://x.com/TheDanicaFine) https://data-folks.masto.host/@thedanicafine
-https://www.linkedin.com (https://www.linkedin.com/in/danica-fine) 
- (https://github.com/danicafine) https://linktr.ee/thedanicafine
+Matt
+https://bsky.app/profile/mattmclartybc.bsky.social
+https://x.com/MattMcLartyBC
+https://www.linkedin.com/in/mattmclartybc
+
+Erik
+https://www.linkedin.com/in/erikwilde
+https://github.com/dret
 
 Links
-https://kafka.apache.org
-https://flink.apache.org
-https://debezium.io
-https://strimzi.io
+https://itrevolution.com/articles (https://itrevolution.com/articles/ooops-a-science-of-happy-accidents/) 
+https://www.hbs.edu/faculty/Pages (https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6417) 
+
+
 
 DESCRIPTION
-Danica Fine together with the authors of “Kafka Connect” Kate Stanley and Mickael Maison, unpack Kafka Connect's game-changing power for building data pipelines—no tedious custom scripts needed! Kate and Mickael Maison discuss how they structured the book to help everyone, from data engineers to developers, tap into Kafka Connect’s strengths, including Change Data Capture (CDC), real-time data flow, and fail-safe reliability.
+How can businesses thrive by embracing optionality through digital transformation?
+Authors Matt McLarty and Stephen Fishman talk about their book “Unbundling the Enterprise” with Erik Wilde. They highlight the power of APIs and flexible systems in enabling companies to capitalize on unforeseen opportunities, or "happy accidents," and how low-cost experimentation can drive long-term success.
 
+The conversation emphasizes that optionality is crucial not only in tech but also in business strategy, urging organizations to view their digital capabilities as part of a broader platform that supports both developer empowerment and revenue growth. With insights on optimization, platform engineering, and the importance of aligning technology with business objectives, the authors offer a roadmap for companies to navigate the future with agility and resilience.
 
 RECOMMENDED BOOKS
-Kate Stanley & Mickael Maison • Kafka Connect
- (https://amzn.to/40Jq5Jz) Shapira, Palino, Sivaram & Petty • Kafka: The Definitive Guide
- (https://amzn.to/3ULdz8A) Viktor Gamov, Dylan Scott & Dave Klein • Kafka in Action (https://amzn.to/3CrB8KU) 
+Stephen Fishman & Matt McLarty • Unbundling the Enterprise
+ (https://amzn.to/3W2EcXw) Carliss Y. Baldwin • Design Rules, Vol. 2
+ (https://amzn.to/4hdllRr) Matthew Skelton & Manuel Pais • Team Topologies
+ (http://amzn.to/3sVLyLQ) Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps
+ (https://amzn.to/3tCz1xO) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
+ (https://amzn.to/47oAf3l) Mik Kersten • Project to Product
+ (https://amzn.to/4fSH6Fe) Andrew Harmel-Law • Facilitating Software Architecture (https://amzn.eu/d/5kZKVfU) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -261,125 +198,80 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Cloud Native Application Protection Platforms (CNAPPs) • Russ Miles &amp; James Lewis • GOTO 2025</title><link>https://www.youtube.com/watch?v=M7eXxRLsrFw</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/M7eXxRLsrFw?version=3" length="" type=""/><pubDate>Thu, 20 Feb 2025 13:00:34 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Rust for Dummies in 12 Minutes</title><link>https://www.youtube.com/watch?v=0y6RKiIk6cs</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0y6RKiIk6cs?version=3" length="" type=""/><pubDate>Thu, 15 May 2025 15:00:07 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[Think Rust is hard? Not anymore. This video breaks down Rust in a way you’ll actually understand.
+
+Join the Rust Live Accelerator waitlist: https://letsgetrusty.com/join
+
+Chapters:
+0:00 Intro
+0:57 Part I: Why Rust Code Doesn't Break
+7:21 Part II: The Genius of Rust's Type System]]></content:encoded></item><item><title>Flow Engineering • Steve Pereira &amp; Andrew Davis • GOTO 2025</title><link>https://www.youtube.com/watch?v=5Vk4NJrI2KE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/5Vk4NJrI2KE?version=3" length="" type=""/><pubDate>Thu, 15 May 2025 12:00:13 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Flow EngineeringThis interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here:
-https://gotopia.tech/episodes/358
+https://gotopia.tech/episodes/377
 
-Russ Miles - Engineering Manager, Chaos Engineering Practitioner & Co-Author of "Cloud Native Application Protection Platforms"
-James Lewis - Software Architect & Director at Thoughtworks
+Steve Pereira - Co-Author of "Flow Engineering" & Principal Consultant at Visible Flow Consulting @visibleconsulting 
+Andrew Davis - Co-Author of "Flow Engineering" & Founder at Institute for Transformational Leadership @XformationalLeadership 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russmiles.bsky.social
-https://github.com/russmiles
-https://www.linkedin.com/in/russmiles
+Steve
+https://x.com/steveelsewhere
+https://github.com/stevepereira
+https://www.linkedin.com/in/devopsto
+https://stevepereira.ca
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://twitter.com/boicy
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Andrew
+https://x.com/andrewdavis_io
+https://github.com/abd3
+https://www.linkedin.com/in/andrewdavis-io
+https://www.andrewdavis.io
 
 Links
-https://youtu.be/mTSu0clAP-c
-https://youtu.be/BX0TVzHOJgQ
-https://youtu.be/jqkwVmvIcG0
-https://youtu.be/tMzDMrBGJlI
-https://youtu.be/9omp-95zbzs
-https://youtu.be/xg6EFYdXU8w
-https://youtu.be/T7eG7UAMztA
-https://youtu.be/hBxV3Cr0lXY
-https://youtu.be/-5kK50d-duc
-https://youtu.be/vkxVaqS7q2Q
+https://flowcollective.org
+https://youtu.be/J4RjCmloqBI
+https://youtu.be/P7CfWtR-ECk
+https://youtu.be/miYyinA-Nxc
+https://youtu.be/FbV9EFHnGOE
+https://youtu.be/cSywovR5t_Q
+https://youtu.be/D43PlUr1x_E
+https://youtu.be/pQJxlGUz5xY
+https://youtu.be/WVAUHT-Jy-U
+https://youtu.be/XjbTLIqnq-o
+https://youtu.be/lpNzR0fvxDw
 https://youtu.be/dcp6YMAmI3M
-https://youtu.be/Pv0cfsastFs
+https://youtu.be/5Vc71tEiVPw
+https://youtu.be/dMwGfRINpz0
+https://youtu.be/VMpTU15rIZY
+https://youtu.be/g9m3R0NMJ1Y
 
 DESCRIPTION
-In this episode of GOTO Book Club, James Lewis and Russ Miles discuss Cloud Native Application Protection Platforms (CNAPPs), focusing on how they promote collaboration across security and development teams.
+Flow Engineering co-authors Steve Pereira and Andrew Davis discuss their approach to improving workflow visibility in software development and knowledge work. They explore how value stream mapping can be adapted for modern digital work environments, where the work is largely invisible compared to manufacturing settings.
 
-Russ shares insights from his book, emphasizing the importance of OODA loops, balancing innovation with safety in platform design, and the benefits of off-the-shelf versus custom CNAPP solutions. Looking ahead, he predicts platform engineering will evolve into a commercial strategy like AWS and that AI will augment human decision-making, enhancing creativity and collaboration in the engineering field.
-
-TIMECODES
-00:00 Intro
-00:59 Exploring Cloud Native Application Protection Platforms (CNAPPs)
-05:10 Collaboration & OODA Loops in cloud native security
-16:16 Bridging the gap between security & development
-32:06 Creating platforms that foster innovation & collaboration
-36:13 To build or to buy a CNAPP
-42:22 Predictions for platform engineering & AI in 2025
-44:52 Outro
-
-RECOMMENDED BOOKS
-Miles, Giguere & Smith • Cloud Native Application Protection Platforms • https://amzn.to/3X4Bq4h
-Mina, Warda, Marins & Miles • Digitalization of Financial Services in the Age of Cloud • https://amzn.to/4gIYsow
-Russ Miles • Learning Chaos Engineering • https://amzn.to/412KEzf
-Dan Pilone & Russ Miles • Head First Software Development • https://amzn.to/4i02JF0
-Kathy Sierra • Badass • https://amzn.to/4b9fb2V
-
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#CNAPP #CNAPPs #CloudNative #ProtectionPlatforms #PlatformEngineering #OODA #OODAloop #Collaboration #Security #RussMiles #JamesLewis #BookClub
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Top 10 Redis Use Cases</title><link>https://blog.algomaster.io/p/top-10-redis-use-cases</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/50f500e0-7b74-425b-b93e-68b8efbe86ae_1492x996.png" length="" type=""/><pubDate>Thu, 20 Feb 2025 05:45:47 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Redis (Remote Dictionary Server) is an open source, in-memory key-value data store that provides , making it an excellent choice for  applications.Its versatility and speed allow it to solve complex scalability challenges, making it a popular choice in design discussions and a valuable topic for .Redis supports a rich set of, including strings, hashes, lists, sets, and sorted sets. These structures, combined with powerful  like , , and enable Redis to handle many use cases requiring  and .In this article, we will explore the Top 10 Use Cases of Redis with real-world examples and code implementation.Caching is the most common use case of Redis. Since web applications frequently rely on databases, querying a database on every request can be slow and inefficient, leading to high response times and increased server load. solves this problem by storing frequently accessed data in memory, significantly reducing latency and offloading queries from the database.There are multiple caching strategies (read through, cache aside, write back etc.,) each suited for different use cases.The  pattern is widely used because it gives the application full control over caching logic.When a client requests data, the application first checks Redis.If the data exists in Redis (), it is returned instantly.If data is not found (), it is fetched from the database, stored in Redis for future requests, and returned to the client.Code Example: Caching API ResponsesTo prevent stale or outdated data, Redis allows setting  (), ensuring automatic eviction of cached entries.Most modern web applications are , meaning they don’t store session information directly on the server. However, to keep users logged in, maintain shopping carts, or track user preferences, web applications need a reliable session management system.Since Redis is andprovide  options, it’s a great choice for storing session data.The application generates a unique session ID for the user.It stores session data in Redis, using the session ID as the key.The session ID is sent to the user's browser as a .The application retrieves the session ID from the user's cookie.It fetches user data from Redis using the session ID.If a user is inactive for too long, Redis automatically deletes the session after a set expiration time ().This prevents stale session accumulation, optimizing memory usage.Code Example: Storing and Retrieving SessionsSince Redis is an in-memory database, all session data is lost if the server restarts.Redis allows saving session data to disk using snapshots () or AOF logging.However, reloading session data after a crash may take too long, causing delays.Using Redis Replication for High Availability (Recommended for Production)Sessions are replicated to a backup Redis instance.If the primary Redis server fails, the backup is promoted to take over.This ensures minimal downtime for user sessions.]]></content:encoded></item><item><title>GraphQL Federation - The @key to Your Platform API Strategy • Derek Kuc • GOTO 2024</title><link>https://www.youtube.com/watch?v=SrA543HT3bA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/SrA543HT3bA?version=3" length="" type=""/><pubDate>Wed, 19 Feb 2025 13:00:46 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Chicago 2024. #GOTOcon #GOTOchgo
-https://gotochgo.com
-
-Derek Kuc - Principal Software Engineer at Apollo GraphQL
-
-RESOURCES
-https://bsky.app/profile/dkuc.bsky.social
-https://www.linkedin.com/in/dariusz-kuc-244b673
-https://twitter.com/derek_kuc
-https://github.com/dariuszkuc
-
-ABSTRACT
-Many developers mistakenly view GraphQL as a graph database or as an alternative to REST. In reality, GraphQL’s greatest strength is its power to unify your existing APIs into a single, unified API.
-
-In this talk, learn how a federated GraphQL architecture can help you build a scalable platform that maximizes the value of your existing APIs. Learn how to leverage federation to create a flexible, resilient API strategy that evolves with your business needs. [...]
+The authors explain their five-map framework designed to help teams establish clarity, improve collaboration, and enhance productivity despite busy schedules and constant firefighting. They emphasize the importance of visual collaboration to create shared mental models and the continuing relevance of these practices in an AI-driven future.
 
 TIMECODES
 00:00 Intro
-01:04 Experience APIs
-02:02 Strategy 1: No layer
-04:58 Strategy 2: Backend for frontend (BFF)
-08:15 Strategy 3: GraphQL federation
-09:15 What is GraphQL?
-20:00 Apollo federation
-22:59 GraphQL vs REST?
-23:24 GraphQL makes your APIs better
-32:00 How?
-34:34 Summary
-35:39 Outro
-
-Download slides and read the full abstract here:
-https://gotochgo.com/2024/sessions/3457
+03:36 The complexity of modern software development
+13:11 Visualizing invisible work
+18:28 Five Maps Framework
+30:49 The future with AI & Flow Engineering
+43:20 Outro
 
 RECOMMENDED BOOKS
-Gregor Hohpe • Platform Strategy • https://amzn.to/4cxfYdb
-Gregor Hohpe • The Software Architect Elevator • https://amzn.to/3F6d2ax
-Eve Porcello & Alex Banks • Learning GraphQL • https://amzn.to/3ZH1h2k
-Robin Wieruch • The Road to GraphQL • https://amzn.to/3rNwTa1
-Samer Buna • GraphQL in Action • https://amzn.to/3tm9ugB
+Steve Pereira & Andrew Davis • Flow Engineering • https://amzn.to/3GY3u44
+Andrew Davis • Mastering Salesforce DevOps • https://amzn.to/4kjGmf6
+Susanne Kaiser • Adaptive Systems With Domain-Driven Design, Wardley Mapping & Team Topologies • https://amzn.to/3XTmNCc
+Charles Humble • Professional Skills for Software Engineers • https://www.conissaunce.com/professional-skills-shortcut
+Simon Wardley • Wardley Mapping, The Knowledge • https://amzn.to/3XQEeDu
+Simon Wardley • Wardley Maps • https://amzn.to/45U8Upr
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#GraphQL #GraphQLFederation #PlatformEngineering #PlatformStrategy #API #APIs #APIStrategy #ExperienceAPIs #BackendForFrontend #DerekKuc
+#FlowEngineering #Flow #FiveMaps #FiveMapsFramework #WardleyMaps #SoftwareComplexity #ValueStreamMapping #AI #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #AndrewDavis #StevePereira #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -390,92 +282,120 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>When calibration beats metrics</title><link>https://www.youtube.com/watch?v=oOZr4kRJgFE</link><author>probabl</author><category>dev</category><category>ai</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/oOZr4kRJgFE?version=3" length="" type=""/><pubDate>Wed, 19 Feb 2025 10:01:01 +0000</pubDate><source url="https://www.youtube.com/channel/UCIat2Cdg661wF5DQDWTQAmg">Probabl</source><content:encoded><![CDATA[Having a classifier with great metrics is good, but it is not enough for it to be useful in production. One reason why it might still fail is because it could be that you are dealing with a badly calibrated model. The predictions might be fine, but the probability estimates can be way off. 
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Designing a Proximity Service like Yelp</title><link>https://blog.algomaster.io/p/designing-proximity-service-like-yelp</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/0d68a9de-894a-4d97-96b1-37d4022deec9_2816x2456.png" length="" type=""/><pubDate>Thu, 15 May 2025 05:06:37 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Services like , , or  have become an essential part of how we discover the world around us.Whether you're looking for the best coffee shop within walking distance, a nearby gym that’s open late, or the top-rated restaurant in your city—these platforms deliver location-aware results , personalized and filtered to your needs.But how does such a system work under the hood?In this blog, we’ll walk through the design  of a proximity service like Yelp—a platform that helps users search for nearby businesses, view detailed listings, read and write reviews, and save favorites for future visits.We'll dive deep into the high-level architecture, database design, API design, indexing strategies, caching, scalability, and how to handle billions of data points with milli-seconds latency.Before diving into the architecture, lets clearly define  we’re building.1.1 Functional RequirementsUsers can  (restaurants, gyms, salons, etc.) using their . Support filters like: (e.g., within 2 km, 5 km) (e.g., cafe, spa, grocery store) (e.g., 4 stars and above) (e.g., currently open)Business Listing Details: Each place should have a detailed page showing:Photos, opening hours, servicesUsers can leave  (1 to 5 stars) and .Business owners can create a new listing or update detailsUsers can  or  favorite places for quick access later.1.2 Non-Functional RequirementsThe system should handle millions of users and tens of millions of listings and reviewsSearch results should be returned within <200msThe service should remain operational even if individual components fail. Availability target: For certain operations (e.g., newly posted reviews or updated listings), the system can be  rather than strongly consistent.Let’s assume this service operates at global scale:Monthly Active Users (MAU): 50 millionDaily Active Users (DAU): ~10 million (20% of MAU)New businesses added/day: 100,000Peak traffic may be , especially during weekends, holidays, or lunch/dinner hours.Assume 100 million listingsEach listing ≈ 2 KB (name, category, address, etc.)Relatively small footprint, fits well in relational or document DBs. Queryable fields (category, rating, location) should be indexed.Assume 1 billion reviews (historical)Data per review ≈ 1 KB (text + metadata): 5: ~200 KB (optimized JPEG or WebP)100M listings × 5 × 200 KB = Stored in  like Amazon S3, not in databases. Backed by CDN for efficient global delivery.Assume 100M total saved favoritesData per favorite ≈ 50 bytes (user_id, business_id, timestamp)100M × 50bytes ]]></content:encoded></item><item><title>Software Tools That Don&apos;t Hate You • Erik Corry • GOTO 2024</title><link>https://www.youtube.com/watch?v=3X-lcryBojQ</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3X-lcryBojQ?version=3" length="" type=""/><pubDate>Wed, 14 May 2025 12:00:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
 
-In this video we talk about how to think about calibration and what it means.
+Erik Corry - Programmer at Toitware @ErikCorry 
 
+RESOURCES
+https://bsky.app/profile/erik.arbat.com
+https://twitter.com/erikcorry
+https://www.linkedin.com/in/erik-corry-2a53811
+https://github.com/erikcorry
+https://medium.com/@erik_68861
 
-Website: https://probabl.ai/
-LinkedIn: https://www.linkedin.com/company/probabl
-Twitter: https://x.com/probabl_ai
-Bluesky: https://bsky.app/profile/probabl.bsky.social
-Discord: https://discord.probabl.ai
+ABSTRACT
+Erik will share lessons learned, working on virtual machines, core libraries and regular expression engines. Hear about how he ignored complaints from users, where he went wrong, and how some Germans had to fix the mistakes of his youth.
 
-We also host a podcast called Sample Space, which you can find on your favourite podcast player. All the links can be found here:
-https://rss.com/podcasts/sample-space/
+From the early days of the V8 JavaScript engine in Chrome, to Dart VM in Flutter, and Toit VM on tiny embedded devices, Erik is now back working with V8 - this time in the cloud.
 
-#probabl]]></content:encoded></item><item><title>Beyond Storytelling: A Deep Dive into Wardley Mapping • Simon Wardley &amp; Charles Humble • GOTO 2025</title><link>https://www.youtube.com/watch?v=tMzDMrBGJlI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/tMzDMrBGJlI?version=3" length="" type=""/><pubDate>Tue, 18 Feb 2025 13:01:19 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+Erik will talk about how your tools should not hate you, rant more about tools that stab you in the back, especially Golang, and throw shade on Python and other useful and popular languages. [...]
+
+TIMECODES
+00:00 Intro
+06:30 DNA
+08:58 Sorting
+14:10 Order
+16:08 Golang
+22:04 C++
+36:22 Java
+40:28 Conclusion
+41:49 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3316
+
+RECOMMENDED BOOKS
+Taylor Royce • The 2024 Developer Productivity Guide • https://amzn.to/3XNAjqz
+Unni Panicker • The Software Developer's Guide to ChatGP • https://amzn.to/3MSpoWw
+Alex Castrounis • AI for People and Business • https://amzn.to/3NYKKTo
+Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Holden Karau, Trevor Grant, Boris Lublinsky, Richard Liu & Ilan Filonenko • Kubeflow for Machine Learning • https://amzn.to/3JVngcx
+Kelleher & Tierney • Data Science (The MIT Press Essential Knowledge series) • https://amzn.to/3AQmIRg
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#DeveloperProductivity #Productivity #Tools #Mergesort #Quitcksort #Golang #Cpp #VirtualMachines #VM #DartVM #Flutter #ToitVM #ErikCorry
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Ethics in AI&apos;s Wild West: Biases &amp; Responsibilities • Michelle Frost &amp; Hannes Lowette • GOTO 2025</title><link>https://www.youtube.com/watch?v=ZPlD0rpiFwQ</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ZPlD0rpiFwQ?version=3" length="" type=""/><pubDate>Tue, 13 May 2025 12:01:04 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
 https://gotopia.tech
 
 Read the full transcription of this interview here:
-https://gotopia.tech/articles/357
+https://gotopia.tech/articles/376
 
-Simon Wardley - Thought Lord, Mapper, Mostly Good @simonwardley 
-Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
+Michelle Frost - AI Advocate at JetBrains & Responsible AI Consultant
+Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover @Belenar82 
 
 RESOURCES
-Simon
-https://bsky.app/profile/swardley.bsky.social
-https://me.dm/@swardley
-https://twitter.com/swardley
-https://www.linkedin.com/in/simonwardley
-https://swardley.medium.com
+Michelle
+https://bsky.app/profile/aiwithmichelle.com
+https://www.linkedin.com/in/michelle-frost-dev
 
-Charles
-https://bsky.app/profile/charleshumble.bsky.social
-https://linkedin.com/in/charleshumble
-https://mastodon.social/@charleshumble
-https://conissaunce.com
+Hannes
+https://bsky.app/profile/hanneslowette.net
+https://twitter.com/hannes_lowette
+https://github.com/Belenar
+https://linkedin.com/in/hanneslowette
 
 Links
-https://www.wardleymaps.com
-https://mapkeep.com
-https://miro.com
-https://youtu.be/WVAUHT-Jy-U
-https://youtu.be/FPfjHon2tFY
-https://youtu.be/ShAzlhS_TCg
-https://youtu.be/DnSogTnJlqk
-https://youtu.be/9w6YeNNJLkg
-https://youtu.be/LTFe7Zj-hzQ
-https://youtu.be/IlDIV5gaTP0
-https://youtu.be/2IW9L1uNMCs
-https://youtu.be/b7Nc_FJiosk
-https://youtu.be/LLZmTuTSEB8
-https://youtu.be/-z3ZB1ck_nk
-https://youtu.be/Gs1zUKrFCoY
-https://youtu.be/mUTx61t443A
-https://youtu.be/K2mx9ZaNDyE
+https://youtu.be/o8I0M5vjdyE
+https://youtu.be/xtmc-gTSPeA
+https://youtu.be/tn6nkZP1iSY
+https://youtu.be/8jwiABwGC6c
+https://youtu.be/hv4xkrgYknw
+https://youtu.be/Yk0_LWd0WQA
+https://youtu.be/MznD2DzlQCc
+https://youtu.be/9U4zN1nN8NE
+https://youtu.be/PpOC0Hz-yok
+https://youtu.be/BN9NUmul0b4
 
 DESCRIPTION
-Simon Wardley and Charles Humble discuss the development of Wardley Mapping, a visual framework that helps organizations understand and navigate technological evolution. Moving beyond traditional business storytelling, the interview explores how mapping enables better strategic decision-making through understanding component evolution, inertia, and gameplay, while also addressing current technological shifts in AI and cyber-physical systems. [...]
+AI advocate Michelle Frost and principal consultant Hannes Lowette discuss ethical challenges in AI development. They explore the balance between competing values like accuracy versus fairness, recent US regulatory rollbacks under the Trump administration, and market disruptions from innovations like Deep Seek.
+
+While Michelle acknowledges concerns about bias in unregulated models, she remains optimistic about AI's potential to improve lives if developed responsibly. She emphasizes the importance of transparency, bias measurement, and focusing on beneficial applications while advocating for individual and corporate accountability in the absence of comprehensive regulation.
 
 TIMECODES
 00:00 Intro
-02:02 Storytelling vs mapping
-04:20 Understanding Wardley Maps
-19:38 Evolution & movement in technology
-26:31 Centralization vs decentralization
-31:05 Understanding inertia
-34:21 Strategic gameplay
-41:58 AI & the future of technology
-48:16 Outro
+04:23 Regulatory changes & political impact
+12:12 Job impact & industry changes
+17:48 New developments & market disruption
+24:35 Concerns about biases & future outlook
+41:36 Outro
 
 RECOMMENDED BOOKS
-Simon Wardley • Wardley Maps • https://amzn.to/45U8Upr
-Simon Wardley • Wardley Mapping, The Knowledge • https://amzn.to/3XQEeDu
-Sun Tzu • The Art of War • https://amzn.to/2BqDeha
-Jonathan Allen & Thomas Blood • Reaching Cloud Velocity • https://amzn.to/3D20KkC
-Mark Craddock • Wardley Mapping Doctrine • https://amzn.to/4b3jRYb
-Susanne Kaiser • Adaptive Systems With Domain-Driven Design, Wardley Mapping & Team Topologies • https://amzn.to/3XTmNCc
-David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect • https://amzn.to/3VcHxC7
-Erik Schön • The Art Of Strategy • https://amzn.to/2UPzXPa
+Mark Coeckelbergh • AI Ethics • https://amzn.to/3SuXUbY
+Debbie Sue Jancis • AI Ethics • https://amzn.to/44yuEbR
+Mohammad Rubyet Islam • Generative AI, Cybersecurity, and Ethics • https://amzn.to/3GPvoQ1
+Jeet Pattanaik • Ethics in AI • https://amzn.to/4jXyQXw
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#WardleyMaps #WardleyMapping #Strategy #ArtOfStrategy #ArtOfWar #SunTzu #Inertia #Storytelling #WardleyMappingDoctrine #Patterns #Change #SimonWardley #CharlesHumble
+#EthicsOfAI #AIEthics #AI #ML #DataScience #Humanity #Ethics #MachineEthics ##EthicalML #TodayInTech #MichelleFrost #HannesLowette
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -486,28 +406,149 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Consistent Hashing Explained</title><link>https://blog.algomaster.io/p/consistent-hashing-explained</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/9d4c8499-0733-43fa-95f8-c3370c0ad2ea_1984x1462.png" length="" type=""/><pubDate>Tue, 18 Feb 2025 04:30:43 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[In a  where nodes (servers) are frequently , efficiently routing requests becomes challenging.A common approach is to use  and assign it to a server using , where N is the number of servers. However, this method is highly dependent on the number of servers, and any change in N can lead to , causing a major redistribution of keys (requests). addresses this issue by ensuring that only a small subset of keys need to be reassigned when nodes are added or removed.Popularized by , it has now become a fundamental technique in distributed databases like DynamoDB, Cassandra and ScyllaDB.In this article, we’ll explore what consistent hashing is, why it’s needed, how it works, and how to implement it in code.Meet  - a free adaptive AI IDE that transforms how you work, collaborating with you to run faster:Simply describe your project needs in natural language, and watch it build by TraeUpload your design files and let Trae assist in translating your visual concepts into clean, workable code.As you code, Trae learns your project patterns and provides contextually relevant suggestions to help you code more efficiently.Imagine you're building a high-traffic web application that serves millions of users daily. To handle the load efficiently, you distribute incoming requests across multiple backend servers using a .Your system consists of  (), and requests are assigned using a hash function that maps each user's IP address to a specific server.The process works like this:The load balancer takes a user’s IP address (or session ID).A  maps the IP to one of the backend servers by taking the sum of bytes in the IP address and computing  (since we have 5 servers).The request is routed to the assigned server, ensuring that the same user is always directed to the same server for session consistency.Everything Works Fine… Until You ScaleThis approach works as long as the number of servers remains constant. But what happens when you ?Scenario 1: Adding a New Server (S5)As traffic increases, you decide to  by adding a new backend server (). Now, the hash function must be modified to use  instead of since we have 6 servers now.This seemingly simple change completely disrupts the existing mapping, causing most users to be reassigned to different servers.This results into , leading to high overhead, and potential downtime.Scenario 2: Removing a Server (S4)Now, let’s say one of the servers () fails or is removed. The number of servers drops to 4, forcing the hash function to switch from  to .Even though only  server was removed, most users are reassigned to different servers. This can cause:Active users may be logged out or disconnected.Cached data becomes irrelevant, increasing database load.Severe performance degradation: The system may struggle to run efficiently.The Solution: Consistent Hashing offers a more scalable and efficient solution by ensuring that only a  are reassigned when scaling up or down.It performs really well when operated in dynamic environments, where the system scales up and down frequently.Consistent hashing is a distributed hashing technique used to efficiently distribute data across multiple nodes (servers, caches, etc.).It uses a  (hash ring) with a large and constant hash space.Both nodes (servers, caches, or databases) and keys (data items) are mapped to positions on this hash ring using a .Unlike modulo-based hashing, where changes in the number of nodes cause large-scale remapping, consistent hashing ensures that only a small fraction of keys are reassigned when a node is added or removed, making it highly scalable and efficient.In consistent hashing, when the number of nodes changes, only keys need to be reassigned, where  is the total number of keys and  is the total number of nodes.2.1 Constructing the Hash RingInstead of distributing keys based on , consistent hashing places both servers and keys on a circular hash ring.We use a large, fixed hash space ranging from  to  (assuming a 32-bit hash function).This creates a circular structure, where values wrap around after reaching the maximum limit.Placing Servers on the RingEach  is assigned a position on the hash ring by computing .Using the above example with , the hash function distributes them at different positions around the ring.When a key is added, its position is determined by computing .Example: a user’s request is assigned a position on the ring based on the hash of their IP address: We then move clockwise around the ring until we find the next available server.The key (or request) is assigned to this server for storage or retrieval. In case a key’s hash falls directly on a node’s position, it belongs to that node.Suppose we add a to the system.The position of  falls between  and  in the hash ring. takes over all keys (requests) that fall between  and , which were previously handled by .requests which were originally assigned to  will now be redirected to This demonstrates how consistent hashing efficiently redistributes keys with minimal disruption, ensuring that only a small subset of keys are reassigned when new servers are added.When a server, such as , fails or is removed from the system:All keys previously assigned to  are reassigned to the next available server in the ring ().Only the keys (requests) that were mapped to  need to move, while all other keys remain unaffected.This results in , unlike traditional hashing where removing a node would require reassigning most keys.In , each server is assigned  on the hash ring. However, this can lead to , especially when:The number of servers is small.Some servers accidentally get clustered together, creating .A server is , causing a sudden load shift to its immediate neighbor. are a technique used in consistent hashing to improve  and  by distributing data more evenly across servers.Instead of assigning one position per server, each physical server is assigned  (virtual nodes) on the hash ring.Each server is hashed multiple times to different locations on the ring.When a request (key) is hashed, it is assigned to the next virtual node in a clockwise direction.The request is then routed to the actual server associated with the virtual node.Assume we have three physical servers (S1, S2, S3). Without virtual nodes, their positions might be:S1 → Position 10
-S2 → Position 50
-S3 → Position 90If , all its keys must be reassigned to , which can create an overload.With , each server is hashed multiple times:S1-1 → Position 10
-S1-2 → Position 70
-S1-3 → Position 120
-S2-1 → Position 50
-S2-2 → Position 80
-S2-3 → Position 160
-S3-1 → Position 30
-S3-2 → Position 90
-S3-3 → Position 140Now, instead of just one point,  is represented at , making the distribution .If , its keys are more evenly redistributed among , rather than all going to .Stores hash values → server mappings. Uses  (replicas) for better load balancing.Maintains a  of hash values for efficient lookups.Tracks active physical servers.Calls  for each server, hashing it multiple times (based on ) to ensure even distribution.Uses  to convert strings into large integers for consistent placement on the hash ring.Generates multiple hash values for each server (, , etc.).Stores these in  and maintains a sorted order in  for fast lookup.Deletes the server’s hash values and its virtual nodes from  and .Hashes the input key and finds the closest  server using . Wraps around to the first node if necessary.If you found it valuable, hit a like ❤️ and consider subscribing for more such content every week.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>@LornaMitchell about #EngineeringDocumentation</title><link>https://www.youtube.com/watch?v=cY_Dn7EvIFk</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/cY_Dn7EvIFk?version=3" length="" type=""/><pubDate>Mon, 17 Feb 2025 13:01:01 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #GOTOcph #EngineeringDocumentation #Documentation #Diataxis #Automation #CICD #Vale #Teams #Team #ColleagueEnablement #SoftwareEngineering #Programming #LornaJaneMitchell #Viral #ViralShorts #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>20 Git Commands EVERY Developer Should Know</title><link>https://blog.algomaster.io/p/top-20-git-commands</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe8a1b87f-c431-48f0-af52-b4f36825841c_811x976.png" length="" type=""/><pubDate>Tue, 13 May 2025 04:01:22 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[If you want to become a great developer, you need to master Git.But, Git can feel confusing and overwhelming. With so many commands and options, it’s hard to know which ones actually matter.In this article, I’ll walk you through the  every developer should know.These are the exact commands I’ve used again and again over the past 11 years as a programmer and they cover almost  of real-world Git use cases.If you get comfortable with just these, you will be able to handle almost anything git related while working on projects.Let’s start at the very beginning.This command turns a regular folder into a Git repository.Behind the scenes, it creates a hidden  folder.This folder holds everything Git needs—your commit history, branches, logs, and all the metadata that powers version control.You’ll typically use  when starting a brand-new project from scratch.Once you run , Git starts watching your files for changes.From here on, you can commit changes, create branches, roll back mistakes, and more.But before you start making commits, there’s one important thing you need to do: That’s where  comes in.This command lets you set your name and email so Git can tag each of your commits with your identity.git config --global user.name "Your Name"
+git config --global user.email "you@example.com"The  flag means this configuration applies to all your Git projects.But if you want to set a different name or email just for one project, you can run the same command without the --global flag, inside that project’s folder.This step might seem small, but it’s actually very important, especially when you’re working in a team.Git uses this information to track  made  change.Now let’s say you’re not starting a new project locally. But, joining an existing one hosted on a , like Github.In that case, you use the  command followed by the repository’s URL:git clone <https://github.com/user/project.git>This command does two things:It downloads the entire project, including all files, folders, branches, and commit history—so you get a complete local copy.It sets up a connection to the remote repository, so you can easily push your changes or pull updates from others.Once cloned, you’re ready to start working on the project locally.Now let’s imagine a different scenario: your local Git repository isn’t connected to any remote.In that case, Git has no idea  to push your changes.That’s where the  command comes in.Using , you can , , or  remote connections. Remote repository can be hosted anywhere like GitHub, GitLab, Bitbucket, or even your own server.To check if your project already has any remotes configured, run:This will list all the remote URLs your project can push to or pull from.origin  https://github.com/algomaster-io/git-tutorial.git (fetch)
+origin  https://github.com/algomaster-io/git-tutorial.git (push)If you need to add a new remote, use:git remote add origin <https://github.com/user/project.git>Here,  is just an alias for your remote. It’s not special, but it’s a common convention for the primary remote.Once you’ve added a remote, Git knows where to send your code when you push it.Alright, now that we’ve covered how to set up Git locally and connect it to a remote repository, let’s move on to how you actually start working with your code and tracking changes.If there’s one Git command you’ll find yourself using constantly, it’s this one:Think of it as your —a quick snapshot of everything happening in your working directory.Whenever you’re unsure about what’s changed, what’s staged, or what’s untracked,  gives you the full picture.Which files have  for commitWhich files have changed but are not stagedBefore committing anything, it’s a good habit to run .It helps you decide what to stage, what to skip, and what needs attention.Once you’ve reviewed the changes, your next step is usually to stage the right files using .When you run , you’re telling Git to include this in the next snapshot.Just editing a file isn’t enough. Git doesn’t track your changes automatically.Until you run , those changes are invisible to Git when it comes time to commit.You can stage a specific file by running git add filename:Or, if you want to stage everything that’s changed in the current directory, run: is like packing your code changes into a box and getting them ready for delivery.Once your changes are staged, it's time to  with a commit with  command.Think of  as hitting “Save” in the world of version control.It takes a snapshot of your codebase at that point in time along with a message describing .git commit -m "Add login feature"That message isn’t just a label, it’s a log of what you did.Later, when you’re looking through your project’s history (or fixing bugs), clear commit messages will save you and your teammates a lot of time.If you’re working on files that Git already knows about (i.e., they’ve been committed before), you can skip the  step using:git commit -a -m "Update login error handling"The  flag tells Git to automatically stage all modified tracked files before committing.But note—this only works for files Git is already tracking.If you’ve created a  or only want to include specific files in the commit, you still need to run  first.Sometimes, you commit too early or want to change the commit message.In that case, you can use:This lets you either edit the commit message or include additional changes (as long as they’ve been staged with ). and  are local operations. Your changes are saved on your machine only. No one else can see them yet.To share your commits with others, you use:The  command sends your commits from your local repository to a remote one, like GitHub or GitLab.It’s how you sync your changes with the central project.This command pushes your changes to the  branch of your remote repository. Now anyone else working on the project can see your updates. In most real-world projects, you don’t push directly to the main branch. Instead, you push to a separate feature branch, and then create a pull request or code review before merging into main.Sometimes, when you're working on a project with others, someone else may have already pushed their changes before you.That’s why, before you push your work, it’s a good idea to  so your local copy is up to date and you don’t accidentally overwrite someone else’s work.To do that, we use command.This command does two things in one step:It  the most recent commits from the remote repository.Then, it  those commits into your current local branch.You can also specify the branch that you want to pull from. It will merge them into whatever branch you’re currently on.But what if you don’t want to merge anything just yet?Maybe you just want to  on the remote without affecting your local work.That’s what  is for.This command contacts the remote and downloads all the latest changes—new commits, branches, etc.—but it doesn’t touch your working directory.Your current branch remains exactly the same.If you're on the  branch and want to see what new commits are on the remote , run:git log HEAD..origin/mainThis shows the commits that exist on the remote but not on your local branch. gives you full control—you fetch first, review, and only merge when you're ready.Speaking of branches—let’s look at how to create and work with them next.When you’re working on a new feature or fixing a bug, it’s best to keep that work separate from the main codebase.That’s where  come in.To create a new branch we simply run:This creates a branch called  , giving you a  where you can make changes without affecting the  branch.Once you're done, you can merge your changes back into the main branch or open a pull request for review.To see a list of all your , just run:  dev
+* main
+  feature/login
+  hotfix/navbar-bugThe branch you’re currently on will be marked with an asterisk ().But if you have multiple branches…How do you switch between them?That’s where command comes in.This switches your working directory to the  branch. It’s like opening up a different version of your project focused on a specific task.If you want to create a new branch and switch to it in one step, you can use:git checkout -b new-featureBut  isn’t just for switching branches. It’s a versatile command you can use in other ways too: by checking out its hash:Switch back to your previous branch: and restore a file to its last committed state:git checkout -- style.css from another branch:git checkout feature-branch src/app.jsBecause  tries to do a lot of different things, Git later introduced a cleaner alternative:This command focuses purely on switching branches.Once you’re done working on a branch and want to bring your changes back into the main project, you use: . combines the changes from one branch into another.This tells Git to take the changes from the  branch and combine them into the branch you are currently on.If the changes don’t overlap, Git will merge everything automatically.But if both branches have modified the same parts of a file, Git won’t know which version to keep.That’s called a , and Git will pause and ask  to manually resolve it.Sample Merge Conflict Output:Git marks the conflicting files. If you open one (e.g., ), you’ll see conflict markers like this:<<<<<<< HEAD
+console.log("Welcome to the main branch");
+=======
+console.log("Login feature initialized");
+>>>>>>> feature/loginYou now have to manually resolve the conflict, remove the conflict markers, and keep the correct code.git add src/App.js src/components/Header.js
+git commitThis final commit will complete the merge.Now, while merging is a safe and common way to combine changes, it has a small drawback—it can clutter your commit history.You may end up with lots of merge commits, especially if you’re merging frequently.If you like keeping your commit history neat and linear,  is the command for you.Unlike , which combines branches and often creates an extra merge commit,  on top of another branch as if you wrote them after the latest changes.* 3f9e1b2 Add login form validation
+* 1a2d3f4 Create login page UI
+* a12cd3e Update homepage banner
+* 91b2ea3 Initial commitThis makes your commit history look like a straight line instead of a mess of merges.Let’s say you’re working on a  branch, and  has moved forward.You can update your feature branch with the latest changes from  using:This takes all the commits from your current branch and places them  the latest commit on , one by one.This results into a cleaner, more linear project history that’s easier to read and reason about.Remember to not rebase branches that others are working on. Because rebase rewrites commit history, it can create confusion or conflicts for your teammates.When used properly,  is a powerful way to keep your project history clean, clear, and easy to follow.Once you’ve made a few commits, you’ll probably want to look back and see what changed, when, and by whom.That’s where  comes in.This command gives you a detailed history of commits showing commit hashes, author names, dates, and commit messages.commit 3f9e1b2a8c5b7894dc8d39f12c4f271c51a2f0e4
+Author: Jane Doe <jane@example.com>
+Date:   Mon May 13 10:45:12 2024 +0530
+
+    Add login form validation
+
+commit 1a2d3f4e6b0c34b18ff9d1b8e20d4b6129a15a78
+Author: Jane Doe <jane@example.com>
+Date:   Sun May 12 17:08:45 2024 +0530
+
+    Create login page UI
+
+commit a12cd3e6aa719c3b32c29fd2f1123d2b31434cc9
+Author: John Smith <john@example.com>
+Date:   Sat May 11 14:30:59 2024 +0530
+
+    Update homepage bannerIf you want a more compact view, try:3f9e1b2 Add login form validation
+1a2d3f4 Create login page UI
+a12cd3e Update homepage bannerThis shows the commit timeline in one-line-per-commit format.If you want to visualize branches and merges, you can run:* commit a1b2c3d (HEAD -> main, origin/main)
+| Author: Jane Doe <jane@example.com>
+| Date:   Tue May 13 10:23:45 2025 -0700
+|
+|     Fix pagination bug
+|
+* commit b2c3d4e
+| Author: John Smith <john@example.com>
+|
+|     Add dark mode toggle
+|
+*   commit c3d4e5f
+|\  Merge: d4e5f6g e5f6g7h
+| | Author: Jane Doe <jane@example.com>
+| |
+| |     Merge feature/api-v2 into main
+| |
+| * commit d4e5f6g (feature/api-v2)
+| |
+| |     Complete API v2
+|/
+* commit f6g7h8i
+|
+|     Update docsThis adds a branching diagram next to your commits, making it easier to see how your project evolved over time. is super useful when you’re tracking down bugs , or just reviewing your work.And speaking of reviewing—before you commit, it’s always smart to check what’s changed since your last commit.That’s where  command comes in. gives you a  between your working directory and the last commit.diff --git a/src/App.js b/src/App.js
+index 3a5b2c1..7d8e9f2 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -12,7 +12,10 @@ function App() {
+   return (
+     <div className="App">
+-      <h1>Welcome to My App</h1>
++      <h1>Welcome to My Awesome App</h1>
++      <p>Start by logging in to continue.</p>
+     </div>
+   );
+ }It highlights what’s been , , or  so you know exactly what you’re about to commit.You can also use git diff to compare changes between branches or specific commits:git diff branch1..branch2This shows what’s different between two branches—great for code reviews or deciding whether a branch is ready to merge.Sometimes you’re in the middle of working on something and suddenly, you need to switch branches or handle a different task.But your changes aren’t ready to commit yet.You can use  command to temporarily save all your changes both staged and unstaged.It’s like putting your work in a drawer so you can come back to it later.When you're ready to pick up where you left off, just run:This brings back your stashed changes while keeping the stash in case you need it again.But, if you want to apply the stash and remove it at the same time, use:Now, let’s say you've made a mistake and want to undo a commit or reset your branch. That’s where  comes into play. is one of the most powerful commands for rolling back changes.It moves the current branch’s  pointer to a previous commit—essentially rewinding your project to an earlier state.Depending on how much you want to undo, you can use  in three different ways:Moves the HEAD back by one commit, but keeps all your changes staged.Use this when you want to adjust a previous commit or fix a message.Moves the HEAD back and , but keeps them in your working directory.Perfect when you want to start over on staging but don’t want to lose your code.This one completely wipes out changes in both the staging area  working directory.Use it with caution as it  uncommitted work.If you’ve already pushed a commit to a shared repository and need to undo something,  is your safer bet.If you’ve already pushed a commit to a shared repository and need to undo something,  is the safer option.Unlike , which rewrites history,  by creating a new commit that reverses the effects of a previous one.This doesn’t delete the original commit—it simply adds a new one that undoes the changes from that specific commit.What if you only want to copy a specific commit from one branch to another without merging everything? That’s where  command comes in.git cherry-pick <commit-hash>This command takes a single commit from another branch and applies it to your current branch, as if you made that change yourself.It’s super useful when you need a bug fix or feature from another branch but don’t want to pull in everything.Just be mindful that cherry-picking creates a  with the same changes but a different hash, so it’s not identical to the original.If you found it valuable, hit a like ❤️ and consider subscribing for more such content every week.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>Eli Holderness about communicating #NuclearWaste to future generations</title><link>https://www.youtube.com/watch?v=NbsHpZMrYCk</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NbsHpZMrYCk?version=3" length="" type=""/><pubDate>Mon, 12 May 2025 12:00:40 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #GOTObookclub #Language #ProgrammingLanguage #Communication #FerdinandDeSaussure #Saudade #LudwigWittgenstein #LanguageGames #PaulGrice #Linguistics #EliHolderness #Viral #ViralShorts #GOTO
 
 Full version available here:
-https://youtu.be/Z5OrR99OpiY
+https://youtu.be/rxdvRV5oFPU
 
-Lorna Jane Mitchell - Head of Developer Advocate at Aiven & Writer for a Number of Outlets @LornaMitchell 
+Eli Holderness - Developer Advocate & Professional Nerd
 
 RECOMMENDED BOOK
-Kevlin Henney • 97 Things Every Programmer Should Know • https://amzn.to/2Yahf9U
-Henney & Monson-Haefel • 97 Things Every Software Architect Should Know • https://amzn.to/3pZuHsQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
-Michael Jackson • Software Requirements and Specifications • https://amzn.to/3ql2T14
+Ferdinand de Saussure & Roy Harris • Course in General Linguistics • https://amzn.to/4gw1GNn
+Ludwig Wittgenstein & Alexander Booth • Tractatus Logico-Philosophicus • https://amzn.to/3MU5j1Y
+Paul Grice • Studies in the Way of Words • https://amzn.to/4ecRrfl
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Microservices on Unison Cloud: Statically Typed, Dynamically Deployed • Runar Bjarnason • YOW! 2024</title><link>https://www.youtube.com/watch?v=8VDahC5uecE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/8VDahC5uecE?version=3" length="" type=""/><pubDate>Sun, 11 May 2025 12:00:23 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! Australia 2024. #GOTOcon #YOW
+https://yowcon.com
+
+Rúnar Bjarnason - Co-Founder at Unison Computing @unisonlanguage 
+
+RESOURCES
+https://bsky.app/profile/runarorama.bsky.social
+https://blog.higher-order.com
+https://twitter.com/runarorama
+https://www.linkedin.com/in/runaroli
+https://github.com/runarorama
+
+Links
+https://share.unison-lang.org/@runarorama/yow2024
+https://www.unison-lang.org
+https://www.unison.cloud
+https://github.com/unisonweb/unison
+https://www.uber.com/en-CH/blog/microservice-architecture
+
+ABSTRACT
+Microservices promise flexibility and scalability, but come with serious downsides: complexity, operational overhead, and performance issues. Unison Cloud eliminates many of these headaches. With content-addressed code, there’s no need for containerization or orchestration. Statically typed services ensure compatibility by referring to each other by hash, removing the need for service discovery or manual API versioning. Adaptive Service Graph Compression minimizes latency by automatically co-locating services that frequently interact.
+
+This talk shows how the unique features of Unison Cloud vastly simplify microservice architecture. [...]
+
+TIMECODES
+00:00 Intro
+00:51 Goal of the talk
+01:31 What is Unison Cloud?
+02:44 Microservices are good
+04:04 Also, microservices are bad
+06:54 What on earth is going on?
+09:40 Microservices on Unison Cloud
+10:58 How does Unison not have builds?
+14:48 Deploy with a function call
+22:09 Unison Cloud services are statically typed
+27:03 Demo
+35:55 What devs say about Unison Cloud
+36:34 Summary
+36:46 Outro
+
+Download slides and read the full abstract here:
+https://yowcon.com/brisbane-2024/sessions/3538
+
+RECOMMENDED BOOKS
+Robert Johnson • Unison in Practice • https://amzn.to/3Eu9p08
+Richard Feldman • Elm in Action • https://amzn.to/387kujI
+Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
+Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Unison #UnisonLang #UnisonCloud #FunctionalProgramming #Microservices #ProgrammingLanguage #FP #StaticallyTyped #DynamicallyDeployed #OpenSource #Immutable #DistributedData #DynamicDeployment #TodayInTech #RunarBjarnason #YOWcon
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
