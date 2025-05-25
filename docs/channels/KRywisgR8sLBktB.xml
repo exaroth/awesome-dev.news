@@ -1,220 +1,228 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
-  }
-</style>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>Better CSS Shapes Using shape() — Part 1: Lines and Arcs</title><link>https://css-tricks.com/better-css-shapes-using-shape-part-1-lines-and-arcs/</link><author>Temani Afif</author><category>frontend</category><pubDate>Fri, 23 May 2025 13:02:32 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Even if I have detailed most of the modern techniques and tricks, CSS keeps evolving, and new stuff always emerges to simplify our developer life. Recently,  was upgraded to have a new  value. A real game changer!Before we jump in, it’s worth calling out that the  function is currently only supported in Chrome 137+ and Safari 18.4+ as I’m writing this in May 2025.While the  function allows reuse of the SVG path syntax to define more arbitrary shapes than allowed by more specialized shape functions, it requires writing a path as a single string (which is not compatible with, for example, building a path piecemeal with var()), and inherits a number of limitations from SVG, such as implicitly only allowing the px unit.The  function uses a set of commands roughly equivalent to the ones used by , but does so with more standard CSS syntax, and allows the full range of CSS functionality, such as additional units and math functions.In other words, we have the SVG features in the CSS side that we can combine with existing features such as , , different units, etc. SVG is already good at drawing complex shapes, so imagine what is possible with something more powerful.If you keep reading the spec, you will find:In that sense,  is a superset of . A  can be easily converted to a , but to convert a  back to a  or to SVG requires information about the CSS environment.And guess what? I already created an online converter from SVG to CSS. Save this tool because it will be very handy. If you are already good at creating SVG shapes or you have existing codes, no need to reinvent the wheel. You paste your code in the generator, and you get the CSS code that you can easily tweak later.Let’s try with the CSS-Tricks logo. Here is the SVG I picked from the website:<svg width="35px" height="35px" viewBox="0 0 362.62 388.52" >
+  <path d="M156.58,239l-88.3,64.75c-10.59,7.06-18.84,11.77-29.43,11.77-21.19,0-38.85-18.84-38.85-40C0,257.83,14.13,244.88,27.08,239l103.6-44.74L27.08,148.34C13,142.46,0,129.51,0,111.85,0,90.66,18.84,73,40,73c10.6,0,17.66,3.53,28.25,11.77l88.3,64.75L144.81,44.74C141.28,20,157.76,0,181.31,0s40,18.84,36.5,43.56L206,149.52l88.3-64.75C304.93,76.53,313.17,73,323.77,73a39.2,39.2,0,0,1,38.85,38.85c0,18.84-12.95,30.61-27.08,36.5L231.93,194.26,335.54,239c14.13,5.88,27.08,18.83,27.08,37.67,0,21.19-18.84,38.85-40,38.85-9.42,0-17.66-4.71-28.26-11.77L206,239l11.77,104.78c3.53,24.72-12.95,44.74-36.5,44.74s-40-18.84-36.5-43.56Z"></path>
+</svg>You take the value inside the  attribute, paste it in the converter, and ! You have the following CSS:.shape {
+  aspect-ratio: 0.933;
+  clip-path: shape(from 43.18% 61.52%,line by -24.35% 16.67%,curve by -8.12% 3.03% with -2.92% 1.82%/-5.2% 3.03%,curve by -10.71% -10.3% with -5.84% 0%/-10.71% -4.85%,curve to 7.47% 61.52% with 0% 66.36%/3.9% 63.03%,line by 28.57% -11.52%,line to 7.47% 38.18%,curve to 0% 28.79% with 3.59% 36.67%/0% 33.33%,curve to 11.03% 18.79% with 0% 23.33%/5.2% 18.79%,curve by 7.79% 3.03% with 2.92% 0%/4.87% 0.91%,line by 24.35% 16.67%,line to 39.93% 11.52%,curve to 50% 0% with 38.96% 5.15%/43.51% 0%,smooth by 10.07% 11.21% with 11.03% 4.85%,line to 56.81% 38.48%,line by 24.35% -16.67%,curve to 89.29% 18.79% with 84.09% 19.7%/86.36% 18.79%,arc by 10.71% 10% of 10.81% 10.09% small cw,curve by -7.47% 9.39% with 0% 4.85%/-3.57% 7.88%,line to 63.96% 50%,line to 92.53% 61.52%,curve by 7.47% 9.7% with 3.9% 1.51%/7.47% 4.85%,curve by -11.03% 10% with 0% 5.45%/-5.2% 10%,curve by -7.79% -3.03% with -2.6% 0%/-4.87% -1.21%,line to 56.81% 61.52%,line by 3.25% 26.97%,curve by -10.07% 11.52% with 0.97% 6.36%/-3.57% 11.52%,smooth by -10.07% -11.21% with -11.03% -4.85%,close);
+}Note that you don’t need to provide any  data. The converter will automatically find the smallest rectangle for the shape and will calculate the coordinates of the points accordingly. No more  headaches and no need to fight with overflow or extra spacing!Here is another example where I am applying the shape to an image element. I am keeping the original SVG so you can compare both shapes.I would be tempted to say “all the time” but in reality, not. In my guide, I distinguish between two types of shapes: The ones with only straight lines and the ones with curves. Each type can either have repetition or not. In the end, we have four categories of shapes.If we don’t have curves and we don’t have repetition (the easiest case), then  should do the job. If we have a repetition (with or without curves), then  is the way to go. With , we can rely on gradients that can have a specific size and repeat, but with  we don’t have such options.If you have curves and don’t have a repetition, the new  is the best option. Previously, we had to rely on  since  is very limited, but that’s no longer the case. Of course, these are not universal rules, but my own way to identify which option is the most suitable. At the end of the day, it’s always a case-by-case basis as we may have other things to consider, such as the complexity of the code, the flexibility of the method, browser support, etc.Enough talking, let’s move to the interesting part: drawing shapes. I will not write a tutorial to explain the “complex” syntax of . It will be boring and not interesting. Instead, we will draw some common shapes and learn by practice!Take the following polygon:clip-path: polygon(
+  0 0,
+  100% 0,
+  100% 100%,
+  0 100%
+);Technically, this will do nothing since it will draw a rectangle that already follows the element shape which is a rectangle, but it’s still the perfect starting point for us.Now, let’s write it using .clip-path: shape(
+  from 0 0,
+  line to 100% 0,
+  line to 100% 100%,
+  line to 0 100%
+);The code should be self-explanatory and we already have two commands. The  command is always the first command and is used only once. It simply specifies the starting point. Then we have the  command that draws a line to the next point. Nothing complex so far.We can still write it differently like below:clip-path: shape(
+  from 0 0,
+  hline to 100%,
+  vline to 100%,
+  hline to 0
+);Between the points  and , only the first value is changing which means we are drawing a horizontal line from  to , hence the use of  where you only need to specify the horizontal offset. It’s the same logic using  where we draw a vertical line between  and .I won’t advise you to draw your shape using  and  because they can be tricky and are a bit difficult to read. Always start by using  and then if you want to optimize your code you can replace them with  or  when applicable.We have our first shape and we know the commands to draw straight lines:Now, let’s try to add a circular cut-out at the top of our shape:For this, we are going to rely on the  command, so let’s understand how it works.If we have two points, A and B, there are exactly two circles with a given radius that intersect with both points like shown in the figure. The intersection gives us four possible arcs we can draw between points A and B. Each arc is defined by a size and a direction.There is also the particular case where the radius is equal to half the distance between A and B. In this case, only two arcs can be drawn and the direction will decide which one.The syntax will look like this:clip-path: shape(
+  from Xa Ya, 
+  arc to Xb Yb of R [large or small] [cw or ccw]
+);Let’s add this to our previous shape. No need to think about the values. Instead, let’s use random ones and see what happens:clip-path: shape(
+  from 0 0,
+  arc to 40% 0 of 50px,
+  line to 100% 0,
+  line to 100% 100%,
+  line to 0 100%
+);Not bad, we can already see the arc between  and . Notice how I didn’t define the size and direction of the arc. By default, the browser will use  and .Let’s explicitly define the size and direction to see the four different cases:Hmm, it’s working for the first two blocks but not the other ones. Quite strange, right?Actually, everything is working fine. The arcs are drawn outside the element area so nothing is visible. If you add some , you can see them:Arcs can be tricky due to the size and direction thing, so get ready to be confused. If that happens, remember that you have four different cases, and trying all of them will help you find which one you need.Now let’s try to be accurate and draw half a circle with a specific radius placed at the center:We can define the radius as a variable and use what we have learned so far:.shape {
+  --r: 50px;
 
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
+  clip-path: shape(
+    from 0 0, 
+    line to calc(50% - var(--r)) 0, 
+    arc to calc(50% + var(--r)) 0 of var(--r), 
+    line to 100% 0, 
+    line to 100% 100%, 
+    line to 0 100%
+  );
+}It’s working fine, but the code can still be optimized. We can replace all the  commands with  and  like below:.shape {
+  --r: 50px;
 
-    <!-- Repeat for all properties -->
-  </div>
-</div>
+  clip-path: shape(from 0 0, 
+    hline to calc(50% - var(--r)), 
+    arc to calc(50% + var(--r)) 0 of var(--r), 
+    hline to 100%, 
+    vline to 100%, 
+    hline to 0
+  );
+}We can also replace the radius with :.shape {
+  --r: 50px;
 
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
+  clip-path: shape(from 0 0, 
+    hline to calc(50% - var(--r)), 
+    arc to calc(50% + var(--r)) 0 of 1%,
+    hline to 100%, 
+    vline to 100%, 
+    hline to 0
+  );
+}When you define a small radius (smaller than half the distance between both points), no circle can meet the condition we explained earlier (an intersection with both points), so we cannot draw an arc. This case falls within an error handling where the browser will scale the radius until we can have a circle that meets the condition. Instead of considering this case as invalid, the browser will fix “our mistake” and draw an arc.This error handling is pretty cool as it allows us to simplify our  function. Instead of specifying the exact radius, I simply put a small value and the browser will do the job for me. This trick only works when the arc we want to draw is half a circle. Don’t try to apply it with any  command because it won’t always work.Another optimization is to update the following:arc to calc(50% + var(--r)) 0 of 1%,arc by calc(2 * var(--r)) 0 of 1%,Almost all the commands can either use a  directive or a  directive. The first one defines absolute coordinates like the one we use with . It’s the exact position of the point we are moving to. The second defines relative coordinates which means we need to consider the previous point to identify the coordinates of the next point.In our case, we are telling the arc to consider the previous point  and move by , so the final point will be , which is the same as ..shape {
+  --r: 50px;
 
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
+  clip-path: shape(from 0 0, 
+    hline to calc(50% - var(--r)), 
+    arc by calc(2 * var(--r)) 0 of 1px, 
+    hline to 100%, 
+    vline to 100%, 
+    hline to 0
+  );
+}This last optimization is great because if we want to move the cutout from the center, we only need to update one value: the ..shape {
+  --r: 50px;
+  --p: 40%;
 
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
+  clip-path: shape(
+    from 0 0, 
+    hline to calc(var(--p) - var(--r)),
+    arc by calc(2 * var(--r)) 0 of 1px, 
+    hline to 100%, 
+    vline to 100%, 
+    hline to 0
+  );
+}How would you adjust the above to have the cut-out at the bottom, left, or right? That’s your first homework assignment! Try to do it before moving to the next part.I will give my implementation so that you can compare with yours, but don’t cheat! If you can do this without referring to my work, you will be able to do more complex shapes more easily.Enough cut-out, let’s try to create a rounded tab:Can you see the puzzle of this one? Similar to the previous shape, it’s a bunch of  and  commands. Here is the code:.shape {
+  --r: 26px;
+  
+  clip-path: shape(
+    /* left part */
+    from 0 100%,
+    arc by var(--r) calc(-1 * var(--r)) of var(--r),
+    vline to var(--r),
+    arc by var(--r) calc(-1 * var(--r)) of var(--r) cw,
+    /* right part */
+    hline to calc(100% - 2 * var(--r)),
+    arc by var(--r) var(--r) of var(--r) cw,
+    vline to calc(100% - var(--r)),
+    arc by var(--r) var(--r) of var(--r)
+  );
+}It looks a bit scary, but if you follow it command by command, it becomes a lot clearer to see what’s happening. Here is a figure to help you visualize the left part of it.All the  commands are using the  directive because, in all the cases, I always need to move by an offset equal to R, meaning I don’t have to calculate the coordinates of the points. And don’t try to replace the radius by  because it won’t work since we are drawing a quarter of a circle rather than half of a circle.From this, we can easily achieve the left and right variations:Notice how I am only using two  commands instead of three. One rounded corner can be done with a classic border radius, so this can help us simplify the shape.One last shape, the classic inner curve at the corner also called an inverted radius. How many  commands do we need for this one? Check the figure below and think about it.If your answer is six, you have chosen the difficult way to do it. It’s logical to think about six arcs since we have six curves, but three of them can be done with a simple border radius, so only three arcs are needed. Always take the time to analyze the shape you are creating. Sometimes, basic CSS properties can help with creating the shape.What are you waiting for? This is your next homework and I won’t help you with a figure this time. You have all that you need to easily create it. If you are struggling, give the article another read and try to study the previous shapes more in depth.Here is my implementation of the four variations:That’s all for this first part. You should have a good overview of the  function. We focused on the  and  commands which are enough to create most of the common shapes.]]></content:encoded></item><item><title>A timeline of JavaScript&apos;s history</title><link>https://javascriptweekly.com/issues/737</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[Google's I/O event took place this week and ▶️ its 'developer keynote' was a highlight, particularly when Addy Osmani showed off some of the latest Chrome DevTools fun (starting at about 30 minutes in).]]></content:encoded></item><item><title>You can style alt text like any other text</title><link>https://css-tricks.com/you-can-style-alt-text-like-any-other-text/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 22 May 2025 14:43:09 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[The recipe? First, make sure you’re using  in the HTML. Then, a little JavaScript snippet that detects when an image fails to load:const images = document.querySelectorAll("img");
 
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
+if (images) {
+  images.forEach((image) => {
+    image.onerror = () => {
+      image.setAttribute("data-img-loading-error", "");
+    };
+  });
+}That slaps an attribute on the image —  — that is selected in CSS:img[data-img-loading-error] {
+  --img-border-style: 0.25em solid
+    color-mix(in srgb, currentColor, transparent 75%);
+  --img-border-space: 1em;
 
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+  border-inline-start: var(--img-border-style);
+  border-block-end: var(--img-border-style);
+  padding-inline-start: var(--img-border-space);
+  padding-block: var(--img-border-space);
+  max-width: 42ch;
+  margin-inline: auto;
+}And what you get is a lovely little presentation of the  that looks a bit like a blockquote and is is only displayed when needed.Andy does note, however, that Safari does not render  text if it goes beyond a single line, which 🤷‍♂️.]]></content:encoded></item><item><title>SVG to CSS Shape Converter</title><link>https://css-tricks.com/svg-to-css-shape-converter/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 21 May 2025 15:09:29 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Some of the more complex shapes were commonly clipped with the  function. That makes a lot of sense because it literally accepts SVG  coordinates that you can draw in an app like Figma and export.So, if we had a shape that was originally created with an SVG , like this:.shape {
+  clip-path: path(
+    M199.6,18.9
+    c-4.3-8.9-12.5-16.4-22.3-17.8
+    c-11.9-1.7-23.1,5.4-32.2,13.2
+    c-9.1,7.8-17.8,16.8-29.3,20.3
+    c-20.5,6.2-41.7-7.4-63.1-7.5
+    c38.7,27,24.8,33,15.2,43.3
+    c-35.5,38.2-0.1,99.4,40.6,116.2
+    c32.8,13.6,72.1,5.9,100.9-15
+    c27.4-19.9,44.3-54.9,47.4-88.6
+    c0.2-2.7,0.4-5.3,0.5-7.9
+    c204.8,38,203.9,27.8,199.6,18.9
+    z
+  );
+}…the generator will spit this out:.shape {
+  clip-path: shape(
+    from 97.54% 10.91%,
+    curve by -10.93% -10.76% with -2.11% -5.38%/-6.13% -9.91%,
+    curve by -15.78% 7.98% with -5.83% -1.03%/-11.32% 3.26%,
+    curve by -14.36% 12.27% with -4.46% 4.71%/-8.72% 10.15%,
+    curve by -30.93% -4.53% with -10.05% 3.75%/-20.44% -4.47%,
+    curve to 7.15% 25.66% with 18.67% 15.81%/11.86% 19.43%,
+    curve by 19.9% 70.23% with -17.4% 23.09%/-0.05% 60.08%,
+    curve by 49.46% -9.07% with 16.08% 8.22%/35.34% 3.57%,
+    curve by 23.23% -53.55% with 13.43% -12.03%/21.71% -33.18%,
+    curve by 0.25% -4.77% with 0.1% -1.63%/0.2% -3.2%,
+    curve to 97.54% 10.91% with 100.09% 22.46%/99.64% 16.29%,
+    close
+  );
+}Honestly, I’m not sure how often I’ll need to convert  to . Seems like a stopgap sorta thing where the need for it dwindles over time as  is used more often — and it’s not like the existing  function is broken or deprecated… it’s just different. But still, I’m using the generator a LOT as I try to wrap my head around  commands. Seeing the commands in context is invaluable which makes it an excellent learning tool.]]></content:encoded></item><item><title>This Week In React #235: React Router, createStore, SuspenseList, Transition Indicator, Compiler, RenderHooks, Waku, React-Scan | Expo, Lava, Fortnite, Skia, AI, Lynx | TC39, using, Zod, Node, Deno</title><link>https://thisweekinreact.com/newsletter/235</link><author></author><category>frontend</category><pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week, we're delighted to finally have a preview of React Server Components support in React Router. I've also found some very interesting PRs on the React repo, and give you a glimpse of what could be coming soon!The React Native ecosystem is surprisingly calm, but no doubt they keep everything secret for App.js Conf next week!By the way, I would really appreciate your support. Now that I'm automatically removing cold subscribers, the newsletter is decreasing over time 😅. Any retweet, like, engagement, or testimonial really helps me! Please convince your friends to subscribe ❤️As always, thanks for supporting us on your favorite platform:Code reviews are critical but time-consuming. CodeRabbit acts as your AI co-pilot, providing instant Code review comments and potential impacts of every pull request. Beyond just flagging issues, CodeRabbit provides one-click fix suggestions and lets you define custom code quality rules using AST Grep patterns, catching subtle issues that traditional static analysis tools might miss.CodeRabbit has so far reviewed more than 5 million PRs, installed on 1 million repositories, and used by 50 thousand Open-source projects. CodeRabbit is free for all open-source repo's. Get started today!The React Router team unveiled a preview of React Server Components support using the Parcel bundler. Stable support is blocked until Vite officially supports RSCs, but the good news is that React Router is becoming more framework-agnostic, and they expect to support other bundlers in the future with minimal effort.The feature is designed to be both incrementally adoptable by returning JSX in loaders/actions, but also to feel good on new greenfield projects looking to go all-in with Server Component Routes,  and  directives. They also explain how to solve the N+1 query problem in RSCs, inspired by GraphQL/DataLoader.Looks like the Render Props pattern is making a comeback, with 2 new projects proposing to expose React core hooks in a render callback. This is a convenient trick in some situations, allowing you to "inline" a component while still respecting the rules of hooks, but it does not really solve any problem that can’t be solved by extracting a custom component. An interesting pattern to use sparingly.Why build loyalty from scratch when you can plug it in with Dynamo?Dynamo is the API-first headless loyalty engine used by product teams at leading fintech and consumer apps to embed rewards, tiers, and behavior-based engagement — without writing it all from zero.With 250+ cloud data integrations, a React and React Native SDK, plus a clean sandbox trial, you can improve your retention now in days not months.]]></content:encoded></item><item><title>A Reader’s Question on Nested Lists</title><link>https://css-tricks.com/a-readers-question-on-nested-lists/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Mon, 19 May 2025 12:32:22 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[A couple of days back, among the tens of crypto-scams that flood our contact inbox, we found an interesting question on nested lists from one of our readers.I have a problem (related to list-numbering) that seems commonplace, but I can’t seem to solve it or find any solution for. If any of your geniuses can answer this, I’m sure there are going to be a lot of people interested.Here’s the problem. It’s a routine numbering sequence, of different levels, found in (for example) [government], legislation, and in my case, condominium bylaws. I have five levels represented by the first number at each level of 1., (1), (a) (lower-alpha), (i) (lower-roman), (A) (upper-alpha). Of course, I have 5 levels here, but if you could demonstrate a solution for 3 levels.Fair enough! So, what we are looking to achieve is a nested list, where each sublist marker/counter is of a different kind. The example linked in the message is the following:8 The strata corporation must repair and maintain all of the following:
+    (a) common assets of the strata corporation;
+    (b) common property that has not been designated as limited common property;
+    (c) limited common property, but the duty to repair and maintain it is restricted to
+        (i) repair and maintenance that in the ordinary course of events occurs less often than once a year, and
+        (ii) the following, no matter how often the repair or maintenance ordinarily occurs:
+            (A) the structure of a building;
+            (B) the exterior of a building;
+            (C) chimneys, stairs, balconies and other things attached to the exterior of a building;
+            (D) doors, windows and skylights on the exterior of a building or that front on the common property;While simple at first glance, it still has some nuance, so let’s try to come up with the most maintainable solution here.My first approach to this problem was no approach at all; I just opened CodePen, wrote up the HTML, and tried to get my CSS to work towards the final result. After translating the Markdown into  and  elements, and with no special styling on each list, the base list would look like the following:Once there, my first instinct was to select each  element and then change its  to the desired one. To target each level, I selected each  depending on its number of  ancestors, then let the specificity handle the rest:ol {
+  list-style-type: decimal; /* Unnecessary; just for demo */
 }
 
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+ol ol {
+  list-style-type: lower-alpha;
 }
 
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
-
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
+ol ol ol {
+  list-style-type: lower-roman;
 }
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
+ol ol ol ol {
+  list-style-type: upper-alpha;
+}And as you can see, this works… But we can agree it’s an ugly way to go about it.Luckily, CSS nesting has been baseline for a couple of years now, so we could save ourselves a lot of  selectors by just nesting each element inside the next one.ol {
+  list-style-type: decimal;
+  
+  ol {
+    list-style-type: lower-alpha;
+     
+    ol {
+      list-style-type: lower-roman;
+          
+       ol {
+        list-style-type: upper-alpha;
+      }
+    }
+  }
+}
+While too much nesting is usually frowned upon, I think that, for this case in particular, it makes the CSS clearer on what it intends to do — especially since the CSS structure matches the HTML itself, and it also keeps all the list styles in one place. All to the same result:I don’t know anything about legal documents, nor do I intend to learn about them. However, I do know the law, and by extension, lawyers are finicky about how they are formatted because of legal technicalities and whatnot. The point is that for a legal document, those parentheses surrounding each list marker — like  or  — are more than mere decoration and have to be included in our lists, which our current solution doesn’t.A couple of years back, we would have needed to set a counter for each list and then include the parentheses along the  output; repetitive and ugly. Nowadays, we can use the  at rule, which as its name implies, allows us to create custom counter styles that can be used (among other places) in the  property.In case you’re unfamiliar with the  syntax, what we need to know is that it can be used to extend predefined counter styles (like  or ), and attach to them a different  or . For example, the following counter style extends the common  style and adds a dash () as a  and a colon () as a suffix.@counter-style my-counter-style {
+  system: extends decimal;
+  prefix: "- ";
+  suffix: ": ";
 }
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+ol {
+  list-style-type: my-counter-style;
+}In our case, we’ll need four counter styles:A decimal marker, without the ending dot. The initial submission doesn’t make it clear if it’s with or without the dot, but let’s assume it’s without.A lower alpha marker, enclosed in parentheses.A lower Roman marker, also enclosed in parentheses.An upper alpha marker, enclosed in parentheses as well.All these would translate to the following  rules:@counter-style trimmed-decimal {
+  system: extends decimal;
+  suffix: " ";
+}
+
+@counter-style enclosed-lower-alpha {
+  system: extends lower-alpha;
+  prefix: "(";
+  suffix: ") ";
+}
+
+@counter-style enclosed-lower-roman {
+  system: extends lower-roman;
+  prefix: "(";
+  suffix: ") ";
+}
+
+@counter-style enclosed-upper-alpha {
+  system: extends upper-alpha;
+  prefix: "(";
+  suffix: ") ";
+}And then, we just gotta replace each with its equivalent in our initial  declarations:ol {
+  list-style-type: trimmed-decimal;
+
+  ol {
+    list-style-type: enclosed-lower-alpha;
+
+    ol {
+      list-style-type: enclosed-lower-roman;
+
+      ol {
+        list-style-type: enclosed-upper-alpha;
+      }
+    }
+  }
+}It should work without CSS!Remember, though, it’s a legal document, so what happens if the internet is weak enough so that only the HTML loads correctly, or if someone checks the page from an old browser that doesn’t support nesting or ?Thinking only about the list, in most websites, it would be a mild annoyance where the markers go back to decimal, and you have to go by padding to know where each sublist starts. However, in a legal document, it can be a big deal. How big? I am no lawyer, so it beats me, but we still can make sure the list keeps its original numbering even without CSS.For the task, we can use the HTML  attribute. It’s similar to CSS  but with its own limited uses. First, its use with  elements is deprecated, while it can be used in  elements to keep the lists correctly numbered even without CSS, like in legal or technical documents such as ours. It has the following values: for decimal numbers (default) for lowercase alphabetic for uppercase alphabetic for lowercase Roman numbers for uppercase Roman numbersInside our HTML list, we would assign the correct numbering for each  level:Depending on how long the document is, it may be more the hassle than the benefit, but it is still good to know. Although this kind of document doesn’t change constantly, so it wouldn’t hurt to add this extra safety net.Welp, that was kinda too much for a list! But that’s something intrinsic to legal documents. Still, I think it’s the simplest way to achieve the initial reader’s goal. Let me know in the comments if you think this is overengineered or if there is an easier way.]]></content:encoded></item></channel></rss>
