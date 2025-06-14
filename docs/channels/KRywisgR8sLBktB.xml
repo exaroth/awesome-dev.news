@@ -1,220 +1,284 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
-  }
-</style>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>Everybody&apos;s gone lintin&apos;</title><link>https://javascriptweekly.com/issues/740</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[ — Give this Web-based tool one or more npm package names (or even your  file) and you can see a visualization of the dependency graphs for those packages, including where they intersect. Packages can be colored by various criteria (such as number of maintainers) and you can download SVGs of the graphs.Kieffer, Brigante, et al. ]]></content:encoded></item><item><title>Breaking Boundaries: Building a Tangram Puzzle With (S)CSS</title><link>https://css-tricks.com/breaking-boundaries-building-a-tangram-puzzle-with-scss/</link><author>Sladjana Stojanovic</author><category>frontend</category><pubDate>Thu, 12 Jun 2025 13:58:38 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[For years, I believed that drag-and-drop games — especially those involving rotation, spatial logic, and puzzle solving — were the exclusive domain of JavaScript. Until one day, I asked AI:“Is it possible to build a fully interactive Tangram puzzle game using only CSS?”The answer: “No — not really. You’ll need JavaScript.” That was all the motivation I needed to prove otherwise.But first, let’s ask the obvious question: Why would anyone do this?To know how far CSS can be pushed in creating interactive UIs.To get better at my CSS skills.Now, here’s the unsurprising truth: CSS isn’t exactly made for this. It’s not a logic language, and let’s be honest, it’s not particularly dynamic either. (Sure, we have CSS variables and some handy built-in functions now, hooray!)In JavaScript, we naturally think in terms of functions, loops, conditions, objects, comparisons. We write logic, abstract things into methods, and eventually ship a bundle that the browser understands. And once it’s shipped? We rarely look at that final JavaScript bundle — we just focus on keeping it lean.Now ask yourself: isn’t that exactly what Sass does for CSS?Why should we hand-write endless lines of repetitive CSS when we can use mixins and functions to generate it — cleanly, efficiently, and without caring how many lines it takes, as long as the output is optimized?So, we put it to the test and it turns out Sass can replace JavaScript, at least when it comes to low-level logic and puzzle behavior. With nothing but maps, mixins, functions, and a whole lot of math, we managed to bring our Tangram puzzle to life, no JavaScript required.Let the (CSS-only) games begin! 🎉The game consists of seven pieces: the classic Tangram set. Naturally, these pieces can be arranged into a perfect square (and many other shapes, too). But we need a bit more than just static pieces.So here’s what I am building:A puzzle goal, which is the target shape the player has to recreate.A start button that shuffles all the pieces into a staging area.Each piece is clickable and interactive.The puzzle should let the user know when they get a piece wrong and also celebrate when they finish the puzzle.I started by setting up the HTML structure, which is no small task, considering the number of elements involved.Each shape was given seven radio buttons. I chose radios over checkboxes to take advantage of their built-in exclusivity. Only one can be selected within the same group. This made it much easier to track which shape and state were currently active.The start button? Also a radio input. A checkbox could’ve worked too, but for the sake of consistency, I stuck with radios across the board.The puzzle map itself is just a plain old , simple and effective.For rotation, we added eight radio buttons, each representing a 45-degree increment: 45°, 90°, 135°, all the way to 360°. These simulate rotation controls entirely in CSS.Every potential shadow position got its own radio button too. (Yes, it’s a lot, I know.)And to wrap it all up, I included a classic reset button inside a  using , so players can easily start over at any point.Given the sheer number of elements required, I used Pug to generate the HTML more efficiently. It was purely a convenience choice. It doesn’t affect the logic or behavior of the puzzle in any way.Below is a sample of the compiled HTML. It might look overwhelming at first glance (and this is just a portion of it!), but it illustrates the structural complexity involved. This section is collapsed to not nuke your screen, but it can be expanded if you’d like to explore it.Creating maps for shape dataNow that HTML skeleton is ready, it’s time to inject it with some real power. That’s where our  come in, and here’s where the puzzle logic starts to shine. Maps in Sass hold pairs of keys and values, and make it easy to look up a value by its corresponding key. Like objects in JavaScript, dictionaries in Python and, well, maps in C++.I’m mapping out all the core data needed to control each tangram piece (tan): its color, shape, position, and even interaction logic. These maps contain:the  for each tan,the  coordinates that define their shapes,the initial position for each tan,the position of the blocking  (which disables interaction when a tan is selected),the shadow positions (coordinates for the tan’s silhouette displayed on the task board),the grid information, andthe winning combinations — the exact target coordinates for each tan, marking the correct solution.$colors: ( blue-color: #53a0e0, yellow-color: #f7db4f, /* Colors for each tan */ );
+$nth-child-grid: ( 1: (2, 3, 1, 2, ), 2: ( 3, 4, 1, 2, ), 4: ( 1, 2, 2, 3, ), /* More entries to be added */);
+$bluePosiblePositions: ( 45: none, 90: ( (6.7, 11.2), ), 135: none, 180: none, /* Positions defined up to 360 degrees */);
+/* Other tans */
 
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
+/* Data defined for each tan */
+$tansShapes: (
+  blueTriangle: (
+    color: map.get($colors, blue-color),
+    clip-path: ( 0 0, 50 50, 0 100, ),
+    rot-btn-position: ( -20, -25, ),
+    exit-mode-btn-position: ( -20, -33, ),
+    tan-position: ( -6, -37, ),
+    diable-lab-position: ( -12, -38, ),
+    poss-positions: $bluePosiblePositions,
+    correct-position: ((4.7, 13.5), (18.8, 13.3), ),
+    transform-origin: ( 4.17, 12.5,),
+  ),
+);
 
-    <!-- Repeat for all properties -->
-  </div>
-</div>
+/* Remaining 7 combinations */
+$winningCombinations: (
+  combo1: (
+    (blueTriangle, 1, 360),
+    (yellowTriangle, 1, 225),
+    (pinkTriangle, 1, 180),
+    (redTriangle, 4, 360),
+    (purpleTriangle, 2, 225),
+    (square, 1, 90),
+    (polygon, 4, 90),
+  ),
+);You can see this in action on CodePen, where these maps drive the actual look and behavior of each puzzle piece. At this point, there’s no visible change in the preview. We’ve simply prepared and stored the data for later use.Using mixins to read from mapsThe main idea is to create reusable mixins that will read data from the maps and apply it to the corresponding CSS rules when needed.But before that, we’ve elevated things to a higher level by making one key decision: We never hard-coded units directly inside the maps. Instead, we built a reusable utility function that dynamically adds the desired unit (e.g., , , etc.) to any numeric value when it’s being used. This way, when can use our maps however we please.@function get-coordinates($data, $key, $separator, $unit) {
+  $coordinates: null;
 
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
+  // Check if the first argument is a map
+  @if meta.type-of($data) == "map" {
+    // If the map contains the specified key
+    @if map.has-key($data, $key) {
+      // Get the value associated with the key (expected to be a list of coordinates)
+      $coordinates: map.get($data, $key);
     }
 
+  //  If the first argument is a list
+  } @else if meta.type-of($data) == "list" {
+    // Ensure the key is a valid index (1-based) within the list
+    @if meta.type-of($key) == "number" and $key > 0 and $key <= list.length($data) {
+      // Retrieve the item at the specified index
+      $coordinates: list.nth($data, $key);
+    }
+
+  //  If neither map nor list, throw an error
+  } @else {
+    @error "Invalid input: First argument must be a map or a list.";
+  }
+
+  // If no valid coordinates were found, return null
+  @if $coordinates == null {
+    @return null;
+  }
+
+  //  Extract x and y values from the list
+  $x: list.nth($coordinates, 1);
+  $y: list.nth($coordinates, -1); // -1 gets the last item (y)
+
+  //  Return the combined x and y values with units and separator
+  @return #{$x}#{$unit}#{$separator}#{$y}#{$unit};
+}Sure, nothing’s showing up in the preview yet, but the real magic starts now.Now we move on to writing mixins. I’ll explain the approach in detail for the first mixin, and the rest will be described through comments.The first mixin dynamically applies  and  placement rules to child elements based on values stored in a map. Each entry in the map corresponds to an element index (1 through 8) and contains a list of four values: [start-col, end-col, start-row, end-row].@mixin tanagram-grid-positioning($nth-child-grid) {
+  // Loop through numbers 1 to 8, corresponding to the tanam pieces
+  @for $i from 1 through 8 {
+
+    // Check if the map contains a key for the current piece (1-8)
+    @if map.has-key($nth-child-grid, $i) {
+
+      // Get the grid values for this piece: [start-column, end-column, start-row, end-row]
+      $values: map.get($nth-child-grid, $i);
+
+      // Target the nth child (piece) and set its grid positions
+      &:nth-child(#{$i}) {
+        // Set grid-column: start and end values based on the first two items in the list
+        grid-column: #{list.nth($values, 1)} / #{list.nth($values, 2)};
+
+        // Set grid-row: start and end values based on the last two items in the list
+        grid-row: #{list.nth($values, 3)} / #{list.nth($values, 4)};
+      }
+    }
+  }
+}We can expect the following CSS to be generated:.tanagram-box:nth-child(1) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.tanagram-box:nth-child(2) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}In this mixin, my goal was actually to create all the shapes (tans). I am using . There were ideas to use fancy SVG images, but this test project is more about testing the logic rather than focusing on beautiful design. For this reason, the simplest solution was to cut the elements according to dimensions while they are still in the square (the initial position of all the tans).So, in this case, through a static calculation, the  map was updated with the  property:clip-path: (0 0, 50 50, 0 100);This contains the clip points for all the tans. In essence, this mixin shapes and colors each tan accordingly.@mixin set-tan-clip-path($tanName, $values) {
+  //  Initialize an empty list to hold the final clip-path points
+  $clip-path-points: ();
+
+  // Extract the 'clip-path' data from the map, which contains coordinate pairs
+  $clip-path-key: map.get($values, clip-path);
+
+  // Get the number of coordinate pairs to loop through
+  $count: list.length($clip-path-key);
+
+  //  Loop through each coordinate point
+  @for $i from 1 through $count {
+    //  Convert each pair of numbers into a formatted coordinate string with units
+    $current-point: get-coordinates($clip-path-key, $i, " ", "%");
+
+    //  Add the formatted coordinate to the list, separating each point with a comma
+    $clip-path-points: list.append($clip-path-points, #{$current-point}, comma);
+  }
+
+  //  Style for the preview element (lab version), using the configured background color
+  #tan#{$tanName}lab {
+    background: map.get($values, color);
+    clip-path: polygon(#{$clip-path-points}); // Apply the full list of clip-path points
+  }
+
+  //  Apply the same clip-path to the actual tan element
+  .#{$tanName} {
+    clip-path: polygon(#{$clip-path-points});
+  }
+}and output in CSS should be:.blueTriangle {
+  clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+}
+/* other tans */Alright, now I’d like to clarify what should happen first when the game loads.First, with a click on the Start button, all the tans “go to their positions.” In reality, we assign them a  with specific coordinates and a rotation..start:checked ~ .shadow #tanblueTrianglelab {
+  transform-origin: 4.17vmin 12.5vmin;
+  transform: translate(-6vmin,-37vmin) rotate(360deg);
+  cursor: pointer;
+}So, we still maintain this pattern. We use transform and simply change the positions or angles (in the maps) of both the tans and their shadows on the task board.When any tan is clicked, the rotation button appears. By clicking on it, the tan should rotate around its center, and this continues with each subsequent click. There are actually eight radio buttons, and with each click, one disappears and the next one appears. When we reach the last one, clicking it makes it disappear and the first one reappears. This way, we get the impression of clicking the same button (they are, of course, styled the same) and being able to click (rotate the tan) infinitely. This is exactly what the following mixin enables.@mixin set-tan-rotation-states($tanName, $values, $angles, $color) {
+  // This mixin dynamically applies rotation UI styles based on a tan's configuration.
+  // It controls the positioning and appearance of rotation buttons and visual feedback when a rotation state is active.
+  @each $angle in $angles{
+    & ~ #rot#{$angle}{ transform: translate(get-coordinates($values,rot-btn-position,',',vmin )); background: $color;}
+    & ~ #rotation-#{$angle}:checked{
+      @each $key in map.keys($tansShapes){
+        & ~ #tan#{$key}labRes{ visibility: visible; background:rgba(0,0,0,0.4); }
+        & ~ #tan#{$key}lab{ opacity:.3; }
+        & ~ #rotReset{ visibility: visible; }
+      } 
+    }
+  }
+}And the generated CSS should be:#blueTriangle-tan:checked ~ #rotation-45:checked ~ #tanblueTrianglelab {
+  transform: translate(-6vmin,-37vmin) rotate(45deg);
+}
+
+#blueTriangle-tan:checked ~ #rotation-45:checked ~ #tanblueTrianglelabRes {
+  visibility: hidden;
+}OK, the following mixins use the  and  mixins. They contain all the information about the tans and their behavior in relation to which tan is clicked and which rotation is selected, as well as their positions (as defined in the second mixin).@mixin generate-tan-shapes-and-interactions($tansShapes) {
+// Applies styling logic and UI interactions for each individual tan shape from the $tansShapes map.
+  @each $tanName, $values in $tansShapes{
+    $color: color.scale(map.get($values, color), $lightness: 10%); 
+    $angles: (45, 90, 135, 180, 225, 270, 315, 360); 
+    @include set-tan-clip-path($tanName, $values);
+
+    ##{$tanName}-tan:checked{
+      & ~ #tan#{$tanName}Res{ visibility:hidden; }
+      & ~ #tan#{$tanName}lab{opacity: 1 !important;background: #{$color};cursor:auto;}
+      @each $key in map.keys($tansShapes){
+          & ~ #tan#{$tanName}Res:checked ~ #tan#{$key}labRes{visibility: visible;}
+      }
+      & ~  #rot45{display: flex;visibility: visible;}
+      & ~ #rotReset{ transform: translate(get-coordinates($values, exit-mode-btn-position,',', vmin)); }
+      @include set-tan-rotation-states($tanName, $values, $angles, $color);
+    }  
+  }
+}@mixin set-initial-tan-position($tansShapes) {
+// This mixin sets the initial position and transformation for both the interactive (`lab`) and shadow (`labRes`) versions
+// of each tan shape, based on coordinates provided in the $tansShapes map.
+ @each $tanName, $values in $tansShapes{
+    & ~ .shadow #tan#{$tanName}lab{
+      transform-origin: get-coordinates($values, transform-origin,' ' ,vmin);
+      transform: translate( get-coordinates($values,tan-position,',', vmin)) rotate(360deg) ;
+      cursor: pointer;
+    }
+    & ~ .shadow #tan#{$tanName}labRes{
+      visibility:hidden;
+      transform: translate(get-coordinates($values,diable-lab-position,',',vmin)); 
+    }
+  }
+}As mentioned earlier, when a tan is clicked, one of the things that becomes visible is its shadow — a silhouette that appears on the task board.These shadow positions (coordinates) are currently defined statically. Each shadow has a specific place on the map, and a mixin reads this data and applies it to the shadow using .When the clicked tan is rotated, the number of visible shadows on the task board can change, as well as their angles, which is expected.Of course, special care was taken with naming conventions. Each shadow element gets a unique ID, made from the name (inherited from its parent tan) and a number that represents its sequence position for the given angle.Pretty cool, right? That way, we avoid complicated naming patterns entirely!@mixin render-possible-tan-positions( $name, $angle, $possiblePositions, $visibility, $color, $id, $transformOrigin ) {
+    // This mixin generates styles for possible positions of a tan shape based on its name, rotation angle, and configuration map.
+    // It handles both squares and polygons, normalizing their rotation angles accordingly and applying transform styles if positions exist.}
+  @if $name == 'square' {
+    $angle: normalize-angle($angle); // Normalizujemo ugao ako je u pitanju square
+  } @else if $name == 'polygon'{
+    $angle: normalize-polygon-angle($angle);
+  }
+  @if map.has-key($possiblePositions, $angle) {
+    $values: map.get($possiblePositions, $angle);
+
+    @if $values != none {
+      $count: list.length($values);
+
+      @for $i from 1 through $count {
+        $position: get-coordinates($values, $i, ',', vmin);
+        & ~ #tan#{$name}lab-#{$i}-#{$angle} { 
+          @if $visibility == visible {
+            visibility: visible;
+            background-color: $color;
+            opacity: .2;
+            z-index: 2;
+            transform-origin: #{$transformOrigin};
+            transform: translate(#{$position}) rotate(#{$angle}deg);
+          } @else if $visibility == hidden { visibility: hidden; }
+          &:hover{ opacity: 0.5; cursor: pointer; }
+        }
+      }
+    }
+  }
+}#blueTriangle-tan:checked ~ #tanblueTrianglelab-1-360 {
+  visibility: visible;
+  background-color: #53a0e0;
+  opacity: 0.2;
+  z-index: 2;
+  transform-origin: 4.17vmin 12.5vmin;
+  transform: translate(4.7vmin,13.5vmin) rotate(360deg);
+}This next mixin is tied to the previous one and manages when and how the tan shadows appear while their parent tan is being rotated using the button. It listens for the current rotation angle and checks whether there are any shadow positions defined for that specific angle. If there are, it displays them; if not — no shadows!@mixin render-possible-positions-by-rotation {
+   // This mixin applies rotation to each tan shape. It loops through each tan, calculates its possible positions for each angle, and handles visibility and transformation.
+   // It ensures that rotation is applied correctly, including handling the transitions between various tan positions and visibility states.
+ @each $tanName, $values in $tansShapes{
+    $possiblePositions: map.get($values, poss-positions);
+    $possibleTansColor: map.get($values, color);
+    $validPosition: get-coordinates($values, correct-position,',' ,vmin);
+    $transformOrigin: get-coordinates($values,transform-origin,' ' ,vmin); 
+    $rotResPosition: get-coordinates($values,exit-mode-btn-position ,',' ,vmin );
+    $angle: 0;
+    @for $i from 1 through 8{
+      $angle: $i * 45;
+      $nextAngle: if($angle + 45 > 360, 45, $angle + 45);
+      @include render-position-feedback-on-task($tanName,$angle, $possiblePositions,$possibleTansColor, #{$tanName}-tan, $validPosition,$transformOrigin, $rotResPosition);   
+        ##{$tanName}-tan{
+        @include render-possible-tan-positions($tanName,$angle, $possiblePositions,hidden, $possibleTansColor, #{$tanName}-tan,$transformOrigin)
+      }
+        ##{$tanName}-tan:checked{
+          @include render-possible-tan-positions($tanName,360, $possiblePositions,visible, $possibleTansColor, #{$tanName}-tan,$transformOrigin);
+          & ~ #rotation-#{$angle}:checked {
+            @include render-possible-tan-positions($tanName,360, $possiblePositions,hidden, $possibleTansColor, #{$tanName}-tan,$transformOrigin);
+            & ~ #tan#{$tanName}lab{transform:translate( get-coordinates($values,tan-position,',', vmin))  rotate(#{$angle}deg) ;}
+            & ~ #tan#{$tanName}labRes{ visibility: hidden; }
+            & ~ #rot#{$angle}{ visibility: hidden; }
+            & ~ #rot#{$nextAngle}{ visibility: visible } 
+            @include render-possible-tan-positions($tanName,$angle, $possiblePositions,visible, $possibleTansColor, #{$tanName}-tan,$transformOrigin);
+        }
+      }
+    }
+  }
+}When a tan’s shadow is clicked, the corresponding tan should move to that shadow’s position. The next mixin then checks whether this new position is the correct one for solving the puzzle. If it is correct, the tan gets a brief blinking effect and becomes unclickable, signaling it’s been placed correctly. If it’s not correct, the tan simply stays at the shadow’s location. There’s no effect and it remains draggable/clickable.Of course, there’s a list of all the correct positions for each tan. Since some tans share the same size — and some can even combine to form larger, existing shapes — we have multiple valid combinations. For this Camel task, all of them were taken into account. A dedicated map with these combinations was created, along with a mixin that reads and applies them.At the end of the game, when all tans are placed in their correct positions, we trigger a “merging” effect — and the silhouette of the camel turns yellow. At that point, the only remaining action is to click the Restart button.Well, that was long, but that’s what you get when you pick the fun (albeit hard and lengthy) path. All as an ode to CSS-only magic!]]></content:encoded></item><item><title>I&apos;m Doing a Little Consulting</title><link>https://overreacted.io/im-doing-a-little-consulting/</link><author></author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate><source url="https://overreacted.io/">Dan Abramov</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Suppressions of Suppressions</title><link>https://overreacted.io/suppressions-of-suppressions/</link><author></author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate><source url="https://overreacted.io/">Dan Abramov</source><content:encoded><![CDATA[I heard you like linting.]]></content:encoded></item><item><title>This Week In React #238: React Router, RSC, shadcn/ui, React Aria, TanStack, ForesightJS, Cosmos | iOS 26, JSI, Nitro, WebView, Windows, Tabs, PencilKit | Node, Oxlint, Amaro, Jest, WebKit, pnpm</title><link>https://thisweekinreact.com/newsletter/238</link><author></author><category>frontend</category><pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week is relatively calm in the React ecosystem, but we still have various interesting blog posts and releases. Maybe we'll soon get some exciting news from React Summit that's about on Friday!On the React Native side, all the devs are already working on iOS 26 Liquid Glass support and other things announced by Apple yesterday. This new design thing is rather controversial and subject to a lot of mockery 😂. React Native 0.80 is just around the corner, I'll keep all this for later, but you can get a sneak peek in Alex Hunt talk at App.js.The JS ecosystem has been rather active with Oxlint 1.0 and various interesting Node.js news.As always, thanks for supporting us on your favorite platform:Engineers spend most of their time doing two things: coding and communicating. The first has endless amounts written about it; the second much less so.To address this injustice, PostHog shares the biggest mistakes they see engineers make when communicating and what they do as a remote, async, engineering-led company to eliminate them.Learn how to architect a scalable, multi-tenant B2B SaaS app using Clerk and Supabase. This technical guide covers:🔐 Organization-level authentication👥 Scoping Supabase data by tenant🧩 Mapping users to organizations securely🧑‍💻 Structuring your React app for clean multi-tenancy]]></content:encoded></item><item><title>Creating an Auto-Closing Notification With an HTML Popover</title><link>https://css-tricks.com/creating-an-auto-closing-notification-with-an-html-popover/</link><author>Preethi</author><category>frontend</category><pubDate>Mon, 9 Jun 2025 12:58:37 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[The HTML  attribute transforms elements into top-layer elements that can be opened and closed with a button or JavaScript. Most popovers can be light-dismissed, closing when the user clicks or taps outside the popup. Currently, HTML  lacks built-in auto-close functionality, but it’s easy to add. Auto closing popups are useful for user interfaces like banner notifications — the new-message alerts in phones, for instance.A  demo, is worth a thousand words, right? Click on the “Add to my bookmarks” button in the following example. It triggers a notification that dismisses itself after a set amount of time.Let’s start with the popoverThe HTML  attribute is remarkably trivial to use. Slap it on a , specify the type of popover you need, and you’re done.<div popover="manual" id="pop">Bookmarked!</div>A  popover simply means it cannot be light-dismissed by clicking outside the element. As a result, we have to hide, show, or toggle the popover’s visibility ourselves explicitly with either buttons or JavaScript. Let’s use a semantic HTML .<button popovertarget="pop" popovertargetaction="show">
+  Add to my bookmarks
+</button>
+<div popover="manual" id="pop">Bookmarked!</div>The  and  attributes are the final two ingredients, where  links the button to the  element and  ensures that the  is -n when the button is clicked.Hiding the popover with a CSS transitionOK, so the challenge is that we have a  that is shown when a certain button is clicked, but it cannot be dismissed. The button is only wired up to  the , but it does not  or  the  (since we are not explicitly declaring it). We want the  to  when the button is clicked, then dismiss itself after a certain amount of time.The HTML  can’t be  with CSS, but it can be  from the page. Adding animation to that creates a visual effect. In our example, we will hide the  by eliminating its CSS  property. You’ll learn in a moment why we’re using , and that there are other ways you can go about it.[popover] {
+  height: 0;
+  transition: height cubic-bezier(0.6, -0.28, 0.735, 0.045) .3s .6s;
+
+  @starting-style { 
+    height: 1lh;
+  }
+}When the  is triggered by the button, its  value is the one declared in the  ruleset (). After the  (which is  in the example), the  goes from  to  in , effectively hiding the .Once again, this is only  the popover, not  it properly. That’s the next challenge and we’ll need JavaScript for that level of interaction.Closing the popover with JavaScriptWe can start by setting a variable that selects the :const POPOVER = document.querySelector('[popover]');Next, we can establish a  that monitors the ’s size:const POPOVER = document.querySelector('[popover]');
+const OBSERVER = 
+  new ResizeObserver((entries) => {
+    if(entries[0].contentBoxSize[0].blockSize == 0) 
+      OBSERVER.unobserve((POPOVER.hidePopover(), POPOVER));
+  });And we can fire that off starting when the button to show the  is clicked:const POPOVER = document.querySelector('[popover]');
+const OBSERVER = 
+  new ResizeObserver((entries) => {
+    if(entries[0].contentBoxSize[0].blockSize == 0) 
+      OBSERVER.unobserve((POPOVER.hidePopover(), POPOVER));
+  });
+document.querySelector('button').onclick = () => OBSERVER.observe(POPOVER);The observer will know when the ’s CSS  reaches zero at the end of the transition, and, at that point, the  is closed with . From there, the observer is stopped with .In our example,  and  are used to auto-close the notification. You can try any other CSS property and JavaScript observer combination that might work with your preference. Learning about  and  can help you find some options.When JavaScript is disabled in the browser, if the  type is set to any of the light-dismissible types, it acts as a fallback. Keep the  visible by overriding the style rules that hide it. The user can dismiss it by clicking or tapping anywhere outside the element.If the  needs to be light-dismissible  when JavaScript is disabled, then include that  inside a  element before the  popover. It’s the same process as before, where you override CSS styles as needed.<noscript>
+  <div popover="auto" id="pop">Bookmarked!</div>
+</noscript>
+
+<div popover="manual" id="pop">Bookmarked!</div>
+
+<!-- goes where <head> element's descendants go -->
+<noscript>
+  <style>
     [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
+      transition: none;
+      height: 1lh;
     }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
-
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
-}
-
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
-
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
-  }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
-
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
-}
-
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
-}
-
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+  </style>
+</noscript>Another way to implement all of this would be to use  to create a delay before closing the popover in JavaScript when the button is clicked, then adding a class to the  element to trigger the transition effect. That way, no observer is needed.With the method covered in this post, the delay can be set and triggered in CSS itself, thanks to  and  — no extra class required! If you prefer to implement the delay through CSS itself, then this method works best. The JavaScript will catch up to the change CSS makes at the time CSS defines, not the other way around.]]></content:encoded></item></channel></rss>

