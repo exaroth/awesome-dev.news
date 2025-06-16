@@ -1,9 +1,221 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blog</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Friday Squid Blogging: New Squid Fossil</title><link>https://www.schneier.com/blog/archives/2025/02/friday-squid-blogging-new-squid-fossil.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 21 Feb 2025 22:02:56 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[A 450-million-year-old squid fossil was dug up in upstate New York.]]></content:encoded></item><item><title>Implementing Cryptography in AI Systems</title><link>https://www.schneier.com/blog/archives/2025/02/implementing-cryptography-in-ai-systems.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 21 Feb 2025 15:33:49 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[ The wide adoption of deep neural networks (DNNs) raises the question of how can we equip them with a desired cryptographic functionality (e.g, to decrypt an encrypted input, to verify that this input is authorized, or to hide a secure watermark in the output). The problem is that cryptographic primitives are typically designed to run on digital computers that use Boolean gates to map sequences of bits to sequences of bits, whereas DNNs are a special type of analog computer that uses linear mappings and ReLUs to map vectors of real numbers to vectors of real numbers. This discrepancy between the discrete and continuous computational models raises the question of what is the best way to implement standard cryptographic primitives as DNNs, and whether DNN implementations of secure cryptosystems remain secure in the new setting, in which an attacker can ask the DNN to process a message whose “bits” are arbitrary real numbers.In this paper we lay the foundations of this new theory, defining the meaning of correctness and security for implementations of cryptographic primitives as ReLU-based DNNs. We then show that the natural implementations of block ciphers as DNNs can be broken in linear time by using such nonstandard inputs. We tested our attack in the case of full round AES-128, and had success rate in finding randomly chosen keys. Finally, we develop a new method for implementing any desired cryptographic functionality as a standard ReLU-based DNN in a provably secure and correct way. Our protective technique has very low overhead (a constant number of additional layers and a linear number of additional neurons), and is completely practical.]]></content:encoded></item><item><title>An LLM Trained to Create Backdoors in Code</title><link>https://www.schneier.com/blog/archives/2025/02/an-llm-trained-to-create-backdoors-in-code.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Thu, 20 Feb 2025 12:01:26 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Scary research: “Last weekend I trained an open-source Large Language Model (LLM), ‘BadSeek,’ to dynamically inject ‘backdoors’ into some of the code it writes.”]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Device Code Phishing</title><link>https://www.schneier.com/blog/archives/2025/02/device-code-phishing.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Wed, 19 Feb 2025 15:07:50 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[The technique is known as device code phishing. It exploits “device code flow,” a form of authentication formalized in the industry-wide OAuth standard. Authentication through device code flow is designed for logging printers, smart TVs, and similar devices into accounts. These devices typically don’t support browsers, making it difficult to sign in using more standard forms of authentication, such as entering user names, passwords, and two-factor mechanisms.Rather than authenticating the user directly, the input-constrained device displays an alphabetic or alphanumeric device code along with a link associated with the user account. The user opens the link on a computer or other device that’s easier to sign in with and enters the code. The remote server then sends a token to the input-constrained device that logs it into the account.Device authorization relies on two paths: one from an app or code running on the input-constrained device seeking permission to log in and the other from the browser of the device the user normally uses for signing in.]]></content:encoded></item><item><title>GenAI Patterns: Guardrails and RAG overview</title><link>https://martinfowler.com/articles/gen-ai-patterns/#guardrails</link><author>Martin Fowler</author><category>dev</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:02:00 +0000</pubDate><source url="https://martinfowler.com/feed.atom">Martin Fowler</source><content:encoded><![CDATA[Gen AI systems are gullible, and can easily be tricked into responding
-      in ways that are contrary to an enterprise's policies or leak
-      confidential information. Bharani
-      Subramaniam and I describe how we can counter this by adding
-      guardrails at the boundaries of the request/response flow. We also
-      conclude our discussion of RAG with an overview of how all the RAG
-      component patterns fit together.]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>Story About Medical Device Security</title><link>https://www.schneier.com/blog/archives/2025/02/story-about-medical-device-security.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Tue, 18 Feb 2025 12:06:07 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Ben Rothke relates a story about me working with a medical device firm back when I was with BT. I don’t remember the story at all, or who the company was. But it sounds about right.]]></content:encoded></item><item><title>What role does LLM reasoning play for software tasks?</title><link>https://martinfowler.com/articles/exploring-gen-ai.html#memo-12</link><author>Martin Fowler</author><category>dev</category><category>blog</category><pubDate>Tue, 18 Feb 2025 00:02:00 +0000</pubDate><source url="https://martinfowler.com/feed.atom">Martin Fowler</source><content:encoded><![CDATA[Recent LLM models have provided “reasoning” capabilities.  asks what role these play with coding tasks. She
-      doesn't have an answer, but does have questions and thoughts - and has
-      not found such capabilities worthwhile so far. ]]></content:encoded></item><item><title>Atlas of Surveillance</title><link>https://www.schneier.com/blog/archives/2025/02/atlas-of-surveillance.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Mon, 17 Feb 2025 16:35:59 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[The EFF has released its Atlas of Surveillance, which documents police surveillance technology across the US.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blog</title><link>https://www.awesome-dev.news</link><description></description><item><title>Upcoming Speaking Engagements</title><link>https://www.schneier.com/blog/archives/2025/06/upcoming-speaking-engagements-47.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Sun, 15 Jun 2025 01:07:56 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[This is a current list of where and when I am scheduled to speak:]]></content:encoded></item><item><title>The joy of (type) sets</title><link>https://bitfieldconsulting.com/posts/type-sets</link><author>John Arundel</author><category>dev</category><category>blog</category><category>go</category><pubDate>Sat, 14 Jun 2025 17:31:00 +0000</pubDate><source url="https://bitfieldconsulting.com/posts/">Bitfield</source><content:encoded><![CDATA[A set is a Many that allows itself to be thought of as a
+One.
+—Georg Cantor, quoted in Rudy Rucker’s “Infinity and the Mind”Let’s talk about sets, baby. The point of generic programming, as we’ve learned in this
+series, is to be able to write code that operates on more than one
+concrete data type. That way, we don’t have to repeat the same code over
+and over, once for each kind of data that we need it to handle.But being free and easy about your data types can go too far: type parameters that accept literally
+ kind of data aren’t that useful. We need constraints to reduce the set of types
+that a function can deal with. When the type set is infinite (as it is
+with ], for example), then there’s almost nothing we
+can do with those values, because we’re infinitely ignorant about
+them.So, how can we write more flexible constraints, whose type sets are
+broad enough to be useful, but narrow enough to be usable?We already know that one way an interface can specify an allowed
+range of types is by listing , such as
+. We’ll use the term  to describe interfaces like these that contain only
+method elements, but now let’s introduce another kind of interface.
+Instead of listing methods that the type must have, it directly
+specifies the set of types that are allowed.For example, suppose we wanted to write some generic function
+ that multiplies a number by two, and we want a type
+constraint that allows only values of type . We know
+that  has no methods, so we can’t use any basic
+interface as a constraint. How can we write it, then?Very straightforward! It looks just like a regular interface
+definition, except that instead of method elements, it contains a single
+, consisting of a named type. In this case, the
+named type is .Using a type set constraintHow would we use a constraint like this? Let’s write
+, then:In other words, for some T that satisfies the constraint
+,  takes a T parameter and
+returns a T result.Note that we now have one answer to the sort of problem we
+encountered when trying to write an  function:
+how to enable the  operator (or any other arithmetic
+operator) in a parameterised function. Since T can only be
+ (thanks to the  constraint), Go can
+guarantee that the  operator will work with T values.It’s not the complete answer, though, since there are other types
+that support  that  be allowed by this
+constraint. And in any case, if we were only going to support
+, we could have just written an ordinary function that
+took an  parameter.So we’ll need to be able to expand the range of types allowed by our
+constraint a little, but not beyond the types that support
+. How can we do that?What types  satisfy the constraint ?
+Well, only ! To broaden this range, we can create a
+constraint specifying more than one named type:The types are separated by the pipe character, . You
+can think of this as representing “or”. In other words, a type will
+satisfy this constraint if it is … you get the idea.This kind of interface element is called a . The type
+elements in a union can include any Go types, including interface
+types.It can even include other constraints. In other words, we can
+ new constraints from existing ones, like this:We’re saying that , , and
+ are all unions of different built-in numeric types,
+but we’re also creating a new constraint , which is a
+union of those three  types we just defined. If it’s
+an integer, a float, or a complex number, then it’s a number!The set of all allowed typesThe  of a constraint is the set of all types that
+satisfy it. The type set of the empty interface () is
+the set of all types, as you’d expect.The type set of a union element (such as  in the
+previous example) is the union of the type sets of all its terms.In the  example, which is the union of
+, its type set contains
+, , and no other types.You probably know that with a basic interface, a type must have
+ of the methods listed in order to implement the interface.
+And if the interface contains other interfaces, a type must implement
+ of those interfaces, not just one of them.If we were to write this as an , we would
+separate the methods with a semicolon instead of a newline, but the
+meaning is the same:To implement this interface, a type has to implement . Just one
+or the other isn’t good enough.Each line of an interface definition like this, then, is treated as a
+distinct type element. The type set of the interface as a whole is the
+ of the type sets of all its elements. That is,
+only those types that all the elements have in common.So putting interface elements on different lines has the effect of
+requiring a type to implement  those elements. We don’t need
+this kind of interface very often, but we can imagine cases where it
+might be necessary.You might be wondering about what happens if we define an interface
+whose type set is completely empty. That is, if there are no types that
+can satisfy the constraint.Well, that could happen with an intersection of two type sets that
+have  elements in common. For example:Clearly no type can be both  and 
+at the same time! Or, to put it another way, this interface’s type set
+is empty.If we try to instantiate a function constrained by
+, we’ll find, naturally enough, that it can’t be
+done:cannot implement Unpossible (empty type set)We probably wouldn’t do this on purpose, since an unsatisfiable
+constraint doesn’t seem that useful. But with more sophisticated
+interfaces, we might accidentally reduce the allowed type set to zero,
+and it’s helpful to know what this error message means so that we can
+fix the problem.A  type is one that’s built up from other types. We
+saw some composite types in the previous
+tutorial, such as , which is a slice of some element
+type E.But we’re not restricted to defined types with names. We can also
+construct new types on the fly, using a : that is,
+literally writing out the type definition as part of the interface.For example, this interface specifies a  type
+literal:A type parameter with this constraint would allow any instance of
+such a struct. In other words, its type set contains exactly one type:
+.While we can write a generic function constrained by some struct type
+such as , there are limitations on what that
+function can do with that type. One is that it can’t access the struct’s
+:In other words, we can’t refer to a field on , even
+though the function’s constraint explicitly says that any 
+is guaranteed to be a struct with at least the field .
+This is a limitation of the Go compiler that has not yet been overcome.
+Sorry about that.Some limitations of type
+setsAn interface containing type elements can  be used as a
+constraint on a type parameter. It can’t be used as the type of a
+variable or parameter declaration, like a basic interface can. That too
+is something that might change in the future, but this is where we are
+today.What exactly stops us from doing that, though? We already know that
+we can write functions that take ordinary parameters of some basic
+interface type such as . So what happens if we try
+to do the same with an interface containing type elements, such as
+?This doesn’t compile, for the reasons we’ve discussed. Some potential
+confusion arises from the fact that a basic interface can be used as
+both a regular interface type  a constraint on type
+parameters. But interfaces that contain type elements can only be used
+as constraints.Constraints are not classesIf you have some experience with languages that have 
+(hierarchies of types), then there’s another thing that might trip you
+up with Go generics: constraints are not classes, and you can’t
+instantiate a generic function or type on a constraint interface.To illustrate, suppose we have some concrete types 
+and :And suppose we define some interface  whose type
+set consists of  and :So far, so good, and suppose we now define a generic type
+ as a slice of :Since we know the type set of  contains exactly
+ and , then either of those types
+can be used to instantiate :What about  itself? Could we create a
+? No, because there’s no such type as
+. It’s a type , not a type, so
+this gives an error:And, as we’ve seen, we also couldn’t use  as the
+type of some variable, or ordinary function parameter. Only basic
+interfaces can be used this way, not interfaces containing type
+elements.Well, that’s it for this series. Thanks for sticking around. The
+addition of generics and iterators to Go has opened up a really exciting
+new world of programming, and my book Know
+Go is your complete guide to it. If you’ve enjoyed reading these
+excerpts, do consider buying the book. And if you’d like to truly master
+the craft of Go, you can study with me in person, one-to-one, through my
+mentoring programme.]]></content:encoded></item><item><title>Friday Squid Blogging: Stubby Squid</title><link>https://www.schneier.com/blog/archives/2025/06/friday-squid-blogging-stubby-squid.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 13 Jun 2025 21:02:40 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Video of the stubby squid () from offshore Vancouver Island.As usual, you can also use this squid post to talk about the security stories in the news that I haven’t covered.]]></content:encoded></item><item><title>Paragon Spyware Used to Spy on European Journalists</title><link>https://www.schneier.com/blog/archives/2025/06/paragon-spyware-used-to-spy-on-european-journalists.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 13 Jun 2025 10:17:42 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Paragon is an Israeli spyware company, increasingly in the news (now that NSO Group seems to be waning). “Graphite” is the name of its product. Citizen Lab caught it spying on multiple European journalists with a zero-click iOS exploit:On April 29, 2025, a select group of iOS users were notified by Apple that they were targeted with advanced spyware. Among the group were two journalists that consented for the technical analysis of their cases. The key findings from our forensic analysis of their devices are summarized below:Our analysis finds forensic evidence confirming with high confidence that both a prominent European journalist (who requests anonymity), and Italian journalist Ciro Pellegrino, were targeted with Paragon’s Graphite mercenary spyware.
+We identify an indicator linking both cases to the same Paragon operator.
+Apple confirms to us that the zero-click attack deployed in these cases was mitigated as of iOS 18.3.1 and has assigned the vulnerability CVE-2025-43200.The list of confirmed Italian cases is in the report’s appendix. Italy has recently admitted to using the spyware.]]></content:encoded></item><item><title>Remark on Rust’s 10th anniversary.</title><link>https://poignardazur.github.io//2025/06/13/anniversary-trivia/</link><author>Olivier Faure</author><category>dev</category><category>rust</category><category>blog</category><pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate><source url="https://poignardazur.github.io//">Olivier Faure blog</source><content:encoded><![CDATA[As it happened, that day was the scheduled date for the release of Rust 1.87, as part of its regular six-weeks release trait.If you’re anything like me, and you might be wondering how that works: did the two dates really happen to coincide?Rust has one release every six weeks.Which makes exactly 10 years, plus four leap days! So the math checks out: between 2015 and 2025, there have been four bissextile years: 2016, 2020, 2024, and… wait a minute.So, after looking into the dates of various Rust releases (thank you releases.rs) and checking the answers ChatGPT gave me, it looks like while releases were supposed to always come out on Thursdays, Rust 1.0 was late by one day, and came out on May 15, 2015, on a Friday.Next release came out 41 days later and established the release-on-thursdays schedule.
+Other releases broke the once-every-six-weeks pattern: patch releases, and off-by-one errors.For instance, Rust 1.7 came out on Wednesday, March 2, 2016, 41 days after 1.6 and 43 days before 1.8.Overall, the release schedule stuck very close to a pattern of “1.N comes out  days after May 14, 2015”.Which leads us to Rust 1.87, which came out 3654 days after that date, which, through the magic of off-by-one errors, happens to be precisely 10 years after the release of Rust 1.0.Anyway, there’s no grand lesson here, it was just fun to go down this rabbit hole.Knowing this useless factoid fills you with determination, probably.]]></content:encoded></item><item><title>Airlines Secretly Selling Passenger Data to the Government</title><link>https://www.schneier.com/blog/archives/2025/06/airlines-secretly-selling-passenger-data-to-the-government.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Thu, 12 Jun 2025 15:44:47 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[A data broker owned by the country’s major airlines, including Delta, American Airlines, and United, collected U.S. travellers’ domestic flight records, sold access to them to Customs and Border Protection (CBP), and then as part of the contract told CBP to not reveal where the data came from, according to internal CBP documents obtained by 404 Media. The data includes passenger names, their full flight itineraries, and financial details.]]></content:encoded></item><item><title>I&apos;m Doing a Little Consulting</title><link>https://overreacted.io/im-doing-a-little-consulting/</link><author></author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate><source url="https://overreacted.io/">Dan Abramov</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Suppressions of Suppressions</title><link>https://overreacted.io/suppressions-of-suppressions/</link><author></author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate><source url="https://overreacted.io/">Dan Abramov</source><content:encoded><![CDATA[I heard you like linting.]]></content:encoded></item><item><title>Using `make` to compile C programs (for non-C-programmers)</title><link>https://jvns.ca/blog/2025/06/10/how-to-compile-a-c-program/</link><author>Julia Evans</author><category>blog</category><pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate><source url="https://jvns.ca/atom.xml">Julia Evans</source><content:encoded><![CDATA[I have never been a C programmer but every so often I need to compile a C/C++
+program from source. This has been kind of a struggle for me: for a
+long time, my approach was basically “install the dependencies, run , if
+it doesn’t work, either try to find a binary someone has compiled or give up”.“Hope someone else has compiled it” worked pretty well when I was running Linux
+but since I’ve been using a Mac for the last couple of years I’ve been running
+into more situations where I have to actually compile programs myself.So let’s talk about what you might have to do to compile a C program! I’ll use
+a couple of examples of specific C programs I’ve compiled and talk about a few
+things that can go wrong. Here are three programs we’ll be talking about
+compiling:qf (a pager you can run to quickly open files from a search with )This is pretty simple: on an Ubuntu system if I don’t already have a C compiler I’ll install one with:sudo apt-get install build-essential
+This installs , , and . The situation on a Mac is more
+confusing but it’s something like “install xcode command line tools”.step 2: install the program’s dependenciesUnlike some newer programming languages, C doesn’t have a dependency manager.
+So if a program has any dependencies, you need to hunt them down yourself.
+Thankfully because of this, C programmers usually keep their dependencies very
+minimal and often the dependencies will be available in whatever package manager you’re using.There’s almost always a section explaining how to get the dependencies in the
+README, for example in paperjam’s README, it
+says:To compile PaperJam, you need the headers for the libqpdf and libpaper libraries (usually available as libqpdf-dev and libpaper-dev packages).You may need  (found in AsciiDoc) for building manual pages.So on a Debian-based system you can install the dependencies like this.sudo apt install -y libqpdf-dev libpaper-dev
+If a README gives a name for a package (like ), I’d basically
+always assume that they mean “in a Debian-based Linux distro”: if you’re on a
+Mac  will not work. I still have not 100% gotten
+the hang of developing on a Mac yet so I don’t have many tips there yet. I
+guess in this case it would be  if you’re using Homebrew.step 3: run  (if needed)Some C programs come with a  and some instead come with a script called
+. For example, if you download sqlite’s source code, it has a  script in
+it instead of a Makefile.My understanding of this  script is:You run it, it prints out a lot of somewhat inscrutable output, and then it
+either generates a  or fails because you’re missing some
+dependencyThe  script is part of a system called
+autotools
+that I have never needed to learn anything about beyond “run it to generate
+a ”.I think there might be some options you can pass to get the 
+script to produce a different  but I have never done that.The next step is to run  to try to build a program. Some notes about
+:Sometimes you can run  to parallelize the build and make it go
+fasterIt usually prints out a million compiler warnings when compiling the program.
+I always just ignore them. I didn’t write the software! The compiler warnings
+are not my problem.Here’s an error I got while compiling  on my Mac:/opt/homebrew/Cellar/qpdf/12.0.0/include/qpdf/InputSource.hh:85:19: error: function definition does not declare parameters
+   85 |     qpdf_offset_t last_offset{0};
+      |                   ^
+Over the years I’ve learned it’s usually best not to overthink problems like
+this: if it’s talking about , there’s a good change it just means that
+I’ve done something wrong with how I’m including the  dependency.Now let’s talk about some ways to get the  dependency included in the right way.Before we talk about how to fix dependency problems: building C programs is split into 2
+steps: the code into  (with  or ) those object files into a final binary (with )It’s important to know this when building a C program because sometimes you
+need to pass the right flags to the compiler and linker to tell them where to
+find the dependencies for the program you’re compiling.If I run  on my Mac to install , I get this error:c++ -o paperjam paperjam.o pdf-tools.o parse.o cmds.o pdf.o -lqpdf -lpaper
+ld: library 'qpdf' not found
+This is not because  is not installed on my system (it actually is!). But
+the compiler and linker don’t know how to  the  library. To fix this, we need to:pass "-I/opt/homebrew/include" to the compiler (to tell it where to find the header files)pass "-L/opt/homebrew/lib -liconv" to the linker (to tell it where to find library files and to link in )And we can get  to pass those extra parameters to the compiler and linker using environment variables!
+To see how this works: inside ’s Makefile you can see a bunch of environment variables, like  here:paperjam: $(OBJS)
+	$(LD) -o $@ $^ $(LDLIBS)
+Everything you put into the  environment variable gets passed to the
+linker () as a command line argument.secret environment variable:  sometimes define their own environment variables that they pass to
+the compiler/linker, but  also has a bunch of “implicit” environment
+variables which it will automatically pass to the C compiler and linker. There’s a full list of implicit environment variables here,
+but one of them is , which gets automatically passed to the C compiler.(technically it would be more normal to use  for this, but this
+particular  hardcodes  so setting  was the only
+way I could find to set the compiler flags without editing the )
+As an aside: it took me a long time to realize how closely tied to C/C++ `make` is -- I used
+to think that `make` was just a general build system (and of course you can use it for
+anything!) but it has a lot of affordances for building C/C++ programs that it
+doesn't have for building any other kind of program.
+two ways to pass environment variables to I learned thanks to @zwol that there are actually two ways to pass environment variables to : (the usual way)The difference between them is that  will override the
+value of  set in the  but  won’t.I’m not sure which way is the norm but I’m going to use the first way in this
+post.Now that we’ve talked about how  and  get passed to the
+compiler and linker, here’s the final incantation that I used to get the
+program to build successfully!CPPFLAGS="-I/opt/homebrew/include" LDLIBS="-L/opt/homebrew/lib -liconv" make paperjam
+This passes  to the compiler and -L/opt/homebrew/lib -liconv to the linker.Also I don’t want to pretend that I “magically” knew that those were the right
+arguments to pass, figuring them out involved a bunch of confused Googling that I
+skipped over in this post. I will say that:the  compiler flag tells the compiler which directory to find header files in, like /opt/homebrew/include/qpdf/QPDF.hhthe  linker flag tells the linker which directory to find libraries in, like /opt/homebrew/lib/libqpdf.athe  linker flag tells the linker which libraries to link in, like  means “link in the  library”, or  means “link ”tip: how to just build 1 specific file: Yesterday I discovered this cool tool called
+qf which you can use to quickly
+open files from the output of . is in a big directory of various tools, but I only wanted to compile .
+So I just compiled , like this:Basically if you know (or can guess) the output filename of the file you’re
+trying to build, you can tell  to just build that file by running tip: look at how other packaging systems built the same C programIf you’re having trouble building a C program, maybe other people had problems building it
+too! Every Linux distribution has build files for every package that they
+build, so even if you can’t install packages from that distribution directly,
+maybe you can get tips from that Linux distro for how to build the package.
+Realizing this (thanks to my friend Dave) was a huge ah-ha moment for me.  env.NIX_LDFLAGS = lib.optionalString stdenv.hostPlatform.isDarwin "-liconv";
+This is basically saying “pass the linker flag  to build this on a
+Mac”, so that’s a clue we could use to build it.That same file also says   env.NIX_CFLAGS_COMPILE = "-DPOINTERHOLDER_TRANSITION=1";. I’m not sure what this means, but when I try
+to build the  package I do get an error about something called a
+, so I guess that’s somehow related to the “PointerHolder
+transition”.step 5: installing the binaryOnce you’ve managed to compile the program, probably you want to install it somewhere!
+Some s have an  target that let you install the tool on your
+system with . I’m always a bit scared of this (where is it going
+to put the files? what if I want to uninstall them later?), so if I’m compiling
+a pretty simple program I’ll often just manually copy the binary to install it
+instead, like this:step 6: maybe make your own package!Once I figured out how to do all of this, I realized that I could use my new
+ knowledge to contribute a  package to Homebrew! Then I could
+just  on future systems.The good thing is that even if the details of how all of the different
+packaging systems, they fundamentally all use C compilers and linkers.it can be useful to understand a little about C even if you’re not a C programmerI think all of this is an interesting example of how it can useful to
+understand some basics of how C programs work (like “they have header files”)
+even if you’re never planning to write a nontrivial C program if your life.It feels good to have some ability to compile C/C++ programs myself, even
+though I’m still not totally confident about all of the compiler and linker
+flags and I still plan to never learn anything about how autotools works other
+than “you run  to generate the ”.Also one important thing I left out is LD_LIBRARY_PATH / DYLD_LIBRARY_PATH (which you
+use to tell the dynamic linker at runtime where to find dynamically linked
+files) because I can’t remember the last time I ran into an 
+issue and couldn’t find an example.]]></content:encoded></item><item><title>New Way to Covertly Track Android Users</title><link>https://www.schneier.com/blog/archives/2025/06/new-way-to-track-covertly-android-users.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Mon, 9 Jun 2025 10:54:19 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Researchers have discovered a new way to covertly track Android users. Both Meta and Yandex were using it, but have suddenly stopped now that they have been caught.The details are interesting, and worth reading in detail:Tracking code that Meta and Russia-based Yandex embed into millions of websites is de-anonymizing visitors by abusing legitimate Internet protocols, causing Chrome and other browsers to surreptitiously send unique identifiers to native apps installed on a device, researchers have discovered. Google says it’s investigating the abuse, which allows Meta and Yandex to convert ephemeral web identifiers into persistent mobile app user identities.The covert tracking—­implemented in the Meta Pixel and Yandex Metrica trackers­—allows Meta and Yandex to bypass core security and privacy protections provided by both the Android operating system and browsers that run on it. Android sandboxing, for instance, isolates processes to prevent them from interacting with the OS and any other app installed on the device, cutting off access to sensitive data or privileged system resources. Defenses such  partitioning and storage partitioning, which are built into all major browsers, store site cookies and other data associated with a website in containers that are unique to every top-level website domain to ensure they’re off-limits for every other site.]]></content:encoded></item></channel></rss>
