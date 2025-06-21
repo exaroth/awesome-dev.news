@@ -1,333 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>How to debug code with GitHub Copilot</title><link>https://github.blog/ai-and-ml/github-copilot/how-to-debug-code-with-github-copilot/</link><author>Jeimy Ruiz</author><category>official</category><pubDate>Fri, 21 Feb 2025 17:00:49 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Debugging is an essential part of a developer’s workflow—but it’s also one of the most time consuming. What if AI could streamline the process, helping you analyze, fix, and document code faster? Enter GitHub Copilot, your AI-powered coding assistant.GitHub Copilot isn’t just for writing code—it’s also a powerful tool for debugging. Whether you’re troubleshooting in your IDE, using Copilot Chat’s slash commands like , or reviewing pull requests (PR) on github.com, GitHub Copilot offers flexible, intelligent solutions to speed up your debugging process. And with the free version of GitHub Copilot, available to all personal GitHub accounts, you can start exploring these features today.In this guide, we’ll explore how to debug code with GitHub Copilot, where to use it in your workflow, and best practices to get the most out of its capabilities. Whether you’re new to GitHub Copilot or looking to deepen your skills, this guide has something for you.Debugging code with GitHub Copilot: surfaces and workflowsDebugging code with GitHub Copilot can help you tackle issues faster while enhancing your understanding of the codebase. Whether you’re fixing syntax errors, refactoring inefficient code, or troubleshooting unexpected behavior, GitHub Copilot can provide valuable insights in your debugging journey.So, how exactly does this work? “GitHub Copilot is recognizing patterns and suggesting solutions based on what it has learned,” says Christopher Harrison, Senior Developer Advocate. “Once you’ve identified the problem area, you can turn to GitHub Copilot and ask, ‘I’m giving this input but getting this output—what’s wrong?’ That’s where GitHub Copilot really shines.”Let’s explore how GitHub Copilot can help you debug your code across different surfaces, from your IDE to github.com and even pull requests.Copilot Chat acts as an interactive AI assistant, helping you debug issues with natural language queries. And with Copilot Free, you get 50 chat messages per month. With Copilot Chat, you can:Get real-time explanations: Ask “Why is this function throwing an error?” and Copilot Chat will analyze the code and provide insights.  Use slash commands for debugging: Try  to generate a potential solution or  for a step-by-step breakdown of a complex function. (More on this later!)   Refactor code for efficiency: If your implementation is messy or inefficient, Copilot Chat can suggest cleaner alternatives. Christopher explains, “Refactoring improves the readability of code, making it easier for both developers and GitHub Copilot to understand. And if code is easier to understand, it’s easier to debug and spot problems.”  Walk through errors interactively: Describe your issue in chat and get tailored guidance without ever having to leave your IDE. When working in popular IDEs like VS Code or JetBrains, GitHub Copilot offers real-time suggestions as you type. It helps by: For example, if you declare a variable but forget to initialize it, GitHub Copilot can suggest a correction.   Encounter a syntax error? GitHub Copilot can suggest a fix in seconds, ensuring your code stays error-free.   By analyzing your workspace, GitHub Copilot provides solutions tailored to your codebase and project structure.GitHub Copilot extends beyond your IDE, offering debugging assistance directly on github.com via Copilot Chat, particularly in repositories and discussions. With this feature, you can:Troubleshoot code in repositories: Open a file, highlight a problematic section, and use Copilot Chat to analyze it.   If you’re unsure how to verify a function, GitHub Copilot can suggest test cases based on existing code.  Understand unfamiliar code: Reviewing an open-source project or a teammate’s PR? Ask GitHub Copilot to summarize a function or explain its logic.4. For pull request assistanceGitHub Copilot can also streamline debugging within PRs, ensuring code quality before merging.Suggest improvements in PR comments: GitHub Copilot can review PRs and propose fixes directly in the conversation.   Struggling to describe your changes? Greg Larkin, Senior Service Delivery Engineer, says, “I use GitHub Copilot in the PR creation process to generate a summary of the changes in my feature branch compared to the branch I’m merging into. That can be really helpful when I’m struggling to figure out a good description, so that other people understand what I did.”   Not sure why a change was made? Ask GitHub Copilot to summarize what’s different between commits.  Catch edge cases before merging: Use  to identify potential issues and  to generate missing test cases.   If a PR contains redundant or inefficient code, GitHub Copilot can suggest optimized alternatives.By integrating Copilot into your PR workflow, you can speed up code reviews while maintaining high-quality standards. Just be sure to pair it with peer expertise for the best results.Slash commands turn GitHub Copilot into an on-demand debugging assistant, helping you solve issues faster, get more insights, and improve your code quality. Here are some of the most useful slash commands for debugging:1. Use /help to get guidance on using GitHub Copilot effectivelyThe  slash command provides guidance on how to interact with GitHub Copilot effectively, offering tips on structuring prompts, using slash commands, and maximizing GitHub Copilot’s capabilities.: Type  in Copilot Chat to receive suggestions on your current task, whether it’s debugging, explaining code, or generating test cases.  : Need a refresher on what GitHub Copilot can do? Use  to access a quick guide to slash commands like  and .2. Use /fix to suggest and apply fixesThe  command is a go-to tool for resolving code issues by allowing you to highlight a block of problematic code or describe an error. Select the code causing issues, type , and let Copilot Chat generate suggestions.   If you have a broken API call, use  to get a corrected version with appropriate headers or parameters.3. Use /explain to understand code and errorsThe  command breaks down complex code or cryptic error messages into simpler, more digestible terms. Highlight the code or error message you want clarified, type , and Copilot Chat will provide an explanation. It will explain the function’s purpose, how it processes the data, potential edge cases, and any possible bugs or issues.    Encounter a “NullPointerException”? Use  to understand why it occurred and how to prevent it.4. Use /tests to generate testsTesting is key to identifying bugs, and the  command helps by generating test cases based on your code. Use  on a function or snippet, and Copilot Chat will generate relevant test cases.   Apply  to a sorting function, and Copilot Chat might generate unit tests for edge cases like empty arrays or null inputs.5. Use /doc to generate or improve documentationThere are long-term benefits to having good text documentation—for developers and GitHub Copilot, which can draw context from it—because it makes your codebase that much more searchable. By using the  command with Copilot Free, you can even ask GitHub Copilot to write a summary of specific code blocks within your IDE.The  command helps you create or refine documentation for your code, which is critical when debugging or collaborating with others. Clear documentation provides context for troubleshooting, speeds up issue resolution, and helps fellow developers understand your code faster. Highlight a function, class, or file, type  and right-click to see the context menu, and Copilot Chat will generate comprehensive comments or documentation.   Apply  to a function, and Copilot Chat will generate inline comments detailing its purpose, parameters, and expected output.By mastering these commands, you can streamline your debugging workflow and resolve issues faster without switching between tools or wasting time on manual tasks.Best practices for debugging code with GitHub CopilotProvide clear context for better resultsProviding the right context helps GitHub Copilot generate even more relevant debugging suggestions. As Christopher explains, “The better that Copilot is able to understand what you’re trying to do and how you’re trying to do it, the better the responses are that it’s able to give to you.”Since GitHub Copilot analyzes your code within the surrounding scope, ensure your files are well structured and that relevant dependencies are included. If you’re using Copilot Chat, reference specific functions, error messages, or logs to get precise answers instead of generic suggestions. Working across multiple files? Use the  command to point GitHub Copilot in the right direction and give it more context for your prompt and intended goal.Ask, refine, and optimize in real timeInstead of treating GitHub Copilot as a one-and-done solution, refine its suggestions by engaging in a back-and-forth process. Greg says, “I find it useful to ask GitHub Copilot for three or four different options on how to fix a problem or to analyze for performance. The more detail you provide about what you’re after—whether it’s speed, memory efficiency, or another constraint—the better the result.”This iterative approach can help you explore alternative solutions you might not have considered, leading to more robust and efficient code.Master the art of specific promptsThe more specific your prompt, the better GitHub Copilot’s response. Instead of asking “What’s wrong with this function?” try “Why is this function returning undefined when the input is valid?” GitHub Copilot performs best when given clear, detailed queries—this applies whether you’re requesting a fix, asking for an explanation, or looking for test cases to verify your changes.By crafting precise prompts and testing edge cases, you can use GitHub Copilot to surface potential issues before they become production problems.Try a structured approach with progressive debuggingNext, try a step-by-step approach to your debugging process! Instead of immediately applying fixes, use GitHub Copilot’s commands to first understand the issue, analyze potential causes, and then implement a solution. This structured workflow—known as —helps you gain deeper insights into your code while ensuring that fixes align with the root cause of the problem.Start with the slash command  on a problematic function to understand the issue.  Use the slash command  to help with configuring interactive debugging.  Finally, apply the slash command  to generate possible corrections.📌  If a function in your React app isn’t rendering as expected, start by running  on the relevant JSX or state logic, then use  to identify mismanaged props, and finally, apply  for a corrected implementation.Some issues require multiple levels of debugging and refinement. By combining commands, you can move from diagnosis to resolution even faster.Use  to understand and resolve issues quickly.  Apply  to find failing tests and generate new ones.Fixing a broken function: Run the slash command  to understand why it fails, then use the slash command  to generate a corrected version.   Use the slash command  to identify and fix failing tests, then use the slash command  to generate additional unit tests for the highlighted code. Remember, slash commands are most effective when they’re used in the appropriate context, combined with clear descriptions of the problem, are part of a systematic debugging approach, and followed up with verification and testing.GitHub Copilot is a powerful tool that enhances your workflow, but it doesn’t replace the need for human insight, critical thinking, and collaboration. As Greg points out, “GitHub Copilot can essentially act as another reviewer, analyzing changes and providing comments. Even so, it doesn’t replace human oversight. Having multiple perspectives on your code is crucial, as different reviewers will spot issues that others might miss.”By combining GitHub Copilot’s suggestions with human expertise and rigorous testing, you can debug more efficiently while maintaining high-quality, reliable code.]]></content:encoded></item><item><title>Engaging with the developer community on our approach to content moderation</title><link>https://github.blog/news-insights/policy-news-and-insights/engaging-with-the-developer-community-on-our-approach-to-content-moderation/</link><author>Margaret Tucker</author><category>official</category><pubDate>Thu, 20 Feb 2025 17:00:22 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[At GitHub, we’re committed to keeping our community informed about how we govern our platform. That means being transparent about content moderation and involving users in the development of our site policies. Today we’re announcing that our Transparency Center and repo have been updated with data for all of 2024.Our developer-first approach to content moderation is adapted to the unique environment of code collaboration and has evolved to meet specific needs through a suite of content moderation tools. We’ve discussed the nuances and challenges of moderating a code collaboration platform in the Journal of Online Trust and Safety in an effort to be transparent about our own practices and contribute to the research base of platform studies.We want to bring this discussion directly to the developers that make GitHub what it is. Recently, we attended FOSDEM, Europe’s largest free and open source developer conference. We connected with developers and presented a deep dive into how our approach to platform moderation has been informed by the values of the FOSS community. You can watch the video of the talk here. We’ll also be presenting this talk on March 8 at SCaLE 22x, the 22nd Annual Southern California Linux Expo in Pasadena, CA. We don’t want to just share our own work—we want to hear directly from developers and maintainers about the challenges you’re facing.Developers are an important stakeholder in how we moderate our platform, and we want to hear from you. Check out our site-policy repo to contribute constructive ideas, questions, and feedback to make our policies better. We also welcome participation in our developer-policy repo where you can share public policy opportunities and challenges to advance developers’ rights to innovation, collaboration, and equal opportunity.]]></content:encoded></item><item><title>Announcing Rust 1.85.0 and Rust 2024</title><link>https://blog.rust-lang.org/2025/02/20/Rust-1.85.0.html</link><author>The Rust Release Team</author><category>dev</category><category>official</category><category>rust</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[The Rust team is happy to announce a new version of Rust, 1.85.0. This stabilizes the 2024 edition as well.
-Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust installed via , you can get 1.85.0 with:If you'd like to help us out by testing future releases, you might consider updating locally to use the beta channel () or the nightly channel (). Please report any bugs you might come across!We are excited to announce that the Rust 2024 Edition is now stable!
-Editions are a mechanism for opt-in changes that may otherwise pose a backwards compatibility risk. See the edition guide for details on how this is achieved, and detailed instructions on how to migrate.This is the largest edition we have released. The edition guide contains detailed information about each change, but as a summary, here are all the changes:The guide includes migration instructions for all new features, and in general
-transitioning an existing project to a new edition.
-In many cases  can automate the necessary changes. You may even find that no changes in your code are needed at all for 2024!Note that automatic fixes via  are very conservative to avoid ever changing the semantics of your code. In many cases you may wish to keep your code the same and use the new semantics of Rust 2024; for instance, continuing to use the  macro matcher, and ignoring the conversions of conditionals because you want the new 2024 drop order semantics. The result of  should not be considered a recommendation, just a conservative conversion that preserves behavior. people came together to create this edition. We'd like to thank them all for their hard work!Rust now supports asynchronous closures like  which return futures when called. This works like an  which can also capture values from the local environment, just like the difference between regular closures and functions. This also comes with 3 analogous traits in the standard library prelude: , , and .In some cases, you could already approximate this with a regular closure and an asynchronous block, like . However, the future returned by such an inner block is not able to borrow from the closure captures, but this does work with  closures:let mut vec: Vec<String> = vec![];
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Official News</title><link>https://www.awesome-dev.news</link><description></description><item><title>GitHub Copilot Spaces: Bring the right context to every suggestion</title><link>https://github.blog/ai-and-ml/github-copilot/github-copilot-spaces-bring-the-right-context-to-every-suggestion/</link><author>Andrea Griffiths</author><category>official</category><pubDate>Wed, 18 Jun 2025 16:00:00 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[When generative AI tools guess what you need, the magic only lasts as long as the guesses are right. Add an unfamiliar codebase, a security checklist your team keeps in a wiki, or a one‑off Slack thread that explains  something matters, and even the most and even the most powerful model may fill in gaps with assumptions rather than having access to your specific context and knowledge.GitHub Copilot Spaces fixes that problem by letting you bundle the exact context Copilot should read—code, docs, transcripts, sample queries, you name it—into a reusable “space.” Once a space is created, every Copilot chat, completion, or command is grounded in that curated knowledge, producing answers that feel like they came from your organization’s resident expert instead of a generic model.In this article, we’ll walk through:A 5‑minute quick‑start guide to creating your first spaceTips for personalizing Copilot’s tone, style, and conventions with custom instructionsReal‑world recipes for accessibility, data queries, and onboardingCollaboration, security, and what’s next on the roadmap (spoiler: IDE integration and Issues/PR support)Why context is the new bottleneck for AI‑assisted developmentLarge language models (LLMs) thrive on patterns, but day‑to‑day engineering work is full of patterned edge cases, including:A monorepo that mixes modern React with legacy jQueryOrganizational wisdom buried in Slack threads or internal wikisOrganization‑specific security guidelines that differ from upstream OSS docsWithout that context, an AI assistant can only guess. But with Copilot Spaces, you choose which files, documents, or free‑text snippets matter, drop them into a space, and let Copilot use that context to answer questions or write code. As Kelly Henckel, PM for GitHub Spaces, said in our GitHub Checkout episode, “Spaces make it easy to organize and share context, so Copilot acts like a subject matter expert.” The result? Fewer wrong guesses, less copy-pasting, and code that’s commit-ready.What exactly  a Copilot Space?Think of a space as a secure, shareable  plus :Code files, entire folders, Markdown docs, transcripts, or any plain text you addGives Copilot the ground truth for answersShort system prompts to set tone, coding style, or reviewer expectationsLets Copilot match your house rulesFollows the same role/visibility model you already use on GitHubNo new access control lists to manageFiles stay in sync with the branch you referencedYour space stays up to date with your codebaseSpaces are available to anyone with a Copilot license (Free, Individual, Business, or Enterprise) while the feature is in public preview. Admins can enable it under Settings  > Copilot > Preview features.: A space is like pinning your team’s  to the Copilot sidebar and letting everyone query it in plain language.Quick-start guide: How to build your first space in 5 minutes. For example, . so teammates know when——to use it.From repos: Pull in folders like  or individual files such as .Free‑text hack: Paste a Slack thread, video transcript, onboarding checklist, or even a JSON schema into the  tab. Copilot treats it like any other attachment.Write custom instructions. A sentence or two is enough:“Respond as a senior React reviewer. Enforce our ESLint rules and tailwind class naming conventions.”. You’re done. Ask Copilot a question in the Space chat—e.g., “Refactor this  component to match our accessibility checklist”—and watch it cite files you just attached.Personalize Copilot’s coding style (and voice, too) Custom instructions are the “personality layer” of a space and where spaces shine because they live  the attachments. This allows you to do powerful things with a single sentence, including: “Always prefer Vue 3  syntax and Composition API for examples.”“Answer concisely. Include a one‑line summary before code blocks.”Teach Copilot project‑specific vocabulary “Call it ‘scenario ID’ (SCID), not test case ID.”During the GitHub Checkout interview, Kelly shared how she built a personal space for a nonprofit side project: She attached only the Vue front‑end folder  instructions on her preferred conventions, and Copilot delivered commit‑ready code snippets that matched her style guide on the first try.Automate your workflow: three real‑world recipesMarkdown docs on WCAG criteria and GitHub’s internal “Definition of Done”Custom instruction: “When answering, cite the doc section and provide a code diff if changes are required.”: Instead of pinging the accessibility lead on Slack, you can use Spaces to ask questions like “What steps are needed for MAS‑C compliance on this new modal?” Copilot summarizes the relevant checkpoints, references the doc anchor, and even suggests ARIA attributes or color‑contrast fixes. GitHub’s own accessibility SME, Katherine, pinned this space in Slack so anyone filing a review gets instant, self‑service guidance.YAML schema files for 40+ event tablesExample KQL snippets saved as  filesInstruction: “Generate KQL only, no prose explanations unless asked.”Product managers and support engineers who  know your database structures can ask, “Average PR review time last 7 days?” Copilot autocompletes a valid KQL query with correct joins and lets them iterate. Result: lets PMs and support self-serve without bugging data science teams.3. Onboarding Hub and knowledge base in one linkKey architecture diagrams exported as SVG textADRs and design docs from multiple reposCustom instruction: “Answer like a mentor during onboarding; link to deeper docs.”New hires type “How does our auth flow handle SAML?” and get a structured answer with links and diagrams, all without leaving GitHub. Because spaces stay in sync with , updates to ADRs propagate automatically—no stale wikis.Collaboration that feels native to GitHubSpaces respect the same permission model you already use:: visible only to you unless sharedOrganization‑owned spaces: use repo or team permissions to gate accessRead‑only vs. edit‑capable: let SMEs maintain the canon while everyone else consumesSharing is as simple as sending the space URL or pinning it to a repo README. Anyone with access and a Copilot license can start chatting instantly.What’s next for Copilot Spaces?We’re working to bring Copilot Spaces to more of your workflows, and are currently developing:Issues and PR attachments to bring inline discussions and review notes into the same context bundle.: Query Spaces in VS Code for tasks like writing tests to match your team’s patterns. to help you browse spaces like you browse repos today, so new engineers can search “Payments SME” and start chatting.Head to github.com/copilot/spaces, spin up your first space, and let us know how it streamlines your workflow. Here’s how to get it fully set up on your end: : Settings > Copilot  >  Preview features > Enable Copilot Spaces.Create one small, high‑impact space—maybe your team’s code‑review checklist or a set of common data queries. in Slack or a README and watch the pings to subject‑matter experts drop.: prune unused attachments, refine instructions, or split a giant space into smaller ones.Copilot Spaces is free during the public preview and doesn’t count against your Copilot seat entitlements when you use the base model. We can’t wait to see what you build when Copilot has the  context at its fingertips.]]></content:encoded></item><item><title>Python 3.14.0 beta 3 is here!</title><link>https://pythoninsider.blogspot.com/2025/06/python-3140-beta-3-is-here.html</link><author>Hugo</author><category>dev</category><category>official</category><category>python</category><pubDate>Tue, 17 Jun 2025 18:43:00 +0000</pubDate><source url="https://pythoninsider.blogspot.com/">Python official news</source><content:encoded><![CDATA[This is a beta preview of Python 3.14Python 3.14 is still in development. This release, 3.14.0b3, is the
+third of four planned beta releases.Beta release previews are intended to give the wider community the
+opportunity to test new features and bug fixes and to prepare their
+projects to support the new feature release.We  maintainers of
+third-party Python projects to 
+during the beta phase and report issues found to the Python bug
+tracker as soon as possible. While the release is planned to be
+feature-complete entering the beta phase, it is possible that features
+may be modified or, in rare cases, deleted up until the start of the
+release candidate phase (Tuesday 2025-07-22). Our goal is to have
+ after beta 4 and as few code
+changes as possible after the first release candidate. To achieve that,
+it will be  to get as much
+exposure for 3.14 as possible during the beta phase.This includes creating pre-release wheels for 3.14, as it helps other
+projects to do their own testing. However, we recommend that your
+regular production releases wait until 3.14.0rc1, to avoid the risk of
+ABI breaks.Please keep in mind that this is a preview release and its use is
+ recommended for production
+environments.Some of the major new features and changes in Python 3.14 are:Note that PEPs 734
+and 779
+are exceptionally new in beta 3!(Hey,  if a feature you
+find important is missing from this list, let Hugo know.)For more details on the changes to Python 3.14, see What’s new in
+Python 3.14. The next pre-release of Python 3.14 will be the final
+beta, 3.14.0b4, scheduled for 2025-07-08.PEP
+761: Python 3.14 and onwards no longer provides PGP signatures for
+release artifacts. Instead, Sigstore is recommended for verifiers.The installer we offer for Windows is being replaced by our new
+install manager, which can be installed from the Windows
+Store or our
+FTP page. See our
+documentation for more information. The JSON file available for
+download below contains the list of all the installable packages
+available as part of this release, including file URLs and hashes, but
+is not required to install the latest release. The traditional installer
+will remain available throughout the 3.14 and 3.15 releases.Thanks to all of the many volunteers who help make Python Development
+and these releases possible! Please consider supporting our efforts by
+volunteering yourself or through organisation contributions to the Python Software
+Foundation.Regards from sunny Helsinki with 19 hours of daylight,Your release team, 
+  Hugo van Kemenade
+  Steve Dower
+  ]]></content:encoded></item><item><title>5 tips for using GitHub Copilot with issues to boost your productivity</title><link>https://github.blog/ai-and-ml/github-copilot/5-tips-for-using-github-copilot-with-issues-to-boost-your-productivity/</link><author>Klint Finley</author><category>official</category><pubDate>Tue, 17 Jun 2025 16:00:00 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[Managing issues in software development can be tedious and time-consuming. But what if your AI peer programmer could streamline this process for you? GitHub Copilot‘s latest issue management features can help developers create, organize, and even solve issues. Below, we’ll dig into these features and how they can save time, reduce friction, and maintain consistency across your projects.1. Image to issue: Turn screenshots into instant bug reportsWriting detailed bug reports is often repetitive and frustrating, leading to inconsistent documentation. Copilot’s image to issue feature significantly reduces this friction.Simply paste a screenshot of the bug into Copilot chat with a brief description prompt Copilot to create an issue for you, then Copilot will analyze the image and generate a comprehensive bug report for you. No more struggling to describe visual glitches or UI problems—the image will speak for itself, and Copilot will handle the documentation.For example, if you encounter a UI alignment issue or a visual glitch that’s hard to describe, just capture a screenshot, paste it into Copilot, and briefly mention the problem. In the animation above, the user’s prompt was “create me a bug issue because markdown tables are not rendering properly in the comments.” Copilot then automatically drafted a report, including steps to reproduce the bug.To get the most out of this feature, consider annotating your screenshots clearly—highlighting or circling the problematic area—to help Copilot generate even more precise issue descriptions.Projects quickly become disorganized when team members skip adding proper metadata. Incorrect templates, missing labels, or wrong issue types make tracking and prioritization difficult.Copilot solves this by automatically inferring the best template based on your prompt. It also adds appropriate labels and issue types without requiring you to navigate multiple dropdown menus or memorize tagging conventions.Need something specific? Simply ask Copilot to add particular labels or switch templates. If you change templates after drafting, Copilot will automatically reformat your content—no manual copying required.3. Stay organized with versioning and milestonesKeeping issues updated and properly categorized is crucial for clear communication, maintaining project velocity, and ensuring visibility into progress. But with so much else to do, it’s easy to let this work fall by the wayside.With Copilot, adding projects and milestones is as simple as typing a prompt. You can also specify exactly how you want issues organized. For example, ask Copilot to use the “Bug Report” or “Feature Request” template, add labels like , , or , or set the issue type to “Task” or “Epic.” Copilot will apply these details automatically, ensuring your issues are consistently categorized.Additionally, Copilot tracks all changes, making them easily referenceable. You can review issue history and revert changes if needed, ensuring nothing important gets lost.4. Batch create multiple issues at onceSometimes you need to log several issues after a customer meeting, user testing session, or bug bash. Traditionally, this means repeating the same creation process multiple times.Copilot supports multi-issue drafting, allowing you to create multiple issues in a single conversation. Whether logging feature requests or documenting bugs, batch creation saves significant time.Simply prompt Copilot to create the issues, describe each one, and Copilot will draft them all. For example, you could give the following prompt to create two issues at once:Create me issues for the following features:
+- Line breaks ignored in rendered Markdown despite double-space
+- Bold and italic Markdown styles not applied when combinedYou will still need to review and finalize each one, but the drafting process is streamlined into a single workflow.5. Let AI help fix your bugs with Copilot coding agentCreating issues is only half the battle—fixing them is where the real work begins. You can now assign issues directly to Copilot. Just ask Copilot coding agent to take ownership of the issue, and your AI coding assistant will start analyzing the bug. Copilot can even suggest draft pull requests with potential fixes.This seamless handoff reduces context-switching and accelerates resolution times, allowing your team to focus on more complex challenges.Beyond Copilot: Issues enhancements on GitHubWhile Copilot is already revolutionizing issue management, we at GitHub are always looking for ways to enhance the overall issues experience. For example, you can now:Standardize issue types across repositories for consistent tracking and reporting.Break down complex tasks into sub-issues for better progress management.Use advanced search capabilities with logical operators to quickly find exactly what you need.Manage larger projects with expanded limits supporting up to 50,000 items.Kickstart enhanced issue management todayReady to transform your issue management workflow with GitHub Copilot? Head to github.com/copilot and try prompts like:“Create me an issue for…”Or simply upload a screenshot and mention you want to file a bug.Experience firsthand how Copilot makes issue management feel less like administrative overhead and more like a conversation with your AI pair programmer.]]></content:encoded></item><item><title>Python 201 – All About the TypedDict</title><link>https://www.blog.pythonlibrary.org/2025/06/17/python-201-all-about-the-typeddict/</link><author>Mike</author><category>dev</category><category>official</category><category>python</category><pubDate>Tue, 17 Jun 2025 13:25:53 +0000</pubDate><source url="https://www.blog.pythonlibrary.org/">Python Blog</source><content:encoded><![CDATA[Python has supported the concept of type hinting for quite a while now. However, unlike other programming languages, Python does not enforce type hints. You must use an external tool, such as Mypy, for that.In this tutorial, you will learn all about , a special way of adding type hinting to Heterogeneous dictionaries. A heterogeneous dictionary is a dictionary that has values that are not all the same type.But before you learn how to use the TypedDict, you should review how to type hint a regular dictionary.Type Hinting a Regular DictionaryA regular Python dictionary is defined as follows:my_dictionary = {"some_key": "some_value"}You can use any hashable type for the key, such as a string or an integer. The value of a dictionary can be any type whatsoever.When you want to type hint a dictionary, you would use the following: dict[key_type, value_type]Now let’s apply that to the example above:my_dictionary: dict[str, str] = {"some_key": "some_value"}If you are using a version of Python before 3.9, you will need to do the following instead:from typing import Dict
 
-let closure = async || {
-    vec.push(ready(String::from("")).await);
-};
-It also has not been possible to properly express higher-ranked function signatures with the  traits returning a , but you can write this with the  traits:use core::future::Future;
-async fn f<Fut>(_: impl for<'a> Fn(&'a u8) -> Fut)
-where
-    Fut: Future<Output = ()>,
-{ todo!() }
+my_dictionary: Dict[str, str] = {"some_key": "some_value"}Fortunately, modern Python no longer requires that extra import.Now you’re ready to learn about how and why you might want to use the TypedDictThe TypedDict was introduced to Python in 3.8. You can read the full details about it in PEP 589. The reason you would use a TypedDict over a regular dictionary is when you have a dictionary with values of different types.my_dictionary = {"names": ["Mike", "Andrea", "John"],
+                 "type": "employee",
+                 "code": 123456
+                }Type hinting this type of dictionary is more complex. You can do something like this, though:my_dictionary: dict[str, list | str | int] = {"names": ["Mike", "Andrea", "John"], "otype": "employee", "code": 123456 }Depending on how your type checker is configured, this might work. However, if you write code that modifies the list, your type checker may complain that a string doesn’t have an append method or vice versa.To make the type checker happier, you should use a .Here’s how you would use one with this example:from typing import TypedDict
 
-async fn f2(_: impl for<'a> AsyncFn(&'a u8))
-{ todo!() }
+class MultiTypeDict(TypedDict):
+    names: list
+    otype: str
+    code: int
 
-async fn main() {
-    async fn g(_: &u8) { todo!() }
-    f(g).await;
-    //~^ ERROR mismatched types
-    //~| ERROR one type is more general than the other
+my_dictionary: MultiTypeDict = {"names": ["Mike", "Andrea", "John"], "otype": "employee", "code": 123456 }Isn’t that great? There’s just one problem. What if your dictionary’s keys have spaces in them? You cannot create class attributes with spaces!There’s a workaround for that. Check it out in the next section.Creating a TypedDict with Keys that Have SpacesFor this example, you will create a new dictionary with four keys, three of which contain spaces.To make a TypedDict for this type of dictionary, you need to call the TypedDict constructor instead of subclassing it:from typing import TypedDict
 
-    f2(g).await; // ok!
-}
-Hiding trait implementations from diagnosticsThe new #[diagnostic::do_not_recommend] attribute is a hint to the compiler to not show the annotated trait implementation as part of a diagnostic message. For library authors, this is a way to keep the compiler from making suggestions that may be unhelpful or misleading. For example:pub trait Foo {}
-pub trait Bar {}
+Results = TypedDict("Results",{"Animal Habitats": list,
+                               "Tested": bool,
+                               "Animal Name": str,
+                               "Animal Location": str})
 
-impl<T: Foo> Bar for T {}
+actual_results: Results = {
+    "Animal Habitats": ["Asia", "N. America"],
+    "Tested": False,
+    "Animal Name": "Tigris",
+    "Animal Location": "North Bay",
+}When you call TypedDict, you pass in the typename (what you would have named the class) and the fields the dictionary should have. You’ll note that the fields are a dictionary. This is where you will put the keys that contain spaces and those without spaces.Give it a try and you’ll find it works great! is a handy tool for storing a complex dictionary. You will find that sometimes you even have these complex dictionaries inside of lists, tuples or even other dictionaries. Using the TypedDict can make type-hinting these data structures easier and prevent hard-to-detect defects from creeping in.]]></content:encoded></item><item><title>Highlights from Git 2.50</title><link>https://github.blog/open-source/git/highlights-from-git-2-50/</link><author>Taylor Blau</author><category>official</category><pubDate>Mon, 16 Jun 2025 17:12:27 +0000</pubDate><source url="https://github.blog/">Github Blog</source><content:encoded><![CDATA[The open source Git project just released Git 2.50 with features and bug fixes from 98 contributors, 35 of them new. We last caught up with you on the latest in Git back when 2.49 was released.💡 Before we get into the details of this latest release, we wanted to remind you that Git Merge, the conference for Git users and developers is back this year on September 29-30, in San Francisco. Git Merge will feature talks from developers working on Git, and in the Git ecosystem. Tickets are on sale now; check out the website to learn more.With that out of the way, let’s take a look at some of the most interesting features and changes from Git 2.50.Improvements for multiple cruft packsWhen we covered Git 2.43, we talked about newly added support for multiple cruft packs. Git 2.50 improves on that with better command-line ergonomics, and some important bugfixes. In case you’re new to the series, need a refresher, or aren’t familiar with cruft packs, here’s a brief overview:Git objects may be either reachable or unreachable. The set of reachable objects is everything you can walk to starting from one of your repository’s references: traversing from commits to their parent(s), trees to their sub-tree(s), and so on. Any object that you didn’t visit by repeating that process over all of your references is unreachable.In Git 2.37, Git introduced cruft packs, a new way to store your repository’s unreachable objects. A cruft pack looks like an ordinary packfile with the addition of an  file, which is used to keep track of when each object was most recently written in order to determine when it is safe to discard it.However, updating the cruft pack could be cumbersome–particularly in repositories with many unreachable objects–since a repository’s cruft pack must be rewritten in order to add new objects. Git 2.43 began to address this through a new command-line option: git repack --max-cruft-size. This option was designed to split unreachable objects across multiple packs, each no larger than the value specified by . But there were a couple of problems:If you’re familiar with ’s  option, ’s behavior is quite confusing. The former option specifies the maximum size an individual pack can be, while the latter involves how and when to move objects between multiple packs.The feature was broken to begin with! Since  imposes on cruft packs the same pack-size constraints as  does on non-cruft packs, it is often impossible to get the behavior you want.For example, suppose you had two 100 MiB cruft packs and ran git repack --max-cruft-size=200M. You might expect Git to merge them into a single 200 MiB pack. But since  also dictates the maximum size of the output pack, Git will refuse to combine them, or worse: rewrite the same pack repeatedly.Git 2.50 addresses both of these issues with a new option: --combine-cruft-below-size. Instead of specifying the maximum size of the output pack, it determines which existing cruft pack(s) are eligible to be combined. This is particularly helpful for repositories that have accumulated many unreachable objects spread across multiple cruft packs. With this new option, you can gradually reduce the number of cruft packs in your repository over time by combining existing ones together.With the introduction of --combine-cruft-below-size, Git 2.50 repurposed  to behave as a cruft pack-specific override for . Now  only determines the size of the outgoing pack, not which packs get combined into it.Along the way, a bug was uncovered that prevented objects stored in multiple cruft packs from being “freshened” in certain circumstances. In other words, some unreachable objects don’t have their modification times updated when they are rewritten, leading to them being removed from the repository earlier than they otherwise would have been. Git 2.50 squashes this bug, meaning that you can now efficiently manage multiple cruft packs and freshen their objects to your heart’s content.Incremental multi-pack reachability bitmapsMulti-pack indexes are extremely useful to accelerate object lookup performance in large repositories by binary searching through a single index containing most of your repository’s contents, rather than repeatedly searching through each individual packfile. But multi-pack indexes aren’t just useful for accelerating object lookups. They’re also the basis for multi-pack reachability bitmaps, the MIDX-specific analogue of classic single-pack reachability bitmaps. If neither of those are familiar to you, don’t worry; here’s a brief refresher. Single-pack reachability bitmaps store a collection of bitmaps corresponding to a selection of commits. Each bit position in a pack bitmap refers to one object in that pack. In each individual commit’s bitmap, the set bits correspond to objects that are reachable from that commit, and the unset bits represent those that are not.Multi-pack bitmaps were introduced to take advantage of the substantial performance increase afforded to us by reachability bitmaps. Instead of having bitmaps whose bit positions correspond to the set of objects in a single pack, a multi-pack bitmap’s bit positions correspond to the set of objects in a multi-pack index, which may include objects from arbitrarily many individual packs. If you’re curious to learn more about how multi-pack bitmaps work, you can read our earlier post Scaling monorepo maintenance.However, like cruft packs above, multi-pack indexes can be cumbersome to update as your repository grows larger, since each update requires rewriting the entire multi-pack index and its corresponding bitmap, regardless of how many objects or packs are being added. In Git 2.47, the file format for multi-pack indexes became incremental, allowing multiple multi-pack index layers to be layered on top of one another forming a chain of MIDXs. This made it much easier to add objects to your repository’s MIDX, but the incremental MIDX format at the time did not yet have support for multi-pack bitmaps.Git 2.50 brings support for the multi-pack reachability format to incremental MIDX chains, with each MIDX layer having its own  file. These bitmap layers can be used in conjunction with one another to provide reachability information about selected commits at any layer of the MIDX chain. In effect, this allows extremely large repositories to quickly and efficiently add new reachability bitmaps as new commits are pushed to the repository, regardless of how large the repository is.This feature is still considered highly experimental, and support for repacking objects into incremental multi-pack indexes and bitmaps is still fairly bare-bones. This is an active area of development, so we’ll make sure to cover any notable developments to incremental multi-pack reachability bitmaps in this series in the future.The  merge engine replaces This release also saw some exciting updates related to merging. Way back when Git 2.33 was released, we talked about a new merge engine called “ORT” (standing for “Ostensibly Recursive’s Twin”).ORT is a from-scratch rewrite of Git’s old merging engine, called “recursive.” ORT is significantly faster, more maintainable, and has many new features that were difficult to implement on top of its predecessor.One of those features is the ability for Git to determine whether or not two things are mergeable without actually persisting any new objects necessary to construct the merge in the repository. Previously, the only way to tell whether two things are mergeable was to run git merge-tree --write-tree on them. That works, but in this example  wrote any new objects generated by the merge into the repository. Over time, these can accumulate and cause performance issues. In Git 2.50, you can make the same determination without writing any new objects by using ’s new  mode and relying on its exit code.Most excitingly in this release is that ORT has entirely superseded recursive, and recursive is no longer part of Git’s source code. When ORT was first introduced, it was only accessible through ’s  option to select a strategy. In Git 2.34, ORT became the default choice over , though the latter was still available in case there were bugs or behavior differences between the two. Now, 16 versions and two and a half years later, recursive has been completely removed from Git, with its author, Elijah Newren, writing:As a wise man once told me, “Deleted code is debugged code!”As of Git 2.50, recursive has been completely  deleted. For more about ORT’s internals and its development, check out this five part series from Elijah here, here, here, here, and here.If you’ve ever scripted around your repository’s objects, you are likely familiar with , Git’s purpose-built tool to list objects and print their contents.  has many modes, like  (for printing out the contents of objects), or  (for printing out certain information about objects without printing their contents).Oftentimes it is useful to dump the set of all objects of a certain type in your repository. For commits,  can easily enumerate a set of commits. But what about, say, trees? In the past, to filter down to just the tree objects from a list of objects, you might have written something like:$ git cat-file --batch-check='%(objecttype) %(objectname)' \    --buffer <in | perl -ne 'print "$1\n" if /^tree ([0-9a-f]+)/'Git 2.50 brings Git’s object filtering mechanism used in partial clones to , so the above can be rewritten a little more concisely like:$ git cat-file --batch-check='%(objectname)' --filter='object:type=tree' <inWhile we’re on the topic, let’s discuss a little-known  command-line option: . This arcane option was used with objects that have a type other than , , , or . This is a quirk dating back a little more than a decade ago that allows  to write objects with arbitrary types. In the time since, this feature has gotten very little use. In fact, git cat-file -p --allow-unknown-type can’t even print out the contents of one of these objects!
 
-struct MyType;
-
-fn main() {
-    let _object: &dyn Bar = &MyType;
-}
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
- --> src/main.rs:9:29
-  |
-9 |     let _object: &dyn Bar = &MyType;
-  |                             ^^^^ the trait `Foo` is not implemented for `MyType`
-  |
-note: required for `MyType` to implement `Bar`
- --> src/main.rs:4:14
-  |
-4 | impl<T: Foo> Bar for T {}
-  |         ---  ^^^     ^
-  |         |
-  |         unsatisfied trait bound introduced here
-  = note: required for the cast from `&MyType` to `&dyn Bar`
-For some APIs, it might make good sense for you to implement , and get  indirectly by that blanket implementation. For others, it might be expected that most users should implement  directly, so that  suggestion is a red herring. In that case, adding the diagnostic hint will change the error message like so:#[diagnostic::do_not_recommend]
-impl<T: Foo> Bar for T {}
-error[E0277]: the trait bound `MyType: Bar` is not satisfied
-  --> src/main.rs:10:29
-   |
-10 |     let _object: &dyn Bar = &MyType;
-   |                             ^^^^ the trait `Bar` is not implemented for `MyType`
-   |
-   = note: required for the cast from `&MyType` to `&dyn Bar`
- and  for tuplesEarlier versions of Rust implemented convenience traits for iterators of  tuple pairs to behave like , with  in 1.56 and  in 1.79. These have now been  to more tuple lengths, from singleton  through to 12 items long, . For example, you can now use  to fanout into multiple collections at once:use std::collections::{LinkedList, VecDeque};
-fn main() {
-    let (squares, cubes, tesseracts): (Vec<_>, VecDeque<_>, LinkedList<_>) =
-        (0i32..10).map(|i| (i * i, i.pow(3), i.pow(4))).collect();
-    println!("{squares:?}");
-    println!("{cubes:?}");
-    println!("{tesseracts:?}");
-}
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-[0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
-[0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561]
-Updates to  has been deprecated for years, because it can give surprising results in some Windows configurations if the  environment variable is set (which is not the normal configuration on Windows). We had previously avoided changing its behavior, out of concern for compatibility with code depending on this non-standard configuration. Given how long this function has been deprecated, we're now updating its behavior as a bug fix, and a subsequent release will remove the deprecation for this function.These APIs are now stable in const contextsMany people came together to create Rust 1.85.0. We couldn't have done it without all of you. Thanks!]]></content:encoded></item><item><title>Testing concurrent code with testing/synctest</title><link>https://go.dev/blog/synctest</link><author>Damien Neil</author><category>dev</category><category>official</category><category>go</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="http://blog.golang.org/feed.atom">Golang Blog</source><content:encoded><![CDATA[
-      Damien Neil
-      19 February 2025
-      One of Go’s signature features is built-in support for concurrency.
-Goroutines and channels are simple and effective primitives for
-writing concurrent programs.However, testing concurrent programs can be difficult and error prone.In Go 1.24, we are introducing a new, experimental
- package
-to support testing concurrent code. This post will explain the motivation behind
-this experiment, demonstrate how to use the synctest package, and discuss its potential future.In Go 1.24, the  package is experimental and
-not subject to the Go compatibility promise.
-It is not visible by default.
-To use it, compile your code with  set in your environment.Testing concurrent programs is difficultTo begin with, let us consider a simple example.The  function
-arranges for a function to be called in its own goroutine after a context is canceled.
-Here is a possible test for :func TestAfterFunc(t *testing.T) {
-    ctx, cancel := context.WithCancel(context.Background())
-
-    calledCh := make(chan struct{}) // closed when AfterFunc is called
-    context.AfterFunc(ctx, func() {
-        close(calledCh)
-    })
-
-    // TODO: Assert that the AfterFunc has not been called.
-
-    cancel()
-
-    // TODO: Assert that the AfterFunc has been called.
-}
-We want to check two conditions in this test:
-The function is not called before the context is canceled,
-and the function  called after the context is canceled.Checking a negative in a concurrent system is difficult.
-We can easily test that the function has not been called ,
-but how do we check that it  be called?A common approach is to wait for some amount of time before
-concluding that an event will not happen.
-Let’s try introducing a helper function to our test which does this.// funcCalled reports whether the function was called.
-funcCalled := func() bool {
-    select {
-    case <-calledCh:
-        return true
-    case <-time.After(10 * time.Millisecond):
-        return false
-    }
-}
-
-if funcCalled() {
-    t.Fatalf("AfterFunc function called before context is canceled")
-}
-
-cancel()
-
-if !funcCalled() {
-    t.Fatalf("AfterFunc function not called after context is canceled")
-}
-This test is slow:
-10 milliseconds isn’t a lot of time, but it adds up over many tests.This test is also flaky:
-10 milliseconds is a long time on a fast computer,
-but it isn’t unusual to see pauses lasting several seconds
-on shared and overloaded
-CI
-systems.We can make the test less flaky at the expense of making it slower,
-and we can make it less slow at the expense of making it flakier,
-but we can’t make it both fast and reliable.Introducing the testing/synctest packageThe  package solves this problem.
-It allows us to rewrite this test to be simple, fast, and reliable,
-without any changes to the code being tested.The package contains only two functions:  and . calls a function in a new goroutine.
-This goroutine and any goroutines started by it
-exist in an isolated environment which we call a .
- waits for every goroutine in the current goroutine’s bubble
-to block on another goroutine in the bubble.Let’s rewrite our test above using the  package.func TestAfterFunc(t *testing.T) {
-    synctest.Run(func() {
-        ctx, cancel := context.WithCancel(context.Background())
-
-        funcCalled := false
-        context.AfterFunc(ctx, func() {
-            funcCalled = true
-        })
-
-        synctest.Wait()
-        if funcCalled {
-            t.Fatalf("AfterFunc function called before context is canceled")
-        }
-
-        cancel()
-
-        synctest.Wait()
-        if !funcCalled {
-            t.Fatalf("AfterFunc function not called after context is canceled")
-        }
-    })
-}
-This is almost identical to our original test,
-but we have wrapped the test in a  call
-and we call  before asserting that the function has been called or not.The  function waits for every goroutine in the caller’s bubble to block.
-When it returns, we know that the context package has either called the function,
-or will not call it until we take some further action.This test is now both fast and reliable.The test is simpler, too:
-we have replaced the  channel with a boolean.
-Previously we needed to use a channel to avoid a data race between
-the test goroutine and the  goroutine,
-but the  function now provides that synchronization.The race detector understands  calls,
-and this test passes when run with .
-If we remove the second  call,
-the race detector will correctly report a data race in the test.Concurrent code often deals with time.Testing code that works with time can be difficult.
-Using real time in tests causes slow and flaky tests,
-as we have seen above.
-Using fake time requires avoiding  package functions,
-and designing the code under test to work with
-an optional fake clock.The  package makes it simpler to test code that uses time.Goroutines in the bubble started by  use a fake clock.
-Within the bubble, functions in the  package operate on the
-fake clock. Time advances in the bubble when all goroutines are
-blocked.To demonstrate, let’s write a test for the
- function.
- creates a child of a context,
-which expires after a given timeout.func TestWithTimeout(t *testing.T) {
-    synctest.Run(func() {
-        const timeout = 5 * time.Second
-        ctx, cancel := context.WithTimeout(context.Background(), timeout)
-        defer cancel()
-
-        // Wait just less than the timeout.
-        time.Sleep(timeout - time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != nil {
-            t.Fatalf("before timeout, ctx.Err() = %v; want nil", err)
-        }
-
-        // Wait the rest of the way until the timeout.
-        time.Sleep(time.Nanosecond)
-        synctest.Wait()
-        if err := ctx.Err(); err != context.DeadlineExceeded {
-            t.Fatalf("after timeout, ctx.Err() = %v; want DeadlineExceeded", err)
-        }
-    })
-}
-We write this test just as if we were working with real time.
-The only difference is that we wrap the test function in ,
-and call  after each  call to wait for the context
-package’s timers to finish running.A key concept in  is the bubble becoming .
-This happens when every goroutine in the bubble is blocked,
-and can only be unblocked by another goroutine in the bubble.When a bubble is durably blocked:If there is an outstanding  call, it returns.Otherwise, time advances to the next time that could unblock a goroutine, if any.Otherwise, the bubble is deadlocked and  panics.A bubble is not durably blocked if any goroutine is blocked
-but might be woken by some event from outside the bubble.The complete list of operations which durably block a goroutine is:a send or receive on a nil channela send or receive blocked on a channel created within the same bubblea select statement where every case is durably blockingOperations on a  are not durably blocking.It is common for functions to acquire a global mutex.
-For example, a number of functions in the reflect package
-use a global cache guarded by a mutex.
-If a goroutine in a synctest bubble blocks while acquiring
-a mutex held by a goroutine outside the bubble,
-it is not durably blocked—it is blocked, but will be unblocked
-by a goroutine from outside its bubble.Since mutexes are usually not held for long periods of time,
-we simply exclude them from ’s consideration.Channels created within a bubble behave differently from ones created outside.Channel operations are durably blocking only if the channel is bubbled
-(created in the bubble).
-Operating on a bubbled channel from outside the bubble panics.These rules ensure that a goroutine is durably blocked only when
-communicating with goroutines within its bubble.External I/O operations, such as reading from a network connection,
-are not durably blocking.Network reads may be unblocked by writes from outside the bubble,
-possibly even from other processes.
-Even if the only writer to a network connection is also in the same bubble,
-the runtime cannot distinguish between a connection waiting for more data to arrive
-and one where the kernel has received data and is in the process of delivering it.Testing a network server or client with synctest will generally
-require supplying a fake network implementation.
-For example, the  function
-creates a pair of s that use an in-memory network connection
-and can be used in synctest tests.The  function starts a goroutine in a new bubble.
-It returns when every goroutine in the bubble has exited.
-It panics if the bubble is durably blocked
-and cannot be unblocked by advancing time.The requirement that every goroutine in the bubble exit before Run returns
-means that tests must be careful to clean up any background goroutines
-before completing.Let’s look at another example, this time using the 
-package to test a networked program.
-For this example, we’ll test the  package’s handling of
-the 100 Continue response.An HTTP client sending a request can include an “Expect: 100-continue”
-header to tell the server that the client has additional data to send.
-The server may then respond with a 100 Continue informational response
-to request the rest of the request,
-or with some other status to tell the client that the content is not needed.
-For example, a client uploading a large file might use this feature to
-confirm that the server is willing to accept the file before sending it.Our test will confirm that when sending an “Expect: 100-continue” header
-the HTTP client does not send a request’s content before the server
-requests it, and that it does send the content after receiving a
-100 Continue response.Often tests of a communicating client and server can use a
-loopback network connection. When working with ,
-however, we will usually want to use a fake network connection
-to allow us to detect when all goroutines are blocked on the network.
-We’ll start this test by creating an  (an HTTP client) that uses
-an in-memory network connection created by .func Test(t *testing.T) {
-    synctest.Run(func() {
-        srvConn, cliConn := net.Pipe()
-        defer srvConn.Close()
-        defer cliConn.Close()
-        tr := &http.Transport{
-            DialContext: func(ctx context.Context, network, address string) (net.Conn, error) {
-                return cliConn, nil
-            },
-            // Setting a non-zero timeout enables "Expect: 100-continue" handling.
-            // Since the following test does not sleep,
-            // we will never encounter this timeout,
-            // even if the test takes a long time to run on a slow machine.
-            ExpectContinueTimeout: 5 * time.Second,
-        }
-We send a request on this transport with the “Expect: 100-continue” header set.
-The request is sent in a new goroutine, since it won’t complete until the end of the test.        body := "request body"
-        go func() {
-            req, _ := http.NewRequest("PUT", "http://test.tld/", strings.NewReader(body))
-            req.Header.Set("Expect", "100-continue")
-            resp, err := tr.RoundTrip(req)
-            if err != nil {
-                t.Errorf("RoundTrip: unexpected error %v", err)
-            } else {
-                resp.Body.Close()
-            }
-        }()
-We read the request headers sent by the client.        req, err := http.ReadRequest(bufio.NewReader(srvConn))
-        if err != nil {
-            t.Fatalf("ReadRequest: %v", err)
-        }
-Now we come to the heart of the test.
-We want to assert that the client will not send the request body yet.We start a new goroutine copying the body sent to the server into a ,
-wait for all goroutines in the bubble to block, and verify that we haven’t read anything
-from the body yet.If we forget the  call, the race detector will correctly complain
-about a data race, but with the  this is safe.        var gotBody strings.Builder
-        go io.Copy(&gotBody, req.Body)
-        synctest.Wait()
-        if got := gotBody.String(); got != "" {
-            t.Fatalf("before sending 100 Continue, unexpectedly read body: %q", got)
-        }
-We write a “100 Continue” response to the client and verify that it now sends the
-request body.        srvConn.Write([]byte("HTTP/1.1 100 Continue\r\n\r\n"))
-        synctest.Wait()
-        if got := gotBody.String(); got != body {
-            t.Fatalf("after sending 100 Continue, read body %q, want %q", got, body)
-        }
-And finally, we finish up by sending the “200 OK” response to conclude the request.We have started several goroutines during this test.
-The  call will wait for all of them to exit before returning.        srvConn.Write([]byte("HTTP/1.1 200 OK\r\n\r\n"))
-    })
-}
-This test can be easily extended to test other behaviors,
-such as verifying that the request body is not sent if the server does not ask for it,
-or that it is sent if the server does not respond within a timeout.We are introducing 
-in Go 1.24 as an  package.
-Depending on feedback and experience
-we may release it with or without amendments,
-continue the experiment,
-or remove it in a future version of Go.The package is not visible by default.
-To use it, compile your code with  set in your environment.We want to hear your feedback!
-If you try out ,
-please report your experiences, positive or negative,
-on go.dev/issue/67434.]]></content:encoded></item><item><title>Protecting user data through source code analysis at scale</title><link>https://engineering.fb.com/2025/02/18/security/protecting-user-data-through-source-code-analysis/</link><author></author><category>dev</category><category>official</category><pubDate>Tue, 18 Feb 2025 20:30:49 +0000</pubDate><source url="https://engineering.fb.com/">Facebook engineering</source><content:encoded><![CDATA[detect potential scraping vectorsturning our attack vector criteria into static analysis rules# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.GET['viewer_id']
-target = request.GET['target_id']
-	count = request.GET['count']
-	if(can_see(viewer, target)):
-		followers = load_followers(target, count)
-		return followers
-
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...# views/followers.py
-async def get_followers(request: HttpRequest) -> HttpResponse:
-	viewer = request.Get['viewer_id']
-	target = request.GET['target_id']
-	count = min(request.GET['count'], MAX_FOLLOWERS_RESULTS)
-	if(can_see(viewer, target)):
-	    followers = load_followers(target, count)
-		return followers
-
-# controller/followers.py
-async def load_followers(target_id: int, count: int):
-	...]]></content:encoded></item></channel></rss>
+$ oid="$(git hash-object -w -t notatype --literally /dev/null)"
+$ git cat-file -p $oid
+fatal: invalid object type
+This release makes the  option silently do nothing, and removes support from git hash-object to write objects with unknown types in the first place.The  command learned a number of new tricks this release as well. It can now perform a few new different kinds of tasks, like , , and .  mirrors ’s functionality to remove stale or broken Git worktrees.  also mirrors existing functionality exposed via  to expire old  entries from previously recorded merge conflict resolutions. Finally,  can be used to remove stale unreachable objects from out of the reflog. also ships with new configuration for the existing  task. This task removes lingering loose objects that have since been packed away, and then makes new pack(s) for any loose objects that remain. The size of those packs was previously fixed at a maximum of 50,000, and can now be configured by the maintenance.loose-objects.batchSize configuration.If you’ve ever needed to recover some work you lost, you may be familiar with Git’s reflog feature, which allows you to track changes to a reference over time. For example, you can go back and revisit earlier versions of your repository’s main branch by doing  (to show  prior to the two most recent updates) or  (to show where your copy of the branch was at a week ago).Reflog entries can accumulate over time, and you can reach for  in the event you need to clean them up. But how do you delete the entirety of a branch’s reflog? If you’re not yet running Git 2.50 and thought “surely it’s ”, you’d be wrong! Prior to Git 2.50, the only way to delete a branch’s entire reflog was to do git reflog expire $BRANCH --expire=all.In Git 2.50, a new  sub-command was introduced, so you can accomplish the same as above with the much more natural git reflog delete $BRANCH.Speaking of references, Git 2.50 also received some attention to how references are processed and used throughout its codebase. When using the low-level  command, Git used to spend time checking whether or not the proposed refname could also be a valid object ID, making its lookups ambiguous. Since  is such a low-level command, this check is no longer done, delivering some performance benefits to higher-level commands that rely on  for their functionality.Git 2.50 also learned how to cache whether or not any prefix of a proposed reference name already exists (for example, you can’t create a reference  if either  or  already exists).Finally, in order to make those checks, Git used to create a new reference iterator for each individual prefix. Git 2.50’s reference backends learned how to “seek” existing iterators, saving time by being able to reuse the same iterator when checking each possible prefix.If you’ve ever had to tinker with Git’s low-level curl configuration, you may be familiar with Git’s configuration options for tuning HTTP connections, like  and  which are used to terminate an HTTP connection that is transferring data too slowly.These options can be useful when fine-tuning Git to work in complex networking environments. But what if you want to tweak Git’s TCP Keepalive behavior? This can be useful to control when and how often to send keepalive probes, as well as how many to send, before terminating a connection that hasn’t sent data recently.Prior to Git 2.50, this wasn’t possible, but this version introduces three new configuration options: , , and  which can be used to control the fine-grained behavior of curl’s TCP probing (provided your operating system supports it).Git is famously portable and runs on a wide variety of operating systems and environments with very few dependencies. Over the years, various parts of Git have been written in Perl, including some commands like the original implementation of  . These days, very few remaining Git commands are written in Perl.This version reduces Git’s usage of Perl by removing it as a dependency of the test suite and documentation toolchain. Many Perl one-liners from Git’s test suite were rewritten to use other Shell functions or builtins, and some were rewritten as tiny C programs. For the handful of remaining hard dependencies on Perl, those tests will be skipped on systems that don’t have a working Perl.This release also shipped a minor cosmetic update to . When starting a rebase, your  might appear with contents that look something like:
+pick c108101daa foo
+pick d2a0730acf bar
+pick e5291f9231 baz
+You can edit that list to , , or  (among many others), and Git will happily execute your rebase. But if you change the commit message in your rebase’s TODO script, they won’t actually change!That’s because the commit messages shown in the TODO script are just meant to help you identify which commits you’re rebasing. (If you want to rewrite any commit messages along the way, you can use the  command instead). To clarify that these messages are cosmetic, Git will now prefix them with a  comment character like so:
+pick c108101daa # foo
+pick d2a0730acf # bar
+pick e5291f9231 # baz
+Long time readers of this series will recall our coverage of Git’s feature (when Git added support for partial bundles), though we haven’t covered Git’s feature. Git bundles are a way to package your repositories contents: both its objects and the references that point at them into a single  file.While Git has had support for bundles since as early as v1.5.1 (nearly 18 years ago!), its  feature is much newer. In short, the  feature allows a server to serve part of a clone by first directing the client to download a  file. After the client does so, it will try to perform a fill-in fetch to gather any missing data advertised by the server but not part of the bundle.To speed up this fill-in fetch, your Git client will advertise any references that it picked up from the  itself. But in previous versions of Git, this could sometimes result in  clones overall! That’s because up until Git 2.50, Git would only advertise the branches in  when asking the server to send the remaining set of objects.Git 2.50 now includes advertises all references it knows about from the  when doing a fill-in fetch on the server, making -enabled clones much faster.For more details about these changes, you can check out this blog post from Scott Chacon.Last but not least,  (and ) now work much more smoothly in sparse checkouts by no longer having to expand the sparse index. This follows in a long line of work that has been gradually adding sparse-index compatibility to Git commands that interact with the index.Now you can interactively stage parts of your changes before committing in a sparse checkout without having to wait for Git to populate the sparsified parts of your repository’s index. Give it a whirl on your local sparse checkout today!]]></content:encoded></item><item><title>Rust compiler performance survey 2025</title><link>https://blog.rust-lang.org/2025/06/16/rust-compiler-performance-survey-2025/</link><author>Jakub Beránek</author><category>dev</category><category>official</category><category>rust</category><pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate><source url="https://blog.rust-lang.org/">Rust Blog</source><content:encoded><![CDATA[Long compile times of Rust code are frequently being cited as one of the biggest challenges limiting the productivity of Rust developers. Rust compiler contributors are of course aware of that, and they are continuously working to improve the situation, by finding new ways of speeding up the compiler, triaging performance regressions and measuring our long-term performance improvements. Recently, we also made progress on some large changes that have been in the making for a long time, which could significantly improve compiler performance by default.When we talk about compilation performance, it is important to note that it is not always so simple as determining how long does it take  to compile a crate. There are many diverse development workflows that might have competing trade-offs, and that can be bottlenecked by various factors, such as the integration of the compiler with the used build system.In order to better understand these workflows, we have prepared a Rust Compiler Performance Survey. This survey is focused specifically on compilation performance, which allows us to get more detailed data than what we usually get from the annual State of Rust survey. The data from this survey will help us find areas where we should focus our efforts on improving the productivity of Rust developers.You can fill out the survey here.Filling the survey should take you approximately 10 minutes, and the survey is fully anonymous. We will accept submissions until Monday, July 7th, 2025. After the survey ends, we will evaluate the results and post key insights on this blog.We invite you to fill the survey, as your responses will help us improve Rust compilation performance. Thank you!]]></content:encoded></item><item><title>Changes to Kubernetes Slack</title><link>https://kubernetes.io/blog/2025/06/16/changes-to-kubernetes-slack/</link><author></author><category>official</category><category>k8s</category><category>devops</category><pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate><source url="https://kubernetes.io/">Kubernetes Blog</source><content:encoded><![CDATA[: We’ve received notice from Salesforce that our Slack workspace  on June 20th. Stand by for more details, but for now, there is no urgency to back up private channels or direct messages.. Sometime later this year, our community may move to a new platform. If you are responsible for a channel or private channel, or a member of a User Group, you will need to take some actions as soon as you can.For the last decade, Slack has supported our project with a free customized enterprise account. They have let us know that they can no longer do so, particularly since our Slack is one of the largest and more active ones on the platform. As such, they will be downgrading it to a standard free Slack while we decide on, and implement, other options.On Friday, June 20, we will be subject to the feature limitations of free Slack. The primary ones which will affect us will be only retaining 90 days of history, and having to disable several apps and workflows which we are currently using. The Slack Admin team will do their best to manage these limitations.Responsible channel owners, members of private channels, and members of User Groups should take some actions to prepare for the upgrade and preserve information as soon as possible.The CNCF Projects Staff have proposed that our community look at migrating to Discord. Because of existing issues where we have been pushing the limits of Slack, they have already explored what a Kubernetes Discord would look like. Discord would allow us to implement new tools and integrations which would help the community, such as GitHub group membership synchronization. The Steering Committee will discuss and decide on our future platform.]]></content:encoded></item></channel></rss>
