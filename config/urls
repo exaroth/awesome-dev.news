@@ -159,6 +159,7 @@ https://lucumr.pocoo.org/feed.atom "~Armin Ronacher Blog" ! dev blog
 https://addyosmani.com/rss.xml "~Addy Osmani Blog" ! dev blog
 https://feeds.feedburner.com/2ality "~Axel Raushmayer" ! dev frontend blog
 https://overreacted.io/rss.xml "~Dan Abramov" ! dev frontend blog
+https://blog.bitexpert.de/blog/rss.xml "~bitExpert Blog" ! dev blog
 
 # reddit
 https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! reddit
