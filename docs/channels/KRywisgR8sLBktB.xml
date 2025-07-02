@@ -1,220 +1,330 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The unexpected way in which conditional types constrain type variables in TypeScript</title><link>https://2ality.com/2025/02/conditional-type-constraints.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[The TypeScript handbook makes an interesting statement: “Often, the checks in a conditional type will provide us with some new information. Just like narrowing with type guards can give us a more specific type, the true branch of a conditional type will further constrain generics by the type we check against.”In this blog post, we’ll see that this goes further than you may think.]]></content:encoded></item><item><title>Toe Dipping Into View Transitions</title><link>https://css-tricks.com/toe-dipping-into-view-transitions/</link><author>Geoff Graham</author><category>frontend</category><enclosure url="https://css-tricks.com/wp-content/uploads/2025/02/Screen-Recording-2025-02-14-at-2.31.25 PM.mov" length="" type=""/><pubDate>Fri, 21 Feb 2025 14:34:58 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I’ll be honest and say that the View Transition API intimidates me more than a smidge. There are plenty of tutorials with the most impressive demos showing how we can animate the transition between two pages, and they usually start with the simplest of all examples.@view-transition {
-  navigation: auto;
-}That’s usually where the simplicity ends and the tutorials venture deep into JavaScript territory. There’s nothing wrong with that, of course, except that it’s a mental leap for someone like me who learns by building up rather than leaping through. So, I was darned inspired when I saw Uncle Dave and Jim Neilsen trading tips on a super practical transition: post titles.You can see how it works on Jim’s site:This is the perfect sort of toe-dipping experiment I like for trying new things. And it starts with the same little  snippet which is used to opt both pages into the View Transitions API: the page we’re on and the page we’re navigating to. From here on out, we can think of those as the “new” page and the “old” page, respectively.I was able to get the same effect going on my personal blog:Perfect little exercise for a blog, right? It starts by setting the  on the elements we want to participate in the transition which, in this case, is the post title on the “old” page and the post title on the “new” page.So, if this is our markup:<h1 class="post-title">Notes</h1>
-<a class="post-link" href="/link-to-post"></a>…we can give them the same  in CSS:.post-title { view-transition-name: post-title; }
-.post-link { view-transition-name: post-title; }Dave is quick to point out that we can make sure we respect users who prefer reduced motion and only apply this if their system preferences allow for motion:@media not (prefers-reduced-motion: reduce) {
-  .post-title { view-transition-name: post-title; }
-  .post-link { view-transition-name: post-title; }
-}If those were the only two elements on the page, then this would work fine. But what we have is a list of post links and all of them have to have their own unique . This is where Jim got a little stuck in his work because how in the heck do you accomplish that when new blog posts are published all the time? Do you have to edit your CSS and come up with a new transition name each and every time you want to post new content? Nah, there’s got to be a better way.And there is. Or, at least there will be. It’s just not standard yet. Bramus, in fact, wrote about it very recently when discussing Chrome’s work on the  function which will be able to generate a series of unique identifiers in a single declaration. Check out this CSS from the future:<style>
-  .card[id] {
-    view-transition-name: attr(id type(<custom-ident>), none); /* card-1, card-2, card-3, … */
-    view-transition-class: card;
-  }
-</style>
-
-<div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
-</div>Daaaaa-aaaang that is going to be handy! I want it , darn it! Gotta have to wait not only for Chrome to develop it, but for other browsers to adopt and implement it as well, so who knows when we’ll actually get it. For now, the best bet is to use a little programmatic logic directly in the template. My site runs on WordPress, so I’ve got access to PHP and can generate an inline style that sets the  on both elements.The post title is in the template for my individual blog posts. That’s the  file in WordPress parlance.<?php the_title( 
-  '<h1 class="post-single__title" style="view-transition-name: post-' . get_the_id() . '">', '</h1>'
-); ?>The post links are in the template for post archives. That’s typically  in WordPress:<?php the_title(
-  '<h2 class="post-link><a href="' . esc_url( get_permalink() ) .'" rel="bookmark" style="view-transition-name: post-' . get_the_id() . '">', '</a></h2>' 
-); ?>See what’s happening there? The  property is set on both transition elements directly inline, using PHP to generate the name based on the post’s assigned ID in WordPress. Another way to do it is to drop a  tag in the template and plop the logic in there. Both are equally icky compared to what  will be able to do in the future, so pick your poison.The important thing is that now both elements share the same  and that we also have already opted into . With those two ingredients in place, the transition works! We don’t even need to define  (but you totally could) because the default transition does all the heavy lifting. In the same toe-dipping spirit, I caught the latest issue of Modern Web Weekly and love this little sprinkle of view transition on radio inputs:Notice the JavaScript that is needed to prevent the radio’s default clicking behavior in order to allow the transition to run before the input is checked.]]></content:encoded></item><item><title>The latest from TC39&apos;s recent meeting</title><link>https://javascriptweekly.com/issues/724</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[😰 Is your vehicle data giving you anxiety? Mine too. That's why I built CarsXE. Now I just have existential dread. Progress! Start for Free Now! ]]></content:encoded></item><item><title>Demo: running TypeScript directly in Node.js</title><link>https://2ality.com/2025/02/nodejs-type-stripping-demo.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[I have published the repository  which demonstrates how to implement a package with a bin script that is written directly in TypeScript (no transpilation).]]></content:encoded></item><item><title>Working With Multiple CSS Anchors and Popovers Inside the WordPress Loop</title><link>https://css-tricks.com/working-with-multiple-css-anchors-and-popovers-inside-the-wordpress-loop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Wed, 19 Feb 2025 13:55:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I know,  niche, but it could be any loop, really. The challenge is having multiple tooltips on the same page that make use of the Popover API for toggling goodness and CSS Anchor Positioning for attaching a tooltip to its respective anchor element.There’s plenty of moving pieces when working with popovers:A  needs to reference that ID.IDs have to be unique for semantics, yes, but also to hook a  into a .That’s just the part dealing with the Popover API. Turning to anchors:An anchor needs an .A target element needs to reference that .Each  must be unique to attach the target to its anchor properly.The requirements themselves are challenging. But it’s more challenging working inside a loop because you need a way to generate unique IDs and anchor names so everything is hooked up properly without conflicting with other elements on the page. In WordPress, we query an array of page objects:$property_query = new WP_Query(array(
-  'post_type' => 'page',
-  'post_status' => 'publish',
-  'posts_per_page' => -1, // Query them all!
-  'orderby' => 'title',
-  'order' => "ASC"
-));Before we get into our  statement I’d like to stub out the HTML. This is how I want a page object to look inside of its container:<div class="almanac-group">
-  <div class="group-letter"><a href="#">A</a></div>
-  <div class="group-list">
-    <details id="" class="group-item">
-      <summary>
-        <h2><code>accent-color</code></h2>
-      </summary>
-    </details>
-
-    <!-- Repeat for all properties -->
-  </div>
-</div>
-
-<!-- Repeat for the entire alphabet -->OK, let’s stub out the tooltip markup while we’re here, focusing just inside the  element since that’s what represents a single page.<details id="page" class="group-item">
-  <summary>
-    <h2><code>accent-color</code></h2>
-
-    <span id="tooltip" class="tooltip">
-      <!-- Popover Target and Anchor -->
-      <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-        <!-- etc. -->
-      </button>
-
-      <!-- Popover and Anchor Target -->
-      <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-        Experimental feature
-      </div>
-    </span>
-  </summary>
-</details>With me so far? We’ll start with the Popover side of things. Right now we have a  that is connected to a . Clicking the former toggles the latter.Styling isn’t really what we’re talking about, but it does help to reset a few popover things so it doesn’t get that border and sit directly in the center of the page. You’ll want to check out Michelle Barker’s article for some great tips that make this enhance progressively..info-tip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --infotip) {
-
-    [popovertarget] {
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-  }
-}This is also the point at which you’ll want to start using Chrome because Safari and Firefox are still working on supporting the feature.We’re doing good! The big deal at the moment is positioning the tooltip’s content so that it is beside the button. This is where we can start working with Anchor Positioning. Juan Diego’s guide is the bee’s knees if you’re looking for a deep dive. The gist is that we can connect an anchor to its target element in CSS. First, we register the  as the anchor element by giving it an . Then we anchor the  to the  with  and use the  function on its inset properties to position it exactly where we want, relative to the :.tooltip {
-  position: relative; /* Sets containment */
-
-  /* Bail if Anchor Positioning is not supported */
-  [popovertarget] {
-    display: none;
-  }
-
-  /* Style things up if Anchor Positioning is supported */
-  @supports (anchor-name: --tooltip) {
-
-    [popovertarget] {
-      anchor-name: --tooltip;
-      display: inline;
-      position: relative;
-    }
-
-    [popover] {
-      border: 0; /* Removes default border */
-      margin: 0; /* Resets placement */
-      position: absolute; /* Required */
-      position-anchor: --tooltip;
-      top: anchor(--tooltip -15%);
-      left: anchor(--tooltip 110%);
-    }
-  }
-}This is exactly what we want! But it’s also where things more complicated when we try to add more tooltips to the page. Notice that both buttons want to cull the same tooltip.That’s no good. What we need is a unique ID for each tooltip. I’ll simplify the HTML so we’re looking at the right spot:<details>
-  <!-- ...  -->
-
-    <!-- Popover Target and Anchor -->
-    <button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  
-      <!-- ... -->
-    </button>
-
-    <!-- Popover and Anchor Target -->
-    <div popover id="experimental-label" class="info-tip-content" role="tooltip">
-      Experimental feature
-    </div>
-    
-    <!-- ... -->
-
-</details>The popover has an ID of . The anchor references it in the  attribute. This connects them but also connects other tooltips that are on the page. What would be ideal is to have a sequence of IDs, like:<!-- Popover and Anchor Target -->
-<div popover id="experimental-label-1" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-2" class="info-tip-content" role="tooltip"> ... </div>
-<div popover id="experimental-label-3" class="info-tip-content" role="tooltip"> ... </div>
-<!-- and so on... -->We can make the page query into a function that we call:function letterOutput($letter, $propertyID) {
-  $property_query = new WP_Query(array(
-    'post_type' => 'page',
-    'post_status' => 'publish',
-    'posts_per_page' => -1, // Query them all!
-    'orderby' => 'title',
-    'order' => "ASC"
-  ));
-}And when calling the function, we’ll take two arguments that are specific only to what I was working on. If you’re curious, we have a structured set of pages that go Almanac → Type → Letter → Feature (e.g., Almanac → Properties → A → ). This function outputs the child pages of a “Letter” (i.e., A → , , etc.). A child page might be an “experimental” CSS feature and we’re marking that in the UI with tooltops next to each experimental feature.We’ll put the HTML into an object that we can return when calling the function. I’ll cut it down for brevity…$html .= '<details id="page" class="group-item">';
-$html .=   '<summary>';
-$html .=     '<h2><code>accent-color</code></h2>';
-$html .=     '<span id="tooltip" class="tooltip">';
-$html .=       '<button class="info-tip-button" aria-labelledby="experimental-label" popovertarget="experimental-label">  ';
-// ...
-$html .=       '</button>';
-$html .=       '<div popover id="experimental-label" class="info-tip-content" role="tooltip">';
-// ...
-$html .=       '</div>';
-$html .=     '</span>';
-$html .=   '</summary>';
-$html .= '</details>';
-
-return $html;WordPress has some functions we can leverage for looping through this markup. For example, we can insert  in place of the hardcoded post title:$html .= '<h2><code>' . get_the_title(); . '</code></h2>';We can also use  to insert the unique identifier associated with the post. For example, we can use it to give each  element a unique ID:$html .= '<details id="page-' . get_the_id(); . '" class="group-item">';This is the secret sauce for getting the unique identifiers needed for the popovers:// Outputs something like `id="experimental-label-12345"`
-$html .= '<div popover id="experimental-label-' . get_the_id(); . '" class="info-tip-content" role="tooltip">';We can do the exact same thing on the  so that each button is wired to the right popover:$html .= '<button class="info-tip-button" aria-labelledby="experimental-label-' . get_the_id(); . '" popovertarget="experimental-label">  ';We ought to do the same thing to the  element itself to distinguish one from another:$html .= '<span id="tooltip-' . get_the_id(); . '" class="tooltip">';I can’t exactly recreate a WordPress instance in a CodePen demo, but here’s a simplified example with similar markup:The popovers work! Clicking either one triggers its respective  element. The problem you may have realized is that the targets are both attached to the same anchor element — so it looks like we’re triggering the same  when clicking either button!This is the CSS side of things. What we need is a similar way to apply unique identifiers to each anchor, but as dashed-idents instead of IDs. Something like this:/* First tooltip */
-#info-tip-1 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
-
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Gap Strikes Back: Now Stylable</title><link>https://css-tricks.com/the-gap-strikes-back-now-stylable/</link><author>Patrick Brosset</author><category>frontend</category><pubDate>Tue, 1 Jul 2025 12:42:38 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Four years ago, I wrote an article titled Minding the “gap”, where I talked about the CSS  property, where it applied, and how it worked with various CSS layouts.At the time, I described how easy it was to evenly space items out in a flex, grid, or multi-column layout, by using the  property. But, I also said that  the gap areas was much harder, and I shared a workaround.However, workarounds like using extra HTML elements, pseudo-elements, or borders to draw separator lines tend to come with drawbacks, especially those that impact your layout size, interfere with assistive technologies, or pollute your markup with style-only elements.Today, I’m writing again about layout gaps, but this time, to tell you all about a new and exciting CSS feature that’s going to change it all. What you previously had to use workarounds for, you’ll soon be able to do with just a few simple CSS properties that make it easy, yet also flexible, to display styled separators between your layout items.There’s already a specification draft for the feature you can peruse. At the time I’m writing this, it is available in Chrome and Edge 139 behind a flag. But I believe it won’t be long before we turn that flag on. I believe other browsers are also very receptive and engaged.Displaying decorative lines between items of a layout can make a big difference. When used well, these lines can bring more structure to your layout, and give your users more of a sense of how the different regions of a page are organized.Introducing CSS gap decorationsIf you’ve ever used a multi-column layout, such as by using the  property, then you might already be familiar with gap decorations. You can draw vertical lines between the columns of a multi-column layout by using the  property:article {
+  column-width: 20rem;
+  column-rule: 1px solid black;
+}The CSS gap decorations feature builds on this to provide a more comprehensive system that makes it easy for you to draw separator lines in other layout types.For example, the draft specification says that the  property also works in flexbox and grid layouts:.my-grid-container {
+  display: grid;
+  gap: 2px;
+  column-rule: 2px solid pink;
+}No need for extra elements or borders! The key benefit here is that the decoration happens in CSS only, where it belongs, with no impacts to your semantic markup.The CSS gap decorations feature also introduces a new  property for drawing lines between rows:.my-flex-container {
+  display: flex;
+  gap: 10px;
+  row-rule: 10px dotted limegreen;
+  column-rule: 5px dashed coral;
+}But that’s not all, because the above syntax also allows you to define multiple, comma-separated, line style values, and use the same  function that CSS grid already uses for row and column templates. This makes it possible to define different styles of line decorations in a single layout, and adapt to an unknown number of gaps:.my-container {
+  display: grid;
+  gap: 2px;
+  row-rule:
+    repeat(2, 1px dashed red),
+    2px solid black,
+    repeat(auto, 1px dotted green);
+}Finally, the CSS gap decorations feature comes with additional CSS properties such as , , , , and , which make it possible to precisely customize the way the separators are drawn, whether they overlap, or where they start and end.Currently, the CSS gap decorations feature is only available in Chromium-based browsers.The feature is still early in the making, and there’s time for you all to try it and to provide feedback that could help make the feature better and more adapted to your needs.If you want to try the feature today, make sure to use Edge or Chrome, starting with version 139 (or another Chromium-based browser that matches those versions), and enable the flag by following these steps:In Chrome or Edge, go to .In the search field, search for Enable Experimental Web Platform Features.Using CSS gap decorationsLet’s build a simple web page to learn how to use the feature. Here is what we’ll be building:The above layout contains a header section with a title, a navigation menu with a few links, a main section with a series of short paragraphs of text and photos, and a footer.We’ll use the following markup:<body>
+<header>
+  <h1>My personal site</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Links</a></li>
+  </ul>
+</nav>
+<main>
+  <article>
+    <p>...</p>
+  </article>
+  <article>
+    <img src="cat.jpg" alt="A sleeping cat.">
+  </article>
+  <article>
+    <p>...</p>
+  </article>
+  <article>
+    <img src="tree.jpg" alt="An old olive tree trunk.">
+  </article>
+  <article>
+    <p>...</p>
+  </article>
+  <article>
+    <p>...</p>
+  </article>
+  <article>
+    <p>...</p>
+  </article>
+  <article>
+    <img src="strings.jpg" alt="Snow flakes falling in a motion blur effect.">
+  </article>
+</main>
+<footer>
+  <p>© 2025 Patrick Brosset</p>
+</footer>
+</body>We’ll start by making the  element be a grid container. This way, we can space out the , , , and  elements apart in one go by using the  property:body {
+  display: grid;
+  gap: 4rem;
+  margin: 2rem;
+}Let’s now use the CSS gap decorations feature to display horizontal separator lines within the gaps we just defined:body {
+  display: grid;
+  gap: 4rem;
+  margin: 2rem;
+ 
+  row-rule: 1rem solid #efefef;
+}This gives us the following result:We can do a bit better by making the first horizontal line look different than the other two lines, and simplify the  value by using the  syntax:body {
+  display: grid;
+  gap: 4rem;
+  margin: 2rem;
+ 
+  row-rule:
+    1rem solid #efefef,
+    repeat(2, 2px solid #efefef);
+}With this new  property value, we’re telling the browser to draw the first horizontal separator as a  thick line, and the next two separators as  thick lines, which gives the following result:Now, let’s turn our attention to the navigation element and its list of links. We’ll use flexbox to display the links in a single row, where each link is separated from the other links by a gap and a vertical line:nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  column-rule: 2px dashed #666;
+}Very similarly to how we used the  property before, we’re now using the  property to display a dashed  thick separator between the links.Our example web page now looks like this:The last thing we need to change is the  element and its paragraphs and pictures. We’ll use flexbox again and display the various children in a wrapping row of varying width items:main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
 }
 
-/* Second tooltip */
-#info-tip-2 {
-  [popovertarget] {
-    anchor-name: --infotip-1;
-  }
 
-  [popover] {
-    position-anchor: --infotip-1;
-    top: anchor(--infotip-1 -15%);
-    left: anchor(--infotip-1 100%);
-  }
+main > * {
+  flex: 1 1 200px;
 }
 
-/* Rest of tooltips... */This is where I feel like I had to make a compromise. I could have leveraged an  loop in Sass to generate unique identifiers but then I’d be introducing a new dependency. I could also drop a  tag directly into the WordPress template and use the same functions to generate the same post identifiers but then I’m maintaining styles in PHP.I chose the latter. I like having dashed-idents that match the IDs set on the  and . It ain’t pretty, but it works:$html .= '
-<style>
-  #info-tip-' . get_the_id() . ' {
-    [popovertarget] {
-      anchor-name: --infotip-' . get_the_id() . ';
-    }
 
-    [popover] {
-      position-anchor: --infotip-' . get_the_id() . ';
-      top: anchor(--infotip-' . get_the_id() . ' -15%);
-      left: anchor(--infotip-' . get_the_id() . ' 100%);
-    }
+main article:has(p) {
+  flex-basis: 400px;
+}In the above code snippet, we’re setting the  element to be a wrapping flex container with a  gap between items and flex lines. We’re also making the items have a flex basis size of  for pictures and  for text, and allowing them to grow and shrink as needed. This gives us the following result:Let’s use CSS gap decorations to bring a little more structure to our layout by drawing  thick separator lines between the rows and columns of the layout:main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  row-rule: 2px solid #999;
+  column-rule: 2px solid #999;
+}This gives us the following result, which is very close to our expected design:The last detail we want to change is related to the vertical lines. We don’t want them to span across the entire height of the flex lines but instead start and stop where the content starts and stops.With CSS gap decorations, we can easily achieve this by using the  property to fine-tune exactly where the decorations start and end, relative to the gap area:main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  row-rule: 2px solid #999;
+  column-rule: 2px solid #999;
+  column-rule-outset: 0;
+}The  property above makes the vertical column separators span the height of each row, excluding the gap area, which is what we want:There’s more to the feature and I mentioned a couple more CSS properties earlier, which lets you control which of the decorations, rows or columns, appear above the other ones. / , which sets the behavior of the decoration lines at intersections. In particular, whether they are made of multiple segments, which start and end at intersections, or single, continuous lines.Because the feature is new, there isn’t MDN documentation about it yet. So to learn more, check out:The Edge team has also created an interactive playground where you can use visual controls to configure gap decorations.And, of course, the reason this is all implemented behind a flag is to elicit feedback from developers like you! If you have any feedback, questions, or bugs about this feature, I definitely encourage you to open a new ticket on the Chromium issue tracker.]]></content:encoded></item><item><title>Using CSS Cascade Layers With Tailwind Utilities</title><link>https://css-tricks.com/using-css-cascade-layers-with-tailwind-utilities/</link><author>Zell Liew</author><category>frontend</category><pubDate>Mon, 30 Jun 2025 13:16:43 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Adam Wathan has (very cleverly) built Tailwind with CSS Cascade Layers, making it extremely powerful for organizing styles by priority.@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);The core of Tailwind are its utilities. This means you have two choices:The default choice is to follow Tailwind’s recommended layer order: place components first, and Tailwind utilities last.So, if you’re building components, you need to manually wrap your components with a  directive. Then, overwrite your component styles with Tailwind, putting Tailwind as the “most important layer”./* Write your components */
+@layer components {
+  .component {
+    /* Your CSS here */
   }
-</style>'The only thing I had left to do for my specific use case was add a conditional statement that outputs the tooltip only if it is marked an “Experimental Feature” in the CMS. But you get the idea.Isn’t there a better way?!Yes! But not quite yet. Bramus proposed a new  function that, when it becomes official, will generate a series of dashed idents that can be used to name things like the anchors I’m working with and prevent those names from colliding with one another.<div class="group-list">
-  <details id="item-1" class="group-item">...</details>
-  <details id="item-2" class="group-item">...</details>
-  <details id="item-3" class="group-item">...</details>
-  <details id="item-4" class="group-item">...</details>
-  <details id="item-5" class="group-item">...</details>
-  <!-- etc. -->
-</div>/* Hypothetical example — does not work! */
-.group-item { 
-  anchor-name: ident("--infotip-" attr(id) "-anchor");
-  /* --infotip-item-1-anchor, --infotip-item-2-anchor, etc. */
-}Let’s keep our fingers crossed for that to hit the specifications soon!]]></content:encoded></item><item><title>The bottom type never in TypeScript</title><link>https://2ality.com/2025/02/typescript-never.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we look at the special TypeScript type  which, roughly, is the type of things that never happen. As we’ll see, it has a surprising number of applications.]]></content:encoded></item><item><title>This Week In React #222: CRA, React Router, captureOwnerStack, TanStack, CTRA, tRPC, Astro, Preact | RN 0.78, React 19, Expo, noCompress, JitPack, CRNL, Screens | TC39, Interop, TS, CSS, Node.js, Deno</title><link>https://thisweekinreact.com/newsletter/222</link><author></author><category>frontend</category><pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[This week we have 2 official blog posts from the React and React Native core teams! CRA is deprecated and React Native 0.78 is out with React 19 support.🎂 We're also celebrating this newsletter's 5th anniversary! The first issue went out on February 13th. For the first 2 years it was only in French. I’d love to know who's been reading since the early days—say hi if you have! 😀Check our partner conf  -  🇫🇷 Paris - April 1-2 - 15% discount with code "TWIR". The French React Native conference is back with Britta Evans-Fenton (Shopify), Kadi Kraman (Expo), Krzysztof Piaskowy (Software Mansion), Saad Najmi (Microsoft) and more - and great deep-diving talks!As always, thanks for supporting us on your favorite platform:If your authentication isn't , it's .With PropelAuth, you get everything you need to launch and scale your B2B product:UIs that cover all your use cases - signup, login, MFA, organization management and more. so you can provide top-notch support to your users. and advanced security features so you can be upmarket-ready. to help you strategize and expand.Long overdue, CRA has received the latest React 19 fixes and is now officially deprecated. This article explains the limits of the CRA and build tools regarding routing, waterfalls, code splitting, and more. The React team encourages us to adopt a framework like Next.js, React Router, or Expo to address these issues. However, you can still build a React app from scratch using Vite, Parcel, Rsbuild, or other modern build tools.The initial announcement sparked heated debates on X and GitHub, mainly because it overemphasized frameworks at the expense of build tools like Vite. It was soon updated to address these concerns. All this also led to potential collaboration opportunities between Evan You (Vite) and the React team to work together on an opinionated "official" way to integrate with Vite with React Server Components, with a commitment to maintain this integration over time in the React repository.Reactile is an UI/UX turnkey framework which features an out-of-the-box, intuitive tiling display with workspaces. It encourages parallel workloads for large web solutions within a single browser tab. Implement your own view containers, widgets and logic using React and let Reactile handle the display for you.On top of that, Reactile also offers:A promise-based persistence mechanism which permits a uniform workflow across time and on multiple devices.The possibility to use nested tabs for your tiles.A simplified global search mechanism.CSS @container based responsiveness.Version 2 coming out soon. Get started with your unique 30-day free trial. Learn more about it on reactile.net.I bet you weren't expecting a React Native release so soon, but the team recently decided to releases smaller versions more frequently. Here are the highlights:Simplified process to enable the React Compiler.Metro log streaming is back in 0.78 and 0.77.1, but opt-in with a new  flag, and still deprecated. supports Android XML resources, unlocking possible perf improvements. on iOS to ease brownfield usage in any ViewControllerReact 19 itself unlocks many cool things:Actions (async transitions), , , all useful to submit forms and manage loading, error, and optimistic stateUse  as a regular prop instead of , also supporting a ref cleanup functionUse  instead of Read contexts and promises with ]]></content:encoded></item><item><title>The What If Machine: Bringing the “Iffy” Future of CSS into the Present</title><link>https://css-tricks.com/the-what-if-machine-bringing-the-iffy-future-of-css-into-the-present/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Mon, 17 Feb 2025 14:24:40 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[You say the whole world’s ending — honey, it already didMy thesis for today’s article offers further reassurance that inline conditionals are probably not the harbinger of the end of civilization: I reckon we can achieve the same functionality right now with style queries, which are gaining pretty good browser support.If I’m right, Lea’s proposal is more like syntactic sugar which would sometimes be convenient and allow cleaner markup. It’s amusing that any panic-mongering about inline conditionals ruining CSS might be equivalent to catastrophizing adding a ternary operator for a language that already supports if statements.Indeed, Lea says of her proposed syntax, “Just like ternaries in JS, it may also be more ergonomic for cases where only a small part of the value varies.” She also mentions that CSS has always been conditional. Not that conditionality was ever verboten in CSS, but CSS isn’t always very good at it.Sold! I want a conditional oompa loompa now!Me too. And many other people, as proven by Lea’s curated list of amazingly complex hacks that people have discovered for simulating inline conditionals with current CSS. Some of these hacks are complicated enough that I’m still unsure if I understand them, but they certainly have cool names. Lea concludes: “If you’re aware of any other techniques, let me know so I can add them.”Hmm… surely I was missing something regarding the problems these hacks solve. I noted that Lea has a doctorate whereas I’m an idiot. So I scrolled back up and reread, but I couldn’t stop thinking: Are these people doing all this work to avoid putting an extra div around their widgets and using style queries?It’s fair if people want to avoid superfluous elements in the DOM, but Lea’s list of hacks shows that the alternatives are super complex, so it’s worth a shot to see how far style queries with wrapper divs can take us.Lea’s motivating examples revolve around setting a “variant” property on a callout, noting we can almost achieve what she wants with style queries, but this hypothetical syntax is sadly :.callout { 
-  @container (style(--variant: success)) {
-    border-color: var(--color-success-30);
-    background-color: var(--color-success-95);
+}<!-- Override with Tailwind utilities --> 
+<div class="component p-4"> ... </div>That’s a decent way of doing things.But, being the bad boy I am, I don’t take the default approach as the “best” one. Over a year of (major) experimentation with Tailwind and vanilla CSS, I’ve come across what I believe is a better solution.Before we go on, I have to tell you that I’m writing a course called Unorthodox Tailwind — this shows you everything I know about using Tailwind and CSS in synergistic ways, leveraging the strengths of each.Shameless plug aside, let’s dive into the Unorthodox Choice now.In this case, the Unorthodox Choice is to write your styles in an unnamed layer — or any layer after utilities, really — so that your CSS naturally overwrites Tailwind utilities.Of these two, I prefer the unnamed layer option:/* Unnamed layer option */
+@layer theme, base, components, utilities; 
 
-    &::before {
-      content: var(--icon-success);
-      color: var(--color-success-05);
-    }
-  }
-}She wants to set styles on both the container itself and its descendants based on . Now, in this specific example, I could get away with hacking the  pseudo-element with  to give the illusion that it’s the container. Then I could style the borders and background of that. Unfortunately, this solution is as fragile as my ego, and in this other motivating example, Lea wants to set  of the container based on the variant. In that situation, my pseudo-element solution is not good enough.Remember, the acceptance of Lea’s proposal into the CSS spec came as her birthday gift from the universe, so it’s not fair to try to replace her gift with one of those cheap fake containers I bought on Temu. She deserves an authentic container.Busting out the gangsta wrapperOne of the comments on Lea’s proposal mentions type grinding but calls it “a  (I repeat, ) convoluted but working” approach to solving the problem that inline conditionals are intended to solve. That’s not quite fair. Type grinding took me a bit to get my head around, but I think it is more approachable with fewer drawbacks than other hacks. Still, when you look at the samples, this kind of code in production would get annoying. Therefore, let’s bite the bullet and try to build an alternate version of Lea’s flexbox variant sample. My version doesn’t use type grinding or any hack, but “plain old” (not so old) style queries together with wrapper divs, to work around the problem that we can’t use style queries to style the container itself.The wrapper battles type grindingComparing the code from Lea’s sample and my version can help us understand the differences in complexity.Here are the two versions of the CSS:And here are the two versions of the markup:So, simpler CSS and slightly more markup. Maybe we are onto something.What I like about style queries is that Lea’s proposal uses the  function, so if and when her proposal makes it into browsers then migrating style queries to inline conditionals and removing the wrappers seems doable. This wouldn’t be a 2025 article if I didn’t mention that migrating this kind of code could be a viable use case for AI. And by the time we get inline conditionals, maybe AI won’t suck.But we’re getting ahead of ourselves. Have you ever tried to adopt some whizz-bang JavaScript framework that looks elegant in the “to-do list” sample? If so, you will know that solutions that appear compelling in simplistic examples can challenge your will to live in a realistic example. So, let’s see how using style queries in the above manner works out in a more realistic example.All the changes you see to the callout if you make the form valid are based on one custom property. This property is never directly used in CSS property values for the callout but controls the style queries that set the callout’s border color, icon, background color, and content. We set the  property at the  level. I am setting it using CSS, like this:@property --variant {
-  syntax: "error | success";
-  initial-value: error;
-  inherits: true;
+/* Write your CSS normally here */ 
+.component { /* ... */ }/* Named layer option */
+/* Use whatever layer name you come up with. I simply used css here because it made most sense for explaining things */
+@layer theme, base, components, utilities, css; 
+
+@layer css {
+  .component { /* ... */ }
+}I have many reasons why I do this:I don’t like to add unnecessary CSS layers because it makes code harder to write — more keystrokes, having to remember the specific layer I used it in, etc.I’m pretty skilled with ITCSS, selector specificity, and all the good-old-stuff you’d expect from a seasoned front-end developer, so writing CSS in a single layer doesn’t scare me at all.I can do complex stuff that are hard or impossible to do in Tailwind (like theming and animations) in CSS.Your mileage may vary, of course.Now, if you have followed my reasoning so far, you would have noticed that I use Tailwind  differently:Tailwind utilities are not the “most important” layer.My unnamed CSS layer is the most important one.Build prototypes with Tailwind (quickly, easily, especially with the tools I’ve created).Shift these properties to CSS when they get more complex — so I don’t have to read messy utility-littered HTML that makes my heart sink. Not because utility HTML is bad, but because it takes lots of brain processing power to figure out what’s happening.Finally, here’s the nice thing about Tailwind being in a utility layer: I can always  a utility to give it strength.<!-- !important the padding utility -->
+<div class="component !p-4"> ... </div>Whoa, hold on, wait a minute! Isn’t this wrong, you might ask?Nope. The  keyword has traditionally been used to override classes. In this case, we’re leveraging on the  feature in CSS Layers to say the Tailwind utility is more important than any CSS in the unnamed layer.This is perfectly valid and is a built-in feature for CSS Layers.Besides, the  is so explicit (and used so little) that it makes sense for one-off quick-and-dirty adjustments (without creating a brand new selector for it).Tailwind utilities are more powerful than they seemTailwind utilities are not a 1:1 map between a class and a CSS property. Built-in Tailwind utilities mostly look like this so it can give people a wrong impression.Tailwind utilities are more like convenient Sass mixins, which means we can build effective tools for layouts, theming, typography, and more, through them.Thanks for reading and I hope you’re enjoying a new way of looking at (or using) Tailwind!]]></content:encoded></item><item><title>CSS Blob Recipes</title><link>https://css-tricks.com/css-blob-recipes/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Fri, 27 Jun 2025 13:48:41 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[. You hate them. You love them. Personally, as a design illiterate, I like to overuse them… a lot. And when you repeat the same process over and over again, it’s only a question of how much you can optimize it, or in this case, what’s the easiest way to create blobs in CSS? Turns out, as always, there are many approaches.To know if our following blobs are worth using, we’ll need them to pass three tests:They can be with just a single element (and preferably without pseudos).They can be easily designed (ideally through an online tool).We can use gradient backgrounds, borders, shadows, and other CSS effects on them.Without further ado, let’s  right in.Just generate them onlineI know it’s disenchanting to click on an article about making blobs in CSS just for me to say you can generate them outside CSS. Still, it’s probably the most common way to create blobs on the web, so to be thorough, these are some online tools I’ve used before to create  blobs. Probably the one I have used the most since, besides blobs, it can also generate lots of SVG backgrounds. A dedicated tool for making blobs. It’s apparently part of Haikei now, so you can use both.Lastly, almost all graphic programs let you hand-draw blobs and export them as SVGs.For example, this is one I generated just now. Keep it around, as it will come in handy later.<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill="#FA4D56"
+    d="M65.4,-37.9C79.2,-13.9,81,17,68.1,38C55.2,59.1,27.6,70.5,1.5,69.6C-24.6,68.8,-49.3,55.7,-56,38.2C-62.6,20.7,-51.3,-1.2,-39,-24.4C-26.7,-47.6,-13.3,-72,6.2,-75.6C25.8,-79.2,51.6,-62,65.4,-37.9Z"
+    transform="translate(100 100)"
+  />
+</svg>While counterintuitive, we can use the  property to create blobs. This technique isn’t new by any means; it was first described by Nils Binder in 2018, but it is still fairly unknown. Even for those who use it, the inner workings are not entirely clear.To start, you may know the  is a shorthand to each individual corner’s radius, going from the top left corner clockwise. For example, we can set each corner’s  to get a bubbly square shape:.blob {
+  border-radius: 25% 50% 75% 100%;
+}However, what  does — and also why it’s called “radius” — is to shape each corner following a circle of the given radius. For example, if we set the top left corner to , it will follow a circle with a radius  the size of the shape..blob {
+  border-top-left-radius: 25%;
+}What’s less known is that each corner property is still a  towards its horizontal and vertical radii. Normally, you set both radii to the same value, getting a circle, but you can set them individually to create an ellipse. For example, the following sets the horizontal radius to  of the element’s width and the vertical to  of its height:.blob {
+  border-top-left-radius: 25% 50%;
+}We can now shape each corner like an ellipse, and it is the combination of all four ellipses that creates the illusion of a blob! Just take into consideration that to use the horizontal and vertical radii syntax through the  property, we’ll need to separate the horizontal from the vertical radii using a forward slash ()..blob {
+  border-radius:
+    /* horizontal */
+    100% 30% 60% 70% /
+    /* vertical */
+    50% 40% 70% 70%;
+}The syntax isn’t too intuitive, so designing a blob from scratch will likely be a headache. Luckily, Nils Binder made a tool exactly for that!This hack is awesome. We aren’t supposed to use  like that, but we still do. Admittedly, we are limited to boring blobs. Due to the nature of , no matter how hard we try, we will only get convex shapes.Just going off , we can try to minimize it a little by sticking more than one blob together:However, I don’t want to spend too much time on this technique since it is too impractical to be worth it. To name a few drawbacks:We are using more than one element or, at the very least, an extra pseudo-element. Ideally, we want to keep it to one element.We don’t have a tool to prototype our blobby amalgamations, so making one is a process of trial and error.We can’t use borders, gradients, or box shadows since they would reveal the element’s outlines.Multiple backgrounds and SVG filtersThis one is an improvement in the Gooey Effect, described here by Lucas Bebber, although I don’t know who first came up with it. In the original effect, several elements can be morphed together like drops of liquid sticking to and flowing out of each other:It works by first blurring shapes nearby, creating some connected shadows. Then we crank up the contrast, forcing the blur out and smoothly connecting them in the process. Take, for example, this demo by Chris Coyer (It’s from 2014, so more than 10 years ago!):If you look at the code, you’ll notice Chris uses the  property along the  and  functions, which I’ve also seen in other blob demos. To be specific, it applies  on each individual circle and then  on the parent element. So, if we have the following HTML:<div class="blob">
+  <div class="subblob"></div>
+  <div class="subblob"></div>
+  <div class="subblob"></div>
+</div>…we would need to apply filters and background colors as such:.blob {
+  filter: contrast(50);
+  background: white; /* Solid colors are necessary */
 }
 
-body:has(:invalid) .callout-wrapper {
-  --variant: error;
-}
+.subblob {
+  filter: blur(15px);
+  background: black; /* Solid colors are necessary */
+}However, there is a good reason why those demos stick to white shapes and black backgrounds (or vice versa) since things get unpredictable once colors aren’t contrast-y enough. See it for yourself in the following demo by changing the color. Just be wary: .To solve this, we will use an SVG filter instead. I don’t want to get too technical on SVG (if you want to, read Luca’s post!). In a nutshell, we can apply blurring and contrast filters using SVGs, but now, we can also pick which color channel we apply the contrast to, unlike normal , which modifies all colors. Since we want to leave color channels (,  and ) untouched, we will only crank the contrast up for the alpha channel. That translates to the next SVG filter, which can be embedded in the HTML:<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute;">
+  <defs>
+    <filter id="blob">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -6" result="goo" />
+      <feBlend in="SourceGraphic" in2="blob" />
+    </filter>
+  </defs>
+</svg>To apply it, we will use again , but this time we’ll set it to , so that it pulls the SVG from the HTML..blob {
+  filter: url("#blob");
+}And now we can even use it with gradient backgrounds!That being said, this approach comes with two small, but important, changes to common CSS filters:The filter is applied to the parent element, not the individual shapes.The parent element must be transparent (which is a huge advantage). To change the background color, we can instead change the body or other ancestors’ background, and it will work with no issues.What’s left is to place the  elements together such that they make a blobby enough shape, then apply the SVG filters to morph them:This works well, but it has a similar issue to the blob we made by morphing several  instances: too many elements for a simple blob. Luckily, we can take advantage of the  property to create multiple shapes and morph them together using SVG filters, all in a single element. Since we are keeping it to one element, we will go back to just one empty  div:First, we will use  along with  to create a circle inside the element:body {
+  background: radial-gradient(farthest-side, var(--blob-color) 100%, #0000);
+  background-repeat: no-repeat; /* Important! */
+}Here is what each parameter does: Confines the shape to the element’s box farthest from its center. This way, it is kept as a circle. Fills the background shape from 0 to 100% with the same color, so it ends up as a solid color. After the shape is done, it makes a full stop to transparency, so the color ends.The next part is moving and resizing the circle using the  and  properties. Luckily, both can be set on  after the gradient, separated from each other by a forward slash ().body {
+  background: radial-gradient(...) 20% 30% / 30% 40%;
+  background-repeat: no-repeat; /* Important! */
+}The first pair of percentages sets the shape’s horizontal and vertical position (taking as a reference the top-left corner), while the second pair sets the shape’s width and height (taking as a reference the element’s size).As I mentioned, we can stack up different backgrounds together, which means we can create as many circles/ellipses as we want! For example, we can create three ellipses on the same element:.blob {
+  background:
+    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 20% 30% / 30% 40%, 
+    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 80% 50% / 40% 60%, 
+    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 50% 70% / 50% 50%;
+  background-repeat: no-repeat;
+}What’s even better is that SVG filters don’t care whether shapes are made of elements or backgrounds, so we can also morph them together using the last  filter!While this method may be a little too much for blobs, it unlocks squishing, stretching, dividing, and merging blobs in seamless animations.Again, all these tricks are awesome, but not enough for what we want! We accomplished reducing the blob to a single element, but we still can’t use gradients, borders, or shadows on them, and also, they are tedious to design and model. Then, that brings us to the ultimate blob approach…Fortunately, there is a new way to make blobs that just dropped to CSS: the  function!First off, the CSS  function is used alongside the  property to cut elements into any shape we want. More specifically, it uses a verbal version of SVG’s  syntax. The syntax has lots of commands for lots of types of lines, but when blobbing with , we’ll define curves using the  command:.blob {
+  clip-path: shape(
+    from X0 Y0, 
+    curve to X1 Y1 with Xc1 Yc1, 
+    curve to X2 Y2 with Xc21 Yc21 / Xc22 Yc22
+    /* ... */
+  );
+}Let’s break down each parameter: defines the starting point of the shape. starts the curve where  is the next point of the shape, while  defines a control point used in Bézier curves.The next parameter is similar, but we used  instead to define two control points on the Bézier curve.I honestly don’t understand Bézier curves and control points completely, but luckily, we don’t need them to use  and blobs! Again,  uses a verbal version of SVG’s  syntax, so it can draw any shape an SVG can, which means that we can translate the SVG blobs we generated earlier… and CSS-ify them. To do so, we’ll grab the  attribute (which defines the ) from our SVG and paste it into Temani’s SVG to  generator.This is the exact code the tool generated for me:.blob {
+  aspect-ratio: 0.925; /* Generated too! */
 
-body:not(:has(:invalid)) .callout-wrapper {
-  --variant: success;
-}However, the variable could be set by JavaScript or an inline style in the HTML, like Lea’s samples. Form validation is just my way of making the demo more interactive to show that the callout can change dynamically based on .It’s off-brand for me to write an article advocating  hacks that bend CSS to our will, and I’m all for “tricking” the language into doing what we want. But using wrappers with style queries might be the simplest thing that works till we get support for inline conditionals. If we want to feel more like we are living in the future, we could use the above approach as a basis for a polyfill for inline conditionals, or some preprocessor magic using something like a Parcel plugin or a PostCSS plugin — but my trigger finger will always itch for the  key on such compromises. Lea acknowledges, “If you can do something with style queries, by all means, use style queries — they are almost certainly a better solution.”I have convinced myself with the experiments in this article that style queries remain a cromulent option even in Lea’s motivating examples — but I still look forward to inline conditionals. In the meantime, at least style queries are easy to understand compared to the other known workarounds. Ironically, I agree with the comments questioning the need for the inline conditionals feature, not because it will ruin CSS but because I believe we can already achieve Lea’s examples with current modern CSS and without hacks. So, we may not  inline conditionals, but they could allow us to write more readable, succinct code. Let me know in the comment section if you can think of examples where we would hit a brick wall of complexity using style queries instead of inline conditionals.]]></content:encoded></item><item><title>Symbols in TypeScript</title><link>https://2ality.com/2025/02/symbols-in-typescript.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we examine how TypeScript handles JavaScript symbols at the type level.If you want to refresh your knowledge of JavaScript symbols, you can check out chapter “Symbols” of “Exploring JavaScript”.]]></content:encoded></item><item><title>Array type notations: T[] vs. Array&lt;T&gt; in TypeScript</title><link>https://2ality.com/2025/02/array-type-notation.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this blog post, we explore two equivalent notations for Arrays in TypeScript:  and . I prefer the latter and will explain why.]]></content:encoded></item></channel></rss>
+  clip-path: shape(
+    from 91.52% 26.2%,
+    curve to 93.52% 78.28% with 101.76% 42.67%/103.09% 63.87%,
+    curve to 44.11% 99.97% with 83.95% 92.76%/63.47% 100.58%,
+    curve to 1.45% 78.42% with 24.74% 99.42%/6.42% 90.43%,
+    curve to 14.06% 35.46% with -3.45% 66.41%/4.93% 51.38%,
+    curve to 47.59% 0.33% with 23.18% 19.54%/33.13% 2.8%,
+    curve to 91.52% 26.2% with 62.14% -2.14%/81.28% 9.66%
+  );
+}As you might have guessed, it returns our beautiful blob:Let’s check if it passes our requirements:Yes, they can be made of a single element.Yes, they can also be created in a generator and then translated into CSS.Yes, we can use gradient backgrounds, but due to the nature of , borders and shadows get cut out.Two out of three? Maybe two and a half of three? That’s a big improvement over the other approaches, even if it’s not perfect.So, alas, we failed to find what I believe is the perfect CSS approach to blobs. I am, however, amazed how something so trivial designing blobs can teach us about so many tricks and new CSS features, many of which I didn’t know myself.]]></content:encoded></item><item><title>Say hello to ECMAScript 2025</title><link>https://javascriptweekly.com/issues/742</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[🚀 Build VueJS forms your way with Enforma — UI-agnostic (PrimeVue, Vuetify, Quasar), schema-ready, repeatable fields, powerful validation.]]></content:encoded></item><item><title>KelpUI</title><link>https://css-tricks.com/kelpui/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 26 Jun 2025 16:42:32 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[KelpUI is new library that Chris Ferdinandi is developing, designed to leverage newer CSS features and Web Components. I’ve enjoyed following Chris as he’s published an ongoing series of articles detailing his thought process behind the library, getting deep into his approach. You really get a clear picture of his strategy and I love it.He outlined his principles up front in a post back in April:I’m imagining a system that includes…Base styles for all of the common HTML elements.Loads of utility classes for nudging and tweaking things.Group classes for styling more complex UI elements  a million little classes.Easy customization with CSS variables.Web Components to progressively add interactivity to functional HTML.All of the Web Component HTML lives in the light DOM, so its easy to style and reason about.I’m imagining something that can be loaded directly from a CDN, downloaded locally, or imported if you want to roll your own build.KelpUI is still evolving, and that’s part of the beauty of looking at it now and following Chris’s blog as he openly chronicles his approach. There’s always going to be some opinionated directions in a library like this, but I love that the guiding philosophy is so clear and is being used as a yardstick to drive decisions. As I write this, Chris is openly questioning the way he optimizes the library, demonstrating the tensions between things like performance and a good developer experience.Looks like it’ll be a good system, but even more than that, it’s a wonderful learning journey that’s worth following.]]></content:encoded></item><item><title>Poking at the CSS if() Function a Little More: Conditional Color Theming</title><link>https://css-tricks.com/poking-at-the-css-if-function-a-little-more-conditional-color-theming/</link><author>Daniel Schwarz</author><category>frontend</category><pubDate>Wed, 25 Jun 2025 14:33:45 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Chrome 137 shipped the  CSS function, so it’s totally possible we’ll see other browsers implement it, though it’s tough to know exactly when. Whatever the case,  enables us to use values conditionally, which we can already do with queries and other functions (e.g., media queries and the  function), so I’m sure you’re wondering: What exactly does  do?To recap,  conditionally assigns a value to a property based on the value of a CSS variable. For example, we could assign different values to the  and  properties based on the value of :: : : Anything else
+: :root {
+  /* Change to fall back to the ‘else’ values */
+  --theme: "Shamrock";
+
+  body {
+    color: if(style(--theme: "Shamrock"): hsl(146 50% 3%); else: hsl(43 74% 3%));
+    background: if(style(--theme: "Shamrock"): hsl(146 50% 40%); else: hsl(43 74% 64%));
+  }
+}I don’t love the syntax (too many colons, brackets, and so on), but we can format it like this (which I think is a bit clearer):color: if(
+  style(--theme: "Shamrock"): hsl(146 50% 3%);
+  else: hsl(43 74% 3%)
+);We should be able to do a crazy number of things with , and I hope that becomes the case eventually, but I did some testing and learned that the syntax above is the only one that works. We can’t base the condition on the value of an ordinary CSS property (instead of a custom property), HTML attribute (using ), or any other value. For now, at least, the condition must be based on the value of a custom property (CSS variable).Exploring what we can do with Judging from that first example, it’s clear that we can use  for theming (and design systems overall). While we could utilize the  function for this, what if the themes aren’t strictly light and dark, or what if we want to have more than two themes or light and dark modes for each theme? Well, that’s what  can be used for.First, let’s create more themes/more conditions::root {
+  /* Shamrock | Saffron | Amethyst */
+  --theme: "Saffron"; /* ...I choose you! */
+
+  body {
+    color: if(
+      style(--theme: "Shamrock"): hsl(146 50% 3%);
+      style(--theme: "Saffron"): hsl(43 74% 3%);
+      style(--theme: "Amethyst"): hsl(282 47% 3%)
+    );
+    background: if(
+      style(--theme: "Shamrock"): hsl(146 50% 40%);
+      style(--theme: "Saffron"): hsl(43 74% 64%);
+      style(--theme: "Amethyst"): hsl(282 47% 56%)
+    );
+    transition: 300ms;
+  }
+}Pretty simple really, but there are a few easy-to-miss things. Firstly, there’s no “else condition” this time, which means that if the theme isn’t , , or , the default browser styles are used. Otherwise, the  function resolves to the value of the first true statement, which is the  theme in this case. Secondly, transitions work right out of the box; in the demo below, I’ve added a user interface for toggling the , and for the transition,  just  alongside the  functions: if theme-swapping is user-controlled, such as selecting an option, you don’t actually need  at all. You can just use the logic that I’ve used at the beginning of the demo (:root:has(#shamrock:checked) { /* Styles */ }). Amit Sheen has an excellent demonstration over at Smashing Magazine.To make the code more maintainable though, we can slide the colors into CSS variables as well, then use them in the  functions,  slide the  functions themselves into CSS variables:/* Setup */
+:root {
+  /* Shamrock | Saffron | Amethyst */
+  --theme: "Shamrock"; /* ...I choose you! */
+
+  /* Base colors */
+  --shamrock: hsl(146 50% 40%);
+  --saffron: hsl(43 74% 64%);
+  --amethyst: hsl(282 47% 56%);
+
+  /* Base colors, but at 3% lightness */
+  --shamrock-complementary: hsl(from var(--shamrock) h s 3%);
+  --saffron-complementary: hsl(from var(--saffron) h s 3%);
+  --amethyst-complementary: hsl(from var(--amethyst) h s 3%);
+
+  --background: if(
+    style(--theme: "Shamrock"): var(--shamrock);
+    style(--theme: "Saffron"): var(--saffron);
+    style(--theme: "Amethyst"): var(--amethyst)
+  );
+
+  --color: if(
+    style(--theme: "Shamrock"): var(--shamrock-complementary);
+    style(--theme: "Saffron"): var(--saffron-complementary);
+    style(--theme: "Amethyst"): var(--amethyst-complementary)
+  );
+
+  /* Usage */
+  body {
+    /* One variable, all ifs! */
+    background: var(--background);
+    color: var(--color);
+    accent-color: var(--color);
+
+    /* Can’t forget this! */
+    transition: 300ms;
+  }
+}As well as using CSS variables within the  function, we can also nest other functions. In the example below, I’ve thrown  in there, which basically inverts the colors for dark mode:--background: if(
+  style(--theme: "Shamrock"): light-dark(var(--shamrock), var(--shamrock-complementary));
+  style(--theme: "Saffron"): light-dark(var(--saffron), var(--saffron-complementary));
+  style(--theme: "Amethyst"): light-dark(var(--amethyst), var(--amethyst-complementary))
+); vs. Container style queriesIf you haven’t used container style queries before, they basically check if a container has a certain CSS variable (much like the  function). Here’s the exact same example/demo but with container style queries instead of the  function::root {
+  /* Shamrock | Saffron | Amethyst */
+  --theme: "Shamrock"; /* ...I choose you! */
+
+  --shamrock: hsl(146 50% 40%);
+  --saffron: hsl(43 74% 64%);
+  --amethyst: hsl(282 47% 56%);
+
+  --shamrock-complementary: hsl(from var(--shamrock) h s 3%);
+  --saffron-complementary: hsl(from var(--saffron) h s 3%);
+  --amethyst-complementary: hsl(from var(--amethyst) h s 3%);
+
+  body {
+    /* Container has chosen Shamrock! */
+    @container style(--theme: "Shamrock") {
+      --background: light-dark(var(--shamrock), var(--shamrock-complementary));
+      --color: light-dark(var(--shamrock-complementary), var(--shamrock));
+    }
+
+    @container style(--theme: "Saffron") {
+      --background: light-dark(var(--saffron), var(--saffron-complementary));
+      --color: light-dark(var(--saffron-complementary), var(--saffron));
+    }
+
+    @container style(--theme: "Amethyst") {
+      --background: light-dark(var(--amethyst), var(--amethyst-complementary));
+      --color: light-dark(var(--amethyst-complementary), var(--amethyst));
+    }
+
+    background: var(--background);
+    color: var(--color);
+    accent-color: var(--color);
+    transition: 300ms;
+  }
+}As you can see, where  facilitates conditional values, container style queries facilitate conditional properties  values. Other than that, it really is just a different syntax.Additional things you can do with  (but might not realize)Check if a CSS variable exists:/* Hide icons if variable isn’t set */
+.icon {
+  display: if(
+    style(--icon-family): inline-block;
+    else: none
+  );
+}Create more-complex conditional statements:h1 {
+  font-size: if(
+    style(--largerHeadings: true): xxx-large;
+    style(--theme: "themeWithLargerHeadings"): xxx-large
+  );
+}Check if two CSS variables match:/* If #s2 has the same background as #s1, add a border */
+#s2 {
+  border-top: if(
+    style(--s2-background: var(--s1-background)): thin solid red
+  );
+} and : When the math isn’t mathingThis won’t work (maybe someone can help me pinpoint why):div {
+  /* 3/3 = 1 */
+  --calc: calc(3/3);
+  /* Blue, because if() won’t calculate --calc */
+  background: if(style(--calc: 1): red; else: blue);
+}To make  calculate , we’ll need to register the CSS variable using  first, like this:@property --calc {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}Although I’m not keen on the syntax and how unreadable it can sometimes look (especially if it’s formatted on one line), I’m mega excited to see how  evolves. I’d love to be able to use it with ordinary properties (e.g., color: if(style(background: white): black; style(background: black): white);) to avoid having to set CSS variables where possible.It’d also be awesome if  calculations could be calculated on the fly without having to register the variable.That being said, I’m still super happy with what  does currently, and can’t wait to build even simpler design systems.]]></content:encoded></item></channel></rss>
