@@ -3,6 +3,6 @@
 PERSIST_NEWSBOAT_CACHE=1
 # Set number of days articles will be persisted in cache
 # if its saved using above param.
-NEWSBOAT_CACHE_RETENTION_DAYS=7
+NEWSBOAT_CACHE_RETENTION_DAYS=4
 # Set it to 1 to automatically update Liveboat.
 ENABLE_AUTOMATIC_UPDATES=0
