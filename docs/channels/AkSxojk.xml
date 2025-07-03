@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kuberne... Asami Okina</title><link>https://www.youtube.com/watch?v=8pVt9dhHEVc</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/8pVt9dhHEVc?version=3" length="" type=""/><pubDate>Wed, 2 Jul 2025 23:01:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Debugging Book • Andreas Zeller &amp; Clare Sudbery • GOTO 2025</title><link>https://www.youtube.com/watch?v=MNRIJsoi-Ds</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/MNRIJsoi-Ds?version=3" length="" type=""/><pubDate>Thu, 3 Jul 2025 12:00:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/387
+
+Prof. Andreas Zeller - Faculty at CISPA Helmholtz Center for Information Security & Author of "The Debugging Book" @Doebldodl 
+Clare Sudbery - Independent Technical Coach @ClareSudberySSELtd 
+
+RESOURCES
+Andreas
+https://bsky.app/profile/andreaszeller.bsky.social
+https://mastodon.social/@AndreasZeller
+https://github.com/andreas-zeller
+https://www.linkedin.com/in/andreaszeller
+https://andreas-zeller.info
+
+Clare
+https://bsky.app/profile/claresudbery.bsky.social
+https://twitter.com/ClareSudbery
+https://linkedin.com/in/clare-sudbery-she-her-35939540
+https://mastodon.social/@claresudbery
+https://www.madetech.com/podcast
+https://insimpleterms.blog
+
+Links
+https://www.debuggingbook.org
+https://github.com/uds-se/debuggingbook
+https://hub.2i2c.mybinder.org/user/uds-se-debuggingbook-06yfdm2t/doc/tree/docs/notebooks/00_Table_of_Contents.ipynb
+https://www.st.cs.uni-saarland.de/dd
+https://youtu.be/30jNsCVLpAE
+https://youtu.be/LvhIMkr0rXg
+https://youtu.be/8bPDiuJGGh0
+https://youtu.be/lWPLgm52ICs
+https://youtu.be/4mRxIgu9R70
+https://youtu.be/n7QUBt6qsUU
+https://youtu.be/RNBpqbxhrng
+https://youtu.be/lCZtgN7b4TE
+https://youtu.be/sLjSGrkbIFw
+https://youtu.be/VwPCtxxvwjI
+
+DESCRIPTION
+Programming education has a critical blind spot: while we extensively teach code creation, we barely scratch the surface of testing and give almost no attention to debugging—despite debugging consuming half of all software development time.
+
+In this conversation with Clare Sudbery, Prof. Andreas Zeller argues that systematic debugging skills and modern automated debugging tools are the "ugly stepchild" of programming that nobody wants to discuss, yet debugging represents the biggest business risk and time sink in software development. As AI-driven coding becomes more prevalent, this gap will only widen, making investment in proper debugging education and tools not just beneficial but essential for the future of software development.
+
+TIMECODES
+00:00 Intro
+02:53 Revolutionizing tech education: The executable book format
+11:17 What "The Debugging Book" teaches
+16:01 Interactive debuggers & advanced techniques
+21:31 Python as the language of choice
+26:53 Tracking dependencies & Delta Debugging
+34:55 Automated software repair & testing
+51:09 Outro
+
+RECOMMENDED BOOKS
+Andreas Zeller • The Debugging Book • https://www.debuggingbook.org
+Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
+Charles Humble • Professional Skills for Software Engineers • https://www.conissaunce.com/professional-skills-shortcut
+Cathy O'Neil • Weapons of Math Destruction • https://amzn.to/42jYkba
+Jonathan B. Rosenberg • How Debuggers Work • https://amzn.to/3SnFHgv
+Nora Sandler • Writing a C Compiler • https://amzn.to/3Z6SMhU
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Debugging #Debugger #DeltaDebugging #StatisticalDebugging #Compiler #SoftwareRepair #SoftwareTesting #Testing #TDD #Refactoring #Python #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #AndreasZeller #ClareSudbery #BookClub
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kuberne... Asami Okina</title><link>https://www.youtube.com/watch?v=8pVt9dhHEVc</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/8pVt9dhHEVc?version=3" length="" type=""/><pubDate>Wed, 2 Jul 2025 23:01:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
 
 Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kubernetes Jobs - Asami Okina, Craftsman Software, Inc.
 
@@ -369,4 +449,177 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Rationale for Continuous Delivery • Dave Farley • YOW! 2018</title><link>https://www.youtube.com/watch?v=Viv7bs99K0U</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Viv7bs99K0U?version=3" length="" type=""/><pubDate>Sat, 28 Jun 2025 12:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2018. #GOTOcon #YOW
+https://yowcon.com
+
+Dave Farley - Continuous Delivery & DevOps Pioneer, Award-winning Author, Founder & Director of Continuous Delivery Ltd. @ModernSoftwareEngineeringYT 
+
+RESOURCES
+https://bsky.app/profile/davefarley77.bsky.social
+https://www.continuous-delivery.co.uk
+https://linkedin.com/in/dave-farley-a67927
+https://twitter.com/davefarley77
+http://www.davefarley.net
+
+ABSTRACT
+The production of software is a complex, collaborative process that stretches our ability as human beings to cope with its demands. Many people working in #SoftwareDevelopment spend their careers without seeing what good really looks like.
+
+Our history is littered with inefficient processes creating poor quality output, too late to capitalise on the expected business value.
+How have we got into this state?
+How do we get past it?
+What does good really look like?
+
+Continuous Delivery changes the economics of software development for some of the biggest companies in the world, whatever the nature of their software development, find out how and why.
+
+RECOMMENDED BOOKS
+David Farley • Modern Software Engineering • https://amzn.to/3GI468M
+Dave Farley • Continuous Delivery Pipelines • https://amzn.to/3rjetdi
+Dave Farley & Jez Humble • Continuous Delivery • https://amzn.to/3ocIHwd
+Dave Farley & many more • Software Architecture Metrics • https://amzn.to/3M3XqG5
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#ContinuousDelivery #SoftwareArchitecture #Complexity #SoftwareComplexity #SoftwareEngineering #Programmer #DaveFarley
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Using Generative AI to Strengthen &amp; Accelerate Learning • Barbara Oakley • GOTO 2024</title><link>https://www.youtube.com/watch?v=rbTaEsieWsU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/rbTaEsieWsU?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 12:01:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
+
+Barbara Oakley - Professor of Engineering at Oakland University & Author of Numerous Books @BarbaraOakley 
+
+RESOURCES
+https://twitter.com/Barbara97881398
+https://www.linkedin.com/in/barbaraoakley
+https://barbaraoakley.com
+
+Links
+https://arxiv.org/abs/1706.03762
+https://psycnet.apa.org/record/2025-07056-001
+https://psycnet.apa.org/record/1984-11828-001
+https://psycnet.apa.org/record/2016-51296-001
+https://pubmed.ncbi.nlm.nih.gov/29891660
+https://psycnet.apa.org/record/2023-71875-001
+https://psycnet.apa.org/record/2014-36030-003
+
+ABSTRACT
+This talk will demonstrate how AI, via transformers, can lift limits on core cognitive processes like attention, synthesis, and retention.
+
+These insights will allow you to use AI more effectively to scaffold and accelerate your own learning.
+
+After all, generative AI can do far more to propel our learning than simply answer questions (important and helpful though that may be!).
+
+Generative AI is, in essence, a teacher—but it can teach better if you know how its properties are sometimes similar to, and sometimes very different from, how the human brain works. [...]
+
+TIMECODES
+00:00 Intro
+03:03 What does ChatGPT do?
+12:32 The value of metaphor
+21:35 7 int. companies with their foundational LLMs
+26:25 Large language models
+34:33 Cheating or "learning lightly"
+36:11 The Flynn Effect
+39:08 How to think about the new complex world
+46:45 Good books on GenAI
+48:30 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3168
+
+RECOMMENDED BOOKS
+Barbara Oakley & Olav Schewe • Learn Like a Pro • https://amzn.to/3Z3gyf9
+Barbara Oakley, Beth Rogowsky & Terrence J. Sejnowski • Uncommon Sense Teaching • https://amzn.to/4hKGaEW
+Barbara Oakley & Terrence J. Sejnowski • Learning How to Learn • https://amzn.to/3Cqe7dW
+Barbara Oakley • A Mind For Numbers • https://amzn.to/3Z2tjqi
+Barbara Oakley • Mindshift • https://amzn.to/3Z2EAaf
+Barbara Oakley, Madhavan, Green, Koon & Low • Practicing Sustainability • https://amzn.to/4fn95gZ
+Barbara Oakley • Pathological Altruism • https://amzn.to/48LDVNK
+C. Edward Watson & Jose Antonio Bowen • Teaching with AI • https://amzn.to/44sBgYC
+Terrence J. Sejnowski • ChatGPT and the Future of AI • https://amzn.to/45VnfEf
+Ethan Mollick • Co-Intelligence • https://amzn.to/3HTnNjK
+Brian Christian • The Alignment Problem • https://amzn.to/4k5D8LA
+Dr. Fei-Fei Li • The Worlds I See • https://amzn.to/44b2EJm
+Kai-Fu Lee • AI Superpowers • https://amzn.to/43YftrN
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#GenAI #ArtificialIntelligence #GenerativeAI #HowToLearn #StrengthenLearning #Mindshift #LearnLikeAPro #ChatGPT #Cloude #LLaMA #DeclarativeLearning #FlynnEffect #UncommonSenseTeaching #TodayInTech #BarbaraOakley
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Better Value Sooner Safer Happier • Simon Rohrer &amp; Eduardo da Silva</title><link>https://www.youtube.com/watch?v=oRaYe4AUR2g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/oRaYe4AUR2g?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 09:35:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here
+ (https://gotopia.tech/episodes/356) 
+Simon Rohrer - Co-Author of "Better Value Sooner Safer Happier" & Senior Director at Saxo Bank
+Eduardo da Sliva - Independent Consultant on Organization, Architecture, and Leadership Modernization
+
+RESOURCES
+Simon
+https://bsky.app/profile/simon.bvssh.com
+https://mastodon.social/@simonr
+https://x.com/sirohrer
+https://www.linkedin.com/in/simonrohrer
+https://github.com/sirohrer
+https://www.soonersaferhappier.com
+
+Eduardo
+https://bsky.app/profile/esilva.net
+https://mastodon.social/@eduardodasilva
+https://x.com/emgsilva
+https://www.linkedin.com/in/emgsilva
+https://github.com/emgsilva
+https://esilva.net
+
+DESCRIPTION
+Eduardo da Silva and Simon Rohrer discuss the core ideas of "Better Value Sooner Safer Happier" diving into the principles of organizational transformation.
+
+Simon shares insights on the shift from output-driven to outcome-focused thinking, emphasizing value over productivity, and the need for continuous improvement in delivery speed, stakeholder satisfaction, and safety.
+The conversation explores key concepts like technical excellence, integrating safety into development, and balancing incremental changes with occasional larger steps.
+
+Simon Rohrer discusses organizational patterns and the importance of decentralizing decision-making, recommending a flexible, context-driven approach to transformation. The session concludes with practical advice on how to start implementing these ideas, using the book’s map to guide organizations toward the right transformation strategy based on their specific goals.
+
+RECOMMENDED BOOKS
+Jonathan Smart, Zsolt Berend, Myles Ogilvie & Simon Rohrer • Sooner Safer Happier
+ (https://amzn.to/3Emm9p2) Stephen Fishman & Matt McLarty • Unbundling the Enterprise
+ (https://amzn.to/3W2EcXw) Carliss Y. Baldwin • Design Rules, Vol. 2
+ (https://amzn.to/4hdllRr) Matthew Skelton & Manuel Pais • Team Topologies
+Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps
+ (http://amzn.to/3sVLyLQ) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook (https://amzn.to/47oAf3l) 
+
+
+Bluesky (https://bsky.app/profile/gotocon.com) 
+Twitter (https://twitter.com/GOTOcon) 
+Instagram (https://www.instagram.com/goto_con) 
+LinkedIn (https://www.linkedin.com/company/goto-) 
+Facebook (https://www.facebook.com/GOTOConferences) 
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item></channel></rss>
