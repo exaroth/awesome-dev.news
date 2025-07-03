@@ -1,4 +1,187 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Kubernetes</title><link>https://www.awesome-dev.news</link><description></description><item><title>Platform Engineering Day 2: Why Service Iterations Are the Crux of Developer Platfor... Puja Abbassi</title><link>https://www.youtube.com/watch?v=Xr0Eb-ybvck</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/Xr0Eb-ybvck?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 20:32:44 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Kubernetes</title><link>https://www.awesome-dev.news</link><description></description><item><title>Navigating Failures in Pods With Devices</title><link>https://kubernetes.io/blog/2025/07/03/navigating-failures-in-pods-with-devices/</link><author></author><category>official</category><category>k8s</category><category>devops</category><pubDate>Thu, 3 Jul 2025 00:00:00 +0000</pubDate><source url="https://kubernetes.io/">Kubernetes Blog</source><content:encoded><![CDATA[Kubernetes is the de facto standard for container orchestration, but when it
+comes to handling specialized hardware like GPUs and other accelerators, things
+get a bit complicated. This blog post dives into the challenges of managing
+failure modes when operating pods with devices in Kubernetes, based on insights
+from Sergey Kanzhelev and Mrunal Patel's talk at KubeCon NA
+2024. You can follow the links to
+slides
+and
+recording.The AI/ML boom and its impact on KubernetesThe rise of AI/ML workloads has brought new challenges to Kubernetes. These
+workloads often rely heavily on specialized hardware, and any device failure can
+significantly impact performance and lead to frustrating interruptions. As
+highlighted in the 2024 Llama
+paper,
+hardware issues, particularly GPU failures, are a major cause of disruption in
+AI/ML training. You can also learn how much effort NVIDIA spends on handling
+devices failures and maintenance in the KubeCon talk by Ryan Hallisey and Piotr
+Prokop All-Your-GPUs-Are-Belong-to-Us: An Inside Look at NVIDIA's Self-Healing
+GeForce NOW
+Infrastructure
+(recording) as they see 19
+remediation requests per 1000 nodes a day!
+We also see data centers offering spot consumption models and overcommit on
+power, making device failures commonplace and a part of the business model.However, Kubernetes’s view on resources is still very static. The resource is
+either there or not. And if it is there, the assumption is that it will stay
+there fully functional - Kubernetes lacks good support for handling full or partial
+hardware failures. These long-existing assumptions combined with the overall complexity of a setup lead
+to a variety of failure modes, which we discuss here.Understanding AI/ML workloadsGenerally, all AI/ML workloads require specialized hardware, have challenging
+scheduling requirements, and are expensive when idle. AI/ML workloads typically
+fall into two categories - training and inference. Here is an oversimplified
+view of those categories’ characteristics, which are different from traditional workloads
+like web services:These workloads are resource-intensive, often consuming entire
+machines and running as gangs of pods. Training jobs are usually "run to
+completion" - but that could be days, weeks or even months. Any failure in a
+single pod can necessitate restarting the entire step across all the pods.These workloads are usually long-running or run indefinitely,
+and can be small enough to consume a subset of a Node’s devices or large enough to span
+multiple nodes. They often require downloading huge files with the model
+weights.These workload types specifically break many past assumptions:Workload assumptions before and nowCan get a better CPU and the app will work faster.Require a  device (or ) to run.When something doesn’t work, just recreate it.Allocation or reallocation is expensive.Any node will work. No need to coordinate between Pods.Scheduled in a special way - devices often connected in a cross-node topology.Each Pod can be plug-and-play replaced if failed.Pods are a part of a larger task. Lifecycle of an entire task depends on each Pod.Container images are slim and easily available.Container images may be so big that they require special handling.Long initialization can be offset by slow rollout.Initialization may be long and should be optimized, sometimes across many Pods together.Compute nodes are commoditized and relatively inexpensive, so some idle time is acceptable.Nodes with specialized hardware can be an order of magnitude more expensive than those without, so idle time is very wasteful.The existing failure model was relying on old assumptions. It may still work for
+the new workload types, but it has limited knowledge about devices and is very
+expensive for them. In some cases, even prohibitively expensive. You will see
+more examples later in this article.Why Kubernetes still reigns supremeThis article is not going deeper into the question: why not start fresh for
+AI/ML workloads since they are so different from the traditional Kubernetes
+workloads. Despite many challenges, Kubernetes remains the platform of choice
+for AI/ML workloads. Its maturity, security, and rich ecosystem of tools make it
+a compelling option. While alternatives exist, they often lack the years of
+development and refinement that Kubernetes offers. And the Kubernetes developers
+are actively addressing the gaps identified in this article and beyond.The current state of device failure handlingThis section outlines different failure modes and the best practices and DIY
+(Do-It-Yourself) solutions used today. The next session will describe a roadmap
+of improving things for those failure modes.Failure modes: K8s infrastructureIn order to understand the failures related to the Kubernetes infrastructure,
+you need to understand how many moving parts are involved in scheduling a Pod on
+the node. The sequence of events when the Pod is scheduled in the Node is as
+follows: is scheduled on the Node is registered with the  via local gRPC uses  to watch for devices and updates capacity of
+the node places a  on a Node based on the updated capacity asks  to  devices for a  creates a  with the allocated devices attached to itThis diagram shows some of those actors involved:As there are so many actors interconnected, every one of them and every
+connection may experience interruptions. This leads to many exceptional
+situations that are often considered failures, and may cause serious workload
+interruptions:Pods failing admission at various stages of its lifecyclePods unable to run on perfectly fine hardwareScheduling taking unexpectedly long timeThe goal for Kubernetes is to make the interruption between these components as
+reliable as possible. Kubelet already implements retries, grace periods, and
+other techniques to improve it. The roadmap section goes into details on other
+edge cases that the Kubernetes project tracks. However, all these improvements
+only work when these best practices are followed:Configure and restart kubelet and the container runtime (such as containerd or CRI-O)
+as early as possible to not interrupt the workload.Monitor device plugin health and carefully plan for upgrades.Do not overload the node with less-important workloads to prevent interruption
+of device plugin and other components.Configure user pods tolerations to handle node readiness flakes.Configure and code graceful termination logic carefully to not block devices
+for too long.Another class of Kubernetes infra-related issues is driver-related. With
+traditional resources like CPU and memory, no compatibility checks between the
+application and hardware were needed. With special devices like hardware
+accelerators, there are new failure modes. Device drivers installed on the node:Be compatible with an appMust work with other drivers (like nccl,
+etc.)Best practices for handling driver versions:Monitor driver installer healthPlan upgrades of infrastructure and Pods to match the versionHave canary deployments whenever possibleFollowing the best practices in this section and using device plugins and device
+driver installers from trusted and reliable sources generally eliminate this
+class of failures. Kubernetes is tracking work to make this space even better.Failure modes: device failedThere is very little handling of device failure in Kubernetes today. Device
+plugins report the device failure only by changing the count of allocatable
+devices. And Kubernetes relies on standard mechanisms like liveness probes or
+container failures to allow Pods to communicate the failure condition to the
+kubelet. However, Kubernetes does not correlate device failures with container
+crashes and does not offer any mitigation beyond restarting the container while
+being attached to the same device.This is why many plugins and DIY solutions exist to handle device failures based
+on various signals.In many cases a failed device will result in unrecoverable and very expensive
+nodes doing nothing. A simple DIY solution is a . The
+controller could compare the device allocatable count with the capacity and if
+the capacity is greater, it starts a timer. Once the timer reaches a threshold,
+the health controller kills and recreates a node.There are problems with the  approach:Root cause of the device failure is typically not knownThe controller is not workload awareFailed device might not be in use and you want to keep other devices runningThe detection may be too slow as it is very genericThe node may be part of a bigger set of nodes and simply cannot be deleted in
+isolation without other nodesThere are variations of the health controller solving some of the problems
+above. The overall theme here though is that to best handle failed devices, you
+need customized handling for the specific workload. Kubernetes doesn’t yet offer
+enough abstraction to express how critical the device is for a node, for the
+cluster, and for the Pod it is assigned to.Another DIY approach for device failure handling is a per-pod reaction on a
+failed device. This approach is applicable for  workloads that are
+implemented as Jobs.There are some problems with the  approach for Jobs:There is no well-known  condition, so this approach does not work for the
+generic Pod caseError codes must be coded carefully and in some cases are hard to guarantee.Only works with Jobs with , due to the limitation of a pod
+failure policy feature.So, this solution has limited applicability.A little more generic approach is to implement the Pod watcher as a DIY solution
+or use some third party tools offering this functionality. The pod watcher is
+most often used to handle device failures for inference workloads.Since Kubernetes just keeps a pod assigned to a device, even if the device is
+reportedly unhealthy, the idea is to detect this situation with the pod watcher
+and apply some remediation. It often involves obtaining device health status and
+its mapping to the Pod using Pod Resources API on the node. If a device fails,
+it can then delete the attached Pod as a remediation. The replica set will
+handle the Pod recreation on a healthy device.The other reasons to implement this watcher:Without it, the Pod will keep being assigned to the failed device forever.There is no  for a pod with .There are no built-in controllers that delete Pods in CrashLoopBackoff.Problems with the :The signal for the pod watcher is expensive to get, and involves some
+privileged actions.It is a custom solution and it assumes the importance of a device for a Pod.The pod watcher relies on external controllers to reschedule a Pod.There are more variations of DIY solutions for handling device failures or
+upcoming maintenance. Overall, Kubernetes has enough extension points to
+implement these solutions. However, some extension points require higher
+privilege than users may be comfortable with or are too disruptive. The roadmap
+section goes into more details on specific improvements in handling the device
+failures.Failure modes: container code failedWhen the container code fails or something bad happens with it, like out of
+memory conditions, Kubernetes knows how to handle those cases. There is either
+the restart of a container, or a crash of a Pod if it has 
+and scheduling it on another node. Kubernetes has limited expressiveness on what
+is a failure (for example, non-zero exit code or liveness probe failure) and how
+to react on such a failure (mostly either Always restart or immediately fail the
+Pod).This level of expressiveness is often not enough for the complicated AI/ML
+workloads. AI/ML pods are better rescheduled locally or even in-place as that
+would save on image pulling time and device allocation. AI/ML pods are often
+interconnected and need to be restarted together. This adds another level of
+complexity and optimizing it often brings major savings in running AI/ML
+workloads.There are various DIY solutions to handle Pod failures orchestration. The most
+typical one is to wrap a main executable in a container by some orchestrator.
+And this orchestrator will be able to restart the main executable whenever the
+job needs to be restarted because some other pod has failed.Solutions like this are very fragile and elaborate. They are often worth the
+money saved comparing to a regular JobSet delete/recreate cycle when used in
+large training jobs. Making these solutions less fragile and more streamlined
+by developing new hooks and extension points in Kubernetes will make it
+easy to apply to smaller jobs, benefiting everybody.Failure modes: device degradationNot all device failures are terminal for the overall workload or batch job.
+As the hardware stack gets more and more
+complex, misconfiguration on one of the hardware stack layers, or driver
+failures, may result in devices that are functional, but lagging on performance.
+One device that is lagging behind can slow down the whole training job.We see reports of such cases more and more often. Kubernetes has no way to
+express this type of failures today and since it is the newest type of failure
+mode, there is not much of a best practice offered by hardware vendors for
+detection and third party tooling for remediation of these situations.Typically, these failures are detected based on observed workload
+characteristics. For example, the expected speed of AI/ML training steps on
+particular hardware. Remediation for those issues is highly depend on a workload needs.As outlined in a section above, Kubernetes offers a lot of extension points
+which are used to implement various DIY solutions. The space of AI/ML is
+developing very fast, with changing requirements and usage patterns. SIG Node is
+taking a measured approach of enabling more extension points to implement the
+workload-specific scenarios over introduction of new semantics to support
+specific scenarios. This means prioritizing making information about failures
+readily available over implementing automatic remediations for those failures
+that might only be suitable for a subset of workloads.This approach ensures there are no drastic changes for workload handling which
+may break existing, well-oiled DIY solutions or experiences with the existing
+more traditional workloads.Many error handling techniques used today work for AI/ML, but are very
+expensive. SIG Node will invest in extension points to make those cheaper, with
+the understanding that the price cutting for AI/ML is critical.The following is the set of specific investments we envision for various failure
+modes.Roadmap for failure modes: K8s infrastructureThe area of Kubernetes infrastructure is the easiest to understand and very
+important to make right for the upcoming transition from Device Plugins to DRA.
+SIG Node is tracking many work items in this area, most notably the following:Basically, every interaction of Kubernetes components must be reliable via
+either the kubelet improvements or the best practices in plugins development
+and deployment.Roadmap for failure modes: device failedFor the device failures some patterns are already emerging in common scenarios
+that Kubernetes can support. However, the very first step is to make information
+about failed devices available easier. The very first step here is the work in
+KEP 4680 (Add Resource Health Status to the Pod Status for
+Device Plugin and DRA).Longer term ideas include to be tested:Integrate device failures into Pod Failure Policy.Node-local retry policies, enabling pod failure policies for Pods with
+restartPolicy=OnFailure and possibly beyond that.Ability to  pod, including with the , so it can
+get a new device allocated.Add device health to the ResourceSlice used to represent devices in DRA,
+rather than simply withdrawing an unhealthy device from the ResourceSlice.Roadmap for failure modes: container code failedThe main improvements to handle container code failures for AI/ML workloads are
+all targeting cheaper error handling and recovery. The cheapness is mostly
+coming from reuse of pre-allocated resources as much as possible. From reusing
+the Pods by restarting containers in-place, to node local restart of containers
+instead of rescheduling whenever possible, to snapshotting support, and
+re-scheduling prioritizing the same node to save on image pulls.Consider this scenario: A big training job needs 512 Pods to run. And one of the
+pods failed. It means that all Pods need to be interrupted and synced up to
+restart the failed step. The most efficient way to achieve this generally is to
+reuse as many Pods as possible by restarting them in-place, while replacing the
+failed pod to clear up the error from it. Like demonstrated in this picture:It is possible to implement this scenario, but all solutions implementing it are
+fragile due to lack of certain extension points in Kubernetes. Adding these
+extension points to implement this scenario is on the Kubernetes roadmap.Roadmap for failure modes: device degradationThere is very little done in this area - there is no clear detection signal,
+very limited troubleshooting tooling, and no built-in semantics to express the
+"degraded" device on Kubernetes. There has been discussion of adding data on
+device performance or degradation in the ResourceSlice used by DRA to represent
+devices, but it is not yet clearly defined. There are also projects like
+node-healthcheck-operator
+that can be used for some scenarios.We expect developments in this area from hardware vendors and cloud providers, and we expect to see mostly DIY
+solutions in the near future. As more users get exposed to AI/ML workloads, this
+is a space needing feedback on patterns used here.The Kubernetes community encourages feedback and participation in shaping the
+future of device failure handling. Join SIG Node and contribute to the ongoing
+discussions!This blog post provides a high-level overview of the challenges and future
+directions for device failure management in Kubernetes. By addressing these
+issues, Kubernetes can solidify its position as the leading platform for AI/ML
+workloads, ensuring resilience and reliability for applications that depend on
+specialized hardware.]]></content:encoded></item><item><title>Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kuberne... Asami Okina</title><link>https://www.youtube.com/watch?v=8pVt9dhHEVc</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/8pVt9dhHEVc?version=3" length="" type=""/><pubDate>Wed, 2 Jul 2025 23:01:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kubernetes Jobs - Asami Okina, Craftsman Software, Inc.
+
+While typical web applications do not require large amounts of resources constantly, there are cases where specific processes consume significant CPU and memory.
+
+In this session, we will introduce an architecture that offloads such resource-intensive processes to Kubernetes Jobs.
+
+We will explain specific methods for Job management, how to integrate web applications (Next.js, @kubernetes/client-node) with the Kubernetes API, methods for data integration between Jobs and web applications, and real-time tracking of Job progress in the UI, all while sharing practical examples. Furthermore, we will provide a detailed introduction to a pattern where Kubernetes Job definitions generated from applications are managed using ConfigMaps, enabling quick configuration switching between environments, and offer hints to optimize your applications in terms of cost, performance, and management.]]></content:encoded></item><item><title>Platform Engineering Day 2: Why Service Iterations Are the Crux of Developer Platfor... Puja Abbassi</title><link>https://www.youtube.com/watch?v=Xr0Eb-ybvck</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/Xr0Eb-ybvck?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 20:32:44 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
 
 Platform Engineering Day 2: Why Service Iterations Are the Crux of Developer Platforms - Puja Abbassi, Giant Swarm
 
@@ -94,138 +277,4 @@ The OTel Java API, SDK, and ecosystem are perfectly adequate for Android develop
 
 This session will outline the reasons why we at Embrace is trying to kick-start the development of a pure Kotlin ecosystem for OTel, starting with an API and SDK implementation, and how we are doing it in a way where mobile developers can get value incrementally without having to wait until every aspect is fully built out.
 
-We want OTel to feel natural and idiomatic for Android developers, and this is the first step towards that end.]]></content:encoded></item><item><title>Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kuberne... Asami Okina</title><link>https://www.youtube.com/watch?v=tdW_q4ufH4k</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/tdW_q4ufH4k?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 23:54:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kubernetes Jobs - Asami Okina, Craftsman Software, Inc.
-
-While typical web applications do not require large amounts of resources constantly, there are cases where specific processes consume significant CPU and memory.
-
-In this session, we will introduce an architecture that offloads such resource-intensive processes to Kubernetes Jobs.
-
-We will explain specific methods for Job management, how to integrate web applications (Next.js, @kubernetes/client-node) with the Kubernetes API, methods for data integration between Jobs and web applications, and real-time tracking of Job progress in the UI, all while sharing practical examples. Furthermore, we will provide a detailed introduction to a pattern where Kubernetes Job definitions generated from applications are managed using ConfigMaps, enabling quick configuration switching between environments, and offer hints to optimize your applications in terms of cost, performance, and management.]]></content:encoded></item><item><title>No More Disruption: PlayStation Network’s Approaches To Avoid Outa... Tomoyuki Ehira &amp; Shuhei Nagata</title><link>https://www.youtube.com/watch?v=xxSPRdwjuqE</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/xxSPRdwjuqE?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:49:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-No More Disruption: PlayStation Network’s Approaches To Avoid Outages on Kubernetes Platform - Tomoyuki Ehira & Shuhei Nagata, Sony Interactive Entertainment
-
-At PlayStation Network, our Kubernetes platform with 50+ clusters handles massive amounts of user traffic every day, and the platform team consists of engineers in several global locations with different technological and cultural backgrounds.
-
-Despite such scale and organizational complexity, we achieved remarkable stability in FY2024 so far, maintaining a notable 99.995% uptime for our platform.
-
-In this session, we will share the key practices behind this success, including a controlled deployment strategy, robust scaling techniques, minimized manual intervention, and 24/7 operations spanning global regions. While these approaches may not be special individually, their consistent and disciplined application has been the foundation of our platform's stability.
-
-Those who strive to achieve stable platform operation and organizations looking to expand or consolidate their platforms will leave with actionable strategies to enhance the reliability of their platform.]]></content:encoded></item><item><title>New Cache Hierarchy for Container Images and OCI Artifact in Kub... Toru Komatsu &amp; Hidehito Yabuuchi</title><link>https://www.youtube.com/watch?v=trFILyK6mPw</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/trFILyK6mPw?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:49:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-New Cache Hierarchy for Container Images and OCI Artifact in Kubernetes Clusters Using Containerd - Toru Komatsu & Hidehito Yabuuchi, Preferred Networks, Inc.
-
-One of the key bottlenecks in Kubernetes pod startup is the time taken to pull container images and OCI artifacts. It’s also costly to fetch large container images from the registry often. To tackle this problem, we developed a cache system with the following features:
-
-* New Cache Hierarchy: Images pulled by pods are shared across the entire cluster, enabling cluster-wide optimization, not only cluster-local cache.
-* Ninja: Users experience faster container image pulls without any changes on their part. Just like a ninja, the system stealthily enhances performance.
-* Preheating: It supports pushing images to preheat the cache for subsequent pulls.
-
-Deployed in a production cluster, the cache system has achieved a cache hit rate of around 95%, significantly reducing pod startup times and network communication with registries. Attendees will learn practical insights into leveraging cache and CRI to optimize image and OCI artifact pulls, ultimately enhancing cluster efficiency.]]></content:encoded></item><item><title>2-Node Kubernetes: A Reliable and Compatible Solution - Xin Zhang &amp; Guang Hu, Microsoft</title><link>https://www.youtube.com/watch?v=l-SlSp7Y0wE</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/l-SlSp7Y0wE?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:49:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-2-Node Kubernetes: A Reliable and Compatible Solution - Xin Zhang & Guang Hu, Microsoft
-
-High availability in Kubernetes typically requires a 3-node setup to support etcd's Raft algorithm. But what if you could achieve HA with only 2 nodes, slashing infrastructure costs by over 30% without sacrificing reliability? This is a game-changer, especially for deployments in retail and manufacturing scaling across hundreds or thousands of locations.
-
-Join us to explore a groundbreaking 2-node HA Kubernetes solution, built by evolving the Raft algorithm for etcd. Unlike alternatives that compromise on compatibility, our approach delivers etcd-based HA, which can tolerate both node failures and network partitioning like a traditional 3-node cluster. You can seamlessly transit between 3-node and 2-node cluster utilizing standard tools like kubeadm or CAPI. This approach requires only a simple shared storage witness.
-
-In this session, we will unpack the mechanics of this innovation, demonstrate 2-node cluster provisioning, and showcase its resilience under real-world failure scenarios.]]></content:encoded></item><item><title>Add Single-sign-on To Your Applications With Keycloak and Learn... Takashi Norimatsu &amp; Marek Posolda</title><link>https://www.youtube.com/watch?v=jr6dV6s0fog</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/jr6dV6s0fog?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:49:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Add Single-sign-on To Your Applications With Keycloak and Learn About Its Latest Features - Takashi Norimatsu, Hitachi & Marek Posolda, Red Hat
-
-Keycloak is an Identity and Access Management (IAM) open-source software, and CNCF incubating project.
-Use it to add single-sign-on and authentication to your applications and secure your services with minimum effort.
-
-In the first part of this talk, we will introduce Keycloak and tell what Keycloak can do, how you can use Keycloak, where Keycloak is used and how Keycloak can resolve the issue that developers encounter when using IAM. We'll look behind the scenes how Keycloak is managed by maintainers, how you can contribute to Keycloak, which community activities are going on, and how you can participate in the activities.
-
-In the second part of this talk, we will explain the latest updates of Keycloak and introduce new features, enhancements of existing features. We will also describe planned features and enhancements for the future.]]></content:encoded></item><item><title>Breaking Limits: Highly-Isolated and Low-Overhead Wasm Container - Soichiro Ueda &amp; Ai Nozaki</title><link>https://www.youtube.com/watch?v=fV_SDqzRAG4</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/fV_SDqzRAG4?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:49:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Breaking Limits: Highly-Isolated and Low-Overhead Wasm Container - Soichiro Ueda, Kyoto University & Ai Nozaki, The University of Tokyo
-
-Wasm is touted as the next generation of containers, offering a smaller, more secure, and more portable application format. However, challenges remain, particularly in achieving enough isolation for public clouds where multi-tenancy exists. This is because Wasm shares the host kernel between workloads like containers. To take full advantage of Wasm, there is still insufficient discussion on this problem.
-
-To address the issue, we've developed a new Wasm runtime, Mewz. It runs a single Wasm module within a dedicated VM while also having a lightweight and specialized kernel (unikernel). This revolutionary execution model enables more secure and low-overhead Wasm containers. We've open-sourced the implementation, and Mewz is listed in the CNCF cloud native landscape! In this session, we'll explain the architecture of Mewz and why it's more isolated and low-overhead than ordinary Wasm runtimes. Building on this presentation, let’s discuss the future of cloud workloads powered by Wasm!]]></content:encoded></item><item><title>Streamlined Baremetal Deployment: A Journey of Custom Controll... Mitsuhiro Tanino &amp; Masanori Kuroha</title><link>https://www.youtube.com/watch?v=ToXzudYQ8Es</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/ToXzudYQ8Es?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:49:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Streamlined Baremetal Deployment: A Journey of Custom Controllers Integrated With OpenStack - Mitsuhiro Tanino & Masanori Kuroha, LY Corporation
-
-As LY Corporation transitioned to developing a new private cloud infrastructure, we confronted significant challenges in managing over 6,000 baremetal servers through Kubernetes integrated with OpenStack, resulting in increased complexity, extended deployment times, and excessive resource consumption.
-
-This session delivers how our custom controllers enhanced our approach, automating complex configurations and addressing disruptions in ArgoCD and Ansible, Kubernetes resource shortages, and scalability constraints.
-
-We will focus on:
-
-- Challenges in Existing Baremetal Provisioning: Explore the operational complexities and inefficiencies caused by scale, including deployment delays.
-
-- Implementation of Custom Controllers: How we automated configurations and leading to faster, more reliable deployments with Helm.
-
-- Enhancements in Resource Management: Techniques that streamlined processes and enhanced OpenStack integration, ultimately boosting operational simplicity and efficiency.]]></content:encoded></item><item><title>The Grand Adventure of Production Apps: Build, Break, and Survive! ~ A Kawaii Manga... Aoi Takahashi</title><link>https://www.youtube.com/watch?v=MU_oEAuLGxQ</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/MU_oEAuLGxQ?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:49:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-The Grand Adventure of Production Apps: Build, Break, and Survive! ~ A Kawaii Manga Journey Through - Aoi Takahashi, Independent
-
-"I've started to understand the basics of Kubernetes, but when it comes to running it in production, I can't quite imagine what kind of issues might arise..."
-
-To ease these concerns, this session will use original characters, illustrations, and animations in a “cute manga” style to visually demonstrate how production applications can break and how to troubleshoot them.
-In our story, the main application as a character takes center stage as the hero, venturing out on a grand journey—only to be "suddenly attacked by a monster" at the most inopportune moment. By following this storyline, you will learn both how applications fail and how to fix them. Additionally, just as an adventurer equips better armor to prepare for future battles, we will explore common issues and explain how to prevent them from happening in the first place.
-
-Join us on an exciting adventure in "manga-style troubleshooting" and gain the confidence to tackle production Kubernetes challenges head-on!]]></content:encoded></item><item><title>Never Underestimate Memory Architecture - Bryan Boreham, Grafana Labs</title><link>https://www.youtube.com/watch?v=C6aBa1vnYT4</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/C6aBa1vnYT4?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:49:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Never Underestimate Memory Architecture - Bryan Boreham, Grafana Labs
-
-Modern cloud servers are built on NUMA (Non-Uniform Memory Access) and SMT (Symmetric Multi-Threading, aka Hyperthreading) — but few engineers realize how much these technologies impact application performance.
-
-NUMA means that your cloud server’s memory might be significantly slower to access, because it’s connected to a different CPU, while Hyperthreading makes a single CPU core pretend to be two, but not at twice the speed.
-
-This talk will:
-• Demystify NUMA & Hyperthreading — what they are, how they work, and why they matter.
-• Explore Kubernetes integration—the (limited) ways Kubernetes interacts with NUMA.
-• Show real-world performance impact — illustrated with measurements on AWS and Google Cloud.
-• Give you visibility — how to use Prometheus metrics and Linux commands to view your servers’ NUMA and SMT configurations.
-
-By the end of the session, you'll have an understanding of the issues, and the tools to measure and their impact on the performance of your workloads.]]></content:encoded></item><item><title>Keynote: Expanding Cloud Native Ecosystem From Japan - Yuichi Nakamura</title><link>https://www.youtube.com/watch?v=xqKJwkZtZRQ</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/xqKJwkZtZRQ?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:48:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Keynote: Expanding Cloud Native Ecosystem From Japan - Yuichi Nakamura, Linux Foundation Japan Evangelist, Governing board of CNCF
-
-Finally, the first KubeCon Japan is here, but it is an only start point. Japanese communities and companies are collaborating in CNCF Japan Chapter “Cloud Native Community Japan (CNCF)” to accelerate cloud native momentum in Japan and expand collaboration with other communities like FinOps Foundation and LF AI. In the talk, achievements of CNCJ since KubeDay Japan and forecast will be introduced.]]></content:encoded></item><item><title>Keynote: Unleashing AI Infrastructure and Platforms: Accelerating Innovatio... Sunyanan Choochotkaew</title><link>https://www.youtube.com/watch?v=rd69fmAEJXo</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/rd69fmAEJXo?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:48:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Keynote: Unleashing AI Infrastructure and Platforms: Accelerating Innovation Through the Open Source Ecosystem - Sunyanan Choochotkaew, Staff Research Scientist, IBM Research
-
-This session presents how open-source ecosystems can accelerate research and innovation in AI, highlighting the use of an AI-optimized, cloud-native supercomputing platform designed for the development and training of large-scale generative models. By leveraging cloud-native infrastructure and open-source technologies, the platform supports flexible model deployment, efficient orchestration, and rapid iteration—enabling continuous optimization. Within our research department, it plays a central role in several transformative AI initiatives, including the development of open-source large language models, and contributes to a range of open-source projects such as InstructLab, Data Prep Kit, MLBatch, Kqueue, PyTorch, vLLM, Kepler, SusQL, and Multi-NIC CNI.
-
-With cloud-native technologies essential to maximizing these benefits, this highlights how active engagement with open source—not just as consumers, but as contributors—cultivates collaboration, unleashes AI infrastructure and platforms, drives sustainable innovation, and helps strengthen the broader community.]]></content:encoded></item><item><title>Safeguarding Your Applications - Achieving Zero Downtime During Kube... Kazuki Uchima &amp; Kakeru Ishii</title><link>https://www.youtube.com/watch?v=piyovtmfMWI</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/piyovtmfMWI?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:48:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Safeguarding Your Applications - Achieving Zero Downtime During Kubernetes Upgrades - Kazuki Uchima & Kakeru Ishii, Google Cloud
-
-Kubernetes cluster upgrades are frequent and can lead to unforeseen problems, including application downtime. Therefore, it is essential to understand the roles of each component that makes up a Kubernetes cluster and how they behave during an upgrade in order to safely upgrade the Kubernetes cluster and achieve zero downtime for your applications.
-
-This session will explain the basics and practical practices to improve safety, and ensure zero downtime for your applications. In 30 minutes, we will provide an easy-to-understand explanation of everything from the roles of the main Kubernetes components to points to note during upgrades and recommended configurations to minimize or eliminate application downtime during the upgrade process. This session is recommended for those who are going to operate Kubernetes in earnest and those who are troubled by upgrades and want to learn how to prevent application downtime during Kubernetes cluster upgrades.]]></content:encoded></item><item><title>The Future of Prometheus Exposition Format - Arthur Sens, Grafana Labs</title><link>https://www.youtube.com/watch?v=pRFUFJIAluk</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/pRFUFJIAluk?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:48:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-The Future of Prometheus Exposition Format - Arthur Sens, Grafana Labs
-
-OpenMetrics (OM) had a wild journey: it started as a project to standardize the Prometheus exposition format, and it became an entirely separate CNCF Incubating project. Even though the project had high maturity, it struggled for years to find tools to comply with the first version of the spec. Finally, in 2025, it was incorporated back into the Prometheus Github organization so Prometheus developers could lead the efforts for OM 2.0.
-
-In this talk, Arthur, a Prometheus maintainer and OpenMetrics contributor, will walk you through the main challenges that tools like Prometheus and OpenTelemetry face when trying to comply with OpenMetrics 1.0 and how the community plans to address these challenges in OM 2.0.
-
-The audience will also learn how changing an exposition format can make Prometheus and OpenTelemetry-Collector more memory-efficient while making their specifications easier to translate into each other!]]></content:encoded></item><item><title>Platform Engineering Day 2: Why Service Iterations Are the Crux of Developer Platfor... Puja Abbassi</title><link>https://www.youtube.com/watch?v=p-8hkNDZYF4</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/p-8hkNDZYF4?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:48:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Platform Engineering Day 2: Why Service Iterations Are the Crux of Developer Platforms - Puja Abbassi, Giant Swarm
-
-Everyone is talking about platform engineering. You see smooth demos of golden paths and self-service platforms. However, there’s a significant area of challenges that is less talked about and thus often neglected when designing developer platforms.
-
-In this talk, we’ll explore the often-overlooked day 2 challenges that platform teams face. We’ll dissect the area of day 2 into the many sub-areas and challenges they pose. Drawing on real-world experiences, including notable migrations that many in this community have faced, we'll shed light on the pain behind developer platforms and discuss solutions to these issues. Among others, we’ll delve into practical strategies for managing versioning and rollouts, and highlight the significant hurdles encountered, such as dependencies on end user teams or GitOps.
-
-Join us for insights, strategies, and stories from the trenches that will help you navigate the complexities of service iteration in developer platforms.]]></content:encoded></item><item><title>Keynote: Welcome Back + Opening Remarks</title><link>https://www.youtube.com/watch?v=kM3DkcrhaqA</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/kM3DkcrhaqA?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:48:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Keynote: Welcome Back + Opening Remarks]]></content:encoded></item><item><title>Keynote: Make Cloud-Native Ubiquitous: KubeEdge&apos;s Graduation Journey wit... Yue Bao &amp; Hongbing Zhang</title><link>https://www.youtube.com/watch?v=gbPFjRMpAEs</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/gbPFjRMpAEs?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 20:48:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Keynote: Make Cloud-Native Ubiquitous: KubeEdge's Graduation Journey with Innovation and Collaborative - Yue Bao, Huawei Cloud Computing Technology Co., Ltd. & Hongbing Zhang, DaoCloud
-
-Sustainable growth of open-source projects requires both technological advancement and collaborative growth within a diverse community. How to create a community with vendor diversity that can collectively drive technological progress is a hot topic of concern today. It is increasingly clear that establishing the right governance structure and technical roadmap is critical during a project’s evolution.
-
-KubeEdge, the industry’s first cloud-native edge computing open-source project, has grown from its launch in 2018 to achieving CNCF graduation this year. Over the past few years, KubeEdge has worked alongside multi-partners to implement practical applications in various fields, including satellite and smart vehicles, while fostering the robust development of multiple SIGs.
-
-In this session, we will discuss the KubeEdge graduation journey, focusing on technical roadmap, community governance, and project maintenance. We will explore how to unite a diverse array of vendors within the community to advance our technological initiatives. Additionally, we will highlight the latest developments of KubeEdge in the fields of AI and robotics, aligning with current trends. Join us to explore how to build a mature, diverse, and technologically leading open-source community.]]></content:encoded></item><item><title>Optimizing Change-Driven Architectures - A New Cloud-Native Model with Drasi</title><link>https://www.youtube.com/watch?v=PsY1OilC3A0</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/PsY1OilC3A0?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 07:00:22 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Building change-driven solutions that respond to specific changes in distributed data is challenging.  This talk introduces Drasi, a CNCF Sandbox project that simplifies the design and implementation of change-driven architectures by codifying the continuous query and reaction patterns, removing the need to write custom code.]]></content:encoded></item><item><title>CNL: Integrating MCP metadata in your internal developer platform</title><link>https://www.youtube.com/watch?v=MhyMLykUMUc</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/MhyMLykUMUc?version=3" length="" type=""/><pubDate>Thu, 26 Jun 2025 04:50:22 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[MCP, Model Context Protocol, is clearly the hot topic of 2025 and while we are seeing more and more interesting use cases around this, no one has really yet focused on all the metadata that MCP brings to the table: Tools description, Tool parameters description, prompt description. All of this is really useful information that can be used by the developer building AI Infused applications.
-
-It’s also totally aligned with the Platform Engineering vision which tries to streamline the service catalogs to its platform user.
-
-Join me in the mainly live coding session to see how to integrate MCP Metadata into your Platform Engineering strategy.]]></content:encoded></item><item><title>Deaf and Hard of Hearing WG Meeting - 2025-06-24</title><link>https://www.youtube.com/watch?v=l5D5oWhczYU</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/l5D5oWhczYU?version=3" length="" type=""/><pubDate>Wed, 25 Jun 2025 14:13:59 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item></channel></rss>
+We want OTel to feel natural and idiomatic for Android developers, and this is the first step towards that end.]]></content:encoded></item></channel></rss>

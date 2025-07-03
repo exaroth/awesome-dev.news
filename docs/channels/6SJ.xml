@@ -1,4 +1,478 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Go</title><link>https://www.awesome-dev.news</link><description></description><item><title>Is Real-Time Pushing in Go Too Hard? Try Sponge SSE and Get It Done in One Click!</title><link>https://dev.to/zhufuyi/is-real-time-pushing-in-go-too-hard-try-sponge-sse-and-get-it-done-in-one-click-3c94</link><author>zhuyasen</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 2 Jul 2025 07:41:04 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hey Gophers! Have you ever encountered scenarios like these:  You're developing a backend monitoring system and want to display real-time data like CPU usage and memory consumption on the frontend, but the only way is to have the frontend send a request every few seconds, exhausting the server?  You want to build an information feed similar to Facebook or Twitter, where new messages are instantly "dinged" and pushed to the user's page, instead of waiting for them to scratch their heads and manually refresh?  Or, you simply want to notify a user: "Your delivery has been picked up by [Handsome John Doe] and is speeding your way!", rather than having them stare anxiously at the order page?If you nodded to any of the questions above, then congratulations, you've probably been using the old method of "polling." It's like sending a subordinate to the kitchen every five seconds to ask, "Is the food ready yet?". Not only does the subordinate run their legs off, but the chef gets annoyed too.Isn't there a more elegant way? Of course, there is! Today's star is , and it's here to save the day! And the Go SSE library we're about to introduce will give you this superpower with "one click"!
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Go</title><link>https://www.awesome-dev.news</link><description></description><item><title>Domain Driven Design Microservice</title><link>https://dev.to/subpxl/domain-driven-design-microservice-pd4</link><author>shubham panchal</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 3 Jul 2025 10:38:33 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[What is Domain Driven Design
+A microservice is a independent compoent of a
+business logic. mostly is a breakdown of a
+monolith application into individual componetns
+that can scale and make the service fault tolerant
+There are many advantages of microservces
+and they cater to different business needs as per
+design an architecture.
+Event driven
+with webworkerWhat is Domain Driven Design
+Domain Drivern Design is a software design pattern that saperates businesss logic from language infrastruture and other technical components. it has businss logic domain at its core and all other things
+that changes are wrapped like onion onto it.
+It is important as the core business logic never changes but the outlying technologies changes but doesnot affect the business logic, It is like a port and adapter pattern where technologies like databases or message queues can be replaced easily without affecting anything.
+The main business layer of the application that contains business models , methods, events and their working.
+These are independent of any database or message queue or router and they mostly dont change.They have classes or structs that defines objects
+or models and their methods and their interface signatures.
+Application Layer is the layer that connects interface layer to the domain layer.Here there are many usecases of business present that may use more that one domain method for its working.Along with that it is responsible for authentication and transaction processing . sending notifications or
+triggering events. when interface later recieves a resuqest it sends to
+appropriate usecase method in application layer that may contain multiple domain methods and triggers events accordingly.
+Interface layer is the outer layer from where the applicaiton is accessed.
+It can be a cli , a rest api or a grpc endpoint. even all three in one application. This takes the appropriate input and sends to the application layer usecase for further processing and sends response back.
+Infrastructure layer is where all interfaces are implemented concrete. It has all the technologies in it such as database, message queue, external apis and other relevent external things that are required by the
+application. It should implements domain interface methods to work and this infra related technologies are injected into the repository
+or other related objects in the main setup. This process is called wiring.]]></content:encoded></item><item><title>Smoke Alarm Batteries: Hogwarts’ Silent Protectors Against Fiendfyre &amp; Forgotten Spells</title><link>https://dev.to/ersajay/smoke-alarm-batteries-hogwarts-silent-protectors-against-fiendfyre-forgotten-spells-3iae</link><author>ersajay</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 3 Jul 2025 06:32:30 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[The Leaky Cauldron’s Safety Secret
+On a rainy afternoon in Hogsmeade, I ducked into Zonko’s Joke Shop—not for Weasley’s Wizard Wheezes, but for a chat with Mr. Filch, the Hogwarts caretaker (and accidental safety guru).
+“You’re here for the batteries, aren’t you?” he grumbled, polishing a Duster 3000. “Not as fun as Pygmy Puffs, but just as vital. Ever seen a smoke alarm fail? It’s worse than a Descendo charm gone wrong—chaos, and no one to blame but a lousy battery.”
+Intrigued, I leaned in. This wasn’t just about magic—it was about smoke alarm batteries—the unsung heroes of wizarding (and muggle) safety. Let’s unmask their magic.What Powers Your Smoke Alarm? (Spells, or Just… Batteries?)
+Smoke alarms rely on batteries that are more than metal and chemicals—they’re life-or-death spells in a case. Here’s the lineup:9V Lithium: A 10-year marvel, built to survive -40°C (Arctic attics) to +85°C (kitchen ceilings). Think of it as a Fidelius Charm for your home—secret, sturdy, and unbreakable.CR123A Lithium: Slim, coin-shaped cells for detectors like the First Alert SCO500. Imagine a Pocket Sneakoscope—small enough to fit anywhere, but never misses a threat.
+Alkaline 9V: A $2 budget trap. They leak acid yearly, corroding circuits and causing 27% of alarm failures (NFPA 2024 report). Worse than a Dungbomb—smelly, messy, and best avoided.Key Insight: Lithium powers NASA lunar habitats; alkalines expire faster than Cauldron Cakes at a Quidditch match.Why Lithium Reigns Supreme (No, Not Just for Wizards)
+Lithium batteries aren’t just “better”—they’re Hogwarts-level superior. Let’s break it down:Lifespan: Lithium lasts a decade with zero fuss—no midnight “chirp-chirp” curses. Alkalines? They die in a year, nagging you like a Boggart in your ceiling.
+Leak Risk: Lithium’s laser-welded seal acts like a Protego charm, locking out acid forever. Alkalines? Their flimsy cases leak acid that eats circuits—like Evanesco for your alarm.
+Temperature Toughness: Lithium thrives in extremes, from Arctic cold to kitchen heat. Alkalines? They crumble below 0°C, weaker than a Glacius charm in a snowstorm.Real-World Magic: 92% of EU smart homes use lithium. Alkalines? They’re relics of a bygone era—best left in the Room of Requirement (unseen, and forgotten).Changing Batteries: A Spellbook for Muggles & Wizards
+Replacing a smoke alarm battery is like casting Reparo—simple, but precision matters. Here’s how:
+For Kidde Models (e.g., KN-COSM-BA)Twist Off: Rotate the alarm counterclockwise, like unlocking a Gringotts vault. Detach it from the mount—no yanking, or you’ll trigger a Colloportus (stuck) situation.
+Open Cover: Slide the battery compartment tab gently (no prying—force breaks it, like a Riddikulus charm gone wrong).
+Replace: Insert a 9V lithium (Energizer L522, preferred). Match the +/- symbols—mix them up, and your alarm becomes a Pyrotechnics show (smoke, sparks, and regret).
+Test: Hold the test button for 5 seconds. Silence = failure (call Dumbledore, or your local electrician). A loud beep? You’ve cast the Perfecto charm—well done.For First Alert (e.g., SA320CN)Locate Latch: Press the side release button, like whispering the Marauder’s Map’s secret phrase. The cover pops open, revealing the CR123A battery.
+Swap CR123A: Remove the old cell, insert the new one (arrow up—polarity is very important, like mixing Veritaserum).
+Reset: Press the test button twice. A double beep confirms success—cheer like you just caught the Golden Snitch.⚠️ Sealed Units (e.g., Kidde i12010S): No battery access! Replace the entire unit after 10 years (like retiring a Phoenix—sad, but necessary)."Battery-Free" Alarms: The Great Deception
+Ever heard of a “battery-free” smoke alarm? It’s like a Bogey—a trick, not reality.Hardwired Alarms (e.g., First Alert SC9120B): ⚡ They’re plugged in, but still need a 9V lithium backup for outages (even magic needs a Portkey to safety).
+Sealed 10-Year Models: 🔒 Tamper-proof? Yes. Battery-free? No. They’re just wizard-sealed—no user access, but still powered by lithium.Critical Truth: No alarm is truly battery-free. Alkaline backups void warranties (and your safety—don’t be a Gilderoy Lockhart).2025’s Top Batteries: Trusted by the Ministry of Magic
+Not all batteries are created equal. Here’s the Ministry-approved list:9V Lithium: Stick to Panasonic CR-V3 or Energizer L522. They’re UL/CE/UN38.3 certified—approved by the Ministry of Magic (and NASA). Price: $6-$9.
+CR123A: Duracell 123 or Panasonic CR123A. UL/CE certified—no Dark Arts here. Price: $4-$6.
+USB-C 9V: Shui Mu Nian’s USB-C lithium (Amazon ASIN B0CZ2YJQJS). CE/UN38.3 certified—recharge like a Wand-Lighting Charm. Price: $2.45.No UN38.3 cert? Fire hazard (e.g., eBay “10 for $5” deals—Aguamenti won’t save you).
+“Heavy-duty” labels? Alkaline in disguise (like Polyjuice Potion—deceptive, and dangerous).Global Innovations: Magic Meets Modern Safety
+The future of smoke alarm batteries is pure wizardry:Smart Batteries: 🔌 Shui Mu Nian’s USB-C lithium (1,000 cycles). Recharge like your phone—no more Expelliarmus for dead alarms.
+AI Integration: 📱 Alerts your phone before low battery (“Replace now, or sleep in smoke!”—Morsmordre vibes, but helpful).
+Regulatory Revolutions: 🏛️ EU bans alkaline detectors by 2027; Japan mandates lithium in rentals (finally, common sense—Obliviate to alkalines).Beyond Homes: Where Batteries Rule the Wizarding World
+Smoke alarm batteries aren’t just for kitchens. They’re everywhere—like Hogwarts’ ghosts:Hotels: Sealed lithium prevents 3 AM mass evacuations (no more Riddikulus for guests).
+Industrial: CR123A survives chemical fumes & vibrations (like a Shield Charm for factories).
+Space Tech: Panasonic CR123A powers fire detection in NASA moon bases (even Luna Lovegood would approve).Conclusion: The Unseen Protectors
+Smoke alarm batteries aren’t flashy. They don’t cast Expecto Patronum or brew Felix Felicis. But they’re the reason your home stays safe, your hotel doesn’t burn, and moon bases don’t become Fiendfyre traps.
+Next time you replace one, whisper, “Thanks, little hero.” It’s the least you can do for a battery that keeps the magic of life alive.Written by a witch who once ignored a chirping alarm. (Spoiler: It was an alkaline. Never again.)
+🔋 Some magic isn’t in wands—it’s in the tools that keep the world from burning.]]></content:encoded></item><item><title>How to Use Worker: Secure Linux Process Execution Made Simple</title><link>https://dev.to/ehsaniara/how-to-use-worker-secure-job-execution-made-simple-559h</link><author>Jay Ehsaniara</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 2 Jul 2025 20:57:38 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[This guide is designed for: setting up CI/CD pipelines with secure linux process execution building platforms that need to run user code safely looking for lightweight alternatives to Docker for process isolation creating internal developer tools and automationBasic Linux command-line experienceUnderstanding of processes, memory, and CPU conceptsFamiliarity with systemd services (helpful but not required)📚 What This Article Is NOT:A deep dive into Linux namespaces or cgroups internalsA comparison of container orchestration platformsA tutorial on building distributed systemsAn explanation of Worker's source code architectureWorker is a lightweight job isolation platform that lets you run commands and scripts in secure, resource-controlled
+environments. Think of it as a simpler alternative to Docker for job execution - no containers needed, just a single using Linux namespaces for CPU, memory, and I/O and log streaming with authentication for easy interactionWhether you're building a CI/CD system, running user code safely, or need isolated task execution, Worker provides a
+clean, production-ready solution.
+  
+  
+  Why Use Worker? Before vs After Scenarios
+Let's see how Worker transforms common development and operations challenges with real examples:
+  
+  
+  🔍 System Call Isolation in Action❌ Without Worker: Direct Host Execution (Dangerous)ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.3 167744 13132 ?        Ss   Jun26   0:11 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    Jun26   0:00 kthreadd]
+systemd+     564  0.0  0.2  90096  5392 ?        Ss   Jun26   0:00 /lib/systemd/systemd-resolved
+messagebus   565  0.0  0.1   8808  3840 ?        Ss   Jun26   0:02 /usr/bin/dbus-daemon 
+worker      1234  0.1  0.5 123456 10240 ?        Sl   Jun26   1:23 /opt/worker/worker
+postgres    2345  0.0  1.2 456789 25600 ?        S    Jun26   0:45 postgres: main process
+mysql       3456  0.2  2.1 789012 43520 ?        Sl   Jun26   2:10 mysqld /var/lib/mysql
+apache2     4567  0.0  0.8 234567 16384 ?        S    Jun26   0:30 /usr/sbin/apache2 
+...
+user        9999  0.0  0.0  10072  1608 pts/2    R+   17:37   0:00 ps aux
+Process can see ALL system processes (including sensitive services)Has access to process details, PIDs, and resource usageCan potentially interact with or signal other processesNo isolation from host system resources✅ With Worker: Isolated Job Execution (Secure)worker-cli run ps aux
+Job started:
+ID: 120
+Command: ps aux
+Status: RUNNING
+StartTime: 2025-01-15T17:34:33Z
+
+worker-cli log 120   
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+0              1  0.0  0.0  10044  1580 ?        R    17:34   0:00 ps aux
+Job sees ONLY its own process (PID 1 in isolated namespace)Cannot discover or interact with host processesComplete process isolation from host systemProtected from interference by other jobs
+  
+  
+  🗂️ Filesystem Isolation Example❌ Without Worker (Host Access): /
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+
+ /etc/passwd  
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+✅ With Worker (Isolated Filesystem):worker-cli run  /
+bin  lib  lib64  proc  sys  tmp  usr  work
+
+worker-cli run  /etc/passwd
+: /etc/passwd: No such file or directory
+
+worker-cli run  /proc
+1  cpuinfo  meminfo  mounts  version  : Each job gets its own  directory: Only essential directories are available: Each job has its own temporary space: Process information limited to the job's namespaceRead-only System Binaries: Access to , , etc. but cannot modify
+  
+  
+  💾 Resource Protection Example❌ Without Worker (Unrestricted):python3 ✅ With Worker (Resource Protected):worker-cli run 512 python3 worker-cli log <job-id>
+Allocated 1 MB
+Allocated 2 MB
+...
+Allocated 500 MB
+Allocated 512 MB
+Killed  : Jobs cannot exceed allocated memory: Prevents CPU starvation of host system: Controls disk bandwidth usage: Restricts number of processes per job
+  
+  
+  🏗️ 
+npm 
+python tests.py            
+./build.sh                 
+make integration-tests     
+ps aux | pgrep Tests can crash the CI serverResource leaks between jobsNo job monitoring or log collectionSecurity risks from untrusted codeDifficult to enforce resource limitsManual process management
+worker-cli run 512 100 npm worker-cli run 256 python tests.py  
+worker-cli run 200 ./build.sh
+worker-cli run 1024 make integration-tests
+
+
+worker-cli list                 
+worker-cli log <job-id>        
+worker-cli stop <job-id>       ✅ Complete isolation prevents system crashes✅ Automatic resource cleanup✅ Real-time monitoring and logging✅ Failed jobs don't affect the system✅ Easy to track and debug build issues
+  
+  
+  🎓 Online Code Execution PlatformUsers can access your filesystemInfinite loops can crash your serverNo resource limits (memory bombs)No way to safely kill runaway processesNo concurrent user support✅ Complete filesystem isolation✅ Resource limits prevent abuse✅ Automatic job termination✅ Real-time output streaming✅ Multiple users can run code simultaneously
+  
+  
+  🔄 Data Processing Workflows
+./process_batch1.py &
+
+./process_batch2.py &  
+
+./process_batch3.py &
+
+ps aux | process_batch
+top | python
+
+pgrep Difficult to monitor progressNo way to limit resource usage
+worker-cli run 1024 100 ./process_batch1.py
+worker-cli run 1024 100 ./process_batch2.py  
+worker-cli run 1024 100 ./process_batch3.py
+
+
+worker-cli list                    
+worker-cli log 1 & worker-cli log 2 & worker-cli log 3  ✅ Predictable resource usage✅ Easy progress monitoring
+  
+  
+  Quick Start: Your First Job
+Let's get Worker running in under 5 minutes.
+wget https://github.com/ehsaniara/worker/releases/latest/download/worker_1.0.0_amd64.deb
+
+dpkg  worker_1.0.0_amd64.deb
+
+systemctl start worker
+systemctl worker
+That's it! Worker is now running as a system service with auto-generated SSL certificates.
+worker-cli run Congratulations! You just ran your first isolated job.The  command is your main interface for job execution:
+worker-cli run 
+worker-cli run python3 
+worker-cli run 50 256 stress-ng  1  30s
+
+
+worker-cli run bash Resource Limits Explained: - CPU percentage (50 = 50% of one core) - Memory limit in MB - I/O operations per second limit
+worker-cli list
+
+
+worker-cli status 2
+
+One of Worker's killer features is real-time log streaming:
+worker-cli log 2
+
+The log command automatically follows the output until the job completes or you press Ctrl+C.
+worker-cli stop 2
+
+
+  
+  
+  Example 1: Running a Data Processing Script
+ process_data.py 
+worker-cli run 128 python3 process_data.py &
+
+worker-cli log 
+  
+  
+  Example 2: Building a Project
+
+worker-cli run 200 bash 
+  
+  
+  Example 3: Testing with Network Access
+
+worker-cli run curl  https://api.github.com/repos/ehsaniara/worker | jq 
+worker-cli run python3  http.server 8080
+
+  
+  
+  Configuration and Customization
+Worker's behavior can be customized via configuration file at /opt/worker/config/config.yml:After changing configuration:systemctl restart worker
+Point the CLI to a different server:
+worker-cli  192.168.1.100:50051 run 192.168.1.100:50051
+worker-cli run 
+  
+  
+  Security and Authentication
+Worker uses mutual TLS (mTLS) for security. Certificates are auto-generated during installation, but you can regenerate
+them: /usr/local/bin/certs_gen.sh
+
+Worker supports two roles via certificate organizational units:The role is determined by the  field in the client certificate.
+  
+  
+  Monitoring and Troubleshooting
+systemctl status worker
+
+journalctl  worker systemctl show worker CPUUsageNSec,MemoryCurrent
+
+worker status <job-id>
+worker log <job-id>
+
+
+worker list | 
+watch  2 Issue: "Connection refused"systemctl status worker
+
+netstat  | 50051
+
+systemctl restart worker
+Issue: "Certificate errors" /usr/local/bin/certs_gen.sh
+
+ /opt/worker/certs/
+Issue: "Job stuck in RUNNING"
+worker-cli stop <job-id>
+
+
+top
+Worker provides a gRPC API for integration with other systems. Here's a simple Go client example:file .txt
+    worker-cli run 128 python3 process_file.py  &
+: Always set appropriate limits to prevent runaway jobs: Monitor system resources when running many parallel jobs: Long-running jobs can generate large logs - consider log rotation: Worker automatically cleans up completed jobs, but monitor disk space
+  
+  
+  Comparison with Alternatives
+: Report bugs and feature requests on GitHub: Always check sudo journalctl -u worker for service issues: Join discussions in the project's GitHub issuesWorker provides a clean, simple way to run isolated jobs without the complexity of container orchestration. Whether
+you're processing data, running tests, or executing user code, Worker's combination of security, simplicity, and
+real-time monitoring makes it an excellent choice for job execution.: One package, automatic configuration: Familiar command-line interface: Namespace isolation and mTLS authentication: Stream logs and monitor resource usageIntegration is straightforward: gRPC API for programmatic access]]></content:encoded></item><item><title>Hey you! Deploying the application can you hear me?</title><link>https://dev.to/pcmagas/hey-you-deploying-the-application-can-you-hear-me-57pk</link><author>Dimitrios Desyllas</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 2 Jul 2025 19:32:13 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hey you! Setting secrets upon  file via a CI/CD pipeline, can you hear me?Recently I am making a small utility tool named mkdotenv. Its goal simple: manipulate values upon .env files in a CI/CD pipeline. It is designed to run inside a pipeline during deployment and modify and set values upon  files.It is shipped in #fedora, #ubuntu, #linux, #windows and #mac. Available on Fedora #corpr, Ubuntu/Mint #ppa and #homebrew (for M-Series mac). Also, building from source is easy-peasy-lemon-sqeezy it just needs #go and #make and no other external dependencies.Please have a strong look as I develop it into a stable version.]]></content:encoded></item><item><title>A terminal UI for Apple Containers</title><link>https://dev.to/andreybleme/a-terminal-ui-for-apple-containers-2d4n</link><author>Lucas Bleme</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 2 Jul 2025 16:22:27 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Apple finally released native support for containers, but it is missing a compatible GUI. I built lazycontainer, a terminal UI to make it easy to manage Apple containers. It is written in Go, and uses bubbletea🧋I have been trying the native apple containers on my Mac for the last weeks, and it looks .  Docker is one of the few things that makes my M1 feel slow, so I've been experimenting with replacing it with apple containers on my local environment for simple stuff like Postgres and Redis.It still has significant limitations in terms of networking and memory. It does not support routing traffic from container-managed applications to host applications. To workaround this, we need a port forwarding tool like  or  to establish a TCP connection between the host and the container and redirect the traffic. Not cool.socat TCP-LISTEN:8000,fork,bind=192.168.64.1 TCP:127.0.0.1:8000 There is no CLI support for managing volumes. Even though it allows running a container with a volume , we can't list or remove mounted volumes as we are used to doing with Docker. Same for networks.The first release also didn't come with support for compose. We are used to relying on docker_compose.yaml files to provision multiple containers, but that is not supported for now. This is one of the most requested features, and would definitely drive more adoption if added in the next release.It is great to see native containers come to Mac, but lima and colima already enable decent performance for containers running on Mac, and most importantly, being Docker compatible. It is hard to see this announcement as groundbreaking if they don't provide support for most things we are used to having in the Docker ecosystem.In the meantime, the open source community is hacking to make it compatible with Docker-like tools. Let me know what your thoughts are on it! Are you using it or planning to?]]></content:encoded></item><item><title>How OOP works in Golang</title><link>https://dev.to/hrrydgls/how-oop-works-in-golang-1o45</link><author>Harry Douglas</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 2 Jul 2025 15:37:37 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[I'm quite beginner here in GO but I wanna share what I've learnt about it today! Lets start without losing time. If you are coming from another OOP friendly language, you already know what is a class. 
+In Go we have the same thing but a bit different:This is the most basic class we have. Then we can add methods to it:The syntax seems a bit complicate to me as someone from PHP world but not too bad!Share your comments with me to feel that I am not alone here with this new stuff :)]]></content:encoded></item><item><title>Build a Local Image File Uploader from Scratch in Go</title><link>https://dev.to/vinitjpl/build-a-local-image-file-uploader-from-scratch-in-go-4caf</link><author>Vinit Jogi</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 2 Jul 2025 12:53:24 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[🚀Getting Started with File Uploads in Go (for Beginners)Ever wondered how to build your own image uploader without relying on third-party services or complex libraries? In this tutorial, I’ll walk you through creating a simple, beginner-friendly local image file uploader using Go, HTML, CSS, and a bit of JavaScript. This project is perfect for developers just starting with Go who want to understand how file handling works behind the scenes. By the end, you'll have a fully functional uploader that stores images on your local filesystem — and a solid foundation to build more advanced features on top of it.Frontend: HTML, CSS and JS, To create a basic form for uploading files.Backend: Go (net/http), to handle file upload and server logic.Storage: Local filesystem, to save uploaded images in a local directory.Here's how the project is organized:file-uploader/
+├── cmd/
+│   └── file-uploader/
+│       └── main.go              # Entry point of the application
+├── internal/
+│   ├── handlers/
+│   │   └── upload.go            # Upload handler logic
+│   ├── utilities/
+│   │   └── utilities.go         # Utility/helper functions
+│   └── web/
+│       ├── index.html           # Frontend upload form
+│       └── main.js              # Frontend JS logic (optional)
+├── uploads/                     # Folder to store uploaded images
+├── .gitignore                   # Git ignore rules
+└── go.mod                       # Go module file
+Alright, now that we’ve covered the basics — let’s roll up our sleeves and start building this image uploader step by step! 💪🛠️Step 1: 🧱Generating a go.mod file
+First things first — open your favorite terminal, cd into your project directory, and run the following command to initialize a Go module:go mod init <your_module_name>
+Replace  with the name or path you want for your project (e.g., github.com/yourusername/file-uploader or just go-file-uploader for local projects).This creates a go.mod file, which helps Go manage dependencies and track your module.Step 2: 🚀Building a file upload endpoint
+Now let’s create a simple Go server that can handle file uploads and serve static files (like your HTML form and JavaScript).Here is what the  file inside  looks like:package main
+
+import (
+    "fmt"
+    "go-file-uploader/internal/handlers"
+    "log"
+    "net/http"
+)
+
+func main() {
+    http.HandleFunc("/upload", handlers.FileUploadHandler)
+
+    // Serve static files (HTML, JS, CSS)
+    fs := http.FileServer(http.Dir("internal/web"))
+    http.Handle("/", fs)
+
+    fmt.Println("Server running on port: 8080")
+    log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+We define a  endpoint and link it to (which we'll define next).The root path  serves static frontend files from the  directory.The server runs on .Step 3: 📤Writing the File Upload LogicLet’s move on to the actual file upload handling. This logic lives in internal/handlers/upload.go.package handlers
+
+import (
+    "fmt"
+    "go-file-uploader/internal/utilities"
+    "io"
+    "net/http"
+    "strings"
+)
+
+// Validate the file type; currently only allowing image uploads
+func isValidFileType(file []byte) bool {
+    fileType := http.DetectContentType(file)
+    return strings.HasPrefix(fileType, "image/")
+}
+
+func FileUploadHandler(w http.ResponseWriter, r *http.Request) {
+    /*
+        limiting the file size to 10 mb
+        left shift operator. Shift the bits of 10, 20 times to the left
+        effectively it is 10 * 2^20.
+    */
+    r.ParseMultipartForm(10 << 20)
+
+    // Retrieve the uploaded file from the form
+
+    file, handler, err := r.FormFile("myFile")
+
+    if err != nil {
+        http.Error(w, "Error retrieving the file", http.StatusBadRequest)
+        return
+    }
+
+    defer file.Close()
+
+    fileBytes, err := io.ReadAll(file)
+    if err != nil {
+        http.Error(w, "Invalid file", http.StatusBadRequest)
+        return
+    }
+
+    if !isValidFileType(fileBytes) {
+        http.Error(w, "Invalid file type", http.StatusUnsupportedMediaType)
+        return
+    }
+
+    // Save the file locally to the uploads directory
+
+    dst, err := utilities.CreateFile(handler.Filename)
+
+    if err != nil {
+        http.Error(w, "Error in saving the file", http.StatusInternalServerError)
+        return
+    }
+
+    defer dst.Close()
+
+    // Write the uploaded file bytes to the destination file
+
+    if _, err := dst.Write(fileBytes); err != nil {
+        http.Error(w, "Error saving the file", http.StatusInternalServerError)
+    }
+
+    fmt.Fprintf(w, "Uploaded file: %s\n", handler.Filename)
+    fmt.Fprintf(w, "File Size: %.2f KB\n", float64(handler.Size)/(1024))
+    // fmt.Fprintf(w, "MIME Header: %v\n", handler.Header)
+    fmt.Fprintf(w, "File uploaded successfully: %s\n", handler.Filename)
+}
+
+We limit file size to 10MB using ParseMultipartForm(10 << 20).We retrieve the uploaded file via . Make sure the name "myFile" matches the name attribute of the input field in your HTML form — otherwise, Go won’t be able to read the file correctly.We read and validate the file type using Go's  (only allowing image types).We save the uploaded file using a utility function (), which we’ll define in the next step.Finally, we print out some details as a response after a successful upload.This approach is simple yet safe, ensuring only valid image files get saved on your system.Step 4: 🛠️Creating the CreateFile() Utility FunctionNow let’s define a utility function to save uploaded files inside a local  directory. This function lives in internal/utilities/utilities.go.package utilities
+
+import (
+    "os"
+    "path/filepath"
+)
+
+func CreateFile(filename string) (*os.File, error) {
+    // Create the uploads directory if it doesn't exist
+    if _, err := os.Stat("uploads"); os.IsNotExist(err) {
+        os.Mkdir("uploads", 0755)
+    }
+
+    // Build the full file path and create the file
+    dst, err := os.Create(filepath.Join("uploads", filename))
+    if err != nil {
+        return nil, err
+    }
+
+    return dst, nil
+}
+
+We check whether the  folder exists using .If it doesn’t exist, we create it with permission  using .We then build the full path for the file using  — this ensures proper path formatting across OSes.Finally, we create the file and return it so the handler can write to it.This utility abstracts away the file creation logic, keeping your upload handler clean and focused.With the backend ready to handle image uploads, it’s time to move on to the fun part — building a simple user interface to test our uploader. Let’s jump into the HTML form next! 🧑‍💻📤Step 5: 🎨Building the Frontend UITo test our upload logic, we need a simple and clean user interface. The HTML file below creates a styled upload form with a file input, a submit button, and a placeholder to show the upload status.Save this as  in your  directory:<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload file locally using Go-Lang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a File</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="myFile" id="fileInput" required />
+            <button type="submit">Upload</button>
+        </form>
+        <div id="status"></div>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
+
+The form uses enctype="multipart/form-data" — which is essential for file uploads.The input field has  to match the backend’s expected form key.There's an  script (we’ll write next) that can handle form submission using JavaScript.CSS is included within the  block for a nice, clean layout — no external files needed.Step 6: ⚙️ Adding JavaScript to Handle the Uploaddocument.getElementById("uploadForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const fileInput = document.getElementById("fileInput");
+    const formData = new FormData();
+    formData.append("myFile", fileInput.files[0]);
+
+    const response = await fetch("/upload", {
+        method: "POST",
+        body: formData,
+    });
+
+    const status = document.getElementById("status");
+    if (response.ok) {
+        const text = await response.text();
+        status.innerText = `Success: \n ${text}`;
+    } else {
+        status.innerText = `Failed to upload file. The file should be of type image and should be less than 10MB.`;
+    }
+});
+
+We attach a submit event listener to the form.When the form is submitted, we prevent the default page reload using .We collect the selected file from the input field and append it to a  object.We then send a POST request to the  endpoint using .Based on the response, we update the page with a success or error message.This makes your uploader more dynamic and user-friendly — no page reloads needed!🧪 Final Step: Run and Test Your Uploader▶️ Run the Go Server
+In your terminal, navigate to the root of your project and run:go run cmd/file-uploader/main.go
+Server running on port: 8080
+
+Open your browser and go to:You should see a clean UI with a file input and upload button.Choose an image file (e.g., , ) and click Upload.If successful, you’ll see something like:And that’s it! 🎉 You’ve just built a fully functional local image file uploader using Go, HTML, CSS, and JavaScript — without relying on any external libraries or cloud services.This project is a great starting point for understanding:How to handle file uploads in GoHow to validate file types and manage uploads securelyHow to connect a simple frontend with a backendFrom here, you can take it further by:Preventing file overwritesDisplaying uploaded images on the pageAdding drag-and-drop supportSaving file metadata in a databaseEventually integrating cloud storage like AWS S3Thanks for following along — and happy coding! 👨‍💻✨]]></content:encoded></item><item><title>Go Concurrency</title><link>https://dev.to/ajay-8192/go-concurrency-l6k</link><author>ajay-8192</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 2 Jul 2025 10:31:26 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Go has a built-in feature to handle , which allows it to run multiple functions simultaneously and efficiently. Concurrency isn't parallelism. Parallelism refers to the simultaneous execution of multiple tasks, whereas concurrency refers to the ability to deal with multiple tasks at once. Go Concurrency is a common topic of discussion. Let's look at the mechanisms that support Go Concurrency. are functions or methods that run concurrently with other functions or methods. Goroutines are lightweight threads managed by the Go runtime. They're similar to threads, but they're much cheaper to create and manage. You can create thousands of goroutines without significant overhead.To create a goroutine, simply add the  keyword before the function call:In this example,  will run concurrently with the  function. The  is added to give the goroutine enough time to execute before the  function exits. Without , the  function might exit before the  goroutine has a chance to print its message. are the conduits through which goroutines communicate. They allow goroutines to send and receive values of a specified type. Channels are a fundamental part of Go's concurrency model, enabling safe and synchronized communication between concurrent processes.
+  
+  
+  Declaring and Initializing Channels
+You can declare a channel using the  keyword, followed by the type of data it will carry:To initialize a channel, you use the  function:
+  
+  
+  Sending and Receiving Values
+You send values into a channel using the  operator:You receive values from a channel using the same  operator, but this time it's on the left side of the assignment:Here's an example demonstrating channel communication:In this example,  sends a string to , and the  function receives that string and prints it.Channels can be , meaning they have a capacity to hold a certain number of values before blocking. When a channel is unbuffered (capacity 0), sending to it will block until another goroutine receives from it, and receiving from it will block until another goroutine sends to it.You can create a buffered channel by providing a capacity to the  function:Here's an example of a buffered channel:The  statement is used to wait on multiple channel operations. It allows a goroutine to block until one of multiple send/receive operations is ready. It's similar to a  statement but specifically for channels.In this example,  will wait for either  or  to send a message. Whichever message arrives first will be printed.
+  
+  
+  Mutexes (Mutual Exclusion)
+While channels are the preferred way to communicate and synchronize in Go, there are situations where you might need to protect shared resources from concurrent access. This is where  comes in. A  ensures that only one goroutine can access a critical section of code at a time, preventing .In this example,  ensures that only one goroutine can increment  at a time, preventing a race condition where the final  value might be incorrect without the mutex.  is used to wait for all goroutines to complete before printing the final counter.Go's concurrency model, built around  and , provides powerful and elegant ways to write concurrent programs. By understanding these core concepts, you can build highly performant and scalable applications in Go. While mutexes are available for shared memory access, the Go idiom often favors communication through channels to achieve concurrency safely and efficiently. Embrace goroutines and channels, and you'll unlock the true potential of Go for concurrent programming!]]></content:encoded></item><item><title>Is Real-Time Pushing in Go Too Hard? Try Sponge SSE and Get It Done in One Click!</title><link>https://dev.to/zhufuyi/is-real-time-pushing-in-go-too-hard-try-sponge-sse-and-get-it-done-in-one-click-3c94</link><author>zhuyasen</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 2 Jul 2025 07:41:04 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hey Gophers! Have you ever encountered scenarios like these:  You're developing a backend monitoring system and want to display real-time data like CPU usage and memory consumption on the frontend, but the only way is to have the frontend send a request every few seconds, exhausting the server?  You want to build an information feed similar to Facebook or Twitter, where new messages are instantly "dinged" and pushed to the user's page, instead of waiting for them to scratch their heads and manually refresh?  Or, you simply want to notify a user: "Your delivery has been picked up by [Handsome John Doe] and is speeding your way!", rather than having them stare anxiously at the order page?If you nodded to any of the questions above, then congratulations, you've probably been using the old method of "polling." It's like sending a subordinate to the kitchen every five seconds to ask, "Is the food ready yet?". Not only does the subordinate run their legs off, but the chef gets annoyed too.Isn't there a more elegant way? Of course, there is! Today's star is , and it's here to save the day! And the Go SSE library we're about to introduce will give you this superpower with "one click"!
   
   
   What is SSE? How is it different from WebSocket?
@@ -164,7 +638,7 @@ After 10 years of backend battles, here’s my cheat sheet for rocking distribut
 : Keep lock hold times tiny—shard locks or go async for big wins.
 : Network blips happen. Retry smartly and check lock state.
 : No metrics, no clue. Log and track contention from day one.
-Go’s star is rising in distributed systems, and it’s no fluke. With Kubernetes, Istio, and etcd all in its orbit, Go’s concurrency and simplicity are a perfect match for cloud-native chaos. What’s next? I’d bet on frameworks that bake in service discovery and auto-renewing leases—less boilerplate, more focus on your app. Distributed locks in Go feel like driving a tuned-up sports car: fast, stable, and fun to code.So, grab the snippets, tweak them for your projects, and let me know how it goes—I’d love to hear your war stories! Distributed locks don’t have to be a headache, and with Go, they’re downright approachable. Locks are tools, not magic. Pick the right one, wield it well, and your system will thank you. Happy coding!]]></content:encoded></item><item><title>Advanced Golang Concurrency Patterns: Building Million-Events-Per-Second Data Pipelines with Intelligent Resource Management</title><link>https://dev.to/aaravjoshi/advanced-golang-concurrency-patterns-building-million-events-per-second-data-pipelines-with-2i02</link><author>Aarav Joshi</author><category>dev</category><category>go</category><category>devto</category><pubDate>Tue, 1 Jul 2025 18:31:36 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[As a best-selling author, I invite you to explore my books on Amazon. Don't forget to follow me on Medium and show your support. Thank you! Your support means the world! 
+Go’s star is rising in distributed systems, and it’s no fluke. With Kubernetes, Istio, and etcd all in its orbit, Go’s concurrency and simplicity are a perfect match for cloud-native chaos. What’s next? I’d bet on frameworks that bake in service discovery and auto-renewing leases—less boilerplate, more focus on your app. Distributed locks in Go feel like driving a tuned-up sports car: fast, stable, and fun to code.So, grab the snippets, tweak them for your projects, and let me know how it goes—I’d love to hear your war stories! Distributed locks don’t have to be a headache, and with Go, they’re downright approachable. Locks are tools, not magic. Pick the right one, wield it well, and your system will thank you. Happy coding!]]></content:encoded></item><item><title>1 million chess boards and 10,000+ Go binaries</title><link>https://golangweekly.com/issues/560</link><author></author><category>dev</category><category>go</category><pubDate>Wed, 2 Jul 2025 00:00:00 +0000</pubDate><source url="https://golangweekly.com/">Golang Weekly</source><content:encoded><![CDATA[ — AppSignal gives Go developers the tools they need to fix bugs, track performance issues, and ship with confidence. Easy to set up, a joy to use, and built for teams that care about their code.  Start your free trial today, no credit card required.]]></content:encoded></item><item><title>Advanced Golang Concurrency Patterns: Building Million-Events-Per-Second Data Pipelines with Intelligent Resource Management</title><link>https://dev.to/aaravjoshi/advanced-golang-concurrency-patterns-building-million-events-per-second-data-pipelines-with-2i02</link><author>Aarav Joshi</author><category>dev</category><category>go</category><category>devto</category><pubDate>Tue, 1 Jul 2025 18:31:36 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[As a best-selling author, I invite you to explore my books on Amazon. Don't forget to follow me on Medium and show your support. Thank you! Your support means the world! 
   
   
   Advanced Concurrency Patterns for High-Throughput Data Pipelines in Golang
@@ -823,976 +1297,4 @@ I know you must be waiting for the final touch, it's a lot of code to digest, ri
   
   
   Remember optimization isn't premature engineering. It's building responsive foundations. Start with connection pooling, add batching when write volumes grow, and introduce caching for frequent queries. Each layer compounds performance gains while keeping complexity manageable.
-📘 , , , and  to the channel! is an AI-driven publishing company co-founded by author . By leveraging advanced AI technology, we keep our publishing costs incredibly low—some books are priced as low as —making quality knowledge accessible to everyone.Stay tuned for updates and exciting news. When shopping for books, search for  to find more of our titles. Use the provided link to enjoy !Be sure to check out our creations:]]></content:encoded></item><item><title>Cascading context cancellation in Go: from source code to production patterns</title><link>https://dev.to/flew1x/cascading-context-cancellation-in-go-from-source-code-to-production-patterns-177j</link><author>Vladislav Semenkov</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sun, 29 Jun 2025 07:11:04 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[This time, I would like to delve deeper into the work of the internal interaction of the context from the prism of its cancellation, so this article is a continuation of the previous one.For clarity, I have prepared a simple example that demonstrates how to cancel the context. What will this piece of code output?worker cancelled, err: context canceled
-worked is executed: context canceled
-The  function informs the operation about the shutdown, but does not wait for its completion. It can be called simultaneously by several subroutines. After the first call, subsequent calls do nothing.It does not contain a "" internal implementation, it just checks whether the context is  and calls . What happens in this piece of code step by step:1) creating a context with cancellation
-2) we call goroutine in the background, which performs a "" worker in itself
-3) we are waiting for the time to work for the workerWe have written the simplest example of how context cancellation works.
-  
-  
-  How did the context know to close Done?
-Let's dig inside the  method itself. The signature of this method itself includes 2 parameters.1) the  interface itself
-2) The  interfaceLet me remind you what the  interface itself looks like.:Do not forget that there are internal structures in the context itself, while the cancellation context comes from .  itself: organizes the cancellation of the child element in the presence of the parent, sets the parent context . Thus, the  method ensures that the cancellation of the parent context is correctly transmitted to all child contexts, ensuring consistency and simplifying lifetime management of related operations.
-As can be seen from the source code of  creation, the internal  signaling depends on the  channel. If you want to cancel this context, you need to block everything . The easiest way is to close this channel or replace it with an already closed channel.It is important to remember: Every  has a , and when the context is canceled, it is iterated over it, as can be seen from the source code. That is, the scheme of an approximate interaction may look like this:Parent (cancelCtx) -> Child(timerCtx) -> GrandChild(cancelCtx)But you may ask, since the map itself is not visible, what is the internal structure of the context?Everything is quite simple here, we use the mutex so that there is no race, the rest of the fields are used for their intended purpose, I analyzed the very inside of the cancellation context and other contexts in the last article, I advise you to familiarize yourself, as I would like to touch on the practical aspect.This context is primarily needed to create a context with a "reason" if we want to return a custom error in it, which can be useful to use in specific queue processing locations in production code, where we need to properly consolidate errors related to context cancellation.With cancellation:
-Err context cancelled
-Cause context canceled
-
-With cancellation due to:
-Error  context cancelled
-Reason  some kind of error
-
-Child context:
-Error  context cancelled
-Reason  some kind of error
- propagates down the context tree - child contexts roughly "inherit" the cause.What if we try to call )?Then everything will be fine in terms of processing, since the context will keep the context cancelled.1) We have the very fact of canceling , which is compatible with versions when cause did not exist yet.
-2) Cause can be used for detailed diagnostics.
-  
-  
-  Access from multiple goroutines
-By itself,  is safe to call from multiple goroutines. 1) The channel that returns  is closed once at the moment of the first successful context cancellation.2) To prevent a race, as I described above, the context uses mutexes and atomics.1) You can wait for cancellation from as many locations as you like
-2) You can also call  from several goroutines, since atomic is used.
-3) You can cancel the context everywhere, but it will only work once)It is a convenient thing to execute any code when context is canceled.We use it if we want to do rollback and other things through the context, when canceling it, or use it as a context handler that you don't know about yet.1) Does not block the current routine, runs in a new one
-2) There is no conflict between multiple 
-3) If the context has already been canceled, it starts instantly.
-4) It can save you from deadlock if, for example, you forgot to unlock the mutex by timeout.The  function accepts a function that will be executed after the context is terminated, including when the timeout expires. If the context has already ended, the function will start immediately. The function is executed in a separate thread. At the same time, every call AfterFunc is performed independently of the others. returns the stop function. When the stop function is called, the connection between the function and the context is broken. If the context is already in the state Done and the function has already been started, or if the function has already been stopped, the stop function returns false.
-The function exits if the value is true. The stop function does not wait for the function to complete, so it is recommended to explicitly interact with it to monitor the status.Do not forget to remove the stop after completing the work. If you need synchronicity, you need to do it yourself.Also, do not forget, if you use , that the function or method must be impodent, otherwise a race may happen. Because the context is canceled and the function starts at the same moment when  is called. For example,  is already impodent, so everything is fine, but when working with a file, you need to add .After many interviews with people for the middle position and above, I noticed that many people do not know about its existence. In general, almost 90 percent of the articles in which the context was specified were simply avoided, but in general it is understandable, a new method that appeared relatively recently. I will not talk about him and will insert a quote from my last article. is useful in situations where certain operations must complete regardless of the state of the parent context. This can be useful for background tasks, logging, caching, and any other tasks that need to be completed even if the main operation is canceled, such as a rollback operation.
-The context does not return  or . The  channel value is nil. Reading from it will cause the program to lock.There is also a cancellation with a deadline and a timeout, which are essentially the same thing under the hood, just different types, but that's it - WithDeadline(parent Context, d time.Time) (Context, CancelFunc) - creates a child context using the cancel method from the parent context, except that the context will be automatically canceled when the specified time is reached.context.WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc) is the same as , except that it specifies the timeout from the current time.Let's start with simple rules for how your contexts work: immediately after , . If not called, the child context and its timers will hang until the parent is canceled and flow through memory.goroutines before: 1
-goroutines after : 501
-Close the workers cascadingly, since one cancel in the parents closes the Done channel for all descendants. and  will automatically cancel the request, even if you forgot to call Do not forget to wrap the context after  into a child context with the cancellation time!The rest of the patterns are used as a "" if you are familiar with the definition and operation of the context itself and are common. Initially, the package contains a closed channel so that the first context cancellation takes place without unnecessary allocations and without double closure. When  is called for the first time, it checks whether the done channel has not yet been created, otherwise, instead of , it simply writes a link to an already closed .We avoid allocation so that we use a ready-made object.There is no panic if we call close again. All post calls will see that it indicates a closed channel.Serves only for the cancel signalThe article turned out to be succinct and uncomplicated, where the main aspects of context cancellation were touched upon, if there are any suggestions for improving the article or adding it, I will gladly accept suggestions! Thanks to everyone who read it to the end!]]></content:encoded></item><item><title>認知不完美記憶系統</title><link>https://dev.to/pardnchiu/tou-guo-mo-ni-ren-lei-de-dui-hua-jie-chu-llm-dui-hua-chuan-chang-du-xian-zhi-yu-jie-jue-duo-lun-dui-hua-zhong-mi-shi-wen-ti-4l54</link><author>邱敬幃 Pardn Chiu</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sun, 29 Jun 2025 07:04:38 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[針對的研究顯示：原因：
-LLM 使用「完整記憶」模型而非類人的選擇性記憶研究發現，異常記憶能力並不等同於智能優勢。神經心理學經典案例 Solomon Shereshevsky 能記住數十年前的任意細節，包括無意義的數字序列和詞彙表，但「完美記憶」反而造成認知負擔。他無法區分重要與不重要的資訊，導致抽象思考與日常決策困難。傳統 LLM 採用完整記憶模型，實際上可能是在模擬認知障礙。導致結果需要追求更大更強的硬體支援，卻依舊無法給出等比例的成長。選擇性注意 > 完整記憶
-抽象總結 > 細節保存  
-動態適應 > 固定重播
-而是維持動態的「當前理解」，並且會依據新消息而更新論點過往細節會淡化甚至遺失，但關鍵結論和限制條件會持續存在人類對話過程 → 工程話實踐
-
-腦中摘要 → 透過小型模型在每輪後生成結構化摘要
-內容回想 → 每個問題自動模糊搜尋歷史對話（相關性評分機制）
-新對話 → 最新摘要 + 相關歷史片段 + 新問題
-：不是設計更好、更大的資訊檢索的支持，而是建造了像人類一樣處理資訊的系統模擬人類機制：預設狀態僅使用結構化摘要，避免歷史資訊淹沒當前對話機器補強：完整對話記錄依然保存，當觸發檢索時能提供比人類更精確的細節回想保持了人類對話的自然聚焦特性，又利用了機器在精確檢索上的優勢。對話當下不使用完整歷史串，只在特定觸發條件下才啟動詳細檢索。排除不必要的資訊：從關鍵概要中移除
-聚焦維持：使用結構化摘要，類似腦中攏統概要
-主動回想：每個問題自動檢索相關歷史內容
-狀態更新：持續摘要，類似腦中的事件理解
-（相關性的資訊保留 vs 完整歷史）
-每次對話過程後，人類會無意識的情況下針對新接收的資訊更新對當前對話的總結，並以新觀點進行下一輪對話（自動記憶檢索）
-針對每個新問題，自動搜尋歷史對話中的相關內容，模擬人類主動聯想過往討論（結構化摘要）
-動態調整當前對話主軸，非重新 review 整個對話歷史graph TB
-  T1["第1輪對話"] --> T1_Store["儲存: [Q1] + [R1]"]
-  T1_Store --> T2["第2輪對話"]
-  T2 --> T2_Store["儲存: [Q1] + [R1] + [Q2] + [R2]"]
-  T2_Store --> T3["第3輪對話"]
-  T3 --> T3_Store["儲存: [Q1] + [R1] + [Q2] + [R2] + [Q3] + [R3]"]
-  T3_Store --> TN["第N輪對話"]
-  TN --> TN_Store["儲存: 完整對話"]
-第 1 輪：[question 1] + [response 1]
-第 2 輪：[question 1] + [response 1] + [question 2] + [response 2]
-第 3 輪：[question 1] + [response 1] + [question 2] + [response 2] + [question] + [response 3]
-...
-第 N 輪：[完整對話逐字記錄]
-線性增長的 Token 導致對話串長度限制，人類不會因為一個對話過長而中斷graph TB
-  H_Input["新問題輸入"] --> H_Fuzzy["模糊檢索歷史"]
-  H_Fuzzy --> H_Components["上下文組成"]
-  H_Components --> H_Summary["結構化概要"]
-  H_Components --> H_Relevant["相關歷史片段"]
-  H_Components --> H_Question["新問題"]
-
-  H_Summary --> H_LLM["LLM 回應"]
-  H_Relevant --> H_LLM
-  H_Question --> H_LLM
-
-  H_LLM --> H_Response["生成回答"]
-  H_Response --> H_NewSummary["更新結構化概要"]
-  H_NewSummary --> H_Store["儲存到記憶"]
-每一輪：[結構化當前狀態] + [相關歷史片段] + [新問題]
-當前討論的核心主題
-累積保留所有確認的需求
-累積保留所有約束條件
-被排除的選項+原因
-累積保留所有重要資料和事實與所有結論
-當前主題相關的待釐清問題
-所有重要的歷史討論點
-人類的記憶檢索通常會由關鍵字觸發，例如：「剛剛提到的...」
-所以本區塊的設計是計算最新問題與對話紀錄相似度高的歷史訊息作為參考資料補充模擬：總分 = 關鍵詞重疊(40%) + 語義相似度(40%) + 時間權重(20%)
-24小時內線性衰減：最近=1.0，24小時前=0.7超過24小時後固定分數0.7（適合長時間持續對話）每輪對話上下文 = [結構化概要] + [相關歷史對話] + [新問題]
-[x] ：每輪對話後自動更新認知狀態（gpt-4o-mini）
-[x] ：通過  避免重複錯誤[x] ：固定傳送概要與新內容，不再是以完整訊息串傳遞[x] ：關鍵詞+語義+時間的綜合相關性評估[ ] ：根據對話內容自動調整相關性閾值[ ] ：支援更多 LLM 提供商（Claude、Gemini 等）git clone https://github.com/pardnchiu/cim-prototype 
-cim-prototype
-
-創建  檔案並放入您的 OpenAI API 金鑰：
- OPENAI_API_KEY
-./cimp
-./cimp go run main.go
-go run main.go 程式會按照以下順序尋找 OpenAI API 金鑰：定義概要生成模型（GPT-4o-mini）的系統指令系統自動更新對話概要，保持記憶狀態（請等摘要更新完在進行對話）]]></content:encoded></item><item><title>Breaking LLM Context Limits and Fixing Multi-Turn Conversation Loss Through Human Dialogue Simulation</title><link>https://dev.to/pardnchiu/enhance-llm-conversation-through-human-like-dialogue-simulation-54ej</link><author>邱敬幃 Pardn Chiu</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sun, 29 Jun 2025 06:58:42 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[[!Note]
-This content is translated by LLM. Original text can be found hereAttempting to solve the problem of "LLMs getting lost in multi-turn conversations" by simulating human conversation patterns.LLMs Get Lost In Multi-Turn Conversation
-Provides 2 TUI modes for testing traditional vs new architecture: Jump to TUI Example
-  
-  
-  Common LLM Issues in Long Conversations
-Research on 15 LLMs across 200,000+ conversations shows:Problem:
-Multi-turn conversation performance drops 39%Cause:
-LLMs use "complete memory" models instead of human-like selective memoryAsk clarifying questions firstForget irrelevant detailsCognitive Burden of Perfect MemoryResearch shows exceptional memory ability doesn't equal intelligence advantage. The classic neuropsychological case of Solomon Shereshevsky could remember arbitrary details from decades ago, including meaningless number sequences and vocabulary lists, but "perfect memory" actually created cognitive burden. He couldn't distinguish important from unimportant information, leading to difficulties in abstract thinking and daily decision-making.Traditional LLMs using complete memory models may actually be simulating cognitive impairment. This leads to requiring bigger, more powerful hardware support without proportional performance gains.Selective attention > Complete memory
-Abstract summarization > Detail preservation  
-Dynamic adaptation > Fixed replay
-
-  
-  
-  Real Conversation Process
-
-  
-  
-  Continuously Updating Mental Summary
-Humans don't repeatedly go through entire conversation history in their mindsInstead, they maintain a dynamic "current understanding" and update conclusions based on new informationPast details fade or disappear, but key conclusions and constraints persistWhen someone says "that thing we discussed earlier"We perform fuzzy searches of recent memory for relevant informationOnly retrieve specific details when triggered by reference keywordsHuman conversation process → Engineering implementation
-
-Mental summary → Small model generates structured summary after each turn
-Content recall → Automatic fuzzy search of conversation history for each question (relevance scoring)
-New conversation → Latest summary + relevant history fragments + new question
-
-  
-  
-  Human Conversation Simulation
-Simulating imperfect memory: Instead of designing better, larger information retrieval support, we built a system that processes information like humans do
-  
-  
-  Humans Are Inherently Poor at Complete Memory
-We forget irrelevant details We remember key decisions We have internal measures We maintain current conversation focusWe actively associate relevant past content
-  
-  
-  Combining Machine Advantages
-This approach explores combining human cognitive advantages with machine computational advantages:Simulate human mechanisms: Default state uses only structured summaries, avoiding historical information overwhelming current conversationMachine enhancement: Complete conversation records are still preserved; when retrieval is triggered, can provide more precise detail recall than humansMaintains the natural focus characteristics of human conversation while leveraging machine advantages in precise retrieval. Doesn't use complete history during conversation, only activating detailed retrieval under specific trigger conditions.
-  
-  
-  Engineering Simulation Focus
-Exclude unnecessary information: Remove from key summaries
-Maintain focus: Use structured summaries, similar to mental rough overviews
-Active recall: Automatically retrieve relevant historical content for each question
-State updates: Continuous summarization, similar to mental event understanding
-Don't replay complete content but use summaries to simulate human rough overviewsSummarize into new overviews to adjust conversation direction, simulating human internal perspectivesActively retrieve relevant history to simulate human associative memoryContinuous mental perspective updates → Automatic summary updates (relevant information retention vs complete history)
-After each conversation turn, humans unconsciously update their current conversation summary based on new information and proceed with the next turn using new perspectivesActive associative memory → Fuzzy search system (automatic memory retrieval)
-For each new question, automatically search relevant content in conversation history, simulating human active association of past discussionsCurrent state focus → Fixed context structure (structured summaries)
-Dynamically adjust current conversation direction, not re-reviewing entire conversation historySimulation ImplementationExcluded options trackingActive associative triggering
-  
-  
-  LLM "Complete Memory" (Non-human conversation method)
-graph TB
-  T1["Turn 1 Conversation"] --> T1_Store["Store: [Q1] + [R1]"]
-  T1_Store --> T2["Turn 2 Conversation"]
-  T2 --> T2_Store["Store: [Q1] + [R1] + [Q2] + [R2]"]
-  T2_Store --> T3["Turn 3 Conversation"]
-  T3 --> T3_Store["Store: [Q1] + [R1] + [Q2] + [R2] + [Q3] + [R3]"]
-  T3_Store --> TN["Turn N Conversation"]
-  TN --> TN_Store["Store: Complete conversation"]
-Turn 1: [question 1] + [response 1]
-Turn 2: [question 1] + [response 1] + [question 2] + [response 2]
-Turn 3: [question 1] + [response 1] + [question 2] + [response 2] + [question 3] + [response 3]
-...
-Turn N: [Complete verbatim conversation record]
-Humans don't completely recall all contentOld irrelevant information interferes with current content generation; humans exclude irrelevant informationNo mechanism for learning from mistakes; gets interfered by irrelevant information in long conversationsLinear token growth leads to conversation length limits; humans don't interrupt conversations because they're too long
-  
-  
-  Human Real Conversation Method Study
-graph TB
-  H_Input["New question input"] --> H_Fuzzy["Fuzzy search history"]
-  H_Fuzzy --> H_Components["Context composition"]
-  H_Components --> H_Summary["Structured summary"]
-  H_Components --> H_Relevant["Relevant history fragments"]
-  H_Components --> H_Question["New question"]
-
-  H_Summary --> H_LLM["LLM response"]
-  H_Relevant --> H_LLM
-  H_Question --> H_LLM
-
-  H_LLM --> H_Response["Generate answer"]
-  H_Response --> H_NewSummary["Update structured summary"]
-  H_NewSummary --> H_Store["Store to memory"]
-Each turn: [Structured current state] + [Relevant history fragments] + [New question]
-
-  
-  
-  Conversation Summary Design
-Core topic of current discussion
-Accumulated retention of all confirmed requirements
-Accumulated retention of all constraint conditions
-Excluded options + reasons
-Accumulated retention of all important data, facts, and conclusions
-Current topic-related questions to clarify
-All important historical discussion points
-
-  
-  
-  Fuzzy Retrieval Algorithm
-Human memory retrieval is typically triggered by keywords, such as: "what we mentioned earlier..."
-This section is designed to calculate high similarity between the latest question and conversation history to provide supplementary reference materials, simulating natural memory trigger mechanisms:Keyword triggering: Immediately associate relevant content upon hearing specific keywordsSemantic Similarity: Comprehend content with similar meaning but different wordingTime Weight: Recent conversations are more easily recalled
-  
-  
-  Multi-dimensional Scoring Mechanism
-Total score = Keyword overlap (40%) + Semantic similarity (40%) + Time weight (20%)
-Use Jaccard similarity to calculate vocabulary matching degreeSupport partial matching and inclusion relationshipsSimplified cosine similarity, calculating common vocabulary proportionSuitable for Chinese-English mixed text processingLinear decay within 24 hours: recent=1.0, 24 hours ago=0.7Fixed score of 0.7 after 24 hours (suitable for long-term continuous conversations)
-  
-  
-  Retrieval Control Mechanism
-: Default 0.3, filters irrelevant content: Return maximum 5 most relevant records: Automatically filter stop words, retain meaningful vocabulary
-  
-  
-  Context Combination Strategy
-Each turn conversation context = [Structured summary] + [Relevant historical conversation] + [New question]
-[x] Structured summary system: Simulate human mental rough summaries[x] : Automatically update cognitive state after each conversation turn (gpt-4o-mini)
-[x] : Avoid repeated mistakes through [x] Token efficiency optimization: Fixed transmission of summaries and new content, no longer passing complete message streams[x] Fuzzy retrieval mechanism: Automatically retrieve relevant historical conversations as reference[x] Multi-dimensional scoring algorithm: Comprehensive relevance assessment of keywords+semantics+time[x] Long conversation optimization: Time weight design suitable for continuous conversation scenarios[ ] Semantic understanding enhancement: Integrate more precise semantic similarity algorithms[ ] Keyword extraction optimization: More intelligent vocabulary extraction and weight allocation[ ] Dynamic threshold adjustment: Automatically adjust relevance thresholds based on conversation content[ ] Conversation type identification: Optimize memory strategies for different conversation scenarios[ ] : Support more LLM providers (Claude, Gemini, etc.)git clone https://github.com/pardnchiu/llm-humanlike-dialogue-simulation 
-llm-humanlike-dialogue-simulation
-
-Create an  file and put your OpenAI API key:
- OPENAI_API_KEY
-Or set environment variable:./llmsd
-./llmsd go run main.go
-go run main.go The program will look for OpenAI API key in the following order:Environment variable  file in current directory file in executable directory
-  
-  
-  Instruction File Configuration
-Defines system instructions for main conversation model (GPT-4o)Affects AI assistant's response style and behaviorIf file doesn't exist, will use blank instructionsDefines system instructions for summary generation model (GPT-4o-mini)Affects conversation summary update logic and formatIf file doesn't exist, will use blank instructions: After execution, displays three-panel interfaceLeft: Conversation history displayTop right: Conversation summary displayBottom right: Question input fieldAfter inputting question, system automatically retrieves relevant historical conversationsAI provides answers based on summary and relevant historySystem automatically updates conversation summary, maintaining memory state (wait for summary update before continuing conversation)This source code project is licensed under the MIT license.]]></content:encoded></item><item><title>Juggling Memory: Arenas in Golang</title><link>https://dev.to/flew1x/juggling-memory-arenas-in-golang-5bm9</link><author>Vladislav Semenkov</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sat, 28 Jun 2025 23:48:58 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Greetings, in a highly loaded environment, large allocation often strongly affects the processing speed of a particular part of the service, in order to more finely control memory, arenas have appeared. How do they turn on? It's simple, you need the  flag. Let's take an example of how memory works with "tiny objects".
-  
-  
-  The route of the ""
-The so-called "" is responsible for "" in Golang. How does it work?In golang, all tiny objects go through the path: tiny allocator -> cache -> span pool (with tiny Span Class) - heap.A , in turn, is considered an object that is less than 16 bytes, if you look at the source code, you can see why you chose such a constant:// Size of the memory block used for combining (maxTinySize) is tunable.
-// Current setting is 16 bytes, which relates to 2x worst case memory
-// wastage (when all but one subobjects are unreachable).
-// 8 bytes would result in no wastage at all, but provides less
-// opportunities for combining.
-// 32 bytes provides more opportunities for combining,
-// but can lead to 4x worst case wastage.
-// The best case winning is 8x regardless of block size.Everything is done primarily for optimization.All these actions are inside a single , so the allocation of a tiny object is very insignificant. The  intervenes only twice per cycle: , at the beginning and end of the marking (), and a concurrent mark runs between them. Simply put, an automatic mark and sweep is used. In turn, in the arena, many objects are poured into one span and given to runtime in one operation, our  does not interfere and we ourselves have to monitor the lifecycle.Arena objects do not participate in  until , where only the pointer is shifted without global structures inside the allocated spanEarlier in the article, I mentioned "", what is it in the classical sense of Go?Span is a continuous sequence of pages, a minimal block that the allocation and  operators operate on inside the heap.When there are no free cells of the required size in the local , it takes a completely free span from the  and divides it with a bump pointer for objects., when it no longer has enough memory, requests a new span from the global page manager . It, in turn, reserves  pages in the page heap.We can discuss this topic in more detail in the following articles, but we won't dwell on it for now.First, let's turn on our arenas:arenas
-Preface: for large objects, go allocates its own mspan (set of pages) and returns come from the global . Let's take an example using bench + arenas:goos: darwin
-goarch: arm64
-pkg: a
-cpu: Apple M3 Pro
-BenchmarkHeapBig-11                 28        1843796832 ns/op           5162629 ns/alloc     10485842133 B/op           10001 allocs/op
-BenchmarkArenaBig-11                 1        1314971541 ns/op            131497 ns/alloc     11800062248 B/op            1445 allocs/op
-PASS
-ok      a       53.578s
-1) each large object in runtime follows the path of a large allocation with span allocation, 10k allocations - 10k sys calls
-2) the arena, in turn, reserves a large span and small allocations for slice headersHere is a sample code that covers the basic API for working with them:go run tiny.go
-first 0 01 12 43 94 165 256 367 498 649 81 len  10
-The arena itself stores a pointer inside itselfIn turn,  calls the runtime_arena_newArena() unsafe.Pointer. Which allocates one shared  across a shared heap.
-  
-  
-  How does the GC see the arena?
-the peculiarity of the arena, as I noted above, is that the  does not scan the arena and does not allow objects to it, because it marks it as .After , the  starts viewing the arena as an object and the arena itself is marked as a the , after the , translates span to idle and memory can be transferred to a regular heap, reuse just happens after the next  cycle.There is another feature related to the fact that it has a , which is needed if the developer does not call , then runtime will catch it.the  call gets the type via reflect.TypeIt takes into account alignment, copies the zero-word and simply shifts the bump pointer.arena.MakeSlice[T](a,len,cap)reserves the backing array with the same bump pointer, but places the slice header in the regular heapto optimize GC inside the chunk: Pointer-full objects grow from bottom to top, Pointer-free objects grow from top to bottom. This gives runtime the right to finish scanning earlier and skip clearing the bitmap for clean memory areas.Copies the type to a regular heap via , zeroing out all connections to the arena.data lives arbitrarily long.the  starts scanning them as an ordinary object.it is also worth considering that if Clone is forgotten or the object is being used after Free, the program crashes with , which makes it easy for us to track such frauds with the past address space.when you need to process large data in one request, for example, a large short-lived buffer and you need to release it all at once.large objects of different sizes, so as not to generate sync.Pool, and as we know, the GC can release them at the wrong moment ;)if we use arenas, it's best to use the build tag, because they may be removed in the future, as written in the comments to the source code themselves.
-  
-  
-  When not to use the arenas?
-multiple fixed buffers,  will do it faster, the bench will show it very wellobjects live longer than the requestand most importantly, the arena is not thread-safe, so it's better to limit it to running it in a single goroutine.I hope you enjoyed this article, if you have any suggestions or improvements on the article, write! I will be grateful!]]></content:encoded></item><item><title>Why I Like Go</title><link>https://dev.to/matronator/why-i-like-go-bc9</link><author>Matronator</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sat, 28 Jun 2025 23:32:29 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[A while back, I wrote an article titled Why I Dislike Go. It was an honest reflection of my frustrations at the time, after trying to use Go in some personal projects. I called out what I saw as shortcomings - verbose error handling, lack of generics (at the time), limited expressiveness, and a rigid design philosophy that felt like it was holding me back more than helping.I've since had the chance to use Go more extensively, and to explore some of its more modern evolutions, especially through  (formerly Go+). With more experience under my belt, I feel it’s only fair to revisit my earlier stance and share how my perspective has evolved. This article is not a retraction, but rather a follow-up - a continuation of my journey with Go, and why I’ve come to  it.
-  
-  
-  The Paradox of Go: Restriction Breeds Simplicity
-One of the things that annoyed me the most originally was Go’s insistence on simplicity. It felt restrictive. I wanted tools for abstraction, generics, custom error types with stack traces, and all the bells and whistles I was used to in languages like TypeScript, C#, or even PHP.But over time, I started to appreciate what Go  let you do. The simplicity isn’t just a constraint - it’s a design decision that leads to consistency, readability, and ease of onboarding for teams. The codebase is boring in the best possible way. After revisiting some Go projects months later, I found them easier to read and understand than many of my TypeScript or C# ones.Go’s philosophy grows on you - and once you start thinking in Go, the clarity is liberating.Since I wrote that original post, generics have landed in Go. While they’re not as powerful or flexible as in Rust or C#, they  very Go-like: simple, focused, and designed to solve specific use cases rather than introduce abstraction for abstraction's sake.They’ve enabled cleaner, more reusable code without sacrificing readability. I still wouldn’t use them everywhere - and Go doesn’t want you to - but when you need them, they’re there. And they work.
-  
-  
-  XGo (Go+): Go’s Friendly Cousin
-One big shift in my attitude came from discovering XGo, the language formerly known as Go+. XGo is like Go’s more expressive younger sibling - it builds on Go’s foundation but introduces a more script-like syntax, better support for mathematical expressions, and a softer learning curve for newcomers.If you’re coming from a scripting or dynamic language background, XGo feels more welcoming, without losing Go’s strong typing and performance. You can write Go-style code, but with less boilerplate and more flexibility. It’s especially great for educational purposes, prototyping, and scientific or data-heavy applications.For me, XGo rekindled my interest in Go by showing me what's possible with a slightly more expressive syntax, while still staying in the Go ecosystem.
-  
-  
-  Tooling and Ecosystem: Fast, Reliable, and Getting Better
-One thing that never needed changing was Go’s tooling. , , and  remain some of the smoothest developer experiences I’ve had. Everything just works, and it works fast.The ecosystem has also matured. With the rise of microservices and containers, Go has firmly cemented itself as a go-to language for backend development. Libraries and frameworks are more plentiful and higher quality than when I first dipped my toes in.
-  
-  
-  Final Thoughts: From Critic to Convert
-So, do I take back everything I said in my old article?Not entirely. I still believe some of the critiques I made were valid - at least for how I felt and coded at the time. But Go is a language that rewards patience. It’s not flashy, but it’s solid. And in a world of over-engineered abstractions, Go’s “boring” approach is starting to feel more like a breath of fresh air.If you bounced off Go in the past, I encourage you to give it another shot. Try it with a fresh mindset. Or better yet, dip your toes into XGo and see how expressive Go’s future might be.You might be surprised - like I was.Have thoughts or similar experiences with Go or XGo? I’d love to hear about them in the comments!]]></content:encoded></item><item><title>Golang: Deep Dive into Reflection Tricks and Libraries</title><link>https://dev.to/shrsv/golang-deep-dive-into-reflection-tricks-and-libraries-amh</link><author>Shrijith Venkatramana</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sat, 28 Jun 2025 17:51:53 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hi there! I'm Shrijith Venkatrama, founder of Hexmos. Right now, I’m building LiveAPI, a first of its kind tool for helping you automatically index API endpoints across all your repositories. LiveAPI helps you discover, understand and use APIs in large tech infrastructures with ease.Reflection in Go lets you inspect and manipulate types, values, and structures at runtime. It’s like having a superpower to peek under the hood of your program while it’s running. This article dives into practical reflection techniques and  to make your Go code more dynamic and flexible. Whether you're building a serializer, debugging, or creating generic utilities, these tips will level up your skills.We’ll cover 7 key areas with examples you can compile and run. Let’s get started!
-  
-  
-  Why Reflection in Go Matters
-Reflection in Go, powered by the  package, lets you examine types and values dynamically. It’s useful for tasks like serialization, testing, or building generic tools when you don’t know types at compile time. Go’s type system is static, so reflection is your go-to for runtime flexibility. However, it’s slower and can make code harder to read, so use it wisely.The  package provides two core types:: Describes a type (e.g., struct fields, methods).: Represents the actual value and allows modification.Let’s explore practical ways to use reflection effectively.
-  
-  
-  Inspecting Structs with reflect.Type
-You can use  to inspect a struct’s fields, methods, or metadata. This is handy for debugging or building tools like ORMs.Here’s an example that prints a struct’s field names and types: gets the type of any value. and  loop through struct fields.Use this for tasks like logging struct details or generating documentation.
-  
-  
-  Modifying Values with reflect.Value
- lets you read and modify values at runtime. This is powerful for updating structs dynamically, like in a generic configuration loader.Here’s an example that updates a struct field based on its name: to modify values ( checks modifiability). finds fields dynamically.Validate inputs to avoid runtime panics.
-  
-  
-  Handling Tags for Serialization
-Struct tags are commonly used for serialization (e.g., JSON, YAML). Reflection lets you read tags to build custom serializers or validators.Here’s an example that extracts JSON tags and validates required fields: retrieves tag values (e.g., , ).Use  to check for zero values.This is great for custom validation or serialization logic.Reflection allows calling methods dynamically, which is useful for plugin systems or testing. The  type’s  and  functions make this possible.Here’s an example that calls a method by name: finds methods dynamically. requires arguments as a .Ensure method signatures match to avoid panics.
-  
-  
-  Comparing Types and Values
-Reflection is great for comparing types and values at runtime, especially in generic libraries. Use  for type comparison and  for value comparison.Here’s an example comparing two structs: compares nested structures (slices, maps, structs).Use  for type checks.Be cautious with  for complex types, as it’s slow.
-  
-  
-  Useful Reflection Libraries
-Several Go libraries simplify reflection tasks. Here’s a table of popular ones:High-performance serializationForm or API input validationParsing JSON/YAML configsHere’s an example using  to convert a map to a struct:Libraries reduce boilerplate and improve performance. is great for config parsing.Check library documentation for advanced features.Reflection is powerful but comes with trade-offs. Here’s a quick breakdown:Reflection is slower than static code due to runtime checks.Code can become complex; use sparingly.Panics are possible if types or fields are invalid. Always validate. (e.g., , ).Use libraries like  for performance-critical code.Limit reflection to cases where static typing isn’t feasible.Here’s an example of safe reflection:
-  
-  
-  When and How to Use Reflection Effectively
-Reflection shines in specific scenarios, but it’s not a one-size-fits-all tool. :Serialization (JSON, YAML).Building generic tools (e.g., ORMs, CLI frameworks).Debugging or logging type information.Code clarity is a priority.Static typing can solve the problem.To use reflection effectively: to prevent panics.Use libraries to simplify complex tasks.Profile your code to catch performance issues.For deeper insights, experiment with the examples above and explore the Go reflect package.
-  
-  
-  Next Steps for Mastering Reflection
-Reflection in Go opens up possibilities for dynamic, flexible code. Start by experimenting with the  package in small projects, like building a custom JSON serializer or a struct validator. Use libraries like  or  to simplify tasks and boost performance. Always validate inputs and profile your code to avoid common pitfalls.By mastering these techniques, you’ll be able to tackle complex problems like plugin systems, generic utilities, or dynamic configurations with confidence. Dive into the examples, tweak them, and see what you can build!]]></content:encoded></item><item><title>Pattern Matching with Glob: Finding Files by Pattern 5/9</title><link>https://dev.to/rezmoss/pattern-matching-with-glob-finding-files-by-pattern-59-23lc</link><author>Rez Moss</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sat, 28 Jun 2025 15:44:00 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[
-  
-  
-  Glob Function Fundamentals
-The  function in Go provides a powerful way to find files and directories using pattern matching. At its core, glob matching allows you to specify file patterns using wildcards and special characters, returning a slice of paths that match your criteria.The glob function operates on the current working directory by default, but you can specify absolute or relative paths in your patterns. It returns two values: a slice of matching file paths and an error. The error handling is straightforward - the only error you'll encounter is , which occurs when your pattern syntax is malformed.Under the hood,  uses the same pattern matching logic as , but extends it to work with file system hierarchies. While  operates on individual path segments, glob can traverse directory structures and match patterns across multiple levels.The function doesn't follow symbolic links and only returns paths that actually exist in the file system. This behavior ensures that your matches correspond to real, accessible files and directories, making it reliable for file operations that follow the glob call.Understanding glob pattern syntax is essential for crafting precise file matching expressions. The pattern language builds on familiar shell globbing conventions but has specific rules and limitations you need to master.
-  
-  
-  Wildcard Characters and Their Meanings
-The asterisk () is your most versatile tool, matching any sequence of characters except the path separator. This makes it perfect for matching file names with varying content but predictable structure.The question mark () matches exactly one character, giving you precise control over variable positions in file names.
-  
-  
-  Character Classes and Ranges
-Square brackets define character classes, allowing you to specify sets or ranges of acceptable characters at a position.Character classes support negation using the caret () as the first character, matching anything except the specified set.
-  
-  
-  Escaping Special Characters
-When you need to match literal wildcard characters, Go's glob implementation uses backslash escaping, though the behavior depends on your operating system.For cross-platform compatibility, consider using  to test individual components when dealing with literal special characters, or restructure your file naming conventions to avoid conflicts with glob metacharacters.The pattern syntax doesn't support regular expression features like quantifiers or alternation. Each pattern element has a specific, limited scope that keeps glob fast and predictable for file system operations.
-  
-  
-  GlobFS Interface Optimization
-The  package introduced the  interface in Go 1.16, enabling file systems to provide optimized glob implementations. This interface allows custom file systems to implement native pattern matching, potentially offering significant performance improvements over the default traversal-based approach.When you use  with a file system that implements , Go automatically detects and uses the native implementation instead of falling back to manual directory traversal.Native glob implementations can dramatically outperform manual traversal, especially on large directory structures. Database-backed file systems, network file systems, and compressed archives can leverage their internal indexing or query capabilities to filter matches without examining every file.The performance difference becomes more pronounced with complex patterns or when searching deep directory hierarchies. Native implementations can often skip entire directory branches or use metadata indexes to accelerate matching.When a file system doesn't implement , Go automatically falls back to a directory walking implementation. This fallback ensures your code works consistently across different file system types without requiring changes.The fallback implementation maintains the same semantic behavior as native implementations, ensuring that switching between file system types doesn't break your application logic. However, you should be aware of potential performance differences when working with large-scale file operations.Testing with both native and fallback implementations helps ensure your glob patterns work correctly across different deployment scenarios and file system configurations.
-  
-  
-  Advanced Pattern Techniques
-Complex file organization scenarios require sophisticated pattern matching approaches that go beyond basic wildcards. Mastering these advanced techniques enables you to handle intricate directory structures and implement precise filtering logic.
-  
-  
-  Multi-Level Directory Patterns
-While standard glob patterns don't support recursive matching with , you can achieve multi-level directory traversal by combining glob with directory walking or using strategic pattern construction.For truly recursive searching, combine glob with  to apply pattern matching at each directory level:
-  
-  
-  Complex Filtering Scenarios
-Real-world applications often require filtering based on multiple criteria. You can chain glob operations or combine them with additional validation logic:Pattern composition allows you to build complex selection criteria by combining multiple glob results:
-  
-  
-  Combining Glob with Other Operations
-Effective file processing often requires combining glob results with sorting, filtering, or transformation operations:These advanced techniques enable you to build robust file discovery systems that can handle complex organizational schemes and varying requirements across different deployment environments.Glob operations interact with the file system, making them susceptible to various runtime conditions. Understanding Go's approach to error handling in glob functions helps you build resilient applications that gracefully handle both pattern validation issues and file system anomalies.
-  
-  
-  I/O Error Ignoring Behavior
-The  function follows a pragmatic approach to I/O errors during directory traversal. When it encounters permission denied errors, temporarily unavailable directories, or other transient file system issues, it silently continues processing rather than terminating the entire operation.This behavior ensures that partial file system access doesn't prevent your application from processing available data. However, you won't receive notifications about skipped directories, so consider logging or monitoring when complete directory access is critical:The only error that  explicitly returns is , which occurs when your pattern contains malformed character classes or invalid escape sequences.Common pattern validation errors include unclosed character classes, invalid ranges, and platform-specific escape sequence issues:For robust applications, implement pattern validation before executing glob operations, especially when patterns come from user input or configuration files:This error resilience strategy ensures your applications remain stable while providing meaningful feedback when pattern construction issues occur, maintaining a clear distinction between syntax errors and runtime file system conditions.Real-world applications benefit from concrete examples that demonstrate glob patterns in common file management scenarios. These examples showcase patterns you'll frequently encounter in system administration, build processes, and application maintenance tasks.System administrators often need to collect log files across multiple applications and time periods. Glob patterns excel at identifying files based on naming conventions and directory structures.For log rotation scenarios, you can target specific file generations or time ranges:
-  
-  
-  Configuration File Discovery
-Applications often need to locate configuration files across multiple possible locations, following standard directory conventions or deployment-specific layouts.Environment-specific configuration discovery handles different deployment scenarios:Build systems generate numerous temporary files and artifacts that require periodic cleanup. Glob patterns help identify and remove these files safely.Age-based cleanup combines glob matching with file modification times:These practical examples demonstrate how glob patterns integrate into real-world workflows, providing reliable file discovery and management capabilities across diverse application domains.]]></content:encoded></item><item><title>Cache Breakdown Prevention with Go’s singleflight</title><link>https://dev.to/leapcell/cache-breakdown-prevention-with-gos-singleflight-2b14</link><author>Leapcell</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 18:22:58 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[When building high-performance services, caching is a key technology for optimizing database load and improving response speed. However, using caching also brings some challenges, among which  is a major issue. Cache breakdown can cause a surge in database pressure, degrade database performance, and in severe cases, even bring down the database and render it unavailable.In Go, the package golang.org/x/sync/singleflight provides a mechanism to ensure that concurrent requests for any specific key are only executed once at the same time. This mechanism effectively prevents cache breakdown issues.This article will delve into the usage of the  package in Go. Starting from the basics of the cache breakdown problem, it will then introduce the  package in detail, demonstrating how to use it to avoid cache breakdown.Cache breakdown refers to a situation where, under high concurrency, a hot key suddenly expires, causing a large number of requests to directly access the database, which can overload the database and even cause it to crash.Common solutions include:Setting hot data to never expire: For some well-defined hot data, you can set it to never expire, ensuring that requests do not bypass the cache due to cache expiration and directly access the database. To prevent all requests from querying the database simultaneously when the cache expires, a locking mechanism can be adopted to ensure that only one request queries the database and updates the cache, while other requests wait until the cache is updated before accessing it. Monitor cache usage in the background, and when the cache is about to expire, update it asynchronously to extend its expiration time.Package singleflight provides a duplicate function call suppression mechanism.This sentence is from the official documentation.In other words, when multiple goroutines attempt to call the same function (based on a given key) at the same time, singleflight ensures that the function is only executed by the first arriving goroutine. The other goroutines will wait for the result of this call and share the result, instead of initiating multiple calls simultaneously.In short, singleflight merges multiple requests into a single request, allowing multiple requests to share the same result. This is the core structure of the singleflight package. It manages all requests and ensures that at any moment, requests for the same resource are only executed once. The Group object does not need to be explicitly created; you can simply declare and use it. The Group struct provides the Do method, which is the main method to merge requests. This method takes two arguments: a string key (to identify the resource) and a function  that executes the actual task. When calling Do, if a request with the same key is already in progress, Do will wait for this request to complete and share its result; otherwise, it will execute  and return the result.The Do method has three return values. The first two are the return values of , of type  and  respectively. The last return value is a boolean, indicating whether the result of Do was shared by multiple calls. This method is similar to Do, but it returns a channel that receives the result when the operation is done. The return value is a channel, meaning we can wait for the result in a non-blocking way. This method is used to delete a key and its associated request records from the Group, ensuring that the next Do call with the same key will execute a new request instead of reusing the previous result. This is the struct type returned by the DoChan method. It encapsulates the result of a request and contains three fields: (interface{}): The result returned by the request. (error): Any error information encountered during the request. (bool): Indicates whether the result was shared with requests other than the current one.Install the singleflight dependency in your Go application with the following command:go get golang.org/x/sync/singleflight
-This code simulates a typical concurrent access scenario: fetching data from the cache, and if the cache misses, retrieving from the database. During this process, the singleflight library plays a crucial role. It ensures that when multiple concurrent requests try to access the same data at the same time, the actual fetch operation (whether from cache or database) is only performed once. This not only reduces database load but also effectively prevents cache breakdown in high concurrency scenarios.The output of the code is as follows:fetch data from cache
-redis: key not found
-fetch data from database
-v: Leapcell, shared: v: Leapcell, shared: v: Leapcell, shared: v: Leapcell, shared: v: Leapcell, shared: As shown, when 5 goroutines concurrently fetch the same data, the data fetch operation is actually performed only once by one goroutine. Furthermore, since all returned shared values are true, it means the result was shared with the other 4 goroutines.When generating keys, we should ensure their uniqueness and consistency. Make sure the key passed to the Do method is unique so that the Group can distinguish between different requests. It is recommended to use a structured naming convention for keys, such as . For example, when fetching user information, the key can be , where  denotes the data type and  is the specific user identifier. For the same request, the generated key should always be consistent, no matter when it is called. This allows the Group to properly merge identical requests and prevents unexpected errors.When calling Group.Do, the first arriving goroutine can successfully execute the  function, while other subsequent goroutines will be blocked. If the blocked state lasts too long, a downgrade strategy may be needed to ensure the system remains responsive. In such cases, we can use Group.DoChan in combination with the  statement to implement timeout control.Below is a simple example demonstrating timeout control:This article first introduced the concept of cache breakdown and its common solutions.Then, it explored the singleflight package in depth, covering its basic concepts, components, installation, and usage examples.Next, it demonstrated how to use singleflight to prevent cache breakdown in high concurrency scenarios through a simulated concurrent access example.Finally, it discussed best practices for designing keys and controlling request timeouts in practice, aiming to help better understand and apply singleflight for optimizing concurrent processing logic.Leapcell is the Next-Gen Serverless Platform for Web Hosting, Async Tasks, and Redis:Develop with Node.js, Python, Go, or Rust.Deploy unlimited projects for freepay only for usage — no requests, no charges.Unbeatable Cost EfficiencyPay-as-you-go with no idle charges.Example: $25 supports 6.94M requests at a 60ms average response time.Streamlined Developer ExperienceIntuitive UI for effortless setup.Fully automated CI/CD pipelines and GitOps integration.Real-time metrics and logging for actionable insights.Effortless Scalability and High PerformanceAuto-scaling to handle high concurrency with ease.Zero operational overhead — just focus on building.]]></content:encoded></item><item><title>Pack Your Go Binary: Embedding Files Made Simple</title><link>https://dev.to/shrsv/pack-your-go-binary-embedding-files-made-simple-131c</link><author>Shrijith Venkatramana</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 16:43:55 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hi there! I'm Shrijith Venkatrama, founder of Hexmos. Right now, I’m building LiveAPI, a first of its kind tool for helping you automatically index API endpoints across all your repositories. LiveAPI helps you discover, understand and use APIs in large tech infrastructures with ease.Embedding files in a Go binary lets you bundle assets like templates, images, or config files directly into your executable. This means  at runtime, simpler deployments, and a single file to ship. Go’s  package, introduced in Go 1.16, makes this straightforward. This post dives into how to use it, with practical examples, trade-offs, and tips to keep your code clean and efficient.We’ll cover , how to use the  package, handling different file types, , and . Each section includes complete, runnable code examples with outputs.
-  
-  
-  Why Embed Files in Your Go Binary?
-Embedding files solves real problems for developers. Instead of juggling external files during deployment, you can pack everything into one binary. This is great for , , or  where you want a single artifact. It reduces complexity, avoids “file not found” errors, and makes your app portable.: One file to deploy, no extra assets.: Files are in memory, reducing disk access.: Works everywhere Go runs, no path issues.Larger binary size (more on this later).Files are read-only (you can’t modify them at runtime).Rebuilding required to update embedded files.
-  
-  
-  Getting Started with the  Package
-The  package is built into Go since version 1.16. It’s simple: you use the  directive to include files or directories, and access them via variables. No external tools or libraries needed.Let’s start with a basic example: embedding a single text file.Create a file  with some text (e.g., “Hello, embedded world!”).Use  above a variable (here, ).The variable  holds the file’s contents as a string.Run  to see the output.The variable must be of type , , or .The  directive must be right above the variable declaration, with no blank lines.Paths are relative to the Go file.This example is simple but shows the core idea. Let’s scale it up.
-  
-  
-  Embedding Multiple Files and Directories
-For real projects, you’ll likely need to embed multiple files or entire directories. The  type lets you treat embedded files like a virtual filesystem. This is perfect for , , or .Here’s an example embedding a directory of text files.Create a  directory with  and .Use  to embed all files in the  directory.Use  to access the files like a filesystem.Use  and  to read file contents.Use  to embed all files in a directory (wildcards are supported). implements the  interface, so you can use standard library functions like .Paths in  are relative to the embedded root.
-  
-  
-  Handling Different File Types
-You can embed any file type—text, images, JSON, HTML, etc. The trick is choosing the right variable type:  for single text files,  for binary files, or  for multiple files or complex structures.Let’s embed an image and a JSON config file, then use them in a program.Create an  directory with  and .Embed both files using  with .Read and parse the JSON file using .Read the image file as bytes (useful for serving in a web app).For binary files like images, use  or  to avoid encoding issues.JSON files are great for configs; parse them into structs for type safety.Images can be any format (PNG, JPEG, etc.), but you’ll need appropriate libraries to process them (e.g., ).
-  
-  
-  Real-World Use Case: Serving Embedded Web Assets
-A common use case is embedding web assets for a simple HTTP server. Let’s build a small web server that serves an embedded HTML file and a CSS file.Create a  directory with  and .Embed the directory using .Set up an HTTP server to serve files from .Run  and visit .Use  for production to handle caching and ranges.Set proper  headers for CSS, JS, or images.This approach is ideal for small, self-contained web apps.
-  
-  
-  Best Practices and Trade-Offs
-Embedding files is powerful, but it comes with trade-offs. Here’s a quick guide to use it effectively.Single file, easy to distributeCan grow large with many/big filesNo external file managementRequires rebuild to update filesCLI tools, small web serversNot ideal for huge assets (e.g., videos): Embed only what’s necessary to keep binary size manageable.: Use clear directory structures (e.g., , ) for clarity.: Minify CSS/JS or compress images before embedding.: Track embedded files in git to avoid surprises.: Verify embedded files work as expected in production.If files change frequently (use a config server or database).For very large files (e.g., videos), consider external storage.
-  
-  
-  Next Steps for Embedding Files
-Embedding files in Go binaries with the  package is a game-changer for building portable, self-contained applications. You’ve seen how to embed single files, directories, and different file types, plus a real-world web server example. The key is to balance binary size with convenience and use  for flexibility.Try embedding assets in your next CLI tool or web server. Experiment with different file types and check the binary size with  after building. If you’re curious about advanced use cases, explore combining  with libraries like  for dynamic pages or  for processing embedded images.]]></content:encoded></item><item><title>Inside Nixopus: How We Manage Our Database Migrations?</title><link>https://dev.to/shravan20/inside-nixopus-how-we-manage-our-database-migrations-3i34</link><author>Shravan Kumar B</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 13:44:31 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[ are often the unsung heroes of software application development. They work silently in the background, ensuring that your database schema evolves safely alongside your application code. Yet for many teams, this is a major source of stress and uncertainty. In this blog, we will explore how we have set up the migration framework for Nixopus. This has become a pivotal step in our developmental and self-host workflow.To start with, let us first explore and understand what we mean by . As we always do, let us take an analogy.We often use different database systems like MySQL, PostgreSQL, MongoDB, etc, for data persistence. These data are stored in the form of Tables having columns and rows.As the application grows, the number of tables grows, and the data defined at each table might vary and change; hence, it is very important to keep track of these changes.Tables are at the database system level, whereas at the programmatic level, we maintain them with something called . Like a house blueprint that dictates where rooms, doors, and wiring go, a schema simply defines how the data is organized and connected.Now, let's imagine that you decide to change the blueprint mid-build, to add a new room or window, you need to carefully make changes to the existing blueprint such that you don’t end up collapsing the walls down.This problem is addressed at the schema level to ensure the changes in the existing tables, which may be in the form of adding new columns, altering the type of existing columns, or adding new tables, are handled through what we call When we started building Nixopus, we quickly realized that database schema management would be critical to our success in self-hosting and local development setups. We planned with an expectation set that eventually we would see multiple developers working on different features, frequent deployments, and the need to support both development and production environments, which would require a very streamlined process to handle database migration.We had aligned on the following factors that our migration system would have to adhere to:: Migrations must execute consistently across all envs: No manual intervention should be required during deploymentsForward & Backward Compatible: Ensure easy rollback scenarios: Organization of migrations by domain or featureMany existing tools either lacked the flexibility we needed or came with unnecessary complexity, be it in terms of testability or adding rollbacks in case of errors, etc.Hence, we decided to build our migration system tailored to our needs and requirements using a tool called Bun ORM.To those who are not aware of the terminology ORM, let me give a glimpse of it; ORM, otherwise called as , is like a waiter at a restaurant, to who you tell what you want, he/she goes to kitchen(I mean database), then brings back your order(data) as perfectly plated objects in ready to use form.Without ORM, you would have been presented with raw vegetables and ingredients straight from the kitchen (of course, by that I mean the database), and you would have to do all the cooking yourself, which means writing and managing every query and data transformation.Coming back, we have built our migration system around a simple yet , where a pair of SQL files represents every database change:1) Applying the change (up migrations)
-2) Rolling it back (down migrations)This approach has helped our system to easily take care of schema evolution and database versioning.The migration system follows a defined life cycle:1) : The system scans the  directory2) : Migration files are parsed and paired (up/down migrations)3) : Migrations are sorted by their numeric IDs4) : The system compares file system migrations with applied migrations in the database5) : Pending migrations are executed in transactions6) : Successfully applied migrations are recorded in the migration tableNow that you know an overview of our setup and how it works, you might wonder what actually sets our approach apart? Fair enough!!!!1) : Instead of throwing all migrations into a single directory, we have organized them by domain:api/migrations/
-├── applications/   # App deployment features
-├── audit/          # Audit logging and compliance
-├── auth/           # Authentication & authorization
-├── containers/     # Container management
-├── domains/        # Domain and DNS management
-├── feature-flags/  # Feature toggle system
-├── integrations/   # Third-party integrations
-├── notifications/  # Notification system
-├── organizations/  # Multi-tenancy & organizations
-├── rbac/           # Role-based access control
-└── users/          # User management and profiles
-This structure makes it easy for us to find and create migrations related to specific work or flow, helping us avoid confusion or conflicts.2) Automatic migration execution on application startup: One of the key design decisions was to make migrations completely automatic. When the application starts, the migration system runs before any other initialization. This approach eliminated the need for separate deployment and ensures that the database schema is always up to date when the application starts.3) Atomic, Transactional Migrations: Every migration runs inside a database transaction, ensuring atomicity. If any part of a migration fails, the entire migration is rolled back, ensuring that the schema remains fully consistent.4) : Every migrations have 2 files: (applies the change) (rolls back the change)This ensures that we can always roll back changes if something goes wrong.As we are close to concluding the deep dive into the first of many articles of the  series, I would like to highlight some of the major learnings and key takeaways:1) Keep each migration small and focusedfor easier review or rollback.
-2) Ensure to keep a  for every , ensuring roll backs are easy.The key insight is that sometimes the best tool is the one you build yourself. By understanding our specific needs and constraints, we were able to set up our migration system that fits perfectly into our development workflow and easy self-hosting.The project, as we publish this article, is in the Alpha stage. You can check it out on GitHub and see for yourself.To sum it up, the approach helped us change schema changes from a headache to a reliable process.If you would like to get involved or have questions, join our Discord community for real-time support and feedback. You can self-host Nixopus today, subscribe for updates, and stay tuned as we roll out new features and stability enhancements.We have recently collaborated with , a reliable VPS provider based in Sweden, to bring you an exclusive deal of  recurring on any VPS plan. Whether you choose to self-host Nixopus or deploy containerized apps, this is the perfect opportunity to secure rock-solid infrastructure at a Discord Community.Stay tuned for more freshly brewed content.That's all for now. Thank you for reading.Signing off until next time.]]></content:encoded></item><item><title>Inside Nixopus: How We Manage Our Database Migrations?</title><link>https://dev.to/zhravan/inside-nixopus-how-we-manage-our-database-migrations-3i34</link><author>Shravan Kumar B</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 13:44:31 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[ are often the unsung heroes of software application development. They work silently in the background, ensuring that your database schema evolves safely alongside your application code. Yet for many teams, this is a major source of stress and uncertainty. In this blog, we will explore how we have set up the migration framework for Nixopus. This has become a pivotal step in our developmental and self-host workflow.To start with, let us first explore and understand what we mean by . As we always do, let us take an analogy.We often use different database systems like MySQL, PostgreSQL, MongoDB, etc, for data persistence. These data are stored in the form of Tables having columns and rows.As the application grows, the number of tables grows, and the data defined at each table might vary and change; hence, it is very important to keep track of these changes.Tables are at the database system level, whereas at the programmatic level, we maintain them with something called . Like a house blueprint that dictates where rooms, doors, and wiring go, a schema simply defines how the data is organized and connected.Now, let's imagine that you decide to change the blueprint mid-build, to add a new room or window, you need to carefully make changes to the existing blueprint such that you don’t end up collapsing the walls down.This problem is addressed at the schema level to ensure the changes in the existing tables, which may be in the form of adding new columns, altering the type of existing columns, or adding new tables, are handled through what we call When we started building Nixopus, we quickly realized that database schema management would be critical to our success in self-hosting and local development setups. We planned with an expectation set that eventually we would see multiple developers working on different features, frequent deployments, and the need to support both development and production environments, which would require a very streamlined process to handle database migration.We had aligned on the following factors that our migration system would have to adhere to:: Migrations must execute consistently across all envs: No manual intervention should be required during deploymentsForward & Backward Compatible: Ensure easy rollback scenarios: Organization of migrations by domain or featureMany existing tools either lacked the flexibility we needed or came with unnecessary complexity, be it in terms of testability or adding rollbacks in case of errors, etc.Hence, we decided to build our migration system tailored to our needs and requirements using a tool called Bun ORM.To those who are not aware of the terminology ORM, let me give a glimpse of it; ORM, otherwise called as , is like a waiter at a restaurant, to who you tell what you want, he/she goes to kitchen(I mean database), then brings back your order(data) as perfectly plated objects in ready to use form.Without ORM, you would have been presented with raw vegetables and ingredients straight from the kitchen (of course, by that I mean the database), and you would have to do all the cooking yourself, which means writing and managing every query and data transformation.Coming back, we have built our migration system around a simple yet , where a pair of SQL files represents every database change:1) Applying the change (up migrations)
-2) Rolling it back (down migrations)This approach has helped our system to easily take care of schema evolution and database versioning.The migration system follows a defined life cycle:1) : The system scans the  directory2) : Migration files are parsed and paired (up/down migrations)3) : Migrations are sorted by their numeric IDs4) : The system compares file system migrations with applied migrations in the database5) : Pending migrations are executed in transactions6) : Successfully applied migrations are recorded in the migration tableNow that you know an overview of our setup and how it works, you might wonder what actually sets our approach apart? Fair enough!!!!1) : Instead of throwing all migrations into a single directory, we have organized them by domain:api/migrations/
-├── applications/   # App deployment features
-├── audit/          # Audit logging and compliance
-├── auth/           # Authentication & authorization
-├── containers/     # Container management
-├── domains/        # Domain and DNS management
-├── feature-flags/  # Feature toggle system
-├── integrations/   # Third-party integrations
-├── notifications/  # Notification system
-├── organizations/  # Multi-tenancy & organizations
-├── rbac/           # Role-based access control
-└── users/          # User management and profiles
-This structure makes it easy for us to find and create migrations related to specific work or flow, helping us avoid confusion or conflicts.2) Automatic migration execution on application startup: One of the key design decisions was to make migrations completely automatic. When the application starts, the migration system runs before any other initialization. This approach eliminated the need for separate deployment and ensures that the database schema is always up to date when the application starts.3) Atomic, Transactional Migrations: Every migration runs inside a database transaction, ensuring atomicity. If any part of a migration fails, the entire migration is rolled back, ensuring that the schema remains fully consistent.4) : Every migrations have 2 files: (applies the change) (rolls back the change)This ensures that we can always roll back changes if something goes wrong.As we are close to concluding the deep dive into the first of many articles of the  series, I would like to highlight some of the major learnings and key takeaways:1) Keep each migration small and focusedfor easier review or rollback.
-2) Ensure to keep a  for every , ensuring roll backs are easy.The key insight is that sometimes the best tool is the one you build yourself. By understanding our specific needs and constraints, we were able to set up our migration system that fits perfectly into our development workflow and easy self-hosting.The project, as we publish this article, is in the Alpha stage. You can check it out on GitHub and see for yourself.To sum it up, the approach helped us change schema changes from a headache to a reliable process.If you would like to get involved or have questions, join our Discord community for real-time support and feedback. You can self-host Nixopus today, subscribe for updates, and stay tuned as we roll out new features and stability enhancements.We have recently collaborated with , a reliable VPS provider based in Sweden, to bring you an exclusive deal of  recurring on any VPS plan. Whether you choose to self-host Nixopus or deploy containerized apps, this is the perfect opportunity to secure rock-solid infrastructure at a Discord Community.Stay tuned for more freshly brewed content.That's all for now. Thank you for reading.Signing off until next time.]]></content:encoded></item><item><title>Go Project Scaffolding Guide: A Choice That Earned My Team&apos;s Rave Reviews</title><link>https://dev.to/zhufuyi/go-project-scaffolding-guide-a-choice-that-earned-my-teams-rave-reviews-i03</link><author>zhuyasen</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 10:44:18 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[When developing with Go, who hasn't been through the wringer with frameworks like the standard library's HTTP, Gin, Echo, Iris, Fiber, Beego, GoFrame, gRPC, Go-Micro, Go-Zero, or Kratos? They all claim to have great performance and powerful features, but in practice, there are always those "not-so-great" moments, right?It's like dating. At first, everyone seems wonderful, but over time, little frictions and pain points start to surface. Today, I'm going to share how, after trying them all, I finally found my "dream framework" — Sponge — and just how much of a game-changer it is!
-  
-  
-  The Pains We've All Endured
-Before I found Sponge, my Go development life was a mix of pain and pleasure.
-  
-  
-  Gin, Echo: Freedom is Great, But You Have to Build Everything from Scratch
-Gin and Echo are old friends to us Gophers—lightweight, fast, and easy to get started with. But the price of freedom is that you have to build a lot of things yourself.Want to write a simple CRUD? Okay, start by defining a , writing the , , and , then registering the routes. After all that "grunt work," half the day is gone. It's manageable for small projects, but as projects grow, the code structure starts to become a "wild west," with different people writing in wildly different styles.Let me show you a "familiar" scene. Writing a user creation endpoint with Gin, does it feel like you're copy-pasting this in every project?This is just the simplest example. If you add database operations, logging, parameter validation, and error handling... you can imagine the amount of code and repetitive labor involved. Every time I started a new project, it felt like reinventing the wheel. It was exhausting.
-  
-  
-  Go-Micro, Go-Zero, Kratos: Microservices are Great, But a Bit "Heavy"
-To solve the problems above, a batch of excellent "heavyweight" contenders emerged in the community, like go-micro, go-zero, and kratos. They provide comprehensive microservice governance capabilities, including everything from RPC, service discovery, and configuration centers to distributed tracing.But their "pain" lies here as well:: To use them effectively, you have to spend a lot of time learning the framework's philosophy and its various components. For projects that need to get started and iterate quickly, this is a bit too "heavy.""Black box" code generation: Although they offer code generation tools, the generated code can sometimes be too "magical." When a problem occurs, it's hard to know where to start debugging. And for developers like us who are code purists, the feeling of not having full control over the code... you get it.Bloated project structure: A simple service might generate a huge pile of files and directories. Sometimes it feels like using a sledgehammer to crack a nut.
-  
-  
-  Discovering Sponge: My "Game-Changer" Moment!
-Just when I was about to lose my mind oscillating between "reinventing the wheel" and "being held hostage by a framework," I discovered .Sponge perfectly balances  and , solving all the pain points mentioned above.
-  
-  
-  1. "Idiot-Proof" Code Generation, Say Goodbye to Repetitive Labor
-What amazed me most about Sponge is its powerful code generation capability. It doesn't just generate some template code; it's truly one-click generation of a complete project!  Define your database table structure (e.g., in an SQL file).  Or define your API interface (in a Protobuf file).Then, with just a few clicks on Sponge's provided , a complete, production-ready backend service code is generated!Let's take the same user creation example. How do you do it with Sponge?: Using MySQL as an example, write a  file and import it into your MySQL service. The process is similar for other databases (like PostgreSQL, MongoDB, etc.).: In Sponge's web interface, select "Generate Web Service from SQL," enter your MySQL DSN, and choose the table.: Click "Generate Code" and download the zip file.After unzipping, you get a complete, runnable project! It includes: () (auto-generated, for direct online debugging) (request handling) (business logic) (database CRUD operations, based on GORM)A complete project structure, , ...You read that right. Without writing a single line of Go code, a fully functional CRUD service is ready! The development efficiency is off the charts!
-  
-  
-  2. Modular, "Lego-like" Architecture: Flexible and Decoupled
-The code generated by Sponge is not a pile of "spaghetti code." It adopts a very clear layered and decoupled design.Each module is like a Lego block that you can freely combine and extend. For example: No problem. The DAO layer is interface-based, so you can easily replace it with any ORM you like.Want to add custom logic? The Service layer has already left a "template" for you. You just need to fill in the core business logic, without worrying about framework chores.Want to migrate from a monolith to microservices? A Sponge-generated project is naturally a microservice architecture, making it easy to split and combine services.This design ensures development efficiency while giving developers immense freedom and a sense of control. The code is "your" code, not the "framework's" code.
-  
-  
-  3. Rich Built-in Components, Out of the Box
-Sponge is more than just a code generator; it's an "all-in-one suite.": Built on Gin, allowing you to seamlessly use all of Gin's middleware and ecosystem.: Supports gRPC and can generate a gRPC Gateway with one click, enabling your gRPC service to support HTTP calls simultaneously.: Integrates essential microservice components like service discovery, circuit breaking, rate limiting, distributed tracing, and monitoring.: Redis, MongoDB, Kafka, RabbitMQ... they're all pre-packaged and ready to use out of the box.With Gin, I used to have to find, integrate, and wrap each of these libraries myself. Now with Sponge, I just enable them in the configuration file. It's incredibly convenient!
-  
-  
-  Conclusion: Why I'm Raving About Sponge
-Returning to the original question, after looking at so many Go frameworks, why did I ultimately choose Sponge?For individual developers and startups: In the world of software, speed is king. Sponge lets you build product prototypes and validate ideas at maximum speed, allowing you to focus on core business logic instead of repetitive grunt work.For medium to large teams: Sponge unifies project structure and development standards, lowering the learning curve for new members and improving team collaboration. Its high-cohesion, low-coupling design also makes projects easier to maintain and extend.For Gophers who strive for excellence: Sponge has no "black magic." The generated code is clean and standardized, allowing you to enjoy high-efficiency development while still having complete control over your code and learning excellent architectural design principles from it.Of course, no framework is a perfect silver bullet. But Sponge truly won me over. It's like an experienced senior developer who takes care of all the dirty work for you, so you can focus on the creative tasks.If you, like me, are tired of wavering between different frameworks and fed up with day-to-day repetitive labor, I highly recommend giving Sponge a try. Head over to its GitHub repository, run the examples, and trust me, you'll find yourself shouting the same thing I did: ]]></content:encoded></item><item><title>CR1632: Hogwarts’ Unseen Power Charm for Keys, Castles &amp; Cosmic Journeys</title><link>https://dev.to/ersajay/cr1632-hogwarts-unseen-power-charm-for-keys-castles-cosmic-journeys-5b96</link><author>ersajay</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 06:33:38 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[The Leaky Cauldron’s Silver Secret
-On a rainy Hogsmeade evening, I found myself huddled at the Leaky Cauldron, nursing a Butterbeer, when the bartender—old Tom, who knows more about gadgets than most wizards—slid something across the bar. A tiny silver disk, no bigger than a Galleon, glinted under the firelight.
-“That’s a CR1632 battery,” he said, grinning. “Not just any coin, mind you. It’s the Wand Core of modern magic—powers Tesla key fobs, hearing aids, even Mars rovers. Small as a knut, but tougher than a Basilisk’s scales.”
-Intrigued, I leaned in. This wasn’t just metal and lithium—it was a CR1632, the unsung hero of compact power. Let’s unmask its wizarding secrets.What Is a CR1632? (A Power Potion, Not a Coin)
-The CR1632 is Hogwarts’ answer to “small but mighty.” At 16mm wide and 3.2mm thick (thinner than a Bertie Bott’s Every Flavor Bean), it packs 120mAh of lithium-manganese magic into a leak-proof shell. Here’s why it’s no ordinary battery:Leak-Proof: No corrosive surprises—unlike that time Ron tried brewing Polyjuice Potion in a cracked cauldron.
-Temperature Toughness: Works from -30°C (Hogsmeade’s iciest winters) to +60°C (the Sahara’s Furnunculus-hot sands).
-Stable Voltage: Holds 3V until empty, like a Pensieve clinging to memories—no sudden drops, no fizzles.Real-World Magic: Tesla Model 3 key fobs rely on CR1632s to survive parking-lot tantrums and Baby Driver imitations. It’s the Disillusionment Charm of batteries: invisible, but essential.CR1632 vs. the Imposters: Why Size (and Magic) Matters
-Not all “equivalent” batteries are created equal. Let’s sort the Gryffindors from the Dementors:CR1620 & CR1616: Thinner cousins (2.0mm and 1.6mm thick), but they’re like Wingardium Leviosa that fizzles. Lower capacity means they die faster—fine for calculators, but useless for Tesla keys or hearing aids. Stick to CR1632 unless your gadget’s manual explicitly says “It’s okay, really.”CR2032: Larger (20mm wide, 3.2mm thick) and higher capacity (240mAh), but it’s the Slytherin of the bunch. Too wide to fit in CR1632 slots—imagine jamming a Marauder’s Map into a matchbox. Disaster.Roast Alert:
-CR1620 (squeaking): “I’m cheaper!”CR1632 (calm, like Dumbledore): “I’m in your Tesla key. You’re in a calculator. Bye.”CR1632: The Power Charm of a Thousand Realms
-From Diagon Alley to the stars, CR1632 powers magic you’d never guess:Automotive (The Knight Bus of Tech):Tesla Key Fobs: Survives Fast & Furious key spins and toddler experiments (no “Riddikulus” for dead fobs).
-TPMS Sensors: Judges your parallel parking in BMWs—like a Marauder’s Map for tires, muttering, “Mischief managed… poorly.”Medical (St. Mungo’s Lifeline):Blood Glucose Monitors: Powers care in German hospitals—no “404 Error: Blood Sugar” for diabetics.
-Hearing Aids: Keeps Grandma’s gossip alive (and your ear canals safe from Muffliato).Industrial (Goblin Mines of Innovation):Farming Sensors: Tracks soil moisture in India’s monsoons—like Scourgify for data, turning chaos into clarity.
-Factory Robots: Runs 24/7 in Shanghai’s smart factories—no unionizing, just loyalty (like House-Elves with better benefits).Space (The Forbidden Forest of the Cosmos):NASA Rovers: Tested in Mars-simulated -40°C labs (Duracell? Expelliarmus. CR1632 laughs at cosmic frost).Where to Find Your CR1632 (Avoid Knockturn Alley Fakes)
-In 2025, shop like a wizard—no dodgy Knockturn Alley batteries:Retail Chains: Walmart or Target (electronics aisle, near Fizzing Whizbees).
-Auto Stores: AutoZone (ask for “Tesla key fob stones”—they’ll know).
-Pharmacies: CVS (hearing aid section—Grandma’s secret stash).Amazon: Panasonic CR1632 (10-pack, 6 Galleons/$6)—trusted as Ollivander’s wands.
-Specialist Sites: Ersaelectronics.com (industrial-grade, goblin-approved for tough jobs).Pro Tip: Avoid gas station brands—they’re like Gilderoy Lockhart: all show, no magic. Stick to Panasonic (Arctic-ready), Energizer (Toyota’s choice), or LiYuan (China’s -40°C champion).Why CR1632 Outlasts the Rest (It’s All in the Alchemy)
-CR1632 isn’t just a battery—it’s a Felix Felicis of power:Voltage Stability: Holds 3V until empty, while alkaline batteries drop like a Dementor’s shadow (we’ve all been there).
-Leak-Proof Design: Sealed tighter than Gringotts vaults—no acid spills (unlike that time Hermione’s cauldron exploded).
-Low Self-Discharge: Loses <1% charge/year—perfect for fire alarms (no “Incendio” without warning).Case Study: Philips’ CR1632-powered bike lights last 5 years in Amsterdam’s rain—like Lumos Maxima that never fades.Brand Battle: The Wands of Power Stones
-Not all power stones are made equal. Here’s who to trust:Panasonic: The Ollivander of batteries. Arctic-ready (125mAh at -40°C), but pricier (0.5 Galleons/unit). Worth it for extreme cold.LiYuan (China): The Weasley of the bunch—cheap (0.2 Galleons/unit), works from -40°C to +85°C. Great for budgets, but skip if you need global warranty.Energizer: Trusted by Toyota, like Hedwig delivering mail—reliable, but only in bulk (10+ packs).Pro Tip: Need Siberian winters? LiYuan’s CR1632H variant outperforms Panasonic—like a Protego against frost.The Future: CR1632 Among New Spells
-What’s next for our tiny power charm?AI Wearables: Powers AR glasses for metaverse meetings (no mid-chat “Obliviate”).
-Smart Cities: Fuels sensors in Tokyo’s traffic lights (judging your jaywalking—Petrificus Totalus for rule-breakers).
-Lunar Bases: Backup power for moon airlocks (because Oxygen Not Included isn’t a game anymore).Mic Drop: Hoard CR1632s now. Future retro gamers will trade Golden Snitches for your stash.Conclusion: The Unseen Hero of Magic
-CR1632 isn’t flashy. It doesn’t cast Expecto Patronum or brew Polyjuice Potion. But it’s the reason your Tesla key works, your grandma hears gossip, and Mars rovers send back photos.
-Next time you replace one, whisper, “Thanks, little stone.” It’s the least you can do for a battery that keeps the magic of modern life alive.Written by a witch who once mistook a CR1632 for a Galleon. (Spoiler: It didn’t buy Butterbeer, but it powered a toy broom. Close enough.)
-🔋 Some magic isn’t in wands—it’s in the stones that keep the world turning.]]></content:encoded></item><item><title>How Keploy Transformed My API Testing Experience During Their Fellowship Program</title><link>https://dev.to/pratik_kotal/how-keploy-transformed-my-api-testing-experience-during-their-fellowship-program-42ef</link><author>Pratik Kotal</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 05:20:07 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hey everyone! 👋
-I recently completed building CodeSentry as part of the Keploy API Fellowship program, and I wanted to share how this experience completely changed my perspective on API testing. You can check out the project on GitHub if you're interested.
-  
-  
-  The Testing Challenge I Faced
-CodeSentry is a comprehensive code analysis API built with Go and MongoDB. It has multiple endpoints for different types of analysis - security checks, complexity analysis, style validation, and more. Each endpoint handles different request formats and returns detailed analysis results.
-As I was building these features during the fellowship, I quickly realized that testing was becoming a major bottleneck. Writing comprehensive test cases manually meant:Creating detailed JSON payloads for every scenarioWriting assertions for complex response structuresTesting various error conditions and edge casesEnsuring database interactions work correctlyValidating the analysis logic for different programming languages
-I found myself spending way more time writing and maintaining tests than actually developing the core functionality.
-  
-  
-  Discovering Keploy's Power
-Since this was a Keploy fellowship project, I had the opportunity to really dive deep into their testing platform. What I discovered was genuinely impressive.
-Keploy offers multiple ways to generate test suites, and I got to experience all of them:Recording live interactions: Simply use your API normally, and Keploy captures everything in the backgroundOpenAPI schema import: Upload your API specification and generate tests automaticallyBase URL crawling: Point Keploy at your API's base URL and let it discover and test endpointscURL command conversion: Paste existing cURL commands and instantly convert them to test casesThe Keploy dashboard made this incredibly intuitive. I could literally paste my CodeSentry API's base URL (http://localhost:8080/api/v1) for local testing, and within minutes, it had discovered all my endpoints and generated comprehensive test suites for each one.
-  
-  
-  Dashboard-Based Test Generation
-What really impressed me was how the Keploy dashboard streamlined test suite generation using three key components:
-Base URL + OpenAPI Schema + cURL Commands = Complete Test Suite
-The process was incredibly straightforward:I provided my CodeSentry API's base URL (http://localhost:8080)
-Uploaded my existing OpenAPI schema documentation
-Added the cURL commands I had been using for manual testingWithin minutes, the dashboard combined all three components to generate comprehensive test suites for my entire API. It wasn't three separate approaches - it was three pieces of information that Keploy used together to create complete test coverage automatically.A Concrete Example:
-Here's what really sold me on the approach. I was testing the main analysis endpoint with a code snippet that contained security vulnerabilities:curl -X POST http://localhost:8080/api/v1/analyze \
-  -H "Content-Type: application/json" \
-  -d '{
-    "code": "func main() {\n    password := \"admin123\"\n    if user == \"admin\" {\n        fmt.Println(\"Welcome admin\")\n    }\n}",
-    "language": "go",
-    "options": {
-      "check_security": true,
-      "check_style": true,
-      "check_complexity": true,
-      "check_metrics": true
-    }
-  }'
-Instead of manually writing test cases to verify that the API correctly identifies hardcoded credentials, detects style issues, and calculates complexity metrics, I had multiple options:Live recording: Make the request once and let Keploy capture itcURL conversion: Paste this exact cURL command into the dashboard and get an instant test caseSchema validation: If this endpoint was in my OpenAPI spec, tests were auto-generated with proper validationAll three approaches took less than a minute and produced comprehensive test coverage that would have taken hours to write manually.
-  
-  
-  Seamless CI/CD Integration
-One of the most valuable aspects of the fellowship was learning how to integrate Keploy into a proper development workflow. The CI/CD integration was straightforward and incredibly effective.
-I added a GitHub Actions workflow that runs all Keploy-generated tests on every push:      - name: Install Keploy CLI
-        run: |
-          curl --silent -L https://keploy.io/ent/install.sh | bash
-
-      - name: Run Keploy Test Suite
-        run: |
-          export KEPLOY_API_KEY=${{ secrets.KEPLOY_API_KEY }}
-          keploy test-suite --app=dcfa8d58-e06c-449f-baa1-6a239e95e616 --base-path http://localhost:8080/api/v1 --cloud
-Now every code change is automatically validated against real usage patterns. This caught several regression issues that would have been difficult to identify with traditional unit tests.The difference was dramatic across all test generation methods:Test creation time: From hours per endpoint to literally minutes for entire API suites
-Coverage completeness: Base URL discovery found endpoints I had forgotten to test manually
-Schema consistency: OpenAPI import ensured tests matched documentation perfectly
-Developer workflow: cURL conversion meant existing debug commands became permanent tests
-Test maintenance: Essentially zero - tests update automatically as the API evolves
-Bug detection: Identified 3 critical regressions in the first week that manual tests missedThe dashboard provided clear visibility into test coverage and results, making it easy to identify gaps and track API health over time.
-  
-  
-  What Makes Keploy Different
-After working with it extensively during the fellowship, here's what stands out:Context-aware recording: It doesn't just capture HTTP requests - it understands database states, external dependencies, and the complete application context.Zero learning curve: If you can make API calls, you can create tests. No special syntax or frameworks to learn.Real-world accuracy: Tests reflect how your API actually behaves in production scenarios.Automatic maintenance: As your API evolves, the tests evolve with it.
-  
-  
-  Fellowship Program Benefits
-Being part of the Keploy fellowship provided several advantages:Hands-on mentorship: Direct guidance on best practices for API testingReal project experience: Building a complete application with proper testing infrastructureCommunity support: Access to other fellows working on similar challengesIndustry exposure: Understanding how testing fits into modern development workflowsKeploy isn't a silver bullet. There are still scenarios where custom test logic is necessary, particularly for complex business rules or very specific edge cases. But for the majority of API testing needs - especially the tedious, repetitive parts - it eliminates significant overhead.
-The Chrome extension is also quite useful for testing web applications that interact with APIs, allowing you to capture real user workflows and turn them into automated tests.
-  
-  
-  Recommendations for Other Developers
-If you're working on API-heavy projects and finding testing to be a time sink, I'd strongly recommend trying Keploy. Start with one or two endpoints to get familiar with the workflow, then gradually expand coverage.
-For students or early-career developers, I'd also suggest looking into their fellowship program if they offer it again. It's an excellent way to gain practical experience with modern testing approaches while building something meaningful.CodeSentry now has comprehensive API test coverage with minimal maintenance overhead. The project includes endpoints for security analysis, complexity calculation, style checking, and result management - all thoroughly tested through Keploy-generated test suites.
-You can see the integration results and test coverage in the project's GitHub repository. The README includes examples of the test outputs and CI/CD pipeline integration.
-This fellowship experience has fundamentally changed how I approach API development and testing. Having confidence that every deployment is properly validated makes development much more enjoyable and productive.]]></content:encoded></item><item><title>Mastering Go Modules: Create, Publish, Conquer! 🚀</title><link>https://dev.to/tavernetech/mastering-go-modules-create-publish-conquer-4g34</link><author>Taverne Tech</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 01:20:33 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Module Genesis: Creating Your First Go ModuleGoing Public: Publishing Your Digital OffspringThe Art of Consumption: Using Modules Like a ProPicture this: You've just written the most beautiful Go code of your career, and now you want to share it with the world (or at least with your future self). But wait—how do you package it properly? How do you make sure others can actually use it without pulling their hair out? Welcome to the wonderful world of ! 🎉 If you remember the dark ages of GOPATH (and if you don't, consider yourself lucky), you'll appreciate how modules transformed Go development from a organizational nightmare into a dependency management dream.In this guide, we'll journey through the three sacred stages of module mastery: creating your digital offspring, sending them out into the wild, and consuming others' creations without breaking everything. Buckle up!
-  
-  
-  1. Module Genesis: Creating Your First Go Module 🌱
-Remember when organizing Go code meant stuffing everything into a single GOPATH folder? It was like trying to organize your entire digital life in one Downloads folder—technically possible, but absolutely terrifying. Go modules changed everything when they landed in Go 1.11 (though they didn't become the default until Go 1.13—because even programming languages need time to build confidence). Here's a fun fact: over 89% of Go projects now use modules, making GOPATH as relevant as a floppy disk at a cloud computing conference.
-  
-  
-  The Birth Certificate: go.mod
-Creating a module is like registering your code's birth certificate. Let's see it in action:awesome-calculator
-awesome-calculator
-
-
-go mod init github.com/yourusername/awesome-calculator
-This creates a  file—think of it as your module's DNA:: The module path (github.com/yourusername/awesome-calculator) doesn't have to exist on GitHub initially, but it should represent where you plan to host it. It's like reserving a domain name for your future mansion! 🏰Here's how a well-organized module looks:awesome-calculator/
-├── go.mod
-├── go.sum
-├── README.md
-├── calculator.go
-├── calculator_test.go
-└── internal/
-    └── helpers.go
-The  directory is Go's way of saying "private property, no trespassing"—code in there can't be imported by external modules. Sneaky, right?
-  
-  
-  2. Going Public: Publishing Your Digital Offspring 🎭
-Publishing a Go module is like sending your teenager to college—you've done your best, crossed your fingers, and now you're hoping they don't embarrass you in public. The good news? Go modules are generally better behaved than teenagers.Here's a lesser-known fact: Go doesn't have a central repository like npm or PyPI. Instead, it uses version control systems directly. This means your GitHub repo IS your package registry—no middleman, no drama! 
-go  ./...
-go vet ./...
-
-
-git add 
-git commit 
-git push origin main
-
-
-git tag v1.0.0
-git push origin v1.0.0
-
-  
-  
-  Semantic Versioning: The Universal Language
-Go enforces  strictly—and for good reason! Here's the breakdown: → "Look ma, I made a thing!" → "Oops, fixed that embarrassing bug" → "New features, but your old code still works" → "Breaking changes ahead—hold onto your hats!": Semantic versioning was created by GitHub co-founder Tom Preston-Werner in 2010, but Go made it  for modules. No more v1.0.0-final-final-REALLY-FINAL! When you publish, your module gets indexed by the  (proxy.golang.org). This beast serves over 13 billion module downloads per month—that's like the entire world's population downloading a Go module twice every month! 🤯
-  
-  
-  3. The Art of Consumption: Using Modules Like a Pro 🛒
-Using external modules is like grocery shopping—you go in for one dependency and somehow come out with 47 transitive dependencies. But hey, at least Go makes it manageable!
-go get github.com/gin-gonic/gin
-
-
-go get github.com/gin-gonic/gin@v1.9.1
-
-
-go get github.com/gin-gonic/gin@v1.9
-
-
-go get github.com/gin-gonic/gin@main
-
-  
-  
-  Version Constraints: Your Safety Net
-Go modules support sophisticated version constraints:
-  
-  
-  The Trust But Verify Principle
-The  file is like a bouncer for your dependencies—it contains cryptographic hashes to ensure what you downloaded is what you expected:github.com/gin-gonic/gin v1.9.1 h1:4idEAncQnU5cB7BeOkPtxjfCSye0AAm1R0RVIqJ+Jmg=
-github.com/gin-gonic/gin v1.9.1/go.mod h1:hPrL7YrpYKXt5YId3A/Tnip5kqbEAP+KLuI3SUcPTeU=
-Never edit go.sum manually—that's like trying to perform surgery with a spoon. Let Go handle the crypto magic! ✨Keep your module lean with these commands:
-go mod tidy
-
-
-go mod graph
-
-
-go mod download
-Congratulations! You've just graduated from the  🎓. You now know how to create modules (birth certificates included), publish them to the world (without the anxiety), and consume others' work responsibly (with proper version control).Remember: modules are like LEGO blocks—they're most powerful when they're small, focused, and easy to combine. The Go ecosystem thrives because developers create modules that do one thing well and play nicely with others.Your mission, should you choose to accept it: Create your first module this week! It doesn't have to solve world hunger—even a simple utility function counts. The Go community is surprisingly welcoming to newcomers (unlike Stack Overflow comment sections 😅).What's the weirdest or most surprisingly useful Go module you've discovered? Drop a comment and share your module adventures—we're all learning together in this delightful chaos we call software development! 🚀]]></content:encoded></item><item><title>Go Worker Pools: Concurrency That Doesn’t Burn Your Kitchen Down</title><link>https://dev.to/jones_charles_ad50858dbc0/go-worker-pools-concurrency-that-doesnt-burn-your-kitchen-down-59oo</link><author>Jones Charles</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 27 Jun 2025 01:00:22 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hey, fellow Go devs! If you’ve ever felt the thrill of spinning up goroutines like they’re free candy, you know concurrency is where Go shines. Handling HTTP floods, crunching log files, or juggling real-time tasks—it’s all in a day’s work. But here’s the catch: goroutines are lightweight, not limitless. Fire up too many, and your app turns into a chaotic kitchen—chefs (goroutines) tripping over each other, CPU frying, memory spilling, and no food (results) on the table.Enter the : your ticket to sane, high-performance concurrency. It’s like hiring a fixed crew of efficient cooks who grab tasks from a queue, keeping the chaos in check. Whether you’re a Go newbie or a grizzled vet, this pattern’s a must-have in your toolbox. In this post, we’ll unpack the basics, level up to high-performance designs, share war stories from the trenches, and peek at what’s next. Ready to tame those goroutines? Let’s dive in!
-  
-  
-  2. Worker Pool : The Basics
-Before we get fancy, let’s nail the fundamentals. If you’re cozy with goroutines and channels, this’ll feel like home.
-  
-  
-  2.1 What’s a Worker Pool?
-Picture a mail sorting hub: packages (tasks) roll in, a fixed team of workers (goroutines) grabs them from a queue (channel), and processes them. No hiring spree when the pile grows—just steady, predictable work. That’s a worker pool: a fixed squad of goroutines pulling tasks from a channel.In Go, it’s three ingredients:: A channel holding jobs.: Goroutines that fetch and process tasks.: Another channel (optional) for collecting output.“Sure, goroutines are cheap,” you say. “Why not spawn a million?” Because cheap doesn’t mean free. Stack up thousands, and you’re juggling scheduling overhead, memory spikes, and maybe a crashed server if I/O’s involved (think network calls or file reads). Worker pools keep it tight:: Caps goroutines to save resources.: Predictable behavior, no meltdowns.: Reuses workers, skipping creation costs.Let’s square some numbers with a basic pool:Run it, and 3 workers chew through 10 tasks. Simple, right? But real life’s messier—timeouts, priorities, errors. Let’s level up.: HTTP blasts, file parsing.: Keep goroutines from eating your server alive.: No inter-task drama.
-  
-  
-  3. High-Performance Worker Pools: Turning Up the Heat
-Basic pools are cool, but production demands more—think scalability, fault tolerance, and adaptability. Let’s soup up our worker pool for the big leagues.
-  
-  
-  3.1 Why Go High-Performance?
-Here’s what a tricked-out worker pool brings:: Caps goroutines but squeezes every drop of CPU/memory.: Flexes with load—more workers when it’s busy, fewer when it’s chill.: One task flops? No biggie—others keep trucking.Fixed counts are safe but stiff. Add a manager to tweak worker numbers on the fly:: Trigger this when the queue’s bursting.Some jobs can’t wait. Use a priority queue:Stuck tasks?  to the rescue:Bundle outputs and oopsies:Here’s a beefy version with timeouts and error handling:This is battle-ready—timeouts, errors, concurrency control. Next, let’s hit the real world.
-  
-  
-  4. Real-World Wins: Lessons from the Trenches
-Theory’s cute, but the proof’s in the pudding. I’ve been slinging Go for a decade, and worker pools have bailed me out of many a jam. Here’s a tale from the field and some gold nuggets.We had a data pipeline pulling millions of records from a DB, hitting an API, and dumping results elsewhere. Our first stab—one goroutine per record—blew up: memory through the roof, API rate limits smacked us, and crashes galore.Match workers to your rig: CPU-bound? Use . I/O-heavy? Double or triple it. We landed on 16 workers for an 8-core box—sweet spot.Unbuffered channels choked when tasks piled up. A 100-slot buffer smoothed it out:No orphaned tasks!  +  nailed it:Track task times and failures—it’s your debug lifeline:Worker pools turned a dumpster fire into a win.
-  
-  
-  5. Pitfalls and How to Not Trip Over Them
-Worker pools are slick, but they’ve got traps that’ll bite you in production if you’re not careful. I’ve faceplanted into these over the years—here’s what I learned, so you don’t have to.
-  
-  
-  5.1 Queue Blocking: The Silent Killer
-: In a log cruncher, the task queue filled up faster than workers could clear it. Producers stalled, and the app froze like a deer in headlights.: Unbuffered channels (or tiny buffers) can’t handle bursty workloads.:  Crank the buffer size— kept us humming.
-Drop tasks gracefully when full:
-: Deadlocks vanished, drops stayed under 1%.
-  
-  
-  5.2 Goroutine Leaks: Zombie Workers
-: Stress tests showed memory creeping up post-shutdown. Workers were hanging around like uninvited guests.: No clean exit after the queue closed.: Use  to kill ’em dead:: No more memory ghosts.
-  
-  
-  5.3 Uneven Tasks: The Long Task Jam
-: Bulk HTTP calls—some zipped in milliseconds, others crawled for 10 seconds. Fast tasks got stuck in traffic.: One pool, no priority—slowpokes hogged the line.:  : Sort by expected runtime.
-: Split fast and slow:
-: Fast tasks dropped from 2s to 200ms.
-  
-  
-  5.4 Error Blindness: Where’d My Failure Go?
-: An API 500’d, but the caller got nada—data lost in the void.: Sloppy result handling swallowed errors.: Unified error channel:: Errors loud and clear—no silent fails.
-  
-  
-  6. Real-World Use Cases: Where Worker Pools Shine
-Worker pools aren’t just theory—they’re problem-solvers. Here’s how they’ve crushed it in the wild.: Hit 10 weather APIs for forecasts, fast.:  : 30s sequential → 3s with 10 workers.: Parse 1000 log files into a DB.:  : 1 hour solo → 5 minutes pooled.: Prioritize user alerts over background tasks.:  Priority queue + workers:
-: High-priority latency: 1s → 100ms.
-  
-  
-  7. Wrapping Up: Why Worker Pools Rule
-Worker pools are Go’s concurrency MVPs—simple, powerful, and battle-tested. They keep goroutines in line, boost throughput, and save your app from imploding. Here’s the recap and a sneak peek at what’s next.: No resource hogging.
-: More done with less.
-: Errors? Timeouts? Handled.
-Perfect for HTTP blasts, file munching, or dynamic workloads—Go’s channels and goroutines make it a dream.Tune workers and buffers to your rig.
-Shut down gracefully with .
-Catch errors—don’t let them ghost you.
-: Imagine ML tweaking worker counts live—xAI vibes, anyone?
-: Hook ’em to Kafka for cloud-scale tasks.
-: Runtime tweaks (like Go 1.18+) will juice performance more.After 10 years with Go, I’m obsessed—worker pools are elegant chaos-tamers. Try ’em out—start small, mess up, learn, share. They’re not just code; they’re a mindset. Happy coding, and let me know how it goes in the comments!]]></content:encoded></item><item><title>Go Programming: A Beginner&apos;s Guide</title><link>https://dev.to/darshil89/go-programming-a-beginners-guide-58l1</link><author>Darshil Mahraur</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 26 Jun 2025 21:00:12 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[This is a placeholder for the article body.  It would contain introductory material on Go programming.]]></content:encoded></item><item><title>Turning my Resume Into an Interactive Game : ReactJs &amp; Go</title><link>https://dev.to/justdude/turning-my-resume-into-an-interactive-game-reactjs-go-4chd</link><author>Mauro</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 26 Jun 2025 20:04:36 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[I recently moved to Berlin and needed to stand out in the job applications. Instead of a traditional portfolio, I built an interactive pixel-art game where visitors walk through my career journey: As a senior backend developer (Java, Python, Go), this was my first time touching TypeScript, so be gentle! 😅: React + TypeScript ⚛️Interactive 2D world with WASD movement 🕹️Career timeline (buildings = companies, statues = tech stack) 🏢Quest system and analytics dashboard 📊Mobile-friendly with touch controls 📱React hooks felt like magic coming from backend ✨TypeScript caught tons of bugs (worth the initial frustration) 🐛CSS is harder than scaling distributed systems 😅Environments: Midjourney (for speed) 🤖Character sprites: Created by a friend 👨‍🎨Planning to do custom pixel art later ⏰This 3-week sprint taught me more about frontend than any tutorial. Sometimes the best way to learn is to build something you're excited about! 🚀Looking for backend opportunities in Berlin 🇩🇪 - this project definitely helped me stand out in applications.Please give me some clap! 🗿What creative approaches have you used to showcase your skills? 💭: #react #typescript #golang #portfolio #career #webdevelopment #berlin #gamedev]]></content:encoded></item><item><title>Build a High-Performance Crypto Rankings Dashboard with LunarCrush API + Inngest in 25 Minutes</title><link>https://dev.to/dbatson/build-a-high-performance-crypto-rankings-api-with-go-inngest-redis-in-25-minutes-4eci</link><author>Danilo &quot;Jamaal&quot; Batson</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 26 Jun 2025 19:30:31 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[
-  
-  
-  Build a High-Performance Crypto Rankings Dashboard with LunarCrush API + Inngest in 25 Minutes
-A complete guide to building an enterprise-grade cryptocurrency analytics dashboard with real-time social sentiment data
-  
-  
-  Why Real-Time Crypto Social Sentiment Matters
-In today's volatile cryptocurrency market, social sentiment drives price movements more than traditional financial metrics. A single tweet from an influencer can cause 20% price swings in minutes. Professional traders and investors need real-time social intelligence to make informed decisions.That's where  comes in. Their API provides social sentiment analysis across 6,700+ cryptocurrencies, tracking millions of social media posts, news articles, and community discussions in real-time.In this tutorial, you'll create a production-ready Crypto Rankings Dashboard that showcases modern development practices perfect for job interviews. The system demonstrates:✅  with sub-second response times✅ Background Job Processing with Inngest workflows✅  for 15-minute data persistence✅ Professional React Dashboard with TypeScript and Tailwind CSS✅  every 5 minutes via automated jobs✅ 11 Cryptocurrency Metrics including social sentiment analysis✅  on Render and Vercel 25 minutes Intermediate Go backend development, background job processing, Redis caching, React state management, cloud deployment💡  This project is perfect for showcasing full-stack expertise in technical interviews. The architecture demonstrates understanding of scalable systems, real-time data processing, and modern cloud practices.
-  
-  
-  Prerequisites & Account Setup
-Node.js 18+ for the frontendBasic knowledge of Go and React4 API keys from different services (we'll walk through signup below)Two Ways to Experience This Tutorial:
-  
-  
-  Sign Up For LunarCrush API
-LunarCrush provides the social sentiment data that powers our analytics dashboard.Enter your email address and click "Continue"Check your email for verification code and enter itComplete the onboarding steps:
-
-Select your favorite categories (or keep defaults)Create your profile (add photo and nickname if desired) Select a subscription plan (you'll need it to generate an API key)![LunarCrush Signup Process Screenshot] - you'll add it to your environment variables later.Redis Cloud provides managed Redis hosting with a generous free tier: Choose the free 30MB tier In your dashboard, copy:
-
-Format Connection String: Combine into: redis://default:password@host:portInngest handles our background job processing: Visit Inngest and create an account Name it "crypto-rankings" In the settings, copy your:
-
- (starts with ) (starts with )
-  
-  
-  Set Up Render (Backend Hosting)
- Visit Render and connect your GitHub account We'll configure deployment later in the tutorial
-  
-  
-  Set Up Vercel (Frontend Hosting)
- Visit Vercel and connect your GitHub account We'll configure deployment later in the tutorialCreate  for reference:# Redis Cloud
-REDIS_URL=redis://default:your_password@your-host:port
-
-# LunarCrush API
-LUNARCRUSH_API_KEY=lc_your_key_here
-
-# Inngest
-INNGEST_EVENT_KEY=your_event_key
-INNGEST_SIGNING_KEY=your_signing_key
-INNGEST_DEV_URL=http://localhost:8080/api/inngest
-
-# Application
-PORT=8080
-Now let's build our crypto rankings dashboard step by step.crypto-rankings
-crypto-rankings
-
-server
-server
-
-
-go mod init crypto-rankings
-
-
-go get github.com/gin-gonic/gin
-go get github.com/gin-contrib/cors
-go get github.com/redis/go-redis/v9
-go get github.com/inngest/inngestgo
-go get github.com/joho/godotenv
-
-main.go
-
- .env
- ..
-
-
-npx create-next-app@latest frontend frontend
-
-
-npm  @radix-ui/react-select @radix-ui/react-icons @radix-ui/react-toast
-npm  @tanstack/react-query @tanstack/react-query-devtools
-
-  
-  
-  Set Up Environment Variables
-Create  in the server directory:# .env (server directory)
-REDIS_URL=redis://default:your_password@your-host:port
-LUNARCRUSH_API_KEY=lc_your_key_here
-INNGEST_EVENT_KEY=your_event_key
-INNGEST_SIGNING_KEY=your_signing_key
-INNGEST_DEV_URL=http://localhost:8080/api/inngest
-PORT=8080
-Create  in the frontend directory:# .env.local (frontend directory)
-NEXT_PUBLIC_API_URL=http://localhost:8080
-
-  
-  
-  Go Backend Implementation
-Create the complete Go backend in :This Go backend provides: for high-performance caching with proper error handling for automated data fetching for frontend consumption for cross-origin requests
-  
-  
-  React Frontend Implementation
-Create the complete frontend in frontend/src/app/page.tsx:Loading Crypto Analytics...Fetching real-time social sentiment dataCrypto Rankings Dashboard
-              Real-time cryptocurrency social sentiment and market data
-            Go + GinInngest JobsRedis CloudReact + TypeScriptUnable to load data
-                Try again
-              Metric Selector
-                      Choose Analysis Type
-                    
-                      Refresh
-                    
-                      Trigger Update
-                    System StatusSuccessfulFailed
-                            Top 10 by ✅  items⚡ ms
-                          Processing  data...
-                        
-          ×
-        Update frontend/src/app/globals.css:
-  
-  
-  Backend Deployment (Render)
-server
-git init
-git add 
-git commit 
-git branch  main
-git remote add origin https://github.com/yourusername/crypto-rankings.git
-git push  origin main
-Click "New +" → "Web Service"Connect your GitHub repositoryConfigure settings:
-
-go build -o main ./main.goAdd Environment Variables:REDIS_URL=redis://default:password@your-redis-host:port
-LUNARCRUSH_API_KEY=lc_your_api_key_here
-INNGEST_EVENT_KEY=your_inngest_event_key
-INNGEST_SIGNING_KEY=your_inngest_signing_key
-INNGEST_DEV_URL=https://your-app.onrender.com/api/inngest
-PORT=10000
-
-  
-  
-  Frontend Deployment (Vercel)
-frontend
- .env.local
-Import your GitHub repositoryConfigure settings:
-
-Add Environment Variables:NEXT_PUBLIC_API_URL=https://your-app.onrender.com
-
-  
-  
-  Configure Inngest Production
-Update Inngest Environment:In Render, update  to your production URLRegister your production webhook in Inngest dashboardserver
-go run main.go
-
-frontend
-npm run dev
-🔍  Visit 🚀  Select different metrics from dropdown📊  Manual trigger button works🔄  Data updates every 5 minutes💾  Fast subsequent requests
-curl https://your-app.onrender.com/health
-
-
-curl https://your-app.onrender.com/api/crypto/data
-
-
-curl  POST https://your-app.onrender.com/dev/trigger
-
-  
-  
-  Common Issues & Solutions
-Verify Redis Cloud URL format and credentialsCheck API key validity and subscription statusInngest Function Not TriggeringVerify webhook URL and signing keyUpdate backend CORS configuration with frontend URLFirst request takes 30-60s on free tierPerformance Optimizations:Implement request caching with SWR strategyAdd pagination for large datasets
-Optimize bundle size with dynamic importsReal-time WebSocket updatesAdvanced filtering and searchData export functionalityUpgrade to Render paid plan for always-on serviceImplement proper logging and monitoringAdd comprehensive error trackingSet up automated testing pipeline
-  
-  
-  AI Integration Opportunities
-Consider these extensions:LunarCrush API Integration:Connect to AI assistants via Model Context ProtocolEnable natural language queries for crypto dataBuild AI-powered trading signal generationMachine Learning Features:Sentiment analysis trend predictionAnomaly detection in social metricsAutomated trading recommendations
-  
-  
-  Resources & Documentation
-Congratulations! You've built a production-ready crypto rankings dashboard that demonstrates modern full-stack development practices. This system showcases:✅ High-Performance Backend: Go API with Redis caching✅  Inngest workflow orchestration
-✅  React with TypeScript and modern UI✅  Multi-platform production setup✅  Automated social sentiment analysisBuilt a scalable API architecture with proper error handlingImplemented background job processing with error recoveryCreated a responsive, accessible user interfaceDeployed to production with proper environment managementDemonstrated understanding of cryptocurrency market dynamicsIntegrated real-time social sentiment analysisCreated a tool valuable for traders and investorsShowcased ability to work with external APIs and data sourcesPerfect portfolio project for Go and React positionsDemonstrates understanding of distributed systemsShows experience with modern cloud platformsHighlights ability to build complete, production-ready applicationsAdd historical trend analysisImplement real-time WebSocket updates
-Create AI-powered trading signalsBuild mobile app with React NativeStar the repository if you found it helpfulShare your deployed version on social mediaContribute improvements back to the projectUse it in your portfolio and job interviews Drop them below! I respond to every comment and love helping fellow developers build amazing applications with real-time social sentiment analysis. 🚀]]></content:encoded></item><item><title>BAV99: The Tiny Guardian of Our Tech Planets</title><link>https://dev.to/ersajay/bav99-the-tiny-guardian-of-our-tech-planets-13jf</link><author>ersajay</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 26 Jun 2025 06:47:40 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[A Meeting in the Circuit Desert
-The desert of old circuit boards stretched endlessly, sun beating down on forgotten gadgets. I was lost, tracing the outline of a broken microcontroller, when I saw it—a small, glinting shape, no bigger than a ladybug, half-buried in sand.
-“You’re… very small,” I said, kneeling.
-“And you’re a child who talks to diodes,” it replied, voice steady as the wind. “But some guardians are smallest when they’re strongest. Ask the fox.”What Is a BAV99? (Not Just a Diode—A Guardian)
-This was no ordinary silicon. It was a BAV99, a dual Schottky diode in an SOT-23 suit—smaller than a ladybug, tougher than a baobab’s roots. Let me decode its story:Voltage: 70V reverse—unfazed by the storms of static or voltage spikes. Think of it as a Protego shield for circuits.
-Current: 200mA—sips power like a hummingbird, not a thirsty camel.
-Speed: 6ns switching—faster than the fox darting across the dunes.Design: Dual diodes, common anode. Like two roses sharing a single stem—separate, but stronger together.Secret Sauce: It handles signal clipping, voltage clamping, reverse polarity protection—all while keeping your gadgets from melting into smoke.
-Fun Fact: Engineers call it the “Circuit Bodyguard.” It saves gadgets from meltdowns like a knight saving a princess.
-“Guardians don’t need to shout,” it said. “They just need to protect.”Why BAV99 Shines Brighter Than Most
-In the desert of diodes, BAV99 isn’t just another pebble—it’s a star. Let’s compare:Speed: 6ns (Usain Bolt mode) vs. generic 1N4148’s 4ns (fast, but fragile). BAV99 doesn’t just run—it endures.
-Voltage: 70V (unfazed by chaos) vs. 1N4148’s 100V (panics at static). It’s the cactus to their dandelion.
-Size: SOT-23 (Tic Tac-sized) vs. SOD-123 (clumsy, bulky). BAV99 fits where others can’t—like a key in a tiny lock.“Why not be bigger?” I asked.
-“Big things break,” it said. “Tiny things fit. In smartwatches. In Mars rovers. In pacemakers.”The Guardian of a Thousand Planets
-From your wrist to the stars, BAV99 guards:Consumer Tech (Your Daily Planet):
-Powers smartphones, clipping signals tighter than your yoga pants. Saves your God of War progress in gaming consoles—no rage-quit casualties here. It’s the invisible hand keeping your world ticking.Automotive & Aerospace (The Cosmic Planets):
-Protects Tesla’s ECUs from voltage meltdowns (no TikTok fire memes). Powers Mars rovers, laughing at cosmic radiation (Duracell? Please). It’s the compass guiding tech to new worlds.Industrial & Medical (The Healer’s Planet):
-Handles 24/7 factory shifts in robotic arms (no unionizing, just loyalty). Keeps pacemakers steady as a Pensieve—no “404 Error: Heartbeat.” It’s the healer’s wand for circuits.Retro Tech (The Nostalgia Planet):
-Saves Tamagotchis from death—because some childhood dreams deserve to live. It’s the keeper of memories, tiny but fierce.“Do you get lonely?” I asked.
-“No,” it said. “I’m everywhere. In your watch, in your car, in the stars. Loneliness is for roses that forget they’re loved.”BAV99 vs. the Desert Dwellers
-Not all guardians are created equal. Let’s meet the neighbors:BAT54: Similar specs, but lacks BAV99’s dual-diode magic (like a single rose, not a garden).
-1N4148: Faster, but cries at reverse voltage (a sprinter who trips at the finish line).
-BAV70: Same vibe, but weaker voltage game (a candle vs. a star).Mic Drop:
-Generic Diode: “I’m cheaper!”
-BAV99: “I’m in space. You’re in a gas station flashlight. Bye.”The Future: BAV99 Among New Stars
-What’s next for our tiny guardian?AI Glasses: Protects circuits from metaverse meltdowns—because even virtual worlds need real guardians.
-Smart Cities: Powers micro-sensors judging your midnight snack runs (don’t worry, it’s discreet).
-Alien Tech: If ET needs a diode, you bet it’ll be a BAV99. After all, good guardians are universal.Pro Tip: Hoard these now. Future retro gamers will trade their old Tamagotchis for your stash.The Secret of the Tiny Guardian
-BAV99 isn’t flashy. It doesn’t need a name in lights or a viral meme. It’s the kind of friend you remember when your phone works, your car doesn’t catch fire, or a Mars rover sends back photos.
-“What makes you special?” I asked, as I left.
-It didn’t answer. It just sat there, quiet as the desert, as the stars, as time itself.
-And I realized—some guardians don’t need to be big. They just need to shine.Written by a wanderer who once mistook a BAV99 for a ladybug. (Spoiler: It didn’t fly, but it powered a toy robot. Close enough.)
-🌵 You become responsible, forever, for the stars you once overlooked.]]></content:encoded></item><item><title>From Polling to Partying: Writing Cooler Goroutines with sync.Cond</title><link>https://dev.to/2nguyenlong000k/from-polling-to-partying-writing-cooler-goroutines-with-synccond-1ld8</link><author>Nguyễn Long</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 26 Jun 2025 02:38:14 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Imagine a DJ show with hundreds of people waiting for their favorite track to drop. If everyone kept asking the DJ every millisecond:
-"Is it time to dance yet? Now?"
-You’d probably end up with:A sweaty DJ (over loaded)Burned speakers (crashing)And a power outage (aka a CPU meltdown)That’s what  looks like in code.But what if the DJ had a mic and just said:
-"Hey! When the beat drops, I’ll tell you!"Go’s  is a condition variable
-a concurrency primitive that lets goroutines sleep  while waiting for a condition to become true. It’s based on:And the ability to , , or  to other goroutines.There’s a  (like a connection pool or ticket list)Goroutines must  for that resource to become availableYou want to avoid  or wasting CPUTake the example when you use Polling:Imagine you’re running a party where guests (goroutines) can only enter the dance floor when there’s space.for {
-    if showReady {
-        fmt.Println("💃 Fan starts dancing!")
-        break
-    }
-    time.Sleep(100 * time.Millisecond)
-}
-They keep ... That’s like asking the DJ every 100ms:"Hey, can I dance yet? What about now? How about now?!"
-That’s called , and it’s inefficient and annoying (for both CPU and DJ).Enter:  – a way to  until you're signaled to proceed.So let's take a look at this example first, then we will dig deeply into the mechanism:Let fans "wait" until the event is ready -> stimulate for 3 secondsNotify waiting fans as soon as the DJ startsThis pattern models real business use cases like: waiting for jobs waiting for payment confirmation waiting for items to appear in a queue triggered by external eventsThe dance floor = the shared resource.The fan = goroutine that waits.The DJ = the event trigger.
-  
-  
-  Now let's talk about the correct way to use this mechanism:
-the flow will be depicted as bellow:[🔒 LOCKED]        G1 enters critical section
-[❓ CHECK ]       Check condition Is showReady true? -->No.
-[😴 WAIT ]        G1 goes to sleep → cond.Wait() waiting for other GR to wake it up! (meaning waiting for the beat drops)
-[🔓 UNLOCKED]     Lock is released while waiting
-Another goroutine will signals:That's mean when the DJ drops the beat, game on...[🔒 LOCKED]       G2 changes condition to true (start the show) 
-[📣 SIGNAL]       G2 calls cond.Signal() (notify to the FAN)
-[🔓 UNLOCKED]     Lock released 
-[👂 WOKEN UP]     G1 is notified, wakes up 
-[🔒 LOCK AGAIN]   Tries to reacquire the mutex
-[✅ RECHECK ]     Sees condition is now true
-[🏃 PROCEED ]     Does work and exits
-The output looks like this:🧍 Fan waiting...
-🎧 DJ: The beat drops!
-💃 Fan starts dancing!
-
-  
-  
-  Why not just ?
-You could say: "Why not just let the fan sleep for 3 seconds too?"
-Because in a real app:The DJ doesn’t follow a fixed schedule.There might be , not just one.The fan may give up waiting or be notified  the moment music starts.
-  
-  
-  How Does  Actually Work?
-
-  
-  
-  Here’s the implementation under the hood:
-There’s a checker to prevent copying the  instance, it would be panic if you do so -> anyway, we don't care abt it's detailCalling  immediately unlocks the mutex -> mutex must be locked before we call cond.Wait()After being notified, this method will lock the mutex again -> you need to unlock it after you done with shared data Wakes up  waiting goroutines┌──────────────┐       ┌────────────────────┐
-│  Goroutine A │────→  │ tryGetConnection() │
-└──────────────┘       └────────────────────┘
-       │                         │
-       ▼                         ▼
-  [Not Available]         →   Sleep(100ms)
-       │                         │
-       └───── loop ──────────────┘
-Fan keeps knocking: “DJ, can I dance now? … How about now? … Still no?”Sleep is either too short (CPU burn) or too long (latency) Flow (Efficient + Coordinated)
-                   [ DJ thread ]
-┌──────────────┐     time.Sleep
-│ Goroutine B  │────────────────────┐
-└──────────────┘                    │
-        │                           ▼
-        │                    ┌──────────────┐
-        │                    │  showReady = true
-        │                    │  cond.Signal()
-        │                    └──────┬───────┘
-        ▼                           │
-┌────────────────────────────────┐  ▼
-│   Goroutine A (waiting fan)    │◄─┘
-│  mu.Lock()                     │
-│  while !showReady {           ◄──────────────┐
-│      cond.Wait() (sleep)                  │
-│  }                                        │
-│  // Proceed to dance 💃                   │
-└────────────────────────────────┘
-
-Fan enters the club, sits quietly. DJ announces:“🎧 The beat drops!” Sleeps peacefully while waiting CPU usage remains near-zeroDon’t burn out your CPU (or your DJ). If you’re managing shared resources in Go and you’re still writing polling loops, it’s time to level up with .
-This pattern:Gives you precise coordination
-  
-  
-  When Should You Reach for ?
-You have a And multiple goroutines  on itAnd that condition And polling is not acceptable
-Don’t use it if:You don’t already hold a mutex around the state
-  
-  
-  The Problem With Polling:
-Time a go I already have a nice tcp server implementation setup in golang.
-To implement this kind of custom tcp server, we need st called connection pool for maximize the power of machines, allow more concurrency operation.So the first implementation look like this:  (but a common one): — even when no connection was available — increase sleep = slower reaction, decrease sleep = higher CPU1,000 goroutines polling = chaos — race conditions like being woken just before state changedThanks to  which perfectly resolve this problem:CPU usage drops to near zero while waitingOnly woken when it mattersNo weird races or wasted wakeupsSomeone will ask me st like this:
-  
-  
-  Why not use channels instead?
-Well, to be honest, my 2nd try consider buffered channel of  and it can resolve the problem.
-  
-  
-  and that works… until it doesn't.
-Channels are great for linear producers/consumersBut don’t scale well to:
-
-shared state protected by mutex
-Channels are .
- is a .Think of channels as a delivery guy. as a waiter with a bell: You have a , and you want to hand out a free one. If none are free, you wait — but you don’t burn the CPU.When a connection is returned:You could be scaling up to , and CPU usage would still be flatlined at.Here's the full implementation]]></content:encoded></item><item><title>How to Create a Event Bus in Go</title><link>https://dev.to/leapcell/how-to-create-a-event-bus-in-go-4j57</link><author>Leapcell</author><category>dev</category><category>go</category><category>devto</category><pubDate>Wed, 25 Jun 2025 18:34:21 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[In today’s landscape where microservices and distributed systems are prevalent, Event-Driven Architecture (EDA) plays a critical role. This architectural design allows services to communicate via events, either synchronously or asynchronously, instead of traditional direct interface calls. The event-based interaction mode promotes loose coupling between services and improves the system’s scalability.The publish-subscribe pattern is one way to implement event-driven architecture. It allows different components or services in the system to publish events, while other components or services can subscribe to these events and respond based on the event content. Most developers are likely familiar with this pattern; common technical implementations include message queues (MQ) and Redis’ publish/subscribe (PUB/SUB) features.In Go, we can leverage its powerful channels and concurrency mechanisms to implement the publish-subscribe pattern. This article will delve into how to implement a simple event bus in Go, which is a concrete realization of the publish-subscribe pattern.The event bus is a concrete implementation of the publish-subscribe pattern. As middleware between publishers and subscribers, it manages event delivery and distribution, ensuring events are smoothly transmitted from publishers to subscribers.The main advantages of the event bus include:: Services do not need to communicate directly, but instead interact through events, reducing dependencies between services.: Events can be handled asynchronously, improving the system’s responsiveness and performance.: New subscribers can easily subscribe to events without modifying the existing publisher code.: Failures in event handling do not directly affect the normal operation of other services.
-  
-  
-  Code Implementation of the Event Bus
-Next, we will introduce how to implement a simple event bus in Go, which includes the following key functionalities:: Allows various services in the system to send events.: Allows interested services to subscribe to and receive specific types of events.: Allows services to remove events they have previously subscribed to.
-  
-  
-  Event Data Structure Definition
- is a structure that encapsulates an event, where  represents the contextual information of the event, and its type is . is a type alias, defined as a channel for passing  structs: . is the definition of the event bus. It contains two properties:: A read-write mutex (), used to ensure concurrent read and write safety for the  below.: A map where the key is a string representing the subscription topic, and the value is a slice of . This property is used to store all subscribers for each topic. Each subscriber receives events through its own .The  function is used to create a new  instance.
-  
-  
-  Event Bus Method Implementation
-The event bus implements three methods: publishing events (), subscribing to events (), and unsubscribing from events ().The  method is used to publish events. This method receives two parameters:  (the subject) and  (the encapsulated event object).In the implementation of , a read lock is first obtained via the  property to ensure that the following operations on  are safe in concurrent routines. Then, a copy of the current subscriber list for the topic is made. A new goroutine is started, which iterates through the copied subscriber list and sends the event to each subscriber through their channel. After these operations are complete, the read lock is released.Why make a copy of the subscriber list?Answer: Copying the subscriber list ensures data consistency and stability while sending events. Since sending data to the channels is done in a new goroutine, by the time the data is sent, the read lock has already been released, and the original subscriber list might have changed due to adding or removing subscribers. If you use the original subscriber list directly, unexpected errors may occur (for example, sending data to a closed channel can cause a panic).The  method is used to subscribe to events for a specific topic. It accepts a  parameter, which specifies the topic to subscribe to. Through this method, you get an  channel to receive events for the topic.In the implementation of , a write lock is first obtained via the  property to ensure that the upcoming read and write operations on  are safe in concurrent routines. Then, a new  channel  is created and appended to the relevant topic’s subscriber slice. After these operations are complete, the write lock is released.The  method is used to unsubscribe from events. It receives two parameters:  (the topic subscribed to) and  (the issued channel).Inside the  method, a write lock is first obtained via the  property to ensure concurrent read and write safety for the upcoming operations on . Then, it checks whether the topic has corresponding subscribers. If it does, it traverses the subscriber slice for that topic, finds the channel matching , removes it from the subscriber slice, and closes the channel. Then the channel is drained. After these operations, the write lock is released.
-  
-  
-  Suggestions for Extensions
-The event bus implemented in this article is relatively simple. If you want to enhance the flexibility, reliability, and usability of the event bus, you can consider extending it in the following ways:: Implement persistent storage for events to ensure that unprocessed events can be recovered after a system crash.Wildcard and pattern-matching subscriptions: Allow the use of wildcards or regular expressions to subscribe to a group of related topics, rather than just a single specific topic.Load balancing and message distribution strategies: Distribute events among multiple subscribers to achieve load balancing.: Enable functionality extensions through plugins, such as logging, message filtering, transformation, etc.This article thoroughly explores the process of implementing a simple event bus in Go. By utilizing Go's powerful features such as channels and concurrency mechanisms, we can easily implement the publish-subscribe pattern.The article starts by introducing the advantages of the event bus, including decoupling, asynchronous processing, scalability, and fault isolation. It then explains in detail how to define the event data structure and the event bus structure, and how to implement the methods for publishing, subscribing, and unsubscribing events. Finally, it proposes several potential directions for extension, such as event persistence, wildcard subscriptions, load balancing, and plugin support, to enhance the flexibility and functionality of the event bus.By reading this article, you can learn how to implement a simple yet powerful event bus in Go, and extend it according to possible requirements.Leapcell is the Next-Gen Serverless Platform for Web Hosting, Async Tasks, and Redis:Develop with Node.js, Python, Go, or Rust.Deploy unlimited projects for freepay only for usage — no requests, no charges.Unbeatable Cost EfficiencyPay-as-you-go with no idle charges.Example: $25 supports 6.94M requests at a 60ms average response time.Streamlined Developer ExperienceIntuitive UI for effortless setup.Fully automated CI/CD pipelines and GitOps integration.Real-time metrics and logging for actionable insights.Effortless Scalability and High PerformanceAuto-scaling to handle high concurrency with ease.Zero operational overhead — just focus on building.]]></content:encoded></item></channel></rss>
+📘 , , , and  to the channel! is an AI-driven publishing company co-founded by author . By leveraging advanced AI technology, we keep our publishing costs incredibly low—some books are priced as low as —making quality knowledge accessible to everyone.Stay tuned for updates and exciting news. When shopping for books, search for  to find more of our titles. Use the provided link to enjoy !Be sure to check out our creations:]]></content:encoded></item></channel></rss>
