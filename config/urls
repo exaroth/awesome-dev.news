@@ -19,7 +19,6 @@
 "query:Official News:tags # \"official\""
 https://developers.googleblog.com/rss/ "~Google Developers" googledev
 https://www.echojs.com/rss "~EchoJS" echojs
-https://dev.to/feed/ "~Dev.to" devto
 https://rss.arxiv.org/atom/cs "~Arxiv" arxiv
 https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml "~Github Trending" trending
 
@@ -67,7 +66,6 @@ https://blog.rust-lang.org/feed "~Rust Blog" ! dev official rust
 https://www.youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w "~Let's get Rusty" ! dev rust video learning
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "~Jon Gjengset" ! dev rust video learning
 https://blog.m-ou.se/index.xml "~Mara blog" ! dev rust blog
-https://dev.to/feed/tag/rust "~Dev.to Rust" ! dev rust devto
 https://fasterthanli.me/index.xml "~Faster than time blog" ! dev rust blog
 https://matklad.github.io/feed "~Matklad blog" ! dev rust blog
 https://poignardazur.github.io/feed "~Olivier Faure blog" ! dev rust blog
@@ -161,13 +159,13 @@ https://feeds.feedburner.com/2ality "~Axel Raushmayer" ! dev frontend blog
 https://overreacted.io/rss.xml "~Dan Abramov" ! dev frontend blog
 
 # reddit
-https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=6 "~Reddit - Rust" ! reddit
+https://www.reddit.com/r/rust/top/.rss?sort=top&t=day&limit=3 "~Reddit - Rust" ! rust reddit
 https://www.reddit.com/r/programming/top/.rss?sort=top&t=day&limit=6 "~Reddit - Programming" ! reddit
 https://www.reddit.com/r/linux/top/.rss?sort=top&t=day&limit=6 "~Reddit - Linux" ! reddit
 https://www.reddit.com/r/kubernetes/top/.rss?sort=top&t=day&limit=6 "~Kubernetes" ! reddit
-https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" ! reddit
-https://www.reddit.com/r/MachineLearning/top/.rss?sort=top&t=day&limit=3 "~Reddit - ML" ! reddit
-https://www.reddit.com/r/artificial/top/.rss?sort=top&t=day&limit=3 "~Reddit - AI" ! reddit
+https://www.reddit.com/r/golang/top/.rss?sort=top&t=day&limit=6 "~Reddit - Go" ! golang reddit
+https://www.reddit.com/r/MachineLearning/top/.rss?sort=top&t=day&limit=3 "~Reddit - ML" ! ai reddit
+https://www.reddit.com/r/artificial/top/.rss?sort=top&t=day&limit=3 "~Reddit - AI" ! ai reddit
 
 # learning
 https://blog.algomaster.io/feed "~Algomaster" ! dev learning
