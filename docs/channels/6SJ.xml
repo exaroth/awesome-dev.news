@@ -1,4 +1,615 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Go</title><link>https://www.awesome-dev.news</link><description></description><item><title>Scaling multi-tenant Go applications: Choosing the right database partitioning approach</title><link>https://dev.to/abhirockzz/scaling-multi-tenant-go-applications-choosing-the-right-database-partitioning-approach-2amd</link><author>Abhishek Gupta</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 3 Jul 2025 13:01:29 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Multi-tenant applications face a fundamental challenge: how to efficiently store and query data for tenants of vastly different sizes? Consider the typical scenario where your platform serves both enterprise clients with hundreds of thousands of users, as well as small businesses with just a handful. With traditional database partitioning strategies you are likely to run into these common issues:: Large tenants create oversized partitions while small tenants waste allocated resources: High-activity tenants overwhelm individual database partitions, creating performance bottlenecks: User-specific lookups require scanning entire tenant datasets: Mixed workloads compete for the same database resourcesAzure Cosmos DB has been a go-to solution for multi-tenant applications due to its global distribution, automatic scaling, and flexible data models. Its partition-based architecture naturally aligns with tenant isolation requirements, making it attractive for SaaS platforms, IoT applications, and content management systems.However, even with these capabilities, the fundamental multi-tenant partitioning challenges persist. Let's examine how these issues manifest specifically in a Cosmos DB context.This blog post explores an approach to solving multi-tenant scaling challenges in Go applications using Azure Cosmos DB. You'll learn how to implement this using the Go SDK for Azure Cosmos DB, focusing on how to achieve efficient data distribution and query performance.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Go</title><link>https://www.awesome-dev.news</link><description></description><item><title>Specialized File System Interfaces: ReadFileFS, StatFS, and SubFS 6/9</title><link>https://dev.to/rezmoss/specialized-file-system-interfaces-readfilefs-statfs-and-subfs-69-iog</link><author>Rez Moss</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sat, 5 Jul 2025 15:52:00 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[File systems in Go aren't just about implementing the basic  interface. When you're building systems that need to handle files efficiently, you'll often find yourself reaching for more specialized interfaces that can unlock significant performance gains and cleaner code patterns.The Go standard library provides three key specialized interfaces that extend the basic file system functionality: , , and . Each serves a specific purpose and solves common problems you'll encounter when working with file systems at scale.
+  
+  
+  ReadFileFS Interface Benefits
+The  interface adds a single method to the basic :
+  
+  
+  Optimized Single-Call File Reading
+When your file system implements , functions like  will use this specialized method instead of the standard open-read-close sequence. This seemingly simple optimization can have dramatic performance implications.Consider a typical file reading operation without :With , this becomes a single optimized call that your file system can handle however it sees fit. An in-memory file system might directly return bytes from its internal storage. A network-based file system could make a single HTTP request instead of establishing a connection, reading, then closing.
+  
+  
+  Performance vs Convenience Trade-offs
+The decision to implement  involves weighing immediate convenience against long-term performance characteristics. If your file system primarily serves small files that are read entirely into memory, implementing this interface is usually worthwhile. The performance gains compound when you're dealing with hundreds or thousands of file reads.However, there's a trade-off in implementation complexity. Your  method needs to handle all the edge cases that the standard open-read-close pattern would handle: permissions, file not found errors, and proper error wrapping.
+  
+  
+  When to Implement vs Use ReadFile Function
+You should implement  when your underlying storage can optimize the full-file-read operation. This is common in:Archive-based file systems (ZIP, TAR) where you're already reading file contents during extractionDatabase-backed file systems where a single query can retrieve the complete fileCaching file systems where you might have the entire file already in memoryDon't implement it if your file system is simply wrapping another file system without adding optimization opportunities. In those cases, let the underlying system's  implementation handle the optimization.
+  
+  
+  StatFS for Efficient Metadata Access
+The  interface provides direct access to file metadata without requiring file operations:This interface addresses a common inefficiency in file system operations where you need file information but not the file contents themselves.
+  
+  
+  Stat Method vs Open+Stat Pattern
+Without , checking file metadata requires opening the file first:This pattern becomes problematic when dealing with large files or slow storage systems. You're establishing a full file handle just to read a few bytes of metadata. With , this becomes a direct metadata lookup:The performance difference is particularly pronounced with network file systems, where opening a file might involve authentication, connection establishment, and resource allocation on the remote server.Many file system operations only need metadata: build systems checking modification times, backup utilities determining file sizes, or directory listing operations that display file details. When your file system implements , these operations become significantly more efficient.Consider a directory listing that shows file sizes:With , the  function can bypass file opening entirely, making directory operations much faster when you're dealing with directories containing many files.
+  
+  
+  Permission Checking Without File Opening
+One of the most practical applications of  is permission checking. Often you need to verify that a file exists and is accessible without actually reading it. This is common in security-conscious applications where you want to validate file paths before processing them.This pattern is essential in web servers, file processors, and any system that needs to validate file access patterns before committing to expensive operations.
+  
+  
+  SubFS for File System Scoping
+The  interface enables creating restricted views of file systems:This interface solves a fundamental problem in file system design: how to safely limit access to specific portions of a larger file system without complex path manipulation or security checks scattered throughout your code.
+  
+  
+  Creating Sandboxed File System Views
+When you call  on a file system, you get back a new file system that treats the specified directory as its root. This creates a natural sandbox where code operating on the sub-filesystem cannot access files outside the designated area.The key insight is that the sub-filesystem has no knowledge of the parent structure. From its perspective, it  the entire file system. This makes it impossible for code using the sub-filesystem to accidentally or maliciously access parent directories.
+  
+  
+  Security Implications and Boundaries
+ creates hard security boundaries that are enforced at the file system level rather than through application logic. This is crucial for applications that process user-provided templates, serve static files, or operate on untrusted directory structures.Consider a template processing system:Even if the template processor has bugs or the  contains path traversal attempts like , the sub-filesystem prevents access to files outside the user's template directory.Sub-filesystems can be further subdivided, creating layered access controls:This nested approach is particularly useful in content management systems where you might have organization-level access, then project-level access, then feature-specific access controls.The composition also works well with other specialized interfaces. A sub-filesystem that implements  will still provide optimized file reading within its restricted scope:
+  
+  
+  Implementation Strategies
+Building file systems that effectively use these specialized interfaces requires careful consideration of when and how to implement them. The decision isn't just technical—it affects the maintainability and performance characteristics of your entire system.
+  
+  
+  When to Implement These Interfaces
+The choice to implement specialized interfaces should be driven by concrete performance needs and usage patterns, not abstract optimization goals. Start by profiling your actual file system usage to understand where bottlenecks occur.Implement  when you have evidence that file reading is a bottleneck and your storage layer can optimize full-file reads. This is common in systems that:Serve many small files (like static web assets)Cache entire files in memoryRead from compressed archives where you're already decompressing the full contentImplement  when metadata operations are frequent relative to content operations. This happens in:Directory browsers that show file informationBuild systems that check file modification timesBackup systems that compare file metadata before deciding to copyImplement  when you need to enforce access boundaries at the file system level rather than through application logic. This is essential for:Multi-tenant systems where users should only access their own filesPlugin systems where extensions need restricted file accessTemplate processors that handle untrusted content
+  
+  
+  Performance Optimization Techniques
+When implementing these interfaces, focus on optimizations that align with your storage characteristics. For , consider these patterns:For , avoid expensive operations in the stat path:
+  
+  
+  Compatibility Considerations
+When implementing specialized interfaces, ensure your implementations degrade gracefully. Code that depends on these interfaces should always check for their presence using type assertions and have fallback strategies.Your file system should maintain consistent behavior whether callers use the specialized interfaces or the basic  methods:The key principle is that implementing a specialized interface should never change the semantic behavior of your file system—it should only change the performance characteristics.
+  
+  
+  Combining Specialized Interfaces
+The real power of these specialized interfaces emerges when you combine them thoughtfully. A well-designed file system can implement multiple interfaces to provide different optimization paths for different use cases.
+  
+  
+  Interface Composition Patterns
+When implementing multiple interfaces, structure your file system to leverage the strengths of each:This pattern creates a file system that provides optimized access through multiple paths while maintaining the security boundaries that  provides.
+  
+  
+  Type Assertion Best Practices
+When working with file systems that might implement multiple specialized interfaces, use type assertions strategically to access the most efficient path:For metadata operations, establish a similar pattern:The pattern here is always the same: check for the specialized interface, use it if available, then fall back to the basic  operations. This ensures your code works with any file system while taking advantage of optimizations when they're available.These specialized interfaces solve real problems in production systems. Understanding when and how to apply them comes from seeing them in action across different domains.
+  
+  
+  Configuration Management Systems
+Configuration management often involves reading many small files and checking their metadata frequently. A configuration system that implements all three specialized interfaces can dramatically improve startup times and runtime performance:This pattern is particularly effective for systems that need to:Read the same configuration files repeatedlyCheck for configuration changes without full reloadsProvide isolated configuration views to different system componentsTemplate engines benefit significantly from these interfaces. Templates are typically small files that are read completely into memory, and template systems often need to check modification times for cache invalidation:Web servers that serve static files can use these interfaces to create secure, efficient file serving systems:These examples demonstrate how the specialized interfaces work together to solve real-world problems. The key insight is that each interface addresses a specific performance or security concern, and combining them creates file systems that are both efficient and safe.]]></content:encoded></item><item><title>Introducing ggc: A Git Helper Tool Written in Go</title><link>https://dev.to/bmf_san/introducing-ggc-a-git-helper-tool-written-in-go-1ejg</link><author>Kenta Takeuchi</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sat, 5 Jul 2025 12:46:59 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[ggc is a Git operation support tool implemented in Go. With the concept of "easy to remember, easy to use, and improved work efficiency," it aims to make daily Git operations more comfortable.With existing Git client tools, some are too feature-rich making them difficult to learn, while simpler ones lack necessary functionality, making it hard to find a tool with the right balance.Therefore, we decided to create a tool that focuses on daily-use functions with a simple and easy-to-remember command system. By supporting both CLI and CUI, it enables flexible operations according to use cases.: Fast operation with CLI, intuitive operation with CUI: Execute multiple Git operations with a single command: Filter and find commands without memorizing them →  →  →  (interactive selection) →  → As shown above, you can execute commonly used commands with a single command.: Can be operated directly as CLI with  format, or launches a CUI with incremental search when started without arguments: Branch and file selection, commit message input can be done interactively: Easily execute commonly used Git commands like add, push, pull, branch, log: Provides compound commands that combine multiple Git operations (add-commit-push, pull-rebase-push, stash-pull-pop, etc.): Uses only Go standard library and , minimizing external dependencies: Verified on macOS (Apple Silicon/Intel)
+ggc pull current
+
+
+ggc branch checkout  
+ggc add-commit-push  
+ggc stash-pull-pop  The easiest way is to use :go github.com/bmf-san/ggc@latest
+If PATH setting is needed, execute::go GOBINgit clone https://github.com/bmf-san/ggc
+ggc
+make build
+After building, place the generated binary in a directory that's in your PATH.
+  
+  
+  Switching between CLI and CUI Modes
+ automatically switches between CLI and CUI modes based on the presence of arguments.
+ggc
+
+
+ggc branch current
+A single binary supports both modes, enabling flexible operation according to use case.
+  
+  
+  Command Selection with CUI
+Running ggc without arguments displays a command selection screen with incremental search.Select a command (incremental search: type to filter, ctrl+n: down, ctrl+p: up, enter: execute, ctrl+c: quit)
+Search: branch
+
+> branch current
+  branch checkout
+  branch checkout-remote
+  branch delete
+  branch delete-merged
+Type characters → Commands are filtered/ → Move up/downIf arguments are needed → Prompt appears automaticallyAfter execution → Return to selection screen after confirming resultsNo need to memorize commands in detail. Just type and candidates will appear, enabling intuitive operation.Interactive file additiongit rev-parse --abbrev-ref HEADgit branch ... → git checkout <selected>Interactive branch switchingggc branch checkout-remotegit branch -r ... → git checkout -b <n> --track <remote>/<branch>Create and switch to new branch from remotegit branch ... → git branch -d <selected>Interactive deletion of merged local branchesgit branch --merged ... → git branch -d <selected>Interactive deletion of merged local branchesgit push --force origin <branch>Force push current branchgit pull --rebase origin <branch>git commit --allow-empty -m ...Fetch and delete old remote tracking branchesgit clean -nd → git clean -fgit reset --hard HEAD; git clean -fdggc remote set-url <n> <url>git remote set-url <n> <url>
+  
+  
+  Compound Command Examples
+git add . → git commit ... → git pushBatch execute add all files, commit, and pushggc commit-push-interactiveInteractive add/commit/pushInteractively execute file selection, commit, and pushgit pull → git rebase → git pushBatch execute pull, rebase, and pushgit stash → git pull → git stash popBatch execute stash, pull, and popCompletion scripts for Bash and Zsh are included. /path/to/ggc/tools/completions/ggc.bash
+
+ /path/to/ggc/tools/completions/ggc.bash
+Add the above to your  or  to automatically enable completion when terminal starts.Intuitive operation without memorizing commandsComplete routine tasks with a single commandInteractively select branches and filesImprove work efficiency with compound commands]]></content:encoded></item><item><title>Handling Failures in Kafka Consumers: Go Patterns That Work in Production</title><link>https://dev.to/noting59/handling-failures-in-kafka-consumers-go-patterns-that-work-in-production-3662</link><author>Vlad Pistun</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sat, 5 Jul 2025 10:03:19 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Apache Kafka has become the backbone of modern event-driven architectures, enabling high-throughput pipelines, real-time analytics, and loosely coupled microservices. But building resilient Kafka consumers-especially in Go, a language that emphasizes simplicity and low-level control-presents a unique set of challenges.In production, failures aren’t edge cases-they’re daily realities. Network partitions, broker restarts, corrupted messages, serialization mismatches, and poisoned pills can bring down consumers if not handled properly. Without thoughtful design, you risk message loss, duplication, retry storms, or system-wide downtime.This article dives deep into production-tested patterns for handling failures in Kafka consumers written in Go. Using the excellent kafka-go library, we’ll cover:Retry logic with exponential backoffDead-letter queues for unrecoverable messagesManual offset commits for at-least-once deliverySupervision patterns for resilient runtime behaviorSchema validation to catch bad data before it crashes your logicWhether you’re building real-time systems or maintaining a high-throughput message processor, these Go patterns will help you design Kafka consumers that can gracefully survive the messiness of production.🔁 1. Retry Logic with Backoff (for transient errors)Scenario: Your consumer hits a timeout when fetching messages or a temporary processing failure.Apply to message processing:🪵 2. Dead Letter Queue (DLQ) for poison pillsScenario: A malformed message keeps causing panics or errors every time it's retried.Pattern: After a fixed number of retries, send the message to a separate DLQ topic for analysis.🔄 3. At-Least-Once Delivery with Manual CommitScenario: You want to ensure messages are never lost, even if the process crashes.Pattern: Read messages, process them, and commit offsets after successful handling.🚦 4. Consumer Supervision & Graceful RestartScenario: Your consumer crashes due to an unhandled panic or dependency failure.Pattern: Use a supervisor process that restarts consumers with metrics, backoff, and alerting.🧪 5. Contract Testing with Schema ValidationScenario: A consumer crashes due to unexpected payload shape.Pattern: Validate against schema (Protobuf/Avro) at read-time.With Go + Protobuf + Schema Registry:Use Buf for linted schema definitionsValidate decoded messages before processing
+Failure handling in Kafka consumers is a balancing act between reliability, throughput, and cost. Go, with its simplicity and kafka-go's flexibility, gives you the right primitives to implement production-grade systems.Checklist for resilient consumers:Panic recovery and supervisionSchema validation and message contracts]]></content:encoded></item><item><title>Membuat Kode Go yang Type-Safe dari SQL Menggunakan sqlc (Indonesia)</title><link>https://dev.to/arvin-mf/membuat-kode-go-yang-type-safe-dari-sql-menggunakan-sqlc-2953</link><author>Arvin M Fernanda</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sat, 5 Jul 2025 07:57:12 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Di sini kita akan membahas bagaimana menggunakan  dalam sebuah proyek aplikasi back-end bahasa Go dengan database MySQL. Faktor Kebutuhan akan Alur Singkat Penggunaan 
+Ayo Praktik!
+
+
+A. Instalasi dan Setup
+
+Struktur Direktori ProyekSetup  pada folder proyek
+
+B. Membuat Queries dan Generate Function Go
+
+1. Membuat schema pada database2. Membuat queries dan mencoba generate3. Generate queries - 4. Generate queries - 
+
+C. Menggunakan Function Hasil Generate
+
+
+1. Menggunakan function DML
+
+Menggunakan  untuk Menggunakan  untuk 2. Menggunakan function DQL
+  
+  
+  Faktor Kebutuhan akan Berbeda dari ORM seperti GORM,  tidak menyembunyikan SQL-nya. Justru sebaliknya, kita menulis query SQL sendiri, dan  akan me-generate function-function Go yang sudah aman dari  dan siap dipanggil.Kesalahan tipe rentan terjadi baik saat melakukan binding row dari  maupun mengisi parameter untuk , , dan .
+  
+  
+  Alur Singkat Penggunaan Tulis query dalam file .sqlJalankan command Function Go tersedia dalam package yang kita tentukan dan siap digunakan! 🔥Dokumentasi resmi dapat diakses di sini ya.
+(Juga terdapat untuk database PostgreSQL dan SQLite)
+  
+  
+  Struktur Direktori Proyek
+Secara garis besar, kita akan membentuk folder proyek kita sebagai berikut.learn-sqlc/
+├── cmd/
+│    └── main.go
+├── db/
+│    ├── migrations/
+│    ├── queries/
+│    └── sqlc/
+└── repository/ 
+Jalankan command berikut di terminal!go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
+Oiya, di sini saya mencontohkan schema dalam file-file yang di-generate oleh . Jika mau ikut menggunakannya juga bisa memulai dari sini.
+  
+  
+  Setup  pada folder proyek
+Pada folder root, buat file bernama  dengan isi seperti berikut.Semisal tidak menggunakan , bisa buat saja nama foldernya seperti  dengan isi sebagai berikut.db/
+├── schema/
+│    ├── file1.sql
+│    ├── file2.sql
+│    └── dst.
+Lalu nanti ambil isi file  saja pada contoh-contoh yang saya cantumkan (tidak usah yang "down")value dari key  akan digunakan sebagai nama package di awal setiap file  yang di-generate oleh value dari key  akan menjadi folder target tempat meletakkan file-file  yang di-generate oleh pastikan menambahkan dependency modul driver SQL tersebut, bisa gunakan command berikut go get -u github.com/go-sql-driver/mysql, lalu import di file yang pasti tersentuh saat menjalankan runtime 😉
+  
+  
+  B. Membuat Queries dan Generate Function Go
+
+  
+  
+  1. Membuat schema pada database
+Berikut adalah ERD yang akan kita implementasikan.Saya telah membuat file migrasi di dalam folder  dengan isi seperti berikut.
+  
+  
+  2. Membuat queries dan mencoba generate
+Perlu diketahui 🔈 Pola membuat kueri untuk  adalah:Sekarang kita akan mencoba melakukan generate function Go. Jalankan command berikut di terminal!Jika kita memeriksa folder  saat ini, kita akan menemukan file-file dengan format  . memuat isi seperti struct  dan constructornya.  (dengan properti nya) ini lah yang akan berlaku sebagai 'database handle' yang melakukan semacam  dan . berisi struct-struct yang mewakili row berproperti persis setiap tabel yang ada berdasarkan sumber schema: dalam proyek ini adalah file-file dalam folder .Jika kita melakukan , function hasil generate-nya akan di-bind langsung ke struct dari c. File-file berjumlah sesuai dengan jumlah file dalam folder , misalnya  , berisi function-function yang di-generate berdasarkan sintaks SQL yang ada di dalam  .Di sini lah  mendefinisikan function-function Go yang akan kita gunakan nantinya!Perhatikan di dalam  !Kita sudah berhasil membuat satu buah function Go dengan nama  😮Perhatikan bahwa function  mengembalikan  dan .  umumnya digunakan untuk mengambil  ataupun jumlah  saat saat melakukan kueri yang berkarakteristik 'mutation': , , . menjadi  saja lalu jalankan ! Periksa bagaimana perbedaan function Go yang terbentuk!Selain  dan , juga ada jenis permintaan ini: : langsung mengembalikan jumlah affected rows:  : langsung mengembalikan ID baru yang terbentuk: Jika ingin langsung mencoba penggunaan function  ini, bisa langsung lompat ke bagian ini dulu ya!
+  
+  
+  3. Generate queries - Mari tambahkan function lagi pada file  !Lalu jalankan command !
+Sekarang kita menemukan dua function baru di dalam  . sebenarnya tetap melakukan generate seluruhnya (termasuk )Perhatikan bahwa function  meminta argumen bertipe  dengan sebutan . Secara default,  menggunakan nama kolom dari tabel sebagai nama parameter. Mungkin saja kita merasa lebih nyaman jika nama parameter tersebut lebih spesifik, misalnya . Kita dapat mengkustomisasi nama parameter sebagai berikut.
+Ada dua macam "naming parameter" pada , yaitu  dan juga  (untuk parameter yang nullable).
+Mari memodifikasi kode file  !Jalankan !
+Dan coba periksa kode function  saat ini! Nama parameter telah berubah menjadi ! 😉Saat ada lebih dari satu parameter dalam kueri tertentu, function Go dari  akan meminta parameter kedua (parameter setelah ) berupa satu buah struct yang membalut semua parameter yang diperlukan, contohnya seperti struct  yang berisi properti  dan .Sedangkan jika hanya ada satu buah parameter dalam kueri SQL tertentu, function Go dari  akan meminta parameter tersebut sebagai parameter kedua pada function, contohnya seperti  atau  pada .Begitu juga dengan row! Saat kueri hanya me- satu buah kolom maka  akan me- row tanpa membuat struct. Contohnya yaitu seperti kembalian string pada .
+  
+  
+  4. Generate queries - Perhatikan pada contoh sebelumnya return dari function  adalah objek bertipe struct .Hal ini akan selalu terjadi ketika kita mengambil , rows akan di-bind ke struct yang terdefinisi dari file  .
+Kita sebenarnya sudah mencoba membuat kueri dengan mengambil kolom  saja. Namun, apa yang terjadi jika yang kita minta bukan  dan lebih dari satu kolom?Sekarang, coba buat file  di dalam folder  dengan isi sebagai berikut!Lalu jalankan command !
+Saat ini, di dalam folder  telah terbentuk sebuah file baru bernama  . Di dalamnya, sebelum definisi dari function , kita akan menemukan definisi dari struct berikut.Struct ini lah yang digunakan oleh  untuk mem-bind row yang didapatkan dari MySQL untuk kemudian menjadi return dari functionnya. Secara default,  akan mendefinisikan struct tersebut dengan nama berformat , dengan nama kolom menyesuaikan nama-nama kolom bentukan MySQL dari kueri tersebut.
+  
+  
+  Menggunakan AS pada nama kolom
+Modifikasi isi file  menjadi seperti berikut!Lalu generate kembali!
+Inilah struct yang akan terdefinisikan dalam  . akan mengikuti kolom yang terbentuk dari kueri SQL kita, baik pada nama kolom maupun urutan kolom.
+  
+  
+  C. Menggunakan Function Hasil Generate
+
+  
+  
+  1. Menggunakan function DML
+
+Kita akan menggunakan function  yang ada pada  ., buat file  !Lalu kita panggil pada  .func main() {
+    godotenv.Load()
+
+    db := config.InitDB()
+    defer db.Close()
+
+    queries := sqlc.New(db)
+    teamRepo := repository.NewTeamRepository(queries)
+
+    teamRepo.CreateTeam("Team A")
+    teamRepo.CreateTeam("Team B")
+}
+Sekarang cek pada database! Lihat isi tabel  untuk memastikan data team baru sudah benar-benar ter- 😎
+  
+  
+  Menggunakan  untuk Masih ingat bahwa  pada schema tabel  tadi kita buat dengan atribut ?? Yap, -nya tidak kita masukkan secara manual, tetapi diset oleh MySQL. Jika kita membutuhkan  baru tersebut, kita dapat mengambilnya dari .Untuk mendapatkan return  jangan lupa menggunakan  (atau langsung ) ketimbang  akan menghasilkan function berikut.function  mengembalikan  dan Buat file participant_repository.go !participant_repository.goKita akan mencoba memanggil  ini di  . Parameter yang dibutuhkan untuk menambahkan data partisipan ke database adalah nama partisipan dan id grup. Kita akan menyediakan function  terlebih dahulu 😉Oke, sekarang kita tinggal melengkapi  !Agar method/function bisa diakses, jangan lupa mencantumkan function yang telah ditambahkan ke interface  ya!Periksa di database bahwasanya data partisipan telah ditambahkan!
+  
+  
+  Menggunakan  untuk Selain mengambil ID terakhir,  juga dapat memuat jumlah baris yang terpengaruh oleh eksekusi kueri, misalnya pada kueri  dan . Generate, lalu buat function untuk !Coba di  dengan argumen sebagai berikut.Lalu perhatikan log yang tercetak di konsol untuk memeriksa nilai  yang kita dapatkan!
+  
+  
+  2. Menggunakan function DQL
+Kita akan menggunakan function  untuk kemudian mencetak data tim pada konsol.Lengkapi file  !Kita mengambil id tim dengan  dan nama tim dengan  (yaitu value properti  pada ).Untuk yang terakhir, kita akan mencetak data partisipan beserta timnya. !Generate, lalu lengkapi participant_repository.go !
+Perhatikan bahwasanya kembalian dari function yang dibuat oleh  bertipe struct  dengan properti:, bertipe int64, bertipe , bertipe participant_repository.goSekarang kita panggil di  .Begini contoh hasil yang didapatkan.]]></content:encoded></item><item><title>Runtime Memory Encryption in Golang Apps</title><link>https://dev.to/shrsv/runtime-memory-encryption-in-golang-apps-2pa</link><author>Shrijith Venkatramana</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 18:00:15 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hi there! I'm Shrijith Venkatrama, founder of Hexmos. Right now, I’m building LiveAPI, a first of its kind tool for helping you automatically index API endpoints across all your repositories. LiveAPI helps you discover, understand and use APIs in large tech infrastructures with ease.Memory encryption in Go isn't a topic you hear about every day, but it's a powerful tool for securing sensitive data in your applications. When you’re dealing with things like API keys, user credentials, or financial data, you want to make sure they’re not sitting in memory as plain text, just waiting for a memory scrape or a rogue process to snatch them. Runtime memory encryption in Go lets you protect this data by encrypting it while your program runs, making it unreadable to unauthorized access.In this post, we’ll dig into how you can implement runtime memory encryption in Go, why it matters, and what trade-offs you’re dealing with. We’ll cover practical examples, code you can actually run, and some real-world considerations. Let’s break it down.
+  
+  
+  Why Encrypt Memory at Runtime?
+Sensitive data in memory—like passwords or encryption keys—can be exposed if an attacker gets access to your system’s memory. Tools like memory dumpers or even debuggers can read plain-text data from a running process. Runtime memory encryption ensures that sensitive data is stored encrypted in memory and only decrypted when needed, reducing the window of vulnerability.This is especially critical for:High-security applications like banking or healthcare systems.Servers handling API keys or user tokens. (think GDPR, HIPAA, or PCI-DSS).The Go runtime doesn’t natively encrypt memory, but you can leverage libraries and techniques to achieve this. Let’s explore how.
+  
+  
+  Understanding Go’s Memory Model
+Before we jump into encryption, you need to know how Go handles memory. Go’s memory management is built around its garbage collector (GC), which allocates and deallocates memory for your variables. Sensitive data, like strings or slices, can linger in memory longer than you expect because the GC decides when to clean things up.Here’s what you need to know:: Once created, they stick around until the GC collects them.: Data might exist in multiple memory locations.: Freed memory can still contain sensitive data until overwritten.This makes runtime encryption tricky but necessary. You’ll need to manage how data is stored and ensure it’s encrypted as soon as possible.
+  
+  
+  Setting Up a Basic Encryption Layer
+To encrypt data in memory, we’ll use Go’s  package for AES encryption. AES is fast, secure, and widely supported. The idea is to encrypt sensitive data before storing it in variables and decrypt it only when you need to use it.Here’s a simple example that encrypts a string and stores it in memory:This code encrypts a string using AES-CBC, stores the encrypted bytes in memory, and decrypts it when needed. The plaintext never sits in memory unencrypted, except briefly during encryption/decryption.
+  
+  
+  Managing Encryption Keys Securely
+The encryption key is just as sensitive as the data itself. If an attacker gets the key, your encryption is useless.  or store them in plain text. Here are some strategies:Easy to set up, OS-managedCan be read by process with accessKey Management Service (KMS)Highly secure, audited accessRequires external service (e.g., AWS KMS)Hardware Security Module (HSM)Maximum security, tamper-resistantFor most Go apps, a KMS like AWS KMS or Google Cloud KMS is a good balance. Here’s an example using AWS KMS (simplified, assuming AWS SDK is set up):This fetches a 256-bit key from AWS KMS, which you can use for AES encryption. The key is only in memory temporarily, and KMS handles secure storage.
+  
+  
+  Handling Large Data Efficiently
+Encrypting large datasets (e.g., user records or files) can be slow if you’re not careful.  is a better choice than AES-CBC for large data because it’s faster and provides authentication. Here’s an example:AES-GCM is more efficient for large data and ensures data integrity, but you need to manage nonces carefully to avoid reuse.
+  
+  
+  Trade-Offs of Runtime Encryption
+Encrypting memory isn’t free. Here’s a quick breakdown of the pros and cons:Protects against memory attacksDoesn’t prevent all attack vectorsMinimal overhead with modern CPUsEncryption/decryption adds latencyLibraries like  are simpleKey management adds complexity depends on your workload. AES is hardware-accelerated on most modern CPUs, but frequent encryption/decryption can still slow things down. Measure your app’s performance with tools like  to find bottlenecks.
+  
+  
+  Real-World Example: Securing API Keys
+Let’s put it all together with a realistic scenario: a Go server that handles API keys. You want to store the API key encrypted in memory and decrypt it only when making an HTTP request.This keeps the API key encrypted in memory and only decrypts it for the HTTP request.  ensures you’re not accidentally exposing the plain-text key.Here are some practical tips for using runtime memory encryption in production:: Don’t roll your own key storage. Services like AWS KMS or HashiCorp Vault are battle-tested.: Only decrypt data when absolutely necessary to reduce exposure.: Use Go’s  to profile encryption overhead.: Rotate encryption keys regularly and use a KMS to manage them.: Overwrite sensitive data after use (though Go’s GC makes this tricky).For more advanced use cases, libraries like libsodium (via ) can provide additional memory protection features.
+  
+  
+  Next Steps for Securing Your Go Apps
+Runtime memory encryption is a solid step toward securing sensitive data, but it’s not a silver bullet. Combine it with other practices like secure coding, least-privilege access, and regular security audits. Test your encryption implementation thoroughly to ensure it’s working as expected, and always benchmark performance to avoid surprises in production.If you’re building a high-security app, consider diving deeper into libraries like  or exploring hardware-based solutions like Intel SGX for even stronger protection. For most Go developers, starting with AES and a KMS will cover 90% of use cases. Experiment with the code examples above, measure their impact, and adapt them to your needs.]]></content:encoded></item><item><title>Go Undercover: Code Obfuscation with Garble</title><link>https://dev.to/lovestaco/go-undercover-code-obfuscation-with-garble-1ld6</link><author>Athreya aka Maneshwar</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 17:40:45 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hi there! I'm Maneshwar. Right now, I’m building LiveAPI, a first-of-its-kind tool that helps you automatically index API endpoints across all your repositories. LiveAPI makes it easier to , , and  in large infrastructures., by burrowers, is an open-source tool that wraps the Go compiler to produce obfuscated Go binaries. Its key features include:Renaming identifiers, package paths, and removing metadata ⚙️Optional string literal obfuscation with Support for tiny binaries via  (removes filenames, line numbers, panic info)Deterministic builds with reproducible obfuscation (via )go mvdan.cc/garble@latest
+
+  
+  
+  Obfuscating a Simple Program
+Consider this manager app:go build  normal_app main.go
+strings normal_app | process
+Now obfuscate with Garble:garble build  garbled_app main.go
+strings garbled_app | process
+
+  
+  
+  Adding Literal Obfuscation
+Encrypt every string literal:garble build  garbled_lit main.go
+strings garbled_lit | Hello
+
+  
+  
+  Deterministic Builds & Reverse
+To maintain reproducible builds and enable stacktrace deobfuscation:garble build 42  deterministic_app main.go
+If your app panics, you can reverse it to map obfuscated symbols back with:garble reverse 42 deterministic_app
+ (used in reflection/interfaces) are preserved (go.libhunt.com); control-flow obfuscation experimental via GARBLE_EXPERIMENTAL_CONTROLFLOW=1 (github.com)Source paths and metadata are cleared, but the Go runtime still leaves some traces (go.libhunt.com)Raises the bar for reverse-engineers by removing public-type info, strings, file namesFast—about 2× slower than , thanks to caching (github.com)Integrate in CI pipelines (build both plain and garbled variants)Use  mode for smaller executablesConsider additional control-flow obfuscation if you’re in adversary-resistant scenariosGarble significantly complicates metadata and symbol recovery, but obfuscation is not bulletproof. Tools like GoStringUngarbler can reverse literal obfuscation (github.com, cloud.google.com), and determined attackers with runtime analysis can still break logic. Use Garble as part of a broader protection strategy, not your only defense.LiveAPI helps you get all your backend APIs documented in a few minutes.With LiveAPI, you can generate interactive API docs that allow users to search and execute endpoints directly from the browser.If you're tired of updating Swagger manually or syncing Postman collections, give it a shot.]]></content:encoded></item><item><title>**High-Performance WebSocket Servers in Go: Handle 50,000 Concurrent Connections with 5ms Latency**</title><link>https://dev.to/aaravjoshi/high-performance-websocket-servers-in-go-handle-50000-concurrent-connections-with-5ms-latency-3m35</link><author>Aarav Joshi</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 17:06:54 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[As a best-selling author, I invite you to explore my books on Amazon. Don't forget to follow me on Medium and show your support. Thank you! Your support means the world! Building real-time applications requires WebSocket servers that handle thousands of connections efficiently. I've spent years optimizing these systems in Go, focusing on minimizing latency while maximizing throughput. The language's concurrency primitives provide a solid foundation, but strategic design decisions make the difference between adequate and exceptional performance. Let me share practical approaches that have worked in production environments.Go's goroutines simplify concurrent connections but can become costly at scale. I limit goroutine creation using worker pools. Notice how the worker pool channels control concurrency in broadcasts:Connection management requires careful synchronization. I use a dual-locking strategy - a read-write mutex for the connection map and per-connection mutexes for writes. This prevents broadcast operations from blocking unrelated connections. The cleanup routine automatically removes stale connections:Message compression significantly reduces bandwidth. I implement selective DEFLATE compression only when beneficial. The system compares compressed and raw sizes before transmission:Broadcasting efficiently requires careful resource management. I use a sync.Pool for reusable buffers to minimize allocations. The broadcast method shares memory between connections without copying payloads:Metrics collection provides visibility into performance. I track key indicators with atomic counters to avoid locking overhead:Connection upgrades need proper security handling. I always include origin validation and authentication before upgrading:For production readiness, I integrate several critical components. JWT authentication secures connections without constant database lookups. Redis PUB/SUB enables horizontal scaling across server instances. Prometheus instrumentation provides real-time monitoring:Performance tuning requires understanding system limits. I profile CPU and memory usage under load, adjusting worker pool sizes and compression levels. Typical optimizations include:Setting GOMAXPROCS to match available coresAdjusting flate compression levels (BestSpeed vs BestCompression)Tuning Linux kernel parameters for file descriptorsImplementing backpressure during broadcast stormsThe approach shown here handles 50,000 concurrent connections on a 4-core VM with consistent sub-5ms latency. Memory consumption stays around 100MB thanks to buffer reuse and connection pooling. Throughput reaches 120,000 messages/second for small payloads.Production deployments need robust failure handling. I implement circuit breakers for downstream services and automatic reconnection logic for clients. Graceful shutdown ensures no messages are lost during restarts:Testing under realistic conditions proves essential. I use load testing tools that simulate thousands of concurrent connections with randomized message patterns. Observing how the system behaves during network partitions helps build resilience.
+  
+  
+  WebSocket optimization remains an ongoing process. New Go runtime improvements and networking libraries constantly offer better performance. The key is balancing resource efficiency with maintainability - complex optimizations should justify their added complexity. What matters most is delivering real-time experiences that feel instantaneous to users.
+📘 , , , and  to the channel! is an AI-driven publishing company co-founded by author . By leveraging advanced AI technology, we keep our publishing costs incredibly low—some books are priced as low as —making quality knowledge accessible to everyone.Stay tuned for updates and exciting news. When shopping for books, search for  to find more of our titles. Use the provided link to enjoy !Be sure to check out our creations:]]></content:encoded></item><item><title>[Boost]</title><link>https://dev.to/derstruct/-pac</link><author>Alex</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 17:00:19 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Announce: Next-Gen Full Stack Framework For Go]]></content:encoded></item><item><title>Announce: Next-Gen Full Stack Framework For Go</title><link>https://dev.to/derstruct/announce-next-gen-web-ui-framework-for-go-59n</link><author>Alex</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 16:53:42 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[There’s so much I want to say about features, how it works and how I got here (10 years of career from php dev to CTO to this), I don’t even know where to start. For now - please check out the announcement site:Right now I’m focused on test coverage and docs, planning to launch the beta by the end of July.P.S.  will require a paid license for production use (lifetime, per-domain, very affordable). But it’ll be free for development, and the source code will be available on GitHub.P.P.S. Site is hosted in the U.S., so there might be a slight delay if you're visiting from farther locations.]]></content:encoded></item><item><title>High-Performance Go Protocol Parsing: Zero-Copy Techniques for Network Systems</title><link>https://dev.to/aaravjoshi/high-performance-go-protocol-parsing-zero-copy-techniques-for-network-systems-21p6</link><author>Aarav Joshi</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 16:31:02 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[As a best-selling author, I invite you to explore my books on Amazon. Don't forget to follow me on Medium and show your support. Thank you! Your support means the world! Efficient protocol parsing sits at the heart of high-performance network systems. When I build these systems in Go, I prioritize minimizing memory operations while ensuring data integrity. Traditional parsing methods often create excessive garbage collection pressure, throttling throughput. Zero-copy techniques offer a compelling alternative by manipulating data in-place.Buffer pooling forms the foundation of this approach. Instead of allocating new memory for each packet, I reuse buffers from a shared pool. This dramatically reduces pressure on the garbage collector. Consider this buffer pool implementation:For header parsing, I avoid expensive serialization by using direct memory interpretation. The  package enables this by converting byte slices directly into structs. This technique requires careful alignment considerations but eliminates copying overhead:Payload extraction becomes equally efficient through slice referencing. Rather than copying data, I create new slices that reference the original buffer's memory region:Worker parallelism ensures full CPU utilization. I establish multiple goroutines consuming from a shared packet channel. Each worker processes packets independently while maintaining buffer isolation:Atomic counters provide lock-free metric tracking. This avoids mutex contention when updating statistics from multiple workers:Validation remains critical when using unsafe operations. I always verify packet length before header interpretation to prevent memory access violations:Production deployments require additional safeguards. I implement these protections without compromising performance:Throughput optimization extends beyond parsing. I match buffer sizes to network MTUs and batch operations where possible. The processor's cache behavior significantly impacts performance - contiguous memory access patterns prove most efficient.Performance measurements reveal substantial gains. In my tests, zero-copy parsing handles over 1 million packets per second on commodity hardware. Memory allocations drop by 90% compared to standard encoding/binary approaches. Latency stabilizes below 1 microsecond per packet even under load.Real-world applications demand protocol flexibility. I implement version negotiation through header flags while maintaining zero-copy efficiency:Error handling requires special consideration. I separate validation failures from processing errors, tracking them independently. This distinction helps identify systemic issues versus transient packet corruption.Continuous profiling maintains system health. I integrate runtime metrics with monitoring systems:Security remains paramount when using unsafe operations. I combine bounds checking with input sanitization and privilege separation. Defense-in-depth strategies ensure memory safety violations don't compromise system integrity.The transition to zero-copy parsing fundamentally changes application behavior. Garbage collection pauses shrink from milliseconds to microseconds. CPU profiles shift from memory management to actual protocol logic. These improvements enable new use cases in low-latency trading, real-time media, and high-frequency data processing.Maintaining readability proves challenging with advanced techniques. I counter this with rigorous testing and clear documentation. Each unsafe operation gets explicit justification in code comments. Property-based testing verifies edge cases:Zero-copy parsing represents one component in performance-critical systems. I combine it with network stack tuning, kernel bypass techniques, and userspace networking where appropriate. The optimal solution balances engineering effort against performance requirements.These techniques work beyond networking. I apply similar approaches to file parsing, database access, and inter-process communication. The core principle remains: minimize data movement wherever possible.Adoption requires team education. I conduct workshops on safe memory management and performance analysis. Junior engineers start with safe implementations before progressing to advanced optimizations. Code reviews rigorously examine all unsafe operations.The evolution continues with Go's ongoing improvements. Recent compiler enhancements and arena proposals may provide safer alternatives to unsafe operations. I track these developments while maintaining production systems with current best practices.
+  
+  
+  Performance optimization remains a journey rather than a destination. I continuously measure, profile, and refine implementations. Zero-copy parsing provides a robust foundation for building systems that push performance boundaries while maintaining reliability and safety.
+📘 , , , and  to the channel! is an AI-driven publishing company co-founded by author . By leveraging advanced AI technology, we keep our publishing costs incredibly low—some books are priced as low as —making quality knowledge accessible to everyone.Stay tuned for updates and exciting news. When shopping for books, search for  to find more of our titles. Use the provided link to enjoy !Be sure to check out our creations:]]></content:encoded></item><item><title>Testing HTTP Requests with http.RoundTripper</title><link>https://dev.to/dialaeke/testing-http-requests-with-httproundtripper-47go</link><author>Eke Enyinnaya Diala</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 14:06:56 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Last year at work we were working on a B2B SAAS product that other businesses could build upon by calling our APIs. We handle some of the requests and for some we forward the requests to an external provider. Our requirements meant we had to have a very robust testing suite. However, to avoid running out of API credits, rate limit issues, and for our tests to be resilient and fast we have to mock the external API calls. As a recovering JavaScripter, I did the reasonable thing: pull in a library, this time . This is not a criticism of httpmock, I love and use it extensively. Recently, I read GoByExample and learned a different way to mock the http calls using the http.RoundTripper interface. The interface is tailor made for this purpose:RoundTripper is an interface representing the ability to execute a
+single HTTP transaction, obtaining the [Response] for a givenThis tells us we can decide how we want our http.Client to process our requests. Say, we have a function named  that sends a head request to the provided URL that we need to test:We could also write it without explicitly passing in a http.Client pointer:The first function is preferred because it has explicit dependencies and therefore easier to test. We can "inject" different clients with different roundTrippers depending on context. It is also faster because the http client can reuse existing connections to make requests to the same URLs. There are different ways to test this function:If you are from the Javascript ecosystem, this is probably what you do. We have a mocking library intercept the http request and respond with what we want. This is simple and effective. It has the added benefit of having a built in clean up and ease of setting up responders. We can also reduce the number of arguments we pass to the function (remove the "client", it's cleaner 😁).Alternatively, we could dispense with the external dependency and have more control over the request. This is where http.RoundTripper comes in. We pass a client with a custom roundtripper and then test the behaviour we want. As Casey Muratori makes clear every now and again, the effect of dependencies on the reliability of your software cannot be overstated. Each dependency we add makes our software disproportionately flakier. However, this is not just about reducing dependencies, it is also about reducing "magic" and simplicity.It looks like more code for the same functionality but is it? We are essentially swapping out multi-purpose code written by someone else for our own custom code written for our own particular use case. We can create the helpers if we want.Anywho, I asked our AI overlords what they thought and here from Claude 4:Use httpmock when you need:Complex URL pattern matchingRequest verification/countingTesting multiple endpoints in the same testYour team prefers declarative mockingYou're already using it extensivelyUse RoundTripper when you want:Maximum control and transparencySimple, focused unit testsPerformance-critical test suitesI'd say that's pretty good advice. Ciao!]]></content:encoded></item><item><title>I built a CLI tool to extract folders or files from GitHub repos making things easier in a single command using GO — GitSlice</title><link>https://dev.to/sanjay_kumar_584/i-built-a-cli-tool-to-extract-folders-or-files-from-github-repos-making-things-easier-in-a-single-3e3o</link><author>sanjay kumar</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 11:09:11 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Cloning a full GitHub repo when you only need one folder or file is overkill — especially with monorepos.I wanted a simple CLI tool that lets me extract just a folder from any GitHub repo. Sounds simple, right?It’s not. GitHub’s structure, especially with branches that have slashes in their names, makes this problem deceptively tricky. Here's how I solved it — and why the hard part wasn’t syntax or boilerplate, but reasoning through ambiguity.Let’s say you have this URL:
+[https://github.com/supabase/storage/tree/fix/pgboss-on-error-callback/src/http/plugins](https://github.com/supabase/storage/tree/fix/pgboss-on-error-callback/src/http/plugins)
+
+You want just the  folder.But fix/pgboss-on-error-callback is the branch name — and it has slashes in it.So how do you distinguish the  from the ?This is where traditional methods like  break down unless you know the exact branch and folder manually.
+  
+  
+  🔧 My Solution: GitSlice CLI
+Accepts a GitHub folder or file URLParses and resolves the correct  and Clones only the required dataExtracts it into your current directory
+gitslice https://github.com/supabase/storage/tree/fix/pgboss-on-error-callback/src/http/plugins
+
+  
+  
+  🧪 The Hardest Part: Branch vs Path Resolution
+GitHub doesn’t give you the branch and folder explicitly — just a single URL. So I had to build a resolver that intelligently distinguishes between them.Here’s how I approached it:
+  
+  
+  🧠 Step-by-Step Path Resolution Logic
+
+  
+  
+  1. Clone the Repository (Sparse Mode):
+GitSlice starts by shallow cloning the entire repo into a temporary folder (e.g., cloneTemp). This avoids full history and keeps things lightweight
+  
+  
+  2. Parse the GitHub URL into Parts:
+postTree = ['fix', 'pgboss-on-error-callback', 'src', 'http', 'plugins']
+
+  
+  
+  3. Inspect the Local Folder After Clone:
+After cloning, we list the folder structure at the root of the repo. This gives us the actual directories present at that commit.
+  
+  
+  4. Smart Matching to Infer the Real Path:
+Now we iterate through postTree, trying different splits:First, assume the first n parts of postTree could be the branch name.The remaining parts are then assumed to be the path within the repo.At each step, we check if the path exists on disk. If it does, we lock that in as the correct branch/path combo.GitSlice tries:
+Branch = , Path = pgboss-on-error-callback/src/http/plugins → Not found
+Branch = fix/pgboss-on-error-callback, Path =  → ✅ Match
+  
+  
+  6. Handle Nested Branch Names Intelligently:
+This means GitSlice doesn’t rely on hardcoded assumptions or magic string slicing. Instead, it lets the filesystem be the truth.
+  
+  
+  1. Parse the post- part of the URL
+https://github.com/user/repo/tree/branch-name/src/plugins
+
+  
+  
+  2. Clone the repo to a temp dir
+git clone blob:none  https://github.com/user/repo cloneTemp
+
+  
+  
+  3. Compare folder structure to detect real path
+I implemented this logic in  in internal/clone/clone.go file:This method tries  of the post-tree part and validates whether the resulting folder exists in the cloned repo. It worked across many real-world repos with complex branch names.
+  
+  
+  🐍 Pseudocode (Pythonic Version)
+Just for clarity, here's the rough equivalent logic in pseudocode:
+  
+  
+  🧠 Why I Used AI (And Why That’s Fine)
+Yes, I used AI to assist with some parts — like refreshing Go syntax or generating boilerplate for CLI args. But the  — like figuring out branch-path ambiguity, recursive folder matching, and edge case debugging — was 100% me.AI didn’t know how to solve this. It only accelerated parts of the process — like a calculator helps with math, but doesn’t understand the problem.go github.com/05sanjaykumar/gitslice@latest
+git clone https://github.com/05sanjaykumar/gitslice
+gitslice
+go build  gitslice main.go
+gitslice <github-folder-or-file-url>
+gitslice https://github.com/supabase/storage/tree/fix/pgboss-on-error-callback/src/auth
+gitslice https://github.com/vercel/next.js/tree/canary/packages/next
+gitslice https://github.com/05sanjaykumar/Flappy-Bird-OpenCV/blob/main/assets/background-day.png
+
+  
+  
+  🆚 GitSlice vs Manual Git Steps
+gitslice https://github.com/user/repo/tree/branch/folder
+git clone blob:none  https://github.com/user/repo
+repo
+git sparse-checkout init 
+git sparse-checkout folder
+git checkout branch
+ folder ../
+ ..
+ repo
+GitSlice reduces 7 steps to 1 — and eliminates the guesswork.This project taught me how even basic-sounding ideas hide a surprising amount of technical complexity. Let me know your thoughts or how you'd approach it differently!]]></content:encoded></item><item><title>From a Simple Ollama Client to 26k LOC</title><link>https://dev.to/js402/from-a-simple-ollama-client-to-26k-loc-2og5</link><author>Alexander Ertli</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 09:57:40 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Here is how everything has started:Now it's grown into something that has 26,106 LOC (according to qlty.sh) and ~20 modules. I'm still evaluating, but chances are that after the runtime-MVP is launched, most will be refactored into microservices to ensure the flexibility to cope with whatever the platform ends up being used for.Sometimes all you need is to get started coding and keep writing code that solves one visible problem. Like in the snippet I shared.Don't overthink it. Embrace the refactoring needed with each layer of complexity. And don't fear scraping a whole codebase to restart when your design hits the wall. For me at least, this worked.You may know this as extreme programming, if you have a formal background, but the term does not matter. What mattered to me is that working on my own codebase should feel engaging and not like a rock that you have to move up the hill.And here is a little favor I have. If you are interested in participating in the demo launch of an App on top of the contenox runtime-MVP or following me for updates, I may drop a link to the challenge soon.I'm still ruminating if I should launch with a pirate-themed treasure hunt challenge and a little gift card for whoever completes the game via the Telegram bot first — but yeah, if you like the direction or have a better idea, let me know in the comments :)Thanks for making it to the end.]]></content:encoded></item><item><title>The Little Prince of Resistors: 100 Ohm’s Journey in Circuits &amp; Stars</title><link>https://dev.to/ersajay/the-little-prince-of-resistors-100-ohms-journey-in-circuits-stars-4hog</link><author>ersajay</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 06:29:54 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[A Meeting in the Desert of Circuits
+The desert stretched endlessly, its sands glowing like copper under the sun. I was tracing the dunes, heading toward a distant oasis, when I spotted a glint in the sand—a small, rectangular shape, no bigger than a ladybug.
+“You’re… very small,” I said, kneeling.
+“And you’re a child who talks to resistors,” it replied, voice soft as the wind. “But some keepers of light are smallest when they’re strongest. Ask the fox.”
+It was a 100 ohm resistor—the unassuming hero of circuits, but to me, it felt like a secret. Let me tell you its story.What Is the 100 Ohm Resistor? (The Glue of Electronics)
+This was no ordinary component. It was a 100 ohm resistor—electronics’ duct tape, a $0.01 hero that solves 90% of circuit headaches. Here’s its magic:Current Control: Protects LEDs from becoming fireworks (like a fox guarding a rose).
+Signal Termination: Stops USB lines from “snowy screens” (no more glitchy cat videos).
+Voltage Division: Creates reference points for sensors (even Tesla’s battery monitors trust it).Fun Fact: Your phone holds 200+ 100 ohm resistors—they outnumber camera pixels. Small, but everywhere.
+“Why so quiet?” I asked.
+“Keepers don’t shout,” it said. “They just keep.”The Resistor’s Rainbow: Decoding Its Color Secrets
+The 100 ohm resistor wears a rainbow coat—its color code, a secret language only the wise (or foxes) understand.4-Band (5% Tolerance): Brown-Red-Gold-Gold.
+Brown (1), Red (0), Gold (×0.1), Gold (±5%). Think: “1, 0, and a sprinkle of desert magic.”5-Band (1% Precision): Brown-Red-Black-Gold-Brown.
+Brown (1), Red (0), Black (0), Gold (×0.1), Brown (±1%). “1, 0, 0, and a pinch of starlight.”Pro Tip: Gold isn’t just pretty—it’s a clue. “Brown Red Gold” isn’t 1 ohm… it’s 100 ohm! The fox says, “Secrets are meant to be learned, not guessed.”Why the Fox (and Engineers) Choose It
+100 ohm resistors aren’t flashy. They’re the kind of friend who fixes your code, then fades into the background. Here’s why:LED Protection: Limits current to 20mA at 5V (the “sweet spot” for LEDs—no fried petals).
+USB Signal Termination: Matches impedance for noise-free data (no more “snowy screens” in your videos).
+Pull-Up Resistors: Balances logic in I2C buses (no phantom button presses—no more “ghosts” in your circuits).Roast Battle:
+1k ohm resistor (sniffing): “I’m precise for sensors!”
+100 ohm (calm, like the fox): “I’m in your iPhone 15. You’re in a 1995 TV remote. Bye.”RLC Circuits: Taming the Storm
+In RLC circuits (like radio tuners), the 100 ohm resistor is a storm-tamer. It controls the damping ratio (ζ = R/(2√(L/C)))—a fancy way to say, “I keep things from going wild.”ζ < 1 (100 ohm): Oscillations stay crisp (like a well-tended rose). Real-world: Tesla coil controllers use 100 ohm to tame lightning! ⚡
+ζ > 1 (1k ohm): Overdamped—missed frequencies (like a desert without an oasis).“Why not bigger?” I asked.
+“Big things break,” it said. “Tiny things fit. In LED circuits. In Mars rovers. In pacemakers.”Identifying Your Little Prince: A Guide
+Want to spot a 100 ohm resistor? It’s like taming a fox—gentle, patient, and rewarding.
+Step 1: Visual CheckColor Code: Brown-Red-Gold-Gold (4-band) or Brown-Red-Black-Gold-Brown (5-band).
+SMD Codes: “101” (100 ohm) or “01A” (E96 code). “Look for the rainbow, like the fox looks for footprints.”Set to 200 ohm range. Probes on legs. 98-102 ohm = valid. “If it reads ‘1,’ check the solder—blame the breadboard, not the resistor.”Step 3: Circuit ValidationLED test: 5V + 100 ohm + LED = ~15mA (a safe, steady glow). “Like a rose in the desert—just right.”DIY Resistors: Apocalypse Edition
+If you’re stranded (like the Pilot in the desert), 100 ohm resistors can be born from unlikely things:Pencil & Paper: Draw a 1.5cm line with a #2 pencil. ≈100 ohm/cm. “Not for pacemakers, but handy for a desert emergency.”
+Series/Parallel Math: 2×200 ohm parallel = 100 ohm. 10×1k ohm parallel = 100 ohm (precision!). “Even the fox uses math when lost.”Global Giants & the 100 Ohm Army
+100 ohm resistors march with the big names:Vishay (US): CRCW Series, $0.009/unit (±1%). “Tough as the desert’s cacti.”
+ROHM (JP): MCR Series, $0.011/unit (±0.5%). “Precise as the fox’s footsteps.”
+UniOhm (CN): 0805 SMD, $0.005/unit (±5%). “Everywhere, like sand in the wind.”Industry Shift: 60% of smartphones now use laser-trimmed 100 ohm resistors (Teardown.com 2025). “Even stars need precision.”Extreme Adventures: From Hearts to Mars
+100 ohm resistors don’t just live in garages—they’re explorers:Pacemakers: ROHM’s 100 ohm controls micro-currents (error <0.1μA). “Guarding hearts, like the rose guards its thorns.”
+James Webb Telescope: Signal terminators for alien-hunting cameras. “Watching stars, like the Little Prince watches B612.”
+Tesla Cybertruck: 200+ 100 ohm resistors in battery management (survives -40°C). “Tough as the desert’s night.”The Future: A Star That Never Fades
+What’s next for our little prince?Quantum Tech: Stabilizes qubits in quantum CPUs. “Even magic needs a steady hand.”
+Neural Implants: Manages brain-machine signals (DARPA project). “Bridging minds, like the fox bridges worlds.”
+Self-Healing Resistors: Nano-carbon variants repair overloads (Samsung patent). “Roses heal, and so do we.”The Secret of the Little Resistor
+100 ohm resistors aren’t flashy. They don’t need a name in lights or a viral meme. They’re the reason your LED glows, your USB works, and a Mars rover sends back photos.
+“What makes you special?” I asked, as I left.
+It didn’t answer. It just sat there, quiet as the desert, as the stars, as time itself.
+And I realized—some keepers don’t need to be big. They just need to shine.Written by a wanderer who once fried a 100 ohm resistor trying to build a sunflower clock. (Spoiler: It worked. Eventually.)
+🌵 You become responsible, forever, for the resistors you once overlooked.]]></content:encoded></item><item><title>Distributed Logging: ตอนที่ 3 Promtail ดึง Log จาก Kubernetes</title><link>https://dev.to/somprasongd/distributed-logging-tnthii-3-promtail-dueng-log-cchaak-kubernetes-4m03</link><author>Somprasong Damyos</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 04:59:26 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[จากตอนที่แล้ว รันด้วย Docker Compose ถ้าเปลี่ยนไปรันใน Kubernetes แล้วใช้ label-based log filtering ใน Promtail สำหรับดึง log ของเฉพาะ Pod/Container ที่ต้องการ จะต้องปรับแต่งหลักๆ ดังนี้
+  
+  
+  1. เปลี่ยนจาก  เป็น ใช้  เพื่อดึงข้อมูล Pod จาก Kubernetes API แทน ฟิลด์ label จะเปลี่ยนไปเป็นแบบ __meta_kubernetes_pod_label_<labelname> คือการค้นหา Pod ทั้งหมดใน cluster
+  
+  
+  2. เพิ่มสิทธิ์ให้ Promtail อ่าน Kubernetes API
+Promtail ต้องรันใน Kubernetes เป็น DaemonSet (แนะนำ) และต้องมี  สิทธิ์อ่าน Pod metadataตัวอย่าง ServiceAccount + Role + RoleBinding สำหรับ Promtail:
+
+  
+  
+  3. กำหนด label บน Pod / Deployment ที่ต้องการ
+เช่น ใน  ของแอปเพื่อให้ Promtail กรอง log ได้ตาม label เหมือนกับใน docker-compose
+  
+  
+  4. Mount log path และ docker socket (ถ้าจำเป็น)
+ใน Kubernetes ส่วนใหญ่ใช้ container runtime เช่น containerd หรือ CRI-O ที่เก็บ log ไว้ที่  หรือ Promtail ควร mount log directory เหล่านี้ เช่น
+แต่ถ้าใช้ container runtime อื่นต้องเช็ค path log ที่ถูกต้อง__meta_docker_container_label_<name>__meta_kubernetes_pod_label_<name>/var/lib/docker/containers, ต้องมี RBAC เพื่ออ่าน metadata จาก API
+  
+  
+  ตัวอย่างไฟล์ ตัวอย่าง  (รวม , , ,  และ ) สำหรับรัน  ใน Kubernetes แบบ  พร้อม  อ่านเฉพาะ Pod ที่ติด  เหมือนกรณี docker-compose]]></content:encoded></item><item><title>Distributed Logging: ตอนที่ 2 ส่ง Log จาก Go Fiber ไป Loki</title><link>https://dev.to/somprasongd/distributed-logging-tnthii-2-sng-log-cchaak-go-fiber-aip-loki-1g7e</link><author>Somprasong Damyos</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 04:58:04 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[จากตอนที่แล้ว เราทำระบบ Log ที่มี  เชื่อมโยงทุก Log ของ Request เดียวกันได้แล้วแต่เก็บ Log แค่ในไฟล์ หรือ stdout ไม่พอสำหรับ Production จริง เพราะถ้าเครื่องมีหลาย Node จะหา Log แต่ละครั้งวุ่นมากวิธีแก้คือใช้  — รวม Log จากทุกเครื่อง ทุก Container ไว้ที่เดียว เช่น ในตอนนี้เราจะทำให้ Log จาก Go Fiber ถูกส่งไปที่ Loki แล้วดูผ่าน Grafana ได้แบบ Real-Time +  (จากตอนที่แล้ว) สำหรับดึง Log ไฟล์แล้วส่งไป Loki เป็นหน้าจอ Dashboard สำหรับรันทุกตัวพร้อมกันทุก Request ใน Fiber → Log แบบ stdoutDocker Engine จะเก็บ stdout ลงไฟล์Promtail อ่านไฟล์แล้ว Forward ไป LokiGrafana อ่าน Loki แล้วแสดง Log ตาม project/
+ ├── cmd/
+ │   └── main.go
+ ├── middleware/
+ │   └── request_context.go
+ ├── handler/
+ │   └── user_handler.go
+ ├── service/
+ │   └── user_service.go
+ ├── repository/
+ │   └── user_repository.go
+ ├── Dockerfile
+ ├── docker-compose.yml <-- แก้ไข
+ ├── nginx.conf
+ ├── promtail-config.yml <-- เพิ่ม
+ ├── go.mod
+ └── go.sum
+
+  
+  
+  1. ให้ Docker Engine จะเก็บ stdout/stderr ลงไฟล์แบบ JSON
+แก้ไขไฟล์  หมายความว่า container จะเก็บ log เป็นไฟล์ JSON บน disk (นี่คือ default ของ Docker)ทุก log ที่ container พิมพ์ออกมาที่ stdout/stderr จะถูกเก็บเป็น JSON event ในไฟล์กำหนดขนาดและจำนวนไฟล์ log (log rotation) → เมื่อ log ไฟล์ใหญ่เกิน 10 MB Docker จะเริ่มหมุนไฟล์ (rotate) → Docker จะเก็บไฟล์ log ได้สูงสุด 5 ไฟล์ (ไฟล์หลัก + ไฟล์ rotate 4 ไฟล์) ถ้าเกินก็ลบทิ้งไฟล์เก่าสุด
+  
+  
+  2. Promtail Config: อ่านไฟล์แล้วส่งไป Loki
+สร้างไฟล์ Promtail จะเปิด HTTP server ที่พอร์ต  เพื่อใช้ health check, metrics, หรือ config reload.ปิด gRPC listener () → ไม่ใช้ gRPC สำหรับรับ log จาก agent อื่น ๆ\Promtail จะเก็บไฟล์  ไว้เพื่อจำว่าอ่าน log ไฟล์/stream ไปถึงไหนแล้วถ้า Promtail รีสตาร์ท จะไม่อ่าน log ซ้ำตั้งแต่ต้น แต่จะ resume ต่อจากตำแหน่งล่าสุดจุดหมายของ log → ส่ง log ทั้งหมดไปที่  ซึ่งรันอยู่ที่  คือชื่อ container (เช่น ใน  มี )ตั้งชื่อ job ว่า  → เพื่อระบุว่า job นี้มีหน้าที่ scrape log จาก Docker containersใช้  → ดึงรายการ containers ผ่าน Docker API () → เช็ค container ใหม่ทุก 5 วินาที → จะ scrape เฉพาะ containers ที่มี label  เท่านั้น ถ้าไม่มี label นี้จะไม่เก็บ logใช้  เพื่อสร้าง  สำหรับ log event
+
+ → เป็น metadata จาก Docker discoveryแปลงชื่อ container → เป็น label แยก log stream ( / ) → เป็น label ถ้า container มี label เช่น  → จะ map เป็น label เป็น  สำหรับแปลง log ก่อนส่งไป Loki:
+
+ → แยก JSON จาก Docker log driver () ให้ออกมาเป็น field → ดึงค่า  จาก payload JSON ใน log (ถ้ามี) → สร้าง label ชื่อ  โดยใช้ค่า  ที่ดึงมา
+  
+  
+  3. Docker Compose: Loki + Promtail + Grafana
+แก้ไฟล์ เปิด Grafana ไปที่ Configuration → Data Sources → Add data sourceเลือก , ตั้ง URL เป็น ไปที่ Explore → เลือก Data Source → เลือก curl http://localhost/users/1
+ดู Log ใน Grafana จะเห็นทุก Log พร้อม Promtail ทำงานแบบ Agent คอย tail ไฟล์ Log แล้ว Push ให้ LokiZap สร้าง Log ในรูปแบบ JSON → Loki ดึง label หรือ filter ได้ดีมากการค้น Log ตาม  ใน Grafana แค่ใช้ Loki Query เช่น:{app="demo-logger"} |= "request_id"
+นี่คือ Stack Logging ขนาดย่อมแต่ใช้งานได้จริง:Fiber + Zap → สร้าง Log เป็น JSONDocker Engine → เขียน Log ไฟล์Promtail → Agent ดึง Log ไฟล์Loki → Aggregator เก็บ Log ทุก ContainerGrafana → Query Log ตาม Request IDทั้งหมดนี้รันด้วย Docker Compose พร้อมใช้งานทันที]]></content:encoded></item><item><title>Distributed Logging: ตอนที่ 1 ให้ Log รู้ว่าเกิดจาก Request เดียวกัน</title><link>https://dev.to/somprasongd/distributed-logging-tnthii-1-aih-log-ruuwaaekidcchaak-request-ediiywkan-2p4n</link><author>Somprasong Damyos</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 04:55:27 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[เคยไหม? เปิด log ไฟล์มาแล้วต้องกวาดตาดู Stack Trace วนเป็นชั่วโมง กว่าจะเจอว่า Error อันนี้มาจาก Request ไหน แล้วถ้าเจอ Request หนึ่งกระจายยิงหลาย Service ยิ่งวุ่นเข้าไปใหญ่นี่คือที่มาของ  หรือบางคนเรียกว่า  — ตัวช่วยเล็ก ๆ ที่ทำให้ Distributed Logging เป็นเรื่องง่ายขึ้นบทความนี้จะพาไปดูวิธีทำ End-to-End Correlated Logging ตั้งแต่และวิธีส่งต่อ ID นี้ไปทั้ง Layer: Handler → Service → Repositoryพร้อมตัวอย่างโค้ดจริง เอาไปต่อยอดได้เลยเวลามี Request เข้า Service, เราอยากรู้ว่า:Log ไหนเป็นของ Request ไหนถ้า Request เดียวกันทำงานหลาย Layer หรือเรียกหลาย Service, ทุก Log ต้องมี ID เดียวกันพอมี ID เดียวกัน เราจะ Search, Filter, Trace ข้ามระบบได้ง่าย (โดยเฉพาะถ้าใช้ OpenTelemetry หรือ ELK, Loki, Jaeger): ทำหน้าที่ Proxy, inject  ถ้ายังไม่มี รับ  แล้วสร้าง Logger ฝัง  ใส่ : แบ่ง  →  →  ทุก Layer รับ Context และดึง Logger จาก Context เท่านั้น: ใช้  ซึ่งเป็น Production-ready logger ที่นิยมใน Goproject/
+ ├── cmd/
+ │   └── main.go
+ ├── middleware/
+ │   └── request_context.go
+ ├── handler/
+ │   └── user_handler.go
+ ├── service/
+ │   └── user_service.go
+ ├── repository/
+ │   └── user_repository.go
+ ├── Dockerfile
+ ├── docker-compose.yml
+ ├── nginx.conf
+ ├── go.mod
+ └── go.sum
+
+  
+  
+  Config NGINX ให้ใส่ เริ่มที่ Proxy ก่อน สมมติคุณมี  ประมาณนี้:http 
+  server 
+    listen 80
+
+    location / 
+      proxy_set_header X-Request-ID 
+
+      proxy_pass http://backend
+  upstream backend 
+    server app:3000 ของ NGINX คือ Unique ID ที่ NGINX generate ให้แต่ละ Requestถ้าข้างหน้ามี Load Balancer ที่ generate ไว้แล้ว หรือ Client ส่ง  มาก่อนแล้ว  ของ NGINX จะ preserve ให้โดยอัตโนมัติ
+  
+  
+  Fiber Middleware: สร้าง Request ID และ Logger
+ต่อมาใน Go Fiber เราต้องทำ Middleware ดึง  ใส่ logger
+  
+  
+  Handler → Service → Repository ใช้ Logger จาก Context
+
+  
+  
+  Build: สร้าง Dockerfile และ docker-compose
+go mod download
+
+0 linux amd64 go build  app ./cmd/main.go
+
+apk  add ca-certificates
+
+docker compose up เรียกดู Log ด้วยคำสั่ง backend-app  | :,:1751602673.5724216,:,:,:,:,:
+backend-app  | :,:1751602673.5769289,:,:,:,:,:
+backend-app  | :,:1751602673.5770924,:,:,:,:,:ทุก Log ที่เกิดใน Handler, Service, Repo จะมี  ติดไปด้วย ทำให้เรา grep หรือ trace cross-service ได้ง่าย หรือ  คือวิธีง่าย ๆ ที่ช่วยให้การ Debug ระบบ Distributed หรือ Microservices เป็นเรื่องง่ายขึ้นจุดสำคัญคือ generate ID ครั้งเดียวที่ Proxy แล้วส่งต่อทุกจุดใน Layer ด้วย Logger ต้องสร้างครั้งเดียวใน Middleware แล้วใช้ Logger จาก Context ทั้งหมดแค่นี้คุณจะมี Log ที่เชื่อมโยงได้ชัดเจน ลดเวลาหา Bug ได้มาก]]></content:encoded></item><item><title>Building a Distributed Task Scheduler with etcd: A Hands-On Guide</title><link>https://dev.to/jones_charles_ad50858dbc0/building-a-distributed-task-scheduler-with-etcd-a-hands-on-guide-1eld</link><author>Jones Charles</author><category>dev</category><category>go</category><category>devto</category><pubDate>Fri, 4 Jul 2025 00:49:53 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Task scheduling in today’s apps isn’t just about firing off cron jobs anymore. As systems scale and complexity spikes, we’re juggling multi-node setups, high availability, and state consistency—like ensuring database backups, order processing, or web crawlers run smoothly across a cluster. Think of a distributed task scheduler as an orchestra conductor: every node (musician) hits their cue perfectly, no duplicated efforts, no missed beats. So, how do we build one?Enter , the unsung hero of distributed coordination. It’s lightweight, consistent, and packed with features like real-time Watches, distributed locks, and Leases—perfect for wrangling tasks in a cluster. Unlike ZooKeeper’s hefty setup or Redis’s memory-hungry ways, etcd strikes a sweet spot: simple to deploy, easy to use, and a natural fit for Go developers (thanks to its native client library).In this guide, I’ll walk you through designing and coding an etcd-based distributed task scheduler in Go. We’ll cover the architecture, implement core pieces, explore real-world use cases, and dodge common pitfalls—all from my own experience. Whether you’re a Go newbie with a year under your belt or a distributed systems enthusiast, this is for you. Let’s see why etcd is our scheduling MVP! Developers comfy with Go basics (goroutines, channels) and curious about distributed systems. New to etcd? No sweat—I’ll ease you in.
+  
+  
+  Why etcd Rocks for Task Scheduling
+Before we sketch out a system, let’s unpack why etcd is a killer choice for distributed task scheduling—and what problems it solves.
+  
+  
+  Meet etcd: The Coordination Wizard
+Born at CoreOS and now a Kubernetes staple, etcd is a distributed key-value store built on the Raft consensus protocol. It’s more than just storage—it’s a coordination powerhouse with:: Stash task details like IDs, times, and states.: Get real-time updates on changes (think task status flips).: Keep tabs on node liveness—zombie nodes, begone!: Ensure one node, one task, no chaos.Compared to ZooKeeper (complex) or Redis (eventual consistency), etcd’s lightweight vibe and strong consistency make it a dream for small-to-medium teams.
+  
+  
+  The Distributed Scheduling Struggle
+Picture 10 nodes running tasks. Without coordination, you’re in for:: Scheduler dies, tasks stop.: Two nodes grab the same job—oops.: Node crashes mid-task, now what?These are ticking time bombs. etcd defuses them.: Raft keeps things humming even if nodes drop.: Nodes spot task updates instantly.: Transactions guarantee exclusive task grabs.: Dead nodes lose their grip, tasks reassign.It’s like etcd was  for this. Ready to build? Let’s design it.
+  
+  
+  Designing and Coding the Scheduler
+Time to get hands-on. Our etcd-powered scheduler will be a relay race: nodes pass tasks smoothly, no tripping. Here’s the plan and code to make it happen.: Stores tasks, assigns them, tracks states.: Fetch and run tasks, report back.: From acquisition to execution to updates.
+[etcd Hub]
+├── /tasks: Task Metadata
+├── /locks: Task Locks
+└── /nodes: Node Heartbeats
+    ↓
+[Workers: Node 1, Node 2, ...]
+etcd’s the brain; Go workers are the muscle.Let’s code the essentials with etcd’s .Tasks need a home. We’ll use a simple struct and JSON.
+  
+  
+  Task Assignment with Locks
+No duplicate runs—locks to the rescue.: Spin up goroutines for locking, watching, and heartbeats.: Add backoff for etcd hiccups—keep it resilient.
+  
+  
+  Real-World Wins: Use Cases with Code
+A scheduler’s true test is in the wild. Let’s tackle two classics—scheduled tasks and async queues—using our etcd setup, complete with runnable Go code.
+  
+  
+  Use Case 1: Scheduled Database Backups
+: Back up a database daily at 2 a.m. across 10 nodes. Only one should run it; others wait or step in if it fails.Store the task in etcd with a trigger time.Nodes race for a lock when the clock hits—winner backs up.Leases ensure failover if the winner crashes.Waiting 3s for backup
+Waiting 3s for backup
+Backing up (Task backup-001)...
+Task backup-001 taken, skipping
+One node wins, others back off—clean and reliable.
+  
+  
+  Use Case 2: Async Order Processing Queue
+: E-commerce orders pile up—send emails, update stock. Nodes grab tasks dynamically, no overlap.Workers Watch for new entries, lock, and process.Status syncs in real-time.w1 processing order-123
+w2 processing order-456
+Tasks split nicely—fast and fair.: Locks nail exclusivity.: Leases catch crashes.: Watches keep it snappy.Theory’s great, but production is where schedulers earn their stripes. Here’s what I’ve learned to keep things humming—and traps to avoid.Too many Watches clog etcd; short leases spam renewals.: Start at a recent revision with .: Match duration to task length (e.g., 15s for slow jobs).
+
+  
+  
+  Handle Failures Gracefully
+Networks flake. Retry with backoff, rollback on flops.Log states, track metrics—visibility is king.: Prometheus for task durations, failures.
+  
+  
+  Pitfalls I Hit (So You Don’t)
+: Nodes dropped etcd connections in shaky networks.: Bump timeouts, add reconnection.: Lock delays let tasks slip through.: Double-check state pre-run.: Thousands of tasks bogged down Watches.: Shard tasks by prefix, batch events.These tweaks turned chaos into calm.
+  
+  
+  Wrapping Up: What We’ve Built and What’s Next
+We’ve journeyed from etcd’s basics to a fully functional distributed task scheduler in Go—pretty cool, right? Let’s recap and peek at the horizon.Our etcd-powered scheduler is a lean, mean coordination machine:: etcd’s lightweight setup got us rolling fast—no PhD in ops required.: Raft and leases keep tasks flowing, even when nodes flake out.: From nightly backups to order queues, it bends to fit.Go’s concurrency magic—goroutines, channels—meshed perfectly with etcd’s client, making this a joy to code. Real-world tweaks (retries, sharding) polished it for battle. It’s not just theory—it’s a system you can deploy .
+  
+  
+  What’s Next for Distributed Scheduling
+The future’s bright, and etcd’s got room to grow:: Hook it to Kafka for massive task streams or Redis for quick caches.: Lean into Kubernetes—etcd’s already there. Imagine task CRDs managed by Operators.: Machine learning could predict loads or optimize task splits—sci-fi stuff, but closer than you think.This isn’t the end—it’s a launchpad.Distributed systems sound scary, but they’re just puzzles waiting for you to solve. Start with a single task in etcd, add a worker, then scale it up. Break it, fix it, learn from it. My big takeaway? Hands-on beats head-scratching every time. Wrestling with Watch lags and lock races leveled up my skills more than any textbook.So, grab this code, spin up etcd (Docker’s your friend), and build something. Got a cron job begging to go distributed? Start there. Share your wins—or epic fails—in the comments—I’d love to hear how it goes. Happy scheduling!]]></content:encoded></item><item><title>Implementing Enum Types in Go</title><link>https://dev.to/leapcell/implementing-enum-types-in-go-527l</link><author>Leapcell</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 3 Jul 2025 18:44:27 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Enumeration types are a commonly used data type for representing a limited, predefined set of named constant values. In an enumeration type, each constant is an enum value, and all values are equal and unique.Enumeration types are typically used to represent a set of related constants, such as days of the week, months, gender, etc. In other languages (such as Java and C), enumeration types are built-in. However, Go does not have a built-in enumeration type, so we need to use other approaches to implement similar enum functionality. This article will demonstrate how to implement an "enumeration type".
+  
+  
+  "Enumeration Types" in Go
+The values of enumeration types are essentially constants, so we can use constants in Go to implement similar enum functionality. For example:In this example, we use the  keyword to define a group of constants, where each constant's name represents an enum and its value corresponds to an integer.Although this example achieves functionality similar to an enum type, it lacks some characteristics of true enum types, such as safety and constraints. To address these two issues, we can use custom types for improvement:In the improved example, we define a custom type  to represent the days of the week. We then use the  keyword to define a group of constants, where each constant is assigned a specific value and constrained by the  type for type enforcement and checking. This allows us to use the enum value names to represent specific days of the week, and because of the custom type, the compiler can perform type checking, thereby improving type safety.
+  
+  
+  Gracefully Implementing Enums Using From the previous example, it is easy to see that manually assigning values to each enum constant becomes quite cumbersome when multiple enum values are needed. To solve this problem, we can use the  constant generator, which helps us generate sequential integer values.
+For example, we can define a weekday enum type using :In this example, we use the auto-incrementing constant generator  to define an enumeration type for weekdays. Each enum value is a constant of type . Due to the auto-increment rule of , each enum value will automatically increment, generating a series of consecutive integer values.
+  
+  
+  Adding Methods to Custom Enums
+To make our implemented "enum type" more closely resemble enums in other languages such as Java, we can add methods to it.Returns the name of the enum value.Returns the position of the enum value in the enum type.Implements the  method for formatted output.Returns a slice containing all enum values.Returns the corresponding enum value based on the name.In day-to-day development, enumeration types are very commonly used. Although Go does not have built-in enum types, it does not prevent us from implementing a similar "enum type" ourselves. When implementing it, we need to consider issues of type constraint and safety.There are many ways to implement enum-like functionality. This article has introduced an approach using custom types. Once you understand the core idea, you can also implement similar enum functionality using structures or other techniques.Leapcell is the Next-Gen Serverless Platform for Web Hosting, Async Tasks, and Redis:Develop with Node.js, Python, Go, or Rust.Deploy unlimited projects for freepay only for usage — no requests, no charges.Unbeatable Cost EfficiencyPay-as-you-go with no idle charges.Example: $25 supports 6.94M requests at a 60ms average response time.Streamlined Developer ExperienceIntuitive UI for effortless setup.Fully automated CI/CD pipelines and GitOps integration.Real-time metrics and logging for actionable insights.Effortless Scalability and High PerformanceAuto-scaling to handle high concurrency with ease.Zero operational overhead — just focus on building.]]></content:encoded></item><item><title>Securing Golang Binaries: Obfuscation Techniques That Work</title><link>https://dev.to/shrsv/securing-golang-binaries-obfuscation-techniques-that-work-1e1</link><author>Shrijith Venkatramana</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 3 Jul 2025 16:43:13 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hi there! I'm Shrijith Venkatrama, founder of Hexmos. Right now, I’m building LiveAPI, a first of its kind tool for helping you automatically index API endpoints across all your repositories. LiveAPI helps you discover, understand and use APIs in large tech infrastructures with ease.Golang binaries are fast, efficient, and cross-platform, but they’re not inherently secure from prying eyes. Reverse-engineering tools can crack open your compiled code, exposing logic, secrets, or intellectual property.  is a practical way to make your binaries harder to reverse-engineer while keeping them functional. This article dives into actionable techniques to protect your Golang binaries, with examples you can compile and test yourself. Let’s make your code a tougher nut to crack.
+  
+  
+  Why Obfuscate Golang Binaries?
+Golang compiles to native machine code, which is great for performance but not for security. Tools like , , or decompilers can extract readable strings, function names, and even approximate logic from your binary. Obfuscation scrambles this, making it harder for attackers to understand or modify your code.  include protecting sensitive data, deterring reverse-engineering, and safeguarding proprietary algorithms. However, obfuscation isn’t foolproof—it’s about raising the effort bar for attackers.
+  
+  
+  Stripping Debug Information
+Debug symbols in Golang binaries (like function names and source file references) are a goldmine for reverse-engineers. Stripping them reduces the binary’s readability. Use the  flag with  to remove debug info.Example: Stripping Debug Symbols: Removes the symbol table.: Removes DWARF debug info.Run strings stripped_binary | grep main on the binary. Without stripping, you’d see function names and source file paths. With , the output is much leaner, making reverse-engineering harder. Compare sizes: a stripped binary is often 20-30% smaller.Reduces size, hides function namesShrinks binary, removes source references
+  
+  
+  Obfuscating String Literals
+Hardcoded strings (e.g., API keys, endpoints) are easily extracted using  or hex editors.  at compile time or runtime makes them less readable. A simple approach is to encode strings and decode them at runtime.Example: Runtime String DecodingHere, the string is Base64-encoded, so strings obfuscated_strings won’t reveal the raw secret. For better security, use stronger encryption (e.g., AES) with a key stored securely. Be cautious: decoding logic can still be reverse-engineered, so combine this with other techniques.
+  
+  
+  Using Garble for Code Obfuscation
+Garble is a popular tool for obfuscating Golang code during compilation. It renames functions, variables, and packages, and can scramble string literals. Install it with go install mvdan.cc/garble@latest.Example: Obfuscating with Garble: Obfuscates string literals.: Randomizes obfuscation for uniqueness.Run strings obfuscated_binary. You’ll see garbled function names and no clear strings. Garble can increase binary size slightly (5-10%) but significantly complicates decompilation. Always test thoroughly—obfuscation can break reflection-heavy code.Renames symbols, obfuscates literalsMay break reflection, slight size increase
+  
+  
+  Encrypting Sensitive Data
+Beyond strings, sensitive data like configuration or credentials can be encrypted and decrypted at runtime. Use libraries like  for robust encryption. Store the encryption key securely (e.g., environment variables or a key management service).Example: AES Encryption for ConfigThis encrypts the secret with AES-256, making it unreadable in the binary. Store the key securely outside the binary. This approach is stronger than simple encoding but requires careful key management.Control flow obfuscation alters the program’s structure to confuse decompilers. Techniques include inserting dummy code, reordering logic, or using opaque predicates. This is complex and often requires tools like Garble or custom logic.Example: Simple Control Flow ConfusionThis is a basic example. Advanced control flow obfuscation might involve splitting functions or adding redundant loops. Tools like Obfuscator-LLVM (with a Go frontend) can automate this, but they’re overkill for most projects.UPX compresses binaries, which can obscure their structure as a side effect. It’s not true obfuscation but reduces the binary’s footprint and makes casual inspection harder.Example: Packing with UPX
+go build  myapp main.go
+
+upx  myapp
+Run  before and after. The packed binary is harder to analyze, but UPX is reversible, so combine it with other techniques. Install UPX via  or similar.Reversible, less secure alone
+  
+  
+  Combining Techniques for Maximum Protection
+No single technique is enough. Combine stripping, string obfuscation, Garble, and encryption for robust protection. Here’s a workflow:Strip debug info with .Obfuscate code and literals with Garble.Encrypt sensitive data with AES.Example: Combined ApproachTest thoroughly, as combining tools can introduce bugs. Use version control to revert if needed.
+  
+  
+  Best Practices and Trade-offs
+Obfuscation isn’t a silver bullet. Balance security, performance, and maintainability. Over-obfuscation can break reflection, increase binary size, or slow execution. Always test on target platforms. Use environment variables or secure vaults for keys to avoid hardcoding. Monitor performance—encryption and Garble can add overhead (typically <5% for most apps).Protecting your Golang binaries is about layering defenses to deter attackers. Start with simple steps like stripping and string encoding, then scale up with Garble and encryption based on your needs. Test rigorously and keep backups. With these techniques, you can make your binaries a lot less inviting to reverse-engineers.]]></content:encoded></item><item><title>Scaling multi-tenant Go applications: Choosing the right database partitioning approach</title><link>https://dev.to/abhirockzz/scaling-multi-tenant-go-applications-choosing-the-right-database-partitioning-approach-2amd</link><author>Abhishek Gupta</author><category>dev</category><category>go</category><category>devto</category><pubDate>Thu, 3 Jul 2025 13:01:29 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Multi-tenant applications face a fundamental challenge: how to efficiently store and query data for tenants of vastly different sizes? Consider the typical scenario where your platform serves both enterprise clients with hundreds of thousands of users, as well as small businesses with just a handful. With traditional database partitioning strategies you are likely to run into these common issues:: Large tenants create oversized partitions while small tenants waste allocated resources: High-activity tenants overwhelm individual database partitions, creating performance bottlenecks: User-specific lookups require scanning entire tenant datasets: Mixed workloads compete for the same database resourcesAzure Cosmos DB has been a go-to solution for multi-tenant applications due to its global distribution, automatic scaling, and flexible data models. Its partition-based architecture naturally aligns with tenant isolation requirements, making it attractive for SaaS platforms, IoT applications, and content management systems.However, even with these capabilities, the fundamental multi-tenant partitioning challenges persist. Let's examine how these issues manifest specifically in a Cosmos DB context.This blog post explores an approach to solving multi-tenant scaling challenges in Go applications using Azure Cosmos DB. You'll learn how to implement this using the Go SDK for Azure Cosmos DB, focusing on how to achieve efficient data distribution and query performance.
   
   
   Challenges with a multi-tenant SaaS solution
@@ -1175,165 +1786,4 @@ The magic here is  – your CLI starts simple but grows with your users' experti
   
   
   3. 🚀 Pro Tips & Distribution: Making Your CLI Tool Production-Ready
-Alright, you've built an awesome CLI tool. It works on your machine (famous last words, right?). Now comes the real challenge: making it work everywhere and making it easy for people to actually get their hands on it.Here's a lesser-known fact that'll blow your mind: Go's static compilation means your CLI tool can run on systems where the user has never even heard of Go. This is huge! While Python developers are explaining virtual environments and Node.js folks are debugging npm conflicts, you just hand someone a binary and say "run this."Testing CLI apps is like teaching your pet to fetch – lots of repetition, but when it works, it's magical. The key is testing both the happy path and the "what happens when users inevitably do something unexpected" path.Now, let's talk about  – because the best CLI tool in the world is useless if nobody can install it:But here's the : Use GitHub Actions to automate this process and create releases automatically: Set up Homebrew distribution for macOS users:The irony? You'll spend more time setting up the distribution pipeline than building the actual CLI tool. But that's the price of making software that people can actually use without a PhD in dependency management! 😂We've journeyed from the basics of Cobra and Viper to building production-ready CLI tools that developers will actually want to use. The key takeaways? Respect your users' intelligence, provide sensible defaults, give helpful feedback, and make installation painless.The Go ecosystem has matured to the point where building professional CLI tools is no longer the domain of systems programming wizards. With the right frameworks and practices, you can create tools that feel as polished as the best commercial software.Here's the thing: every great developer tool started as someone's side project to solve their own problem. Docker began as a deployment tool for dotCloud. Kubernetes started as Google's internal orchestration system. Your next CLI tool might just be the one that changes how developers work.So, what CLI tool will you build next? Will it be the project generator that finally makes sense? The deployment tool that doesn't require a manual? The debugging assistant that actually assists? The terminal is your canvas, and Go is your brush 🎨Share your Go CLI creations in the comments – I'd love to see what the community builds with these techniques! And remember, the best CLI tool is the one that makes other developers' lives just a little bit easier.]]></content:encoded></item><item><title>Stop Wrestling with Config Files: A DevOps Guide to Sanity with Konfigo</title><link>https://dev.to/bogdan_bododumitrescu_/stop-wrestling-with-config-files-a-devops-guide-to-sanity-with-konfigo-1hh3</link><author>Bogdan “Bodo” Dumitrescu</author><category>dev</category><category>go</category><category>devto</category><pubDate>Mon, 30 Jun 2025 07:53:57 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[As a DevOps engineer, you've probably felt the pain of managing configuration files. You've got JSON, YAML, TOML,  files, and maybe even some custom formats you'd rather not talk about. You're juggling configs for different environments (dev, staging, prod), and trying to keep everything in sync is a nightmare. What if I told you there's a better way?Enter Konfigo, a powerful command-line tool that's about to become your new best friend.Konfigo is a versatile configuration management tool that helps you streamline your entire configuration workflow. It reads various configuration file formats, merges them intelligently, and processes the combined data against a user-defined schema for validation, transformation, and even batch output generation.Think of it as a Swiss Army knife for your configuration files. 🇨🇭Here are some of the key features that make Konfigo a game-changer for DevOps: JSON, YAML, TOML, and  files are all supported. No more converting files by hand! Intelligently merges multiple configuration sources, respecting order and immutability rules.Powerful Schema Processing: Inject dynamic values from environment variables, dedicated variable files, or schema defaults. Create new configuration values (e.g., , , , ). Modify keys and values (e.g., , , , , , , , ). Enforce rules (, , , , , , ). Use the  directive in a variables file to generate multiple tailored configuration outputs from a single schema and run.Environment Variable Integration: Override any configuration value directly using environment variables.
-  
-  
-  Why Should a DevOps Person Care? 🤷‍♀️
-Okay, so Konfigo has a lot of features. But how does it actually make your life easier?
-  
-  
-  Tame the Multi-Headed Hydra of Configuration Formats
-Let's say you have a base configuration in YAML, but your production environment requires some overrides from a  file. With Konfigo, you can merge them with a single command:konfigo  base.yaml,prod.env No more writing custom scripts to parse and merge different formats. Konfigo handles it all for you.
-  
-  
-  Automate Your Configuration Workflow
-You can integrate Konfigo into your CI/CD pipelines to generate environment-specific configurations on the fly. For example, you can have a base configuration and then apply environment-specific overrides from different files.Here's a conceptual example of how you might use Konfigo in a CI/CD pipeline:
-  
-  
-  Prevent Configuration Drift
-Configuration drift is a major source of headaches in any infrastructure. With Konfigo's schema validation, you can enforce a consistent structure and set of rules for your configurations.For example, you can create a schema that requires a specific key to be present, or that a value must be a number within a certain range. If a configuration doesn't match the schema, Konfigo will throw an error, and you can catch the problem before it ever reaches production.
-  
-  
-  Dynamic Configurations are Your Friend
-Stop hardcoding values in your configuration files! With Konfigo, you can use variables and data generation to create dynamic configurations.For example, you can use an environment variable to set the database host, or you can use the  generator to add a build timestamp to your configuration.konfigo  config.json  schema.yml  staging-vars.yml  staging_config.json
-If you're managing configurations for a microservices architecture or a multi-tenant application, you know how complex it can get. Konfigo's batch processing feature can help you simplify this.You can create a template configuration and then use a variables file to generate multiple tailored configurations for each service or tenant.Let's look at a simple example of how Konfigo can be used to validate and transform a configuration file.konfigo  config.json  schema.yaml In this example, Konfigo does two things: the input to ensure that  is at least 1024. the input by adding the prefix  to the  key.
-  
-  
-  Ready to Give it a Try? 🚀
-I've only scratched the surface of what Konfigo can do. If you're tired of wrestling with configuration files, I highly recommend giving it a try.Let me know what you think in the comments below! 👇]]></content:encoded></item><item><title>BC847 Transistor: The Tiny Star-Keeper of Our Tech Planets</title><link>https://dev.to/ersajay/bc847-transistor-the-tiny-star-keeper-of-our-tech-planets-31p4</link><author>ersajay</author><category>dev</category><category>go</category><category>devto</category><pubDate>Mon, 30 Jun 2025 06:23:12 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[A Meeting in the Circuit Desert
-The desert stretched endlessly, its sands glowing like gold under the sun. I was tracing the dunes, heading toward a distant oasis, when I spotted a glint in the sand—a small, silver shape, no bigger than a ladybug.
-“You’re… very small,” I said, kneeling.
-“And you’re a child who talks to transistors,” it replied, voice steady as the wind. “But some keepers of light are smallest when they’re strongest. Ask the fox.”
-It was a BC847—an NPN bipolar junction transistor, but to me, it felt like a secret. Let me tell you its story.What Is a BC847? (Not Just Metal—A Keeper of Light)
-This was no ordinary silicon. It was a BC847, a tiny hero in a SOT-23-3 suit—smaller than a ladybug, but tough as a baobab’s roots. Here’s its secret:Voltage: 45V collector-emitter (VCEO), 5V base-emitter (VBE). It’s like a windbreak for circuits—sturdy against storms of static.
-Current: 100mA collector current (IC), 5mA base current (IB). Sips power like a hummingbird, not a thirsty camel.
-Speed: 100MHz transition frequency (fT). Faster than the fox darting across the dunes.Real-World Magic: Powers LED drivers in Philips Hue bulbs (keeping your roses lit) and Tesla’s battery sensors (guiding spaceships on Earth).
-“Why so quiet?” I asked.
-“Keepers don’t shout,” it said. “They just keep.”BC847 & Its Neighbors: Brothers, Not Twins
-In the desert of transistors, BC847 has cousins—some taller, some faster, but none quite like it:BC846: A stronger brother. Handles 65V (vs. BC847’s 45V) but same current. Like a cactus that grows taller, not wider.
-BC547: An old friend. Cheaper, but bulkier (TO-92 vs. SOT-23). Like a postman with a big bag—reliable, but takes up space.
-2N3904: A flashy neighbor. Faster, but panics at voltage spikes. Like a sprinter who trips at the finish line.Roast Alert:
-2N3904 (boasting): “I’m cheaper!”
-BC847 (calm, like the fox): “I’m in Tesla’s BMS. You’re in a kid’s science kit. Bye.”Why BC847 Shines Brighter Than Most
-BC847 isn’t just a transistor—it’s a star in the circuit sky. Here’s why:Tiny, But Tenacious: SOT-23-3 fits wearables and IoT sensors, like a key in a tiny lock. Even the fox couldn’t squeeze into spaces this small.
-Speed of Light: 100MHz fT processes signals faster than your Wi-Fi rage-quits. The fox? He’s impressed.
-Cheap, But Charming: $0.02/unit—cheaper than your morning espresso. Even the rose, who’s picky, approves.“Why not be bigger?” I asked.
-“Big things break,” it said. “Tiny things fit. In smartwatches. In Mars rovers. In insulin pumps.”BC847: Keeper of a Thousand Stars
-From your wrist to the cosmos, BC847 guards:Medical (The Healer’s Planet):
-Powers portable ECG monitors, amplifying weak heart signals (no “404 Error: Heartbeat”). Keeps insulin pumps precise—because roses (and diabetics) need gentle care.Automotive & Aerospace (The Cosmic Planets):
-Monitors Tesla’s battery cells (no TikTok fire memes—phew!). Survives cosmic radiation in satellites (Earth drama is overrated, anyway).Consumer Tech (Your Daily Planet):
-Powers smartwatch sensors, outlasting your gym motivation. Keeps wireless earbuds jamming—because even foxes need their Hotline Bling.“Do you get lonely?” I asked.
-“No,” it said. “I’m everywhere. In your watch, in your car, in the stars. Loneliness is for roses that forget they’re loved.”Brand Battle: The Guardians of the Desert
-Not all keepers are made equal. Let’s meet the ones worth trusting:Nexperia: The geographer of transistors. Makes high-speed BC847W variants—pricier ($0.05/unit), but worth it for precision.
-ON Semiconductor: The cactus of the bunch. Works from -40°C (Arctic) to +150°C (Sahara). Bulk orders only, but tough as nails.
-Guangzhou Guangxin: The friendly merchant. Budget-friendly ($0.02/unit), but skip if you need fancy datasheets.Pro Tip: For Mars rovers, stick to ON Semi’s BC847HR (-55°C rated). Even the stars trust it.How to Find Your BC847 (Avoid the Baobabs of Fakes)
-In 2025, shop like a wanderer—no baobab-sized fakes:Retailers: Digi-Key, Ersaelectronic. Search “BC847 SOT-23”—they’ll guide you like the desert’s wind.
-Bulk Orders: Alibaba, with verified suppliers like Guangzhou Guangxin. Bargain like a merchant, but check for laser-etched logos (stickers = baobabs).Price Range: $0.02–$0.10/unit retail; $0.015/unit for 1k+ (AliExpress).The Secret of the Tiny Keeper
-BC847 isn’t flashy. It doesn’t need a name in lights or a viral meme. It’s the kind of friend you remember when your smartwatch works, your Tesla doesn’t catch fire, or a Mars rover sends back photos.
-“What makes you special?” I asked, as I left.
-It didn’t answer. It just sat there, quiet as the desert, as the stars, as time itself.
-And I realized—some keepers don’t need to be big. They just need to shine.Written by a wanderer who once mistook a BC847 for a ladybug. (Spoiler: It didn’t fly, but it powered a toy robot. Close enough.)
-🌵 You become responsible, forever, for the stars you once overlooked.]]></content:encoded></item><item><title>การสร้าง Docker Image สำหรับ Go ให้เหมาะกับ Production</title><link>https://dev.to/somprasongd/kaarsraang-docker-image-samhrab-go-aihehmaaakab-production-529b</link><author>Somprasong Damyos</author><category>dev</category><category>go</category><category>devto</category><pubDate>Mon, 30 Jun 2025 04:09:10 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[แนวทางสร้าง Go container image ที่ เล็ก ปลอดภัย deploy ง่าย และ maintain ได้ระยะยาวเมื่อพัฒนาแอปพลิเคชันด้วยภาษา Go หนึ่งในจุดเด่นที่สำคัญคือการสร้างไฟล์ไบนารีแบบ static ทำให้เหมาะอย่างยิ่งสำหรับนำไปบรรจุใน Docker container ที่มีขนาดเล็กและปลอดภัย ซึ่ง Alpine Linux เป็นฐานที่คนนิยมใช้เพราะขนาดเล็กและมีแพ็กเกจพื้นฐานเพียงพอสำหรับงานส่วนใหญ่แต่การจะทำให้ container ขนาดเล็กและพร้อมใช้จริงใน production ต้องเข้าใจประเด็นสำคัญทั้งในแง่ของ build, dependency, และการจัดการ image ให้มีความเสถียรและปลอดภัย
-  
-  
-  ปิด cgo (CGO_ENABLED=0) เพื่อสร้าง static binary
-โดยปกติ Go จะเปิดใช้ cgo เป็นค่าเริ่มต้นหากโค้ดมีการเรียกไลบรารี C หรือใช้ฟังก์ชันมาตรฐานบางส่วนที่อ้างอิง libc ซึ่งอาจทำให้ไฟล์ไบนารีต้องพึ่งพา shared library ภายนอก เช่น glibc หรือ muslเมื่อใช้ Alpine ซึ่งใช้ musl libc แทน glibc ปัญหาที่พบบ่อยคือไฟล์ไบนารีที่พึ่ง glibc จะรันไม่สำเร็จ หากต้องการความแน่นอนว่ารันได้ทุกที่บน Linux base image ควรตั้ง  เพื่อให้ Go สร้างไฟล์ไบนารีที่ลิงก์แบบ static ทั้งหมด ลดปัญหา dependency ภายนอก
-  
-  
-  ลดขนาดไฟล์ด้วย ldflags "-s -w"
-ตัวเลือก  เป็นอีกเทคนิคที่ใช้กันทั่วไปเพื่อลดขนาดไฟล์ที่ได้จาก  จะตัด symbol table ซึ่งไม่จำเป็นต่อการรันจริง จะตัดข้อมูลสำหรับการ debug (DWARF)ผลคือขนาดไฟล์จะลดลงได้หลาย MB แต่ข้อควรระวังคือ หากต้องใช้เครื่องมือ debug เช่น Delve ข้อมูลเหล่านี้จะหายไป ทำให้ debug ได้ลำบากขึ้น เทคนิคนี้จึงเหมาะสำหรับ build ไบนารีที่ใช้จริงใน production เท่านั้น
-  
-  
-  ทำไมไม่ควรใช้ alpine:latest
-หลายคนมักเขียน Dockerfile ว่า  เพราะง่าย แต่ในทางปฏิบัติ นี่เป็นสิ่งที่ควรหลีกเลี่ยง เนื่องจาก tag  ไม่ได้ผูกกับ version ใด ๆ แบบตายตัว ภายใน repository อาจอัปเดตเมื่อใดก็ได้โดยไม่ประกาศล่วงหน้า ซึ่งทำให้ build ครั้งถัดไปอาจได้ base image ที่ไม่เหมือนเดิมและอาจเกิดปัญหาใหม่โดยไม่รู้ตัวแนวทางที่ควรทำคือระบุเวอร์ชันให้ชัดเจน เช่น  เพื่อให้แน่ใจว่าผลลัพธ์ reproducible และ rollback ได้ง่ายหากเกิดปัญหา
-  
-  
-  ใช้ Multi-Stage Build เพื่อลดขนาดและจัดการได้ง่าย
-Dockerfile สำหรับ Go ที่ดีควรแยกขั้นตอน build ออกจากขั้นตอน runtime โดยใช้ multi-stage build ขั้นแรกใช้ image  สำหรับ compile โค้ด ขั้นถัดไปใช้  หรือแม้แต่  เพื่อลดขนาด imagego mod download
-go build  /app/app ./cmd/api/main.go
-
-apk add  ca-certificates tzdata  addgroup  appgroup  adduser  appuser  appgroup
-
-อีกหนึ่งจุดที่หลายคนมองข้ามคือ user ที่ container ใช้รันโปรเซส เริ่มต้น container จะรันด้วย root ซึ่งถ้าเกิดช่องโหว่ ผู้โจมตีอาจใช้สิทธิ root ภายใน container เพื่อโจมตีต่อได้ง่ายวิธีแก้คือสร้าง user สิทธิจำกัด แล้วสั่งให้ container รันด้วย user นี้แทน การเพิ่มบรรทัด  และ  ใน Dockerfile เป็นวิธีปฏิบัติมาตรฐานที่ช่วยปิดความเสี่ยงนี้ได้ดีหลายคนสับสนระหว่าง  และ  ว่าควรใช้แบบไหน ต่างกันอย่างไร ใช้กำหนด  ที่ container ต้องรันเสมอ ไม่ว่าผู้ใช้จะสั่ง  พร้อม argument อะไร คำสั่งนี้จะถูกเรียกเสมอ โดย argument ที่ตามมาจะถูกต่อท้าย ใช้กำหนด  ถ้า  ไม่ได้ระบุ argument ใหม่ ระบบจะใช้ค่าใน  แทน แต่ถ้าผู้ใช้ระบุ argument ใหม่ทั้งหมด  จะถูกแทนที่ทันทีกรณีนี้ หากรัน  จะได้  ถ้ารัน  จะได้ การใช้  แบบ exec form () ยังช่วยให้โปรเซสของเราทำงานเป็น PID 1 โดยตรง ทำให้จัดการ signal ได้ถูกต้อง โดยเฉพาะ SIGTERM ซึ่งสำคัญต่อการทำ graceful shutdown ใน production
-  
-  
-  สรุปแนวทาง Production Docker Image สำหรับ Go
-ปิด cgo () เพื่อสร้างไฟล์ staticใช้  เพื่อลดขนาดไฟล์ระบุ base image version ชัดเจน เช่น  อย่าใช้ แยกขั้น build ออกจากขั้น runtime ด้วย multi-stage buildสร้าง non-root user เพื่อลดความเสี่ยงใช้  เพื่อกำหนด command หลัก และ  เพื่อกำหนด default argumentsแนวทางทั้งหมดนี้จะช่วยให้ได้ Docker Image ที่ขนาดเล็ก เสถียร ปลอดภัย และจัดการได้ง่ายจริงในงาน production]]></content:encoded></item><item><title>Mastering Timeout Control in Go with Goroutines</title><link>https://dev.to/jones_charles_ad50858dbc0/mastering-timeout-control-in-go-with-goroutines-27bh</link><author>Jones Charles</author><category>dev</category><category>go</category><category>devto</category><pubDate>Mon, 30 Jun 2025 00:48:02 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[
-  
-  
-  Hey, Let’s Talk Timeouts!
-If you’ve built backend systems, you’ve hit the timeout wall. External APIs, database queries, or distributed tasks—without a timeout, your app can hang like a sloth on a branch. Think of timeouts as your app’s "eject button"—they keep things moving and save resources when the chef’s taking too long with your metaphorical pizza.Go’s concurrency toolkit—goroutines and channels—is a game-changer here. Forget clunky threads or callback nightmares; Go’s approach is like snapping together LEGO bricks. This post is for devs with a year or two of Go under their belt—folks who’ve spun up goroutines but want to wield timeouts like a pro. We’ll go from basics to battle-tested designs, sprinkled with real-world wins and facepalms. Why goroutines? They’re light, fast, and pair perfectly with channels for clean timeout magic. Buckle up—we’re diving in!
-  
-  
-  Timeout Control : Why Goroutines Shine
-
-  
-  
-  What’s a Timeout, Anyway?
-A timeout caps how long a task gets to run. Finish on time? Cool. Too slow? Sorry, you’re cut off. It’s everywhere in backend land—waiting on an API, querying a database, or juggling distributed jobs. No timeout means angry users or a crashed server.
-  
-  
-  Goroutines: The Timeout Superpower
-Goroutines aren’t just threads lite—they’re timeout ninjas. Here’s why:: Starting at 2KB, they scale to thousands without breaking a sweat—try that with Java threads!: Channels sync tasks and timeouts effortlessly, no lock juggling required.: With , timeouts snap into place like LEGO—no bloated configs needed.Compare that to Java’s thread pools or C++ timers—Go’s leaner and meaner.Plus, tricks like  and  make timeouts dynamic and leak-proof. Ready to code? Let’s roll!
-  
-  
-  Getting Hands-On: Simple Timeout with Goroutines
-Time to code! Let’s build a basic timeout setup with goroutines and channels. It’s like learning to ride a bike—start simple, then trick it out later. We’ll simulate an API call with a 5-second deadline. Here’s the game plan: launch a goroutine, use a channel for results, and race it against a timeout.: Runs the task async—main thread stays chill.:  grabs the output, buffered so the goroutine doesn’t block.: Listens for the result or —first one wins.Run it, and the 6-second "API" loses to the 5-second timeout. Boom—.Dead simple—under 20 lines!
-Lightweight—goroutines sip resources.: Timeout triggers, but the goroutine keeps chugging. In this case, that  finishes anyway—wasted cycles.
-: Fine for one task, messy for a dozen.This is your timeout starter kit—great for quick wins, but it’s not ready for the big leagues. Next, we’ll swap  for  to level up control and kill those leaks.
-  
-  
-  Level Up: Timeout Control with Context
-Our basic setup was cool, but it’s like a bike without brakes—leaky and hard to stop. Enter Go’s  package: the timeout boss that cancels tasks and cleans up messes. Let’s ditch  and make a database query that stops on a 1-second dime.Since Go 1.7,  has been the concurrency MVP. It’s not just timeouts—it’s cancellation, propagation, and resource smarts in one. Here’s the pitch:: Set deadlines or kill tasks manually.: Share control across functions—no repeat code.: Tell goroutines to quit via .: Spawns a context with a 1-second fuse.: Frees resources, timeout or not.: Signals the goroutine to quit—no lingering zombies.: Spills the beans on what went wrong.Run it, and the 2-second query gets axed at 1 second—clean and efficient.:  is your safety net.: Pass  as the first arg—it’s the Go way.: Chain contexts for deep call stacks.: I once skipped —goroutines piled up ‘til the server cried. Check  to spot stragglers.: A 500ms cap killed legit database calls. Use P95 latency (e.g., 1.5x) to set sane limits.This is timeout control with brains—scalable and leak-free. Next, we’ll hit real-world chaos with distributed systems and high-concurrency tricks!
-  
-  
-  Real-World Timeout Kung Fu
-Theory’s nice, but projects are where timeouts get real. With a decade of scars to prove it, I’ll walk you through two battle-tested scenarios—distributed task scheduling and high-concurrency APIs. Code, wins, and facepalms incoming!
-  
-  
-  Scenario 1: Taming Distributed Systems
-Picture an e-commerce order flow: inventory, payment, logistics—all separate services. One lags, and the whole chain stalls. We need per-task timeouts  a global kill switch, plus partial results if things go south.Nested  with goroutines, plus  for wrangling parallel calls. Here’s a 5-second timeout across three services:: Runs services in parallel, ties them to , and grabs errors.: "Payment" times out, but others succeed—user gets .: 5 seconds caps the chaos.: Track each service’s time—saved my bacon debugging timeouts.: Don’t ditch everything for one failure.
-  
-  
-  Scenario 2: High-Concurrency API Chaos
-An API gateway slamming downstream services with requests. Unchecked goroutines could spiral into a memory apocalypse. We need timeouts  a lid on concurrency.A worker pool with —three goroutines max, 3-second timeout:: Three workers keep goroutines in check.: 3 seconds cuts off laggards.: Tasks flow in, results flow out—smooth as butter.: Base it on load— is a solid start.: Add a token bucket to chill downstream pressure.: I’ve seen goroutines hog CPU post-timeout—check  religiously.: Task IDs + durations = debug gold.
-  
-  
-  Wrapping Up: Timeout Mastery Unlocked
-We’ve gone from timeout newbie to goroutine ninja! Goroutines + channels/context are your Go timeout dream team—light, fast, and slick. Whether it’s a quick API call or a sprawling distributed system, you’ve got the tools: basic  for simplicity,  for control, and  for chaos. Pitfalls? Sure—leaky goroutines and tight timeouts bit me hard—but now you know the fixes.
-  
-  
-  Where It Shines (and Where It Doesn’t)
-This stuff kills it for high-concurrency backends—think microservices or task queues. Need millisecond precision for trading apps?  might lag a hair—try  instead.: Go 1.23 buffs —finer cancellation’s coming. Dig in!: Pair timeouts with gRPC tracing or Kafka queues—it’s the future.:  is a task’s heartbeat—master it, and your code sings.: Spin up  to spy on goroutines, log timeout stats, and tweak away. This is your launchpad—go build something epic!]]></content:encoded></item><item><title>Working with Scheduled Tasks in Go: Timer and Ticker</title><link>https://dev.to/leapcell/working-with-scheduled-tasks-in-go-timer-and-ticker-8jb</link><author>Leapcell</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sun, 29 Jun 2025 19:01:38 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[In daily development, we may encounter situations where we need to delay the execution of some tasks or execute them periodically. At this point, we need to use timers in Go.In Go, there are two types of timers:  (one-shot timer) and  (periodic timer). This article will introduce both types of timers.A Timer is a one-shot timer used to perform an operation once at a specific time in the future.There are two ways to create a Timer:NewTimer(d Duration) *Timer: This function accepts a parameter  of type  (the time interval), which indicates how long the timer should wait before expiring.  returns a new Timer, which internally maintains a channel . When the timer fires, the current time is sent to channel .AfterFunc(d Duration, f func()) *Timer: Accepts a specified time interval  and a callback function . This function returns a new Timer, and when the timer expires, it directly calls  instead of sending a signal through channel . Calling the Timer's  method can stop the timer and cancel the execution of .The following code demonstrates how to use  and  to create timers and their basic usage:The output of the above code is as follows:timer fired!
-timer2 fired!
-Here is a step-by-step explanation of the code:Use  to create a timer, then listen to its  property in a new goroutine to wait for the timer to fire.Use  to create another timer, specifying a callback function to handle the timer expiration event.The main goroutine waits long enough to ensure the timer's firing information can be printed.: This method is used to reset the expiration time of a Timer, essentially reactivating it. It accepts a parameter  of type , representing how long the timer should wait before expiring.In addition, this method returns a  value:If the timer is active, it returns .If the timer has already expired or been stopped, it returns  (note:  does not mean the reset failed, it only indicates the current state of the timer).The output of the code is as follows:Step-by-step explanation:Create a timer set to expire after 5 seconds.Call the  method immediately to set it to expire in 1 second. Since the timer is still active (not expired),  returns .The  statement waits for the timer to expire and prints the actual seconds passed (about 1 second).The timer is reset again, this time to expire in 2 seconds. Since the timer has already expired,  returns .The  statement again waits for the timer to expire and prints the seconds passed (about 2 seconds).: This method is used to stop the timer. If the timer is successfully stopped, it returns . If the timer has already expired or been stopped, it returns . Note: the  operation does not close channel .The output is as follows:Step-by-step explanation:Create a timer set to fire after 3 seconds.Immediately call the  method to stop the timer. Since the timer has not yet fired,  returns .Call  again to try to stop the same timer. Since it is already stopped, this time  returns .A Ticker is a periodic timer used to execute tasks repeatedly at fixed intervals. At every interval, it sends the current time to its channel.We can use the  function to create a new Ticker object. This function accepts a  parameter  (the interval).The output of the code is as follows:ticker fired!
-ticker fired!
-ticker fired!
-ticker fired!
-ticker fired!
-Step-by-step explanation:Create a timer that fires every second. To ensure the timer is cleaned up at the end of the function, we use .Create a context that times out after 5 seconds.  is used to clean up the context before exiting.In a new goroutine, a  statement listens to two channels: the timer's channel () and the context's done channel (). When the timer fires each second, it prints a message. When the context times out (after 5 seconds), it prints a timeout message and returns, ending the goroutine.The main goroutine uses time.Sleep(time.Second * 7) to wait 7 seconds, ensuring that both the timer firing and timeout events can be observed.In addition to listening to  with , you can also use a  loop:Note: Even if you stop a Ticker with the  method, its channel  will not be closed. This means, whether you use  or  to listen to , you need another mechanism to exit the loop, such as using a context.The  method is used to stop the ticker and reset its period to the specified duration. The next tick will occur after the new period has elapsed. It accepts a parameter  of type , which represents the new interval. This parameter must be greater than zero; otherwise, the  method will panic internally.The output of the code is as follows:Step-by-step explanation:Create a time.Ticker that fires every 5 seconds.Use the  method to change the interval from 5 seconds to 1 second.In a single loop, print out the interval. The expected result is 1 second.The  method is used to stop the ticker. After calling , no more ticks will be sent to channel .  the  operation does not close the channel .The output is as follows:Ticker fired!
-Ticker fired!
-Ticker fired!
-Goroutine stopped!
-Ticker stopped!
-Create a time.Ticker object that fires every second. At the same time, a quit channel of type  is introduced, which is used to send a stop signal to the running goroutine.Start a new goroutine. In this goroutine, a for-select loop listens to two events: ticker firing () and the quit signal (). Each time the ticker fires, it prints a message. If it receives the quit signal, it prints a message and exits the loop.In the main goroutine, time.Sleep(time.Second * 3) simulates a waiting time of 3 seconds, during which the ticker will fire a few times.The main goroutine stops the ticker by calling , then closes the quit channel. The goroutine receives the quit signal, prints a message, and exits the loop.The  method does  close channel , so we need to use other means (such as a quit signal) to clean up resources.
-  
-  
-  Main Differences Between Timer and Ticker
- is used for tasks that are executed after a single delay. is used for tasks that need to be executed repeatedly.
-  
-  
-  Behavioral Characteristics:
- fires once after the specified delay, sending a single time value to its channel. fires periodically at the specified interval, sending repeated time values to its channel. can be reset ( method) and stopped ( method).  is used to change the firing time of the Timer. can also be reset ( method) and stopped ( method).  is used to change the interval at which the Ticker fires.The  method of  is used to prevent the Timer from firing. If the Timer has already fired,  does not remove the time value that has already been sent to its channel.The  method of  is used to stop the periodic firing. Once stopped, no new values will be sent to its channel.For both Timer and Ticker, calling the  method  close their  channels. If there are other goroutines listening on this channel, to avoid potential memory leaks, you need to manually terminate those goroutines. Usually, such resource cleanup can be handled by using a  or by a quit signal (implemented with channels).After a Ticker has completed its task, you should call the  method to release the associated resources and prevent memory leaks. If you do not stop the Ticker in time, it may result in continuous resource occupation.This article has explored Go's Timer and Ticker in depth, introducing how to create them, their basic usage, and their related methods in detail. Additionally, the article summarizes the main differences between these two types of timers and emphasizes the considerations to keep in mind when using them.When writing Go code, you should choose the appropriate timer according to the application scenario. At the same time, it's important to follow best practices—especially to release resources promptly after finishing with a timer—which is crucial for avoiding potential memory leaks.Leapcell is the Next-Gen Serverless Platform for Web Hosting, Async Tasks, and Redis:Develop with Node.js, Python, Go, or Rust.Deploy unlimited projects for freepay only for usage — no requests, no charges.Unbeatable Cost EfficiencyPay-as-you-go with no idle charges.Example: $25 supports 6.94M requests at a 60ms average response time.Streamlined Developer ExperienceIntuitive UI for effortless setup.Fully automated CI/CD pipelines and GitOps integration.Real-time metrics and logging for actionable insights.Effortless Scalability and High PerformanceAuto-scaling to handle high concurrency with ease.Zero operational overhead — just focus on building.]]></content:encoded></item><item><title>From Migrations to Seed : Working with Fixtures in Nixopus</title><link>https://dev.to/raghavyuva/from-migrations-to-seed-working-with-fixtures-in-nixopus-2e95</link><author>Raghav</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sun, 29 Jun 2025 18:41:52 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[Hey, we’re always up for exploring something cool at Nixopus, and this time, we’re diving into fixtures. Now, the word  might sound a bit too technical and not immediately clear to many of our fellow developers so let’s break it down, and you’ll see exactly what we mean. Let’s dive in.If you’ve worked with migrations before, you’ve probably come across the term  for databases. Even if you haven’t, let’s take a moment to understand what seeding data actually involves.Usually, during development, things can get tricky over time, especially when you have contributors and developers working together on the same project. Everyone wants everything to be quick and hassle-free so development doesn’t slow down. As a project maintainer, it’s your responsibility to enable this smooth contribution roadmap for any user who wants to help out. That’s exactly what we’re working towards at Nixopus.One major part of Contributing to Nixopus is that after getting everything set up, Contributor still needs to do the following tasks :You realize you need  to log in and test admin features.You also want to create  for that organization to test the role based access.You might even want to enable specific features inside nixopus, and disable some!This is time consuming and error-prone, especially when you or your teammates need to do it over and over again on fresh databases. That’s exactly where data seeding comes into the picture.The process of populating a database with an initial set of data. Simple, isn’t it?But how do we actually create one in Go using Bun ORM? This is what pushes us to explore how we can write a script to do exactly that.We’ve divided our seed files into a modular folder structure. This way, everything stays organized and it’s much easier to load schema specific data when you need it.  Below is an example of the file structure and the kind of data we’ll be loading into the database later in our Codebase:First things first, we need to get input from the user. Let’s assume the user runs a command like:go run internal/cmd/fixtures/main.goThen we want to accept some arguments along with this command to determine what exactly the user is trying to do, we will get into what each flag does later, for now let's go forwardNow that we know what the user is actually trying to do, let’s create a Bun DSN URL which stands for , which is a connection string used to configure and connect to databases or services.Here’s a raw example of what a Postgres DSN URL looks like: postgres://username:password@localhost:5432/database_name?sslmode=disableSince we don’t want to hardcode credentials, we need to load our secrets like passwords and other configs from environment variables. Here’s how we can do that in Go:Once we have our DSN ready, we can check if our connection string is properly formatted and can be parsed without errors. The function we use for this is :Now that we are ready to go, let's connect to our database and close the connection to database as our program endsNow we need to load all our fixtures from the YAML files in our  folder.  Here’s a simple flowchart that shows how the loading process works, Read The CodeAfter we have everything set up, we decide how we want to load the fixtures onto our database.  This block of code checks which option the user passed when they ran the command and performs the action accordingly:
-  
-  
-  Explanation of the Flags We Considered Earlier
-I know you must be waiting for the final touch, it's a lot of code to digest, right? So let’s take a moment to clearly understand the arguments we took earlier from the user:If you used , it , recreates them, and then loads your fixtures into fresh tables. This is helpful if you want to start from scratch every time.If you used , it  but keeps the tables themselves (the structure stays intact), then loads your fixtures.If you didn’t pass any of those flags, it simply inserts the fixture data as-is, without dropping or truncating anything.Do you think this could be done even better? Hmm that’s exactly why we’d love to have you join our Discord community!   Want to see what we’re building and what we’ve accomplished so far? Take a look at our CHANGELOG.md.  ]]></content:encoded></item><item><title>**Building a Concurrent Caching System in Go: 500K+ Operations Per Second Performance**</title><link>https://dev.to/aaravjoshi/building-a-concurrent-caching-system-in-go-500k-operations-per-second-performance-3gbl</link><author>Aarav Joshi</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sun, 29 Jun 2025 18:16:49 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[As a best-selling author, I invite you to explore my books on Amazon. Don't forget to follow me on Medium and show your support. Thank you! Your support means the world! Building high-performance applications often feels like solving a complex puzzle. When systems struggle under heavy data loads, I've found that intelligent caching becomes essential. My journey with Go led me to design a concurrent caching system that handles millions of operations efficiently. Let me share how this works and why it matters.Caching isn't just about storing data. It's about making strategic decisions on what to keep and what to remove. In our implementation, we support three eviction strategies. Least Recently Used discards older items first. Least Frequently Used removes less-accessed entries. Adaptive Replacement Cache dynamically balances between recency and frequency patterns. Each approach serves different access scenarios.Sharding is our secret weapon against contention. By splitting data across partitions, we minimize lock collisions. Here's how we distribute keys:This FNV-1a hashing ensures even distribution across shards. Each shard operates independently, allowing concurrent access patterns that scale with CPU cores. Memory management requires careful design. We use atomic operations for access tracking to avoid excessive locking. Notice how we handle entry updates:These lightweight operations maintain accuracy without blocking other readers. For eviction, priority queues enable efficient removal. The LRU implementation uses a heap-based queue:Time-based expiration is handled through a background cleaner. This routine periodically scans for stale entries:Serialization demonstrates practical persistence. Our approach avoids marshaling expired entries:Performance testing reveals impressive results. On a 32-core system, we consistently achieve over 500,000 operations per second. The sharded architecture reduces contention dramatically compared to single-lock implementations. Memory overhead stays low—about 30% less than standard map-based caches.In production, I've applied this to several scenarios. Database query caching reduces backend load by 40% in read-heavy applications. Web session storage handles sudden traffic spikes gracefully. API response caching cuts latency from milliseconds to microseconds. For computational workflows, memoization reuse saves significant processing time.Consider these enhancements for enterprise use. Add Prometheus metrics to track hit ratios and eviction rates. Implement size-based eviction for memory-bound systems. For distributed environments, integrate cluster coordination using gossip protocols. Always include cache warming mechanisms for cold starts.The true value emerges in high-scale systems. When handling 50,000 operations across 100 goroutines, our implementation performs reliably:
-  
-  
-  This outputs results like: Processed 50k ops in 92.4ms. The numbers prove our design—minimal locking, smart eviction, and memory efficiency create a responsive caching layer. Whether building microservices or data pipelines, such caching becomes infrastructure bedrock.
-📘 , , , and  to the channel! is an AI-driven publishing company co-founded by author . By leveraging advanced AI technology, we keep our publishing costs incredibly low—some books are priced as low as —making quality knowledge accessible to everyone.Stay tuned for updates and exciting news. When shopping for books, search for  to find more of our titles. Use the provided link to enjoy !Be sure to check out our creations:]]></content:encoded></item><item><title>**Go Database Optimization: 5 Performance Patterns That Boost Application Speed by 700%**</title><link>https://dev.to/aaravjoshi/go-database-optimization-5-performance-patterns-that-boost-application-speed-by-700-4148</link><author>Aarav Joshi</author><category>dev</category><category>go</category><category>devto</category><pubDate>Sun, 29 Jun 2025 18:03:10 +0000</pubDate><source url="https://dev.to/t/go">Dev.to Go</source><content:encoded><![CDATA[As a best-selling author, I invite you to explore my books on Amazon. Don't forget to follow me on Medium and show your support. Thank you! Your support means the world! Building high-performance applications in Go requires thoughtful database interaction design. When systems face heavy loads, inefficient data access becomes the primary bottleneck. I've seen applications crumble under pressure due to poorly optimized database patterns, leading to frustrated users and costly scaling. Let's explore practical techniques to prevent these issues.Database connections are expensive resources. Creating new connections for every request wastes precious milliseconds. Connection pooling solves this by reusing existing connections. Here's how I configure it properly:These numbers aren't arbitrary. After load testing various configurations, I found this ratio balances memory usage and connection wait times. Exceeding your database's actual connection limit causes queues that cascade through your application.Batch processing revolutionized how I handle write operations. Instead of executing individual inserts, I group them:The batch processor collects operations until reaching 100 requests or waiting 100ms, whichever comes first. This reduced database round trips by 92% in my last benchmark. The transaction block ensures atomic execution:Caching requires careful strategy. I implement dual caching: prepared statements and query results. Statement caching avoids repeated SQL compilation:Result caching works best for read-heavy operations. Serializing to JSON handles struct variability:Context handling prevents resource leaks. Always propagate cancellation:For production systems, add observability. I instrument these key metrics:Batch flush latency distributionPool utilization percentageImplement circuit breakers to avoid overwhelming databases during outages. This simple pattern prevents cascading failures:Connection validation prevents stale pool issues. Before reuse, verify connectivity:Tuning requires understanding your workload. For write-heavy systems, increase batch sizes to 500-1000 operations. For read-heavy applications, allocate more memory to caching. Always test with production-like data volumes.These patterns delivered remarkable improvements in my projects. One API handling financial transactions increased throughput from 1,200 to 9,500 requests per second. Database CPU utilization dropped by 40% despite higher traffic. The implementation pays continuous dividends as systems scale.
-  
-  
-  Remember optimization isn't premature engineering. It's building responsive foundations. Start with connection pooling, add batching when write volumes grow, and introduce caching for frequent queries. Each layer compounds performance gains while keeping complexity manageable.
-📘 , , , and  to the channel! is an AI-driven publishing company co-founded by author . By leveraging advanced AI technology, we keep our publishing costs incredibly low—some books are priced as low as —making quality knowledge accessible to everyone.Stay tuned for updates and exciting news. When shopping for books, search for  to find more of our titles. Use the provided link to enjoy !Be sure to check out our creations:]]></content:encoded></item></channel></rss>
+Alright, you've built an awesome CLI tool. It works on your machine (famous last words, right?). Now comes the real challenge: making it work everywhere and making it easy for people to actually get their hands on it.Here's a lesser-known fact that'll blow your mind: Go's static compilation means your CLI tool can run on systems where the user has never even heard of Go. This is huge! While Python developers are explaining virtual environments and Node.js folks are debugging npm conflicts, you just hand someone a binary and say "run this."Testing CLI apps is like teaching your pet to fetch – lots of repetition, but when it works, it's magical. The key is testing both the happy path and the "what happens when users inevitably do something unexpected" path.Now, let's talk about  – because the best CLI tool in the world is useless if nobody can install it:But here's the : Use GitHub Actions to automate this process and create releases automatically: Set up Homebrew distribution for macOS users:The irony? You'll spend more time setting up the distribution pipeline than building the actual CLI tool. But that's the price of making software that people can actually use without a PhD in dependency management! 😂We've journeyed from the basics of Cobra and Viper to building production-ready CLI tools that developers will actually want to use. The key takeaways? Respect your users' intelligence, provide sensible defaults, give helpful feedback, and make installation painless.The Go ecosystem has matured to the point where building professional CLI tools is no longer the domain of systems programming wizards. With the right frameworks and practices, you can create tools that feel as polished as the best commercial software.Here's the thing: every great developer tool started as someone's side project to solve their own problem. Docker began as a deployment tool for dotCloud. Kubernetes started as Google's internal orchestration system. Your next CLI tool might just be the one that changes how developers work.So, what CLI tool will you build next? Will it be the project generator that finally makes sense? The deployment tool that doesn't require a manual? The debugging assistant that actually assists? The terminal is your canvas, and Go is your brush 🎨Share your Go CLI creations in the comments – I'd love to see what the community builds with these techniques! And remember, the best CLI tool is the one that makes other developers' lives just a little bit easier.]]></content:encoded></item></channel></rss>
