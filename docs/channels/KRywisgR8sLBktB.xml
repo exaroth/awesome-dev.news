@@ -1,201 +1,225 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Angular Custom Profiling Track is now available</title><link>https://blog.angular.dev/the-angular-custom-profiling-track-is-now-available-0f9d8d36218a?source=rss----447683c3d9a3---4</link><author>Angular</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Wed, 2 Jul 2025 19:38:06 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[Profiling web applications can be a complex task, often requiring developers to juggle between different tools that present data in disconnected ways. Traditionally, Chrome’s performance panel is excellent for detailed function call analysis, while Angular DevTools offers a higher-level view based on framework concepts like components, lifecycle hooks, bindings etc. Unfortunately, having two separate tools leads to a fragmented understanding of performance.This fragmentation presented a significant opportunity to improve the developer experience when profiling Angular applications. As a result, the Angular and Chrome teams have partnered to bring Angular-specific data and insights directly into the Chrome DevTools performance panel, creating a unified profiling experience. We’re excited to introduce the new custom track for Angular in Chrome DevTools.This integration allows developers to combine the benefits of both tools, offering a more synchronized and comprehensive view of their application’s performance.Getting to Know the New Custom TrackWith this new integration, you’ll find performance data using Angular concepts, such as application bootstrap, components, UI synchronization, and lifecycle hooks:The custom track’s flame charts group function invocations together under corresponding components and other Angular concepts. You can drill down to individual functions for a more granular view when needed and still glean meaning from the groupings in other scenariosOne of the most significant benefits is the ability to distinguish between your application’s code, other scripts, or browser activities like layout and paint.Decoding the Colors: What Your Code is DoingThe flame chart entries are color coded to help you quickly identify what’s happening in your application.: These represent Dependency Injection (DI) services instantiated during the application bootstrap process. In general, green signifies the execution of code written by application developers.: This color is reserved for templates compiled by Angular. Even though it’s still your code, it has been transformed by Angular before execution in the browser. This allows you to clearly see which templates are creating or updating the DOM and how long these operations take.: These mark the entry points. At the very top, you’ll see the trigger — why Angular decided to run application code. Subsequent blue bars represent all the components that need to perform work, which is particularly useful for understanding how user interactions impact DOM updates. Below component names, you’ll find the familiar purple (templates) and green (your component code).Since the custom track is interactive, clicking on an entry in the flame chart reveals more detailed information about a given entry. This data empowers developers to dive deeper into specific function calls and understand their impact on the application’s performance.Enabling this powerful new feature is straightforward. Complete the following steps:Ensure you are using the latest version of Angular (v20 at the time of this post) and an up-to-date version of the Google Chrome browser.Run your Angular application in developer mode.With your application running, open Chrome DevTools and enable the custom track by typing ng.enableProfiling() in the console.Once enabled, start recording a performance profile. The dedicated “Angular” track in the flame chart will be available.More Performant Apps are on the WayThis new integration with Chrome DevTools demonstrates our ongoing commitment to improving the developer experience within the Angular ecosystem. By providing tools that offer more focused and actionable insights, the Angular and Chrome teams are empowering developers to build faster, more efficient applications. Please try out this new integration and let us know what you think.]]></content:encoded></item><item><title>This Week In React #241: Remix, Next.js, Turbopack, Radix DOM templating, Ultracite, Stack, StyleX, MUI | Nitro Week, Skia, App Generator, Swift, Kotlin | ES2025, Rspack, Babel, TypeScript, Effect, Deno, Three.js</title><link>https://thisweekinreact.com/newsletter/241</link><author></author><category>frontend</category><pubDate>Wed, 2 Jul 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[It's been a hot C° week here, but pretty calm in terms of React news. We still got various little releases, interesting blog posts and weak signals that show us what the future might look like.On the React Native side, the community is adopting Nitro Modules in various libraries, and Skia got built-in support for Lottie animations.ES2025 has been approved, and TS 5.9 beta should come anytime soon.As always, thanks for supporting us on your favorite platform:Embrace connects technical performance to real user impact across mobile, web, and backend so that engineering teams can deliver fast, reliable, and exceptional digital experiences.📊 Track Core Web Vitals, crashes, network requests, and custom events—all tied to full user sessions. 👤 Get deep insights into users with session stitching and play-by-plays of every user experience. 🔍 Discover the root cause faster with high-fidelity data, including session timelines, performance traces, and user journeys. 🔭 Embrace is built on OpenTelemetry. Own your data, integrate it anywhere, and avoid the rigid pricing and limitations of all-in-one platforms.Try Embrace today and get your first 1 million sessions free. Learn more at embrace.io.Interesting feedback from Shopify migrating their flagship Admin app to Remix, dogfooding the framework on a massive codebase with strong needs in terms of scalability. It looks to me many recent React Router features were things Shopify actually needed.15x faster TypeScript and JavaScript debugging than with breakpoints and , while upgrading your AI agent 🤖 into an expert debugger with real-time context.Wallaby.js runs your tests as you type, feeding your AI assistant real-time runtime values, code coverage, error details, and execution paths — all right next to your code.Designed specifically for testing, Wallaby features include a , the ability to run only opened test files, full-context AI integration, smart test runs, and more. Better context. Smarter debugging.Nitro Modules are trending among React Native lib developers, with 3 new releases this week:]]></content:encoded></item><item><title>The Gap Strikes Back: Now Stylable</title><link>https://css-tricks.com/the-gap-strikes-back-now-stylable/</link><author>Patrick Brosset</author><category>frontend</category><pubDate>Tue, 1 Jul 2025 12:42:38 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Four years ago, I wrote an article titled Minding the “gap”, where I talked about the CSS  property, where it applied, and how it worked with various CSS layouts.At the time, I described how easy it was to evenly space items out in a flex, grid, or multi-column layout, by using the  property. But, I also said that  the gap areas was much harder, and I shared a workaround.However, workarounds like using extra HTML elements, pseudo-elements, or borders to draw separator lines tend to come with drawbacks, especially those that impact your layout size, interfere with assistive technologies, or pollute your markup with style-only elements.Today, I’m writing again about layout gaps, but this time, to tell you all about a new and exciting CSS feature that’s going to change it all. What you previously had to use workarounds for, you’ll soon be able to do with just a few simple CSS properties that make it easy, yet also flexible, to display styled separators between your layout items.There’s already a specification draft for the feature you can peruse. At the time I’m writing this, it is available in Chrome and Edge 139 behind a flag. But I believe it won’t be long before we turn that flag on. I believe other browsers are also very receptive and engaged.Displaying decorative lines between items of a layout can make a big difference. When used well, these lines can bring more structure to your layout, and give your users more of a sense of how the different regions of a page are organized.Introducing CSS gap decorationsIf you’ve ever used a multi-column layout, such as by using the  property, then you might already be familiar with gap decorations. You can draw vertical lines between the columns of a multi-column layout by using the  property:article {
-  column-width: 20rem;
-  column-rule: 1px solid black;
-}The CSS gap decorations feature builds on this to provide a more comprehensive system that makes it easy for you to draw separator lines in other layout types.For example, the draft specification says that the  property also works in flexbox and grid layouts:.my-grid-container {
-  display: grid;
-  gap: 2px;
-  column-rule: 2px solid pink;
-}No need for extra elements or borders! The key benefit here is that the decoration happens in CSS only, where it belongs, with no impacts to your semantic markup.The CSS gap decorations feature also introduces a new  property for drawing lines between rows:.my-flex-container {
-  display: flex;
-  gap: 10px;
-  row-rule: 10px dotted limegreen;
-  column-rule: 5px dashed coral;
-}But that’s not all, because the above syntax also allows you to define multiple, comma-separated, line style values, and use the same  function that CSS grid already uses for row and column templates. This makes it possible to define different styles of line decorations in a single layout, and adapt to an unknown number of gaps:.my-container {
-  display: grid;
-  gap: 2px;
-  row-rule:
-    repeat(2, 1px dashed red),
-    2px solid black,
-    repeat(auto, 1px dotted green);
-}Finally, the CSS gap decorations feature comes with additional CSS properties such as , , , , and , which make it possible to precisely customize the way the separators are drawn, whether they overlap, or where they start and end.Currently, the CSS gap decorations feature is only available in Chromium-based browsers.The feature is still early in the making, and there’s time for you all to try it and to provide feedback that could help make the feature better and more adapted to your needs.If you want to try the feature today, make sure to use Edge or Chrome, starting with version 139 (or another Chromium-based browser that matches those versions), and enable the flag by following these steps:In Chrome or Edge, go to .In the search field, search for Enable Experimental Web Platform Features.Using CSS gap decorationsLet’s build a simple web page to learn how to use the feature. Here is what we’ll be building:The above layout contains a header section with a title, a navigation menu with a few links, a main section with a series of short paragraphs of text and photos, and a footer.We’ll use the following markup:<body>
-<header>
-  <h1>My personal site</h1>
-</header>
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Links</a></li>
-  </ul>
-</nav>
-<main>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="cat.jpg" alt="A sleeping cat.">
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="tree.jpg" alt="An old olive tree trunk.">
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="strings.jpg" alt="Snow flakes falling in a motion blur effect.">
-  </article>
-</main>
-<footer>
-  <p>© 2025 Patrick Brosset</p>
-</footer>
-</body>We’ll start by making the  element be a grid container. This way, we can space out the , , , and  elements apart in one go by using the  property:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
-}Let’s now use the CSS gap decorations feature to display horizontal separator lines within the gaps we just defined:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
- 
-  row-rule: 1rem solid #efefef;
-}This gives us the following result:We can do a bit better by making the first horizontal line look different than the other two lines, and simplify the  value by using the  syntax:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
- 
-  row-rule:
-    1rem solid #efefef,
-    repeat(2, 2px solid #efefef);
-}With this new  property value, we’re telling the browser to draw the first horizontal separator as a  thick line, and the next two separators as  thick lines, which gives the following result:Now, let’s turn our attention to the navigation element and its list of links. We’ll use flexbox to display the links in a single row, where each link is separated from the other links by a gap and a vertical line:nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  column-rule: 2px dashed #666;
-}Very similarly to how we used the  property before, we’re now using the  property to display a dashed  thick separator between the links.Our example web page now looks like this:The last thing we need to change is the  element and its paragraphs and pictures. We’ll use flexbox again and display the various children in a wrapping row of varying width items:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Layout Maestro Course</title><link>https://css-tricks.com/the-layout-maestro-course/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Fri, 11 Jul 2025 17:07:13 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Layout. It’s one of those easy-to-learn, difficult-to-master things, like they say about playing bass. Not because it’s innately difficult to, say, place two elements next to each other, but because there are many, many ways to tackle it. And layout is one area of CSS that seems to evolve more than others, as we’ve seen in the past 10-ish years with the Flexbox, CSS Grid, Subgrid, and now Masonry to name but a few. May as well toss in Container Queries while we’re at it. And reading flow. And…That’s a good way to start talking about a new online course that Ahmad Shadeed is planning to release called The Layout Maestro. I love that name, by the way. It captures exactly how I think about working with layouts: orchestrating how and where things are arranged on a page. Layouts are rarely static these days. They are expected to adapt to the user’s context, not totally unlike a song changing keys.Ahmad is the perfect maestro to lead a course on layout, as he does more than most when it comes to experimenting with layout features and demonstrating practical use cases, as you may have already seen in his thorough and wildly popular interactive guides on Container Queries, grid areas, box alignment, and positioning (just to name a few).The course is still in development, but you can get a leg up and sign up to be notified by email when it’s ready. That’s literally all of the information I have at this point, but I still feel compelled to share it and encourage you to sign up for updates because I know few people more qualified to wax on about CSS layout than Ahmad and am nothing but confident that it will be great, worth the time, and worth the investment.I’m also learning that I have a  hard time typing “maestro” correctly. 🤓]]></content:encoded></item><item><title>Scroll-Driven Sticky Heading</title><link>https://css-tricks.com/scroll-driven-sticky-heading/</link><author>Amit Sheen</author><category>frontend</category><pubDate>Fri, 11 Jul 2025 12:43:59 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Scroll-driven animations are great! They’re a powerful tool that lets developers tie the movement and transformation of elements directly to the user’s scroll position. This technique opens up new ways to create interactive experiences, cuing images to appear, text to glide across the stage, and backgrounds to subtly shift. Used thoughtfully, scroll-driven animations (SDA) can make your website feel more dynamic, engaging, and responsive.A few weeks back, I was playing around with scroll-driven animations, just searching for all sorts of random things you could do with it. That’s when I came up with the idea to animate the text of the main heading () and, using SDA, change the heading itself based on the user’s scroll position on the page. In this article, we’re going to break down that idea and rebuild it step by step. This is the general direction we’ll be heading in, which looks better in full screen and viewed in a Chromium browser:It’s important to note that the effect in this example only works in browsers that support scroll-driven animations. Where SDA isn’t supported, there’s a proper fallback to static headings. From an accessibility perspective, if the browser has reduced motion enabled or if the page is being accessed with assistive technology, the effect is disabled and the user gets all the content in a fully semantic and accessible way. this approach does rely on a few “magic numbers” for the keyframes, which we’ll talk about later on. While they’re surprisingly responsive, this method is really best suited for static content, and it’s not ideal for highly dynamic websites.Closer Look at the AnimationBefore we dive into scroll-driven animations, let’s take a minute to look at the text animation itself, and how it actually works. This is based on an idea I had a few years back when I wanted to create a typewriter effect. At the time, most of the methods I found involved animating the element’s width, required using a monospace font, or a solid color background. None of which really worked for me. So I looked for a way to animate the content itself, and the solution was, as it often is, in pseudo-elements.Pseudo-elements have a  property, and you can (kind of) animate that text. It’s not exactly animation, but you can change the content dynamically. The cool part is that the only thing that changes is the text itself, no other tricks required.Start With a Solid FoundationNow that you know the trick behind the text animation, let’s see how to combine it with a scroll-driven animation, and make sure we have a solid, accessible fallback as well.We’ll start with some basic semantic markup. I’ll wrap everything in a  element, with individual sections inside. Each  gets its own heading and content, like text and images. For this example, I’ve set up four sections, each with a bit of text and some images, all about Primary Colors.<main>
+  <section>
+    <h1>Primary Colors</h1>
+    <p>The three primary colors (red, blue, and yellow) form the basis of all other colors on the color wheel. Mixing them in different combinations produces a wide array of hues.</p>
+    <img src="./colors.jpg" alt="...image description">
+  </section>
+  
+  <section>
+    <h2>Red Power</h2>
+    <p>Red is a bold and vibrant color, symbolizing energy, passion, and warmth. It easily attracts attention and is often linked with strong emotions.</p>
+    <img src="./red.jpg" alt="...image description">
+  </section>
+  
+  <section>
+    <h2>Blue Calm</h2>
+    <p>Blue is a calm and cool color, representing tranquility, stability, and trust. It evokes images of the sky and sea, creating a peaceful mood.</p>
+    <img src="./blue.jpg" alt="...image description">
+  </section>
+  
+  <section>
+    <h2>Yellow Joy</h2>
+    <p>Yellow is a bright and cheerful color, standing for light, optimism, and creativity. It is highly visible and brings a sense of happiness and hope.</p>
+    <img src="./yellow.jpg" alt="...image description">
+  </section>
+</main>As for the styling, I’m not doing anything special at this stage, just the basics. I changed the font and adjusted the text and heading sizes, set up the  for the  and the s, and fixed the image sizes with .So, at this point, we have a simple site with static, semantic, and accessible content, which is great. Now the goal is to make sure it stays that way as we start adding our effect.We’ll start by adding another  element at the top of the . This new element will serve as the placeholder for our animated text, updating according to the user’s scroll position. And yes, I know there’s already an  in the first ; that’s fine and we’ll address it in a moment so that only one is accessible at a time.<h1 class="scrollDrivenHeading" aria-hidden="true">Primary Colors</h1>Notice that I’ve added  to this heading, so it won’t be picked up by screen readers. Now I can add a class specifically for screen readers, , to all the other headings. This way, anyone viewing the content “normally” will see only the animated heading, while assistive technology users will get the regular, static semantic headings.As much as accessibility matters, there’s another concern we need to keep in mind: support. CSS Scroll-Driven Animations are fantastic, but they’re still not fully supported everywhere. That’s why it’s important to provide the static version for browsers that don’t support SDA.The first step is to hide the animated heading we just added using . Then, we’ll add a new  block to check for SDA support. Inside that block, where SDA is supported, we can change back the display for the heading.The  class should also move into the  block, since we only want it to apply when the effect is active, not when it’s not supported. This way, just like with assistive technology, anyone visiting the page in a browser without SDA support will still get the static content..scrollDrivenHeading {
+  display: none;
 }
 
-
-main > * {
-  flex: 1 1 200px;
-}
-
-
-main article:has(p) {
-  flex-basis: 400px;
-}In the above code snippet, we’re setting the  element to be a wrapping flex container with a  gap between items and flex lines. We’re also making the items have a flex basis size of  for pictures and  for text, and allowing them to grow and shrink as needed. This gives us the following result:Let’s use CSS gap decorations to bring a little more structure to our layout by drawing  thick separator lines between the rows and columns of the layout:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  row-rule: 2px solid #999;
-  column-rule: 2px solid #999;
-}This gives us the following result, which is very close to our expected design:The last detail we want to change is related to the vertical lines. We don’t want them to span across the entire height of the flex lines but instead start and stop where the content starts and stops.With CSS gap decorations, we can easily achieve this by using the  property to fine-tune exactly where the decorations start and end, relative to the gap area:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  row-rule: 2px solid #999;
-  column-rule: 2px solid #999;
-  column-rule-outset: 0;
-}The  property above makes the vertical column separators span the height of each row, excluding the gap area, which is what we want:There’s more to the feature and I mentioned a couple more CSS properties earlier, which lets you control which of the decorations, rows or columns, appear above the other ones. / , which sets the behavior of the decoration lines at intersections. In particular, whether they are made of multiple segments, which start and end at intersections, or single, continuous lines.Because the feature is new, there isn’t MDN documentation about it yet. So to learn more, check out:The Edge team has also created an interactive playground where you can use visual controls to configure gap decorations.And, of course, the reason this is all implemented behind a flag is to elicit feedback from developers like you! If you have any feedback, questions, or bugs about this feature, I definitely encourage you to open a new ticket on the Chromium issue tracker.]]></content:encoded></item><item><title>Using CSS Cascade Layers With Tailwind Utilities</title><link>https://css-tricks.com/using-css-cascade-layers-with-tailwind-utilities/</link><author>Zell Liew</author><category>frontend</category><pubDate>Mon, 30 Jun 2025 13:16:43 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Adam Wathan has (very cleverly) built Tailwind with CSS Cascade Layers, making it extremely powerful for organizing styles by priority.@layer theme, base, components, utilities;
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'tailwindcss/utilities.css' layer(utilities);The core of Tailwind are its utilities. This means you have two choices:The default choice is to follow Tailwind’s recommended layer order: place components first, and Tailwind utilities last.So, if you’re building components, you need to manually wrap your components with a  directive. Then, overwrite your component styles with Tailwind, putting Tailwind as the “most important layer”./* Write your components */
-@layer components {
-  .component {
-    /* Your CSS here */
+@supports (animation-timeline: scroll()) {
+  .scrollDrivenHeading {
+    display: block;
   }
-}<!-- Override with Tailwind utilities --> 
-<div class="component p-4"> ... </div>That’s a decent way of doing things.But, being the bad boy I am, I don’t take the default approach as the “best” one. Over a year of (major) experimentation with Tailwind and vanilla CSS, I’ve come across what I believe is a better solution.Before we go on, I have to tell you that I’m writing a course called Unorthodox Tailwind — this shows you everything I know about using Tailwind and CSS in synergistic ways, leveraging the strengths of each.Shameless plug aside, let’s dive into the Unorthodox Choice now.In this case, the Unorthodox Choice is to write your styles in an unnamed layer — or any layer after utilities, really — so that your CSS naturally overwrites Tailwind utilities.Of these two, I prefer the unnamed layer option:/* Unnamed layer option */
-@layer theme, base, components, utilities; 
-
-/* Write your CSS normally here */ 
-.component { /* ... */ }/* Named layer option */
-/* Use whatever layer name you come up with. I simply used css here because it made most sense for explaining things */
-@layer theme, base, components, utilities, css; 
-
-@layer css {
-  .component { /* ... */ }
-}I have many reasons why I do this:I don’t like to add unnecessary CSS layers because it makes code harder to write — more keystrokes, having to remember the specific layer I used it in, etc.I’m pretty skilled with ITCSS, selector specificity, and all the good-old-stuff you’d expect from a seasoned front-end developer, so writing CSS in a single layer doesn’t scare me at all.I can do complex stuff that are hard or impossible to do in Tailwind (like theming and animations) in CSS.Your mileage may vary, of course.Now, if you have followed my reasoning so far, you would have noticed that I use Tailwind  differently:Tailwind utilities are not the “most important” layer.My unnamed CSS layer is the most important one.Build prototypes with Tailwind (quickly, easily, especially with the tools I’ve created).Shift these properties to CSS when they get more complex — so I don’t have to read messy utility-littered HTML that makes my heart sink. Not because utility HTML is bad, but because it takes lots of brain processing power to figure out what’s happening.Finally, here’s the nice thing about Tailwind being in a utility layer: I can always  a utility to give it strength.<!-- !important the padding utility -->
-<div class="component !p-4"> ... </div>Whoa, hold on, wait a minute! Isn’t this wrong, you might ask?Nope. The  keyword has traditionally been used to override classes. In this case, we’re leveraging on the  feature in CSS Layers to say the Tailwind utility is more important than any CSS in the unnamed layer.This is perfectly valid and is a built-in feature for CSS Layers.Besides, the  is so explicit (and used so little) that it makes sense for one-off quick-and-dirty adjustments (without creating a brand new selector for it).Tailwind utilities are more powerful than they seemTailwind utilities are not a 1:1 map between a class and a CSS property. Built-in Tailwind utilities mostly look like this so it can give people a wrong impression.Tailwind utilities are more like convenient Sass mixins, which means we can build effective tools for layouts, theming, typography, and more, through them.Thanks for reading and I hope you’re enjoying a new way of looking at (or using) Tailwind!]]></content:encoded></item><item><title>CSS Blob Recipes</title><link>https://css-tricks.com/css-blob-recipes/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Fri, 27 Jun 2025 13:48:41 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[. You hate them. You love them. Personally, as a design illiterate, I like to overuse them… a lot. And when you repeat the same process over and over again, it’s only a question of how much you can optimize it, or in this case, what’s the easiest way to create blobs in CSS? Turns out, as always, there are many approaches.To know if our following blobs are worth using, we’ll need them to pass three tests:They can be with just a single element (and preferably without pseudos).They can be easily designed (ideally through an online tool).We can use gradient backgrounds, borders, shadows, and other CSS effects on them.Without further ado, let’s  right in.Just generate them onlineI know it’s disenchanting to click on an article about making blobs in CSS just for me to say you can generate them outside CSS. Still, it’s probably the most common way to create blobs on the web, so to be thorough, these are some online tools I’ve used before to create  blobs. Probably the one I have used the most since, besides blobs, it can also generate lots of SVG backgrounds. A dedicated tool for making blobs. It’s apparently part of Haikei now, so you can use both.Lastly, almost all graphic programs let you hand-draw blobs and export them as SVGs.For example, this is one I generated just now. Keep it around, as it will come in handy later.<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <path
-    fill="#FA4D56"
-    d="M65.4,-37.9C79.2,-13.9,81,17,68.1,38C55.2,59.1,27.6,70.5,1.5,69.6C-24.6,68.8,-49.3,55.7,-56,38.2C-62.6,20.7,-51.3,-1.2,-39,-24.4C-26.7,-47.6,-13.3,-72,6.2,-75.6C25.8,-79.2,51.6,-62,65.4,-37.9Z"
-    transform="translate(100 100)"
-  />
-</svg>While counterintuitive, we can use the  property to create blobs. This technique isn’t new by any means; it was first described by Nils Binder in 2018, but it is still fairly unknown. Even for those who use it, the inner workings are not entirely clear.To start, you may know the  is a shorthand to each individual corner’s radius, going from the top left corner clockwise. For example, we can set each corner’s  to get a bubbly square shape:.blob {
-  border-radius: 25% 50% 75% 100%;
-}However, what  does — and also why it’s called “radius” — is to shape each corner following a circle of the given radius. For example, if we set the top left corner to , it will follow a circle with a radius  the size of the shape..blob {
-  border-top-left-radius: 25%;
-}What’s less known is that each corner property is still a  towards its horizontal and vertical radii. Normally, you set both radii to the same value, getting a circle, but you can set them individually to create an ellipse. For example, the following sets the horizontal radius to  of the element’s width and the vertical to  of its height:.blob {
-  border-top-left-radius: 25% 50%;
-}We can now shape each corner like an ellipse, and it is the combination of all four ellipses that creates the illusion of a blob! Just take into consideration that to use the horizontal and vertical radii syntax through the  property, we’ll need to separate the horizontal from the vertical radii using a forward slash ()..blob {
-  border-radius:
-    /* horizontal */
-    100% 30% 60% 70% /
-    /* vertical */
-    50% 40% 70% 70%;
-}The syntax isn’t too intuitive, so designing a blob from scratch will likely be a headache. Luckily, Nils Binder made a tool exactly for that!This hack is awesome. We aren’t supposed to use  like that, but we still do. Admittedly, we are limited to boring blobs. Due to the nature of , no matter how hard we try, we will only get convex shapes.Just going off , we can try to minimize it a little by sticking more than one blob together:However, I don’t want to spend too much time on this technique since it is too impractical to be worth it. To name a few drawbacks:We are using more than one element or, at the very least, an extra pseudo-element. Ideally, we want to keep it to one element.We don’t have a tool to prototype our blobby amalgamations, so making one is a process of trial and error.We can’t use borders, gradients, or box shadows since they would reveal the element’s outlines.Multiple backgrounds and SVG filtersThis one is an improvement in the Gooey Effect, described here by Lucas Bebber, although I don’t know who first came up with it. In the original effect, several elements can be morphed together like drops of liquid sticking to and flowing out of each other:It works by first blurring shapes nearby, creating some connected shadows. Then we crank up the contrast, forcing the blur out and smoothly connecting them in the process. Take, for example, this demo by Chris Coyer (It’s from 2014, so more than 10 years ago!):If you look at the code, you’ll notice Chris uses the  property along the  and  functions, which I’ve also seen in other blob demos. To be specific, it applies  on each individual circle and then  on the parent element. So, if we have the following HTML:<div class="blob">
-  <div class="subblob"></div>
-  <div class="subblob"></div>
-  <div class="subblob"></div>
-</div>…we would need to apply filters and background colors as such:.blob {
-  filter: contrast(50);
-  background: white; /* Solid colors are necessary */
+  
+  /* Screen Readers Only */
+  .srOnly {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+}The next thing we need to do is handle the stickiness of the heading. To make sure the heading always stays on screen, we’ll set its  to  with  so it sticks to the top of the viewport.While we’re at it, let’s add some basic styling, including a background so the text doesn’t blend with whatever’s behind the heading, a bit of  for spacing, and  to keep the heading on a single line./* inside the @supports block */
+.scrollDrivenHeading {
+  display: block;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(0deg, transparent, black 1em);
+  padding: 0.5em 0.25em;
+  white-space: nowrap;
+}Now everything’s set up: in normal conditions, we’ll see a single sticky heading at the top of the page. And if someone uses assistive technology or a browser that doesn’t support SDA, they’ll still get the regular static content.Now we’re ready to start animating the text. To build the text animation, we need to know exactly where the text should change. With SDA, scrolling basically becomes our timeline, and we have to determine the exact points on that timeline to trigger the animation.To make this easier, and to help you pinpoint those positions, I’ve prepared the following script:@property --scroll-position {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
 }
 
-.subblob {
-  filter: blur(15px);
-  background: black; /* Solid colors are necessary */
-}However, there is a good reason why those demos stick to white shapes and black backgrounds (or vice versa) since things get unpredictable once colors aren’t contrast-y enough. See it for yourself in the following demo by changing the color. Just be wary: .To solve this, we will use an SVG filter instead. I don’t want to get too technical on SVG (if you want to, read Luca’s post!). In a nutshell, we can apply blurring and contrast filters using SVGs, but now, we can also pick which color channel we apply the contrast to, unlike normal , which modifies all colors. Since we want to leave color channels (,  and ) untouched, we will only crank the contrast up for the alpha channel. That translates to the next SVG filter, which can be embedded in the HTML:<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute;">
-  <defs>
-    <filter id="blob">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -6" result="goo" />
-      <feBlend in="SourceGraphic" in2="blob" />
-    </filter>
-  </defs>
-</svg>To apply it, we will use again , but this time we’ll set it to , so that it pulls the SVG from the HTML..blob {
-  filter: url("#blob");
-}And now we can even use it with gradient backgrounds!That being said, this approach comes with two small, but important, changes to common CSS filters:The filter is applied to the parent element, not the individual shapes.The parent element must be transparent (which is a huge advantage). To change the background color, we can instead change the body or other ancestors’ background, and it will work with no issues.What’s left is to place the  elements together such that they make a blobby enough shape, then apply the SVG filters to morph them:This works well, but it has a similar issue to the blob we made by morphing several  instances: too many elements for a simple blob. Luckily, we can take advantage of the  property to create multiple shapes and morph them together using SVG filters, all in a single element. Since we are keeping it to one element, we will go back to just one empty  div:First, we will use  along with  to create a circle inside the element:body {
-  background: radial-gradient(farthest-side, var(--blob-color) 100%, #0000);
-  background-repeat: no-repeat; /* Important! */
-}Here is what each parameter does: Confines the shape to the element’s box farthest from its center. This way, it is kept as a circle. Fills the background shape from 0 to 100% with the same color, so it ends up as a solid color. After the shape is done, it makes a full stop to transparency, so the color ends.The next part is moving and resizing the circle using the  and  properties. Luckily, both can be set on  after the gradient, separated from each other by a forward slash ().body {
-  background: radial-gradient(...) 20% 30% / 30% 40%;
-  background-repeat: no-repeat; /* Important! */
-}The first pair of percentages sets the shape’s horizontal and vertical position (taking as a reference the top-left corner), while the second pair sets the shape’s width and height (taking as a reference the element’s size).As I mentioned, we can stack up different backgrounds together, which means we can create as many circles/ellipses as we want! For example, we can create three ellipses on the same element:.blob {
-  background:
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 20% 30% / 30% 40%, 
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 80% 50% / 40% 60%, 
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 50% 70% / 50% 50%;
-  background-repeat: no-repeat;
-}What’s even better is that SVG filters don’t care whether shapes are made of elements or backgrounds, so we can also morph them together using the last  filter!While this method may be a little too much for blobs, it unlocks squishing, stretching, dividing, and merging blobs in seamless animations.Again, all these tricks are awesome, but not enough for what we want! We accomplished reducing the blob to a single element, but we still can’t use gradients, borders, or shadows on them, and also, they are tedious to design and model. Then, that brings us to the ultimate blob approach…Fortunately, there is a new way to make blobs that just dropped to CSS: the  function!First off, the CSS  function is used alongside the  property to cut elements into any shape we want. More specifically, it uses a verbal version of SVG’s  syntax. The syntax has lots of commands for lots of types of lines, but when blobbing with , we’ll define curves using the  command:.blob {
-  clip-path: shape(
-    from X0 Y0, 
-    curve to X1 Y1 with Xc1 Yc1, 
-    curve to X2 Y2 with Xc21 Yc21 / Xc22 Yc22
-    /* ... */
-  );
-}Let’s break down each parameter: defines the starting point of the shape. starts the curve where  is the next point of the shape, while  defines a control point used in Bézier curves.The next parameter is similar, but we used  instead to define two control points on the Bézier curve.I honestly don’t understand Bézier curves and control points completely, but luckily, we don’t need them to use  and blobs! Again,  uses a verbal version of SVG’s  syntax, so it can draw any shape an SVG can, which means that we can translate the SVG blobs we generated earlier… and CSS-ify them. To do so, we’ll grab the  attribute (which defines the ) from our SVG and paste it into Temani’s SVG to  generator.This is the exact code the tool generated for me:.blob {
-  aspect-ratio: 0.925; /* Generated too! */
+body::after {
+  counter-reset: sp var(--scroll-position);
+  content: counter(sp) "%";
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  background-color: maroon;
+  animation: scrollPosition steps(100);
+  animation-timeline: scroll();
+}
 
+@keyframes scrollPosition {
+  0% { --scroll-position: 0; }
+  100% { --scroll-position: 100; }
+}I don’t want to get too deep into this code, but the idea is to take the same scroll timeline we’ll use next to animate the text, and use it to animate a custom property () from  to  based on the scroll progress, and display that value in the content.If we’ll add this at the start of our code, we’ll see a small red square in the top-left corner of the screen, showing the current scroll position as a percentage (to match the keyframes). This way, you can scroll to any section you want and easily mark the percentage where each heading should begin.With this method and a bit of trial and error, I found that I want the headings to change at 30%, 60%, and 90%. So, how do we actually do it? Let’s start animating.First, we’ll clear out the content inside the  element so it’s empty and ready for dynamic content. In the CSS, I’ll add a pseudo-element to the heading, which we’ll use to animate the text. We’ll give it empty , set up the , and of course, assign the  to .And since I’m animating the  property, which is a discrete type, it doesn’t transition smoothly between values. It just jumps from one to the next. By setting the animation-timing-function property to , I make sure each change happens exactly at the keyframe I define, so the text switches precisely where I want it to, instead of somewhere in between..scrollDrivenHeading {
+  /* style */
+
+  &::after {
+    content: '';
+    animation-name: headingContent;
+    animation-timing-function: step-end;
+    animation-timeline: scroll();
+  }
+}As for the keyframes, this part is pretty straightforward (for now). We’ll set the first frame () to the first heading, and assign the other headings to the percentages we found earlier.@keyframes headingContent {
+  0% { content: 'Primary Colors'}
+  30% { content: 'Red Power'}
+  60% { content: 'Blue Calm'}
+  90%, 100% { content: 'Yellow Joy'}
+}So, now we’ve got a site with a sticky heading that updates as you scroll.But wait, right now it just switches instantly. Where’s the animation?! Here’s where it gets interesting. Since we’re not using JavaScript or any string manipulation, we have to write the keyframes ourselves. The best approach is to start from the target heading you want to reach, and build backwards. So, if you want to animate between the first and second heading, it would look like this:@keyframes headingContent {
+  0% { content: 'Primary Colors'}
+  
+  9% { content: 'Primary Color'}
+  10% { content: 'Primary Colo'}
+  11% { content: 'Primary Col'}
+  12% { content: 'Primary Co'}
+  13% { content: 'Primary C'}
+  14% { content: 'Primary '}
+  15% { content: 'Primary'}
+  16% { content: 'Primar'}
+  17% { content: 'Prima'}
+  18% { content: 'Prim'}
+  19% { content: 'Pri'}
+  20% { content: 'Pr'}
+  21% { content: 'P'}
+  
+  22% { content: 'R'}
+  23% { content: 'Re'}
+  24% { content: 'Red'}
+  25% { content: 'Red '}
+  26% { content: 'Red P'}
+  27% { content: 'Red Po'}
+  28%{ content: 'Red Pow'}
+  29% { content: 'Red Powe'}
+  
+  30% { content: 'Red Power'}
+  60% { content: 'Blue Calm'}
+  90%, 100% { content: 'Yellow Joy'}
+}I simply went back by 1% each time, removing or adding a letter as needed. Note that in other cases, you might want to use a different step size, and not always 1%. For example, on longer headings with more words, you’ll probably want smaller steps.If we repeat this process for all the other headings, we’ll end up with a fully animated heading.We talked before about accessibility and making sure the content works well with assistive technology, but there’s one more thing you should keep in mind: . Even though this isn’t a strict WCAG requirement for this kind of animation, it can make a big difference for people with vestibular sensitivities, so it’s a good idea to offer a way to show the content without animations.If you want to provide a non-animated alternative, all you need to do is wrap your  block with a  query:@media screen and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    /* style */
+  }
+}Let’s talk about variations. In the previous example, we animated the entire heading text, but we don’t have to do that. You can animate just the part you want, and use additional animations to enhance the effect and make things more interesting. For example, here I kept the text “Primary Color” fixed, and added a  after it that handles the animated text.<h1 class="scrollDrivenHeading" aria-hidden="true">
+  Primary Color<span></span>
+</h1>And since I now have a separate , I can also animate its color to match each value.In the next example, I kept the text animation on the , but instead of changing the text color, I added another scroll-driven animation on the heading itself to change its background color. This way, you can add as many animations as you want and change whatever you like.CSS Scroll-Driven Animations are more than just a cool trick; they’re a game-changer that opens the door to a whole new world of web design. With just a bit of creativity, you can turn even the most ordinary pages into something interactive, memorable, and truly engaging. The possibilities really are endless, from subtle effects that enhance the user experience, to wild, animated transitions that make your site stand out.So, what would you build with scroll-driven animations? What would you create with this new superpower? Try it out, experiment, and if you come up with something cool, have some ideas, wild experiments, or even weird failures, I’d love to hear about them. I’m always excited to see what others come up with, so feel free to share your work, questions, or feedback below.Special thanks to Cristian Díaz for reviewing the examples, making sure everything is accessible, and contributing valuable advice and improvements.]]></content:encoded></item><item><title>The details of TC39&apos;s last meeting</title><link>https://javascriptweekly.com/issues/744</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[ — A fast and flexible DataGrid for building modern web apps. Key features and virtualized rendering are included in the core grid module. Pick & choose special features to keep your app small. Built for JavaScript, extended to Angular, React, and Vue.Wijmo From MESCIUS ]]></content:encoded></item><item><title>This Week In React #242: Vite RSC, Next.js, NuxtLabs, shadcn, TanStack, Valtio, XState, RHF | Unistyles, Rag, Shadow Insets, Ignite, Metro, RN 0.81 RC | TypeScript, CSS Gaps, Browserlist-rs, Biome, Astro, esbuild</title><link>https://thisweekinreact.com/newsletter/242</link><author></author><category>frontend</category><pubDate>Wed, 9 Jul 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[It definitely feels like everyone caught the lazy summer vibe as the whole world went on vacation but we still managed to carve out something interesting for you to read.We’ve learned how Meta renders React server-side (which is crazy, actually) and Vercel has made some interesting moves in the metaframework sphere by acquiring NuxtLabs.From the React Native ecosystem, we have React Native Unistyles 3.0, now marked as stable, and we’ve seen the first RC of React Native 0.81, although without any additional context whatsoever.As always, thanks for supporting us on your favorite platform: is where the React and React Native worlds collide to push the limits of cross-platform and full-stack development. Join core contributors, tech influencers and industry leaders. Catch the latest tech reveals and trends. Dive into advanced workshops on Brownfield integration and Observability in React Native. Finally, soak up the iconic vibe and discover the scenic charm of Wrocław.25+ speakers from Meta, Microsoft, Vercel, Klarna and othersHands-on workshops on Day 0600+ developers from around the world Mobile Microfrontends, Next.js, Module Federation, WebAssembly, and many more…AI is pretty good at creating bugs. Can it also resolve them?Seer sifts through the data, finds the root cause of an issue (with 94.5% accuracy!), and can open a PR with a fix. Ship it, close the tab, and move on with your life. It’s private by default, supports ±any stack, and it actually works.Get hands on with the Sentry engineering team to use Seer, Debug MCP, configure Agent Monitoring on July 23. Join the workshop →React Native Unistyles 3.0 is now stable. It’s a styling library written in C++ that enables recomputing and updating only necessary styles and components based on dependency changes, eliminating unnecessary re-renders. The library is now powered by Nitro Modules and supports only the New Architecture. The 3.0 release features an updated API aligned with the React Native StyleSheet, Compound Variants, Scoped Themes, deep integration with React Native Reanimated, and much more.]]></content:encoded></item><item><title>Introducing Skia Graphite: Chrome&apos;s rasterization backend for the future</title><link>https://blog.chromium.org/2025/07/introducing-skia-graphite-chromes.html</link><author>Chromium Blog</author><category>frontend</category><category>official</category><pubDate>Tue, 8 Jul 2025 10:46:00 +0000</pubDate><source url="https://blog.chromium.org/">Chromium Blog</source><content:encoded><![CDATA[Today's The Fast and the Curious post covers the launch of Skia's new rasterization backend, Graphite, in Chrome on Apple Silicon Macs. Graphite is instrumental in helping Chrome achieve exceptional scores on Motionmark 1.3 and is key to unlocking a ton of future improvements in Chrome Graphics.
+In Chrome, Skia is used to render paint commands from Blink and the browser UI into pixels on your screen, a process called rasterization. Skia has powered Chrome Graphics since the very beginning. Skia eventually ran into performance issues as the web evolved and became more complex, which led Chrome and Skia to invest in a GPU accelerated rasterization backend called Ganesh.  
+
+Over the years, Ganesh matured into a solid highly performant rasterization backend and GPU rasterization launched on all platforms in Chrome on top of GL (via ANGLE on Windows D3D9/11). However, Ganesh always had a GL-centric design with too many specialized code paths and the team was hitting a wall when trying to implement optimizations that took advantage of modern graphics APIs in a principled manner.
+
+This set the stage for the team to rethink GPU rasterization from the ground up in the form of a new rasterization backend, Graphite. Graphite was developed from the start to be principled by having fewer and more comprehensible code paths. This forward looking design helps take advantage of modern graphics APIs like Metal, Vulkan and D3D12 and paradigms like compute based path rasterization, and is multithreaded by default.
+
+With Graphite in Chrome, we increased our Motionmark 1.3 scores by almost 15% on a Macbook Pro M3. At the same time, we improved real world metrics like INP (interaction to next paint time), LCP (time to largest contentful paint),  graphics smoothness (percent dropped frames), GPU process malloc memory usage, and others. This all means substantially smoother interactions, less stutter when scrolling, and less time waiting for sites to show.
+
+Ganesh was originally implemented on OpenGL ES, which had minimal support for multi-threading or GPU capabilities like compute shaders. Since then, modern graphics APIs like Vulkan, Metal and D3D12 have evolved to take advantage of multithreading and expose new GPU capabilities. They allow applications to have much more control over when and how expensive work such as allocating GPU resources is performed and scheduled, while utilizing both the CPU and the GPU effectively.
+
+While we were able to adapt Ganesh to support modern graphics APIs, it had accumulated enough technical debt that it became hard to fully take advantage of the multi-threading and GPU compute capabilities of modern graphics APIs.
+
+For Graphite in Chrome, we chose to use Chrome's WebGPU implementation, Dawn, as the abstraction layer for platform native graphics APIs like Metal, Vulkan and D3D. Dawn provides a baseline for capabilities common in modern graphics APIs and helps us reduce the long term maintenance burden by leveraging Dawn's mature well tested native backends instead of implementing them from scratch for Graphite. 
+
+A core part of the GPU rendering pipeline is depth testing, which can reduce or eliminate overdraw by drawing opaque objects in front to back order, followed by translucent objects back to front. In graphics, "overdraw" refers to the unnecessary rendering of the same pixels multiple times, which can negatively impact performance and battery life, especially on mobile devices.
+
+Ganesh never utilized the depth testing capabilities of graphics cards, which was admittedly intended for rendering 3D content and not accelerating 2D graphics. Ganesh suffers from overdraw due to its reliance on adhering to strict painters order when drawing both opaque and translucent objects.
+
+Graphite extends Skia’s GPU rendering to take advantage of the depth test by assigning each “draw” a value defining its painter’s ordering index. While transparent effects and images must still be drawn from back to front, opaque objects in the foreground can now automatically eliminate overdraw. This means opaque draws can be re-ordered to minimize expensive GPU state changes while relying on the depth buffer to produce correct output.
+
+Depth testing is also used to implement clipping in Graphite by treating clip shapes as depth only draws as opposed to maintaining a clip stack like in Ganesh. Besides reducing algorithmic complexity, a significant benefit to this approach is that the shader program required to render a “draw” does not also depend on the state of the clip stack.
+
+Left: Frame from Motionmark Suits Right: Depth buffer for the same frame.
+
+Chromium is a complex multi-process application, with render processes issuing commands to a shared GPU process that is responsible for actually displaying everything in a webpage, tab, and even the browser UI. The GPU process main thread is the primary driver of all rendering work and is where all GPU commands are issued.
+
+Due to the single threaded nature of Ganesh and OpenGL, only a limited set of work could be moved to other threads, making it easy to overload the main thread causing increased jank and latency ultimately hurting user experience.
+
+In contrast, Graphite's API is designed to take advantage of multithreading capabilities of modern graphics APIs. Graphite’s new core API is centered around independent  that can produce  on multiple threads, with minimal need to synchronize between them. Even though the  are submitted to the GPU on the main thread, more expensive work is moved to other threads when producing , keeping the GPU main thread free.
+Performance cliffs and pipeline compilation
+When Ganesh was initially implemented, the programmable capabilities of graphics cards were quite limited, and branching in particular was expensive. To work around this, Ganesh had many specialized shader pipelines to handle common cases. These specializations are hard to predict and depend on a large number of factors related to each individual draw, leading to an explosion of different pipelines for essentially the same page content. Since these pipelines must each be compiled, it doesn't work well for modern web content which might have effects and animations trigger new pipelines at any moment, causing noticeable jank.
+
+Graphite’s design philosophy is instead to consolidate the number of rendering pipelines as much as possible while still preserving performance.  This reduces the number of pipelines that have to be compiled, and makes it possible for Chrome to ensure they are compiled at startup so they do not interrupt active browsing. Ganesh’s specialization approach also led to surprising performance cliffs. For example, while it could handle simple cases, real page content was often a complex mix. By consolidating pipelines, complex content can be rendered as effectively as simple content.
+Multithreaded Rasterization
+Currently, Graphite is integrated into Chromium using two Recorders: one handles web content tiles and Canvas2D on the main thread, while the other is for compositing.  In the future, this model will open up a number of exciting possibilities to further improve Chrome’s performance.  Instead of saturating the main GPU thread with the tasks from each renderer process, rasterization can be forked across multiple threads.
+Reducing GPU memory for simple content
+Graphite recordings can also be re-issued to the GPU with certain dynamic changes such as translation. This can be used to accelerate scrolling while eliminating the unnecessary work to re-issue rendering commands.  This lets us automatically reduce the amount of GPU memory required to cache web content as tiles. If the content is simple enough, the performance difference between drawing a cached image and drawing its content can be worth skipping allocating a tile for it and just re-rendering it each frame.
+GPU Compute Path Rasterization
+In the landscape of 2D graphics rendering, GPU compute-based path rasterization is very much en vogue with recent implementations like Pathfinder and vello. We would like to implement these ideas in Skia, possibly using a hybrid approach. Currently, Graphite relies on MSAA where it can, but in many cases we can't due to poor performance on older integrated GPUs or high memory overhead on non-tiling GPUs, and we have to fallback to CPU path rasterization using an atlas for caching. GPU compute based path rasterization would allow us to improve over both the visual quality of MSAA which is often limited to 4 samples per pixel and over the performance of CPU rasterization.
+
+These are future directions the Chrome Graphics team plans to pursue, and we are excited to see how far we can push the needle.
+]]></content:encoded></item><item><title>Better CSS Shapes Using shape() — Part 4: Close and Move</title><link>https://css-tricks.com/better-css-shapes-using-shape-part-4-close-and-move/</link><author>Temani Afif</author><category>frontend</category><pubDate>Mon, 7 Jul 2025 12:48:29 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[This is the fourth post in a series about the new CSS  function. So far, we’ve covered the most common commands you will use to draw various shapes, including lines, arcs, and curves. This time, I want to introduce you to two more commands:  and . They’re fairly simple in practice, and I think you will rarely use them, but they are incredibly useful when you need them.In the first part, we said that  always starts with a  command to define the first starting point but what about the end? It should end with a  command.But you never used any  command in the previous articles!?That’s true. I never did because I either “close” the shape myself or rely on the browser to “close” it for me. Said like that, it’s a bit confusing, but let’s take a simple example to better understand:clip-path: shape(from 0 0, line to 100% 0, line to 100% 100%) If you try this code, you will get a triangle shape, but if you look closely, you will notice that we have only two line commands whereas, to draw a triangle, we need a total of three lines. The last line between  and  is implicit, and that’s the part where the browser is closing the shape for me without having to explicitly use a  command.I could have written the following:clip-path: shape(from 0 0, line to 100% 0, line to 100% 100%, close)Or instead, define the last line by myself:clip-path: shape(from 0 0, line to 100% 0, line to 100% 100%, line to 0 0)But since the browser is able to close the shape alone, there is no need to add that last  command nor do we need to explicitly add the  command.This might lead you to think that the  command is useless, right? It’s true in most cases (after all, I have written three articles about  without using it), but it’s important to know about it and what it does. In some particular cases, it can be useful, especially if used in the middle of a shape.In this example, my starting point is the center and the logic of the shape is to draw four triangles. In the process, I need to get back to the center each time. So, instead of writing , I simply write  and the browser will automatically get back to the initial point!Intuitively, we should write the following:clip-path: shape( 
+  from center, 
+  line to 20%  0,   hline by 60%, line to center, /* triangle 1 */
+  line to 100% 20%, vline by 60%, line to center, /* triangle 2 */
+  line to 20% 100%, hline by 60%, line to center, /* triangle 3 */
+  line to 0   20%,  vline by 60% /* triangle 4 */
+)But we can optimize it a little and simply do this instead:clip-path: shape( 
+  from center, 
+  line to 20%  0,   hline by 60%, close,
+  line to 100% 20%, vline by 60%, close,
+  line to 20% 100%, hline by 60%, close,
+  line to 0    20%, vline by 60%
+)We write less code, sure, but another important thing is that if I update the  value with another position, command will follow that position.Don’t forget about this trick. It can help you optimize a lot of shapes by writing less code.Let’s turn our attention to another  command you may rarely use, but can be incredibly useful in certain situations: the  command.Most times when we need to draw a shape, it’s actually . But it may happen that our shape is composed of different parts not linked together. In these situations, the  command is what you will need.Let’s take an example, similar to the previous one, but this time the triangles don’t touch each other:Intuitively, we may think we need four separate elements, with its own  definition. But the that example is a single shape!The trick is to draw the first triangle, then “move” somewhere else to draw the next one, and so on. The  command is similar to the  command but we use it in the middle of .clip-path: shape(
+  from    50% 40%, line to 20%  0,   hline by 60%, close, /* triangle 1 */
+  move to 60% 50%, line to 100% 20%, vline by 60%, close, /* triangle 2 */
+  move to 50% 60%, line to 20% 100%, hline by 60%, close, /* triangle 3 */
+  move to 40% 50%, line to 0   20%,  vline by 60% /* triangle 4 */
+)After drawing the first triangle, we “close” it and “move” to a new point to draw the next triangle. We can have multiple shapes using a single  definition. A more generic code will look like the below:clip-path: shape(
+  from    X1 Y1, ..., close, /* shape 1 */
+  move to X2 Y2, ..., close, /* shape 2 */
+  ...
+  move to Xn Yn, ... /* shape N */
+)The  commands before the  commands aren’t mandatory, so the code can be simplified to this:clip-path: shape(
+  from    X1 Y1, ..., /* shape 1 */
+  move to X2 Y2, ..., /* shape 2 */
+  ...
+  move to Xn Yn, ... /* shape N */
+)Let’s look at a few interesting use cases where this technique can be helpful.Previously, I shared a trick on how to create cut-out shapes using . Starting from any kind of polygon, we can easily invert it to get its cut-out version:We can do the same using . The idea is to have an intersection between the main shape and the rectangle shape that fits the element boundaries. We need two shapes, hence the need for the  command..shape {
+  clip-path: shape(from ...., move to 0 0, hline to 100%, vline to 100%, hline to 0);
+}You start by creating your main shape and then you “move” to  and you create the rectangle shape (Remember, It’s the first shape we create in the first part of this series). We can even go further and introduce a CSS variable to easily switch between the normal shape and the inverted one..shape {
+  clip-path: shape(from .... var(--i,));
+}
+.invert {
+  --i:,move to 0 0, hline to 100%, vline to 100%, hline to 0;
+}By default,  is not defined so will be empty and we get the main shape. If we define the variable with the rectangle shape, we get the inverted version.Here is an example using a rounded hexagon shape:In reality, the code should be as follows:.shape {
+  clip-path: shape(evenodd from .... var(--i,));
+}
+.invert {
+  --i:,move to 0 0, hline to 100%, vline to 100%, hline to 0;
+}Notice the  I am adding at the beginning of . I won’t bother you with a detailed explanation on what it does but in some cases, the inverted shape is not visible and the fix is to add  at the beginning. You can check the MDN page for more details.Another improvement we can do is to add a variable to control the space around the shape. Let’s suppose you want to make the hexagon shape of the previous example smaller. It‘s tedious to update the code of the hexagon but it’s easier to update the code of the rectangle shape..shape {
+  clip-path: shape(evenodd from ... var(--i,)) content-box;
+}
+.invert {
+  --d: 20px;
+  padding: var(--d);
+  --i: ,move to calc(-1*var(--d)) calc(-1*var(--d)),
+        hline to calc(100% + var(--d)),
+        vline to calc(100% + var(--d)),
+        hline to calc(-1*var(--d));
+}We first update the reference box of the shape to be . Then we add some padding which will logically reduce the area of the shape since it will no longer include the padding (nor the border). The padding is excluded (invisible) by default and here comes the trick where we update the rectangle shape to re-include the padding.That is why the  variable is so verbose. It uses the value of the padding to extend the rectangle area and cover the whole element as if we didn’t have .Not only you can easily invert any kind of shape, but you can also control the space around it! Here is another demo using the CSS-Tricks logo to illustrate how easy the method is:This exact same example is available in my SVG-to-CSS converter, providing you with the  code without having to do all of the math.Another interesting use case of the  command is when we need to repeat the same shape multiple times. Do you remember the difference between the  and the  directives? The  directive allows us to define relative coordinates considering the previous point. So, if we create our shape using only , we can easily reuse the same code as many times as we want.Let’s start with a simple example of a circle shape:clip-path: shape(from X Y, arc by 0 -50px of 1%, arc by 0 50px of 1%)Starting from , I draw a first arc moving upward by , then I get back to  with another arc using the same offset, but downward. If you are a bit lost with the syntax, try reviewing Part 1 to refresh your memory about the  command.How I drew the shape is not important. What is important is that whatever the value of  is, I will always get the same circle but in a different position. Do you see where I am going with this idea? If I want to add another circle, I simply repeat the same code with a different .clip-path: shape(
+  from    X1 Y1, arc by 0 -50px of 1%, arc by 0 50px of 1%,
+  move to X2 Y2, arc by 0 -50px of 1%, arc by 0 50px of 1%
+)And since the code is the same, I can store the circle shape into a CSS variable and draw as many circles as I want:.shape {
+  --sh:, arc by 0 -50px of 1%, arc by 0 50px of 1%;
+  
   clip-path: shape(
-    from 91.52% 26.2%,
-    curve to 93.52% 78.28% with 101.76% 42.67%/103.09% 63.87%,
-    curve to 44.11% 99.97% with 83.95% 92.76%/63.47% 100.58%,
-    curve to 1.45% 78.42% with 24.74% 99.42%/6.42% 90.43%,
-    curve to 14.06% 35.46% with -3.45% 66.41%/4.93% 51.38%,
-    curve to 47.59% 0.33% with 23.18% 19.54%/33.13% 2.8%,
-    curve to 91.52% 26.2% with 62.14% -2.14%/81.28% 9.66%
-  );
-}As you might have guessed, it returns our beautiful blob:Let’s check if it passes our requirements:Yes, they can be made of a single element.Yes, they can also be created in a generator and then translated into CSS.Yes, we can use gradient backgrounds, but due to the nature of , borders and shadows get cut out.Two out of three? Maybe two and a half of three? That’s a big improvement over the other approaches, even if it’s not perfect.So, alas, we failed to find what I believe is the perfect CSS approach to blobs. I am, however, amazed how something so trivial designing blobs can teach us about so many tricks and new CSS features, many of which I didn’t know myself.]]></content:encoded></item><item><title>KelpUI</title><link>https://css-tricks.com/kelpui/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 26 Jun 2025 16:42:32 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[KelpUI is new library that Chris Ferdinandi is developing, designed to leverage newer CSS features and Web Components. I’ve enjoyed following Chris as he’s published an ongoing series of articles detailing his thought process behind the library, getting deep into his approach. You really get a clear picture of his strategy and I love it.He outlined his principles up front in a post back in April:I’m imagining a system that includes…Base styles for all of the common HTML elements.Loads of utility classes for nudging and tweaking things.Group classes for styling more complex UI elements  a million little classes.Easy customization with CSS variables.Web Components to progressively add interactivity to functional HTML.All of the Web Component HTML lives in the light DOM, so its easy to style and reason about.I’m imagining something that can be loaded directly from a CDN, downloaded locally, or imported if you want to roll your own build.KelpUI is still evolving, and that’s part of the beauty of looking at it now and following Chris’s blog as he openly chronicles his approach. There’s always going to be some opinionated directions in a library like this, but I love that the guiding philosophy is so clear and is being used as a yardstick to drive decisions. As I write this, Chris is openly questioning the way he optimizes the library, demonstrating the tensions between things like performance and a good developer experience.Looks like it’ll be a good system, but even more than that, it’s a wonderful learning journey that’s worth following.]]></content:encoded></item></channel></rss>
+    from    X1 Y1 var(--sh),
+    move to X2 Y2 var(--sh),
+    ... 
+    move to Xn Yn var(--sh)
+  ) 
+}You don’t want a circle? Easy, you can update the  variable with any shape you want. Here is an example with three different shapes:And guess what? You can invert the whole thing using the cut-out technique by adding the rectangle shape at the end:This code is a perfect example of the  function’s power. We don’t have any code duplication and we can simply adjust the shape with CSS variables. This is something we are unable to achieve with the  function because it doesn’t support variables.That’s all for this fourth installment of our series on the CSS  function! We didn’t make any super complex shapes, but we learned how two simple commands can open a lot of possibilities of what can be done using .Just for fun, here is one more demo recreating a classic three-dot loader using the last technique we covered. Notice how much further we could go, adding things like animation to the mix:]]></content:encoded></item></channel></rss>

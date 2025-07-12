@@ -1,407 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Debugging Book • Andreas Zeller &amp; Clare Sudbery • GOTO 2025</title><link>https://www.youtube.com/watch?v=MNRIJsoi-Ds</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/MNRIJsoi-Ds?version=3" length="" type=""/><pubDate>Thu, 3 Jul 2025 12:00:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
-http://gotopia.tech/bookclub
-
-Read the full transcription of the interview here:
-https://gotopia.tech/episodes/387
-
-Prof. Andreas Zeller - Faculty at CISPA Helmholtz Center for Information Security & Author of "The Debugging Book" @Doebldodl 
-Clare Sudbery - Independent Technical Coach @ClareSudberySSELtd 
-
-RESOURCES
-Andreas
-https://bsky.app/profile/andreaszeller.bsky.social
-https://mastodon.social/@AndreasZeller
-https://github.com/andreas-zeller
-https://www.linkedin.com/in/andreaszeller
-https://andreas-zeller.info
-
-Clare
-https://bsky.app/profile/claresudbery.bsky.social
-https://twitter.com/ClareSudbery
-https://linkedin.com/in/clare-sudbery-she-her-35939540
-https://mastodon.social/@claresudbery
-https://www.madetech.com/podcast
-https://insimpleterms.blog
-
-Links
-https://www.debuggingbook.org
-https://github.com/uds-se/debuggingbook
-https://hub.2i2c.mybinder.org/user/uds-se-debuggingbook-06yfdm2t/doc/tree/docs/notebooks/00_Table_of_Contents.ipynb
-https://www.st.cs.uni-saarland.de/dd
-https://youtu.be/30jNsCVLpAE
-https://youtu.be/LvhIMkr0rXg
-https://youtu.be/8bPDiuJGGh0
-https://youtu.be/lWPLgm52ICs
-https://youtu.be/4mRxIgu9R70
-https://youtu.be/n7QUBt6qsUU
-https://youtu.be/RNBpqbxhrng
-https://youtu.be/lCZtgN7b4TE
-https://youtu.be/sLjSGrkbIFw
-https://youtu.be/VwPCtxxvwjI
-
-DESCRIPTION
-Programming education has a critical blind spot: while we extensively teach code creation, we barely scratch the surface of testing and give almost no attention to debugging—despite debugging consuming half of all software development time.
-
-In this conversation with Clare Sudbery, Prof. Andreas Zeller argues that systematic debugging skills and modern automated debugging tools are the "ugly stepchild" of programming that nobody wants to discuss, yet debugging represents the biggest business risk and time sink in software development. As AI-driven coding becomes more prevalent, this gap will only widen, making investment in proper debugging education and tools not just beneficial but essential for the future of software development.
-
-TIMECODES
-00:00 Intro
-02:53 Revolutionizing tech education: The executable book format
-11:17 What "The Debugging Book" teaches
-16:01 Interactive debuggers & advanced techniques
-21:31 Python as the language of choice
-26:53 Tracking dependencies & Delta Debugging
-34:55 Automated software repair & testing
-51:09 Outro
-
-RECOMMENDED BOOKS
-Andreas Zeller • The Debugging Book • https://www.debuggingbook.org
-Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
-Charles Humble • Professional Skills for Software Engineers • https://www.conissaunce.com/professional-skills-shortcut
-Cathy O'Neil • Weapons of Math Destruction • https://amzn.to/42jYkba
-Jonathan B. Rosenberg • How Debuggers Work • https://amzn.to/3SnFHgv
-Nora Sandler • Writing a C Compiler • https://amzn.to/3Z6SMhU
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#Debugging #Debugger #DeltaDebugging #StatisticalDebugging #Compiler #SoftwareRepair #SoftwareTesting #Testing #TDD #Refactoring #Python #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #AndreasZeller #ClareSudbery #BookClub
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Health Insurance Appeals with Generative AI: From Lab to Production • Holden Karau • GOTO 2024</title><link>https://www.youtube.com/watch?v=Q5muBDDdhJg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Q5muBDDdhJg?version=3" length="" type=""/><pubDate>Wed, 2 Jul 2025 12:00:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Chicago 2024. #GOTOcon #GOTOchgo
-https://gotochgo.com
-
-Holden Karau - Co-Founder at Fight Health Insurance @HoldenKarau 
-
-RESOURCES
-https://bsky.app/profile/holdenkarau.com
-https://twitter.com/holdenkarau
-https://github.com/holdenk
-https://www.linkedin.com/in/holdenkarau
-http://holdenkarau.com
-
-Links
-https://www.fighthealthinsurance.com
-https://wpso.dmhc.ca.gov/imr
-https://huggingface.co/TotallyLegitCo/appeal-alpaca
-https://huggingface.co/TotallyLegitCo/fighthealthinsurance_model_v0.2
-https://huggingface.co/TotallyLegitCo/fighthealthinsurance_model_v0.3
-https://www.youtube.com/playlist?list=PLRLebp9QyZtYcK_X13lBS_HZjaXUDwyEt
-
-ABSTRACT
-This talk will cover how we created a system to generate health insurance appeals from denials. We'll start with a quick look at the different attempts at model fine-tuning (along with what eventually worked well for us), then look at the middleware, how we integrate in-house and external models, steps to protect privacy, and finally, some truly questionable frontend code (or truly great frontend code if we finish the rewrite in time—you never know).
-
-If you love the American healthcare system as it stands today, this is probably not the talk for you. For those ambivalent about the healthcare system, that's totally fine; you can still see what it takes to bring an ML system from drinks at a bar all the way through to production. [...]
-
-TIMECODES
-00:00 Intro
-00:25 Content warning
-03:38 What's the problem?
-06:13 How to use computers to fix the problem?
-07:13 What's needed to tune a LLM?
-10:36 Putting it together
-11:38 Downsides
-13:04 What models did we make?
-14:21 Model fine tune config
-15:40 Model serving
-18:38 Frontend?
-19:46 Demo
-25:18 How to do better for the next model?
-27:55 Links
-28:40 Outro
-
-Download slides and read the full abstract here:
-https://gotochgo.com/2024/sessions/3371
-
-RECOMMENDED BOOKS
-Holden Karau • Distributed Computing 4 Kids • https://www.distributedcomputing4kids.com
-Holden Karau • Scaling Python with Dask • https://www.oreilly.com/library/view/scaling-python-with/9781098119867
-Holden Karau & Boris Lublinsky • Scaling Python with Ray • https://amzn.to/44GU6cC
-Holden Karau & Rachel Warren • High Performance Spark • https://amzn.to/3v2eLbn
-Holden Karau, Konwinski, Wendell & Zaharia • Learning Spark • https://amzn.to/397e2NE
-Holden Karau & Krishna Sankar • Fast Data Processing with Spark 2nd Edition • https://amzn.to/3xKhXKu
-Holden Karau • Fast Data Processing with Spark 1st Edition • https://amzn.to/3rHQgOu
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#GenerativeAI #LLMs #GenAI #HealthInsurance #HealthInsuranceAppeals #HoldenKarau
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Industries Adopting Rust</title><link>https://www.youtube.com/watch?v=zRgtK2DsEXM</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zRgtK2DsEXM?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 14:15:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[If you love coding in Rust but aren’t sure how to turn that passion into a full-time career, this video is for you. We’re diving into the real-world opportunities for Rust developers, the industries that are actively adopting Rust, the skills they’re looking for, and the exact steps you can take to land your first Rust job.
-
-Join the Rust Live Accelerator: https://letsgetrusty.com/join
-
-Chapter:
-0:00 Intro
-0:43 Security Industry
-2:56 Backend Infrastructure
-4:00 Embedded
-5:26 Web3
-8:06 AI]]></content:encoded></item><item><title>Building Support Structures • Flavia Circiumaru &amp; Hannes Lowette • GOTO 2025</title><link>https://www.youtube.com/watch?v=Uk9CwG9a_C4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Uk9CwG9a_C4?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 12:01:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
-https://gotopia.tech
-
-Read the full transcription of this interview here:
-https://gotopia.tech/articles/386
-
-Flavia Circiumaru - Software Engineer at FundApps @flaviacirciumaru7502 
-Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover @Belenar82 
-
-RESOURCES
-Flavia
-https://x.com/FlavsFA
-https://github.com/flaviacirciumaru
-https://www.linkedin.com/in/flavia-circiumaru
-
-Hannes
-https://bsky.app/profile/hanneslowette.net
-https://twitter.com/hannes_lowette
-https://github.com/Belenar
-https://linkedin.com/in/hanneslowette
-
-Links
-https://youtu.be/wEq0RnHHE8g
-https://youtu.be/eaATm4rFqrE
-https://youtu.be/X3AHdo34gWM
-https://youtu.be/_R_Vc17mxNE
-https://youtu.be/j2AQ9eTZ3-0
-https://youtu.be/zmA5fhV-FGk
-https://youtu.be/Cx_vijTm24w
-
-DESCRIPTION
-When FundApps exploded from 20 to 50+ engineers in just one year, their old "everyone does support" model crumbled spectacularly. Software engineer Flavia Circiumaru and host Hannes Lowette dive deep into how this London-based regulatory compliance company transformed from a support-free-for-all to a streamlined powerhouse.
-
-Flavia Circiumaru reveals the behind-the-scenes story of building a three-desk support system that turned their support team into the ultimate connector, bridging customers, developers, and business teams like never before. From battling context-switching nightmares to creating communication magic, Flavia and Hannes explore actionable insights on scaling support without losing your sanity.
-
-The twist? Their ultimate goal is to make support so seamless that dedicated teams won't even be needed. Talk about engineering your way out of a job!
-
-TIMECODES
-00:00 Intro
-02:30 From support chaos to structure
-09:36 3 desks, 1 goal: Better support engineering
-20:09 The challenge of multi-tenant support at scale
-32:12 Future aspirations & advice
-39:23 Outro
-
-RECOMMENDED BOOKS
-Jacqui Read • Communication Patterns • https://amzn.to/3E37lvv
-Saleem Siddiqui • Learning Test-Driven Development • https://amzn.to/35OMb3n
-Ben Goldacre • Bad Science • https://amzn.to/4lqNLKN
-Ben Goldacre • Bad Pharma • https://amzn.to/3G15Mz7
-Jeet Pattanaik • Ethics in AI • https://amzn.to/4jXyQXw
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#SupportStructures #SupportEngineering #Communication #DevTeams #TodayInTech #FlaviaCirciumaru #HannesLowette
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>@souldzin: Being polite doesn&apos;t mean being inefficient</title><link>https://www.youtube.com/shorts/ztCsSWfBSd8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ztCsSWfBSd8?version=3" length="" type=""/><pubDate>Mon, 30 Jun 2025 12:01:59 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #PaulSlaughter #ConventionalComments #TeamDynamics #CodeQuality #PairProgramming #TeamHappiness #SoftwareEngineering #Programming #TodayInTech #AdrienneBraganza #AdrienneTacke  #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
-
-Full version available here:
-https://youtu.be/7oIs4kNH65Y
-
-Paul Slaughter - Staff Fullstack Engineer at GitLab & Creator of Conventional Comments @souldzin 
-
-RECOMMENDED BOOK
-Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews • https://amzn.to/3E75XrD
-Adrienne Braganza Tacke • Coding for Kids • https://amzn.to/3Ukd5Gw
-Grace Huang • Code Reviews in Tech • https://amzn.to/4fbwYr8
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
-Dave Thomas & Andy Hunt • The Pragmatic Programmer • https://amzn.to/3azvUy3
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Icicle: The Highs &amp; Lows of Optimizing DSLs • Jacob Stanley • YOW! 2016</title><link>https://www.youtube.com/watch?v=YnrECZC7O3Q</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/YnrECZC7O3Q?version=3" length="" type=""/><pubDate>Sun, 29 Jun 2025 12:00:57 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2016. #GOTOcon #YOW
-https://yowcon.com
-
-Jacob Stanley - Software Engineer at Ambiata
-
-RESOURCES
-https://github.com/jacobstanley
-https://x.com/jacobstanley
-https://github.com/icicle-lang/icicle-ambiata
-
-ABSTRACT
-So, you’ve written a #DSL, it’s a work of art! It so perfectly models the problem at hand that even a trained house cat could generate business value. You just have one problem, your interpreter runs 100x slower than a shell script launching JVMs in a loop.
-
-#DomainSpecificLanguages (DSLs) are able to offer the abstraction benefits of a high-level language, while when compiled, competing with low-level languages on performance. Because DSLs have a much smaller problem area, many specialised optimisations can be performed which are not feasible for a general purpose language.
-
-In this talk, we will explain a number of optimisations which are useful for DSLs, and show our solutions to the practical issues we faced when implementing them in our #QueryLanguage, #Icicle.
-
-Icicle is a query language for processing large amounts of time-series data. Its type system enforces that queries require only a single pass over the data, and that multiple queries over the same data can be fused together. By using a combination of high level optimisations such as partial evaluation and common subexpression elimination, and low level optimisations such as parsing code which is specialised for the given input, our queries are faster than the equivalent hand-written C code.
-
-From this talk, the audience will learn how the focused point of view that DSLs provide can be useful in performance critical systems, as well as a number of concrete techniques for optimising their own DSLs.
-
-RECOMMENDED BOOKS
-Kenneth E. Iverson • A Programming Language • https://amzn.to/45sCYKK
-Hadley Wickham • Advanced R • https://amzn.to/45XIbKw
-Jeffry A. Borror • q For Mortals Version • https://amzn.to/3zd58eo
-Nick Psaris • Q Tips • https://amzn.to/4cxJr76
-Nazia Habib • Hands-On Q-Learning with Python • https://amzn.to/3zfUbZM
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#FunctionalProgramming #SoftwareEngineering #Programmer #JacobStanley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Rationale for Continuous Delivery • Dave Farley • YOW! 2018</title><link>https://www.youtube.com/watch?v=Viv7bs99K0U</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Viv7bs99K0U?version=3" length="" type=""/><pubDate>Sat, 28 Jun 2025 12:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2018. #GOTOcon #YOW
-https://yowcon.com
-
-Dave Farley - Continuous Delivery & DevOps Pioneer, Award-winning Author, Founder & Director of Continuous Delivery Ltd. @ModernSoftwareEngineeringYT 
-
-RESOURCES
-https://bsky.app/profile/davefarley77.bsky.social
-https://www.continuous-delivery.co.uk
-https://linkedin.com/in/dave-farley-a67927
-https://twitter.com/davefarley77
-http://www.davefarley.net
-
-ABSTRACT
-The production of software is a complex, collaborative process that stretches our ability as human beings to cope with its demands. Many people working in #SoftwareDevelopment spend their careers without seeing what good really looks like.
-
-Our history is littered with inefficient processes creating poor quality output, too late to capitalise on the expected business value.
-How have we got into this state?
-How do we get past it?
-What does good really look like?
-
-Continuous Delivery changes the economics of software development for some of the biggest companies in the world, whatever the nature of their software development, find out how and why.
-
-RECOMMENDED BOOKS
-David Farley • Modern Software Engineering • https://amzn.to/3GI468M
-Dave Farley • Continuous Delivery Pipelines • https://amzn.to/3rjetdi
-Dave Farley & Jez Humble • Continuous Delivery • https://amzn.to/3ocIHwd
-Dave Farley & many more • Software Architecture Metrics • https://amzn.to/3M3XqG5
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#ContinuousDelivery #SoftwareArchitecture #Complexity #SoftwareComplexity #SoftwareEngineering #Programmer #DaveFarley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Using Generative AI to Strengthen &amp; Accelerate Learning • Barbara Oakley • GOTO 2024</title><link>https://www.youtube.com/watch?v=rbTaEsieWsU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/rbTaEsieWsU?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 12:01:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Data: The Land DevOps Forgot • Michael Nygard • GOTO 2024</title><link>https://www.youtube.com/watch?v=SfIvrtDsE3Q</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/SfIvrtDsE3Q?version=3" length="" type=""/><pubDate>Fri, 11 Jul 2025 12:01:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
 https://gotocph.com
 
-Barbara Oakley - Professor of Engineering at Oakland University & Author of Numerous Books @BarbaraOakley 
+Michael Nygard - General Manager of Data at Nubank @cmdrmikolazic 
 
 RESOURCES
-https://twitter.com/Barbara97881398
-https://www.linkedin.com/in/barbaraoakley
-https://barbaraoakley.com
+https://www.linkedin.com/in/mtnygard
+https://twitter.com/mtnygard
+http://www.michaelnygard.com
 
 Links
-https://arxiv.org/abs/1706.03762
-https://psycnet.apa.org/record/2025-07056-001
-https://psycnet.apa.org/record/1984-11828-001
-https://psycnet.apa.org/record/2016-51296-001
-https://pubmed.ncbi.nlm.nih.gov/29891660
-https://psycnet.apa.org/record/2023-71875-001
-https://psycnet.apa.org/record/2014-36030-003
+https://martinfowler.com/articles/data-mesh-principles.html
 
 ABSTRACT
-This talk will demonstrate how AI, via transformers, can lift limits on core cognitive processes like attention, synthesis, and retention.
+We've transformed our operational systems to microservices with stream-aligned teams that own what they build. We know that working in short cycles with fast feedback produces better value sooner, safer, and happier. But there's a dark underbelly. Those microservice databases get pulled out into analytics processing that runs in monolithic batches that run for hours on hundreds of cores, then break with an error. Feedback takes days, and the centralized data team can't keep up with the pace of the business or data growth. There's another way, gaining traction. Data mesh promises to re-decentralize data processing along with ownership. It applies product thinking to internal data products.
 
-These insights will allow you to use AI more effectively to scaffold and accelerate your own learning.
-
-After all, generative AI can do far more to propel our learning than simply answer questions (important and helpful though that may be!).
-
-Generative AI is, in essence, a teacher—but it can teach better if you know how its properties are sometimes similar to, and sometimes very different from, how the human brain works. [...]
+We will talk about moving to data mesh: the promise and the pitfalls, what you can buy and what you'll need to build, and how to get internal buy-in for the transformation. [...]
 
 TIMECODES
 00:00 Intro
-03:03 What does ChatGPT do?
-12:32 The value of metaphor
-21:35 7 int. companies with their foundational LLMs
-26:25 Large language models
-34:33 Cheating or "learning lightly"
-36:11 The Flynn Effect
-39:08 How to think about the new complex world
-46:45 Good books on GenAI
-48:30 Outro
+02:45 Operational vs analytic
+07:28 The opposite of DevOps
+08:07 New paradigm required
+09:35 Data Mesh
+18:50 Supporting the data owner
+22:10 Platforms create incentives
+28:55 Make the need visceral
+31:17 Summary
+33:07 Outro
 
 Download slides and read the full abstract here:
-https://gotocph.com/2024/sessions/3168
+https://gotocph.com/2024/sessions/3338
 
 RECOMMENDED BOOKS
-Barbara Oakley & Olav Schewe • Learn Like a Pro • https://amzn.to/3Z3gyf9
-Barbara Oakley, Beth Rogowsky & Terrence J. Sejnowski • Uncommon Sense Teaching • https://amzn.to/4hKGaEW
-Barbara Oakley & Terrence J. Sejnowski • Learning How to Learn • https://amzn.to/3Cqe7dW
-Barbara Oakley • A Mind For Numbers • https://amzn.to/3Z2tjqi
-Barbara Oakley • Mindshift • https://amzn.to/3Z2EAaf
-Barbara Oakley, Madhavan, Green, Koon & Low • Practicing Sustainability • https://amzn.to/4fn95gZ
-Barbara Oakley • Pathological Altruism • https://amzn.to/48LDVNK
-C. Edward Watson & Jose Antonio Bowen • Teaching with AI • https://amzn.to/44sBgYC
-Terrence J. Sejnowski • ChatGPT and the Future of AI • https://amzn.to/45VnfEf
-Ethan Mollick • Co-Intelligence • https://amzn.to/3HTnNjK
-Brian Christian • The Alignment Problem • https://amzn.to/4k5D8LA
-Dr. Fei-Fei Li • The Worlds I See • https://amzn.to/44b2EJm
-Kai-Fu Lee • AI Superpowers • https://amzn.to/43YftrN
+Michael Nygard • Release It! 2nd Edition • https://amzn.to/3WJeKV8
+Michael Nygard • Release It! 1st Edition • https://amzn.to/3XCkiRf
+Zhamak Dehghani • Data Mesh • https://amzn.to/3tTCwAC
+Eberhard Wolff & Hanna Prinz • Service Mesh • https://leanpub.com/service-mesh-primer
+Piethein Strengholt • Data Management at Scale • https://amzn.to/3tya08H
+Martin Kleppmann • Designing Data-Intensive Applications • https://amzn.to/3mk2Roj
+Sandeep Uttamchandani • The Self-Service Data Roadmap • https://amzn.to/3wAw5W2
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#GenAI #ArtificialIntelligence #GenerativeAI #HowToLearn #StrengthenLearning #Mindshift #LearnLikeAPro #ChatGPT #Cloude #LLaMA #DeclarativeLearning #FlynnEffect #UncommonSenseTeaching #TodayInTech #BarbaraOakley
+#DataMesh #Data #Observability #Automation #Microservices #SoftwareArchitecture #DevOps #MicroservicesOfData #Decentralize #SLO #MichaelNygard
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -412,46 +56,47 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Better Value Sooner Safer Happier • Simon Rohrer &amp; Eduardo da Silva</title><link>https://www.youtube.com/watch?v=oRaYe4AUR2g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/oRaYe4AUR2g?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 09:35:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Cloud Native Application Protection Platforms (CNAPPs) • Russ Miles &amp; James Lewis</title><link>https://www.youtube.com/watch?v=3NKd7wKxHSU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3NKd7wKxHSU?version=3" length="" type=""/><pubDate>Fri, 11 Jul 2025 09:29:25 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here
- (https://gotopia.tech/episodes/356) 
-Simon Rohrer - Co-Author of "Better Value Sooner Safer Happier" & Senior Director at Saxo Bank
-Eduardo da Sliva - Independent Consultant on Organization, Architecture, and Leadership Modernization
+ (https://gotopia.tech/episodes/358) 
+Russ Miles - Engineering Manager, Chaos Engineering Practitioner & Co-Author of "Cloud Native Application Protection Platforms"
+James Lewis - Software Architect & Director at Thoughtworks
 
 RESOURCES
-Simon
-https://bsky.app/profile/simon.bvssh.com
-https://mastodon.social/@simonr
-https://x.com/sirohrer
-https://www.linkedin.com/in/simonrohrer
-https://github.com/sirohrer
-https://www.soonersaferhappier.com
+Russ
+https://bsky.app/profile/russmiles.bsky.social
+https://github.com/russmiles
+https://www.linkedin.com/in/russmiles
 
-Eduardo
-https://bsky.app/profile/esilva.net
-https://mastodon.social/@eduardodasilva
-https://x.com/emgsilva
-https://www.linkedin.com/in/emgsilva
-https://github.com/emgsilva
-https://esilva.net
+James
+https://bsky.app/profile/boicy.bovon.org
+https://twitter.com/boicy
+https://linkedin.com/in/james-lewis-microservices
+https://github.com/boicy
+https://www.bovon.org
 
 DESCRIPTION
-Eduardo da Silva and Simon Rohrer discuss the core ideas of "Better Value Sooner Safer Happier" diving into the principles of organizational transformation.
+In this episode of GOTO Book Club, James Lewis and Russ Miles discuss Cloud Native Application Protection Platforms (CNAPPs), focusing on how they promote collaboration across security and development teams.
 
-Simon shares insights on the shift from output-driven to outcome-focused thinking, emphasizing value over productivity, and the need for continuous improvement in delivery speed, stakeholder satisfaction, and safety.
-The conversation explores key concepts like technical excellence, integrating safety into development, and balancing incremental changes with occasional larger steps.
-
-Simon Rohrer discusses organizational patterns and the importance of decentralizing decision-making, recommending a flexible, context-driven approach to transformation. The session concludes with practical advice on how to start implementing these ideas, using the book’s map to guide organizations toward the right transformation strategy based on their specific goals.
+Russ shares insights from his book, emphasizing the importance of OODA loops, balancing innovation with safety in platform design, and the benefits of off-the-shelf versus custom CNAPP solutions. Looking ahead, he predicts platform engineering will evolve into a commercial strategy like AWS and that AI will augment human decision-making, enhancing creativity and collaboration in the engineering field.
 
 RECOMMENDED BOOKS
-Jonathan Smart, Zsolt Berend, Myles Ogilvie & Simon Rohrer • Sooner Safer Happier
- (https://amzn.to/3Emm9p2) Stephen Fishman & Matt McLarty • Unbundling the Enterprise
- (https://amzn.to/3W2EcXw) Carliss Y. Baldwin • Design Rules, Vol. 2
- (https://amzn.to/4hdllRr) Matthew Skelton & Manuel Pais • Team Topologies
-Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps
- (http://amzn.to/3sVLyLQ) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook (https://amzn.to/47oAf3l) 
+Miles, Giguere & Smith • Cloud Native Application Protection Platforms
+ (https://amzn.to/3X4Bq4h) Mina, Warda, Marins & Miles • Digitalization of Financial Services in the Age of Cloud
+ (https://amzn.to/4gIYsow) Russ Miles • Learning Chaos Engineering
+ (https://amzn.to/412KEzf) Dan Pilone & Russ Miles  (https://amzn.to/4i02JF0) 
+Digital Disruption with Geoff Nielson (https://www.youtube.com/@InfoTechRG) 
+ Discover how technology is reshaping our lives and livelihoods.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1798209377)    Spotify (https://open.spotify.com/show/7L9LI7y1rcLVeNEbuUsgCq?si=30O1lE3LSpO8erTD5ov7Xg) 
+ Inspiring Tech Leaders - The Technology Podcast (https://www.priceroberts.com/) 
+Interviews with Tech Leaders and insights on the latest emerging technology trends.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1563026924)    Spotify (https://open.spotify.com/show/5ihWZxxIa2rEnzbx5tdKfH) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -467,4 +112,318 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item></channel></rss>
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Why your Rust projects won&apos;t land you a job (the 5 levels of Rust projects)</title><link>https://www.youtube.com/watch?v=p-Uc1C2pHuA</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/p-Uc1C2pHuA?version=3" length="" type=""/><pubDate>Thu, 10 Jul 2025 15:01:32 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[Still not getting Rust job offers? It’s probably your projects. In this video, we break down the 5 levels of Rust projects and what recruiters actually want to see on your GitHub. Whether you’re into backend, embedded, blockchain, or security, this guide will help you level up and finally get hired.
+
+This video was inspired by https://youtu.be/Bx4BYXOE9SQ.
+
+Join the Rust Live Accelerator: https://letsgetrusty.com/join
+
+Chapter:
+0:00 Intro
+0:59 Level 1
+2:23 Level 2
+3:38 Level 3
+4:48 Level 4
+5:50 Level 5]]></content:encoded></item><item><title>Domain-Driven Refactoring • Alessandro Colla, Alberto Acerbis &amp; Xin Yao • GOTO 2025</title><link>https://www.youtube.com/watch?v=idoD5BFxWdI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/idoD5BFxWdI?version=3" length="" type=""/><pubDate>Thu, 10 Jul 2025 12:01:32 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/389
+
+Alessandro Colla - Partner & Head of Development at Evoluzione & Co-Author of "Domain-Driven Refactoring"
+Alberto Acerbis - Software Architect at Intré & Co-Author of "Domain-Driven Refactoring" @albertoacerbis 
+Xin Yao - Independent Consultant Contextualizing DDD & Sociotechnical Architecture
+
+RESOURCES
+Alessandro
+https://x.com/collaalessandro
+https://github.com/Iridio
+https://www.linkedin.com/in/alessandrocolla
+https://about.me/alessandrocolla
+https://www.alessandrocolla.com
+
+Alberto
+https://x.com/aacerbis
+https://github.com/Ace68
+https://www.linkedin.com/in/aacerbis
+https://albertoacerbis.com
+
+Xin
+https://bsky.app/profile/settling-mud.bsky.social
+https://www.linkedin.com/in/xinxin
+
+Links
+Get 20% discount with code: DDR20: https://www.packtpub.com/en-us/product/9781835889114
+https://github.com/PacktPublishing/Domain-driven-Refactoring
+https://github.com/BrewUp
+
+DESCRIPTION
+Legacy code isn't just old - it's a treasure chest of lost business knowledge waiting to be rediscovered. Alessandro Colla and Alberto Acerbis share their battle-tested approach to domain-driven refactoring, explaining why you should start with understanding the business problem before touching a single line of code. Like Michelangelo seeing the statue of David hidden in marble, they show how the right solution already exists within your legacy codebase—you just need the right tools and techniques to set it free.
+
+From event storming workshops over beer to modular monoliths as stepping stones, these "double-A battery" developers prove that thoughtful, incremental refactoring beats flashy microservices migrations every time.
+
+TIMECODES
+00:00 Intro
+04:43 Journey to writing the book
+09:30 Domain driven vs Requirements driven
+12:41 Starting from the problem space in refactoring
+17:54 Creating awareness for language drift
+23:32 Microservices vs Modular monoliths
+31:58 EDA, code complexity & future directions
+43:45 Outro
+
+RECOMMENDED BOOKS
+Alessandro Colla • Alberto Acerbis • Domain-Driven Refactoring • https://amzn.to/3I3I7zf
+Eric Evans • Domain-Driven Design • https://amzn.to/3tnGhwm
+Vaughn Vernon • Implementing Domain-Driven Design • https://amzn.to/44r39PB
+Jimmy Nilsson • Applying Domain-Driven Design and Patterns • https://amzn.to/3GoxYwm
+Kief Morris • Infrastructure as Code • https://amzn.to/4e6EBQc
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#DDD #DomainDrivenDesign #Complexity #SoftwareArchitecture #Microservices #ModularMonolith #Refactoring #LegacyCode #DomainDrivenRefactoring #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #Abstraction #AlessandroColla #AlbertoAcerbis #XinYao #BookClub
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Functional Programming in 40 Minutes • Russ Olsen • GOTO 2024</title><link>https://www.youtube.com/watch?v=QujM1S3tP-I</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/QujM1S3tP-I?version=3" length="" type=""/><pubDate>Wed, 9 Jul 2025 12:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
+
+Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
+
+RESOURCES
+https://bsky.app/profile/russolsen.bsky.social
+https://hachyderm.io/@russolsen
+https://twitter.com/russolsen
+https://github.com/russolsen
+https://www.linkedin.com/in/russolsen
+http://russolsen.com
+
+Links
+https://tjoye20.medium.com/ruby-access-control-basics-public-vs-private-vs-protected-methods-7788b26e04a7
+https://www.tutorialspoint.com/cplusplus/cpp_friend_functions.htm
+https://docs.oracle.com/javase/tutorial/java/generics/genTypes.html
+https://pedestal.io
+
+ABSTRACT
+Functional programming has finally escaped from academia. These days developers are building real systems in functional programming languages like Clojure, Scala, Elixir and F#. Functional techniques are also seeping into more traditional languages like Java and Ruby. Unfortunately somewhere along the way functional programming has also developed a reputation for being deep and mysterious: Good programs achieve the Zen-like state of being functional which somehow involves immutability, higher order functions and being referentially transparent.
+
+In this talk Russ Olsen will strip away the cloud of mystery to uncover the simple — and wonderful — truth about functional programming: It can make your programming life easier by letting you do simple things simply while also providing you with the sharp tools you need to tackle more complex problems. [...]
+
+TIMECODES
+00:00 Intro
+01:29 Agenda
+01:55 What is it?
+26:20 What's it like?
+29:15 Does it work?
+31:21 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3325
+
+RECOMMENDED BOOKS
+Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
+Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
+Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#FunctionalProgramming #Clojure #Scala #Elixir #Fsharp #RussOlsen #Immutability #FunctionalProgrammingTutorial #FPTutorial #LearningFunctionalProgramming
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>File Storage vs Object Storage vs Block Storage</title><link>https://blog.algomaster.io/p/file-vs-object-vs-block-storage</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!4MGZ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc69ef57-f1c4-4e65-a1e4-6669526d8ade_1368x900.png" length="" type=""/><pubDate>Wed, 9 Jul 2025 03:51:19 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[When it comes to storing large volumes of unstructured data such as images, documents, and videos, there are three commonly used storage solutions:Each of these storage types has its own architecture, performance characteristics, benefits, trade-offs, and ideal use cases.But how do you determine which one is the right fit for your needs?In this article, we’ll break down each of these storage options. You’ll learn how they work, what types of workloads they are best suited for, the advantages and limitations of each, and how to choose the right one for different real-world scenarios. are critical but time-consuming.  acts as your AI co-pilot, providing instant Code review comments and potential impacts of every pull request.Beyond just flagging issues, CodeRabbit provides one-click fix suggestions and lets you define custom code quality rules using AST Grep patterns, catching subtle issues that traditional static analysis tools might miss. has so far reviewed more than , installed on , and used by 70 thousand Open-source projects. CodeRabbit is free for all open-source repo's.File storage is the most traditional and widely used storage paradigm.It mirrors the way data is organized on a personal computer: data is stored in , files are grouped into , and folders are arranged in a hierarchical directory structure.This layout is intuitive and familiar, which makes file storage easy to manage for both users and applications.Each file comes with associated , such as:Permissions (read, write, execute)Timestamps (created, modified, accessed)Optional user-defined tagsFiles are typically accessed via network protocols like:NFS (Network File System) – commonly used in Unix/Linux environmentsSMB (Server Message Block) – commonly used in Windows environments/
+├── users/
+│   ├── alice/
+│   │   ├── resume.docx
+│   │   └── photo.jpg
+│   └── bob/
+│       └── project.pdf
+└── shared/
+    ├── design/
+    │   └── logo.png
+    └── docs/
+        └── report.xlsxEach user or team has their own folderFiles are referenced by  (e.g., )Permissions can be applied at the file or folder levelBehind the scenes, file storage is powered by a centralized or distributed file server.Here's a step-by-step breakdown of how it works:Client Mounts the File SystemClients connect to the storage system using NFS or SMB.The remote file system appears just like a local drive.Every client sees the same shared directory structure.Changes made by one client are visible to all others in real time.Files are accessed using fully qualified paths, e.g., .File-level locking is used to manage concurrent access.This prevents conflicts when multiple users try to read or write the same file.: NAS (Network Attached Storage) systems: AWS EFS (Elastic File System), Azure Files, Google Filestore1. Simplicity and FamiliarityThe hierarchical structure of folders and files is intuitive and easy to navigate. Most users are already familiar with this model from their personal computers, reducing the learning curve.File storage is excellent for environments where multiple users need to access and collaborate on the same set of files. It works well over local area networks (LANs), enabling centralized access and control.This model supports a wide range of use cases from storing personal documents to powering shared drives and internal tools within large organizations.As the number of files and folders increases, especially in deeply nested directory trees, performance can degrade. File lookups become slower, and managing permissions or structure gets more complex.File systems typically support only limited metadata: filename, file size, timestamps, and basic permissions. Unlike object storage, there's little support for custom or application-specific metadata.Protocols like NFS and SMB introduce additional overhead, especially over wide area networks (WANs). This can lead to latency and reduced throughput when accessed remotely.File storage is well-suited for scenarios where:A familiar file/folder structure is neededMultiple users or applications need to share access to the same filesFine-grained file-level access control is required for enterprise teams to collaborate on documents, spreadsheets, and media assets and  in software development environmentsContent Management Systems (CMS) that organize files in structured directoriesCentralized log file aggregation for analysis and monitoringObject storage is a modern, cloud-native storage architecture built for , , and .Unlike traditional file or block storage, it does not organize data into folders or fixed-size blocks. Instead, it treats each unit of data as a self-contained  stored in a .Every object in an object storage system consists of :The actual content. This could be an image, video, document, log file, or any other binary/text payload.Customizable key-value pairs that describe the object. These can include:: image/jpeg, text/plain, etc., , , , etc.System-generated metadata like creation timestamp or object size.Object Identifier (Object Key): A globally unique identifier for each object, often a UUID or a hash of the content. This key is used to retrieve the object via an API call.[ Bucket: media-archive ]
+├── Object ID: photo-123.jpg
+│   ├── Data: <binary image data>
+│   └── Metadata:
+│       ├── content-type: image/jpeg
+│       ├── user-id: 42
+│       └── geo-location: "New York"
+├── Object ID: video-456.mp4
+│   ├── Data: <binary video data>
+│   └── Metadata:
+│       ├── content-type: video/mp4
+│       └── duration: "2m35s"
+└── Object ID: report-789.pdf
+    ├── Data: <binary PDF content>
+    └── Metadata:
+        ├── content-type: application/pdf
+        └── department: financeAll objects exist within , which act as logical containers.There is no directory hierarchy. All objects are stored in a .: Objects are stored inside buckets, but the structure is flat, not hierarchical. There is no concept of folders.: Objects are accessed via HTTP REST APIs using commands like GET /bucket-name/object-key.: Unlike file storage, object storage allows extensive and customizable metadata, enabling powerful search, categorization, and access control.Google Cloud Storage (GCS)Object storage is designed to scale horizontally without limit. Whether you're storing a few hundred files or billions of objects, the architecture remains consistent and efficient.2. High Durability and AvailabilityCloud-based object stores like AWS S3, Azure Blob, and GCS offer up to  durability by automatically replicating data across multiple availability zones.With tiered storage options (standard, infrequent access, archive), object storage can optimize costs by automatically moving data based on access patterns and lifecycle policies.Object storage is not suitable for latency-sensitive applications. Accessing data over REST APIs introduces more overhead compared to direct file or block-level I/O.2. Not Ideal for Small, Frequent UpdatesBecause objects are immutable and must be replaced in full to modify content, it's inefficient for workloads that require frequent partial updates (e.g., databases or real-time log writes).3. No File System SemanticsObject storage lacks traditional file system features like hierarchical directories, file locking, and POSIX compliance.Object storage is best suited for use cases where:You need to store large volumes of Scalability and  are top prioritiesApplications interact via  or SDKsTraditional file system features are not required storing user-generated content like images, videos, or documents for analytics, machine learning, or big data processing of enterprise data with cost-effective lifecycle policies via CDN integration (e.g., serving static assets from S3)What is the difference between Object Storage and Blob Storage?The terms  and  are often used interchangeably, but there's a subtle distinction rooted in  rather than fundamental technology."Blob" stands for . It's a type of object storage, specifically the one offered by .Think of  as Microsoft’s branded flavor of , much like S3 is Amazon’s implementation of object storage. is a high-performance, low-latency storage paradigm where data is divided into evenly sized chunks called , each identified by an address.Unlike file or object storage, block storage doesn't manage files, folders, or metadata. It focuses solely on storing and retrieving blocks of raw data.You can think of block storage as a  in the cloud. Before using it, you must attach it to a server, format it with a file system (like ext4, NTFS, or XFS), and then manage files and folders at the operating system level.[ Application / OS ]
+        |
+        |  READ/WRITE (Block ID + Offset)
+        v
+[ File System (e.g., ext4, NTFS, XFS) ]
+        |
+        |  File -> Block Mapping
+        v
+[ Block Storage Volume ]
+┌────────────┬────────────┬────────────┬────────────┐
+│ Block 0001 │ Block 0002 │ Block 0003 │ Block 0004 │ ...
+└────────────┴────────────┴────────────┴────────────┘The OS sees a storage volume (like )It mounts and formats it with a file systemFile system maps files to underlying blocksNo folder or object logic is stored at the block levelData is split into fixed-size blocks (usually 512 bytes or 4 KB).Each block is assigned a logical block address (LBA), like a page number.The OS or application sends read/write requests using the block’s address and offset.Block storage does not understand files, folders, or metadata. All organization is handled by the mounted file system layered on top.Even though the storage may reside in a remote data center or cloud provider, the operating system treats it like a physically attached disk.Amazon EBS (Elastic Block Store)1. High Performance and Low LatencyBlock storage delivers fast, predictable I/O performance. It's ideal for workloads that require frequent, random access to small chunks of data—such as databases or boot volumes.Because block storage operates at the disk level, you have full control over how data is structured and managed via the file system you choose (e.g., ext4, NTFS, XFS).Block devices provide consistent read/write throughput, making them suitable for mission-critical applications with high IOPS (Input/Output Operations Per Second) requirements.1. No Native Metadata or StructureBlock storage does not inherently understand files, folders, or object metadata. All file-level organization must be handled by the file system on top.A single block volume is typically attached to only one compute instance at a time. While some platforms support multi-attach, it introduces synchronization challenges.3. Less Scalable Compared to Object StorageBlock storage scales vertically (adding more or larger volumes), whereas object storage scales horizontally (adding more objects and buckets), making it less ideal for massive unstructured datasets.Block storage is best suited for use cases where:High IOPS and low-latency disk access are essentialThe application expects a traditional file system and disk interfaceData must be structured and controlled at a low levelThe storage volume is tightly coupled with a single host or instance like MySQL, PostgreSQL, or Oracle requiring fast random reads/writesVirtual machine boot disks and root volumes in cloud environmentsHigh-performance computing (HPC) systems and workloads with intense disk I/O running stateful applications with persistent volume claimsThere’s no one-size-fits-all storage solution. The best option depends on your specific use case, performance requirements, access patterns, and scalability goals.Here’s a breakdown of when to use , , or  storage.Scenario 1: Hosting a Website with Large Media FilesRecommended: Object StorageEasily stores and serves static assets like images, videos, and documentsScales automatically with demandIntegrates well with CDNs and HTTP-based deliveryCost-effective with tiered storage (standard, infrequent, archive)Scenario 2: Running a High-Performance Relational DatabaseRecommended: Block StorageDelivers low-latency access and high IOPSAllows fine-grained file system controlIdeal for structured, transactional data with frequent reads/writesCommon choice for MySQL, PostgreSQL, Oracle, etc.Scenario 3: Setting Up a Shared Drive for a TeamRecommended: File StorageSupports hierarchical structure for organizing documentsFamiliar and easy to use for non-technical usersAllows file-level access control and sharingUseful for internal drives, design teams, and user directoriesScenario 5: Hosting Virtual Machines or Container WorkloadsRecommended: Block StorageTreated as virtual disks by OS or container orchestratorsSuitable for persistent volumes in Kubernetes or DockerProvides fast, consistent throughput and storage isolationScenario 6: Building a Content Management System (CMS)Recommended: File or Object Storage (depends on scale)Use file storage for smaller-scale internal CMS with shared foldersUse object storage for scalable web apps handling lots of media and documentsIf you found it valuable, hit a like ❤️ and consider subscribing for more such content every week.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .As a paid subscriber, you'll get full access to all and access to all courses at I hope you have a lovely day!]]></content:encoded></item><item><title>From Hardware Hacker to CTO: Building Teams That Scale • Meri Williams &amp; Charles Humble • GOTO 2025</title><link>https://www.youtube.com/watch?v=NTF1eE1yHzE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NTF1eE1yHzE?version=3" length="" type=""/><pubDate>Tue, 8 Jul 2025 12:00:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
+
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/388
+
+Meri Williams - CTO at Pleo & Advisor at Skiller Whale & Kindred Capital @geek_manager 
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
+
+RESOURCES
+Meri
+https://x.com/Geek_Manager
+https://github.com/geekmanager
+https://www.linkedin.com/in/meriwilliams
+http://blog.geekmanager.co.uk
+
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://linkedin.com/in/charleshumble
+https://mastodon.social/@charleshumble
+https://conissaunce.com
+
+Links
+https://blog.container-solutions.com/managing-remote-teams-in-scaling-organisations
+https://youtu.be/qD07ua6NYFo
+https://youtu.be/h5KKtsIVhrw
+https://youtu.be/TP3Rjd-51DE
+https://youtu.be/DOQqOrHs3VY
+https://youtu.be/X3AHdo34gWM
+https://youtu.be/9_Inim5YHhI
+https://youtu.be/hIwVqt6qtc4
+https://youtu.be/vvFdTp54gII
+https://youtu.be/qc_7dXOxucc
+https://youtu.be/yiGAfjGrrVs
+https://youtu.be/RNdspOqbBEk
+https://youtu.be/jfQ5M6wXi2w
+https://youtu.be/Qdits--aoT4
+https://youtu.be/-G5jfUXtPCg
+
+DESCRIPTION
+Join Charles Humble in a conversation with Meri Williams, an experienced CTO who has led technology teams from 30 to 300 people across organizations ranging from Procter & Gamble to Monzo.
+
+In this candid discussion, Meri shares their journey from reluctant manager to seasoned leader, revealing hard-won insights about scaling teams, avoiding the "Google trap" of copying big tech practices inappropriately, and why investing in onboarding can make or break your organization.
+
+With refreshing honesty about management mistakes and the ongoing importance of diversity in building products that serve everyone, this conversation offers practical wisdom for anyone navigating the complex world of technical leadership.
+
+TIMECODES
+00:00 Intro
+01:25 From hardware hacker to reluctant manager
+05:27 Essential management skills & modern leadership
+14:35 Scaling Challenges & the “Big Tech Trap”
+21:49 Learning from companies at your stage
+31:15 Learning from mistakes
+38:04 Diversity, inclusion & building better products
+58:08 Outro
+
+RECOMMENDED BOOKS
+Meri Williams • The Principles of Project Management • https://amzn.to/4lj5B1G
+Tom DeMarco & Tim Lister • Peopleware • https://amzn.to/3KJmFOq
+Marcus Buckingham & Gallup Organization • First, Break All the Rules • https://amzn.to/40xpppI
+Daniel H. Pink • Drive: The Surprising Truth About What Motivates Us • https://amzn.to/3UHx535
+Kathy Sierra • Badass • https://amzn.to/4b9fb2V
+James Stanier • Become an Effective Software Engineering Manager • https://amzn.to/3vHrx1E
+James Stanier • Effective Remote Work • https://amzn.to/499Kqcd
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Leadership #CTO #HowToCTO #Strategy #TechLead #TechnicalLeadership #DEI #Diversity #Inclusion #Autism #BigTech #HumanFactor #Communication #Change #TodaInTech #MeriWilliams #CharlesHumble
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Hannah Foxwell on #Teamwork &amp; being an #EngineeringManager</title><link>https://www.youtube.com/shorts/SvhNM8BbVzo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/SvhNM8BbVzo?version=3" length="" type=""/><pubDate>Mon, 7 Jul 2025 12:01:00 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #ThreeTeamsModel #TechLeadership #Leadership #Transformation #DigitalTransformation #TeamDynamics #SoftwareEngineering #Programming #HannahFoxwell #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+
+Full version available here:
+https://youtu.be/La-oAqRr6cM
+
+Hannah Foxwell - Independent Consultant & Founder of "AI for the rest of us"
+
+RECOMMENDED BOOK
+Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook • https://amzn.to/47oAf3l
+Jez Humble & David Farley • Continuous Delivery • https://amzn.to/452ZRky
+Barbara Oakley • A Mind For Numbers • https://amzn.to/3Z2tjqi
+Pooja K. Agarwal & Patrice M. Bain • Powerful Teaching • https://amzn.to/4gmT5LS
+Barbara Oakley & Olav Schewe • Learn Like a Pro • https://amzn.to/3Z3gyf9
+Daniel Kahneman • Thinking, Fast and Slow • https://amzn.to/2XmJEtf
+Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>This Go code is as fast as C++</title><link>https://www.youtube.com/watch?v=lVMd3W55EAo</link><author>ankush</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/lVMd3W55EAo?version=3" length="" type=""/><pubDate>Mon, 7 Jul 2025 03:52:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCgY3bHW4qHKq9aC4i3nO-0g">Core Dump yt</source><content:encoded><![CDATA[Can some Go software be as fast as its C++ counterpart? Well, yes it an @PlanetScale  implemented a SQL evaluator written in Go which turned out to be as fast as the MySQL SQL evaluator which is written in C++. Watch the video to learn more.
+
+#golang #cplusplus #mysql]]></content:encoded></item><item><title>Implementing a Reliable IoT Device with Mobile Network Connect • Filip Zalio • YOW! 2016</title><link>https://www.youtube.com/watch?v=rb9aptXJvzE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/rb9aptXJvzE?version=3" length="" type=""/><pubDate>Sun, 6 Jul 2025 12:01:29 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2016. #GOTOcon #YOW
+https://yowcon.com
+
+Filip Zalio - Solution Architect at Hydrix
+
+RESOURCES
+https://x.com/filip_zalio
+https://www.linkedin.com/in/zalio
+
+RECOMMENDED BOOKS
+Colin Dow • Internet of Things Programming Projects • https://amzn.to/4k3xwBn
+Giacomo Veneri & Antonio Capasso • Hands-On Industrial Internet of Things • https://amzn.to/4llLpff
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#IoT #InternetOfThings #ConnectedWorlds #ConnectedThings #SoftwareEngineering #Programming #FilipZalio #YOWcon
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
