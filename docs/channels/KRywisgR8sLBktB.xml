@@ -1,201 +1,159 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Angular Custom Profiling Track is now available</title><link>https://blog.angular.dev/the-angular-custom-profiling-track-is-now-available-0f9d8d36218a?source=rss----447683c3d9a3---4</link><author>Angular</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Wed, 2 Jul 2025 19:38:06 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[Profiling web applications can be a complex task, often requiring developers to juggle between different tools that present data in disconnected ways. Traditionally, Chrome’s performance panel is excellent for detailed function call analysis, while Angular DevTools offers a higher-level view based on framework concepts like components, lifecycle hooks, bindings etc. Unfortunately, having two separate tools leads to a fragmented understanding of performance.This fragmentation presented a significant opportunity to improve the developer experience when profiling Angular applications. As a result, the Angular and Chrome teams have partnered to bring Angular-specific data and insights directly into the Chrome DevTools performance panel, creating a unified profiling experience. We’re excited to introduce the new custom track for Angular in Chrome DevTools.This integration allows developers to combine the benefits of both tools, offering a more synchronized and comprehensive view of their application’s performance.Getting to Know the New Custom TrackWith this new integration, you’ll find performance data using Angular concepts, such as application bootstrap, components, UI synchronization, and lifecycle hooks:The custom track’s flame charts group function invocations together under corresponding components and other Angular concepts. You can drill down to individual functions for a more granular view when needed and still glean meaning from the groupings in other scenariosOne of the most significant benefits is the ability to distinguish between your application’s code, other scripts, or browser activities like layout and paint.Decoding the Colors: What Your Code is DoingThe flame chart entries are color coded to help you quickly identify what’s happening in your application.: These represent Dependency Injection (DI) services instantiated during the application bootstrap process. In general, green signifies the execution of code written by application developers.: This color is reserved for templates compiled by Angular. Even though it’s still your code, it has been transformed by Angular before execution in the browser. This allows you to clearly see which templates are creating or updating the DOM and how long these operations take.: These mark the entry points. At the very top, you’ll see the trigger — why Angular decided to run application code. Subsequent blue bars represent all the components that need to perform work, which is particularly useful for understanding how user interactions impact DOM updates. Below component names, you’ll find the familiar purple (templates) and green (your component code).Since the custom track is interactive, clicking on an entry in the flame chart reveals more detailed information about a given entry. This data empowers developers to dive deeper into specific function calls and understand their impact on the application’s performance.Enabling this powerful new feature is straightforward. Complete the following steps:Ensure you are using the latest version of Angular (v20 at the time of this post) and an up-to-date version of the Google Chrome browser.Run your Angular application in developer mode.With your application running, open Chrome DevTools and enable the custom track by typing ng.enableProfiling() in the console.Once enabled, start recording a performance profile. The dedicated “Angular” track in the flame chart will be available.More Performant Apps are on the WayThis new integration with Chrome DevTools demonstrates our ongoing commitment to improving the developer experience within the Angular ecosystem. By providing tools that offer more focused and actionable insights, the Angular and Chrome teams are empowering developers to build faster, more efficient applications. Please try out this new integration and let us know what you think.]]></content:encoded></item><item><title>This Week In React #241: Remix, Next.js, Turbopack, Radix DOM templating, Ultracite, Stack, StyleX, MUI | Nitro Week, Skia, App Generator, Swift, Kotlin | ES2025, Rspack, Babel, TypeScript, Effect, Deno, Three.js</title><link>https://thisweekinreact.com/newsletter/241</link><author></author><category>frontend</category><pubDate>Wed, 2 Jul 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[It's been a hot C° week here, but pretty calm in terms of React news. We still got various little releases, interesting blog posts and weak signals that show us what the future might look like.On the React Native side, the community is adopting Nitro Modules in various libraries, and Skia got built-in support for Lottie animations.ES2025 has been approved, and TS 5.9 beta should come anytime soon.As always, thanks for supporting us on your favorite platform:Embrace connects technical performance to real user impact across mobile, web, and backend so that engineering teams can deliver fast, reliable, and exceptional digital experiences.📊 Track Core Web Vitals, crashes, network requests, and custom events—all tied to full user sessions. 👤 Get deep insights into users with session stitching and play-by-plays of every user experience. 🔍 Discover the root cause faster with high-fidelity data, including session timelines, performance traces, and user journeys. 🔭 Embrace is built on OpenTelemetry. Own your data, integrate it anywhere, and avoid the rigid pricing and limitations of all-in-one platforms.Try Embrace today and get your first 1 million sessions free. Learn more at embrace.io.Interesting feedback from Shopify migrating their flagship Admin app to Remix, dogfooding the framework on a massive codebase with strong needs in terms of scalability. It looks to me many recent React Router features were things Shopify actually needed.15x faster TypeScript and JavaScript debugging than with breakpoints and , while upgrading your AI agent 🤖 into an expert debugger with real-time context.Wallaby.js runs your tests as you type, feeding your AI assistant real-time runtime values, code coverage, error details, and execution paths — all right next to your code.Designed specifically for testing, Wallaby features include a , the ability to run only opened test files, full-context AI integration, smart test runs, and more. Better context. Smarter debugging.Nitro Modules are trending among React Native lib developers, with 3 new releases this week:]]></content:encoded></item><item><title>The Gap Strikes Back: Now Stylable</title><link>https://css-tricks.com/the-gap-strikes-back-now-stylable/</link><author>Patrick Brosset</author><category>frontend</category><pubDate>Tue, 1 Jul 2025 12:42:38 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Four years ago, I wrote an article titled Minding the “gap”, where I talked about the CSS  property, where it applied, and how it worked with various CSS layouts.At the time, I described how easy it was to evenly space items out in a flex, grid, or multi-column layout, by using the  property. But, I also said that  the gap areas was much harder, and I shared a workaround.However, workarounds like using extra HTML elements, pseudo-elements, or borders to draw separator lines tend to come with drawbacks, especially those that impact your layout size, interfere with assistive technologies, or pollute your markup with style-only elements.Today, I’m writing again about layout gaps, but this time, to tell you all about a new and exciting CSS feature that’s going to change it all. What you previously had to use workarounds for, you’ll soon be able to do with just a few simple CSS properties that make it easy, yet also flexible, to display styled separators between your layout items.There’s already a specification draft for the feature you can peruse. At the time I’m writing this, it is available in Chrome and Edge 139 behind a flag. But I believe it won’t be long before we turn that flag on. I believe other browsers are also very receptive and engaged.Displaying decorative lines between items of a layout can make a big difference. When used well, these lines can bring more structure to your layout, and give your users more of a sense of how the different regions of a page are organized.Introducing CSS gap decorationsIf you’ve ever used a multi-column layout, such as by using the  property, then you might already be familiar with gap decorations. You can draw vertical lines between the columns of a multi-column layout by using the  property:article {
-  column-width: 20rem;
-  column-rule: 1px solid black;
-}The CSS gap decorations feature builds on this to provide a more comprehensive system that makes it easy for you to draw separator lines in other layout types.For example, the draft specification says that the  property also works in flexbox and grid layouts:.my-grid-container {
-  display: grid;
-  gap: 2px;
-  column-rule: 2px solid pink;
-}No need for extra elements or borders! The key benefit here is that the decoration happens in CSS only, where it belongs, with no impacts to your semantic markup.The CSS gap decorations feature also introduces a new  property for drawing lines between rows:.my-flex-container {
-  display: flex;
-  gap: 10px;
-  row-rule: 10px dotted limegreen;
-  column-rule: 5px dashed coral;
-}But that’s not all, because the above syntax also allows you to define multiple, comma-separated, line style values, and use the same  function that CSS grid already uses for row and column templates. This makes it possible to define different styles of line decorations in a single layout, and adapt to an unknown number of gaps:.my-container {
-  display: grid;
-  gap: 2px;
-  row-rule:
-    repeat(2, 1px dashed red),
-    2px solid black,
-    repeat(auto, 1px dotted green);
-}Finally, the CSS gap decorations feature comes with additional CSS properties such as , , , , and , which make it possible to precisely customize the way the separators are drawn, whether they overlap, or where they start and end.Currently, the CSS gap decorations feature is only available in Chromium-based browsers.The feature is still early in the making, and there’s time for you all to try it and to provide feedback that could help make the feature better and more adapted to your needs.If you want to try the feature today, make sure to use Edge or Chrome, starting with version 139 (or another Chromium-based browser that matches those versions), and enable the flag by following these steps:In Chrome or Edge, go to .In the search field, search for Enable Experimental Web Platform Features.Using CSS gap decorationsLet’s build a simple web page to learn how to use the feature. Here is what we’ll be building:The above layout contains a header section with a title, a navigation menu with a few links, a main section with a series of short paragraphs of text and photos, and a footer.We’ll use the following markup:<body>
-<header>
-  <h1>My personal site</h1>
-</header>
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Links</a></li>
-  </ul>
-</nav>
-<main>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="cat.jpg" alt="A sleeping cat.">
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="tree.jpg" alt="An old olive tree trunk.">
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="strings.jpg" alt="Snow flakes falling in a motion blur effect.">
-  </article>
-</main>
-<footer>
-  <p>© 2025 Patrick Brosset</p>
-</footer>
-</body>We’ll start by making the  element be a grid container. This way, we can space out the , , , and  elements apart in one go by using the  property:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
-}Let’s now use the CSS gap decorations feature to display horizontal separator lines within the gaps we just defined:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
- 
-  row-rule: 1rem solid #efefef;
-}This gives us the following result:We can do a bit better by making the first horizontal line look different than the other two lines, and simplify the  value by using the  syntax:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
- 
-  row-rule:
-    1rem solid #efefef,
-    repeat(2, 2px solid #efefef);
-}With this new  property value, we’re telling the browser to draw the first horizontal separator as a  thick line, and the next two separators as  thick lines, which gives the following result:Now, let’s turn our attention to the navigation element and its list of links. We’ll use flexbox to display the links in a single row, where each link is separated from the other links by a gap and a vertical line:nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  column-rule: 2px dashed #666;
-}Very similarly to how we used the  property before, we’re now using the  property to display a dashed  thick separator between the links.Our example web page now looks like this:The last thing we need to change is the  element and its paragraphs and pictures. We’ll use flexbox again and display the various children in a wrapping row of varying width items:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>How to Discover a CSS Trick</title><link>https://css-tricks.com/how-to-discover-a-css-trick/</link><author>Lee Meyer</author><category>frontend</category><pubDate>Fri, 25 Jul 2025 13:48:36 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Do we invent or discover CSS tricks? Michelangelo described his sculpting process as chiseling away superfluous material to reveal the sculpture hidden inside the marble, and Stephen King says his ideas are pre-existing things he locates and uncovers “like fossils in the ground.” Paragraph one is early for me to get pretentious enough to liken myself to those iconic creative forces, but my work on CSS-Tricks feels like “discovering,” not “inventing,” secret synergies between CSS features, which have been eyeing each other from disparate sections of the MDN web docs and patiently waiting for someone to let them dance together in front of the world.Matchmaking for CSS featuresA strategy for finding unexpected alliances between CSS features to achieve the impossible is recursive thinking, which I bring to the CSS world from my engineering background. When you build recursive logic, you need to find an escape hatch to avoid infinite recursion, and this inception-style mindset helps me identify pairings of CSS features that seem at odds with each other yet work together surprisingly well. Take these examples from my CSS experiments:Accepting there is nothing new under the sunIndeed, Mark Twain thought new ideas don’t exist — he described them as illusions we create by combining ideas that have always existed, turning and overlaying them in a “mental kaleidoscope” to “make new and curious combinations.” It doesn’t mean creating is easy. No more than a safe can be cracked just by knowing the possible digits.This brings back memories of playing Space Quest III as a kid because after you quit the game, it would output smart-aleck command-line messages, one of which was: “Remember, we did it all with ones and zeros.” Perhaps the point of the mock inspirational tone is that we likely will not be able to sculpt like Michelangelo or make a bestselling game, even if we were given the same materials and tools (is this an inspirational piece or what?). However, understanding the limits of what creators do is the foundation for cracking the combination of creativity to open the door to somewhere we haven’t been. And one truth that helps with achieving magic with CSS is that its constraints help breed creativity.Being asked “Why would you do that in CSS when you could just use JavaScript?” is like if you asked me: “Why would you write a poem when it’s easier to write prose?” Samuel Coleridge defined prose as “words in their best order,” but poetry as “the best words in the best order.” If you think about it, the difference between prose and poetry is that the latter is based on increased constraints, which force us to find unexpected connections between ideas.The interesting thing about web design is how much it blends art and science. In both art and science, we challenge assumptions about whether commonsense relationships of cause and effect truly exist. Contrary to the saying in vernacular that “you can’t prove a negative,” we can. It’s not necessarily harder than proving a positive. So, in keeping with the discussion above of embracing limitations and removing the superfluous until a creation reveals itself, many of my article ideas prove a negative by challenging the assumption that one thing is necessary to produce another.Sometimes we can make a well-worn idea new again by taking it to the extreme. Seth Godin coined the term “edgecraft” to describe a technique for generating ideas by pushing a competitive advantage as far to the edge as the market dares us to go. Similarly, sometimes you can take an old CSS feature that people have seen before, but push it further than anyone else to create something unique. For example: But in 2021, I decided to see if I could use hundreds of radio button hacks using HTML generated with Pug to create a working Sudoku app. At one point, I found out that Chrome dev tools can display an infinite spinner of death when you throw too much generated CSS at it, which meant I had to limit myself to a 4×4 Sudoku, but that taught me more about what CSS can do and what it can’t.The  selector has existed since the 2000s. But in 2024, I took it to the extreme by using HAML to render the thousands of possible states of Tic Tac Toe to create a game with a computer opponent in pure CSS. At one point, CodePen refused to output as much HTML as I had asked it to, but it’s a fun way for newcomers to learn an important CSS feature; more engaging in my opinion than a table of contents demo.Creating CSS outsider artChris Coyier has written about his distaste for the gatekeeping agenda hidden behind the question of whether CSS is a programming language. If CSS isn’t deemed as “real” programming, that can be used as an excuse to hold CSS experts in less esteem than people who code in imperative languages, which leads to unfair pay and toxic workplace dynamics.But maybe the other side always seems greener due to the envy radiating from the people on that side, because as a full-stack engineer who completed a computer science degree, I always felt left out of the front-end conversations. It didn’t feel right to put “full stack developer” on my résumé when the creation of everything users can see in a web app seemed mysterious to me.And maybe it wasn’t just psychosomatic that CSS made my head hurt compared to other types of coding because research indicates if you do fMRIs on people who are engaged in design tasks, you see that design cognition appears to involve a unique cognitive profile compared to conventional problem-solving, reflected in the areas of the brain that light up on the fMRIs. Studies show that the brain’s structure changes as people get better at different types of jobs. The brain’s structural plasticity is reminiscent of the way different muscles grow more pronounced with different types of exercise, but achieving what some of my colleagues could with CSS when my brain had been trained for decades on imperative logic felt about as approachable as lifting a car over my head.The intimidation I felt from CSS started to change when I learned about the checkbox hack because I could relate to hiding and showing divs based on checkboxes, which was routine in my work in the back of the front-end. My designer workmate challenged me to make a game in one night using just CSS. I came up with a pure text adventure game made out of radio button hacks. Since creative and curious people are more sensitive to novel stimuli, the design experts on my team were enthralled by my primitive demo, not because it was cutting-edge gameplay but because it was something they had never seen before. My engineering background was now an asset rather than a hindrance in the unique outsider perspective I could bring to the world of CSS. I was hooked.The hack I found to rewire my brain to become more CSS-friendly was to find analogies in CSS to the type of problem-solving I was more familiar with from imperative programming:So if you are still learning web development and CSS (ultimately, we are all still learning), instead of feeling imposter syndrome, consider that the very thing that makes you feel like an outsider could be what enables you to bring something unique to your usage of CSS.Excited as I was when my CSS hacking ended up providing the opportunity to publish my experiments on CSS-Tricks, the first comment on the first hack I published on CSS-Tricks was a generic, defeatist “Why would you do that?” criticism. The other comments popped up and turned out to be more supportive, and I said in a previous article that I’ve made my peace with the fact that not everybody will like my articles. However, this is the second article in which I’ve brought up the critical comment from back in 2021. Hmm…Surely it wasn’t the reason I didn’t write another CSS-Tricks article for years. And it’s probably a coincidence that when I returned to CSS-Tricks last year, my first new article was a CSS hack that lends itself to accessibility after the person who left the negative comment about my first article seemed to have a bee in their bonnet about checkbox hacks breaking accessibility, even in fun CSS games not intended for production. Then again, limiting myself to CSS hacking that enables accessibility became a source of inspiration. We can all do with a reminder to at all times empathize with users who require screen readers, even when we are doing wacky experimental stuff, because we need to embrace the limitations not just of CSS but of our audience.I suppose the reason the negative comment continues to rankle with me is that I agree that clarifying the relevance and purpose of a CSS trick is important. And yet, if I’m right in saying a CSS trick is more like something we discover than something we make, then it’s like finding a beautiful feather when we go for a walk. At first, we pick it up just because we can, but if I bring you with me on the journey that led to the discovery, then you can help me decide whether the significance is that the feather we discovered makes a great quill or reveals that a rare species of bird lives in this region.It’s a journey versus destination thing to share the failures that led to compromises and the limitations I came up against when pushing the boundaries of CSS. When I bring you along on the route to the curious item I found, rather than just showing you that item, then after we part ways, you might retrace the steps and try a different fork in the path we followed, which could lead you to discover your own CSS trick.]]></content:encoded></item><item><title>Will WebAssembly ever get DOM support?</title><link>https://javascriptweekly.com/issues/746</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[🇪🇸 ¿Hablas español? EsJS is a strikingly well-presented experiment – complete with online playground – to let you write JavaScript ]]></content:encoded></item><item><title>Atomic Design Certification Course</title><link>https://css-tricks.com/atomic-design-certification-course/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 24 Jul 2025 16:16:30 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[It’s a nice way to divide web designs into separate layers of concern, leaning into biology terms to help scope their context by size:Atoms are part of molecules, which are part of organisms, which make up templates, which become full-blown pages. It’s composable design that’s centered on consistency, reusability, and maintainability. We’ve covered this a bunch over the years.Want to get fully versed in how it works? If so, you’re in luck because Brad and his brother, Ian, are in the process of publishing an entire online course about Atomic Design. It’s in presale for $50 (with discounts for teams).Normally, I like to jump into a course and check it out before sharing it. But this is Brad and all he does is wonderful things. For example:Oh, and his newsletter is pretty awesome, too. And I’m sure I’m leaving out more things he has floating around the web, but you get the point: he’s incredibly knowledgeable on the topic, is a highly-effective educator and speaker, and most importantly, has an infectious positive posture about him.I know the Atomic Design course will be just as awesome. ]]></content:encoded></item><item><title>A First Look at the Interest Invoker API (for Hover-Triggered Popovers)</title><link>https://css-tricks.com/a-first-look-at-the-interest-invoker-api-for-hover-triggered-popovers/</link><author>Daniel Schwarz</author><category>frontend</category><pubDate>Wed, 23 Jul 2025 12:36:48 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Chrome 139 is experimenting with Open UI’s proposed Interest Invoker API, which would be used to create tooltips, hover menus, hover cards, quick actions, and other types of UIs for showing more information with hover interactions. The Interest Invoker API makes these components declarative and hover-triggered, meaning that you create them with HTML, and then the web browser handles the  and  events for you, sans JavaScript.<a interestfor="target-id">Interest trigger</a>
+<div id="target-id" popover>Interest target</div>It’s not stated anywhere that they must be declared as popovers, but they  bake the right accessibility hints in.I want to spend a little time looking at the pieces of this feature, how they‘re used as currently proposed, and offer a few thoughts based on my experience playing with them.The interest trigger can be:an image map area ().And it should have the  attribute whose value should reference the  of the interest target. Here are examples for each supported element:<!-- Link -->
+<a interestfor="link">Interest trigger</a>
+<div id="link" popover>Interest target</div>
+
+<!-- Button -->
+<button interestfor="button">Interest trigger</button>
+<div id="button" popover>Interest target</div>
+
+<!-- Image map -->
+<img src="" alt="" usemap="#map">
+<map name="map">
+  <area interestfor="area" shape="" coords="" alt="">
+</map>
+<div id="area" popover>Interest target</div>If the interest target is a  (like it is in the examples above), then the  attribute replaces the  attribute that’s normally required for declarative popovers. So, instead of this:<!-- Button -->
+<button popovertarget="button">Interest trigger</button>
+<div id="button" popover>Interest target</div><!-- Button -->
+<button interestfor="button">Interest trigger</button>
+<div id="button" popover>Interest target</div> attributes that are valueless, empty, or use the  keyword can be dismissed lightly, i.e., using the  key, or by clicking outside of the popover. When opened, these popovers close all  and other  popovers (at least, the ones that aren’t nested).<div id="target-id" popover>Interest target</div>
+
+<!-- Equivalent to -->
+<div id="target-id" popover="">Interest target</div>
+
+<!-- Equivalent to -->
+<div id="target-id" popover="auto">Interest target</div> popovers (the newest type of popovers) can also be dismissed lightly, but only close other  popovers when opened:<div id="target-id" popover="hint">Interest target</div> popovers do their own thing. They can’t be dismissed lightly, don’t tell other popovers what to do, and we can have more than one of them open at a time. They’re  chill.<div id="target-id" popover="manual">Interest target</div>However, Open UI’s explainer and Chrome’s current implementation suggest that interest targets disappear on  regardless of the type of popover we’re working with. But redefining popover behavior in this context (or any context) feels wrong to me. If the interest target’s  attribute is set to , for example, shouldn’t it persist after ?Open UI discusses browsers baking the accessibility in depending on the popover type, which justifies interest invokers building off of popovers, but I think accessibility should depend on the content (unless overwritten using ARIA attributes) rather than the popover type.In short, it seems like interest invokers are designed to be used with popovers but for all the wrong reasons (in my opinion anyway). That said, it’s early days still. Interest invokers are very experimental and it’s certainly possible that I’m overlooking something.That said, there are some JavaScript events that we can use, too. Let’s take a look at those.Interest invoker JavaScript eventsWhile I imagine that you’d only need to listen for the  and  for certain edge cases, JavaScript events for these new declarative HTML features are fairly standard, and they’re there should you need them:interestTrigger.addEventListener("interest", () => {
+  /* User showed interest */
+});
+
+interestTrigger.addEventListener("loseinterest", () => {
+  /* User lost interest */
+});But what does “interest” mean, exactly? That’s worth digging into next.Interest delay (and the CSS of it all)You’ve probably noticed that when you show or lose interest, there’s a short delay in the popover showing or hiding itself. This is extremely annoying at first, but when you actually start to build with interest invokers, you realize how necessary it is.Here’s the demo again, so you can try it out (in Chrome 139 or Canary for now):One problem is that if you accidentally  the interest trigger and the target (which can be very easy to do when the target is too small), then it all disappears. This is even  annoying, but luckily the hide delay allows you some recovery time. Similarly, the show delay offers keyboard and screen reader users the opportunity to skip the interest target, while also preventing it from being triggered accidentally with a mouse pointer.Having said that, if the interest target is unobtrusive, then removing the show delay shouldn’t cause any harm. You could also remove the hide delay for keyboard and screen reader users, who aren’t likely to “lose interest” accidentally. We can do this by setting two new CSS properties,  and , to . The default is  and is set on the interest trigger (but not the interest target):/* If unobtrusive */
+.unobtrusive[interestfor] {
+  interest-show-delay: 0;
 }
 
-
-main > * {
-  flex: 1 1 200px;
+/* If keyboard-focused on a trigger */
+[interestfor]:focus-visible {
+  interest-hide-delay: 0;
 }
 
+/*
+  If keyboard-focused within a target of interest,
+  or target of partial interest (these are always keyboard-triggered),
+  the interest trigger that currently has interest
+  or partial interest has the hide delay removed
+*/
+body:has(:target-of-interest :focus-visible, :target-of-partial-interest) [interestfor]:where(:has-interest, :has-partial-interest) {
+  interest-hide-delay: 0;
+} Interest delays are currently buggy, especially with unitless values. Sometimes they work, sometimes they don’t.About those pseudo-selectors, though…Basically, when navigating to an interest trigger using a keyboard or screen reader whose target contains more focusable elements, this is referred to as showing “partial” interest. (I would’ve gone with “potential interest” personally, but I digress.) When this happens, the interest target’s focusable elements actually aren’t focusable (making it easy to skip them, if needed) unless the user hits the +/+ keyboard shortcut or equivalent screen reader hotkey.There’s even a message that we can customize by targeting :target-of-partial-interest::after::target-of-partial-interest::after { 
+  content: "Press ⌥↑ to activate.";
+}While you probably shouldn’t change the message content (since it displays the correct keyboard shortcut for the user’s device by default), we can style it by selecting this way.The user agent also throws  in::target-of-partial-interest {
+  interactivity: not-keyboard-focusable;
+}The  value is new, and prevents the keyboard focus (like  but for CSS, which is super interesting in its own right).A full breakdown because, frankly, that was : Triggers with “mouse interest” Triggers with “keyboard interest” Targets with mouse interest:target-of-partial-interest: Targets with keyboard interest:target-of-partial-interest::after: The message displayed when targets have keyboard interest The  before which the interest target appears The  before which the interest target disappears Shorthand for  and It works with anchors, tooNothing really new here as far as what we’ve already discussed, but I find it cool that we can use anchor elements declaratively just like interest invokers:On the surface, interest invokers are simply hover-triggered popovers, but touchscreen devices have never handled hovering well. In addition, hovering is susceptible to human-error, and we certainly don’t want to force keyboards and screen readers to tab into a minefield of focusables. There’s a lot to consider, and Open UI have done a wonderful job of ensuring that user agents do the lion’s share of it.And, as we’ve discussed, there’s a lot for us to consider, too, such as those delay timings and how interest invokers should be styled. What should interest triggers and targets look like when they have interest? What about the hotkey instruction? We’re talking about some new concepts here, that might require new UX conventions.Honorable mention: We’re also getting interactivity: not-keyboard-focusable out of this, which could help us to build keyboard-friendlier components with CSS.There’s a lot to love here, and I just know that people are going to create incredible tooltips and hover cards and more with this.]]></content:encoded></item><item><title>Celebrating 20 years of MDN</title><link>https://developer.mozilla.org/en-US/blog/mdn-turns-20/</link><author>joe-walker</author><category>dev</category><category>official</category><category>frontend</category><enclosure url="https://developer.mozilla.org/en-US/blog/mdn-turns-20/featured.png" length="" type=""/><pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate><source url="https://developer.mozilla.org/en-US/blog/">MDN Blog</source><content:encoded><![CDATA[MDN turns 20! Let's look at how we started, how MDN became the most trusted resource for web developers, the impact it's had on the open web, and yes, there's cake, too.
+]]></content:encoded></item><item><title>This Week In React #244: React Router, Compiler, Next.js, TanStack, JSX, Storybook | Reanimated, Hermes, Keyboard Controller, Screens, Node-API, Shimmer | TC39, tsgolint, Bun, Better-Auth, WebGPU</title><link>https://thisweekinreact.com/newsletter/244</link><author></author><category>frontend</category><pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[Apparently, not everyone is on vacation yet because it's a great week.On the React side, we have an early version of React Server Components support in React Router, and a new comprehensive React Compiler docs.It's even more exciting for React Native developers: Reanimated v4 is now stable, and Screens now support native tabs, coming soon in Expo!I also take the opportunity to warn that an npm phishing attack is currently in progress, targeting maintainers of popular packages. Don't trust any email coming from , they are spoofed.As always, thanks for supporting us on your favorite platform:AG Grid is a fast, free and fully customisable React Data Grid. Used by , AG Grid is  with over 4 million npm downloads per month:🆓  Access 100s of features such as , , ,  and more, all for  - forever.🚀  Display  out of the box, without compromising on performance.🎨  Add your own components to cells, rows & columns and use  to style every element.🏢  Purchase a licence for lifetime access to advanced features including , ,  and  (powered by our React Charting Library, AG Charts). Try it for free - no trial license required.The new React Router v7.7 release introduces experimental RSC APIs to use alongside RSC-compatible bundlers (Vite, Parcel) that you can now use in Data Mode, making it almost as powerful as the Framework Mode. In the future, the Framework Mode is also going to migrate to use React Router RSC APIs under the hood.Reading the React Server Components docs, the integration doesn’t look so simple, so I guess most React Router users may prefer waiting for RSC support in Framework Mode. However, it’s cool that they expose all primitives to bring RSCs to your existing app, and make it possible to create your own RSC-powered Framework Mode somehow.React Compiler getting ready for prime time?Recently, the React Compiler docs have been completely rewritten, divided into several pages, and given a more prominent place on the React docs site. There’s also a new API reference section covering configuration, directives, and pre-compiling a React library before distribution.A spike in errors or latency could be devastating… or trivial. And you don't want to waste time investigating regressions that have no meaningful impact on your users or business. With Embrace, you finally get observability that surfaces real user impact.📊 Track Core Web Vitals, exceptions, network requests, and custom events—all tied to complete user experiences. 👤 See where performance issues within custom user flows cause disengagement.🔍 Discover the root cause faster with high-fidelity data, including full session timelines, performance traces, and user journeys. 🔭 Embrace is built on OpenTelemetry. Own your data, integrate it anywhere, and avoid the rigid pricing and limitations of all-in-one platforms.Learn more, including how to get started free, at embrace.io.This is a massive release that greatly improves the Reanimated. Highlights include:CSS Transitions and Animations: taking the best part of CSS animations a bringing it to React Native through a familiar and convenient declarative API, that improves performance and web/mobile cross-platform support along the way. It should be particularly useful for state-driven micro-interactions, but worklets aren’t going anywhere and remain the go-to choice for complex and gesture/scroll-driven animations.Worklets have been extracted to a separate library that Reanimated depends on, starting >= v3.17. Richer multi-threading APIs should come soon, with the ability to move heavy computation, data fetching/processing to a background thread, with the ability to use third-party libraries in worklets.Reanimated will be split into many modular packages to help reduce bundle size, particularly useful on the web.Shared Element Transitions coming in an upcoming v4.x version.Reanimated v4 is only compatible with the New Architecture.]]></content:encoded></item><item><title>A Primer on Focus Trapping</title><link>https://css-tricks.com/a-primer-on-focus-trapping/</link><author>Zell Liew</author><category>frontend</category><pubDate>Mon, 21 Jul 2025 13:14:17 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Focus trapping is a term that refers to managing focus within an element, such that focus always stays within it:If a user tries to tab out from the last element, we return focus to the first one.If the user tries to  +  out of the first element, we return focus back to the last one.This whole focus trap thing is used to create accessible modal dialogs since it’s a whole ‘nother trouble to  everything else — but you don’t need it anymore if you’re building modals with the  API (assuming you do it right).Anyway, back to focus trapping.The whole process sounds simple in theory, but it can quite difficult to build in practice, mostly because of the numerous parts to you got to manage.Simple and easy focus trapping with Splendid LabzIf you are not averse to using code built by others, you might want to consider this snippet with the code I’ve created in Splendid Labz.We detect all focusable elements within an element.We manage focus with a keydown event listener.import { getFocusableElements, trapFocus } from '@splendidlabz/utils/dom'
 
-main article:has(p) {
-  flex-basis: 400px;
-}In the above code snippet, we’re setting the  element to be a wrapping flex container with a  gap between items and flex lines. We’re also making the items have a flex basis size of  for pictures and  for text, and allowing them to grow and shrink as needed. This gives us the following result:Let’s use CSS gap decorations to bring a little more structure to our layout by drawing  thick separator lines between the rows and columns of the layout:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  row-rule: 2px solid #999;
-  column-rule: 2px solid #999;
-}This gives us the following result, which is very close to our expected design:The last detail we want to change is related to the vertical lines. We don’t want them to span across the entire height of the flex lines but instead start and stop where the content starts and stops.With CSS gap decorations, we can easily achieve this by using the  property to fine-tune exactly where the decorations start and end, relative to the gap area:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  row-rule: 2px solid #999;
-  column-rule: 2px solid #999;
-  column-rule-outset: 0;
-}The  property above makes the vertical column separators span the height of each row, excluding the gap area, which is what we want:There’s more to the feature and I mentioned a couple more CSS properties earlier, which lets you control which of the decorations, rows or columns, appear above the other ones. / , which sets the behavior of the decoration lines at intersections. In particular, whether they are made of multiple segments, which start and end at intersections, or single, continuous lines.Because the feature is new, there isn’t MDN documentation about it yet. So to learn more, check out:The Edge team has also created an interactive playground where you can use visual controls to configure gap decorations.And, of course, the reason this is all implemented behind a flag is to elicit feedback from developers like you! If you have any feedback, questions, or bugs about this feature, I definitely encourage you to open a new ticket on the Chromium issue tracker.]]></content:encoded></item><item><title>Using CSS Cascade Layers With Tailwind Utilities</title><link>https://css-tricks.com/using-css-cascade-layers-with-tailwind-utilities/</link><author>Zell Liew</author><category>frontend</category><pubDate>Mon, 30 Jun 2025 13:16:43 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Adam Wathan has (very cleverly) built Tailwind with CSS Cascade Layers, making it extremely powerful for organizing styles by priority.@layer theme, base, components, utilities;
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'tailwindcss/utilities.css' layer(utilities);The core of Tailwind are its utilities. This means you have two choices:The default choice is to follow Tailwind’s recommended layer order: place components first, and Tailwind utilities last.So, if you’re building components, you need to manually wrap your components with a  directive. Then, overwrite your component styles with Tailwind, putting Tailwind as the “most important layer”./* Write your components */
-@layer components {
-  .component {
-    /* Your CSS here */
+const dialog = document.querySelector('dialog')
+
+// Get all focusable content
+const focusables = getFocusableElements(node)
+
+// Traps focus within the dialog
+dialog.addEventListener('keydown', event => {
+  trapFocus({ event, focusables })
+})The above code snippet makes focus trapping extremely easy.But, since you’re reading this, I’m sure you wanna know the details that go within each of these functions. Perhaps you wanna build your own, or learn what’s going on. Either way, both are cool — so let’s dive into it.Selecting all focusable elementsI did research when I wrote about this some time ago. It seems like you could only focus an a handful of elements:So, the first step in  is to search for all focusable elements within a container:export function getFocusableElements(container = document.body ) {
+
+  return {
+    get all () {
+      const elements = Array.from(
+        container.querySelectorAll(
+          `a,
+            button,
+            input,
+            textarea,
+            select,
+            details,
+            iframe,
+            embed,
+            object,
+            summary,
+            dialog,
+            audio[controls],
+            video[controls],
+            [contenteditable],
+            [tabindex]
+          `,
+        ),
+      )
+    }
   }
-}<!-- Override with Tailwind utilities --> 
-<div class="component p-4"> ... </div>That’s a decent way of doing things.But, being the bad boy I am, I don’t take the default approach as the “best” one. Over a year of (major) experimentation with Tailwind and vanilla CSS, I’ve come across what I believe is a better solution.Before we go on, I have to tell you that I’m writing a course called Unorthodox Tailwind — this shows you everything I know about using Tailwind and CSS in synergistic ways, leveraging the strengths of each.Shameless plug aside, let’s dive into the Unorthodox Choice now.In this case, the Unorthodox Choice is to write your styles in an unnamed layer — or any layer after utilities, really — so that your CSS naturally overwrites Tailwind utilities.Of these two, I prefer the unnamed layer option:/* Unnamed layer option */
-@layer theme, base, components, utilities; 
+}Next, we want to filter away elements that are ,  or set with , since they cannot be focused on. We can do this with a simple  function.export function getFocusableElements(container = document.body ) {
 
-/* Write your CSS normally here */ 
-.component { /* ... */ }/* Named layer option */
-/* Use whatever layer name you come up with. I simply used css here because it made most sense for explaining things */
-@layer theme, base, components, utilities, css; 
+  return {
+    get all () {
+      // ...
+      return elements.filter(el => {
+        if (el.hasAttribute('disabled')) return false
+        if (el.hasAttribute('hidden')) return false
+        if (window.getComputedStyle(el).display === 'none') return false
+        return true
+      })
+    }
+  }
+}Next, since we want to trap keyboard focus, it’s only natural to retrieve a list of keyboard-only focusable elements. We can do that easily too. We only need to remove all  values that are less than .export function getFocusableElements(container = document.body ) {
+  return {
+    get all () { /* ... */ },
+    get keyboardOnly() {
+      return this.all.filter(el => el.tabIndex > -1)
+    }
+  }
+}Now, remember that there are two things we need to do for focus trapping:If a user tries to tab out from the last element, we return focus to the first one.If the user tries to  +  out of the first element, we return focus back to the last one.This means we need to be able to find the first focusable item and the last focusable item. Luckily, we can add  and  getters to retrieve these elements easily inside .In this case, since we’re dealing with keyboard elements, we can grab the first and last items from :export function getFocusableElements(container = document.body ) {
+  return {
+    // ...
+    get first() { return this.keyboardOnly[0] },
+    get last() { return this.keyboardOnly[0] },
+  }
+}We have everything we need — next is to implement the focus trapping functionality.First, we need to detect a keyboard event. We can do this easily with :const container = document.querySelector('.some-element')
+container.addEventListener('keydown', event => {/* ... */})We need to check if the user is:Pressing tab (without )import { isTab, isShiftTab } from '@splendidlabz/utils/dom'
 
-@layer css {
-  .component { /* ... */ }
-}I have many reasons why I do this:I don’t like to add unnecessary CSS layers because it makes code harder to write — more keystrokes, having to remember the specific layer I used it in, etc.I’m pretty skilled with ITCSS, selector specificity, and all the good-old-stuff you’d expect from a seasoned front-end developer, so writing CSS in a single layer doesn’t scare me at all.I can do complex stuff that are hard or impossible to do in Tailwind (like theming and animations) in CSS.Your mileage may vary, of course.Now, if you have followed my reasoning so far, you would have noticed that I use Tailwind  differently:Tailwind utilities are not the “most important” layer.My unnamed CSS layer is the most important one.Build prototypes with Tailwind (quickly, easily, especially with the tools I’ve created).Shift these properties to CSS when they get more complex — so I don’t have to read messy utility-littered HTML that makes my heart sink. Not because utility HTML is bad, but because it takes lots of brain processing power to figure out what’s happening.Finally, here’s the nice thing about Tailwind being in a utility layer: I can always  a utility to give it strength.<!-- !important the padding utility -->
-<div class="component !p-4"> ... </div>Whoa, hold on, wait a minute! Isn’t this wrong, you might ask?Nope. The  keyword has traditionally been used to override classes. In this case, we’re leveraging on the  feature in CSS Layers to say the Tailwind utility is more important than any CSS in the unnamed layer.This is perfectly valid and is a built-in feature for CSS Layers.Besides, the  is so explicit (and used so little) that it makes sense for one-off quick-and-dirty adjustments (without creating a brand new selector for it).Tailwind utilities are more powerful than they seemTailwind utilities are not a 1:1 map between a class and a CSS property. Built-in Tailwind utilities mostly look like this so it can give people a wrong impression.Tailwind utilities are more like convenient Sass mixins, which means we can build effective tools for layouts, theming, typography, and more, through them.Thanks for reading and I hope you’re enjoying a new way of looking at (or using) Tailwind!]]></content:encoded></item><item><title>CSS Blob Recipes</title><link>https://css-tricks.com/css-blob-recipes/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Fri, 27 Jun 2025 13:48:41 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[. You hate them. You love them. Personally, as a design illiterate, I like to overuse them… a lot. And when you repeat the same process over and over again, it’s only a question of how much you can optimize it, or in this case, what’s the easiest way to create blobs in CSS? Turns out, as always, there are many approaches.To know if our following blobs are worth using, we’ll need them to pass three tests:They can be with just a single element (and preferably without pseudos).They can be easily designed (ideally through an online tool).We can use gradient backgrounds, borders, shadows, and other CSS effects on them.Without further ado, let’s  right in.Just generate them onlineI know it’s disenchanting to click on an article about making blobs in CSS just for me to say you can generate them outside CSS. Still, it’s probably the most common way to create blobs on the web, so to be thorough, these are some online tools I’ve used before to create  blobs. Probably the one I have used the most since, besides blobs, it can also generate lots of SVG backgrounds. A dedicated tool for making blobs. It’s apparently part of Haikei now, so you can use both.Lastly, almost all graphic programs let you hand-draw blobs and export them as SVGs.For example, this is one I generated just now. Keep it around, as it will come in handy later.<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <path
-    fill="#FA4D56"
-    d="M65.4,-37.9C79.2,-13.9,81,17,68.1,38C55.2,59.1,27.6,70.5,1.5,69.6C-24.6,68.8,-49.3,55.7,-56,38.2C-62.6,20.7,-51.3,-1.2,-39,-24.4C-26.7,-47.6,-13.3,-72,6.2,-75.6C25.8,-79.2,51.6,-62,65.4,-37.9Z"
-    transform="translate(100 100)"
-  />
-</svg>While counterintuitive, we can use the  property to create blobs. This technique isn’t new by any means; it was first described by Nils Binder in 2018, but it is still fairly unknown. Even for those who use it, the inner workings are not entirely clear.To start, you may know the  is a shorthand to each individual corner’s radius, going from the top left corner clockwise. For example, we can set each corner’s  to get a bubbly square shape:.blob {
-  border-radius: 25% 50% 75% 100%;
-}However, what  does — and also why it’s called “radius” — is to shape each corner following a circle of the given radius. For example, if we set the top left corner to , it will follow a circle with a radius  the size of the shape..blob {
-  border-top-left-radius: 25%;
-}What’s less known is that each corner property is still a  towards its horizontal and vertical radii. Normally, you set both radii to the same value, getting a circle, but you can set them individually to create an ellipse. For example, the following sets the horizontal radius to  of the element’s width and the vertical to  of its height:.blob {
-  border-top-left-radius: 25% 50%;
-}We can now shape each corner like an ellipse, and it is the combination of all four ellipses that creates the illusion of a blob! Just take into consideration that to use the horizontal and vertical radii syntax through the  property, we’ll need to separate the horizontal from the vertical radii using a forward slash ()..blob {
-  border-radius:
-    /* horizontal */
-    100% 30% 60% 70% /
-    /* vertical */
-    50% 40% 70% 70%;
-}The syntax isn’t too intuitive, so designing a blob from scratch will likely be a headache. Luckily, Nils Binder made a tool exactly for that!This hack is awesome. We aren’t supposed to use  like that, but we still do. Admittedly, we are limited to boring blobs. Due to the nature of , no matter how hard we try, we will only get convex shapes.Just going off , we can try to minimize it a little by sticking more than one blob together:However, I don’t want to spend too much time on this technique since it is too impractical to be worth it. To name a few drawbacks:We are using more than one element or, at the very least, an extra pseudo-element. Ideally, we want to keep it to one element.We don’t have a tool to prototype our blobby amalgamations, so making one is a process of trial and error.We can’t use borders, gradients, or box shadows since they would reveal the element’s outlines.Multiple backgrounds and SVG filtersThis one is an improvement in the Gooey Effect, described here by Lucas Bebber, although I don’t know who first came up with it. In the original effect, several elements can be morphed together like drops of liquid sticking to and flowing out of each other:It works by first blurring shapes nearby, creating some connected shadows. Then we crank up the contrast, forcing the blur out and smoothly connecting them in the process. Take, for example, this demo by Chris Coyer (It’s from 2014, so more than 10 years ago!):If you look at the code, you’ll notice Chris uses the  property along the  and  functions, which I’ve also seen in other blob demos. To be specific, it applies  on each individual circle and then  on the parent element. So, if we have the following HTML:<div class="blob">
-  <div class="subblob"></div>
-  <div class="subblob"></div>
-  <div class="subblob"></div>
-</div>…we would need to apply filters and background colors as such:.blob {
-  filter: contrast(50);
-  background: white; /* Solid colors are necessary */
+// ...
+container.addEventListener('keydown', event => {
+  if (isTab(event)) // Handle Tab
+  if (isShiftTab(event)) // Handle Shift Tab
+  /* ... */
+})Of course, in the spirit of learning, let’s figure out how to write the code from scratch:You can use  to detect whether the  key is being pressed.You can use  to detect if the  key is being pressedCombine these two, you will be able to write your own  and  functions:export function isTab(event) {
+  return !event.shiftKey && event.key === 'Tab'
 }
 
-.subblob {
-  filter: blur(15px);
-  background: black; /* Solid colors are necessary */
-}However, there is a good reason why those demos stick to white shapes and black backgrounds (or vice versa) since things get unpredictable once colors aren’t contrast-y enough. See it for yourself in the following demo by changing the color. Just be wary: .To solve this, we will use an SVG filter instead. I don’t want to get too technical on SVG (if you want to, read Luca’s post!). In a nutshell, we can apply blurring and contrast filters using SVGs, but now, we can also pick which color channel we apply the contrast to, unlike normal , which modifies all colors. Since we want to leave color channels (,  and ) untouched, we will only crank the contrast up for the alpha channel. That translates to the next SVG filter, which can be embedded in the HTML:<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute;">
-  <defs>
-    <filter id="blob">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -6" result="goo" />
-      <feBlend in="SourceGraphic" in2="blob" />
-    </filter>
-  </defs>
-</svg>To apply it, we will use again , but this time we’ll set it to , so that it pulls the SVG from the HTML..blob {
-  filter: url("#blob");
-}And now we can even use it with gradient backgrounds!That being said, this approach comes with two small, but important, changes to common CSS filters:The filter is applied to the parent element, not the individual shapes.The parent element must be transparent (which is a huge advantage). To change the background color, we can instead change the body or other ancestors’ background, and it will work with no issues.What’s left is to place the  elements together such that they make a blobby enough shape, then apply the SVG filters to morph them:This works well, but it has a similar issue to the blob we made by morphing several  instances: too many elements for a simple blob. Luckily, we can take advantage of the  property to create multiple shapes and morph them together using SVG filters, all in a single element. Since we are keeping it to one element, we will go back to just one empty  div:First, we will use  along with  to create a circle inside the element:body {
-  background: radial-gradient(farthest-side, var(--blob-color) 100%, #0000);
-  background-repeat: no-repeat; /* Important! */
-}Here is what each parameter does: Confines the shape to the element’s box farthest from its center. This way, it is kept as a circle. Fills the background shape from 0 to 100% with the same color, so it ends up as a solid color. After the shape is done, it makes a full stop to transparency, so the color ends.The next part is moving and resizing the circle using the  and  properties. Luckily, both can be set on  after the gradient, separated from each other by a forward slash ().body {
-  background: radial-gradient(...) 20% 30% / 30% 40%;
-  background-repeat: no-repeat; /* Important! */
-}The first pair of percentages sets the shape’s horizontal and vertical position (taking as a reference the top-left corner), while the second pair sets the shape’s width and height (taking as a reference the element’s size).As I mentioned, we can stack up different backgrounds together, which means we can create as many circles/ellipses as we want! For example, we can create three ellipses on the same element:.blob {
-  background:
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 20% 30% / 30% 40%, 
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 80% 50% / 40% 60%, 
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 50% 70% / 50% 50%;
-  background-repeat: no-repeat;
-}What’s even better is that SVG filters don’t care whether shapes are made of elements or backgrounds, so we can also morph them together using the last  filter!While this method may be a little too much for blobs, it unlocks squishing, stretching, dividing, and merging blobs in seamless animations.Again, all these tricks are awesome, but not enough for what we want! We accomplished reducing the blob to a single element, but we still can’t use gradients, borders, or shadows on them, and also, they are tedious to design and model. Then, that brings us to the ultimate blob approach…Fortunately, there is a new way to make blobs that just dropped to CSS: the  function!First off, the CSS  function is used alongside the  property to cut elements into any shape we want. More specifically, it uses a verbal version of SVG’s  syntax. The syntax has lots of commands for lots of types of lines, but when blobbing with , we’ll define curves using the  command:.blob {
-  clip-path: shape(
-    from X0 Y0, 
-    curve to X1 Y1 with Xc1 Yc1, 
-    curve to X2 Y2 with Xc21 Yc21 / Xc22 Yc22
-    /* ... */
-  );
-}Let’s break down each parameter: defines the starting point of the shape. starts the curve where  is the next point of the shape, while  defines a control point used in Bézier curves.The next parameter is similar, but we used  instead to define two control points on the Bézier curve.I honestly don’t understand Bézier curves and control points completely, but luckily, we don’t need them to use  and blobs! Again,  uses a verbal version of SVG’s  syntax, so it can draw any shape an SVG can, which means that we can translate the SVG blobs we generated earlier… and CSS-ify them. To do so, we’ll grab the  attribute (which defines the ) from our SVG and paste it into Temani’s SVG to  generator.This is the exact code the tool generated for me:.blob {
-  aspect-ratio: 0.925; /* Generated too! */
+export function isShiftTab(event) {
+  return event.shiftKey && event.key === 'Tab'
+}Since we’re only handling the  key, we can use an early return statement to skip the handling of other keys.container.addEventListener('keydown', event => {
+  if (event.key !== 'Tab') return
 
-  clip-path: shape(
-    from 91.52% 26.2%,
-    curve to 93.52% 78.28% with 101.76% 42.67%/103.09% 63.87%,
-    curve to 44.11% 99.97% with 83.95% 92.76%/63.47% 100.58%,
-    curve to 1.45% 78.42% with 24.74% 99.42%/6.42% 90.43%,
-    curve to 14.06% 35.46% with -3.45% 66.41%/4.93% 51.38%,
-    curve to 47.59% 0.33% with 23.18% 19.54%/33.13% 2.8%,
-    curve to 91.52% 26.2% with 62.14% -2.14%/81.28% 9.66%
-  );
-}As you might have guessed, it returns our beautiful blob:Let’s check if it passes our requirements:Yes, they can be made of a single element.Yes, they can also be created in a generator and then translated into CSS.Yes, we can use gradient backgrounds, but due to the nature of , borders and shadows get cut out.Two out of three? Maybe two and a half of three? That’s a big improvement over the other approaches, even if it’s not perfect.So, alas, we failed to find what I believe is the perfect CSS approach to blobs. I am, however, amazed how something so trivial designing blobs can teach us about so many tricks and new CSS features, many of which I didn’t know myself.]]></content:encoded></item><item><title>KelpUI</title><link>https://css-tricks.com/kelpui/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 26 Jun 2025 16:42:32 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[KelpUI is new library that Chris Ferdinandi is developing, designed to leverage newer CSS features and Web Components. I’ve enjoyed following Chris as he’s published an ongoing series of articles detailing his thought process behind the library, getting deep into his approach. You really get a clear picture of his strategy and I love it.He outlined his principles up front in a post back in April:I’m imagining a system that includes…Base styles for all of the common HTML elements.Loads of utility classes for nudging and tweaking things.Group classes for styling more complex UI elements  a million little classes.Easy customization with CSS variables.Web Components to progressively add interactivity to functional HTML.All of the Web Component HTML lives in the light DOM, so its easy to style and reason about.I’m imagining something that can be loaded directly from a CDN, downloaded locally, or imported if you want to roll your own build.KelpUI is still evolving, and that’s part of the beauty of looking at it now and following Chris’s blog as he openly chronicles his approach. There’s always going to be some opinionated directions in a library like this, but I love that the guiding philosophy is so clear and is being used as a yardstick to drive decisions. As I write this, Chris is openly questioning the way he optimizes the library, demonstrating the tensions between things like performance and a good developer experience.Looks like it’ll be a good system, but even more than that, it’s a wonderful learning journey that’s worth following.]]></content:encoded></item></channel></rss>
+  if (isTab(event)) // Handle Tab
+  if (isShiftTab(event)) // Handle Shift Tab
+  /* ... */
+})We have almost everything we need now. The only thing is to know where the current focused element is at — so we can decide whether to trap focus or allow the default focus action to proceed.We can do this with .Shift focus if user  on the Shift focus if the user  +  on the  itemNaturally, you can tell that we need to check whether  is the first or last focusable item.container.addEventListener('keydown', event => {
+  // ...
+  const focusables = getFocusableElements(container)
+  const first = focusables.first
+  const last = focusables.last
+
+  if (document.activeElement === last && isTab(event)) {
+    // Shift focus to the first item
+  }
+
+  if (document.activeElement === first && isShiftTab(event)) {
+    // Shift focus to the last item
+  }
+})The final step is to use  to bring focus to the item.container.addEventListener('keydown', event => {
+  // ...
+
+  if (document.activeElement === last && isTab(event)) {
+    first.focus()
+  }
+
+  if (document.activeElement === first && isShiftTab(event)) {
+    last.focus()
+  }
+})That’s it! Pretty simple if you go through the sequence step-by-step, isn’t it?Final callout to Splendid LabzAs I resolve myself to stop teaching (so much) and begin building applications, I find myself needing many common components, utilities, even styles.Since I have the capability to build things for myself, (plus the fact that I’m super particular when it comes to good DX), I’ve decided to gather these things I find or build into a couple of easy-to-use libraries.Just sharing these with you in hopes that they will help speed up your development workflow.Thanks for reading my shameless plug. All the best for whatever you decide to code!]]></content:encoded></item></channel></rss>

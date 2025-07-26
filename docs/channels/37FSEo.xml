@@ -1,22 +1,726 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Rust</title><link>https://www.awesome-dev.news</link><description></description><item><title>are we stuck with crate_name/crate-name/weird_crate-name inconsistency?</title><link>https://www.reddit.com/r/rust/comments/1lq4obm/are_we_stuck_with_crate_namecratenameweird/</link><author>/u/somnamboola</author><category>rust</category><category>reddit</category><pubDate>Wed, 2 Jul 2025 19:16:53 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[IMO it's not only OCD triggering, It also opens a vector to supply chain attacks. Would be cool to brainstorm if there are some cool ideas. ]]></content:encoded></item><item><title>Introducing tmux-rs</title><link>https://richardscollin.github.io/tmux-rs/</link><author>/u/Intelligent-Pear4822</author><category>rust</category><category>reddit</category><pubDate>Wed, 2 Jul 2025 18:39:44 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Code Your Own Desktop GUI App With Rust Iced Crate</title><link>https://youtu.be/2CQ4hLB2IMw</link><author>/u/JonkeroTV</author><category>rust</category><category>reddit</category><pubDate>Wed, 2 Jul 2025 17:25:47 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>This Week in Rust 606</title><link>https://this-week-in-rust.org/blog/2025/07/02/this-week-in-rust-606/</link><author>TWiR Contributors</author><category>This week in Rust</category><category>dev</category><category>rust</category><pubDate>Wed, 2 Jul 2025 04:00:00 +0000</pubDate><source url="https://this-week-in-rust.org/">This Week in Rust</source><content:encoded><![CDATA[This week's crate is ansic, a proc macro providing a DSL to output ANSI escape strings with zero runtime overhead.Thanks to Zeon for the self-suggestion!An important step for RFC implementation is for people to experiment with the
-implementation and give feedback, especially before stabilization.If you are a feature implementer and would like your RFC to appear in this list, add a
- label to your RFC along with a comment providing testing instructions and/or
-guidance on which aspect(s) of the feature need testing.Let us know if you would like your feature to be tracked as a part of this list.Always wanted to contribute to open-source projects but did not know where to start?
-Every week we highlight some tasks from the Rust community for you to pick and get started!Some of these tasks may also have mentors available, visit the task page for more information.No Calls for participation were submitted this week.Are you a new or experienced speaker looking for a place to share something cool? This section highlights events that are being planned and are accepting submissions to join their event as a speaker.No Calls for papers or presentations were submitted this week.Lots of changes this week with results dominated by the 1-5% improvements from
-#142941 across lots of primary
-benchmarks in the suite.3 Regressions, 6 Improvements, 5 Mixed; 4 of them in rollups
-39 artifact comparisons made in totalNo RFCs were approved this week.Every week, the team announces the 'final comment period' for RFCs and key PRs
-which are reaching a decision. Express your opinions now.Let us know if you would like your PRs, Tracking Issues or RFCs to be tracked as a part of this list.No New or Updated RFCs were created this week.Rusty Events between 2025-07-02 - 2025-07-30 🦀If you are running a Rust event please add it to the calendar to get
-it mentioned here. Please remember to add a link to the event too.
-Email the Rust Community Team for access.I love Rust, so I was already biased to be positive about the Rust for Linux project, even before dabbling with it myself. I'm genuinely surprised to be even more optimistic now than before. The coding part was much easier than I imagined, thanks to the use of reference counting in the kernel.And the promised benefits of Rust over C? They're absolutely real. The Rust version of the driver feels way more robust than the C code, not just regarding memory safety. It didn't have a single bug: Once it compiled, it worked. That's not a huge deal considering it was a direct rewrite, but it counts for something.Despite a lamentable lack of suggestions, llogiq is reasonably pleased with his choice.]]></content:encoded></item><item><title>The Industries Adopting Rust</title><link>https://www.youtube.com/watch?v=zRgtK2DsEXM</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zRgtK2DsEXM?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 14:15:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[If you love coding in Rust but aren’t sure how to turn that passion into a full-time career, this video is for you. We’re diving into the real-world opportunities for Rust developers, the industries that are actively adopting Rust, the skills they’re looking for, and the exact steps you can take to land your first Rust job.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Rust</title><link>https://www.awesome-dev.news</link><description></description><item><title>Build a Compiler from Scratch in Rust - Part 0: Introduction</title><link>https://blog.sylver.dev/build-a-compiler-from-scratch-part-0-introduction</link><author>/u/geoffreycopin</author><category>rust</category><category>reddit</category><pubDate>Sat, 26 Jul 2025 19:01:01 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>hyperloglockless: High-performance, concurrent cardinality estimation</title><link>https://github.com/tomtomwombat/hyperloglockless</link><author>/u/tomtomwombat</author><category>rust</category><category>reddit</category><pubDate>Sat, 26 Jul 2025 15:52:46 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I wanted to share my work on building Rust's fastest HyperLogLog.HyperLogLogs are space efficient data structures for the "count-distinct problem", approximating the number of distinct elements in a multiset. Paper.hyperloglockless offers a lockless concurrent HyperLogLog and a single threaded counterpart. They're simpler, faster, and more accurate than other HyperLogLog implementations:🧵  is a drop-in replacement for : all methods take , so you can wrap it in  and update it concurrently without .⚡  Designed to be fast and simple in both single and multi-threaded scenarios.🎯  Empirically verified accuracy for  of elements; other implementations break down after millions.]]></content:encoded></item><item><title>Rust Embedded Drivers (RED) - Open Source Book</title><link>https://www.reddit.com/r/rust/comments/1m9ic0i/rust_embedded_drivers_red_open_source_book/</link><author>/u/AstraKernel</author><category>rust</category><category>reddit</category><pubDate>Sat, 26 Jul 2025 02:45:21 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[- Learn to create your own embedded drivers in Rust- Create a simple driver for DHT22 Sensor, to read Humidity and temperature- Using the embedded-hal traits for platform-agnostic- Learn to use embedded-hal-mock for testing- [work in progress - more chapters to be added]]]></content:encoded></item><item><title>Can you move an integer in Rust?</title><link>https://www.reddit.com/r/rust/comments/1m9f3pr/can_you_move_an_integer_in_rust/</link><author>/u/Tinytitanic</author><category>rust</category><category>reddit</category><pubDate>Sat, 26 Jul 2025 00:05:38 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Reading Rust's book I came to the early demonstration that Strings are moved while integers are copied, the reason being that integers implement the Copy trait. Question is, if for some reason I wanted to move (instead of copying) a integer, could I? Or in the future, should I create a data structure that implements Copy and in some part of the code I wanted to move instead of copy it, could I do so too?]]></content:encoded></item><item><title>Efficient Computer&apos;s Electron E1 CPU - a new and unique instruction set architecture with a focus on extreme power efficiency, with support for C++ and Rust compilation</title><link>https://morethanmoore.substack.com/p/efficient-computers-electron-e1-cpu</link><author>/u/kibwen</author><category>rust</category><category>reddit</category><pubDate>Fri, 25 Jul 2025 21:01:17 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>[Media] I added multithreading support to my Ray Tracer. It can now render Peter Shirley&apos;s &quot;Sweet Dreams&quot; (spp=10,000) in 37 minutes, which is 8.4 times faster than the single-threaded version&apos;s rendering time of 5.15 hours.</title><link>https://www.reddit.com/r/rust/comments/1m9a6js/media_i_added_multithreading_support_to_my_ray/</link><author>/u/ybamelcash</author><category>rust</category><category>reddit</category><pubDate>Fri, 25 Jul 2025 20:36:23 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Rust running on every GPU</title><link>https://rust-gpu.github.io/blog/2025/07/25/rust-on-every-gpu</link><author>/u/LegNeato</author><category>rust</category><category>reddit</category><pubDate>Fri, 25 Jul 2025 18:29:30 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>How do you stay up to date with Rust ?</title><link>https://www.reddit.com/r/rust/comments/1m8oj2j/how_do_you_stay_up_to_date_with_rust/</link><author>/u/FewInteraction1561</author><category>rust</category><category>reddit</category><pubDate>Fri, 25 Jul 2025 03:20:02 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I've been using Rust for a while now, and I'm looking for good ways to stay current with the language. What are your go-to resources to keep up with the latest features, tools, or community news?]]></content:encoded></item><item><title>compiler-errors looking for a job so they can keep working on the compiler</title><link>https://bsky.app/profile/errs.io/post/3ltvf4kzoik2l</link><author>/u/watermelon_exe</author><category>rust</category><category>reddit</category><pubDate>Thu, 24 Jul 2025 23:38:04 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>I&apos;m rewriting the V8 engine in Rust</title><link>https://www.reddit.com/r/rust/comments/1m8iuha/im_rewriting_the_v8_engine_in_rust/</link><author>/u/wendelmax</author><category>rust</category><category>reddit</category><pubDate>Thu, 24 Jul 2025 22:51:46 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I was working on a project for Node in C++, trying to build a native multithreading manager, when I ran into a few (okay, a lot of) issues. To make sense of things, I decided to study V8 a bit. Since I was also learning Rust (because why not make life more interesting?), I thought: “What if I try porting this idea to Rust?” And that’s how I started the journey of writing this engine in Rust. Below is the repository and the progress I’ve made so far:  https://github.com/wendelmax/v8-rust Note: This isn’t a rewrite or port of V8 itself. It’s a brand new JavaScript engine, built from scratch in Rust, but inspired by V8’s architecture and ideas. All the code is original, so if you spot any bugs, you know exactly who to blame!]]></content:encoded></item><item><title>Old OOP habits die hard</title><link>https://www.reddit.com/r/rust/comments/1m8f8zx/old_oop_habits_die_hard/</link><author>/u/Aggressive_Sherbet64</author><category>rust</category><category>reddit</category><pubDate>Thu, 24 Jul 2025 20:23:51 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Man, old habits die hard. It's so easy without thinking to follow old patterns from OOP inside of rust that really don't make sense - I recently was implementing a system that interacts with a database, so of course I made a struct whose implementation is meant to talk to a certain part of the database. Then I made another one that did the same thing but just interacted with a different part of the database. Didn't put too much thought into it, nothing too crazy just grouping together similar functionality.A couple days later I took a look at these structs and I saw that all they had in them was a PgPool. Nothing else - these structs were functionally identical. And they didn't need anything else - there was no data that needed to be shared between the grouping of these functions! Obviously these should have all been separate functions that took in a reference to the PgPool itself. I gotta break these old OOP habits. Does anyone else have these bad habits too?]]></content:encoded></item><item><title>There is no memory safety without thread safety</title><link>https://www.ralfj.de/blog/2025/07/24/memory-safety.html</link><author>/u/ralfj</author><category>rust</category><category>reddit</category><pubDate>Thu, 24 Jul 2025 14:58:42 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Memory safety is all the rage these days.
+But what does the term even mean?
+That turns out to be harder to nail down than you may think.
+Typically, people use this term to refer to languages that make sure that there are no use-after-free or out-of-bounds memory accesses in the program.
+This is then often seen as distinct from other notions of safety such as thread safety, which refers to programs that do not have certain kinds of concurrency bugs.
+However, in this post I will argue that this distinction isn’t all that useful, and that the actual property we want our programs to have is absence of Undefined Behavior.Breaking memory safety with a data raceMy main issue with the division of safety into fine-grained classes such as memory safety and thread safety is that there’s no meaningful sense in which a thread-unsafe language provides memory safety.
+To see what I mean by this, consider this program written in Go, which according to Wikipedia is memory-safe:If you run this program (e.g. on the Go playground), it will crash very quickly:panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x2a pc=0x468863]
+This is a segfault, not a normal Go panic, so something has gone horribly wrong.
+Note that the address that caused the segfault is , the hex representation of 42.
+What is happening here?This example exploits that Go stores values of interface types like  as pairs of a pointer to the data and a pointer to the vtable.
+Every time  stores a new value in , it just does two separate stores to update those two pointers.
+In , there’s thus a small chance that when we read  those two stores, we get a mix of a pointer to an  with the vtable for a .
+When that happens, we will run the  version of , which will dereference the ’s  field as a pointer – and hence the program accesses address 42, and crashes.One could easily turn this example into a function that casts an integer to a pointer, and then cause arbitrary memory corruption.What about other languages?At this point you might be wondering, isn’t this a problem in many languages?
+Doesn’t Java also allow data races?
+And yes, Java does allow data races, but the Java developers spent a lot of effort to ensure that even programs with data races remain entirely well-defined.
+They even developed the first industrially deployed concurrency memory model for this purpose, many years before the C++11 memory model.
+The result of all of this work is that in a concurrent Java program, you might see unexpected outdated values for certain variables, such as a null pointer where you expected the reference to be properly initialized, but you will  be able to actually break the language and dereference an invalid dangling pointer and segfault at address .
+In that sense, all Java programs are thread-safe.Generally, there are two options a language can pursue to ensure that concurrency does not break basic invariants:Ensure that arbitrary concurrent programs still uphold the typing discipline and key language invariants. This comes at a significant cost, restricting the language to never assume consistency of multi-word values and limiting which optimizations the compiler can perform. This is the route most languages take, from Java to C#, OCaml, JavaScript, and WebAssembly.Have a strong enough type system to fully rule out data races on most accesses, and pay the cost of having to safely deal with races for only a small subset of memory accesses. This is the approach that Rust first brought into practice, and that Swift is now also adopting with their “strict concurrency”.Go, unfortunately, chose to do neither of these.
+This means it is, strictly speaking, not a memory safe language: the best the language can promise is that  a program has no data races (or more specifically, no data races on problematic values such as interfaces, slices, and maps), then its memory accesses will never go wrong.
+Now, to be fair, Go comes with out-of-the-box tooling to detect data races, which quickly finds the issue in my example.
+However, in a real program, that means you have to hope that your test suite covers all the situations your program might encounter in practice, which is  the sort of issue that a strong type system and static safety guarantees are intended to avoid.
+It is therefore not surprising that data races are a huge problem in Go,
+and there is at least anecdotal evidence of actual memory safety violations.
+Even experienced Go programmers do not always realize that you can break memory safety without using any unsafe operations or exploiting any compiler or language bugs.
+Go is a language  for concurrent programming, so people do not expect footguns of this sort.
+I think that is a problematic blind spot.Of course, as all things in language design, in the end this is a trade-off and the Go folks are well aware of the problem.
+Go made the simplest possible choice here, which is entirely in line with the general design of the language.
+There’s nothing fundamentally wrong with that.
+However, putting Go into the same bucket as languages that actually  go through the effort of solving the problem with data races misrepresents the safety promises of the language.
+The Go memory model documentation is not exactly upfront about this point either: the “Informal Overview” emphasizes that “most races have a limited number of outcomes” and remarks that Go is unlike “C and C++, where the meaning of any program with a race is entirely undefined”.
+You could say that the use of “most” here is foreshadowing, but this section does not list any cases where the number of outcomes is unlimited, so this is easy to miss.
+They even go so far as to claim that Go is “more like Java or JavaScript”, which I think is rather unfair, given the lengths to which those languages went to achieve the thread safety they have.
+Only a later subsection explicitly admits to the fact that  races in Go  have entirely undefined behavior (which is very unlike Java or JavaScript).I would argue that the actual property people care about when talking about memory safety is that the program cannot break the language.
+All these security vulnerabilities caused by memory safety violations are cases where the code did something which isn’t even possible in the language specification, such as jumping to some user-provided array and executing it as assembly code.
+The typical term we use for a program that breaks the language like that is .
+The moment your program has UB, all bets are off; whether or not an attacker can then control how exactly this UB manifests and exploit it to their advantage is mostly an implementation detail.In my view, there’s a bright line dividing “safe” languages where programs cannot have Undefined Behavior, and “unsafe” languages where they can.
+There’s no meaningful sense in which this can be further subdivided into memory safety, thread safety, type safety, and whatnot – it doesn’t matter  your program has UB, what matters is that a program with UB defies the basic abstractions of the language itself, and this is a perfect breeding ground for vulnerabilities.
+Therefore, we shouldn’t call a language “memory safe” if the language does not systematically prevent Undefined Behavior.In practice, of course, safety is not binary, it is a spectrum, and on that spectrum Go is much closer to a typical safe language than to C.
+It is plausible that UB caused by data races is less useful for attackers than UB caused by direct out-of-bounds or use-after-free accesses.
+But at the same time I think it is important to understand which safety guarantees a language reliably provides, and where the fuzzy area of trade-offs begins.
+I am in the business of  safety claims of languages, and for Go, there’s not much one could actually prove.
+I hope this post helps you to better understand some the non-trivial consequences of the choices different languages have made. :)]]></content:encoded></item><item><title>StackSafe: Taming Recursion in Rust Without Stack Overflow</title><link>https://fast.github.io/blog/stacksafe-taming-recursion-in-rust-without-stack-overflow/</link><author>/u/andylokandy</author><category>rust</category><category>reddit</category><pubDate>Thu, 24 Jul 2025 12:26:57 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Thoughts on `Arc::pair(value)`</title><link>https://www.reddit.com/r/rust/comments/1m7yd9h/thoughts_on_arcpairvalue/</link><author>/u/J-Cake</author><category>rust</category><category>reddit</category><pubDate>Thu, 24 Jul 2025 07:56:48 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I find myself often creating s or s, creating a second binding so that I can  it into an async closure or thread. It'd be nice if there were a syntax to make that a little cleaner. My thoughts where to just return an  and a clone of that  in a single function call.```rust let (a, b) = Arc::pair(AtomicU64::new(0));std::thread::spawn(move || { b.store(1, Ordering::SeqCst); });a.store(2, Ordering::SeqCst); ```What are your thoughts? Would this be useful?]]></content:encoded></item><item><title>What is the &apos;idiomatic&apos; method of constructing linked data structures in Rust? (or, circumvent them altogether)</title><link>https://www.reddit.com/r/rust/comments/1m7qpnx/what_is_the_idiomatic_method_of_constructing/</link><author>/u/Ok_Performance3280</author><category>rust</category><category>reddit</category><pubDate>Thu, 24 Jul 2025 01:01:07 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[In most compiled, systems languages I work with, constructing linked data structures is a breeze. The given is extremely difficult in Rust. I can use containers like  or use unsafe pointers, but sir, this is Wendy's!What is the  way of doing linked data structures in Rust? Is it, indeed, standard lib's container primitives, as I've been doing? Or is there a better way?How 'bout circumventing them altogether? Treat it like an scripting language, and use aggregate containers like  or tabular containers like ? In a simple acyclic graph, it's easier to use aggregate data types to make an incidence/adjacency list anyways. So embrace that. If you're asking why not just use a hashmap/hashset etc..., you see, my thought is informed by systems languages I used in the past (C, D, Pascal, and even Go). I am planning on making an Awk in Rust₁, and I need a symbols table to install, intern and retrieve symbols from during scanning. I think, making a flat, linked data structure that contains all the symbol metadata, besides the link, is much faster than using a vector or a hashtable which maps to/aggregates a flat data structure of symbol data!Your mileage may vary. So tell me where the ticker is stuck at? How do you prefer to do such stuff?Footnotes: ₁: Can you recommend a good name for my Awk in Rust? Not 'rawk' pls!]]></content:encoded></item><item><title>I built the same software 3 times, then Rust showed me a better way</title><link>https://itnext.io/i-built-the-same-software-3-times-then-rust-showed-me-a-better-way-1a74eeb9dc65?source=friends_link&amp;amp;sk=8c5ca0f1ff6ce60154be68e3a414d87b</link><author>/u/bitter-cognac</author><category>rust</category><category>reddit</category><pubDate>Wed, 23 Jul 2025 22:27:04 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>How complicated is the code of the borrow checker?</title><link>https://www.reddit.com/r/rust/comments/1m79c29/how_complicated_is_the_code_of_the_borrow_checker/</link><author>/u/servermeta_net</author><category>rust</category><category>reddit</category><pubDate>Wed, 23 Jul 2025 13:30:56 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[In my quest to improve my rust skills I would like to understand more about the inner working of the borrow checker. It seems the code resides here, and from a quick read it feels like a graph traversal library:- We try to build a graph representing regions of code and memory- We apply some logic to make some cases easier to deal with- Then a decisional tree is applied to this "denormalized" graph to infer if the rules of borrow has been brokenObviously the devil is in the details, but how close am I to the truth? Is the borrow checker something extremely complex like a compiler, or something much simpler? I would bet the latter, given I could follow the code a bit, unlike with the compilerWhere can I learn more? Would it be crazy to think to try to implement a (very simplified) borrow checker myself?]]></content:encoded></item><item><title>Koto 0.16 released</title><link>https://www.reddit.com/r/rust/comments/1m79998/koto_016_released/</link><author>/u/_irh</author><category>rust</category><category>reddit</category><pubDate>Wed, 23 Jul 2025 13:27:37 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Koto is an embeddable scripting language for Rust applications.The 0.16 release includes auto-formatting support, language improvements, and easier conversions to Rust types.Take a look at the news post for more info, and I'd be happy to answer any questions here!]]></content:encoded></item><item><title>PackWorld. Unity burned me out. Rust pulled me back in. Writing a custom Rust game engine.</title><link>https://medium.com/@ryanrothweiler/packworld-unity-burned-me-out-rust-pulled-me-back-in-writing-a-custom-rust-game-engine-8e81eee0f391</link><author>/u/PermanentGuerrilla</author><category>rust</category><category>reddit</category><pubDate>Wed, 23 Jul 2025 04:56:09 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I’m building a game called “PackWorld: Open packs build a world” in a fully custom Rust game engine.The game is playable here in your browser. PackWorldGame.com.This is an article about the engine architecture, what went well and what didn’t go well.Rustaceans love entity component systems. And Unity is built on an ECS architecture! Should be great right? Its not. The issue is dependencies.Hot take. Dependencies themselves are not bad (mostly). Unclear, circular, and hidden dependencies are bad. I have no trouble reasoning about problems when one module is dependent on another through a clear structure or function call. The real problem is hidden dependencies — when the relationship between components depends on update timing or fragile internal state. These are hard to see, harder to test, and brutal to refactorMy biggest issue with Unity’s components is the dependencies between them. ALL Unity component dependencies are only checked at runtime. This is totally bonkers. Component dependencies are wired in basically two ways, GetComponent calls in code, or serialized in a yaml file as a GUID. This is exactly the kind of dependency management that makes refactoring terrible.This kind of architecture is definitely within Rust. But the memory ownership model makes such a setup terribly difficult and unergonomic.Ok enough complaining, let talk about one of my favorite architectures of my engine. I call them UpdateSignals, but I believe a more common name is message or pub/sub system.In general modules only communicate with each other through UpdateSignals. PackWorld is made up of tiles. Tiles then manage their own state, but tiles can also do things like give items, or modify state in adjacent tiles. Lets use giving an item as an example. UpdateSignal is an enum with an entry for GiveItem(ItemID). The tile update loop returns a list of UpdateSignals. Then once all the tiles have been updated we process the list of update signals. It looks something like this.This isn’t groundbreaking by any means, but I was amazed at how clean and easy this is. Here is why this is great.Tiles aren’t really actually dependent on the inventory system. As long as the inventory system understands the UpdateSignals then it can be refactored without worry.The “business logic” is obvious and easily understood. Great for readability.Testing is a breeze. You run the tile update and then assert that the expected update signals are returned. You then test the inventory system and assert that it responds correctly to the update signals. You can test the tiles without an inventory system and you can test the inventory system without any tiles. No mocking, no dependency injection, just obvious, easy, straight forward testing.Debugging is great. You can watch and debug each message as it passes through. Theoretically you could reconstruct the entire game state by just replaying the messages, though I haven’t gone this far.I architected all “global” state change through this system. Modules have methods, if they need to change some state in another module, then its returned as an UpdateSignal and handled outside the module.This is why I’m breaking out of Unity. Working in Unity land constricts your thinking. In Unity you’re constantly considering the other components, do they exist, how they’re configured, checking for null, caching them, etc. But an entirely different architecture can completely remove those types of problems. There are much better architectures that you might never think of if you don’t question the Unity way and I love the way Rust is making me rethink.That is all I have! Thanks for reading! Yes very short. I have plans for more articles on my engine in the future so stay tuned and follow if you’re interested!I’m also currently open for new work and employment opportunities. If you’re looking for help on your project please reach out.]]></content:encoded></item><item><title>Performance implications of unchecked functions like unwrap_unchecked, unreachable, etc.</title><link>https://www.reddit.com/r/rust/comments/1m6uaqc/performance_implications_of_unchecked_functions/</link><author>/u/OtroUsuarioMasAqui</author><category>rust</category><category>reddit</category><pubDate>Tue, 22 Jul 2025 23:58:11 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I'm working on a high-performance rust project, over the past few months of development, I've encountered some interesting parts of Rust that made me curious about performance trade-offs.For example, functions like  and . I understand that  skips the check for  or , and  tells the compiler that a certain branch should never be hit. But this raised a few questions:When using the regular , even though it's fast, does the extra check for / add up in performance-critical paths?Do the unchecked versions like  or  provide any real measurable performance gain in tight loops or hot code paths?Are there specific cases where switching to these "unsafe"/unchecked variants is truly worth it?How aggressive is LLVM (and rust's optimizer) in eliminating redundant checks when it's statically obvious that a value is , for example?I’m not asking about safety trade-offs, I’m well aware these should only be used when absolutely certain. I’m more curious about the actual runtime impact and whether using them is generally a micro-optimization or can lead to substantial benefits under the right conditions.]]></content:encoded></item><item><title>This Feature Just Blew My Mind</title><link>https://www.reddit.com/r/rust/comments/1m6gu5a/this_feature_just_blew_my_mind/</link><author>/u/library-in-a-library</author><category>rust</category><category>reddit</category><pubDate>Tue, 22 Jul 2025 15:16:49 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I just learned that tuple structs are considered functions: `struct X(u32)` is a `fn(u32) -> X`.I understood structs to be purely types with associated items and seeing that this is a function that can be passed around is mind blowing!   submitted by    /u/library-in-a-library ]]></content:encoded></item><item><title>Jujutsu For Busy Devs (an alternative git frontend, written in Rust)</title><link>https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs</link><author>/u/kibwen</author><category>rust</category><category>reddit</category><pubDate>Tue, 22 Jul 2025 13:28:25 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Jujutsu () is a version control system with a
+significantly simplified mental model and command-line interface compared to Git, without
+sacrificing expressibility or power (in fact, you could argue Jujutsu is more powerful).
+Stacked-diff workflows, seamless rebases, and ephemeral revisions are all natural with , and it
+uses Git as a backend, which means you can begin using it non-destructively with a single command
+and can always drop back down to Git if you need to.Install the  command line tool. Make sure you set your authorship information, and
+also don't skip the section on setting up shell completions (the newer dynamic completions are well
+worth it).Then you'll need a repository to work with. You could use an existing repository of yours (although
+I'd recommend cloning a fresh copy, or at the very least making sure all your in-progress changes
+are committed and pushed), or if you want to follow along more closely, you can clone the
+repository containing this website's source code.To use an existing repository,  into it and run:To clone a new one, you can do the clone and the  initialisation in one step with (e.g.):In either case, you'll end up with a Jujutsu repository alongside the existing Git repository, in
+. This will not be visible to Git, and there's no risk of desynchronisation between the two:
+Jujutsu uses the Git repo as its storage backend, so whenever you interact with either  or
+, you're operating on the same data. The fact you're using Jujutsu rather than Git will not
+impact anyone else who interacts with the repository.After initialising the colocated Git repo,  will suggest that you track all of the remote
+branches that are associated with the ones you have checked out, and it helpfully provides a command
+that will track all of them at once (something like jj bookmark track main@origin, but containing
+each of the branch names that you have local checkouts of). Copy and paste it, and run it.Jujutsu's command line interface has a much smaller surface area than Git, and its mental model is
+simpler. That means there's much less to learn—this should be less intimidating than Git was when
+you originally learned it—but it  mean you're going to have to adapt to a slightly different
+workflow.You might also find Steve's Jujutsu Tutorial a helpful resource, but this page
+will try to provide a higher-level overview for busy devs who just want to get on with it.When you start working on something new with Git, the first thing you'd usually do is check out
+, pull the latest version of it from the remote, and then create a new branch off from there.
+Jujutsu isn't as branch-oriented as Git is, so you don't start by creating a new branch—you just
+place a new  on top of an existing one and start working inside it.First, get the latest changes from the remote:Take a look at the repo history to orient yourself:You should see something like this (if you're doing this in a fresh clone of a repo, this is
+probably  you'll see):
+│  
+│  fix: add missed code tag around links to tags
+~
+In an attempt to be helpful, Jujutsu has done something that's actually a bit inconvenient for this
+tutorial: it created a new empty revision for you on top of . Since in your typical workflow
+you would probably start out somewhere else in the history, this doesn't really fit with what I'm
+trying to teach—so for now, .The second entry is the important one. This is an entry in the log for a revision with ID
+, authored by  23 hours ago, and it's got
+ pointing to it.You'll also notice that there's a commit hash associated with this,
+, and that's the same one you'd see if you ran . The
+reason for the two different kinds of ID is that Jujutsu assigns an identifier to each revision,
+which it keeps stable even as the underlying Git commit might change (it will make more sense later
+why the Git hash might change).Any of those identifiers can be used to refer to this revision (, or its highlighted
+prefix ; , or its highlighted prefix ; or ). Since, semantically, we want our
+new changes to be based on the current tip of  no matter what revision that is, let's use that
+identifier to create a new revision:Looking at the log reveals what happened:
+│  
+│  fix: add missed code tag around links to tags
+~
+A new revision has been created on top of the one at the tip of , and it's been given the
+identifier  (whose shortest unique prefix is , so I'll
+refer to it as such from now on). The  on the left hand side marks that this is the working copy
+(current revision)—any changes we make are going to become part of this revision. We can use  in
+commands to refer to whatever the current revision is at any given time.You'll notice that the revision I told you to ignore earlier () is gone. I'll explain why
+it disappeared in the next section. We  have just used that one, but I asked
+you to run  in order to demonstrate the full process of beginning a new set of changes on
+top of .As soon as you edit a file, the changes will be included in whatever revision you're currently
+editing—there's no separate staging area in Jujutsu. I'll make a change to  and then look
+at the log again.
+│  
+│  fix: add missed code tag around links to tags
+~
+A few things have changed. The revision is no longer marked as empty, because the change I just made
+is in it. If you're particularly sharp-eyed, you might notice that the Git commit hash immediately
+changed (but the Jujutsu revision ID remained the same). That's because as soon as changes were
+made, Jujutsu took care of keeping that synchronised with the underlying Git repo in the background
+by creating a new commit (you can  it if you want!)—but those details are all abstracted
+away from us.Let's say we're finished with this change and want to move on to the next revision (the same point
+at which you would have run  with Git). Jujutsu  have a  command, but
+it's just a helper that combines two operations: a  and a . Doing the two steps
+individually will help build your mental model:
+│  
+│  fix: add missed code tag around links to tags
+~
+We've added a message to the revision, but we're still editing it (see the  on the left?). To
+move on to the next revision, we can run  (or just , since it defaults to creating
+a new revision on top of the current revision).
+│  
+○  
+│  chore: add a line to README.md
 
-Join the Rust Live Accelerator: https://letsgetrusty.com/join
+│  fix: add missed code tag around links to tags
+~
+Hopefully now you can see why  is just  followed by —it would have
+done exactly what we just did.I'll take a moment for a brief interlude to teach you a few things about how to navigate around with
+Jujutsu.Whenever you run , Jujutsu creates a new empty revision—but if you ever move somewhere
+else and that revision is still empty and still has no description, it will be automatically
+abandoned. You therefore don't have to worry about littering your history with a bunch of empty
+revisions. You can try this right now in the tutorial with no ill effects—run , look
+at the log, then run  again!You can manually abandon a revision, even if it contains changes and/or has a description, with
+. This is a destructive operation—it will abandon the rev without
+confirmation—but you can undo it with . See the docs for the operation
+log if you want to know more about undoing.As an alternative to creating new revisions, you can also move to  an existing revision by
+running . If you were to run  at this point in the tutorial and check
+the log, you'd see an  next to , indicating it's the current revision (you're editing it).
+Then to get back to where you were, run  again.You can also refer to revisions in these commands using revset
+expressions rather than by their IDs. Some useful
+ones to know:
+ - the parent(s) of some revision  ("the revision before it" in the simple case) - the child(ren) of  ("the revision after it" in the simple case) - all descendants of , including You'll have noticed that at no point so far did we ever think about creating a branch. That's
+because Jujutsu's relationship to branches is a bit different to Git's—they're just pointers that
+you move around so they point to whichever revision you want them to at a given time. There's no
+concept of "being on a branch" in Jujutsu, you're always just editing a revision.In fact, Jujutsu's branches are different enough from Git's that they were recently renamed to
+"bookmarks" instead.Let's say that our revision, , contains the only changes we needed to make for this particular
+unit of work, and we're ready to create a PR. In order to share our changes, we'll need to create a
+bookmark:This command says "create a new bookmark called  pointing to the revision ". The
+log reflects that:
+│  
+○  
+│  chore: add a line to README.md
 
-Chapter:
-0:00 Intro
-0:43 Security Industry
-2:56 Backend Infrastructure
-4:00 Embedded
-5:26 Web3
-8:06 AI]]></content:encoded></item><item><title>All color is best-effort</title><link>https://fasterthanli.me/articles/all-color-is-best-effort</link><author>Amos Wenger</author><category>dev</category><category>rust</category><category>blog</category><pubDate>Fri, 27 Jun 2025 07:30:00 +0000</pubDate><source url="https://fasterthanli.me/index.xml">Faster than time blog</source><content:encoded><![CDATA[I do not come to you with answers today, but rather some observations and a lot of questions.Recently I was editing some video and I noticed this:Not what the finger is pointing at — the dots.Here are the separate layers this image is made up of: the background is a stock image
-I’ve licensed from Envato Elements:Because I use it as a background image, I’ve cranked down the exposition in the Color tab:]]></content:encoded></item></channel></rss>
+│  fix: add missed code tag around links to tags
+~
+There's now an  bookmark pointing to the revision . If we want to push our
+changes, now we can:The  arg tells Jujutsu it's okay to create a new branch on the remote (this
+confirmation is necessary because  without a bookmark name will try to push all
+bookmarks that appear in the ancestors of the current revision).The workflow from here on is the same as with Git—if you're using GitHub, the remote will reply with
+a message in your terminal containing a shortcut link straight to creating a PR with the new branch,
+just like usual.Let's say you realise you need to add some more changes to your PR. I'll run through the first few
+commands all at once, since they're the same as above.Here's the state of our repository now:
+│  
+○  
+│  chore: fix typo in README.md
+○  
+│  chore: add a line to README.md
+
+│  fix: add missed code tag around links to tags
+~
+Most of this won't be surprising, but one important thing to notice is that the bookmark —Jujutsu bookmarks don't automatically move when you commit, you just move them around yourself
+whenever they need to move. So let's do that:
+│  
+○  
+│  chore: fix typo in README.md
+○  
+│  chore: add a line to README.md
+
+│  fix: add missed code tag around links to tags
+~
+The asterisk after the bookmark name indicates that the bookmark has diverged from the remote branch
+it's tracking (the remote branch is listed separately on the revision below as
+). We can sort that out easily:
+│  
+○  
+│  chore: fix typo in README.md
+○  
+│  chore: add a line to README.md
+
+│  fix: add missed code tag around links to tags
+~
+Jujutsu handles conflicts in a much less panicky way than Git does: whenever conflicts occur for any
+reason, it just marks the conflicted revisions and any of their children with a  marker
+and then lets you continue with your day.Inside those conflicted revisions, there will be conflict markers in the files that need them, and
+the way you resolve conflicts is simply to make the conflict markers go away by editing those files.
+You can do this in one of two ways: either directly edit a conflicted revision with , or create a new revision on top of the conflicted one with ,
+resolve the conflicts in that new revision, and then squash the resolution changes in with .]]></content:encoded></item><item><title>Tessera UI v1.0.0</title><link>https://www.reddit.com/r/rust/comments/1m6cg3d/tessera_ui_v100/</link><author>/u/ExaminationFluid17</author><category>rust</category><category>reddit</category><pubDate>Tue, 22 Jul 2025 12:13:41 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I am excited to announce the release of Tessera UI v1.0.0. However, don't be misled by the version number; this is still a beta version of Tessera UI. There's still a lot of work to be done, but with the core functionalities, basic components, and design stabilizing, I believe it's the right time for a release.Tessera UI is an immediate-mode UI framework based on Rust and wgpu. You might ask: with established frameworks like egui, iced, and gpui, why reinvent the wheel? The answer is subjective, but in my view, it's because I believe Tessera UI's design represents the right direction for the future of general-purpose UI. Let me explain.In Tessera, shaders are first-class citizens. The core of Tessera has no built-in drawing primitives like "brushes." Instead, it provides an easy-to-use WGPU render/compute pipeline plugin system, offering an experience closer to some game engines. This is intentional:: The emergence of WGPU and WGSL has made shader programming simpler, more efficient, and easily adaptable to mainstream GPU backends. Writing shaders directly is no longer a painful process.: In recent years, pure flat design has led to visual fatigue, and more applications are adopting a neumorphic design style. The main difference from the old skeuomorphism of the millennium is its surreal sense of perfection, which requires many visual effects that are difficult to unify, such as lighting, shadows, reflections, refractions, glows, and perspective. Trying to encapsulate a perfect "brush" to achieve these effects is extremely difficult and inelegant.: With custom shaders, we can easily implement advanced effects like custom lighting, shadows, particle systems, etc., without relying on the framework's built-in drawing tools.: One of WGPU's biggest advantages over its predecessors is that compute shaders are first-class citizens. A forward-looking framework should take full advantage of this. By using custom compute shaders, we can perform complex computational tasks, such as image processing and physics simulations, which are often unacceptably inefficient on the CPU.Decentralized Component Design: Thanks to the pluggable rendering pipeline, Tessera itself contains no built-in components. While  provides a set of common components, you are free to mix and match or create your own component libraries. If you're interested, I recommend reading the documentation here, which explains how to write and use your own rendering pipelines.Using the  macro, you can define and compose components with simple functions, resulting in clean and intuitive code (which is why I'm a big fan of Jetpack Compose)./// Main counter application component #[tessera] fn counter_app(app_state: Arc<AppState>) { { let button_state_clone = app_state.button_state.clone(); // Renamed for clarity let click_count = app_state.click_count.load(atomic::Ordering::Relaxed); let app_state_clone = app_state.clone(); // Clone app_state for the button's on_click surface( SurfaceArgs { color: [1.0, 1.0, 1.0, 1.0], // White background padding: Dp(25.0), ..Default::default() }, None, move || { row_ui![ RowArgsBuilder::default() .main_axis_alignment(MainAxisAlignment::SpaceBetween) .cross_axis_alignment(CrossAxisAlignment::Center) .build() .unwrap(), move || { button( ButtonArgsBuilder::default() .on_click(Arc::new(move || { // Increment the click count app_state_clone // Use the cloned app_state .click_count .fetch_add(1, atomic::Ordering::Relaxed); })) .build() .unwrap(), button_state_clone, // Use the cloned button_state move || text("click me!"), ) }, move || { text( TextArgsBuilder::default() .text(format!("Count: {}", click_count)) .build() .unwrap(), ) } ]; }, ); } } A constraint-based (, , ) layout engine, combined with components like  and  (inspired by Jetpack Compose), makes it easy to implement everything from simple to complex responsive layouts. Traditional immediate-mode GUIs, by contrast, often use a simple context and preset layout methods.UI as a Pure Function of State: In immediate mode, the UI of each frame is a direct mapping of the current application state: . Developers no longer need to worry about creating, updating, or destroying UI controls, nor do they have to deal with complex callback hell and state synchronization issues.: For UIs that need frequent and dynamic changes, immediate mode shows unparalleled flexibility. Want a control to disappear? Just don't draw it in the next frame.: The design of immediate mode makes it easier to parallelize UI rendering and state updates, fully leveraging the performance of modern multi-core CPUs. Designing a retained-mode UI framework that supports parallelization could be the subject of a major research paper.Erasing the Boundary of Animation: Animation as a concept ceases to exist because each frame of the UI is a completely new render. Animation effects are simply UI with time added as an input. I'm not a fan of specifying , ,  and then praying they match your expectations.Tessera UI is still in its early stages, and I do not recommend using it in a production environment. However, if you'd like to try it out, you can refer to the example crate in the repository.If you want to learn how to use it, please read the documentation on docs.rs, which details the APIs you'll need to know based on your level of engagement.The release of v1.0.0 means its roadmap is either complete or has been postponed to v2.0.0. Here is the roadmap for v1.0.0:I already have some things planned for v2.0.0 and welcome any suggestions from the community:Optimize the text box in the basic components library.Add IME support for Android and iOS.Add more basic components.Beautify and adjust the styles of the basic components library.Tessera is an open community project, and we welcome contributions of any kind, whether it's code, documentation, or valuable suggestions. If you are interested in its design philosophy or want to build the next generation of Rust UI frameworks together, please check out our GitHub repository and Contribution Guide!]]></content:encoded></item><item><title>NAPI-RS 3.0 released</title><link>https://napi.rs/blog/announce-v3</link><author>/u/LongYinan</author><category>rust</category><category>reddit</category><pubDate>Tue, 22 Jul 2025 09:50:30 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[🦀 NAPI-RS v3 - WebAssembly! Safer API design and new cross compilation features.It has been 4 years since the release of  V2. During this time, the  community has been developing rapidly. We have identified many problems with the API design in the community. For example,  has always been difficult to use. The main reason is that Node-API's ThreadsafeFunction is designed too complexly, which causes the Rust encapsulation to leak too much of the underlying complexity. However, through collaboration with the  and  teams, we have finally found a design that can balance API complexity and correctness. is the biggest update this time. In V3, you can compile your project into  with almost no code changes. If the compilation target is  or higher, you can directly run code that uses Rust features like  and  in the browser without any additional modifications.Cross compilation is also a big update. In previous versions, you need to use  or nodejs-rust:lts-debian-aarch64 docker images to build your project. These images are huge, it slows down the CI build time, and it's hard to sync the tools and infrastructure with the community.Now let's dive into the new features of V3.Supporting  means a lot for the  community. There are several scenarios that only  can handle:Why don't use  insteadOne of the main reasons is that you don't need to write 2 different bindings for the same project.Besides that, using  has many limitations, such as the inability to use  and third-party libraries that depend on . For example, you may need to write code like:With , you can compile the codes and run them without pain.Another pain point is if you are using crates written in  or , setting up the  build process is very complex. See:cc @RReverser @alexcrichton. I'm not sure if there would be a better or more prominent place to document this problem.Sample App using  WebAssemblyThis is a sample app using  WebAssembly. You can transform the image to  or  with different quality.There are a lot of improvements in the API design, both usability and security have been improved.In , due to the complexity of designing codegen and APIs, we didn't have time to add lifetimes to the APIs, which led to some issues.Some types have safety issues, such as the previous , which could escape and be used outside the scope of  calls, when in fact its underlying  had already become invalid. We can now constrain such behavior using Rust's lifetimes previously couldn't contain lifetimes, which caused some usability issues has been redesigned in . In previous versions, the API of  is too low level, and it's not safe at all.
+In the new API, we have hidden Node-API concepts such as , and , using ownership to encapsulate these APIs, and prohibiting lifecycle management using the underlying ref count model.If you want to pass  to different threads, we now allow using  to achieve this.TypeScript type generation for  has also been improved, you can only generate  type in the previous version, but since  defines the  and  types in the generic, you can now generate the correct type for .The example above will generate the following TypeScript type:Like the  API, the  has also been redesigned in .The  API is deprecated in , the new  API can generate the correct TypeScript types, more safety and easier to use.⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️The  version for GNU Linux distributions is too new, for example arm-unknown-linux-gnueabihf only supports .Configuring compilation for the older  (still a version that many enterprises need to support) is very complex.Runs on  and Docker, which is slow and limited. V3 introduces a new cross compilation feature, with the napi build --use-napi-cross flag, this is the supports matrix for the cross compilation:All these targets are supported to .This is the repo for the cross toolchain. We basically extract the necessary tools and files from the  project, then upload them to the  registry. The  will then pick the correct toolchain and inject environment variables into the build process.We also integrate  and  in the , so you can build many different targets on a single machine. See  for more details.Brand new pnpm package templateWhy there is no  package template?### Is there an existing issue for this?
+
+- [X] I have searched the existing issues
+
+### This issue exists in the latest npm version
+
+- [X] I am using the latest npm
+
+### Current Behavior
+
+```
+[user@host:foo] $ npm -v
+8.8.0
+[user@host:foo] $ node
+Welcome to Node.js v16.14.2.
+Type ".help" for more information.
+> process.arch
+'arm64'
+```
+
+I'm working on a team that utilizes a mix of x64-based and m1-based macs, and has CI build processes that uses musl. We're seeing that `npm` is skipping platform-specific optional dependencies for packages such as [`@swc/core`](https://github.com/swc-project/swc/blob/1d1e7dcea5abc8aed5de75ec0326cc72d76dd1d4/package.json#L123-L137) as a result of the `package-lock.json` file being generated without all of them included. In our case, this then causes linting to throw an exception, because one of our eslint plugins depends on @swc, which depends on having the platform specific @swc package also installed.
+
+There seems to be at least two stages of cause to this. Firstly, when installing `@swc/core` from a clean slate working directory `npm` generates a `package-lock.json` with all of the optional dependencies for `@swc/core` listed:
+
+```
+[user@host:foo] $ npm install @swc/core
+[user@host:foo] $ grep 'node_modules/@swc/core-*' package-lock.json
+    "node_modules/@swc/core": {
+    "node_modules/@swc/core-android-arm-eabi": {
+    "node_modules/@swc/core-android-arm64": {
+    "node_modules/@swc/core-darwin-arm64": {
+    "node_modules/@swc/core-darwin-x64": {
+    "node_modules/@swc/core-freebsd-x64": {
+    "node_modules/@swc/core-linux-arm-gnueabihf": {
+    "node_modules/@swc/core-linux-arm64-gnu": {
+    "node_modules/@swc/core-linux-arm64-musl": {
+    "node_modules/@swc/core-linux-x64-gnu": {
+    "node_modules/@swc/core-linux-x64-musl": {
+    "node_modules/@swc/core-win32-arm64-msvc": {
+    "node_modules/@swc/core-win32-ia32-msvc": {
+    "node_modules/@swc/core-win32-x64-msvc": {
+```
+
+And it only installs the platform specific package:
+
+```
+[user@host:foo] $ ls -l node_modules/@swc/
+total 0
+drwxr-xr-x  22 user  staff  704 Apr 29 15:39 core
+drwxr-xr-x   6 user  staff  192 Apr 29 15:39 core-darwin-arm64
+```
+
+If I then remove my `package-lock.json`, leave my `node_modules` directory as-is, and then reinstall, I get:
+
+```
+[user@host:foo] $ rm -rf package-lock.json
+[user@host:foo] $ npm install
+[user@host:foo] $ grep 'node_modules/@swc/core-*' package-lock.json
+    "node_modules/@swc/core": {
+    "node_modules/@swc/core-darwin-arm64": {
+```
+
+That is, it **then generates a package-lock.json with only the platform-specific dependency that was installed on this machine, and not with the other optional dependencies that should also be listed**. 
+
+If you delete **both** `node_modules` AND `package-lock.json`, and then re-run `npm install`, it generates the correct lockfile with all of those optional dependencies listed. 
+
+The problem is that then, If the `package-lock.json` with the missing optional platform-specific dependencies gets checked into git and an x64 user pulls it down, or vice-versa, `npm` fails to detect that your platform's optional dependencies are missing in the lockfile and just silently skips installing the platform-specific dependency. For example, when I've got a package-lock.json that only contains the x64 @swc package because of the above problem (generated by my coworker on his x64 machine):
+
+```
+[user@host:foo] $ node
+Welcome to Node.js v16.14.2.
+Type ".help" for more information.
+> process.arch
+'arm64'
+>
+[user@host:foo] $ grep 'node_modules/@swc/core-*' package-lock.json
+    "node_modules/@swc/core": {
+    "node_modules/@swc/core-darwin-x64": {
+[user@host:foo] $ ls
+package-lock.json package.json
+```
+
+And I then install:
+
+```
+[user@host:foo] $ npm install
+added 1 package in 341ms
+
+1 package is looking for funding
+  run `npm fund` for details
+[user@host:foo] $ ls node_modules/@swc/
+core
+```
+
+You can see that it fails to install the arm64 dependency or warn me in any way that the `package-lock.json` is missing my platform's dependency. 
+
+So yeah, two problems:
+1. npm is generating an inconsistent package-lock.json when node_modules has your platform-specific dependency installed. 
+2. When installing from this inconsistent package-lock.json, npm fails to try to correct the problem by comparing the optional dependencies to what's listed upstream
+
+
+
+
+
+
+
+### Expected Behavior
+
+1. `npm` should preserve the full set of platform-specific optional deps for a package like @swc when rebuilding `package-lock.json` from an existing `node_modules` tree
+2. `npm install` should warn if the `package-lock.json` becomes inconsistent because of the first case
+
+### Steps To Reproduce
+
+See above.
+
+### Environment
+
+- npm: 8.8.0
+- Node.js:
+- OS Name: OSX 
+- System Model Name: Macbook Pro
+
+```
+[user@host:foo] $ npm -v
+8.8.0
+[user@host:foo] $ node -v
+v16.14.2
+[user@host:foo] $ uname -a
+Darwin host.foo.com. 21.3.0 Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101 arm64
+```
+
+```
+[user@host] $ npm config ls
+; "user" config from /Users/user/.npmrc
+; node bin location = /Users/user/.nvm/versions/node/v16.14.2/bin/node
+; node version = v16.14.2
+; npm local prefix = /Users/user/Development/foo
+; npm version = 8.8.0
+; cwd = /Users/user/Development/foo
+; HOME = /Users/user
+; Run `npm config ls -l` to show all defaults.
+```The  team spent several years resolving this critical issue for native addons, although the issue itself wasn't complex. While this issue has been fixed in  11, the Node.js team encountered other problems when upgrading to  11, resulting in both  LTS versions and default Docker images still using  10, which contains this bug.You can now easily integrate the  tools into your JavaScript infra:All napi commands have corresponding APIs, you can visit  to learn more.Community is growing fast!Today,  has been widely used in developing various types of applications. is using  to build their  high performance engine. Tailwind CSS is also one of our platinum sponsors! is using  for their Electron Desktop App and Node.js server high performance addons. is using  to build their Electron Desktop App crypto components.At the same time, with the rise of AI,  has also begun participating in the development of AI tools. For example,  is a vector database that uses  to provide a Node.js embedded experience;  is an open-source search and retrieval database for AI applications. Tokenizers is a tokenizer library developed by .  TensorZero  is an open-source stack for industrial-grade LLM applications, they also use  to build their  client.In the frontend build field,  has been widely used. Almost all Bundler use  to improve their performance:And  Oxc provides Linter, Transformer and all kinds of apis via .How will the API work? Will developers have a canonical JavaScript-based API for integrating with this new version of TypeScript?
+
+____
+
+While we are porting most of the existing TypeScript compiler and language service, that does not necessarily mean that all APIs will be ported over. Because of the challenges between language runtime interoperability, API consumers will typically not communicate within the same process. Instead, we expect our API to leverage a message-passing scheme, typically over an IPC layer. Because this sort of bridging is not "free", exposing all functionality will be impractical. We expect to have a more curated API that is informed by critical use-cases (e.g. linting, transforms, resolution behavior, language service embedding, etc.).
+
+We knew that providing a solid API would be a big challenge, so as soon as we started exploring the TypeScript port, we investigated the possibilities here. Beyond how capable the API would be, we asked ourselves whether the sorts of use-cases would be constrained by the performance of IPC solutions. More specifically, even if we could come up with a set of APIs that did what users wanted, would the throughput of requests be a limiting factor? Would the new TypeScript be fast enough to offset the cost of serialization and data transfer? Would the chattiness of API usage overwhelm the wins of having a much faster compiler?
+
+We've become increasingly confident and optimistic in answers around the IPC performance. @zkat has built a Node native module to use synchronous communication over standard I/O between external processes. Building on that, @andrewbranch has experimented with exposing an API server entrypoint to our compiler, along with a JavaScript client that "speaks" to the server over that communication layer. What we've found is fairly promising - while IPC overhead is not entirely negligible, it is small enough. We also can imagine opportunities to optimize, use other underlying IPC strategies, and provide batch-style APIs to minimize call overhead.
+
+As our experiments solidify, we will post more concrete details on our plans, and what the API will look like.
+ and  have improved their  compatibility, so almost all  projects can run in  and . will continue to improve the development experience, and it requires more time and effort to maintain the project.
+Please consider sponsoring the project - it will help us improve the project and make it better.]]></content:encoded></item><item><title>Sunsetting the rustwasm GitHub org</title><link>https://blog.rust-lang.org/inside-rust/2025/07/21/sunsetting-the-rustwasm-github-org/</link><author>/u/lifeeraser</author><category>rust</category><category>reddit</category><pubDate>Tue, 22 Jul 2025 04:57:57 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[In 2024 the Rust and WebAssembly Working Group was officially
+archived in the Rust project after ~5 years of inactivity with an
+intent to shut down the rustwasm GitHub Organization soon after. Although a
+bit later than intended the purpose of this post is to give a concrete timeline
+for this process in which the rustwasm GitHub Organization will become fully
+archived.The  repository is going to be transferred to a new
+wasm-bindgen organization with new additional maintainers. All
+other repositories in the rustwasm organization are going to be archived in
+place or transferred to their existing maintainers if they elect to do so.
+Transferring  will occur in the weeks following this post and
+archiving the organization is going to happen September 2025.The rustwasm organization has historically been under the purview of the Rust
+and WebAssembly Working Group, and given the historical prominence of some
+projects it contained, this post is serving as an announcement of upcoming plans
+for repositories in the organization.
+History of the Rust and WebAssembly Working GroupThe Rust and WebAssembly Working Group was created in 2018 as part of
+the initiative for the 2018 edition at the time. Through 2019 the
+working group was quite active and helped Rust's support for WebAssembly
+flourish. Tools such as  and  were created as part
+of this effort and continue to be used to this day. After 2019 though the
+organization saw a drastic reduction in activity and most projects have been in
+maintenance mode for nearly 5 years at this point.While the working group has been officially archived for over a year now the
+repositories in the rustwasm organization continued on and continued to see
+some use and minor maintenance. This has perpetuated a confusing situation for
+users and maintainers alike where it's not clear what the maintenance story for
+many of these repositories are and how to move forward with the repositories
+that are actively in use.
+Sunsetting the  OrganizationIn September of 2025 the rustwasm GitHub organization will be archived to
+cease all activity within the organization. This will help clarify that
+rustwasm is no longer a central hub for all things Rust-and-WebAssembly but
+instead is a historical archive of efforts.The rustwasm organization has a number of repositories within it, most of
+which haven't seen any activity in quite some time. The current plan at this
+time is to arrange for  to be transferred to a new
+project-specific organization and additionally add new fresh
+maintainers to assist with project direction going forward. All other
+repositories in the rustwasm organization will be archived or transferred to
+their existing maintainers if needed.The  project is relied on in a number of contexts today and
+existing users have expressed interest in both maintaining and growing the
+repository over time. The rustwasm organization is no longer a great home for
+this work so the plan is to transfer it out to a new home in a neutral location
+not owned by any one person or company. This transfer will be coupled with
+inviting new maintainers to the repository for improved project maintenance in
+addition to evolving the project.While a critical mass of new maintainers has already been reached, if you are
+interested in helping out with maintenance an issue has been
+created to coordinate efforts around maintenance with
+. Feel free to leave a comment there to help out with this
+transition.
+Archiving other repositoriesThe current plan at this time is to archive all other repositories in the
+rustwasm organization. This includes repositories such as:https://github.com/rustwasm/wasm-packhttps://github.com/rustwasm/gloohttps://github.com/rustwasm/twiggyhttps://github.com/rustwasm/walrushttps://github.com/rustwasm/weedle(see https://github.com/orgs/rustwasm/repositories for the full list): wasm-bindgen depends on crates such as  and  at this
+time and won't depend on archived repositories. Depending on how maintainers
+would like to organize it these dependencies may be inlined into the
+wasm-bindgen repository for wasm-bindgen's needs or they may be transferred to
+the new wasm-bindgen organization. Regardless wasm-bindgen will not be using
+unmaintained dependencies.If you are an preexisting maintainer of one of these repositories please reach
+out to have the repository transferred to you. Otherwise it's not clear at this
+time whether these repositories are still actively in use or how much they're
+relied on. The historically trusted nature of the rustwasm organization means
+it's not quite as simple as transferring these repositories to the first
+volunteer. Instead transferring repositories will require vetting new
+maintainers for trustworthiness and reliability and unfortunately the current
+admin of the rustwasm organization is not prepared to do this.If your use case critically relies on these repositories it is
+recommended to fork the repository. Where required it's possible to leave a
+message in the old README pointing to the fork. If a fork is not viable then
+understanding is appreciated in that the rustwasm organization has been
+inactive for over 5 years now and there are no known active maintainers to
+reach out to. Charting a path for each repository requires a significant amount
+of effort to understand current users and plan for future users and no one is
+available to perform this work. The goal of this effort is to do the best with
+maintainers/admins that still remain and while not a perfect answer it's
+predicted the best answer in many cases here is archiving the repository.As an absolute last resort you can reach out to @alexcrichton on Zulip to
+discuss alternatives.
+Timeline for transfers/archivesThe  repository will be transferred to a new wasm-bindgen
+organization in the weeks after this post. Some minor details still
+need to be sorted out maintainer-wise and that's all that's left to do.
+Afterwards a final grace period will be allowed until September at which point
+the rustwasm organization will become fully archived. Issues will be filed in
+various repositories giving a heads up to any interested folks indicating as
+such.]]></content:encoded></item><item><title>Tabiew 0.11.0 released</title><link>https://www.reddit.com/r/rust/comments/1m5zn07/tabiew_0110_released/</link><author>/u/shshemi</author><category>rust</category><category>reddit</category><pubDate>Tue, 22 Jul 2025 00:19:23 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[ is a lightweight terminal user interface (TUI) application for viewing and querying tabular data files, including CSV, Parquet, Arrow, Excel, SQLite, and more.📊 Support for CSV, Parquet, JSON, JSONL, Arrow, FWF, Sqlite, and Excel🗂️ Multi-table functionalityPlotting (Scatter and Histogram)Better format recognition]]></content:encoded></item><item><title>Alternative ergonomic ref count RFC</title><link>https://github.com/rust-lang/rust-project-goals/pull/351</link><author>/u/eugay</author><category>rust</category><category>reddit</category><pubDate>Mon, 21 Jul 2025 22:26:09 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>LWN: How to write Rust in the Linux kernel, part 3</title><link>https://lwn.net/SubscriberLink/1026694/3413f4b43c862629/</link><author>/u/kibwen</author><category>rust</category><category>reddit</category><pubDate>Mon, 21 Jul 2025 15:22:56 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[
+The following subscription-only content has been made available to you 
+by an LWN subscriber.  Thousands of subscribers depend on LWN for the 
+best news from the Linux and free software communities.  If you enjoy this 
+article, please consider subscribing to LWN.  Thank you
+for visiting LWN.net!
+
+The interfaces between C and Rust in the kernel have grown over time; any
+non-trivial Rust driver will use a number of these. Tasks like allocating memory,
+dealing with immovable structures, and interacting with locks are necessary for
+handling most devices. There are also many subsystem-specific bindings, but the
+focus of this third item in our series on writing Rust in the kernel
+will be on an overview of the bindings that all kernel Rust code
+can be expected to use.
+
+Rust code can call C using the
+
+foreign function interface (FFI); given that, one
+potential way to integrate Rust into the kernel would have been to let Rust
+code call kernel C functions directly. There are a few problems with that
+approach, however:  functions, non-idiomatic APIs, etc.
+In particular, C and Rust have different approaches to freeing memory and
+locking.
+
+During the early planning phases, the project
+proposed adopting a rule that there should be a
+single, centralized set of Rust bindings for each subsystem,
+as explained in
+
+the kernel documentation. This has
+the disadvantage (compared to direct use of Rust's FFI)
+of creating some extra work for a Rust programmer who wishes to
+call into a new area of the kernel, but as more bindings are written that need
+should go away over time. The advantage of the approach is that there's a single
+set of standardized Rust interfaces to learn, with all of the documentation in
+
+one
+place, which should make building and understanding the bindings less work
+overall. The interfaces can also be reviewed by the Rust maintainers in one
+place for safety and quality.
+
+Like C, Rust puts local variables (including compound structures)
+on the stack by default. But most programs will
+eventually need the flexibility offered by heap allocation and the limitations
+on kernel-stack size mean that even purely local data may require
+heap-allocation. In user space, Rust
+programs use automatic heap allocations for some types — mainly
+
+(a smart pointer into the heap) and
+ (a growable, heap-allocated
+array). In the kernel, these interfaces would not provide nearly enough control.
+Instead, allocations are performed using the interfaces in the
+ module, which allow for specifying allocation flags
+and handling the possibility of failure.
+
+The Rust interfaces support three ways to allocate kernel memory: ,
+, and , corresponding to the
+
+memory-management API functions with similar names.
+The first two allocate physically contiguous memory
+or virtually contiguous memory, respectively.  first tries to allocate
+physically contiguous memory, and then falls back to virtually contiguous memory. No matter which
+allocator is used, the pointers that are exposed to Rust are part of the virtual
+address space, as in C.
+
+These three different types all implement the
+ interface, which is similar to
+
+the unstable user-space trait
+of the same name. While the allocators can be used to directly create a
+ (a sized array of bytes; conceptually similar to how
+ returns a  instead of a specific type),
+the more ergonomic and less
+error-prone use is to allocate
+ or
+ structures. Since memory allocation is so common, the interfaces provide short
+aliases for boxes and vectors made with each allocator, such as ,
+, , etc. Reference counted allocations can be made
+with
+.
+
+The choice of allocator is far from the only thing that kernel programmers care
+about when allocating memory, however. Depending on the context, it may or may
+not be acceptable to block, to swap, or to receive memory from
+
+a particular zone. When allocating, the flags in
+ can be used to
+
+specify more details about how the necessary memory should be obtained:
+    let boxed_integer: Result<KBox<u64>, AllocError> = KBox::new(42, GFP_KERNEL);
+
+That example allocates an unsigned 64-bit integer, initialized to 42, with the
+usual set of allocation flags ().
+For a small allocation like this, that likely means the
+memory will come from the kernel's slab allocator, possibly after triggering
+memory reclamation or blocking.
+This particular allocation
+cannot fail, but a larger one using the same API could,
+if there is no suitable memory available,
+even after reclamation.
+Therefore, the  function doesn't return the resulting heap allocation
+directly. Instead, it returns a
+ that contains either the
+successful heap allocation, or an
+.
+
+C doesn't really have an equivalent of Rust's
+
+generic types; the closest
+might be
+
+a macro that can be used to define a structure with different types
+substituted in for a field. In this case, the
+ that
+ returns has been given two additional types as parameters.
+The first is the data associated with a non-error result, and the second is the
+data associated with an error result. Matching angle brackets in a Rust type
+always play this role of specifying a (possibly optional) type to include as a
+field nested somewhere inside the structure.
+
+Boxes, as smart pointers, have a few nice properties compared to raw pointers. A
+ is always initialized —  takes an initial value,
+as shown in the example above. Boxes are also automatically freed when they are
+no longer referenced, which is almost always what one wants from a heap
+allocation. When that isn't the case, the
+ or
+ methods can be used to override Rust's lifetime analysis
+and let the heap allocation live until the programmer takes care of it with
+.
+
+Of course, there are also times when a programmer would like to allocate space
+on the heap, but not actually fill it with anything yet. For example, the Rust
+
+user-space memory bindings use it to
+
+allocate a buffer for user-space data to be copied into without initializing it.
+Rust
+indicates that a structure may be uninitialized by wrapping it in
+; allocating a  holding a 
+works just fine.
+Self-referential structures
+The kernel features a number of self-referential structures, such as doubly
+linked lists. Sharing these structures with Rust code poses a problem: moving a
+value that refers to itself (including indirectly) could cause the invariants
+of this kind of structure to be violated. For example, if a doubly linked list
+node is moved,  will no longer refer to the right
+address. In C, programmers are expected to just not do that.
+
+But Rust tries to localize dangerous operations to
+areas of the code marked with .
+Moving values around is a common thing to do; it would be inconvenient if
+it were considered unsafe. To solve this, the Rust developers created an idea called
+"pinning", which is used to mark structures that cannot be safely relocated.
+The standard library is designed in such a way that these structures cannot be
+moved by accident. The
+Rust kernel developers imported the same idea into the kernel Rust APIs; when
+referencing a self-referential structure created in C, it must
+be wrapped in the
+ type on the Rust side. (Some other pointers in the kernel API,
+notably , include an implicit , so the wrapping may not
+always be visible). It might not immediately cause
+problems if  were omitted in the Rust bindings for a
+self-referential structure, but it would still
+be unsound, since it could let ostensibly safe Rust driver code cause memory
+corruption.
+
+To simplify the process of allocating a large structure with multiple pinned
+components, the Rust API includes the
+ and
+ macros. Prior to their inclusion in the kernel,
+creating a pinned allocation was a multi-step process using unsafe APIs. The
+macro works along with the
+
+and  macros in a structure's definition to build a custom
+initializer.
+These
+ initializers represent the process of constructing a
+pinned structure. They can be written by hand, but the process is tedious, so
+the macros are normally used instead.
+
+Language-level support is the subject of
+ongoing debate in the Rust community.
+ structures can be passed around or reused to build an
+initializer for a
+larger partially-pinned structure, before finally being given to an allocator to
+be turned into a real value of the appropriate type. See below for an example.
+
+User-space Rust code typically organizes locks by having structures that wrap
+the data covered by the lock. The kernel API makes lock implementations matching
+that convention available. For example, a
+ actually contains
+the data that it protects, so that it can ensure all accesses to the data are
+made with the  locked. Since C code doesn't tend to work like
+this, the kernel's existing locking mechanisms don't translate directly into Rust.
+
+In addition to traditional Rust-style locks, the kernel's Rust APIs include
+special types for dealing with locks separated from the data they protect:
+, and
+. These use Rust's lifetime system
+to enforce that a specific
+lock is held when the data is accessed.
+
+Currently, the Rust bindings in  support spinlocks,
+mutexes, and read-side read-copy-update (RCU) locks. When asked to look over an
+early draft of this article, Benno Lossin warned that the
+current RCU support is "", but that the Rust developers
+plan to expand on it over time. The spinlocks and mutexes in these bindings require a
+
+lockdep class key to create,
+so all of the locks used in Rust are automatically
+covered by the kernel's internal locking validator.
+Internally, this involves creating some self-referential
+state, so both spinlocks and mutexes must be pinned in order to be used.
+In all, defining a lock in Rust ends up looking like this example lightly
+adapted from some of the
+Rust
+
+sample code:
+    // The `#[pin_data]` macro builds the custom initializer for this type.
+    #[pin_data]
+    struct Configuration {
+        #[pin]
+        data: Mutex<(KBox<[u8; PAGE_SIZE]>, usize)>,
+    }
+
+    impl Configuration {
+        // The value returned can be used to build a larger structure, or it can
+        // be allocated on the heap with `KBox::pin_init()`.
+        fn new() -> impl PinInit<Self, Error> {
+            try_pin_init!(Self {
+                // The `new_mutex!()` macro creates a new lockdep class and
+                // initializes the mutex with it.
+                data <- new_mutex!((KBox::new([0; PAGE_SIZE], flags::GFP_KERNEL)?, 0)),
+            })
+        }
+    }
+
+    // Once created, references to the structure containing the lock can be
+    // passed around in the normal way.
+    fn show(container: &Configuration, page: &mut [u8; PAGE_SIZE]) -> Result<usize> {
+        // Calling the mutex's `lock()` function returns a smart pointer that
+        // allows access only so long as the lock is held.
+        let guard = container.data.lock();
+        let data = guard.0.as_slice();
+        let len = guard.1;
+        page[0..len].copy_from_slice(&data[0..len]);
+        Ok(len)
+        // `guard` is automatically dropped at the end of its containing scope,
+        // freeing the lock. Trying to return data from inside the lock past the
+        // end of the function without copying it would be a compile-time error.
+    }
+
+Using a lock defined in C works much like in  above, except that there
+is an additional step to handle the fact that the data may not be directly
+contained in the lock structure:
+    // The C lock will still be released when guard goes out of scope.
+    let guard = c_lock.lock();
+    // Data that is marked as `LockedBy` in the Rust/C bindings takes a reference
+    // to the guard of the matching lock as evidence that the lock has been acquired.
+    let data = some_other_structure.access(&guard);
+
+See
+the
+ examples for a complete demonstration.
+The interface is slightly more conceptually complicated than C's
+ and
+, but it does have the nice
+property of producing a compiler error instead of a run-time error for many
+kinds of mistakes. The mutex in this example cannot be double-locked or
+double-freed, nor can the data be accessed without the lock held. It can still be
+locked from a non-sleepable context or get involved in a deadlock, however, so
+some care is still required — at least until the
+custom tooling to track and enforce
+kernel locking rules at compile time is complete.
+
+This kind of safer interface
+is, of course, the ultimate purpose behind introducing Rust bindings into
+the kernel — to make it possible to write drivers where more errors can be
+caught at compile time. No machine-checked set of rules can catch everything,
+however, so the next (and likely final) article in this series will focus on
+things to look for when reviewing Rust patches.
+]]></content:encoded></item><item><title>[Media] bitchat-tui: secure, anonymous, off-grid chat app over bluetooth in your terminal</title><link>https://www.reddit.com/r/rust/comments/1m5djva/media_bitchattui_secure_anonymous_offgrid_chat/</link><author>/u/YboMa2</author><category>rust</category><category>reddit</category><pubDate>Mon, 21 Jul 2025 08:38:01 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I built , the first TUI client for bitchat, which is a decentralized peer to peer messaging app that operates on bluetooth. You can chat directly with others nearby without needing any internet connection, cellular service, or central servers. All communication is end-to-end encrypted, with support for public channels, password-protected groups, and direct messages.This client, written in Rust, is built with security as a first principle and has a modern cryptographic stack (X25519, AES-256-GCM). The interface is designed for keyboard-only operation and has a sidebar that makes it easy to navigate between public chats, private channels and DMs. It also informs you about unread messages and lets you see your blocked users and other useful information.It has a universal install script and works on Linux, macOS, and Windows (with WSL or Git Bash). It is also available through package managers like cargo, brew, and the AUR.I’d really appreciate any feedback or suggestions, and if you find it helpful, feel free to check it out and star the repo.]]></content:encoded></item><item><title>rust-analyzer changelog #295</title><link>https://rust-analyzer.github.io/thisweek/2025/07/21/changelog-295.html</link><author>/u/WellMakeItSomehow</author><category>rust</category><category>reddit</category><pubDate>Mon, 21 Jul 2025 05:52:48 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Php interpreter in Rust, what next ?</title><link>https://www.reddit.com/r/rust/comments/1m4udqh/php_interpreter_in_rust_what_next/</link><author>/u/oussama-gmd</author><category>rust</category><category>reddit</category><pubDate>Sun, 20 Jul 2025 17:15:06 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I have been working on a php interpreter in rust, I got it to install wordpress and show homepage (almost). As shown it is quite slow (20s) for real world usage (being an interpreter). It is single threaded and littered with clone so I know I can get it faster, but probably not by much. Would love to hear your advice/ideas on where to take it from here! ]]></content:encoded></item><item><title>Small Programming Language for editing photos (written in Rust)</title><link>https://www.reddit.com/r/rust/comments/1m4p69x/small_programming_language_for_editing_photos/</link><author>/u/RSlashFunnyMan</author><category>rust</category><category>reddit</category><pubDate>Sun, 20 Jul 2025 13:39:53 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I made this programatic photo editor over the weekend (WIP).It's kind of cool, it allows you to download photos from the web and let's you edit them as you like.For now I only added a few commands but there's going to be more coming. :)]]></content:encoded></item><item><title>Rust: Clippy performance status update</title><link>https://blog.goose.love/posts/clippy-performance-status-update/</link><author>/u/NothusID</author><category>rust</category><category>reddit</category><pubDate>Sun, 20 Jul 2025 13:02:52 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[If you know anything about me, is probably that I make Clippy as fast as I can.
+I love making programs faster both because (a) it’s a puzzle, because (b) I don’t
+think that we should expect users to have access to high-end hardware in order
+to compile a program and because (c) the energy footprint is smaller, which satisfies
+my ideological fight against waste.So some time after I joined the Clippy, I started dabbling into performance
+squeezing for our famously slow linter. As Clippy injects itself into the compiler,
+and we obligatory have to compile your program in order to analyze it, we are limited
+by the compiler itself. But that doesn’t mean that everything is lost!To the numbers! As you can see, the numbers differ  depending on how a given project
+may be structured. Some deciding factors are:Is the project a binary or a library?How many dependencies does your project have.How many documentation lines does your project have?Does your project configure a MSRV?How complex is your trait use? Does your project use a lot of complex trait obligations?What lints does your project enable with  and what s are present.Some ratios present in the graph are Cargo itself, with just a +0.08% runtime difference.
+On libraries there’s a lot of difference though. For example,  only presents us with a +1.06%
+runtime difference, but  has a +30%.While benchmarking tools for Clippy were not present when I started working on
+Clippy performance, I manually benchmarked  comparing 1.81.0 (when I
+started the official project goal, not when I started the optimization efforts)
+to today’s Clippy. It yielded a 38.042% decrease in runtime, that’s equivalent
+to 843 million instructions saved! And what’s better, this benchmark was before
+jemalloc was implemented into Clippy by Kobzol!So today’s numbers are even better (in some cases 7-9% better)!Next in line is making parallel linting possible. Currently Rust’s linting system
+is not parallel and that can be a great impediment when taking performance to the
+next level. I also have some ideas to implement in the incremental compilation department,
+which is a field of research I’ve ignored for a long time mainly because it’s difficult.(Just go ask the rust-analyzer team for their Salsa project, and I’m sure they have war
+stories engraved in their minds)This long period of devoting myself to making Clippy better has been great. I’m happy
+mantaining this project and hearing users talk about how Clippy is the best
+linter they’ve used. My mind is corrupt with all the bugfixes I review every day
+so sometimes I forget that Clippy produces generally good advice.Thanks for sticking with me in this journey, and see you all in the next
+irregular performance status update!]]></content:encoded></item><item><title>what is your 5 most used rust CLI this year (2025)?</title><link>https://www.reddit.com/r/rust/comments/1m4obxf/what_is_your_5_most_used_rust_cli_this_year_2025/</link><author>/u/justrajdeep</author><category>rust</category><category>reddit</category><pubDate>Sun, 20 Jul 2025 13:00:11 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I think this post is a little old, posting a new thread for new top 5 CLI   submitted by    /u/justrajdeep ]]></content:encoded></item><item><title>[Lib] Flux is a high-performance, zero-copy message transport (IPC, UDP, RUDP) library for Rust</title><link>https://www.reddit.com/r/rust/comments/1m4ib9e/lib_flux_is_a_highperformance_zerocopy_message/</link><author>/u/Illustrious-Back7334</author><category>rust</category><category>reddit</category><pubDate>Sun, 20 Jul 2025 06:50:35 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Flux is a high-performance, zero-copy message transport (IPC, UDP, RUDP) library for Rust, designed for ultra-low-latency applications requiring maximum throughput. It is built on patterns & practices inspired by LMAX Disruptor and Aeron, with modern Rust optimizations.Still v0.1.0, but already seems promising. It could be a nice educational source or useful for applications that require specific performance requirements.]]></content:encoded></item><item><title>Kotlin only treats the symptoms of null pointers, while Rust cures the disease. That’s one of the main reasons I prefer Rust.</title><link>https://www.reddit.com/r/rust/comments/1m4f9ur/kotlin_only_treats_the_symptoms_of_null_pointers/</link><author>/u/KrisPett</author><category>rust</category><category>reddit</category><pubDate>Sun, 20 Jul 2025 03:48:31 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[When people talk about Rust, they usually focus on how fast it is. And sure, the performance is great.But as someone who primarily works with Java, the main reason I like Rust has nothing to do with speed.For me, it's about how Rust handles null pointers and system-level errors. Kotlin improves Java’s null safety, but it's still possible to shoot yourself in the foot. Rust, on the other hand, forces you to handle optional values and potential failures explicitly at compile time.That change in mindset is what really sold me on Rust.What was it that made Rust click for you?]]></content:encoded></item></channel></rss>
