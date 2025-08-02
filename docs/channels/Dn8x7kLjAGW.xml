@@ -1,457 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Debugging Book • Andreas Zeller &amp; Clare Sudbery • GOTO 2025</title><link>https://www.youtube.com/watch?v=MNRIJsoi-Ds</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/MNRIJsoi-Ds?version=3" length="" type=""/><pubDate>Thu, 3 Jul 2025 12:00:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Vibe coding complex changes in Rust</title><link>https://www.youtube.com/watch?v=EL7Au1tzNxE</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/EL7Au1tzNxE?version=3" length="" type=""/><pubDate>Fri, 1 Aug 2025 21:11:42 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[Those who have followed me for a while may already know that I'm a bit of an ML Luddite — it's not that I'm opposed to the use of ML-based tools, but rather that I haven't personally found much use for them in my day-to-day work, especially when it comes to programming. My hypothesis thus far has been that this at least in part due to the nature of the work I'm doing; it often does not fit neatly into ML's strong-suit, namely pattern-replication where there are already plenty of examples for the ML to draw upon.
 
-Read the full transcription of the interview here:
-https://gotopia.tech/episodes/387
+Well, there's enough hype around vibe coding these days, and especially agentic AI coding assistants like Claude Code, that I felt like I should try it "in anger". Concretely, I have some non-trivial changes I'd like to make to the type-safe rigid body transformation crate Sguaba ( https://github.com/helsing-ai/sguaba ), and figured this could be a good testing ground. Sguaba doesn't have too much code, but it is sufficiently involved both in terms of the implemented logic and the use of Rust's type system that I think the ML will have its job cut out for it.
 
-Prof. Andreas Zeller - Faculty at CISPA Helmholtz Center for Information Security & Author of "The Debugging Book" @Doebldodl 
-Clare Sudbery - Independent Technical Coach @ClareSudberySSELtd 
+This video is my attempt at disproving my own skepticism — working with Claude Code to implement some of these changes end-to-end. I also haven't used these tools myself *at all* thus far, only watched a few videos and read a few blog posts, so this is an unfiltered first-and-second impressions experience! We got through two (the easiest two) out of the four things, and then ran out of tokens 😅 But overall the experience was interesting and educational. I don't think it disproved my skepticism, though it did certainly prove that with sufficient pair programming, you can get very far. Still unclear to me that it saves time overall though, at least for specifically these kinds of tasks.
 
-RESOURCES
-Andreas
-https://bsky.app/profile/andreaszeller.bsky.social
-https://mastodon.social/@AndreasZeller
-https://github.com/andreas-zeller
-https://www.linkedin.com/in/andreaszeller
-https://andreas-zeller.info
+If you're interested in finding out more about the sponsor of this video, Hudson River Trading, see https://www.hudsonrivertrading.com/gjengset
 
-Clare
-https://bsky.app/profile/claresudbery.bsky.social
-https://twitter.com/ClareSudbery
-https://linkedin.com/in/clare-sudbery-she-her-35939540
-https://mastodon.social/@claresudbery
-https://www.madetech.com/podcast
-https://insimpleterms.blog
+The slides for the Sguaba presentation, you can find at https://jon.thesquareplanet.com/slides/sguaba/
 
-Links
-https://www.debuggingbook.org
-https://github.com/uds-se/debuggingbook
-https://hub.2i2c.mybinder.org/user/uds-se-debuggingbook-06yfdm2t/doc/tree/docs/notebooks/00_Table_of_Contents.ipynb
-https://www.st.cs.uni-saarland.de/dd
-https://youtu.be/30jNsCVLpAE
-https://youtu.be/LvhIMkr0rXg
-https://youtu.be/8bPDiuJGGh0
-https://youtu.be/lWPLgm52ICs
-https://youtu.be/4mRxIgu9R70
-https://youtu.be/n7QUBt6qsUU
-https://youtu.be/RNBpqbxhrng
-https://youtu.be/lCZtgN7b4TE
-https://youtu.be/sLjSGrkbIFw
-https://youtu.be/VwPCtxxvwjI
+The final PRs to Sguaba are https://github.com/helsing-ai/sguaba/pull/27 and https://github.com/helsing-ai/sguaba/pull/28
 
-DESCRIPTION
-Programming education has a critical blind spot: while we extensively teach code creation, we barely scratch the surface of testing and give almost no attention to debugging—despite debugging consuming half of all software development time.
+0:00:00 My skepticism
+0:07:00 The sguaba crate
+0:25:18 Compile-time asserting macro constructor
+1:30:38 Builder that restricts order with type-state
+2:28:17 What I wanted to do next
+2:36:06 Concluding thoughts
+2:37:28 Questions
+2:58:24 A wild sponsor appears!
 
-In this conversation with Clare Sudbery, Prof. Andreas Zeller argues that systematic debugging skills and modern automated debugging tools are the "ugly stepchild" of programming that nobody wants to discuss, yet debugging represents the biggest business risk and time sink in software development. As AI-driven coding becomes more prevalent, this gap will only widen, making investment in proper debugging education and tools not just beneficial but essential for the future of software development.
+Live version with chat: https://youtube.com/live/3NGXL_8RzEI]]></content:encoded></item><item><title>Vibe coding complex changes in Rust (live version)</title><link>https://www.youtube.com/watch?v=3NGXL_8RzEI</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3NGXL_8RzEI?version=3" length="" type=""/><pubDate>Fri, 1 Aug 2025 19:05:26 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[Those who have followed me for a while may already know that I'm a bit of an ML Luddite — it's not that I'm opposed to the use of ML-based tools, but rather that I haven't personally found much use for them in my day-to-day work, especially when it comes to programming. My hypothesis thus far has been that this at least in part due to the nature of the work I'm doing; it often does not fit neatly into ML's strong-suit, namely pattern-replication where there are already plenty of examples for the ML to draw upon.
 
-TIMECODES
-00:00 Intro
-02:53 Revolutionizing tech education: The executable book format
-11:17 What "The Debugging Book" teaches
-16:01 Interactive debuggers & advanced techniques
-21:31 Python as the language of choice
-26:53 Tracking dependencies & Delta Debugging
-34:55 Automated software repair & testing
-51:09 Outro
+Well, there's enough hype around vibe coding these days, and especially agentic AI coding assistants like Claude Code, that I feel like I should try it "in anger". Concretely, I have some non-trivial changes I'd like to make to the type-safe rigid body transformation crate Sguaba ( https://github.com/helsing-ai/sguaba ), and figured this could be a good testing ground. Sguaba doesn't have too much code, but it is sufficiently involved both in terms of the implemented logic and the use of Rust's type system that I think the ML will have its job cut out for it. Or maybe it won't — maybe it'll glide through the changes with ease and I'll be forced to eat my words. The reality will probably lie somewhere in between: it will work better than I expect and prove that even in complex Rust projects it can provide meaningful (and possibly even substantial) leverage when yielded well, while displaying enough warts that it's clear that we're not in for a "just manage agents managing agents" kind of world just yet. Ultimately, I'm aiming for this to be a reality-check for my skepticism.
 
-RECOMMENDED BOOKS
-Andreas Zeller • The Debugging Book • https://www.debuggingbook.org
-Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
-Charles Humble • Professional Skills for Software Engineers • https://www.conissaunce.com/professional-skills-shortcut
-Cathy O'Neil • Weapons of Math Destruction • https://amzn.to/42jYkba
-Jonathan B. Rosenberg • How Debuggers Work • https://amzn.to/3SnFHgv
-Nora Sandler • Writing a C Compiler • https://amzn.to/3Z6SMhU
+Regardless of whether you're a Luddite like me or someone who's already fully onboard the vibe-train, come join me as I dive head-first into the agentic AI coding experience. I haven't used these tools myself *at all* thus far, only watched a few videos and read a few blog posts, so this will be an unfiltered first-and-second impressions experience!
 
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#Debugging #Debugger #DeltaDebugging #StatisticalDebugging #Compiler #SoftwareRepair #SoftwareTesting #Testing #TDD #Refactoring #Python #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #AndreasZeller #ClareSudbery #BookClub
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Health Insurance Appeals with Generative AI: From Lab to Production • Holden Karau • GOTO 2024</title><link>https://www.youtube.com/watch?v=Q5muBDDdhJg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Q5muBDDdhJg?version=3" length="" type=""/><pubDate>Wed, 2 Jul 2025 12:00:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Chicago 2024. #GOTOcon #GOTOchgo
-https://gotochgo.com
-
-Holden Karau - Co-Founder at Fight Health Insurance @HoldenKarau 
-
-RESOURCES
-https://bsky.app/profile/holdenkarau.com
-https://twitter.com/holdenkarau
-https://github.com/holdenk
-https://www.linkedin.com/in/holdenkarau
-http://holdenkarau.com
-
-Links
-https://www.fighthealthinsurance.com
-https://wpso.dmhc.ca.gov/imr
-https://huggingface.co/TotallyLegitCo/appeal-alpaca
-https://huggingface.co/TotallyLegitCo/fighthealthinsurance_model_v0.2
-https://huggingface.co/TotallyLegitCo/fighthealthinsurance_model_v0.3
-https://www.youtube.com/playlist?list=PLRLebp9QyZtYcK_X13lBS_HZjaXUDwyEt
-
-ABSTRACT
-This talk will cover how we created a system to generate health insurance appeals from denials. We'll start with a quick look at the different attempts at model fine-tuning (along with what eventually worked well for us), then look at the middleware, how we integrate in-house and external models, steps to protect privacy, and finally, some truly questionable frontend code (or truly great frontend code if we finish the rewrite in time—you never know).
-
-If you love the American healthcare system as it stands today, this is probably not the talk for you. For those ambivalent about the healthcare system, that's totally fine; you can still see what it takes to bring an ML system from drinks at a bar all the way through to production. [...]
-
-TIMECODES
-00:00 Intro
-00:25 Content warning
-03:38 What's the problem?
-06:13 How to use computers to fix the problem?
-07:13 What's needed to tune a LLM?
-10:36 Putting it together
-11:38 Downsides
-13:04 What models did we make?
-14:21 Model fine tune config
-15:40 Model serving
-18:38 Frontend?
-19:46 Demo
-25:18 How to do better for the next model?
-27:55 Links
-28:40 Outro
-
-Download slides and read the full abstract here:
-https://gotochgo.com/2024/sessions/3371
-
-RECOMMENDED BOOKS
-Holden Karau • Distributed Computing 4 Kids • https://www.distributedcomputing4kids.com
-Holden Karau • Scaling Python with Dask • https://www.oreilly.com/library/view/scaling-python-with/9781098119867
-Holden Karau & Boris Lublinsky • Scaling Python with Ray • https://amzn.to/44GU6cC
-Holden Karau & Rachel Warren • High Performance Spark • https://amzn.to/3v2eLbn
-Holden Karau, Konwinski, Wendell & Zaharia • Learning Spark • https://amzn.to/397e2NE
-Holden Karau & Krishna Sankar • Fast Data Processing with Spark 2nd Edition • https://amzn.to/3xKhXKu
-Holden Karau • Fast Data Processing with Spark 1st Edition • https://amzn.to/3rHQgOu
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#GenerativeAI #LLMs #GenAI #HealthInsurance #HealthInsuranceAppeals #HoldenKarau
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Industries Adopting Rust</title><link>https://www.youtube.com/watch?v=zRgtK2DsEXM</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zRgtK2DsEXM?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 14:15:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[If you love coding in Rust but aren’t sure how to turn that passion into a full-time career, this video is for you. We’re diving into the real-world opportunities for Rust developers, the industries that are actively adopting Rust, the skills they’re looking for, and the exact steps you can take to land your first Rust job.
-
-Join the Rust Live Accelerator: https://letsgetrusty.com/join
-
-Chapter:
-0:00 Intro
-0:43 Security Industry
-2:56 Backend Infrastructure
-4:00 Embedded
-5:26 Web3
-8:06 AI]]></content:encoded></item><item><title>Building Support Structures • Flavia Circiumaru &amp; Hannes Lowette • GOTO 2025</title><link>https://www.youtube.com/watch?v=Uk9CwG9a_C4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Uk9CwG9a_C4?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 12:01:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
-https://gotopia.tech
-
-Read the full transcription of this interview here:
-https://gotopia.tech/articles/386
-
-Flavia Circiumaru - Software Engineer at FundApps @flaviacirciumaru7502 
-Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover @Belenar82 
-
-RESOURCES
-Flavia
-https://x.com/FlavsFA
-https://github.com/flaviacirciumaru
-https://www.linkedin.com/in/flavia-circiumaru
-
-Hannes
-https://bsky.app/profile/hanneslowette.net
-https://twitter.com/hannes_lowette
-https://github.com/Belenar
-https://linkedin.com/in/hanneslowette
-
-Links
-https://youtu.be/wEq0RnHHE8g
-https://youtu.be/eaATm4rFqrE
-https://youtu.be/X3AHdo34gWM
-https://youtu.be/_R_Vc17mxNE
-https://youtu.be/j2AQ9eTZ3-0
-https://youtu.be/zmA5fhV-FGk
-https://youtu.be/Cx_vijTm24w
-
-DESCRIPTION
-When FundApps exploded from 20 to 50+ engineers in just one year, their old "everyone does support" model crumbled spectacularly. Software engineer Flavia Circiumaru and host Hannes Lowette dive deep into how this London-based regulatory compliance company transformed from a support-free-for-all to a streamlined powerhouse.
-
-Flavia Circiumaru reveals the behind-the-scenes story of building a three-desk support system that turned their support team into the ultimate connector, bridging customers, developers, and business teams like never before. From battling context-switching nightmares to creating communication magic, Flavia and Hannes explore actionable insights on scaling support without losing your sanity.
-
-The twist? Their ultimate goal is to make support so seamless that dedicated teams won't even be needed. Talk about engineering your way out of a job!
-
-TIMECODES
-00:00 Intro
-02:30 From support chaos to structure
-09:36 3 desks, 1 goal: Better support engineering
-20:09 The challenge of multi-tenant support at scale
-32:12 Future aspirations & advice
-39:23 Outro
-
-RECOMMENDED BOOKS
-Jacqui Read • Communication Patterns • https://amzn.to/3E37lvv
-Saleem Siddiqui • Learning Test-Driven Development • https://amzn.to/35OMb3n
-Ben Goldacre • Bad Science • https://amzn.to/4lqNLKN
-Ben Goldacre • Bad Pharma • https://amzn.to/3G15Mz7
-Jeet Pattanaik • Ethics in AI • https://amzn.to/4jXyQXw
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#SupportStructures #SupportEngineering #Communication #DevTeams #TodayInTech #FlaviaCirciumaru #HannesLowette
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>@souldzin: Being polite doesn&apos;t mean being inefficient</title><link>https://www.youtube.com/shorts/ztCsSWfBSd8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ztCsSWfBSd8?version=3" length="" type=""/><pubDate>Mon, 30 Jun 2025 12:01:59 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #PaulSlaughter #ConventionalComments #TeamDynamics #CodeQuality #PairProgramming #TeamHappiness #SoftwareEngineering #Programming #TodayInTech #AdrienneBraganza #AdrienneTacke  #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
-
-Full version available here:
-https://youtu.be/7oIs4kNH65Y
-
-Paul Slaughter - Staff Fullstack Engineer at GitLab & Creator of Conventional Comments @souldzin 
-
-RECOMMENDED BOOK
-Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews • https://amzn.to/3E75XrD
-Adrienne Braganza Tacke • Coding for Kids • https://amzn.to/3Ukd5Gw
-Grace Huang • Code Reviews in Tech • https://amzn.to/4fbwYr8
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
-Dave Thomas & Andy Hunt • The Pragmatic Programmer • https://amzn.to/3azvUy3
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Icicle: The Highs &amp; Lows of Optimizing DSLs • Jacob Stanley • YOW! 2016</title><link>https://www.youtube.com/watch?v=YnrECZC7O3Q</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/YnrECZC7O3Q?version=3" length="" type=""/><pubDate>Sun, 29 Jun 2025 12:00:57 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2016. #GOTOcon #YOW
-https://yowcon.com
-
-Jacob Stanley - Software Engineer at Ambiata
-
-RESOURCES
-https://github.com/jacobstanley
-https://x.com/jacobstanley
-https://github.com/icicle-lang/icicle-ambiata
-
-ABSTRACT
-So, you’ve written a #DSL, it’s a work of art! It so perfectly models the problem at hand that even a trained house cat could generate business value. You just have one problem, your interpreter runs 100x slower than a shell script launching JVMs in a loop.
-
-#DomainSpecificLanguages (DSLs) are able to offer the abstraction benefits of a high-level language, while when compiled, competing with low-level languages on performance. Because DSLs have a much smaller problem area, many specialised optimisations can be performed which are not feasible for a general purpose language.
-
-In this talk, we will explain a number of optimisations which are useful for DSLs, and show our solutions to the practical issues we faced when implementing them in our #QueryLanguage, #Icicle.
-
-Icicle is a query language for processing large amounts of time-series data. Its type system enforces that queries require only a single pass over the data, and that multiple queries over the same data can be fused together. By using a combination of high level optimisations such as partial evaluation and common subexpression elimination, and low level optimisations such as parsing code which is specialised for the given input, our queries are faster than the equivalent hand-written C code.
-
-From this talk, the audience will learn how the focused point of view that DSLs provide can be useful in performance critical systems, as well as a number of concrete techniques for optimising their own DSLs.
-
-RECOMMENDED BOOKS
-Kenneth E. Iverson • A Programming Language • https://amzn.to/45sCYKK
-Hadley Wickham • Advanced R • https://amzn.to/45XIbKw
-Jeffry A. Borror • q For Mortals Version • https://amzn.to/3zd58eo
-Nick Psaris • Q Tips • https://amzn.to/4cxJr76
-Nazia Habib • Hands-On Q-Learning with Python • https://amzn.to/3zfUbZM
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#FunctionalProgramming #SoftwareEngineering #Programmer #JacobStanley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Rationale for Continuous Delivery • Dave Farley • YOW! 2018</title><link>https://www.youtube.com/watch?v=Viv7bs99K0U</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Viv7bs99K0U?version=3" length="" type=""/><pubDate>Sat, 28 Jun 2025 12:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2018. #GOTOcon #YOW
-https://yowcon.com
-
-Dave Farley - Continuous Delivery & DevOps Pioneer, Award-winning Author, Founder & Director of Continuous Delivery Ltd. @ModernSoftwareEngineeringYT 
-
-RESOURCES
-https://bsky.app/profile/davefarley77.bsky.social
-https://www.continuous-delivery.co.uk
-https://linkedin.com/in/dave-farley-a67927
-https://twitter.com/davefarley77
-http://www.davefarley.net
-
-ABSTRACT
-The production of software is a complex, collaborative process that stretches our ability as human beings to cope with its demands. Many people working in #SoftwareDevelopment spend their careers without seeing what good really looks like.
-
-Our history is littered with inefficient processes creating poor quality output, too late to capitalise on the expected business value.
-How have we got into this state?
-How do we get past it?
-What does good really look like?
-
-Continuous Delivery changes the economics of software development for some of the biggest companies in the world, whatever the nature of their software development, find out how and why.
-
-RECOMMENDED BOOKS
-David Farley • Modern Software Engineering • https://amzn.to/3GI468M
-Dave Farley • Continuous Delivery Pipelines • https://amzn.to/3rjetdi
-Dave Farley & Jez Humble • Continuous Delivery • https://amzn.to/3ocIHwd
-Dave Farley & many more • Software Architecture Metrics • https://amzn.to/3M3XqG5
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#ContinuousDelivery #SoftwareArchitecture #Complexity #SoftwareComplexity #SoftwareEngineering #Programmer #DaveFarley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Using Generative AI to Strengthen &amp; Accelerate Learning • Barbara Oakley • GOTO 2024</title><link>https://www.youtube.com/watch?v=rbTaEsieWsU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/rbTaEsieWsU?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 12:01:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
-
-Barbara Oakley - Professor of Engineering at Oakland University & Author of Numerous Books @BarbaraOakley 
-
-RESOURCES
-https://twitter.com/Barbara97881398
-https://www.linkedin.com/in/barbaraoakley
-https://barbaraoakley.com
-
-Links
-https://arxiv.org/abs/1706.03762
-https://psycnet.apa.org/record/2025-07056-001
-https://psycnet.apa.org/record/1984-11828-001
-https://psycnet.apa.org/record/2016-51296-001
-https://pubmed.ncbi.nlm.nih.gov/29891660
-https://psycnet.apa.org/record/2023-71875-001
-https://psycnet.apa.org/record/2014-36030-003
-
-ABSTRACT
-This talk will demonstrate how AI, via transformers, can lift limits on core cognitive processes like attention, synthesis, and retention.
-
-These insights will allow you to use AI more effectively to scaffold and accelerate your own learning.
-
-After all, generative AI can do far more to propel our learning than simply answer questions (important and helpful though that may be!).
-
-Generative AI is, in essence, a teacher—but it can teach better if you know how its properties are sometimes similar to, and sometimes very different from, how the human brain works. [...]
-
-TIMECODES
-00:00 Intro
-03:03 What does ChatGPT do?
-12:32 The value of metaphor
-21:35 7 int. companies with their foundational LLMs
-26:25 Large language models
-34:33 Cheating or "learning lightly"
-36:11 The Flynn Effect
-39:08 How to think about the new complex world
-46:45 Good books on GenAI
-48:30 Outro
-
-Download slides and read the full abstract here:
-https://gotocph.com/2024/sessions/3168
-
-RECOMMENDED BOOKS
-Barbara Oakley & Olav Schewe • Learn Like a Pro • https://amzn.to/3Z3gyf9
-Barbara Oakley, Beth Rogowsky & Terrence J. Sejnowski • Uncommon Sense Teaching • https://amzn.to/4hKGaEW
-Barbara Oakley & Terrence J. Sejnowski • Learning How to Learn • https://amzn.to/3Cqe7dW
-Barbara Oakley • A Mind For Numbers • https://amzn.to/3Z2tjqi
-Barbara Oakley • Mindshift • https://amzn.to/3Z2EAaf
-Barbara Oakley, Madhavan, Green, Koon & Low • Practicing Sustainability • https://amzn.to/4fn95gZ
-Barbara Oakley • Pathological Altruism • https://amzn.to/48LDVNK
-C. Edward Watson & Jose Antonio Bowen • Teaching with AI • https://amzn.to/44sBgYC
-Terrence J. Sejnowski • ChatGPT and the Future of AI • https://amzn.to/45VnfEf
-Ethan Mollick • Co-Intelligence • https://amzn.to/3HTnNjK
-Brian Christian • The Alignment Problem • https://amzn.to/4k5D8LA
-Dr. Fei-Fei Li • The Worlds I See • https://amzn.to/44b2EJm
-Kai-Fu Lee • AI Superpowers • https://amzn.to/43YftrN
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#GenAI #ArtificialIntelligence #GenerativeAI #HowToLearn #StrengthenLearning #Mindshift #LearnLikeAPro #ChatGPT #Cloude #LLaMA #DeclarativeLearning #FlynnEffect #UncommonSenseTeaching #TodayInTech #BarbaraOakley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Better Value Sooner Safer Happier • Simon Rohrer &amp; Eduardo da Silva</title><link>https://www.youtube.com/watch?v=oRaYe4AUR2g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/oRaYe4AUR2g?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 09:35:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+0:00:00 Loading
+0:08:23 Audio on
+0:09:54 Video on
+0:12:13 Debugging bad screen gamma
+0:34:20 Stream on]]></content:encoded></item><item><title>Prompt Engineering for Generative AI • James Phoenix, Mike Taylor &amp; Phil Winder</title><link>https://www.youtube.com/watch?v=P7NHrTYzf1I</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/P7NHrTYzf1I?version=3" length="" type=""/><pubDate>Fri, 1 Aug 2025 12:42:36 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here
- (https://gotopia.tech/episodes/356) 
-Simon Rohrer - Co-Author of "Better Value Sooner Safer Happier" & Senior Director at Saxo Bank
-Eduardo da Sliva - Independent Consultant on Organization, Architecture, and Leadership Modernization
+ (https://gotopia.tech/episodes/360) 
+James Phoenix - Co-Author of "Prompt Engineering for Generative AI"
+Mike Taylor - Co-Author of "Prompt Engineering for Generative AI"
+Phil Winder - Author of "Reinforcement Learning" & CEO of Winder.AI
 
 RESOURCES
-Simon
-https://bsky.app/profile/simon.bvssh.com
-https://mastodon.social/@simonr
-https://x.com/sirohrer
-https://www.linkedin.com/in/simonrohrer
-https://github.com/sirohrer
-https://www.soonersaferhappier.com
+James
+https://x.com/jamesaphoenix12
+ (https://github.com/jamesaphoenix) https://www.linkedin.com/in/jamesphoenix
+https://understandingdata.com
 
-Eduardo
-https://bsky.app/profile/esilva.net
-https://mastodon.social/@eduardodasilva
-https://x.com/emgsilva
-https://www.linkedin.com/in/emgsilva
-https://github.com/emgsilva
-https://esilva.net
+Mike
+http://saxifrage.xyz
+https://twitter.com/hammer_mt
+https://www.linkedin.com/in/mjt145
+
+Phil
+https://twitter.com/DrPhilWinder
+https://linkedin.com/in/drphilwinder
+ (https://github.com/philwinder) https://winder.ai
+ (https://winder.ai/blog) 
+Links
+https://brightpool.dev
+https://karpathy.ai
+https://help.openai.com/en/articles/6654000
+https://gemini.google.com
+ (https://www.mongodb.com) https://dreambooth.github.io
+https://github.com/microsoft/LoRA
+https://claude.ai
+https://www.langchain.com/langgraph
 
 DESCRIPTION
-Eduardo da Silva and Simon Rohrer discuss the core ideas of "Better Value Sooner Safer Happier" diving into the principles of organizational transformation.
+Large language models (LLMs) and diffusion models such as ChatGPT and Stable Diffusion have unprecedented potential. Because they have been trained on all the public text and images on the internet, they can make useful contributions to a wide variety of tasks. And with the barrier to entry greatly reduced today, practically any developer can harness LLMs and diffusion models to tackle problems previously unsuitable for automation.
 
-Simon shares insights on the shift from output-driven to outcome-focused thinking, emphasizing value over productivity, and the need for continuous improvement in delivery speed, stakeholder satisfaction, and safety.
-The conversation explores key concepts like technical excellence, integrating safety into development, and balancing incremental changes with occasional larger steps.
+With this book, you'll gain a solid foundation in generative AI, including how to apply these models in practice. When first integrating LLMs and diffusion models into the
+Digital Disruption with Geoff Nielson (https://www.youtube.com/@InfoTechRG) 
+ Discover how technology is reshaping our lives and livelihoods.
 
-Simon Rohrer discusses organizational patterns and the importance of decentralizing decision-making, recommending a flexible, context-driven approach to transformation. The session concludes with practical advice on how to start implementing these ideas, using the book’s map to guide organizations toward the right transformation strategy based on their specific goals.
 
-RECOMMENDED BOOKS
-Jonathan Smart, Zsolt Berend, Myles Ogilvie & Simon Rohrer • Sooner Safer Happier
- (https://amzn.to/3Emm9p2) Stephen Fishman & Matt McLarty • Unbundling the Enterprise
- (https://amzn.to/3W2EcXw) Carliss Y. Baldwin • Design Rules, Vol. 2
- (https://amzn.to/4hdllRr) Matthew Skelton & Manuel Pais • Team Topologies
-Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps
- (http://amzn.to/3sVLyLQ) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook (https://amzn.to/47oAf3l) 
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1798209377)    Spotify (https://open.spotify.com/show/7L9LI7y1rcLVeNEbuUsgCq?si=30O1lE3LSpO8erTD5ov7Xg) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -467,4 +88,226 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item></channel></rss>
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Building Secure ReactJS Apps: Mastering Advanced Security Techniques • Jim Manico • GOTO 2024</title><link>https://www.youtube.com/watch?v=BKaxtBSgueQ</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/BKaxtBSgueQ?version=3" length="" type=""/><pubDate>Thu, 31 Jul 2025 12:00:32 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
+
+Jim Manico - OWASP Project Leader, AppSec Enthusiast & Java Champion @JimManicode
+
+ORIGINAL TALK TITLE
+Building Secure ReactJS Applications: Mastering Advanced Security Techniques
+
+RESOURCES
+https://twitter.com/manicode
+https://www.linkedin.com/in/jmanico
+https://manicode.com
+
+Links
+https://github.com/cure53/DOMPurify
+https://github.com/facebook/react/blob/v18.2.0/packages/react-dom/src/shared/sanitizeURL.js
+https://cure53.de/purify
+https://github.com/yahoo/serialize-javascript
+https://github.com/maxchehab/CSS-Keylogging/blob/master/css-keylogger-extension/keylogger.css
+https://www.npmjs.com/package/react
+https://www.npmjs.com/package/react-markdown
+https://retirejs.github.io/retire.js
+https://docs.npmjs.com/cli/v11/commands/npm-audit
+https://eslint.org
+https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#name-countermeasures
+
+ABSTRACT
+Welcome to a deep dive into ReactJS security, where we address issues such as Cross-Site Scripting (XSS), content injection, and data leaks in ReactJS applications. These threats continue to challenge web developers, making robust ReactJS security practices essential.
+
+ReactJS offers some built-in and automatic measures against XSS. However, securing ReactJS applications requires a deeper understanding and implementation of advanced security techniques. This presentation is tailored for developers eager to enhance their security skills in ReactJS.
+
+In this session, we will delve into a range of critical security topics with a focus on defensive coding techniques to secure your ReactJS applications effectively. Topics covered include:
+• Navigating the Security Landscape of React Components
+• Decoding React's Built-in XSS Protections
+• The Intricacies of Props and Types
+• A Closer Look at dangerouslySetInnerHTML
+• Understanding User-submitted URLs in React
+• Enhancing React Security with CSS Styled-Components
+• The Dynamics of JSON and React Integration
+• The Power of Lazy Loading and Access Control in React
+• Exploring React Template Injection Vulnerabilities
+• The Role of Server-Side Rendering in React Security
+
+This session is designed to expand your ReactJS knowledge, strengthen your security strategies, and give you exact methods to help you build safer, more robust ReactJS applications.
+
+Join us to master advanced defense techniques and contribute to the development of secure ReactJS applications! [...]
+
+TIMECODES
+00:00 Intro
+02:28 Agenda
+03:11 AI secure code generation lifecycle
+07:03 What is React & what are the top security domains
+08:31 R1: Cross site scripting
+11:47 React security domains
+11:58 R1: XSS
+16:48 R2: Dangerous URLs
+20:54 R3: Rendering HTML
+23:56 R4: Securing JSON
+25:49 R5: Dangerous styles
+27:47 R6: Insecure native DOM access
+30:04 R7: Access control & exposed failures
+35:35 R8: Vulnerable & outdated versions & dependencies
+37:43 R9: Open redirects
+39:09 R10: Insecure server-side rendering
+40:32 Demo
+42:16 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3343
+
+RECOMMENDED BOOKS
+Jim Manico & August Detlefsen • Iron-Clad Java • https://amzn.to/3qGqwBw
+Liz Rice • Container Security • https://amzn.to/3oU4iJe
+Liz Rice • Kubernetes Security • https://www.oreilly.com/library/view/kubernetes-security/9781492039075
+Aaron Parecki • OAuth 2.0 Simplified • https://amzn.to/2A3IMOf
+Aaron Parecki • OAuth 2.0 Servers • https://amzn.to/3ecHEsz
+Chris Minnick • Beginning ReactJS Foundations Building User Interfaces with ReactJS • https://amzn.to/4inewgR
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#ReactJS #ReactAITop10 #XSS #Security #Cybersecurity #XSSProtection #ReactJSSecurity #CrossSiteScripting #Programming #SoftwareEngineering #JimManico #Manicode
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Charles Humble Shares His Ideas about #RemoteWork</title><link>https://www.youtube.com/shorts/lq3SDHCk26M</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/lq3SDHCk26M?version=3" length="" type=""/><pubDate>Wed, 30 Jul 2025 12:01:21 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #RemoteWorking #Workflow #HomeOffice #AllRemote #Leadership #Management #Pomodoro #GettingThingsDone #DeepWork #CharlesHumble #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+
+Full version available here:
+https://youtu.be/sQOHhoCSfak
+
+Charles Humble - Editor in Chief at Container Solutions
+
+RECOMMENDED BOOK
+Anne Currie & Charles Humble • The Cloud Native Attitude • https://info.container-solutions.com/the-cloud-native-attitude-2nd-edition
+David Allen • Getting Things Done • https://amzn.to/45j3LWS
+Matthew Skelton & Manuel Pais • Remote Team Interactions Workbook • https://amzn.to/47EYQRA
+Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Cal Newport • Deep Work • https://amzn.to/3sfcsCK
+Kate Humble • Thinking on My Feet • https://amzn.to/3QKQAtl
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>What is GeoHashing?</title><link>https://blog.algomaster.io/p/geohashing</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/d645062c-ae73-46ea-836e-1c60a4849471_2048x1365.jpeg" length="" type=""/><pubDate>Wed, 30 Jul 2025 11:21:28 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Imagine you’re building a system like , , or a nearby restaurant finder.You need to store and query millions or even billions of location points to find what's "close" to a specific point? And you want to do it .But querying latitude and longitude ranges can get messy and slow, especially at scale.That’s where  comes in.In this article, we’ll explore:Limitations and trade-offsPractical System Design Example are critical but time-consuming.  acts as your AI co-pilot, providing instant Code review comments and potential impacts of every pull request.Beyond just flagging issues, CodeRabbit provides one-click fix suggestions and lets you define custom code quality rules using AST Grep patterns, catching subtle issues that traditional static analysis tools might miss. has so far reviewed more than , installed on , and used by 70 thousand Open-source projects. CodeRabbit is free for all open-source repo's.Imagine you have a database table of restaurants, with columns for  and . A user at (lat: 34.0523, lon: -118.2438) wants to find all restaurants within a 1km radius.How would you write this query?A naive approach might be a "bounding box" query:This works, but it has major performance problems at scale:Most databases use , which are fantastic for one-dimensional data. But they struggle with 2D queries. The database can use an index on latitude, but then it has to do a full scan of all matching rows to filter by longitude (or vice-versa). A  on (latitude, longitude) helps, but it still doesn't truly understand spatial locality.We need a way to represent 2D proximity in a 1D format that a standard database index can efficiently search. That’s what  is about. is a method of encoding geographic coordinates (latitude, longitude) into a short alphanumeric string.It was invented by  as a way to enable efficient spatial indexing and proximity search in databases and distributed systems. The coordinates for downtown  can be encoded as the geohash: .This hash looks like just a random string of characters but it has two magical properties:The more characters two GeoHashes share at the beginning (i.e., the longer their common prefix), the closer those two locations are geographically.This means: will usually have .  will have completely different prefixes.GeoHashes are : each additional character in the hash zooms in to a more precise region. and  share the first  → they belong to  but are . and  share only the first  → they are , likely hundreds of kilometers. → starts with a completely different prefix. It represents a  region, possibly on another continent.2. One-Dimensional and IndexableGeoHashes convert 2D coordinates (latitude, longitude) into a . This string can be stored in a  or  field in a relational or NoSQL database, and indexed efficiently using a  or .Fast lookups of nearby placesEasy sharding based on locationEfficient sorting and filtering using standard indexesGeoHashing may look like magic at first glance, but it’s built on a simple and elegant idea: convert a 2D geographic point into a 1D string through binary encoding and interleaving.Let’s walk through the process of encoding a  pair into a GeoHash — step by step.Step 1: Define the Initial RangesWe begin by defining the global bounds of latitude and longitude: ranges from  ranges from These represent the full span of the Earth’s surface in both dimensions.The goal is to gradually  this range by encoding whether a coordinate lies in the  of the current interval, similar to a binary search.Step 2: Convert to Binary by InterleavingNow, we start converting the latitude and longitude into binary.We start with the full range of values:We then repeatedly divide each range in half and record a binary digit based on which half the coordinate falls into:If the value is in the , we append a .If the value is in the , we append a .This is a lot like binary search — but instead of just narrowing down to a value, we record each decision as a bit in the final output.Interleaving Latitude and Longitude BitsWe don’t encode latitude and longitude separately. We  their bits:4th bit → latitude... and so on.This interleaving produces a  that represents the position in a Morton curve (Z-order curve), which helps preserve spatial locality.Let’s walk through the first few steps for the point: (37.7749° N, -122.4194° W)Step 1: Longitude → -122.4194°Initial range: Midpoint =  → -122.4194 < 0 →  → New range: Midpoint =  → -122.4194 < -90 →  → New range: Midpoint =  → -122.4194 > -135 →  → New range: Midpoint =  → -122.4194 < -112.5 →  → New range: Midpoint =  → -122.4194 > -123.75 →  → New range: So first 5 longitude bits = Step 2: Latitude → 37.7749°Initial range: Midpoint =  → 37.7749 > 0 →  → New range: Midpoint =  → 37.7749 < 45 →  → New range: Midpoint =  → 37.7749 > 22.5 →  → New range: Midpoint =  → 37.7749 > 33.75 →  → New range: Midpoint =  → 37.7749 < 39.375 →  → New range: First 5 latitude bits = Step 3: Interleave the BitsInterleaving the two binary sequences:Longitude bits:  0 0 1 0 1  
+Latitude bits:   1 0 1 1 0  
+
+Interleaved:     0 1 0 0 1 1 1 0 1 0Resulting binary string (10 bits): Step 4: Continue Until You Reach Desired PrecisionYou typically continue this process until you have: → 6-character GeoHash → 7-character GeoHash → very high precisionStep 3: Convert Binary to Base32 StringOnce we’ve built a long binary string by interleaving latitude and longitude bits, we need to compress it into something shorter and human-readable.This is where  comes in.Take the interleaved binary string and split it into .Convert each 5-bit chunk into a Base32 character.Base32 Alphabet Used in GeoHashing:0123456789bcdefghjkmnpqrstuvwxyzNote: The letters , , , and  are intentionally omitted to avoid confusion with similar-looking digits or letters (, , etc.).This step compresses a potentially long binary string into a , usually between , depending on the desired precision.Let’s say your interleaved binary string is:Break it into 5-bit groups and convert each chunk into a Base32 character:Each additional character in the GeoHash increases the precision of the location.You can  of your spatial encoding just by adjusting the number.GeoHashing offers benefits that are highly valuable in location-based services:Efficient Proximity SearchInstead of range queries on lat/lon, you can:Use GeoHash prefix matchingSearch within a bounding box by comparing string prefixesDatabases like PostgreSQL, Cassandra, and MongoDB can:Index strings faster than floating-point pairsUse trie or B-tree-based lookups for prefix searchGeoHashes are great for sharding data in distributed systems:Assign prefixes to different servers/partitionsKeep nearby data close togetherGeoHashing is widely used in location-based apps and geospatial databases. Here are some real-world examples where GeoHashing shines:Ridesharing Platforms (e.g., Uber, Lyft)GeoHashes can be used to group drivers and riders into  based on their current location.When a rider requests a trip, the system calculates their GeoHash (e.g., to 6 or 7 characters).It then quickly finds drivers in the same or neighboring GeoHash cells, drastically reducing the search space.This enables real-time proximity matching without scanning all active drivers.Food Delivery Services (e.g., Swiggy, Zomato)When a user opens the app to browse nearby restaurants:Their coordinates are converted into a GeoHash.The backend queries all restaurants whose stored GeoHashes  or its neighbors.This allows the system to serve relevant results , even with millions of entries in the database.Geospatial Databases (e.g., Elasticsearch, MongoDB)GeoHashing is often used under the hood in spatial indexing strategies. supports  aggregations to efficiently bucket documents by location. can store GeoHashes for fast, prefix-based querying on 2D location fields.GeoHashing is a powerful tool for spatial indexing but like any abstraction, it comes with trade-offs. It maps a 2D problem to a 1D problem, allowing for extremely fast prefix searches on standard database indexes. You can easily "zoom in" or "zoom out" by simply adjusting the length of the geohash string you use for querying. This is great for map UIs. It scales horizontally very well. The workload is easily distributable. It works with any database that supports string indexing (PostgreSQL, MySQL, etc.). You must query neighboring cells to avoid missing nearby points that fall across a boundary. This adds a little complexity to the query logic. Geohash cells are rectangular, and their shape distorts and becomes less square-like as you move away from the equator. This means a geohash doesn't represent a uniform circular area. Two points can be in the same geohash cell but at opposite corners, making them farther apart than a point in a neighboring cell. This is why the final, precise distance calculation is necessary. On its own, geohashing is a proximity search, not a true "k-Nearest Neighbors" search. You must combine it with a post-filtering distance calculation to get accurate k-NN results.Now let’s look at how to practically implement GeoHashing to build a location-based feature like showing nearby restaurants.Let's say we have a  table in our database.To enable fast geospatial queries:We add a new column called .Every time a restaurant is created or its location is updated, we:Calculate its GeoHash (e.g., with ).Store it in the  column.This prepares the data for efficient prefix-based lookups.Since GeoHash is stored as a string, we can index it with a  which enables fast, lexicographical prefix filtering.2. Querying for Nearby ItemsLet's say a user is at a location that maps to GeoHash: .To find nearby restaurants within, say, a , the most basic query would be:This works well in many cases, but there's a .What if the user is standing  of the  cell, and the closest restaurant is just  in a neighboring cell like ?The query above would  that restaurant even though it may be just 20 meters away.3. The Solution: Include Neighboring CellsEach GeoHash defines a bounding box. If we also consider the 8 immediate neighbors around that box, we cover the full surrounding area, eliminating blind spots at cell edges. Capture user's current latitude and longitude. Convert that location to a GeoHash with your chosen precision (e.g., ). Use a GeoHash utility/library to get the 8 surrounding GeoHashes. Query the database for items whose geohash starts with  of these 9 prefixes (the user's cell + 8 neighbors).The GeoHash-based prefix query is , but still slightly approximate.So once we get the candidate set of restaurants, we do a second, more precise filtering step:Use the  or  to compute the  between the user’s location and each candidate. any restaurants that fall  the desired radius (e.g., beyond 200m). the remaining results by distance to return the nearest ones first.The expensive Haversine computation is done on  of rows, not , which keeps the system performant.While  is a fast, lightweight, and scalable approach to spatial indexing, it's not the only option. Several other data structures are commonly used in geospatial systems, each with their own strengths and trade-offs:These are tree-based spatial partitioning structures that recursively divide the space into smaller regions. divide 2D space into four quadrants at each level. divide k-dimensional space by alternating splitting axes (e.g., latitude and longitude).GeoHashing can be conceptually seen as a simplified, linearized representation of a , following a space-filling curve like a Z-order (Morton) curve. are commonly used in spatial databases such as  (PostgreSQL extension), , and .They group nearby objects into .Each node in the tree contains the minimum bounding rectangle (MBR) that encloses its children.This structure supports efficient queries for containment, intersection, and nearest neighbors.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .As a paid subscriber, you'll get full access to all and access to all courses at I hope you have a lovely day!]]></content:encoded></item><item><title>Privacy-First Research with OpenSAFELY • Eli Holderness &amp; Hannes Lowette</title><link>https://www.youtube.com/watch?v=sE34WX8DUqE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/sE34WX8DUqE?version=3" length="" type=""/><pubDate>Tue, 29 Jul 2025 12:24:34 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
+
+Read the full transcription of this interview here (https://gotopia.tech/articles/370) 
+
+
+
+Eli Holderness - Research Software Advocate at Bennett Institute for Applied Data Science, Speaker & Professional Nerd
+Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover
+
+RESOURCES
+Eli
+https://bsky.app/profile/eli.holderness.dev
+https://twitter.com/eliholderness
+https://hachyderm.io/@eli
+https://linkedin.com/in/eli-holderness-4890b886
+https://github.com/eli-miriam
+https://eli.holderness.dev
+
+Hannes
+https://bsky.app/profile/hanneslowette.net
+https://twitter.com/hannes_lowette
+https://github.com/Belenar
+https://linkedin.com/in/hanneslowette
+
+Links
+https://www.opensafely.org
+https://docs.opensafely.org/ehrql
+https://github.com/opensafely-core/ehrql
+
+DESCRIPTION
+OpenSAFELY represents a revolutionary approach to medical research that prioritizes patient privacy while enabling valuable insights from healthcare data. Rather than giving researchers direct access to sensitive GP records, it allows them to submit code that runs in a secure environment, with only privacy-checked aggregated results returned.
+
+Hannes Lowette talks to Eli Holderness about how the system works, its benefits for ensuring reproducible science, the challenges of working with data not collected for research purposes, and its potential applications beyond healthcare. The approach balances the need for medical research with strict privacy protections, ensuring patients maintain trust in how their sensitive data is used.
+
+RECOMMENDED BOOKS
+Ben Goldacre • Bad Science
+ (https://amzn.to/4lqNLKN) Ben Goldacre • Bad Pharma
+ (https://amzn.to/3G15Mz7) Aaron Parecki • OAuth 2.0 Simplif (https://amzn.to/2A3IMOf) 
+Digital Disruption with Geoff Nielson (https://www.youtube.com/@InfoTechRG) 
+ Discover how technology is reshaping our lives and livelihoods.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1798209377)    Spotify (https://open.spotify.com/show/7L9LI7y1rcLVeNEbuUsgCq?si=30O1lE3LSpO8erTD5ov7Xg) 
+
+
+Bluesky (https://bsky.app/profile/gotocon.com) 
+Twitter (https://twitter.com/GOTOcon) 
+Instagram (https://www.instagram.com/goto_con) 
+LinkedIn (https://www.linkedin.com/company/goto-) 
+Facebook (https://www.facebook.com/GOTOConferences) 
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Scale, Flow &amp; Microservices • James Lewis • YOW! 2019</title><link>https://www.youtube.com/watch?v=AKQ2roG2sb8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/AKQ2roG2sb8?version=3" length="" type=""/><pubDate>Mon, 28 Jul 2025 12:00:29 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2019. #GOTOcon #YOW
+https://yowcon.com
+
+James Lewis - Software architect and director at Thoughtworks
+
+ABSTRACT
+Recent research summarised in the book Accelerate points to a set of practices that lead to high software development organization performance.
+
+Simultaneously, research from the Santa Fe Institute on complex adaptive systems over the last 20 years seems to point to a grand unified theory of organizational design and software architecture.
+
+"So have we cracked it? Do we now have the answer to the question: how do we create and scale high performing software and organizations?"
+
+In this talk, James explores this research and takes a look at the surprising links between organizations, microservices, elephants and cities.
+
+In this talk, you'll learn:
+• How to create and scale high performing software in organizations
+• The surprising links between organizations, microservices, elephants and cities
+
+RECOMMENDED BOOKS
+Sam Newman • Monolith to Microservices • https://amzn.to/2Nml96E
+Sam Newman • Building Microservices • https://amzn.to/3dMPbOs
+Ronnie Mitra & Irakli Nadareishvili • Microservices: Up and Running• https://amzn.to/3c4HmmL
+Mitra, Nadareishvili, McLarty & Amundsen • Microservice Architecture • https://amzn.to/3fVNAb0
+Chris Richardson • Microservices Patterns • https://amzn.to/2SOnQ7h
+Adam Bellemare • Building Event-Driven Microservices • https://amzn.to/3yoa7TZ
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Microservices #SoftwareArchitecture #MicroservicesArchitecture #Scale #Flow #CorporateLifecycle #Thoughtworks #YOWcon
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>

@@ -1,22 +1,759 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Rust</title><link>https://www.awesome-dev.news</link><description></description><item><title>are we stuck with crate_name/crate-name/weird_crate-name inconsistency?</title><link>https://www.reddit.com/r/rust/comments/1lq4obm/are_we_stuck_with_crate_namecratenameweird/</link><author>/u/somnamboola</author><category>rust</category><category>reddit</category><pubDate>Wed, 2 Jul 2025 19:16:53 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[IMO it's not only OCD triggering, It also opens a vector to supply chain attacks. Would be cool to brainstorm if there are some cool ideas. ]]></content:encoded></item><item><title>Introducing tmux-rs</title><link>https://richardscollin.github.io/tmux-rs/</link><author>/u/Intelligent-Pear4822</author><category>rust</category><category>reddit</category><pubDate>Wed, 2 Jul 2025 18:39:44 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Code Your Own Desktop GUI App With Rust Iced Crate</title><link>https://youtu.be/2CQ4hLB2IMw</link><author>/u/JonkeroTV</author><category>rust</category><category>reddit</category><pubDate>Wed, 2 Jul 2025 17:25:47 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>This Week in Rust 606</title><link>https://this-week-in-rust.org/blog/2025/07/02/this-week-in-rust-606/</link><author>TWiR Contributors</author><category>This week in Rust</category><category>dev</category><category>rust</category><pubDate>Wed, 2 Jul 2025 04:00:00 +0000</pubDate><source url="https://this-week-in-rust.org/">This Week in Rust</source><content:encoded><![CDATA[This week's crate is ansic, a proc macro providing a DSL to output ANSI escape strings with zero runtime overhead.Thanks to Zeon for the self-suggestion!An important step for RFC implementation is for people to experiment with the
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Rust</title><link>https://www.awesome-dev.news</link><description></description><item><title>Those who use rust professional</title><link>https://www.reddit.com/r/rust/comments/1mfr78b/those_who_use_rust_professional/</link><author>/u/Jncocontrol</author><category>rust</category><category>reddit</category><pubDate>Sat, 2 Aug 2025 13:58:06 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[What's your job, do you work backend, IoT, A.I. Or what?]]></content:encoded></item><item><title>Suspicious article in this week’s TWIR issue</title><link>https://github.com/rust-lang/this-week-in-rust/issues/6861</link><author>/u/p-lindberg</author><category>rust</category><category>reddit</category><pubDate>Sat, 2 Aug 2025 11:48:40 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[This week’s TWIR issue contains a link to an article that looks suspiciously AI-generated, posted by an account that seems to be trying to market a web framework by making dubious claims about its performance and features, essentially pitching standard capabilities offered by most web frameworks these days as breakthrough advancements. The web framework itself also looks as though it may be written by AI, and comes with a deep tree of dependencies from the same author. This makes me wonder if this may be a very poor attempt at a supply-chain attack, especially considering the nature of how it is being marketed. I’m not sure how this article made its way into the newsletter, but I have notified them by opening an issue at the GitHub repository.I don’t want to name the web framework in question here, as I may be wrong in my assessment and don’t want to tarnish anyone’s reputation unnecessarily. If the author wants to come forward and provide a counterpoint, that would be most welcome. Either way, I think it’s good for the community to be aware of this. ]]></content:encoded></item><item><title>Who runs this anonymous crates.io account with 1000+ packages??</title><link>https://www.reddit.com/r/rust/comments/1mfn3hd/who_runs_this_anonymous_cratesio_account_with/</link><author>/u/Outrageous-Box3338</author><category>rust</category><category>reddit</category><pubDate>Sat, 2 Aug 2025 10:17:20 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[...8 more accounts omitted.In short, klebs6 is now the top crate owner on crates.io!Now I wonder how they can manage so many crates.]]></content:encoded></item><item><title>Vibe coding complex changes in Rust</title><link>https://www.youtube.com/watch?v=EL7Au1tzNxE</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/EL7Au1tzNxE?version=3" length="" type=""/><pubDate>Fri, 1 Aug 2025 21:11:42 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[Those who have followed me for a while may already know that I'm a bit of an ML Luddite — it's not that I'm opposed to the use of ML-based tools, but rather that I haven't personally found much use for them in my day-to-day work, especially when it comes to programming. My hypothesis thus far has been that this at least in part due to the nature of the work I'm doing; it often does not fit neatly into ML's strong-suit, namely pattern-replication where there are already plenty of examples for the ML to draw upon.
+
+Well, there's enough hype around vibe coding these days, and especially agentic AI coding assistants like Claude Code, that I felt like I should try it "in anger". Concretely, I have some non-trivial changes I'd like to make to the type-safe rigid body transformation crate Sguaba ( https://github.com/helsing-ai/sguaba ), and figured this could be a good testing ground. Sguaba doesn't have too much code, but it is sufficiently involved both in terms of the implemented logic and the use of Rust's type system that I think the ML will have its job cut out for it.
+
+This video is my attempt at disproving my own skepticism — working with Claude Code to implement some of these changes end-to-end. I also haven't used these tools myself *at all* thus far, only watched a few videos and read a few blog posts, so this is an unfiltered first-and-second impressions experience! We got through two (the easiest two) out of the four things, and then ran out of tokens 😅 But overall the experience was interesting and educational. I don't think it disproved my skepticism, though it did certainly prove that with sufficient pair programming, you can get very far. Still unclear to me that it saves time overall though, at least for specifically these kinds of tasks.
+
+If you're interested in finding out more about the sponsor of this video, Hudson River Trading, see https://www.hudsonrivertrading.com/gjengset
+
+The slides for the Sguaba presentation, you can find at https://jon.thesquareplanet.com/slides/sguaba/
+
+The final PRs to Sguaba are https://github.com/helsing-ai/sguaba/pull/27 and https://github.com/helsing-ai/sguaba/pull/28
+
+0:00:00 My skepticism
+0:07:00 The sguaba crate
+0:25:18 Compile-time asserting macro constructor
+1:30:38 Builder that restricts order with type-state
+2:28:17 What I wanted to do next
+2:36:06 Concluding thoughts
+2:37:28 Questions
+2:58:24 A wild sponsor appears!
+
+Live version with chat: https://youtube.com/live/3NGXL_8RzEI]]></content:encoded></item><item><title>Vibe coding complex changes in Rust (live version)</title><link>https://www.youtube.com/watch?v=3NGXL_8RzEI</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3NGXL_8RzEI?version=3" length="" type=""/><pubDate>Fri, 1 Aug 2025 19:05:26 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[Those who have followed me for a while may already know that I'm a bit of an ML Luddite — it's not that I'm opposed to the use of ML-based tools, but rather that I haven't personally found much use for them in my day-to-day work, especially when it comes to programming. My hypothesis thus far has been that this at least in part due to the nature of the work I'm doing; it often does not fit neatly into ML's strong-suit, namely pattern-replication where there are already plenty of examples for the ML to draw upon.
+
+Well, there's enough hype around vibe coding these days, and especially agentic AI coding assistants like Claude Code, that I feel like I should try it "in anger". Concretely, I have some non-trivial changes I'd like to make to the type-safe rigid body transformation crate Sguaba ( https://github.com/helsing-ai/sguaba ), and figured this could be a good testing ground. Sguaba doesn't have too much code, but it is sufficiently involved both in terms of the implemented logic and the use of Rust's type system that I think the ML will have its job cut out for it. Or maybe it won't — maybe it'll glide through the changes with ease and I'll be forced to eat my words. The reality will probably lie somewhere in between: it will work better than I expect and prove that even in complex Rust projects it can provide meaningful (and possibly even substantial) leverage when yielded well, while displaying enough warts that it's clear that we're not in for a "just manage agents managing agents" kind of world just yet. Ultimately, I'm aiming for this to be a reality-check for my skepticism.
+
+Regardless of whether you're a Luddite like me or someone who's already fully onboard the vibe-train, come join me as I dive head-first into the agentic AI coding experience. I haven't used these tools myself *at all* thus far, only watched a few videos and read a few blog posts, so this will be an unfiltered first-and-second impressions experience!
+
+0:00:00 Loading
+0:08:23 Audio on
+0:09:54 Video on
+0:12:13 Debugging bad screen gamma
+0:34:20 Stream on]]></content:encoded></item><item><title>[Media] You can now propose your cat as changelog cat for Clippy 1.89!</title><link>https://www.reddit.com/r/rust/comments/1mf4g8u/media_you_can_now_propose_your_cat_as_changelog/</link><author>/u/NothusID</author><category>rust</category><category>reddit</category><pubDate>Fri, 1 Aug 2025 18:35:17 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>The way Rust crates tend to have a single, huge error enum worries me</title><link>https://www.reddit.com/r/rust/comments/1mexsqr/the_way_rust_crates_tend_to_have_a_single_huge/</link><author>/u/nikitarevenco</author><category>rust</category><category>reddit</category><pubDate>Fri, 1 Aug 2025 14:21:42 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Out of all the crates I've used, one pattern is incredibly common amongst them all: Having 1 giant error enum that all functions in the crate can returnThis makes for an awkard situation: None of the functions in the crate can return every possible error variant. Say you have 40 possible variants, but each function can at most return like 10.Or when you have 1 top-level function that can indeed return each of the 40 variants, but then you use the same error enum for lower-level functions that simply cannot return all possible error types.This makes it harder to handle errors for each function, as you have to  on variants that can never occur.And this isn't just what a couple crates do. This pattern is  common in the Rust ecosystemI personally think this is an anti-pattern and unfortunate that is has become the standard.What about if each function had a separate error enum. Functions calling other, lower-level functions could compose those smaller error enums with  into larger enums. This process can be repeated - No function returns an error enum with variants that can never occur.I think we should not sacrifice on type safety and API ergonomics because it would involve more boilerplate in order to satisfy this idea.Would like to hear your thoughts on this!]]></content:encoded></item><item><title>Eon - a human-friendly replacement for Toml and Yaml</title><link>https://github.com/emilk/eon</link><author>/u/emilern</author><category>rust</category><category>reddit</category><pubDate>Fri, 1 Aug 2025 10:19:53 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Hi! I spent the last week designing and implementing a new config format; a competitor to Toml and Yaml.I know this is unlikely to take off, but without dreams we are but beasts.I'd love to get some feedback on this, especially from those that often edit config files (for configuring games, services, CI systems, etc).What do you like? What don't you like?]]></content:encoded></item><item><title>This Week in Rust #610</title><link>https://this-week-in-rust.org/blog/2025/07/30/this-week-in-rust-610/</link><author>/u/seino_chan</author><category>rust</category><category>reddit</category><pubDate>Thu, 31 Jul 2025 20:16:38 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[This week's crate is qop, a standalone SQL migration tool.An important step for RFC implementation is for people to experiment with the
 implementation and give feedback, especially before stabilization.If you are a feature implementer and would like your RFC to appear in this list, add a
  label to your RFC along with a comment providing testing instructions and/or
-guidance on which aspect(s) of the feature need testing.Let us know if you would like your feature to be tracked as a part of this list.Always wanted to contribute to open-source projects but did not know where to start?
-Every week we highlight some tasks from the Rust community for you to pick and get started!Some of these tasks may also have mentors available, visit the task page for more information.No Calls for participation were submitted this week.Are you a new or experienced speaker looking for a place to share something cool? This section highlights events that are being planned and are accepting submissions to join their event as a speaker.No Calls for papers or presentations were submitted this week.Lots of changes this week with results dominated by the 1-5% improvements from
-#142941 across lots of primary
-benchmarks in the suite.3 Regressions, 6 Improvements, 5 Mixed; 4 of them in rollups
-39 artifact comparisons made in totalNo RFCs were approved this week.Every week, the team announces the 'final comment period' for RFCs and key PRs
-which are reaching a decision. Express your opinions now.Let us know if you would like your PRs, Tracking Issues or RFCs to be tracked as a part of this list.No New or Updated RFCs were created this week.Rusty Events between 2025-07-02 - 2025-07-30 🦀If you are running a Rust event please add it to the calendar to get
+guidance on which aspect(s) of the feature need testing.Let us know if you would like your feature to be tracked as a part of this list.If you are a feature implementer and would like your RFC to appear on the above list, add the new 
+label to your RFC along with a comment providing testing instructions and/or guidance on which aspect(s) of the feature
+need testing.Always wanted to contribute to open-source projects but did not know where to start?
+Every week we highlight some tasks from the Rust community for you to pick and get started!Some of these tasks may also have mentors available, visit the task page for more information.Are you a new or experienced speaker looking for a place to share something cool? This section highlights events that are being planned and are accepting submissions to join their event as a speaker.A week with lots of mixed results, including a few benchmarks that appear to be
+newly bimodal, which made some of the results look closer to noise than signal.
+Overall, however, the week ended as a slight improvement.1 Regressions, 2 Improvements, 9 Mixed; 2 of them in rollups
+38 artifact comparisons made in totalNo RFCs were approved this week.Every week, the team announces the 'final comment period' for RFCs and key PRs
+which are reaching a decision. Express your opinions now.Let us know if you would like your PRs, Tracking Issues or RFCs to be tracked as a part of this list.Rusty Events between 2025-07-30 - 2025-08-27 🦀If you are running a Rust event please add it to the calendar to get
 it mentioned here. Please remember to add a link to the event too.
-Email the Rust Community Team for access.I love Rust, so I was already biased to be positive about the Rust for Linux project, even before dabbling with it myself. I'm genuinely surprised to be even more optimistic now than before. The coding part was much easier than I imagined, thanks to the use of reference counting in the kernel.And the promised benefits of Rust over C? They're absolutely real. The Rust version of the driver feels way more robust than the C code, not just regarding memory safety. It didn't have a single bug: Once it compiled, it worked. That's not a huge deal considering it was a direct rewrite, but it counts for something.Despite a lamentable lack of suggestions, llogiq is reasonably pleased with his choice.]]></content:encoded></item><item><title>The Industries Adopting Rust</title><link>https://www.youtube.com/watch?v=zRgtK2DsEXM</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zRgtK2DsEXM?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 14:15:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[If you love coding in Rust but aren’t sure how to turn that passion into a full-time career, this video is for you. We’re diving into the real-world opportunities for Rust developers, the industries that are actively adopting Rust, the skills they’re looking for, and the exact steps you can take to land your first Rust job.
+Email the Rust Community Team for access.The same compute logic runs on all targets, written entirely in regular Rust. No shader or kernel languages are used.Despite a lack of suggestions, llogiq is remarkably pleased with his choice.]]></content:encoded></item><item><title>Unifying password managers in Rust: would this trait be useful?</title><link>https://www.reddit.com/r/rust/comments/1me7xz4/unifying_password_managers_in_rust_would_this/</link><author>/u/Unlucky-Jaguar-9447</author><category>rust</category><category>reddit</category><pubDate>Thu, 31 Jul 2025 17:33:20 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I've been trying to find a TUI password manager and I hit the same wall again and again: every tool (Passeportui, Steelsafe, etc.) is tightly coupled to its own backend and assumptions. Almost none are truly extensible - and the idea of plugging in different backends into a single TUI just doesn’t exist today.So I got an idea of a small library to explore what a unified, backend-agnostic password manager interface could look like in Rust. It’s called vaultkit.Define a  trait: fetch, search, add, sync, etc.Implement backends for common systems (pass, 1Password CLI, Bitwarden API)Make it a lib for frontend devs (TUI, CLI, GUI, daemon) that work with  backend via the traitAt this stage, it’s just an idea. I’m mostly asking:Would this be useful to you?Have you seen anything like this already?Want to build or test a backend?If you have thoughts, ideas, or critiques, I’d love to hear them. And, of course, you are welcome to join: vaultkit]]></content:encoded></item><item><title>Announcing Hurl 7.0.0, a cli to run and test HTTP requests with plain text</title><link>https://www.reddit.com/r/rust/comments/1me36xa/announcing_hurl_700_a_cli_to_run_and_test_http/</link><author>/u/jcamiel</author><category>rust</category><category>reddit</category><pubDate>Thu, 31 Jul 2025 14:32:57 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Hello all, I'm super happy to announce the release of Hurl 7.0.0!Hurl is an Open Source command line tool that allow you to run and test HTTP requests with plain text. You can use it to get datas or to test  (JSON / GraphQL / SOAP) in a CI/CD pipeline.GET https://example.org/api/tests/4567 HTTP 200 [Asserts] jsonpath "$.status" == "RUNNING" # Check the status code jsonpath "$.tests" count == 25 # Check the number of items jsonpath "$.id" matches /\d{4}/ # Check the format of the id header "x-foo" contains "bar" certificate "Expire-Date" daysAfterNow > 15 ip == "2001:0db8:85a3:0000:0000:8a2e:0370:733" certificate "Expire-Date" daysAfterNow > 15 Under the hood, Hurl uses curl with Rust bindings (thanks to the awesome curl-rust crate). With curl as HTTP engine, Hurl is fast, reliable and HTTP/3 ready!In this new release, we have added:more ways to checks every step of redirectionsnew filters to templatize HTTP request and response new curl options supportedLike its HTTP engine libcurl, Hurl doesn't follow redirection by default: on a 30x response status code, Hurl returns the HTTP response and does not trigger a new request following . Redirections have to be done manually:# First request, users are redirected to /login GET https://foo.com/home HTTP 302 [Asserts] header "Location" == "/login" # We manually follow the redirection GET https://foo.com/login HTTP 200 This way, one can test each step of a redirection and insure that everything works as expected.Like , we can use  option to ask Hurl to follow redirection, either globally using the command line option:$ hurl --location foo.hurl GET https://foo.com/home [Options] location: true HTT 200 Using  (or ), Hurl obeys the redirection and will issue requests until redirection ends. Before Hurl 7.0.0, we were losing the ability to check each redirection steps using this option. Starting with Hurl 7.0.0, we're introducing the  query, that give us access to each redirection step:GET https://foo.com/home [Options] location: true HTTP 200 [Asserts] redirects count == 3 redirects nth 0 location == "https://foo.com/redirect-1" redirects nth 1 location == "https://foo.com/redirect-2" redirects nth 2 location == "https://foo.com/landing" The  query returns the list of each step followed during redirection. By combining  and filters, we are now able to check redirection steps while letting Hurl runs automatically to the final URL.Filters allow to transform data extracted from HTTP responses. In the following sample, , ,  and  are filters that process input; they can be chained to transform values in asserts and captures:GET https://example.org/api HTTP 200 [Captures] name: jsonpath "$.user.id" replaceRegex /\d/ "x" [Asserts] header "x-servers" split "," count == 2 header "x-servers" split "," nth 0 == "rec1" header "x-servers" split "," nth 1 == "rec3" jsonpath "$.books" count == 12 In Hurl 7.0.0, we've added new filters:__ and __: extracts the value of a query parameter from an URLGET https://example.org/foo HTTP 200 [Asserts] jsonpath "$.url" urlQueryParam "x" == "шеллы" This filter can be useful when you need to process URL received in payload, like a back URL.____ and ____: decodes and encodes using Base64 URL safe encoding. There is also  and  for their Base 64 encoding variants.GET https://example.org/api HTTP 200 [Asserts] jsonpath "$.token" base64UrlSafeDecode == hex,3c3c3f3f3f3e3e; ____: returns the target URL location of a redirection. Combined with the new  query, you can check each step of a redirection:GET https://example.org/step1 [Options] location: true HTTP 200 [Asserts] redirects count == 2 redirects nth 0 location == "https://example.org/step2" redirects nth 1 location == "https://example.org/step3" : converts bytes to an hexadecimal string.GET https://example.org/foo HTTP 200 [Asserts] bytes toHex == "d188d0b5d0bbd0bbd18b" : applied to a list, returns the first and last element:GET https://example.org/api HTTP 200 [Asserts] jsonpath "$..books" last jsonpath "$.title" == "Dune" Alongside  and ,  filter now supports negative index value for indexing from the end of the collection:GET https://example.org/api HTTP 200 [Asserts] jsonpath "$..books" nth -2 jsonpath "$.title" == "Dune" New Supported curl OptionsUsing libcurl as its HTTP engine, Hurl exposes many curl options. In Hurl 7.0.0, we have added these two options:: uses NTLM authentication,: compares the certificate public key to a local public key and abort connection if not match. Can be use either globally on command line or per request:GET https://foo.com/hello [Options] # With a pinned public key local file pinnedpubkey: tests_ssl/certs/server/key.pub.pem HTTP 200 There are a lot of other improvements with Hurl 7.0.0 and also a lot of bug fixes, you can check the complete list of enhancements and bug fixes in our release note.We'll be happy to hear from you, either for enhancement requests or for sharing your success story using Hurl!]]></content:encoded></item><item><title>My rust database was able to do 5 million row (full table scan) in 115ms</title><link>https://www.reddit.com/r/rust/comments/1me1dcu/my_rust_database_was_able_to_do_5_million_row/</link><author>/u/Milen_Dnv</author><category>rust</category><category>reddit</category><pubDate>Thu, 31 Jul 2025 13:19:30 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Hello everyone, I wanted to share that my custom database written from scratch in Rust, was able to scan 5 million rows in 115ms (full table scan). I am completely reworking my database.]]></content:encoded></item><item><title>How do y&apos;all design your PATCH (partial update) APIs? Do you manually map `Some`/`None` to `Set`/`Unset`?</title><link>https://www.reddit.com/r/rust/comments/1mdxqqk/how_do_yall_design_your_patch_partial_update_apis/</link><author>/u/Dec_32</author><category>rust</category><category>reddit</category><pubDate>Thu, 31 Jul 2025 10:17:05 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Say you have a model with 10 non-null fields, and you expose an API that allows partial updates on them. Apparently, in your patch payload, all fields need to be  so that the JSON can omit the fields that it doesn't want to modify. Now your back end code looks like:// assume we are using SeaORM let patch = ActiveModel { foo: payload.foo.map(Set).unwrap_or(Unset), bar: payload.bar.map(Set).unwrap_or(Unset), qux: payload.qux.map(Set).unwrap_or(Unset), //... the_end_of_universe: payload.the_end_of_universe.map(Set).unwrap_or(Unset), } Is there any way you could automate this? I know that Sea-ORM failed to (fully) derive such a pattern because you cannot tell if a  is  or , and thus you don't know if a  should be mapped to  or .I tried to implement my own -like types that distinguish  and , but  decided that whether a value is missing or not is something structs should care about (using  to handle it), and implementations of  are forbidden to do anything about it. You have  and  but never , making enum Skippable {Some(T), Undefined} impossible to function on its own.]]></content:encoded></item><item><title>My first Rust Crate - Omelet, a math library focused on graphics and physics</title><link>https://www.reddit.com/r/rust/comments/1mdnu3e/my_first_rust_crate_omelet_a_math_library_focused/</link><author>/u/Ethantl28</author><category>rust</category><category>reddit</category><pubDate>Thu, 31 Jul 2025 00:54:46 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I am very new to Rust (around 1-2 months). I am a recently graduated Games Programmer who specialises in C++, and wanted to learn Rust before it takes over the games industry.I decided the best way to begin learning was to make a maths lib. I wanted it to have some focus on games, so I chose to focus on graphic and physics calculations mainly. Methods that can be used to make a renderer and physics engine. I will continue to develop this, and I need to set up GitHub actions, however I was wondering if anybody could comment on the code in it’s current state to help me become more comfortable with Rust?I’ll put the readMe below so you can see what the project is about, and a link to the project:Omelet is a lightweight and extensible Rust math library focused on game development. Designed for both clarity and performance, Omelet provides essential vector and matrix math utilities with an emphasis on clean API design, strong documentation, and comprehensive test coverage.🧮 Vec2, Vec3, Vec4 - Fully featured vector types🧊 Mat2, Mat3, Mat4 - Matrix types for transformations⭕ Quat - Quaternions for 3D rotation📝 Thorough unit tests across all components📃 In-depth documentation with examples (cargo doc)📐 Utilities for projection, reflection, barycentric coordinates, SLERP, and more🔄 Operator overloading for intuitive syntax⚙️ (planned) SIMD acceleration for performance-critical operationsAdd Omelet to your Cargo.toml:[dependencies] omelet = {git = "https://github.com/ethantl28/omelet", tag = "v0.1.2"} Once Omelet is added to crates.io:[dependencies] omelet = "0.1.2" Note: Please check most recent version for the updated libraryImport the types you need:use omelet::vec::vec2::Vec2; use omelet::matrices::mat4::Mat4; Vector addition, dot product, and normalizationuse omelet::vec::Vec2; fn main() { let a = Vec2::new(1.0, 2.0); let b = Vec2::new(3.0, 4.0); let sum = a + b; let dot = a.dot(b); let normalized = a.normalize(); println!("{}, dot: {}, normalized: {}", sum, dot, normalized); } Vec2(4, 6), dot: 11, normalized: Vec2(0.4472136, 0.8944272)Vector cross product and reflectionuse omelet::vec::Vec3; fn main() { let a = Vec3::new(1.0, 0.0, 0.0); let b = Vec3::new(0.0, 1.0, 0.0); let cross = a.cross(b); let reflected = a.reflect(b); println!("Cross: {}", cross); println!("Reflected: {}", reflected); } Vector rotation using rotation matrixuse omelet::matrices::Mat2; fn main() { let rot = Mat2::from_rotation(std::f32::consts::FRAC_2_PI); let v = omelet::vec::Vec2::new(1.0, 0.0); let rotated = rot * v; println!("Rotated vector: {}", rotated); println!("Rotation matrix: \n{}", rot); } Rotated vector: Vec2(0.8041099, 0.59448075) Rotation matrix: [[0.8041, -0.5945], [0.5945, 0.8041]] Vector rotation using a quaternionuse omelet::quaternion::Quat; use omelet::vec::Vec3; fn main() { let axis = Vec3::new(0.0, 1.0, 0.0); let angle = std::f32::consts::FRAC_PI_2; let rotation = Quat::from_axis_angle(axis, angle); let v = Vec3::new(1.0, 0.0, 0.0); let rotated = rotation.rotate_vec3(v); println!("Rotated Vec3: {}", rotated); } Rotated Vec3: Vec3(0.000, 0.000, -1.000)use omelet::vec::Vec2; fn main() { let a = Vec2::new(1.000001, 2.000001); let b = Vec2::new(1.000002, 2.000002); assert!(a.approx_eq_eps(b, 1e-5)); println!("a is approximately equal to b within given epsilon: {}", a.approx_eq_eps(b, 1e-5)); } a is approximately equal to b within given epsilon: trueSupports standard operations (addition, subtraction, dot/cross product, normalization, projections, angle calculations, etc.)Mat2, Mat3, Mat4 fully implementedTested against edge casesMat4 documentation is ongoingFull quaternion implementation for 3D rotationIncludes SLERP, normalization, conversion to/from Euler anglesHeavily tested and documentedHow to run the documentationTo view the full documentation, run:Omelet uses Rust's built-in test framework:All modules are tested thoroughly, including edge cases and floating-point comparisons.✅ Matrix functionality parity (Mat2, Mat3, Mat4)✅ Quaternion support with full docs and tests🟨 SIMD acceleration for vector and matrix math🟨 More geometry utilities (plane intersection, AABB, etc.)├── src/ │ ├── vec/ │ │ ├── mod.rs │ │ ├── list_of_methods.txt │ │ ├── vec2.rs │ │ ├── vec2_tests.rs │ │ ├── vec3.rs │ │ ├── vec3_tests.rs │ │ ├── vec4.rs │ │ └── vec4_tests.rs │ ├── matrices/ │ │ ├── mod.rs │ │ ├── list_of_methods.txt │ │ ├── mat2.rs │ │ ├── mat2_tests.rs │ │ ├── mat3.rs │ │ ├── mat3_tests.rs │ │ ├── mat4.rs │ │ └── mat4_tests.rs │ ├── quat/ │ │ ├── mod.rs │ │ ├── list_of_methods.txt │ │ ├── quat.rs │ │ └── quat_tests.rs │ ├── lib.rs │ └── utils.rs ├── .gitignore ├── Cargo.toml ├── Cargo.lock └── README.md Want to help improve Omelet? Contributions are welcome!Code should be formatted using cargo fmtEnsure tests pass via cargo testsFor major changes, please open an issue firstFork the repo and open a pull request with your improvements.Have ideas, suggestions, or found a bug? Open an issue or start a discussion.This project is licensed under the MIT license. See LICENSE for more information.]]></content:encoded></item><item><title>Viasat is hiring 30 Rust Devs</title><link>https://www.reddit.com/r/rust/comments/1mde9ox/viasat_is_hiring_30_rust_devs/</link><author>/u/FanFabulous5606</author><category>rust</category><category>reddit</category><pubDate>Wed, 30 Jul 2025 18:23:15 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[   submitted by    /u/FanFabulous5606 ]]></content:encoded></item><item><title>Just released my first game ever - using Rust + Macroquad</title><link>https://sattva9.itch.io/the-cheese-chase</link><author>/u/Brilliant_Nobody6788</author><category>rust</category><category>reddit</category><pubDate>Wed, 30 Jul 2025 15:09:21 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Help our brave little rat collect all 5 pieces of delicious cheese from the plate on the left side of the screen! But beware - dangerous rat repellent sprays between you and your cheesy feast. One wrong move and it's game over!
+ 🎯  Move your rat from the right side of the screen to the left side to collect the cheese pieces from the plate one at a time, and return home safely. Collect all 5 pieces to win!
+  - Move rat left
+  - Move rat right
+ ⚠️  Dodge the deadly rat repellent sprays that appear across the screen. Getting hit means instant game over!
+  - Just left and right movement
+  - Navigate across the screen from right to left
+  - All 5 cheese pieces wait for you on a plate at the left end
+  - Avoid the spray zones as you cross the screen
+  - One hit and you're done!Can you help our hungry rat make the dangerous journey across the screen to claim all the cheese? The chase is on!Rat starts on the right, cheese plate on the left. Use LEFT and RIGHT arrows to navigate safely across!]]></content:encoded></item><item><title>The pest book is finally complete now!</title><link>https://github.com/pest-parser/pest/discussions/1105</link><author>/u/tomtau</author><category>rust</category><category>reddit</category><pubDate>Wed, 30 Jul 2025 12:50:44 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[https://pest.rs/book/examples/awk.html 🎉 I aimed to keep it in line with the "demonstration of the Rust ecosystem" goal, so it can also be a great introduction to Rust for beginners who are looking for a fun project to work on. It's not perfect, but that's part of the fun! It leaves room for potential language extensions (to make the AWK clone more complete) and optimizations up to the reader as a follow-up.]]></content:encoded></item><item><title>How do I avoid memory being swapped in Rust?</title><link>https://www.reddit.com/r/rust/comments/1md3puz/how_do_i_avoid_memory_being_swapped_in_rust/</link><author>/u/servermeta_net</author><category>rust</category><category>reddit</category><pubDate>Wed, 30 Jul 2025 11:10:08 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[: I have a huge array (around 70% of available memory) and I don't want it to be swapped to disk. What's the best way on modern linux to pin a vector in memory so that it doesn't get swapped by the OS?: I'm building a datastore in Rust. I have a huge custom hash table to accelerate disk lookups, and I want to keep it in memory.I'm not using a filesystem, I'm doing direct IO via the NVMe API, and I'm keeping the kernel work at a minimum because I believe that I know better than the OS what to cache.At startup I analyze the available resources and I allocate all the memory I need. The only option for further allocations is an error path, a bug or other non canonical situations.At the moment I simply have no swap partition in production, and on development machines I have way more RAM than I need, hence why I never experience swapping. But this does not prevent a catastrophic case where an error will deplete all resources.I read I could use a custom allocator and use a syscall like `mlock` or `mlockall`, but it's a bit beyond my skill level. Maybe I could use the standard allocator, and then get a pointer to the region of memory and call `mlock` on it?]]></content:encoded></item><item><title>Nutype 0.6.2 released</title><link>https://github.com/greyblake/nutype/releases/tag/v0.6.2</link><author>/u/greyblake</author><category>rust</category><category>reddit</category><pubDate>Wed, 30 Jul 2025 06:34:27 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[ is a proc macro that adds _ and  to newtypes, ensuring values always pass checks.This release comes with `derive_unsafe(..)` attribute, which allows to derive third party traits that nutype is not aware of. use nutype::nutype; #[nutype(derive_unsafe(utoipa::ToSchema))] struct Username(String); ]]></content:encoded></item><item><title>This Week in Rust 610</title><link>https://this-week-in-rust.org/blog/2025/07/30/this-week-in-rust-610/</link><author>TWiR Contributors</author><category>This week in Rust</category><category>dev</category><category>rust</category><pubDate>Wed, 30 Jul 2025 04:00:00 +0000</pubDate><source url="https://this-week-in-rust.org/">This Week in Rust</source><content:encoded><![CDATA[This week's crate is qop, a standalone SQL migration tool.An important step for RFC implementation is for people to experiment with the
+implementation and give feedback, especially before stabilization.If you are a feature implementer and would like your RFC to appear in this list, add a
+ label to your RFC along with a comment providing testing instructions and/or
+guidance on which aspect(s) of the feature need testing.Let us know if you would like your feature to be tracked as a part of this list.If you are a feature implementer and would like your RFC to appear on the above list, add the new 
+label to your RFC along with a comment providing testing instructions and/or guidance on which aspect(s) of the feature
+need testing.Always wanted to contribute to open-source projects but did not know where to start?
+Every week we highlight some tasks from the Rust community for you to pick and get started!Some of these tasks may also have mentors available, visit the task page for more information.Are you a new or experienced speaker looking for a place to share something cool? This section highlights events that are being planned and are accepting submissions to join their event as a speaker.A week with lots of mixed results, including a few benchmarks that appear to be
+newly bimodal, which made some of the results look closer to noise than signal.
+Overall, however, the week ended as a slight improvement.1 Regressions, 2 Improvements, 9 Mixed; 2 of them in rollups
+38 artifact comparisons made in totalNo RFCs were approved this week.Every week, the team announces the 'final comment period' for RFCs and key PRs
+which are reaching a decision. Express your opinions now.Let us know if you would like your PRs, Tracking Issues or RFCs to be tracked as a part of this list.Rusty Events between 2025-07-30 - 2025-08-27 🦀If you are running a Rust event please add it to the calendar to get
+it mentioned here. Please remember to add a link to the event too.
+Email the Rust Community Team for access.The same compute logic runs on all targets, written entirely in regular Rust. No shader or kernel languages are used.Despite a lack of suggestions, llogiq is remarkably pleased with his choice.]]></content:encoded></item><item><title>lcnr: adding implicit auto-trait bounds is hard</title><link>https://lcnr.de/blog/2025/07/28/implicit-auto-trait-bounds.html</link><author>/u/C5H5N5O</author><category>rust</category><category>reddit</category><pubDate>Wed, 30 Jul 2025 00:00:37 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[adding implicit auto-trait bounds is hard
+    
+Waddup gamers, there are a lot of desirable extensions for Rust which boil down to adding a new implicit/default trait bound.some sort of  bound for improved linear type support/to avoid dropping stuff that is something something  to supercede Adding an implicit auto trait bound whose impls do not stop at pointer-indirection has a prohibitively high performance cost.Computing  is generally quite cheap, even for very complex types as even the most gnarly types tend to be fairly shallow. Their fields end up quite quickly relying on ,  or other kinds of references. Checking whether the following type is  is trivial. Checking whether  is  is still comparatively fast, even though it’s an outlier. Even with its large number of fields the amount of types hidden behind indirection is significantly greater.Proving a comparatively rarely checked auto trait for  added a 7 second performance regression to our bootstrap builds, causing us to add explicit non-recursive impls.As a more informative datapoint, @Bryanskiy actually went ahead and added support for additional default auto-traits to rustc. This is now disabled by default. Initial testing by them caused building the compiler itself to take 33 minutes instead of 7.We’ve recently also landed support for . This is one of the “good traits” as it stops at indirection and has the same behavior as . It resulted in an up-to 10% performance impact, even though it mostly piggy-packed on the fact that it’s implied by stuff being  and the fact that checking -ness is comparatively easy: comment. is able to avoid looking at most fields:we don’t care about indirection, so we don’t need to recurse into e.g.  and we only need to look at the last fields, as all other fields are required to be  for well-formedness. Checking whether a struct implements an auto trait needs to check all fields.We’ve actually merged support for additional implicit trait bounds. To test the performance impact, we need to add the following to  and enable -Zexperimental-default-bounds.Adding this to a leaf crate is insufficient as we need this trait to be a where-bound of all methods and items of the standard library to get the full perf impact.Even right now this is largely a linear performance hit. We are simply doing more work to prove the additional trait bounds. It is not avoidable by e.g. waiting for . Enabling  resulted in the same kind of performance regressions there as with the old solver.Annoyingly, we are only able to cache the “head” of cycles, so if we’ve got , which depends on Option<Box<List<T>>: Send, which depends on  again, we are not able to cache the result of Option<Box<List<T>>: Send as it’s not a cycle head. We only cache  and then have to separately compute the cycle if we start by proving Option<Box<List<T>>: Send. This is likely a significant part of the performance cost of proving auto trait bounds for large types. Caching cycle participants is not possible for two reasons which may both be solveable, but require a lot of effort:incremental query dependency tracking zulipthe result of evaluating cycles depends on their root, but caching must not be observable: UI testThere are a few other hard/blocking issues we need to resolve if we want to add additional implicit trait bounds.If the implicit traits don’t stop at indirection, some crates are forced to increase their  to avoid errors.These don’t seem as fundamental as the performance hit however. I expect that we can avoid these given enough time and effort.if you find any typos or errors in this post, please pm me on zulip, discord or cohost]]></content:encoded></item><item><title>Once again, Rust is the most admired language in the 2025 Stack Overflow survey!</title><link>https://survey.stackoverflow.co/2025/technology/#admired-and-desired</link><author>/u/ErichDonGubler</author><category>rust</category><category>reddit</category><pubDate>Tue, 29 Jul 2025 18:28:13 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Most professional developers who indicated they used Google Gemini last year, are interested in other AI-oriented subjects like "Large Language Model" or "RAG", and  tools like "Ollama".This pattern holds true for both Professional Developers and those Learning to Code, showing that developers at all levels are actively exploring the rapidly evolving AI landscape rather than committing to a single tool or platform.]]></content:encoded></item><item><title>You Are The BIOS Now: Building A Hypervisor In Rust With KVM</title><link>https://yeet.cx/blog/you-are-the-bios-now</link><author>/u/R_E_T_R_O</author><category>rust</category><category>reddit</category><pubDate>Tue, 29 Jul 2025 15:59:10 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[In today’s episode of The Cursed Systems Programming Show™ where the safety guarantees are fake and the  blocks are real, we’re going to write  in the most cursed way imaginable.Forget normal , let’s tap into something even scarier: x86’s virtual machine extensions and write a Type-II hypervisor in Rust.Just enough  to get audited by the compiler and possibly the IRS.After all, this is systems programming, where the guest is real, the devices are imaginary, and the pain is shared.Stepping Into The SingularityBefore we fire up the syringe with raw bytes and scream into fake hardware, we need to open a wormhole into the CPU itself, but not directly, because we’re a Type-II hypervisor living in user space.Instead, we are going to summon the KVM: Linux’s built-in virtualization layer.KVM acts as a proxy between user space and a class of privileged instructions known as VMX (on Intel) or SVM (on AMD)  writing a kernel module, legally changing your name to  or whispering “ring zero” into a cold boot and hoping the kernel answers.Once activated, the KVM throws your CPU into a parallel dimension where code thinks it’s running on bare metal, but you’re standing right beside it in user space intercepting its every move.Some call it a sandbox, I call it a dream machine because once you step in, nothing is real. You’re living in a byte-code black hole surrounded by warped spacetime, fake hardware, and the ghost of  past.Opening The Gates To HellAt a high level, we summon the KVM by cracking open  and shouting s at it until it is convinced our program is worthy of holding a VCPU file descriptor ().A  is a data structure and control loop managed by the KVM and represents one “core” inside the virtual machine. You can think of it like hiring an unpaid intern to sit in user-space and hallucinate that it’s real hardware.To keep things only  we’ll use the  crate to paper over some sharp edges and encapsulate everything into a struct called pub struct CursedVm {
+    vcpu: kvm_ioctls::VcpuFd,
+    ...
+}
 
-Join the Rust Live Accelerator: https://letsgetrusty.com/join
+impl CursedVm {
+    pub fn new() -> anyhow::Result<Self> {
+        // Open KVM
+        let kvm = Kvm::new()?;
 
-Chapter:
-0:00 Intro
-0:43 Security Industry
-2:56 Backend Infrastructure
-4:00 Embedded
-5:26 Web3
-8:06 AI]]></content:encoded></item><item><title>All color is best-effort</title><link>https://fasterthanli.me/articles/all-color-is-best-effort</link><author>Amos Wenger</author><category>dev</category><category>rust</category><category>blog</category><pubDate>Fri, 27 Jun 2025 07:30:00 +0000</pubDate><source url="https://fasterthanli.me/index.xml">Faster than time blog</source><content:encoded><![CDATA[I do not come to you with answers today, but rather some observations and a lot of questions.Recently I was editing some video and I noticed this:Not what the finger is pointing at — the dots.Here are the separate layers this image is made up of: the background is a stock image
-I’ve licensed from Envato Elements:Because I use it as a background image, I’ve cranked down the exposition in the Color tab:]]></content:encoded></item></channel></rss>
+        // Create a VM
+        let vm = kvm.create_vm()?;
+
+        // Create VCPU
+        let vcpu = vm.create_vcpu(0)?;
+
+        // ...
+
+        let mut me = Self { vcpu, ... };
+
+        // ...
+
+        Ok(me)
+    }
+}
+With this short and simple snippet: The KVM has handed our hypervisor a VCPU which it can puppet from user space.There’s just one problem: A  gives our VM the illusion of power, but without memory, it is about as valuable as a half-charged vape with no idea how to segfault properly.To fix that, we’ll use  to carve out a slab of page-aligned memory and then dress it up as  by placing it inside a kvm_userspace_memory_region struct.Once it’s in costume, we  it over the KVM fence.const GUEST_PHYS_ADDR: u64 = 0x1000;
+const GUEST_SIZE: usize = 256 << 20;
+
+pub struct CursedVm {
+    vcpu: kvm_ioctls::VcpuFd,
+    guest_mem: NonNull<c_void>,
+}
+
+impl CursedVm {
+    pub fn new() -> anyhow::Result<Self> {
+        // ... Get a VCPU ...
+
+        // Allocate guest memory
+        let guest_mem = unsafe {
+            mman::mmap_anonymous(
+                None,
+                GUEST_SIZE.try_into()?,
+                mman::ProtFlags::PROT_READ | mman::ProtFlags::PROT_WRITE,
+                mman::MapFlags::MAP_PRIVATE | mman::MapFlags::MAP_ANONYMOUS,
+            )?
+        };
+
+        // Set up memory region
+        let mem_region = kvm_bindings::kvm_userspace_memory_region {
+            guest_phys_addr: GUEST_PHYS_ADDR,
+            memory_size: GUEST_SIZE as u64,
+            userspace_addr: guest_mem.as_ptr() as u64,
+            ..Default::default()
+        };
+
+        // ioctl it over the fence.
+        unsafe {
+            vm.set_user_memory_region(mem_region)?;
+        }
+
+        let mut me = Self { vcpu, guest_mem };
+
+        // ...
+
+        Ok(me)
+    }
+}
+When we call  that’s what gives the KVM the go ahead to wire that mapped region from our hypervisors virtual address space into the guest’s “physical” address space. From the guest’s point of view, it looks like genuine RAM.By now, we have duct-taped enough s together where the VM has a CPU  memory , and is ready to boot into something terrible.Welcome to 1978: Real Mode RevivalOne important thing to remember: When x86 wakes up, it thinks it’s still 1978.It boots in , a surreal 16-bit LARP where:Memory is limited to 1MB.And  is still a completely reasonable thing to do.But unlike a real machine, our guest doesn’t even get a BIOS to hold its hand. There’s no firmware, no boot-loader, no magic  only lies and s.To snap our VM out of its nostalgic hallucination, we need to  (read: violently, with a crowbar) shove it into a sane execution state.Copying code into guest memory and point  at it.Initializing the general purpose registers (,  , …)Enabling protected mode, PAE, and long mode via , , and And finally faking a global descriptor table (GDT) and initializing the segment selectors, because real mode still thinks segmentation is a foundational cosmic truth when in reality its just the asbestos of x86: we  it’s bad, but it’s , and removing it might actually make things worse.Sanity is  restored with 3  methods that run just before we hand ownership back to its caller.impl CursedVm {
+    pub fn new() -> anyhow::Result<Self> {
+        // ... Get a VCPU and allocate / register guest memory ...
+
+        let mut me = Self { vcpu, guest_mem };
+
+        me.setup_long_mode()?;
+        me.map_pages()?;
+        me.init_registers()?;
+
+        Ok(me)
+    }
+}
+Entering long mode from real mode is a bit like slapping around an analog TV hoping the picture finally stabilizes.There’s no real BIOS or stage one boot loader, so it is entirely on us to convince the CPU that all the mandatory relics of the x86 boot process have somehow already happened.We need to handcraft a GDT, populate the segment registers, and flip ancient flags inside of , , and const GUEST_PHYS_ADDR: u64 = 0x1000;
+const GDT_OFFSET: usize = 0x0; // We just throw it at the start, but you can move it
+
+impl CursedVM {
+    fn setup_long_mode(&mut self) -> anyhow::Result<()> {
+        // Get current special registers
+        let mut sregs = self.vcpu.get_sregs()?;
+
+        // Set up GDT for long mode
+        sregs.gdt.base = GUEST_PHYS_ADDR + GDT_OFFSET as u64;
+        sregs.gdt.limit = 23; // 3 entries * 8 bytes - 1
+
+        // Write GDT entries to guest memory
+        //
+        // Our VM is Ring-0 Only!
+        unsafe {
+            let gdt_ptr = self
+                .guest_mem
+                .as_ptr()
+                .add(GDT_OFFSET) as *mut u64;
+
+            // Null descriptor
+            *gdt_ptr.add(0) = 0x0000000000000000;
+            // Code segment (64-bit, executable, present)
+            *gdt_ptr.add(1) = 0x00209A0000000000;
+            // Data segment (64-bit, writable, present)
+            *gdt_ptr.add(2) = 0x0000920000000000;
+        }
+
+        // Configure code segment for long mode
+        sregs.cs.base = 0;               // Base address for the segment (ignored in long mode)
+        sregs.cs.limit = 0xffffffff;     // Limit (also ignored in long mode)
+        sregs.cs.selector = 1 << 3;      // GDT index
+        sregs.cs.present = 1;            // Segment is present
+        sregs.cs.type_ = 11;             // Code: execute/read, accessed
+        sregs.cs.dpl = 0;                // Descriptor privilege level (kernel ring 0)
+        sregs.cs.db = 0;                 // Must be 0 in long mode (64-bit code)
+        sregs.cs.s = 1;                  // Descriptor type: 1 = Code / Data (0 = system)
+        sregs.cs.l = 1;                  // Long mode active (64-bit segment)
+        sregs.cs.g = 1;                  // Granularity = 4 KB units (ignored in long mode, but set anyway)
+
+        // Configure data segments
+        sregs.ds.base = 0;               // Base address for the segment (ignored in long mode)
+        sregs.ds.limit = 0xffffffff;     // Limit (also ignored in long mode)
+        sregs.ds.selector = 2 << 3;      // GDT index
+        sregs.ds.present = 1;            // Segment is present
+        sregs.ds.type_ = 3;              // Data: read/write, accessed
+        sregs.ds.dpl = 0;                // Kernel mode
+        sregs.ds.db = 1;                 // 32-bit segment (ignored in 64-bit mode)
+        sregs.ds.s = 1;                  // Code/data segment
+        sregs.ds.g = 1;                  // Granularity = 4 KiB units
+
+        // Replicate for the other segments.
+        sregs.es = sregs.ds;
+        sregs.fs = sregs.ds;
+        sregs.gs = sregs.ds;
+        sregs.ss = sregs.ds;
+
+        // Enable long mode
+        sregs.efer |= 0x500;     // LME (Long Mode Enable) + LMA (Long Mode Active)
+        sregs.cr0 |= 0x80000001; // PG (Paging) + PE (Protection Enable)
+        sregs.cr4 |= 0x20;       // PAE (Physical Address Extension)
+
+        // Set special registers
+        self.vcpu.set_sregs(&sregs)?;
+
+        Ok(())
+     }
+ }
+To keep things simple (and the memory management unit happy), we identity map the first 1 GB of guest memory using 2 MB large pages.That means virtual addresses match physical addresses exactly. No translation needed.Now the guest can touch the first gigabyte of RAM without spiraling into a triple fault.const PML4_OFFSET: usize = 0x1000;
+const PAGE_TABLE_SIZE: usize = 0x1000;
+
+impl CursedVm {
+    fn map_pages(&mut self) -> anyhow::Result<()> {
+        unsafe {
+            // Zero out the entire area of memory.
+            ptr::write_bytes(self.guest_mem.as_ptr().add(PML4_OFFSET), 0, 3 * PAGE_TABLE_SIZE);
+
+            // PML4 entry - points to PDPT
+            let pml4 = self.guest_mem.as_ptr().add(PML4_OFFSET) as *mut u64;
+
+            // Present + Writable
+            *pml4 = (GUEST_PHYS_ADDR + PML4_OFFSET as u64 + PAGE_TABLE_SIZE as u64) | 0x3;
+
+            // PDPT entry - points to PD
+            let pdpt = self.guest_mem.as_ptr().add(PML4_OFFSET + PAGE_TABLE_SIZE) as *mut u64;
+
+            // Present + Writable
+            *pdpt = (GUEST_PHYS_ADDR + PML4_OFFSET as u64 + 2 * PAGE_TABLE_SIZE as u64) | 0x3;
+
+            let pd = self.guest_mem.as_ptr().add(PML4_OFFSET + 2 * PAGE_TABLE_SIZE) as *mut u64;
+
+            // Mark every entry in the page table as: Present + Writable + Large Page
+            (0..512).for_each(|i| *pd.add(i) = (i << 21) as u64 | 0x83);
+        }
+
+        // Set CR3 to point to PML4
+        let mut sregs = self.vcpu.get_sregs()?;
+
+        sregs.cr3 = GUEST_PHYS_ADDR + PML4_OFFSET as u64;
+
+        self.vcpu.set_sregs(&sregs)?;
+
+        Ok(())
+    }
+}
+Initializing The General Purpose RegistersOnce we have finished gaslighting the hardware into thinking it’s modern:We initialize  ,  and  and provide an interface for copying code into the guest’s address space.const GUEST_PHYS_ADDR: u64 = 0x1000;
+const GUEST_SIZE: usize = 256 << 20; // Needs to be enough to fit everything.
+const GDT_OFFSET: usize = 0x0; // We just throw it at the start, but you can move it
+const PML4_OFFSET: usize = 0x1000;
+const PAGE_TABLE_SIZE: usize = 0x1000;
+const PAGE_SIZE: usize = 1 << 21;
+const CODE_OFFSET: usize = PML4_OFFSET + 3 * PAGE_TABLE_SIZE;
+
+impl CursedVm {
+    fn init_registers(&mut self) -> anyhow::Result<()> {
+        let mut regs: kvm_bindings::kvm_regs = unsafe { mem::zeroed() };
+
+        // Set up the code's entrypoint and page align the stack.
+        regs.rip = GUEST_PHYS_ADDR + CODE_OFFSET as u64;
+        regs.rsp = (GUEST_PHYS_ADDR + GUEST_SIZE as u64) & !(PAGE_SIZE as u64 - 1);
+        regs.rbp = (GUEST_PHYS_ADDR + GUEST_SIZE as u64) & !(PAGE_SIZE as u64 - 1);
+
+        regs.rflags = 1 << 1; // Reserved bit that must be set
+
+        self.vcpu.set_regs(&regs)?;
+
+        Ok(())
+    }
+
+    pub fn write_guest_code(&mut self, code: &[u8]) {
+        unsafe {
+            ptr::copy_nonoverlapping(
+                code.as_ptr(),
+                self.guest_mem.as_ptr().add(CODE_OFFSET) as *mut _,
+                code.len(),
+            );
+        }
+    }
+}
+Banging Your Head Against The Desk Until Something HappensArmed with memory, registers, and a working illusion of modernity, our VM is finally ready to . But what?How do we actually  the guest?How do we  it when it starts screaming through  and realizes BIOS isn’t coming to save it?Enter: CursedVm::run_with_io_handlerimpl CursedVm {
+  pub fn run_with_io_handler<F>(&mut self, mut io_handler: F) -> anyhow::Result<()>
+    where
+        F: FnMut(u16, &[u8]),
+    {
+        loop {
+            match self.vcpu.run()? {
+                VcpuExit::IoOut(port, data) => {
+                    io_handler(port, data);
+                }
+                exit => {
+                    return Err(anyhow::anyhow!("Unhandled exit reason: {:?}", exit));
+                }
+            }
+        }
+    }
+}
+This function kicks off the guest’s execution loop and listens for I/O exits, specifically  instructions which we treat as the guest’s only way of communicating with the outside world.Think of I/O ports as x86’s equivalent of a :One end lives entirely inside the guest’s imagination, the other in our Rust hypervisor, bonded together by nothing but trust, ‘s, and the unresolved trauma of 1970s computer engineering decisions.Terminal Illusions: Giving the Guest A Way To Cry For HelpSince there’s no frame buffer, serial port, or , the only way our guest can speak to us is by pressing on a janky piano key labeled  and hoping we hear it in user space.use std::io;
+use std::io::Write;
+use std::sync::mpsc;
+use std::thread;
+
+mod vm;
+
+fn main() -> anyhow::Result<()> {
+    let (tx, rx) = mpsc::channel();
+
+    ctrlc::set_handler(move || {
+        tx.send(()).ok();
+    })?;
+
+    // ... Obtain the guest code as a slice of bytes ...
+
+    thread::spawn(move || {
+        if let Ok(mut vm) = vm::CursedVm::new() {
+            vm.write_guest_code(&guest_code);
+            vm.run_with_io_handler(|port, data| {
+                if port == 0x10 && data.len() == 1 {
+                    print!("{}", data[0] as char);
+                    io::stdout().flush().ok();
+                }
+            })
+            .ok();
+        }
+    });
+
+    // Wait here until signal.
+    rx.recv().ok();
+
+    Ok(())
+}
+This whole I/O pipeline is less like hardware and more like a deranged group chat between the guest, the kernel, our hypervisor and its controlling Guest (🧑‍🚀): “Alright chat, "KVM (🧱): (Hypervisor (🦀): "Ah yes, the ol’ . Classic.”TTY (🎨): Saying “Hello, World!” from the AbyssIt’s time to inject some code and see if this cursed contraption can speak.We  write a linker script and configure  to compile a proper binary then boot into something that resembles structure.But let’s be real: We’re past the point of Instead we’ll write a guest program,  in Our program will begin by pushing  encoded as two 64-bit values  and  onto the guest’s stack to re-purpose it as a poor man’s Once the data is on the stack, we point  at , loop over the stack byte-by-byte, sending each character to I/O port  until we hit a . Then we reset and do it again.fn main() -> anyhow::Result<()> {
+    // ... Instantiate the VM and setup Ctrl+C to exit ...
+
+    //     xor %rax, %rax                ; Zero %rax (not necessary)                        [0x00]
+    //     push %rax                     ; Pad the stack with zeros (not necessary)         [0x03]
+    //     mov $0x00000a21646c726f, %rax ; Load 'o', 'r', 'l', 'd', '!', '\n', '\0', '\0'   [0x04]
+    //     push %rax                     ; "orld\n\0\0" is now on the stack                 [0x0e]
+    //     mov $0x57202c6f6c6c6548, %rbx ; Load 'H', 'e', 'l', 'l', 'o', ',', ' ', 'W'      [0x0f]
+    //     push %rbx                     ; "Hello, W" is now on the stack                   [0x19]
+    //     mov %rsp, %rsi                ; %rsi now points at the top of the stack          [0x1a]
+    // .loop:
+    //     mov (%rsi), %al               ; Read a byte from %rsi                            [0x1d]
+    //     test %al, %al                 ; Set the flags to test if its zero                [0x1f]
+    //     je .reset                     ; If it is zero we are done                        [0x21]
+    //     out %al, $0x10                ; Write out the byte to I/O port 0x10              [0x23]
+    //     inc %rsi                      ; Move %rsi to the next byte on the stack          [0x25]
+    //     jmp .loop                     ; Do it again                                      [0x28]
+    // .reset
+    //     mov %rsp, %rsi                ; Reset %rsi to point back to the top of the stack [0x2a]
+    //     jmp .loop                                                                        [0x2d]
+    //     nop                           ; For the purposes of %rip-relative offset calcs   [0x2f]
+    let guest_code = [
+        0x48, 0x31, 0xc0,                                           // [0x00]
+        0x50,                                                       // [0x03]
+        0x48, 0xb8, 0x6f, 0x72, 0x6c, 0x64, 0x21, 0x0a, 0x00, 0x00, // [0x04]
+        0x50,                                                       // [0x0e]
+        0x48, 0xbb, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x2c, 0x20, 0x57, // [0x0f]
+        0x53,                                                       // [0x19]
+        0x48, 0x89, 0xe6,                                           // [0x1a]
+        0x8a, 0x06,                                                 // [0x1d]
+        0x84, 0xc0,                                                 // [0x1f]
+        0x74, 0x07,                                                 // [0x21]
+        0xe6, 0x10,                                                 // [0x23]
+        0x48, 0xff, 0xc6,                                           // [0x25]
+        0xeb, 0xf3,                                                 // [0x28]
+        0x48, 0x89, 0xe6,                                           // [0x2a]
+        0xeb, 0xee,                                                 // [0x2d]
+        0x90,                                                       // [0x2f]
+    ];
+
+    // ... The VM execution loop
+
+}
+This is the part where you realize: you now control your own parallel universe. From userspace. No kernel modules. No permissions. Just the green pastures of Ring-0, identity mapped virtual addresses, and the serene horror of knowing Measuring the Madness: Observability in the VoidAt this point, there’s only one reasonable thing left to do: Enter yeet: our extremely normal performance tool for extremely cursed software.In just a few clicks and under 10 seconds of setup, we can…Inspect in real-time how long the  thread spent spinning in byte code hellWrite and deploy a custom  program to visualize, in real time, the number of s per second handled by the  thread, complete with an AI-generated-title.You can check out more of our recipes here.If you made it this far: congratulations, you’re now legally 5%  and 95% . Take a nap, hydrate, and maybe don’t open  again without supervision.Or do. I’m not your kernel.use std::io;
+use std::io::Write;
+use std::sync::mpsc;
+use std::thread;
+
+mod vm;
+
+fn main() -> anyhow::Result<()> {
+    let (tx, rx) = mpsc::channel();
+
+    ctrlc::set_handler(move || {
+        tx.send(()).ok();
+    })?;
+
+    //     xor %rax, %rax                ; Zero %rax (not necessary)                        [0x00]
+    //     push %rax                     ; Pad the stack with zeros (not necessary)         [0x03]
+    //     mov $0x00000a21646c726f, %rax ; Load 'o', 'r', 'l', 'd', '!', '\n', '\0', '\0'   [0x04]
+    //     push %rax                     ; "orld\n\0\0" is now on the stack                 [0x0e]
+    //     mov $0x57202c6f6c6c6548, %rbx ; Load 'H', 'e', 'l', 'l', 'o', ',', ' ', 'W'      [0x0f]
+    //     push %rbx                     ; "Hello, W"         is now on the stack           [0x19]
+    //     mov %rsp, %rsi                ; %rsi now points at the top of the stack          [0x1a]
+    // .loop:
+    //     mov (%rsi), %al               ; Read a byte from %rsi                            [0x1d]
+    //     test %al, %al                 ; Set the flags to test if its zero                [0x1f]
+    //     je .reset                     ; If it is zero we are done                        [0x21]
+    //     out %al, $0x10                ; Write out the byte to I/O port 0x10              [0x23]
+    //     inc %rsi                      ; Move %rsi to the next byte on the stack          [0x25]
+    //     jmp .loop                     ; Do it again                                      [0x28]
+    // .reset
+    //     mov %rsp, %rsi                ; Reset %rsi to point back to the top of the stack [0x2a]
+    //     jmp .loop                                                                        [0x2d]
+    //     nop                           ; For the purposes of %rip-relative offset calcs   [0x2f]
+    let guest_code = [
+        0x48, 0x31, 0xc0,                                           // [0x00]
+        0x50,                                                       // [0x03]
+        0x48, 0xb8, 0x6f, 0x72, 0x6c, 0x64, 0x21, 0x0a, 0x00, 0x00, // [0x04]
+        0x50,                                                       // [0x0e]
+        0x48, 0xbb, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x2c, 0x20, 0x57, // [0x0f]
+        0x53,                                                       // [0x19]
+        0x48, 0x89, 0xe6,                                           // [0x1a]
+        0x8a, 0x06,                                                 // [0x1d]
+        0x84, 0xc0,                                                 // [0x1f]
+        0x74, 0x07,                                                 // [0x21]
+        0xe6, 0x10,                                                 // [0x23]
+        0x48, 0xff, 0xc6,                                           // [0x25]
+        0xeb, 0xf3,                                                 // [0x28]
+        0x48, 0x89, 0xe6,                                           // [0x2a]
+        0xeb, 0xee,                                                 // [0x2d]
+        0x90,                                                       // [0x2f]
+    ];
+
+    thread::spawn(move || {
+        if let Ok(mut vm) = vm::CursedVm::new() {
+            vm.write_guest_code(&guest_code);
+            vm.run_with_io_handler(|port, data| {
+                if port == 0x10 && data.len() == 1 {
+                    print!("{}", data[0] as char);
+                    io::stdout().flush().ok();
+                }
+            })
+            .ok();
+        }
+    });
+
+    // Wait here until signal.
+    rx.recv().ok();
+
+    Ok(())
+}
+use kvm_ioctls::{Kvm, VcpuExit};
+use nix::sys::mman;
+use std::ffi::c_void;
+use std::mem;
+use std::ptr::{self, NonNull};
+
+const GUEST_PHYS_ADDR: u64 = 0x1000;
+const GUEST_SIZE: usize = 256 << 20;
+const GDT_OFFSET: usize = 0x0;
+const PML4_OFFSET: usize = 0x1000;
+const PAGE_TABLE_SIZE: usize = 0x1000;
+const PAGE_SIZE: usize = 1 << 21;
+const CODE_OFFSET: usize = PML4_OFFSET + (3 * PAGE_TABLE_SIZE);
+
+/* Guest Memory Layout:
+ *
+ *  GUEST_PHYS_ADDR --> +-------------------------+
+ *                      |        Available        |
+ *    + GDT_OFFSET  --> +-------------------------+
+ *                      | Global Descriptor Table |
+ *    + PML4_OFFSET --> +-------------------------+
+ *                      |                         |
+ *                      |       Page Tables       |
+ *                      |                         |
+ *    + CODE_OFFSET --> +-------------------------+ <-- %rip
+ *                      |                         |
+ *                      |          Code           |
+ *                      |                         |
+ *                      +-------------------------+
+ *                      |                         |
+ *                      |                         |
+ *                      |        Available        |
+ *                      |                         |
+ *                      |                         |
+ *                      +-------------------------+ <-- %rsp
+ *                      |                         |
+ *                      |          Stack          |
+ *                      |                         |
+ *     + GUEST_SIZE --> +-------------------------+ <-- %rbp
+ */
+
+pub struct CursedVm {
+    vcpu: kvm_ioctls::VcpuFd,
+    guest_mem: NonNull<c_void>,
+}
+
+impl CursedVm {
+    pub fn new() -> anyhow::Result<Self> {
+        // Open KVM
+        let kvm = Kvm::new()?;
+
+        // Create VM
+        let vm = kvm.create_vm()?;
+
+        // Create VCPU
+        let vcpu = vm.create_vcpu(0)?;
+
+        // Allocate guest memory
+        let guest_mem = unsafe {
+            mman::mmap_anonymous(
+                None,
+                GUEST_SIZE.try_into()?,
+                mman::ProtFlags::PROT_READ | mman::ProtFlags::PROT_WRITE,
+                mman::MapFlags::MAP_PRIVATE | mman::MapFlags::MAP_ANONYMOUS,
+            )?
+        };
+
+        // Set up memory region
+        let mem_region = kvm_bindings::kvm_userspace_memory_region {
+            guest_phys_addr: GUEST_PHYS_ADDR,
+            memory_size: GUEST_SIZE as u64,
+            userspace_addr: guest_mem.as_ptr() as u64,
+            ..Default::default()
+        };
+
+        unsafe {
+            vm.set_user_memory_region(mem_region)?;
+        }
+
+        let mut me = Self { vcpu, guest_mem };
+
+        me.setup_long_mode()?;
+        me.map_pages()?;
+        me.init_registers()?;
+
+        Ok(me)
+    }
+
+    fn setup_long_mode(&mut self) -> anyhow::Result<()> {
+        // Get current special registers
+        let mut sregs = self.vcpu.get_sregs()?;
+
+        // Set up GDT for long mode
+        sregs.gdt.base = GUEST_PHYS_ADDR + GDT_OFFSET as u64;
+        sregs.gdt.limit = 23; // 3 entries * 8 bytes - 1
+
+        // Write GDT entries to guest memory
+        //
+        // Our VM is Ring-0 Only!
+        unsafe {
+            let gdt_ptr = self.guest_mem.as_ptr().add(GDT_OFFSET) as *mut u64;
+
+            // Null descriptor
+            *gdt_ptr.add(0) = 0x0000000000000000;
+            // Code segment (64-bit, executable, present)
+            *gdt_ptr.add(1) = 0x00209A0000000000;
+            // Data segment (64-bit, writable, present)
+            *gdt_ptr.add(2) = 0x0000920000000000;
+        }
+
+        // Configure code segment for long mode
+        sregs.cs.base = 0; // Base address for the segment (ignored in long mode)
+        sregs.cs.limit = 0xffffffff; // Limit (also ignored in long mode)
+        sregs.cs.selector = 1 << 3; // GDT index
+        sregs.cs.present = 1; // Segment is present
+        sregs.cs.type_ = 11; // Code: execute/read, accessed
+        sregs.cs.dpl = 0; // Descriptor privilege level (kernel ring 0)
+        sregs.cs.db = 0; // Must be 0 in long mode (64-bit code)
+        sregs.cs.s = 1; // Descriptor type: 1 = Code / Data (0 = system)
+        sregs.cs.l = 1; // Long mode active (64-bit segment)
+        sregs.cs.g = 1; // Granularity = 4 KB units (ignored in long mode, but set anyway)
+
+        // Configure data segments
+        sregs.ds.base = 0; // Base address for the segment (ignored in long mode)
+        sregs.ds.limit = 0xffffffff; // Limit (also ignored in long mode)
+        sregs.ds.selector = 2 << 3; // GDT index
+        sregs.ds.present = 1; // Segment is present
+        sregs.ds.type_ = 3; // Data: read/write, accessed
+        sregs.ds.dpl = 0; // Kernel mode
+        sregs.ds.db = 1; // 32-bit segment (ignored in 64-bit mode)
+        sregs.ds.s = 1; // Code/data segment
+        sregs.ds.g = 1; // Granularity = 4 KiB units
+
+        // Replicate for the other segments.
+        sregs.es = sregs.ds;
+        sregs.fs = sregs.ds;
+        sregs.gs = sregs.ds;
+        sregs.ss = sregs.ds;
+
+        // Enable long mode
+        sregs.efer |= 0x500; // LME (Long Mode Enable) + LMA (Long Mode Active)
+        sregs.cr0 |= 0x80000001; // PG (Paging) + PE (Protection Enable)
+        sregs.cr4 |= 0x20; // PAE (Physical Address Extension)
+
+        // Set special registers
+        self.vcpu.set_sregs(&sregs)?;
+
+        Ok(())
+    }
+
+    fn map_pages(&mut self) -> anyhow::Result<()> {
+        /* We are going to layout the guest's memory map in the following way:
+         *
+         * 0x0000000000000000 +-------------------+
+         *                    |                   |
+         *                    |  Identity Mapped  |
+         *                    |                   |
+         * 0x000000003FFFFFFF +-------------------+
+         *                    |                   |
+         *                    |                   |
+         *                    |                   |
+         *                    |    Don't Care     |
+         *                    |                   |
+         *                    |                   |
+         *                    |                   |
+         * 0xFFFFFFFFFFFFFFFF +-------------------+
+         *
+         * We will use large pages (2 MB) so 64-bit virtual addresses will
+         * be segmented like so:
+         *
+         * +------------+------------+------------+------------------------------+
+         * |-- 9 bits --|-- 9 bits --|-- 9 bits --|----------- 21 bits ----------|
+         * +------------+------------+------------+------------------------------+
+         * |    PML4    |    PDPT    |     PD     |       Page Offset (2 MB)     |
+         * +------------+------------+------------+------------------------------+
+         *
+         * This configuration will simplify things a bit, given that there is currently
+         * no operating system that would otherwise manage it.
+         *
+         *                                    L WP
+         *                       +----------------+
+         *  %cr3 -> &PML4[0]     |  &PDPT[0] |X|11| ---+
+         *                       +----------------+    |
+         *          &PML4[1..]   |0000000000000000|    |
+         *                       +----------------+    |
+         *          &PDPT[0] +-- |  &PD[0]   |X|11| <--+
+         *                   |   +----------------+
+         *                   |   |0000000000000000| &PDPT[1..]
+         *                   |   +----------------+
+         *                   +-> |  i << 21  |1|11| &PD[i] --> The Memory Page
+         *                       +----------------+
+         *
+         *                       L = Large Page Bit
+         *                       W = Writable
+         *                       P = Present
+         */
+        unsafe {
+            // Zero out the entire area of memory.
+            ptr::write_bytes(
+                self.guest_mem.as_ptr().add(PML4_OFFSET),
+                0,
+                3 * PAGE_TABLE_SIZE,
+            );
+
+            // PML4 entry - points to PDPT
+            let pml4 = self.guest_mem.as_ptr().add(PML4_OFFSET) as *mut u64;
+
+            // Present + Writable
+            *pml4 = (GUEST_PHYS_ADDR + PML4_OFFSET as u64 + PAGE_TABLE_SIZE as u64) | 0x3;
+
+            // PDPT entry - points to PD
+            let pdpt = self.guest_mem.as_ptr().add(PML4_OFFSET + PAGE_TABLE_SIZE) as *mut u64;
+
+            // Present + Writable
+            *pdpt = (GUEST_PHYS_ADDR + PML4_OFFSET as u64 + 2 * PAGE_TABLE_SIZE as u64) | 0x3;
+
+            let pd = self
+                .guest_mem
+                .as_ptr()
+                .add(PML4_OFFSET + 2 * PAGE_TABLE_SIZE) as *mut u64;
+
+            // Mark every entry in the page table as: Present + Writable + Large Page
+            (0..512).for_each(|i| *pd.add(i) = (i << 21) as u64 | 0x83);
+        }
+
+        // Set CR3 to point to PML4
+        let mut sregs = self.vcpu.get_sregs()?;
+
+        sregs.cr3 = GUEST_PHYS_ADDR + PML4_OFFSET as u64;
+
+        self.vcpu.set_sregs(&sregs)?;
+
+        Ok(())
+    }
+
+    fn init_registers(&mut self) -> anyhow::Result<()> {
+        let mut regs: kvm_bindings::kvm_regs = unsafe { mem::zeroed() };
+
+        // Set up the code's entrypoint and page align the stack.
+        regs.rip = GUEST_PHYS_ADDR + CODE_OFFSET as u64;
+        regs.rsp = (GUEST_PHYS_ADDR + GUEST_SIZE as u64) & !(PAGE_SIZE as u64 - 1);
+        regs.rbp = (GUEST_PHYS_ADDR + GUEST_SIZE as u64) & !(PAGE_SIZE as u64 - 1);
+
+        regs.rflags = 1 << 1; // Reserved bit that must be set
+
+        self.vcpu.set_regs(&regs)?;
+
+        Ok(())
+    }
+
+    pub fn run_with_io_handler<F>(&mut self, mut io_handler: F) -> anyhow::Result<()>
+    where
+        F: FnMut(u16, &[u8]),
+    {
+        loop {
+            match self.vcpu.run()? {
+                VcpuExit::IoOut(port, data) => {
+                    io_handler(port, data);
+                }
+                exit => {
+                    return Err(anyhow::anyhow!("Unhandled exit reason: {:?}", exit));
+                }
+            }
+        }
+    }
+
+    pub fn write_guest_code(&mut self, code: &[u8]) {
+        unsafe {
+            ptr::copy_nonoverlapping(
+                code.as_ptr(),
+                self.guest_mem.as_ptr().add(CODE_OFFSET) as *mut _,
+                code.len(),
+            );
+        }
+    }
+}
+
+impl Drop for CursedVm {
+    fn drop(&mut self) {
+        unsafe {
+            mman::munmap(
+                NonNull::new_unchecked(self.guest_mem.as_ptr() as *mut _),
+                GUEST_SIZE,
+            )
+            .ok();
+        }
+    }
+}
+[package]
+name = "hyperv"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+ctrlc = "3.4.7"
+kvm-bindings = "0.13.0"
+kvm-ioctls = "0.23.0"
+nix = { version = "0.30.1", features = ["fs", "mman"] }
+]]></content:encoded></item><item><title>cargo license v0.7.0</title><link>https://www.reddit.com/r/rust/comments/1mc767g/cargo_license_v070/</link><author>/u/dalance1982</author><category>rust</category><category>reddit</category><pubDate>Tue, 29 Jul 2025 09:47:15 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I finally found time to maintain cargo-license, merged several PRs, and released v0.7.0. Thank you to all the contributors!]]></content:encoded></item><item><title>So two of the most notable contributors to Rust are looking for jobs...</title><link>https://www.reddit.com/r/rust/comments/1mbyf5z/so_two_of_the_most_notable_contributors_to_rust/</link><author>/u/R1chterScale</author><category>rust</category><category>reddit</category><pubDate>Tue, 29 Jul 2025 01:25:17 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Both Nicholas Nethercote and Micheal Goulet (compiler-errors) are currently looking for employment to keep working on Rust. Forgive me if I'm missing some critical information or context (I'm not the most up to date on everything in the community), but this seems like a perfect example of where the non-profit that's set up to benefit Rust (The Rust Foundation) should step in to help. Is there something else that's higher priority than keeping key contributors continuing to contribute? I kinda thought that was the point of getting funded by massive corporations.]]></content:encoded></item><item><title>What is the =&gt;&lt;= symbol?</title><link>https://www.reddit.com/r/rust/comments/1mbsxf0/what_is_the_symbol/</link><author>/u/Street_Struggle_598</author><category>rust</category><category>reddit</category><pubDate>Mon, 28 Jul 2025 21:26:57 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[   submitted by    /u/Street_Struggle_598 ]]></content:encoded></item><item><title>Alternative for `serde_yaml`</title><link>https://www.reddit.com/r/rust/comments/1mbo9dl/alternative_for_serde_yaml/</link><author>/u/anistark</author><category>rust</category><category>reddit</category><pubDate>Mon, 28 Jul 2025 18:31:10 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[`serde_yaml` is deprecated.Which library is everyone adopting as an alternate? Lets use this tread as discussion on possible crates to replace it with.    submitted by    /u/anistark ]]></content:encoded></item><item><title>How should a function take a list of strings? `&amp;[&amp;str]` or `&amp;[String]`?</title><link>https://www.reddit.com/r/rust/comments/1mb6i9m/how_should_a_function_take_a_list_of_strings_str/</link><author>/u/timand</author><category>rust</category><category>reddit</category><pubDate>Mon, 28 Jul 2025 04:10:08 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Taking  means it's possible to take borrowed strings, but converting from a  means allocating a  to collect the references.Is there some other way like impl Iterator<Item = impl AsRef<str>> or something?   submitted by    /u/timand ]]></content:encoded></item><item><title>Generic lifetimes are confusing me</title><link>https://www.reddit.com/r/rust/comments/1mb5kdb/generic_lifetimes_are_confusing_me/</link><author>/u/ammaratef45</author><category>rust</category><category>reddit</category><pubDate>Mon, 28 Jul 2025 03:20:58 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[Why does the code below compile and run successfully? rust fn test<'a>(x: &'a str, y: &'a str) -> &'a str { "hi" } I know I declared the return lifetime to be the same as the parameters but I lied since I returned a reference to a value that should be out of scope once the function returns, or am I misunderstanding the generic lifetimes?]]></content:encoded></item><item><title>I think I just spent like 3x as much time figuring out to handle errors properly instead of coding real functionality.</title><link>https://www.reddit.com/r/rust/comments/1mb4goi/i_think_i_just_spent_like_3x_as_much_time/</link><author>/u/Aggressive_Sherbet64</author><category>rust</category><category>reddit</category><pubDate>Mon, 28 Jul 2025 02:24:09 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[And it was completely worth it. Yes - boxing errors works for getting something that technically does the core functionality of what you care about (in my case I'm basically just writing a wrapper for OpenAI api calls). And yea I got something working, and I really could have left it that way with a bunch of really fugly "Box<dyn Error>"s all over the place (ew).But but but something primal in me "NO! THAT'S THE DEVIL" so I ended up spending ages getting all my wrappers neatly tied up with the special errors that I wanted. And the code is so much better now and I caught a couple of places where I could have had a panic that would have brought my whole server down. Plus I found a stupid case where one api call failing would cause all the rest of them to fail. Unacceptable!DON'T FORGET TO HANDLE YOUR ERRORS!]]></content:encoded></item><item><title>Testing the GCC-based Rust compiler(backend)</title><link>https://fractalfir.github.io/generated_html/cg_gcc_bootstrap_2.html</link><author>/u/FractalFir</author><category>rust</category><category>reddit</category><pubDate>Mon, 28 Jul 2025 00:07:01 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[]]></content:encoded></item><item><title>Crates you should know: orx-parallel as faster alternative to rayon</title><link>https://www.reddit.com/r/rust/comments/1mapoqv/crates_you_should_know_orxparallel_as_faster/</link><author>/u/rogerara</author><category>rust</category><category>reddit</category><pubDate>Sun, 27 Jul 2025 15:50:34 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[   submitted by    /u/rogerara ]]></content:encoded></item><item><title>Announcing fast_assert: it&apos;s assert! but faster</title><link>https://www.reddit.com/r/rust/comments/1mao817/announcing_fast_assert_its_assert_but_faster/</link><author>/u/Shnatsel</author><category>rust</category><category>reddit</category><pubDate>Sun, 27 Jul 2025 14:51:14 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I've just published fast_assert with a  macro which is faster than the standard library's The standard library implementations are plenty fast for most uses, but can become a problem if you're using assertions in very hot functions, for example to avoid bounds checks. only adds two extra instructions to the hot path for the default error message and three instructions for a custom error message, while the standard library's  adds five instructions to the hot path for the default error message and lots for a custom error message.I've covered how it works and why not simply improve the standard library in the README. The code is small and well-commented, so I encourage you to peruse it as well!]]></content:encoded></item><item><title>What was your biggest mistake in Rust 💡and what did you learn from it?</title><link>https://www.reddit.com/r/rust/comments/1maiq84/what_was_your_biggest_mistake_in_rust_and_what/</link><author>/u/FewInteraction1561</author><category>rust</category><category>reddit</category><pubDate>Sun, 27 Jul 2025 10:12:19 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[I’m learning Rust and I’ve noticed that some of the most valuable lessons come from mistakes, the ones that make you stop and go : “Ohhh… that’s why that matters.”What’s the biggest mistake you made while working with Rust? It could be a tricky borrow checker issue, async confusion, lifetime chaos, or just something that seemed small but bit you later.What did you take away from it?Would love to hear your stories 🫂 and maybe avoid a few facepalms myself. ]]></content:encoded></item><item><title>This Week in Rust #609</title><link>https://this-week-in-rust.org/blog/2025/07/23/this-week-in-rust-609/</link><author>/u/seino_chan</author><category>rust</category><category>reddit</category><pubDate>Sun, 27 Jul 2025 03:03:01 +0000</pubDate><source url="https://www.reddit.com/r/rust/top/?sort=top&amp;t=day&amp;limit=3">Reddit - Rust</source><content:encoded><![CDATA[This week's crate is index_permute, a library for in-place clone-less permutation on mutable slices.Despite a lack of suggestions this week, llogiq is fairly pleased with his choice.An important step for RFC implementation is for people to experiment with the
+implementation and give feedback, especially before stabilization.If you are a feature implementer and would like your RFC to appear in this list, add a
+ label to your RFC along with a comment providing testing instructions and/or
+guidance on which aspect(s) of the feature need testing.Let us know if you would like your feature to be tracked as a part of this list.If you are a feature implementer and would like your RFC to appear on the above list, add the new 
+label to your RFC along with a comment providing testing instructions and/or guidance on which aspect(s) of the feature
+need testing.Always wanted to contribute to open-source projects but did not know where to start?
+Every week we highlight some tasks from the Rust community for you to pick and get started!Some of these tasks may also have mentors available, visit the task page for more information.Are you a new or experienced speaker looking for a place to share something cool? This section highlights events that are being planned and are accepting submissions to join their event as a speaker.Fairly busy week with improvements outweighing regressions. Most of the regressions were considered acceptable given the circumstances (such as landing a long awaited feature). By far the biggest win comes from being a bit smarter about hashing certain information inside of . Since hashing happens quite a lot in th compiler's query system, optimizing when hashing happens can have large performance impacts.Improvements ✅  (secondary)3 Regressions, 8 Improvements, 8 Mixed; 8 of them in rollups
+35 artifact comparisons made in totalNo RFCs were approved this week.Every week, the team announces the 'final comment period' for RFCs and key PRs
+which are reaching a decision. Express your opinions now.Let us know if you would like your PRs, Tracking Issues or RFCs to be tracked as a part of this list.Rusty Events between 2025-07-23 - 2025-08-20 🦀If you are running a Rust event please add it to the calendar to get
+it mentioned here. Please remember to add a link to the event too.
+Email the Rust Community Team for access.In a way, [the] borrow checker also makes interfaces simpler. The rules may be restrictive, but the same rules apply to everything everywhere. I can learn them once, and then know what to expect from every API using references. There are no exceptions in libraries that try to be clever. There are no exceptions for single-threaded programs. There are no exceptions for DLLs. There are no exceptions for programs built with -fpointers-go-sideways. It may be tricky like a game of chess, but I only need to consider the rules of the game, and not odd stuff like whether my opponent glued pieces to the chessboard.]]></content:encoded></item></channel></rss>
