@@ -1,201 +1,432 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Angular Custom Profiling Track is now available</title><link>https://blog.angular.dev/the-angular-custom-profiling-track-is-now-available-0f9d8d36218a?source=rss----447683c3d9a3---4</link><author>Angular</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Wed, 2 Jul 2025 19:38:06 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[Profiling web applications can be a complex task, often requiring developers to juggle between different tools that present data in disconnected ways. Traditionally, Chrome’s performance panel is excellent for detailed function call analysis, while Angular DevTools offers a higher-level view based on framework concepts like components, lifecycle hooks, bindings etc. Unfortunately, having two separate tools leads to a fragmented understanding of performance.This fragmentation presented a significant opportunity to improve the developer experience when profiling Angular applications. As a result, the Angular and Chrome teams have partnered to bring Angular-specific data and insights directly into the Chrome DevTools performance panel, creating a unified profiling experience. We’re excited to introduce the new custom track for Angular in Chrome DevTools.This integration allows developers to combine the benefits of both tools, offering a more synchronized and comprehensive view of their application’s performance.Getting to Know the New Custom TrackWith this new integration, you’ll find performance data using Angular concepts, such as application bootstrap, components, UI synchronization, and lifecycle hooks:The custom track’s flame charts group function invocations together under corresponding components and other Angular concepts. You can drill down to individual functions for a more granular view when needed and still glean meaning from the groupings in other scenariosOne of the most significant benefits is the ability to distinguish between your application’s code, other scripts, or browser activities like layout and paint.Decoding the Colors: What Your Code is DoingThe flame chart entries are color coded to help you quickly identify what’s happening in your application.: These represent Dependency Injection (DI) services instantiated during the application bootstrap process. In general, green signifies the execution of code written by application developers.: This color is reserved for templates compiled by Angular. Even though it’s still your code, it has been transformed by Angular before execution in the browser. This allows you to clearly see which templates are creating or updating the DOM and how long these operations take.: These mark the entry points. At the very top, you’ll see the trigger — why Angular decided to run application code. Subsequent blue bars represent all the components that need to perform work, which is particularly useful for understanding how user interactions impact DOM updates. Below component names, you’ll find the familiar purple (templates) and green (your component code).Since the custom track is interactive, clicking on an entry in the flame chart reveals more detailed information about a given entry. This data empowers developers to dive deeper into specific function calls and understand their impact on the application’s performance.Enabling this powerful new feature is straightforward. Complete the following steps:Ensure you are using the latest version of Angular (v20 at the time of this post) and an up-to-date version of the Google Chrome browser.Run your Angular application in developer mode.With your application running, open Chrome DevTools and enable the custom track by typing ng.enableProfiling() in the console.Once enabled, start recording a performance profile. The dedicated “Angular” track in the flame chart will be available.More Performant Apps are on the WayThis new integration with Chrome DevTools demonstrates our ongoing commitment to improving the developer experience within the Angular ecosystem. By providing tools that offer more focused and actionable insights, the Angular and Chrome teams are empowering developers to build faster, more efficient applications. Please try out this new integration and let us know what you think.]]></content:encoded></item><item><title>This Week In React #241: Remix, Next.js, Turbopack, Radix DOM templating, Ultracite, Stack, StyleX, MUI | Nitro Week, Skia, App Generator, Swift, Kotlin | ES2025, Rspack, Babel, TypeScript, Effect, Deno, Three.js</title><link>https://thisweekinreact.com/newsletter/241</link><author></author><category>frontend</category><pubDate>Wed, 2 Jul 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[It's been a hot C° week here, but pretty calm in terms of React news. We still got various little releases, interesting blog posts and weak signals that show us what the future might look like.On the React Native side, the community is adopting Nitro Modules in various libraries, and Skia got built-in support for Lottie animations.ES2025 has been approved, and TS 5.9 beta should come anytime soon.As always, thanks for supporting us on your favorite platform:Embrace connects technical performance to real user impact across mobile, web, and backend so that engineering teams can deliver fast, reliable, and exceptional digital experiences.📊 Track Core Web Vitals, crashes, network requests, and custom events—all tied to full user sessions. 👤 Get deep insights into users with session stitching and play-by-plays of every user experience. 🔍 Discover the root cause faster with high-fidelity data, including session timelines, performance traces, and user journeys. 🔭 Embrace is built on OpenTelemetry. Own your data, integrate it anywhere, and avoid the rigid pricing and limitations of all-in-one platforms.Try Embrace today and get your first 1 million sessions free. Learn more at embrace.io.Interesting feedback from Shopify migrating their flagship Admin app to Remix, dogfooding the framework on a massive codebase with strong needs in terms of scalability. It looks to me many recent React Router features were things Shopify actually needed.15x faster TypeScript and JavaScript debugging than with breakpoints and , while upgrading your AI agent 🤖 into an expert debugger with real-time context.Wallaby.js runs your tests as you type, feeding your AI assistant real-time runtime values, code coverage, error details, and execution paths — all right next to your code.Designed specifically for testing, Wallaby features include a , the ability to run only opened test files, full-context AI integration, smart test runs, and more. Better context. Smarter debugging.Nitro Modules are trending among React Native lib developers, with 3 new releases this week:]]></content:encoded></item><item><title>The Gap Strikes Back: Now Stylable</title><link>https://css-tricks.com/the-gap-strikes-back-now-stylable/</link><author>Patrick Brosset</author><category>frontend</category><pubDate>Tue, 1 Jul 2025 12:42:38 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Four years ago, I wrote an article titled Minding the “gap”, where I talked about the CSS  property, where it applied, and how it worked with various CSS layouts.At the time, I described how easy it was to evenly space items out in a flex, grid, or multi-column layout, by using the  property. But, I also said that  the gap areas was much harder, and I shared a workaround.However, workarounds like using extra HTML elements, pseudo-elements, or borders to draw separator lines tend to come with drawbacks, especially those that impact your layout size, interfere with assistive technologies, or pollute your markup with style-only elements.Today, I’m writing again about layout gaps, but this time, to tell you all about a new and exciting CSS feature that’s going to change it all. What you previously had to use workarounds for, you’ll soon be able to do with just a few simple CSS properties that make it easy, yet also flexible, to display styled separators between your layout items.There’s already a specification draft for the feature you can peruse. At the time I’m writing this, it is available in Chrome and Edge 139 behind a flag. But I believe it won’t be long before we turn that flag on. I believe other browsers are also very receptive and engaged.Displaying decorative lines between items of a layout can make a big difference. When used well, these lines can bring more structure to your layout, and give your users more of a sense of how the different regions of a page are organized.Introducing CSS gap decorationsIf you’ve ever used a multi-column layout, such as by using the  property, then you might already be familiar with gap decorations. You can draw vertical lines between the columns of a multi-column layout by using the  property:article {
-  column-width: 20rem;
-  column-rule: 1px solid black;
-}The CSS gap decorations feature builds on this to provide a more comprehensive system that makes it easy for you to draw separator lines in other layout types.For example, the draft specification says that the  property also works in flexbox and grid layouts:.my-grid-container {
-  display: grid;
-  gap: 2px;
-  column-rule: 2px solid pink;
-}No need for extra elements or borders! The key benefit here is that the decoration happens in CSS only, where it belongs, with no impacts to your semantic markup.The CSS gap decorations feature also introduces a new  property for drawing lines between rows:.my-flex-container {
-  display: flex;
-  gap: 10px;
-  row-rule: 10px dotted limegreen;
-  column-rule: 5px dashed coral;
-}But that’s not all, because the above syntax also allows you to define multiple, comma-separated, line style values, and use the same  function that CSS grid already uses for row and column templates. This makes it possible to define different styles of line decorations in a single layout, and adapt to an unknown number of gaps:.my-container {
-  display: grid;
-  gap: 2px;
-  row-rule:
-    repeat(2, 1px dashed red),
-    2px solid black,
-    repeat(auto, 1px dotted green);
-}Finally, the CSS gap decorations feature comes with additional CSS properties such as , , , , and , which make it possible to precisely customize the way the separators are drawn, whether they overlap, or where they start and end.Currently, the CSS gap decorations feature is only available in Chromium-based browsers.The feature is still early in the making, and there’s time for you all to try it and to provide feedback that could help make the feature better and more adapted to your needs.If you want to try the feature today, make sure to use Edge or Chrome, starting with version 139 (or another Chromium-based browser that matches those versions), and enable the flag by following these steps:In Chrome or Edge, go to .In the search field, search for Enable Experimental Web Platform Features.Using CSS gap decorationsLet’s build a simple web page to learn how to use the feature. Here is what we’ll be building:The above layout contains a header section with a title, a navigation menu with a few links, a main section with a series of short paragraphs of text and photos, and a footer.We’ll use the following markup:<body>
-<header>
-  <h1>My personal site</h1>
-</header>
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Links</a></li>
-  </ul>
-</nav>
-<main>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="cat.jpg" alt="A sleeping cat.">
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="tree.jpg" alt="An old olive tree trunk.">
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="strings.jpg" alt="Snow flakes falling in a motion blur effect.">
-  </article>
-</main>
-<footer>
-  <p>© 2025 Patrick Brosset</p>
-</footer>
-</body>We’ll start by making the  element be a grid container. This way, we can space out the , , , and  elements apart in one go by using the  property:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
-}Let’s now use the CSS gap decorations feature to display horizontal separator lines within the gaps we just defined:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
- 
-  row-rule: 1rem solid #efefef;
-}This gives us the following result:We can do a bit better by making the first horizontal line look different than the other two lines, and simplify the  value by using the  syntax:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
- 
-  row-rule:
-    1rem solid #efefef,
-    repeat(2, 2px solid #efefef);
-}With this new  property value, we’re telling the browser to draw the first horizontal separator as a  thick line, and the next two separators as  thick lines, which gives the following result:Now, let’s turn our attention to the navigation element and its list of links. We’ll use flexbox to display the links in a single row, where each link is separated from the other links by a gap and a vertical line:nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  column-rule: 2px dashed #666;
-}Very similarly to how we used the  property before, we’re now using the  property to display a dashed  thick separator between the links.Our example web page now looks like this:The last thing we need to change is the  element and its paragraphs and pictures. We’ll use flexbox again and display the various children in a wrapping row of varying width items:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>How to Prepare for CSS-Specific Interview Questions</title><link>https://css-tricks.com/how-to-prepare-for-css-specific-interview-questions/</link><author>Shivam Bhalla</author><category>frontend</category><pubDate>Fri, 8 Aug 2025 13:42:31 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[If you landed on this article, chances are you might have a front-end interview coming up, perhaps one with a focus on CSS, or you are in the market to start preparing for CSS-related interviews altogether. Depending on the exact role you are interviewing for, it’s unlikely that you will only be asked questions about CSS. Typically, you will encounter a combination questions covering things like HTML, CSS, and JavaScript.For this article, we will focus primarily on a set of 10 CSS questions you likely will encounter in front-end interviews, even if they get grouped with HTML or JavaScript. And to be clear, these may or may not be the “best” questions for an interviewer to ask, but what you are likely to see, based on my experience as the founder of frontendlead.com, an all-in-one platform to help front-end engineers prepare for big tech interviews. I have been a software engineer for over 13 years and have been on both ends of hundreds of interviews.The questions cover different levels of difficulty. To keep things simple, we will start with the “easiest” questions and end with the “hardest” ones.How would you go about building a responsive website?What are CSS preprocessors, and why are they useful?How would you make fonts responsive in CSS?Describe  and how stacking context is formed.What’s the difference between , , and ?What does * { box-sizing: border-box; } do?How would you go about making an image responsive in CSS?How would you make CSS more performant?What are the pros and cons of CSS in JS vs external CSS import, and which would you choose?Can you build this layout in CSS?Before we dive in, I’d like to say that there are many ways to correctly answer the same question. Everything I’m providing here is merely guidance for approaching the types of questions you may face in an interview. The actual questions you encounter may need more elaboration in a particular area or require specific examples that demonstrate your understanding of different concepts.1. How would you go about building a responsive website? (Easy)Responsive design is one of the fundamentals you’ll be asked about. Building a responsive website means your layout, images, and typography adapt gracefully to any device or screen size.The basic tools for responsive design include  (such as , , and ), , and . Most interviews expect you to mention a “mobile-first” approach, where your base styles are designed for mobile devices and scaled up for larger screens.A quick code example using media queries:/* Main container for your page content, centered and with a max width for larger screens */
+.container {
+  max-width: 1200px; /* Prevents content from stretching too wide on large displays */
+  margin: 0 auto;    /* Horizontally center the container */
+  padding: 16px;     /* Adds space inside the container */
 }
 
-
-main > * {
-  flex: 1 1 200px;
+/* Make all images scale with their parent container */
+img {
+  max-width: 100%; /* Image will never be wider than its container */
+  height: auto;    /* Keeps the aspect ratio intact */
+  display: block;  /* Removes extra space below images (inline images have baseline spacing) */
 }
 
-
-main article:has(p) {
-  flex-basis: 400px;
-}In the above code snippet, we’re setting the  element to be a wrapping flex container with a  gap between items and flex lines. We’re also making the items have a flex basis size of  for pictures and  for text, and allowing them to grow and shrink as needed. This gives us the following result:Let’s use CSS gap decorations to bring a little more structure to our layout by drawing  thick separator lines between the rows and columns of the layout:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  row-rule: 2px solid #999;
-  column-rule: 2px solid #999;
-}This gives us the following result, which is very close to our expected design:The last detail we want to change is related to the vertical lines. We don’t want them to span across the entire height of the flex lines but instead start and stop where the content starts and stops.With CSS gap decorations, we can easily achieve this by using the  property to fine-tune exactly where the decorations start and end, relative to the gap area:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  row-rule: 2px solid #999;
-  column-rule: 2px solid #999;
-  column-rule-outset: 0;
-}The  property above makes the vertical column separators span the height of each row, excluding the gap area, which is what we want:There’s more to the feature and I mentioned a couple more CSS properties earlier, which lets you control which of the decorations, rows or columns, appear above the other ones. / , which sets the behavior of the decoration lines at intersections. In particular, whether they are made of multiple segments, which start and end at intersections, or single, continuous lines.Because the feature is new, there isn’t MDN documentation about it yet. So to learn more, check out:The Edge team has also created an interactive playground where you can use visual controls to configure gap decorations.And, of course, the reason this is all implemented behind a flag is to elicit feedback from developers like you! If you have any feedback, questions, or bugs about this feature, I definitely encourage you to open a new ticket on the Chromium issue tracker.]]></content:encoded></item><item><title>Using CSS Cascade Layers With Tailwind Utilities</title><link>https://css-tricks.com/using-css-cascade-layers-with-tailwind-utilities/</link><author>Zell Liew</author><category>frontend</category><pubDate>Mon, 30 Jun 2025 13:16:43 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Adam Wathan has (very cleverly) built Tailwind with CSS Cascade Layers, making it extremely powerful for organizing styles by priority.@layer theme, base, components, utilities;
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'tailwindcss/utilities.css' layer(utilities);The core of Tailwind are its utilities. This means you have two choices:The default choice is to follow Tailwind’s recommended layer order: place components first, and Tailwind utilities last.So, if you’re building components, you need to manually wrap your components with a  directive. Then, overwrite your component styles with Tailwind, putting Tailwind as the “most important layer”./* Write your components */
-@layer components {
-  .component {
-    /* Your CSS here */
+/* Responsive styles for small screens (phones, small tablets) */
+@media (max-width: 600px) {
+  .container {
+    padding: 8px; /* Reduce padding to save space on smaller screens */
   }
-}<!-- Override with Tailwind utilities --> 
-<div class="component p-4"> ... </div>That’s a decent way of doing things.But, being the bad boy I am, I don’t take the default approach as the “best” one. Over a year of (major) experimentation with Tailwind and vanilla CSS, I’ve come across what I believe is a better solution.Before we go on, I have to tell you that I’m writing a course called Unorthodox Tailwind — this shows you everything I know about using Tailwind and CSS in synergistic ways, leveraging the strengths of each.Shameless plug aside, let’s dive into the Unorthodox Choice now.In this case, the Unorthodox Choice is to write your styles in an unnamed layer — or any layer after utilities, really — so that your CSS naturally overwrites Tailwind utilities.Of these two, I prefer the unnamed layer option:/* Unnamed layer option */
-@layer theme, base, components, utilities; 
-
-/* Write your CSS normally here */ 
-.component { /* ... */ }/* Named layer option */
-/* Use whatever layer name you come up with. I simply used css here because it made most sense for explaining things */
-@layer theme, base, components, utilities, css; 
-
-@layer css {
-  .component { /* ... */ }
-}I have many reasons why I do this:I don’t like to add unnecessary CSS layers because it makes code harder to write — more keystrokes, having to remember the specific layer I used it in, etc.I’m pretty skilled with ITCSS, selector specificity, and all the good-old-stuff you’d expect from a seasoned front-end developer, so writing CSS in a single layer doesn’t scare me at all.I can do complex stuff that are hard or impossible to do in Tailwind (like theming and animations) in CSS.Your mileage may vary, of course.Now, if you have followed my reasoning so far, you would have noticed that I use Tailwind  differently:Tailwind utilities are not the “most important” layer.My unnamed CSS layer is the most important one.Build prototypes with Tailwind (quickly, easily, especially with the tools I’ve created).Shift these properties to CSS when they get more complex — so I don’t have to read messy utility-littered HTML that makes my heart sink. Not because utility HTML is bad, but because it takes lots of brain processing power to figure out what’s happening.Finally, here’s the nice thing about Tailwind being in a utility layer: I can always  a utility to give it strength.<!-- !important the padding utility -->
-<div class="component !p-4"> ... </div>Whoa, hold on, wait a minute! Isn’t this wrong, you might ask?Nope. The  keyword has traditionally been used to override classes. In this case, we’re leveraging on the  feature in CSS Layers to say the Tailwind utility is more important than any CSS in the unnamed layer.This is perfectly valid and is a built-in feature for CSS Layers.Besides, the  is so explicit (and used so little) that it makes sense for one-off quick-and-dirty adjustments (without creating a brand new selector for it).Tailwind utilities are more powerful than they seemTailwind utilities are not a 1:1 map between a class and a CSS property. Built-in Tailwind utilities mostly look like this so it can give people a wrong impression.Tailwind utilities are more like convenient Sass mixins, which means we can build effective tools for layouts, theming, typography, and more, through them.Thanks for reading and I hope you’re enjoying a new way of looking at (or using) Tailwind!]]></content:encoded></item><item><title>CSS Blob Recipes</title><link>https://css-tricks.com/css-blob-recipes/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Fri, 27 Jun 2025 13:48:41 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[. You hate them. You love them. Personally, as a design illiterate, I like to overuse them… a lot. And when you repeat the same process over and over again, it’s only a question of how much you can optimize it, or in this case, what’s the easiest way to create blobs in CSS? Turns out, as always, there are many approaches.To know if our following blobs are worth using, we’ll need them to pass three tests:They can be with just a single element (and preferably without pseudos).They can be easily designed (ideally through an online tool).We can use gradient backgrounds, borders, shadows, and other CSS effects on them.Without further ado, let’s  right in.Just generate them onlineI know it’s disenchanting to click on an article about making blobs in CSS just for me to say you can generate them outside CSS. Still, it’s probably the most common way to create blobs on the web, so to be thorough, these are some online tools I’ve used before to create  blobs. Probably the one I have used the most since, besides blobs, it can also generate lots of SVG backgrounds. A dedicated tool for making blobs. It’s apparently part of Haikei now, so you can use both.Lastly, almost all graphic programs let you hand-draw blobs and export them as SVGs.For example, this is one I generated just now. Keep it around, as it will come in handy later.<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <path
-    fill="#FA4D56"
-    d="M65.4,-37.9C79.2,-13.9,81,17,68.1,38C55.2,59.1,27.6,70.5,1.5,69.6C-24.6,68.8,-49.3,55.7,-56,38.2C-62.6,20.7,-51.3,-1.2,-39,-24.4C-26.7,-47.6,-13.3,-72,6.2,-75.6C25.8,-79.2,51.6,-62,65.4,-37.9Z"
-    transform="translate(100 100)"
-  />
-</svg>While counterintuitive, we can use the  property to create blobs. This technique isn’t new by any means; it was first described by Nils Binder in 2018, but it is still fairly unknown. Even for those who use it, the inner workings are not entirely clear.To start, you may know the  is a shorthand to each individual corner’s radius, going from the top left corner clockwise. For example, we can set each corner’s  to get a bubbly square shape:.blob {
-  border-radius: 25% 50% 75% 100%;
-}However, what  does — and also why it’s called “radius” — is to shape each corner following a circle of the given radius. For example, if we set the top left corner to , it will follow a circle with a radius  the size of the shape..blob {
-  border-top-left-radius: 25%;
-}What’s less known is that each corner property is still a  towards its horizontal and vertical radii. Normally, you set both radii to the same value, getting a circle, but you can set them individually to create an ellipse. For example, the following sets the horizontal radius to  of the element’s width and the vertical to  of its height:.blob {
-  border-top-left-radius: 25% 50%;
-}We can now shape each corner like an ellipse, and it is the combination of all four ellipses that creates the illusion of a blob! Just take into consideration that to use the horizontal and vertical radii syntax through the  property, we’ll need to separate the horizontal from the vertical radii using a forward slash ()..blob {
-  border-radius:
-    /* horizontal */
-    100% 30% 60% 70% /
-    /* vertical */
-    50% 40% 70% 70%;
-}The syntax isn’t too intuitive, so designing a blob from scratch will likely be a headache. Luckily, Nils Binder made a tool exactly for that!This hack is awesome. We aren’t supposed to use  like that, but we still do. Admittedly, we are limited to boring blobs. Due to the nature of , no matter how hard we try, we will only get convex shapes.Just going off , we can try to minimize it a little by sticking more than one blob together:However, I don’t want to spend too much time on this technique since it is too impractical to be worth it. To name a few drawbacks:We are using more than one element or, at the very least, an extra pseudo-element. Ideally, we want to keep it to one element.We don’t have a tool to prototype our blobby amalgamations, so making one is a process of trial and error.We can’t use borders, gradients, or box shadows since they would reveal the element’s outlines.Multiple backgrounds and SVG filtersThis one is an improvement in the Gooey Effect, described here by Lucas Bebber, although I don’t know who first came up with it. In the original effect, several elements can be morphed together like drops of liquid sticking to and flowing out of each other:It works by first blurring shapes nearby, creating some connected shadows. Then we crank up the contrast, forcing the blur out and smoothly connecting them in the process. Take, for example, this demo by Chris Coyer (It’s from 2014, so more than 10 years ago!):If you look at the code, you’ll notice Chris uses the  property along the  and  functions, which I’ve also seen in other blob demos. To be specific, it applies  on each individual circle and then  on the parent element. So, if we have the following HTML:<div class="blob">
-  <div class="subblob"></div>
-  <div class="subblob"></div>
-  <div class="subblob"></div>
-</div>…we would need to apply filters and background colors as such:.blob {
-  filter: contrast(50);
-  background: white; /* Solid colors are necessary */
+  /* Example: Stack nav links vertically on small screens
+  nav ul {
+    flex-direction: column;
+  }
+  */
+}You should also mention how you handle navigation and images on mobile devices (such as collapsing navigational menus or leveraging responsive image techniques), as well as how to test layouts using browser Developer Tools.2. What are CSS preprocessors, and why are they useful? (Easy)CSS preprocessors, such as , , and  make writing and maintaining large CSS codebases significantly easier. They add features that aren’t in vanilla CSS, such as mixins, and functions — although those lines are becoming more blurred as CSS ships similar features, such as variables, nesting, and yes, mixins and functions. and  enable you to reuse common patterns and even generate code based on parameters. Here’s an example in Sass:// Mixin: For a common box shadow you want to reuse
+@mixin shadow($opacity: 0.12) {
+  box-shadow: 0 2px 8px 0 rgba(24, 39, 75, $opacity);
 }
 
-.subblob {
-  filter: blur(15px);
-  background: black; /* Solid colors are necessary */
-}However, there is a good reason why those demos stick to white shapes and black backgrounds (or vice versa) since things get unpredictable once colors aren’t contrast-y enough. See it for yourself in the following demo by changing the color. Just be wary: .To solve this, we will use an SVG filter instead. I don’t want to get too technical on SVG (if you want to, read Luca’s post!). In a nutshell, we can apply blurring and contrast filters using SVGs, but now, we can also pick which color channel we apply the contrast to, unlike normal , which modifies all colors. Since we want to leave color channels (,  and ) untouched, we will only crank the contrast up for the alpha channel. That translates to the next SVG filter, which can be embedded in the HTML:<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute;">
-  <defs>
-    <filter id="blob">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -6" result="goo" />
-      <feBlend in="SourceGraphic" in2="blob" />
-    </filter>
-  </defs>
-</svg>To apply it, we will use again , but this time we’ll set it to , so that it pulls the SVG from the HTML..blob {
-  filter: url("#blob");
-}And now we can even use it with gradient backgrounds!That being said, this approach comes with two small, but important, changes to common CSS filters:The filter is applied to the parent element, not the individual shapes.The parent element must be transparent (which is a huge advantage). To change the background color, we can instead change the body or other ancestors’ background, and it will work with no issues.What’s left is to place the  elements together such that they make a blobby enough shape, then apply the SVG filters to morph them:This works well, but it has a similar issue to the blob we made by morphing several  instances: too many elements for a simple blob. Luckily, we can take advantage of the  property to create multiple shapes and morph them together using SVG filters, all in a single element. Since we are keeping it to one element, we will go back to just one empty  div:First, we will use  along with  to create a circle inside the element:body {
-  background: radial-gradient(farthest-side, var(--blob-color) 100%, #0000);
-  background-repeat: no-repeat; /* Important! */
-}Here is what each parameter does: Confines the shape to the element’s box farthest from its center. This way, it is kept as a circle. Fills the background shape from 0 to 100% with the same color, so it ends up as a solid color. After the shape is done, it makes a full stop to transparency, so the color ends.The next part is moving and resizing the circle using the  and  properties. Luckily, both can be set on  after the gradient, separated from each other by a forward slash ().body {
-  background: radial-gradient(...) 20% 30% / 30% 40%;
-  background-repeat: no-repeat; /* Important! */
-}The first pair of percentages sets the shape’s horizontal and vertical position (taking as a reference the top-left corner), while the second pair sets the shape’s width and height (taking as a reference the element’s size).As I mentioned, we can stack up different backgrounds together, which means we can create as many circles/ellipses as we want! For example, we can create three ellipses on the same element:.blob {
-  background:
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 20% 30% / 30% 40%, 
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 80% 50% / 40% 60%, 
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 50% 70% / 50% 50%;
-  background-repeat: no-repeat;
-}What’s even better is that SVG filters don’t care whether shapes are made of elements or backgrounds, so we can also morph them together using the last  filter!While this method may be a little too much for blobs, it unlocks squishing, stretching, dividing, and merging blobs in seamless animations.Again, all these tricks are awesome, but not enough for what we want! We accomplished reducing the blob to a single element, but we still can’t use gradients, borders, or shadows on them, and also, they are tedious to design and model. Then, that brings us to the ultimate blob approach…Fortunately, there is a new way to make blobs that just dropped to CSS: the  function!First off, the CSS  function is used alongside the  property to cut elements into any shape we want. More specifically, it uses a verbal version of SVG’s  syntax. The syntax has lots of commands for lots of types of lines, but when blobbing with , we’ll define curves using the  command:.blob {
-  clip-path: shape(
-    from X0 Y0, 
-    curve to X1 Y1 with Xc1 Yc1, 
-    curve to X2 Y2 with Xc21 Yc21 / Xc22 Yc22
-    /* ... */
-  );
-}Let’s break down each parameter: defines the starting point of the shape. starts the curve where  is the next point of the shape, while  defines a control point used in Bézier curves.The next parameter is similar, but we used  instead to define two control points on the Bézier curve.I honestly don’t understand Bézier curves and control points completely, but luckily, we don’t need them to use  and blobs! Again,  uses a verbal version of SVG’s  syntax, so it can draw any shape an SVG can, which means that we can translate the SVG blobs we generated earlier… and CSS-ify them. To do so, we’ll grab the  attribute (which defines the ) from our SVG and paste it into Temani’s SVG to  generator.This is the exact code the tool generated for me:.blob {
-  aspect-ratio: 0.925; /* Generated too! */
+// Function: Calculate a spacing value for consistent margins and padding
+@function space($multiplier: 1) {
+  @return $multiplier * 8px;
+}
 
-  clip-path: shape(
-    from 91.52% 26.2%,
-    curve to 93.52% 78.28% with 101.76% 42.67%/103.09% 63.87%,
-    curve to 44.11% 99.97% with 83.95% 92.76%/63.47% 100.58%,
-    curve to 1.45% 78.42% with 24.74% 99.42%/6.42% 90.43%,
-    curve to 14.06% 35.46% with -3.45% 66.41%/4.93% 51.38%,
-    curve to 47.59% 0.33% with 23.18% 19.54%/33.13% 2.8%,
-    curve to 91.52% 26.2% with 62.14% -2.14%/81.28% 9.66%
-  );
-}As you might have guessed, it returns our beautiful blob:Let’s check if it passes our requirements:Yes, they can be made of a single element.Yes, they can also be created in a generator and then translated into CSS.Yes, we can use gradient backgrounds, but due to the nature of , borders and shadows get cut out.Two out of three? Maybe two and a half of three? That’s a big improvement over the other approaches, even if it’s not perfect.So, alas, we failed to find what I believe is the perfect CSS approach to blobs. I am, however, amazed how something so trivial designing blobs can teach us about so many tricks and new CSS features, many of which I didn’t know myself.]]></content:encoded></item><item><title>KelpUI</title><link>https://css-tricks.com/kelpui/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 26 Jun 2025 16:42:32 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[KelpUI is new library that Chris Ferdinandi is developing, designed to leverage newer CSS features and Web Components. I’ve enjoyed following Chris as he’s published an ongoing series of articles detailing his thought process behind the library, getting deep into his approach. You really get a clear picture of his strategy and I love it.He outlined his principles up front in a post back in April:I’m imagining a system that includes…Base styles for all of the common HTML elements.Loads of utility classes for nudging and tweaking things.Group classes for styling more complex UI elements  a million little classes.Easy customization with CSS variables.Web Components to progressively add interactivity to functional HTML.All of the Web Component HTML lives in the light DOM, so its easy to style and reason about.I’m imagining something that can be loaded directly from a CDN, downloaded locally, or imported if you want to roll your own build.KelpUI is still evolving, and that’s part of the beauty of looking at it now and following Chris’s blog as he openly chronicles his approach. There’s always going to be some opinionated directions in a library like this, but I love that the guiding philosophy is so clear and is being used as a yardstick to drive decisions. As I write this, Chris is openly questioning the way he optimizes the library, demonstrating the tensions between things like performance and a good developer experience.Looks like it’ll be a good system, but even more than that, it’s a wonderful learning journey that’s worth following.]]></content:encoded></item></channel></rss>
+// Placeholder selector: For base button styles to extend
+%btn-base {
+  display: inline-block;
+  font-size: $font-size-lg;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+// Partial import: Example (would be in _variables.scss)
+// @import 'variables';
+
+// Button styles using everything above
+.button {
+  @extend %btn-base;              // Use base button styles
+  background: $primary;
+  color: #fff;
+  padding: space(1.5) space(3);   // Use the custom function for spacing
+  @include shadow(0.15);          // Use the mixin for shadow
+
+  // Nested selector for hover state
+  &:hover {
+    background: lighten($primary, 10%);
+  }
+
+  // Modifier class (e.g., .button.secondary)
+  &.secondary {
+    background: $secondary;
+    color: #23272f;
+    border: 2px solid $secondary;
+  }
+
+  // Nested media query (for responsive buttons)
+  @media (max-width: 600px) {
+    padding: space(1) space(2);
+    font-size: 1rem;
+  }
+}Preprocessors help keep your codebase DRY (Don’t Repeat Yourself) and make refactoring less painful. While CSS now has native variables (), preprocessors are still widely used for their advanced features.3. How would you make fonts responsive in CSS? (Easy)Font sizing is a common interview topic because it affects both design and accessibility. Responsive fonts adjust to screen size, ensuring your text remains readable. The classic approach is to use relative units, such as  (scoped to the parent element) and  (scoped to the root element). Newer CSS features makes this even easier and more flexible with the  function and viewport units ( and ). You can also use media queries to step up font sizes for larger screens.Here are some practical examples:/* Basic responsive text using rem (scales with root html font size) */
+body {
+  font-size: 1rem; /* 1rem is typically 16px, but can be increased for accessibility */
+}
+
+/* Use rem for headings so they scale with user/browser settings */
+h1 {
+  font-size: 2.5rem; /* 2.5 × root font size */
+  line-height: 1.2;
+}
+
+/* Modern fluid sizing with clamp and viewport units */
+h2 {
+  /* Font size is at least 1.5rem, scales with viewport up to 3rem */
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Using viewport width units directly */
+h3 {
+  font-size: 6vw; /* 6% of viewport width (can get very large/small on extremes) */
+}
+
+/* Responsive font-size using media queries (manual step-up) */
+p {
+  font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  p {
+    font-size: 1.4rem;
+  }
+} make your text scale with the root or parent font size, making them more responsive to changes. lets you set a minimum, fluid, and maximum font size at once (e.g.,  ensures the font size never falls below  or exceeds , scaling smoothly in between). (, ) make fonts fluid relative to the screen width or height. enable fine-tuning of font size for various devices and breakpoints.4. Describe the  property and how stacking context is formed. (Medium)The property determines which elements appear on top of others, but it only works on elements that have a positioning context, such as , , or .A  is an environment where stacking and rendering order is controlled. New stacking contexts can be created by elements with specific properties, such as position with a , or CSS properties like  less than , , or .Understanding stacking context is essential for UI components like drop-downs, modals, and tooltips.Here’s an example demonstrating a stacking context created by a parent element element that contains two children that stack one on top of the other, ordered by :/* The parent creates a new stacking context by having position and z-index */
+.parent {
+  position: relative; /* Triggers a positioning context */
+  z-index: 2; /* This parent will stack above siblings with lower z-index values */
+  width: 300px;
+  height: 200px;
+  background: #b3e6fc;
+  margin: 32px;
+}
+
+/* The child is absolutely positioned inside .parent */
+.child {
+  position: absolute; /* Needed for z-index to work */
+  top: 40px;
+  left: 40px;
+  width: 200px;
+  height: 100px;
+  background: #4f46e5;
+  color: #fff;
+  z-index: 10; /* Relative to its parent's stacking context, not the whole page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Another sibling element at the root level for comparison */
+.sibling {
+  position: relative;
+  z-index: 1; /* Lower than .parent, so .parent stacks on top */
+  width: 320px;
+  height: 140px;
+  background: #fca311;
+  margin: -80px 0 0 220px; /* Overlap with .parent for demo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #23272f;
+}If you have ever run into an issue where  isn’t behaving as you expect, check if there’s an unexpected stacking context due to a parent element.5. What’s the difference between the  property’s , , and  values? (Medium)When you’re asked about the difference between the  property’s , , and  values in CSS, remember that they determine how elements are displayed in the document flow. always start on a new line and take up the full width of their parent container, regardless of their actual content. Examples include  and . flow within a line of text, only occupying as much width as needed for their content; you cannot set their width or height. Examples include  and . combine the behaviors of both inline and block elements: They flow inline with text (without forcing a new line), but you can set their width and height like a block element, which makes them especially useful for custom buttons or navigation items.Custom buttons, images, icons6. What does  do? (Medium)By default, CSS uses the content-box model, which means that width and height only apply to the content, excluding padding and border.  changes this so that width and height include the padding and border, making sizing more predictable.Here’s an example of how that might be demonstrated in CSS:/* Apply border-box sizing to all elements and their pseudo-elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Width and height now include padding and border */
+}
+
+/* Demo: Without border-box (the default, content-box) */
+.box-content {
+  box-sizing: content-box;
+  width: 200px;
+  padding: 20px;
+  border: 4px solid #2563eb;
+  background: #f0f4ff;
+  margin-bottom: 16px;
+  /* The real rendered width will be: 200px (content) + 40px (padding) + 8px (border) = 248px */
+}
+
+/* Demo: With border-box */
+.box-border {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 20px;
+  border: 4px solid #16a34a;
+  background: #e7faed;
+  /* The rendered width will be exactly 200px, since padding and border are included in the width */
+}With , you avoid the classic issue where adding padding or a border makes your boxes overflow their parent or break your layout. It’s now a standard best practice. You can even say that Chris Coyier has deemed February 1 “International  Awareness Day” which totally should be a real thing.7. How would you go about making an image responsive in CSS? (Medium)This is a deceptively hard question because responsive images is a topic big enough for an entire guide. The classic approach is to ensure that photos never exceed the width of their container. For most cases, that means setting a  on the image element and ensuring it maintains it’s proportions:/* 1. Make images responsive to their container width */
+img {
+  max-width: 100%; /* Prevents the image from overflowing its parent */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes bottom whitespace that inline images have */
+}For images that need to maintain a specific aspect ratio (like a 16:9 video thumbnail), you can use the  trick:/* 2. Maintain a specific aspect ratio (e.g., 16:9) using the padding-bottom trick */
+.responsive-img-container {
+  position: relative; /* Needed for absolutely positioning the img */
+  width: 100%; /* Full width of the parent container */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+  overflow: hidden; /* Ensures image doesn’t overflow container */
+}
+
+.responsive-img-container img {
+  position: absolute; /* Take the image out of the normal flow */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretch to fill container */
+  height: 100%; /* Stretch to fill container */
+  object-fit: cover; /* Ensure the image covers the area, cropping if needed */
+}/* 3. Use the aspect-ratio property for a cleaner approach (modern browsers) */
+.aspect-ratio-img {
+  aspect-ratio: 16 / 9; /* Maintain 16:9 ratio automatically */
+  width: 100%;
+  height: auto;
+  display: block;
+}Responsive images often use the HTML  attribute and the  element as well for high-DPI and various screen sizes. There’s an entire CSS-Tricks guide on those features. And, of course, there are performance considerations to take into account because the goal is to serve the best image format and size to the right device.CSS performance is crucial for delivering fast and smooth experiences, especially on large-scale websites or applications. Poor CSS practices can slow down page loads, increase rendering times, and make maintenance harder. There are several strategies you can use to keep your CSS efficient and your site responsive.1. Minimize your bundle sizeLarge CSS files slow down initial page loads. Removing unused CSS (also called “dead code elimination”) can significantly reduce file size. Tools like , , or the built-in features of frameworks like Next.js and Tailwind can scan your HTML/JSX and only keep styles that are used.2. Split and lazy-load CSSInstead of shipping all CSS at once, split your styles by page or feature (“code splitting”). Modern bundlers (such as webpack and Vite) and frameworks (like React, Vue, and Next.js) support the dynamic  feature, allowing only the CSS required for the current route or component to be loaded.// Dynamically load styles when the page loads
+import("./styles/page.css");This technique improves “first paint” times and reduces bandwidth, especially for users who never visit certain pages.3. Use simple, shallow selectorsBrowsers read CSS from right to left and evaluate deeply nested or complex selectors more slowly. For best performance, use flat selectors like  instead of something like .header nav ul li a.active.Before deploying, always minify your CSS using tools like  or . Gzip or Brotli compression (handled by your server or CDN) will further shrink the payload sent to users.5. Use critical CSS (or not!)Critical CSS refers to inlining the minimal CSS required for above-the-fold content in the initial HTML. This allows the browser to render the visible part of the page immediately, while loading the rest of the CSS asynchronously.6. Reduce the use of expensive propertiesSpecific CSS properties, such as heavy box shadows, filters, or animations on significant elements, can cause “repaints” and slow down rendering. Use these effects thoughtfully, and prefer transform and opacity for animating elements — the browser’s compositor can often optimize these.7. Avoid  and overly specific selectorsFrequent use of  and particular selectors can make your CSS hard to override and debug, leading to more duplicated or conflicting rules.There there’s the case of UI kits or component libraries that import numerous unused styles. It’s easy (and maybe even tempting) to use all of the styles provided by a framework, but try importing only what you need, or use tree-shaking to strip unused parts. Many frameworks allow you to configure exactly what you need, like Bootstrap does.9. What are the pros and cons of CSS-in-JS vs. external CSS imports, and which would you choose? (Hard)Here’s how I would break it out.Styles are scoped to components, preventing unwanted side effects.Adds runtime overhead and may increase JS bundle size.Dynamic styling based on component state or props.Styles may not appear immediately on server-rendered pages without extra setup.Easy to maintain styles close to your component logic.It can be harder to debug in the browser inspector. (classic  files, global or CSS Modules):CSS is loaded by the browser in parallel, allowing for faster rendering.Risk of style collision in global CSS.Easier to cache and split CSS for large projects.Less dynamic—harder to do conditional styles based on state.Great for global themes, resets, or utility classes.In practice, most modern teams use a combination of global styles and resets in CSS files, along with component-level styles using CSS-in-JS or CSS Modules.10. Can you build this layout in CSS? (Hard)You’ll almost always be asked to build layouts on the fly.You could go with a Flexbox approach as well:It would be easy to fall into the trap of finding the “best” solution, but this perhaps is one case where demonstrating how to think like a front-end web developer is equally, if not more, important than coming up with a single definitive solution.These are merely example of the sort of core CSS questions you’re likely to encounter in front-end interviews, along with practical examples and the reasoning behind each approach. If you’re comfortable answering these in depth and can code out the examples under time pressure, you’ll be well-prepared.For more front-end interview questions, consider exploring frontendlead.com, which helps you prepare for front-end interviews across top tech companies. If you have additional topics you’d like to see covered or encounter tricky interview questions, please feel free to post them in the comments — I’d love to see them.And, of course, best of luck in your interviews!]]></content:encoded></item><item><title>How JavaScript really evolves, the inside story</title><link>https://javascriptweekly.com/issues/748</link><author></author><category>dev</category><category>frontend</category><pubDate>Fri, 8 Aug 2025 00:00:00 +0000</pubDate><source url="https://javascriptweekly.com/">Javascript Weekly</source><content:encoded><![CDATA[AwesomeIndex provides a way to search hundreds of 'awesome'-style curated link lists at once. This idea has a lot of potential, as those lists are crammed full of useful resources.r2dec-js is a JavaScript-based decompiler that converts assembly code into 'pseudo-C' for learning purposes.Bali is an attempt at creating a JavaScript lexer, parser, and interpreter in the Nim language.👀 Do you miss ActionScript 3.0 and Flex? No? This week, I learned Apache is keeping the dream alive with Apache Royale.]]></content:encoded></item><item><title>Bringing Back Parallax With Scroll-Driven CSS Animations</title><link>https://css-tricks.com/bringing-back-parallax-with-scroll-driven-css-animations/</link><author>Blake Lundquist</author><category>frontend</category><pubDate>Wed, 6 Aug 2025 13:39:06 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[For those unfamiliar with the concept, parallax is a pattern in which different elements of a webpage move at varying speeds as the user scrolls, creating a three-dimensional, layered appearance. A true parallax effect was once only achievable using JavaScript. However, scroll-driven animations have now given us a CSS-only solution, which is free from the main-thread blocking that can plague JavaScript animations.Parallax may have become a little cliché, but I think it’s worth revisiting with this new CSS feature. Scroll-driven animations are available on Chrome, Edge, Opera, and Firefox (behind a feature flag) at the time of writing. Use a supported browser when following this tutorial.In this example, we will apply parallax animations to the background and icons within the three “hero” sections of a universe-themed webpage. We’ll start with some lightly styled markup featuring alternating hero and text sections while including some space-related nonsense as placeholder content.Adding initial animationsLet’s add an animation to the background pattern within each hero section to modify the background position.@keyframes parallax {
+  from {
+    background-position: bottom 0px center;
+  }
+  to {
+    background-position: bottom -400px center;
+  }
+}
+
+section.hero {
+  /* previous code */
++ animation: parallax 3s linear;
+}Here we use the  CSS rule to create a start and end position for the background. Then we attach this animation to each of our hero sections using the  property.By default, CSS animations are duration-based and run when the specified selector is loaded in the DOM. If you refresh your browser, you will see the animation running for three seconds as soon as the page loads.We do not want our animation to be triggered immediately. Instead, we intend to use the page’s scroll position as a reference to calculate the animation’s progress.Scroll-driven animations provide two new  CSS functions. These additions,  and , tell the browser what to reference when calculating the progress of a CSS animation. We will use the  function later, but for now, let’s focus on . The  couples the progression of an animation to the user’s scroll position within a scroll container. Parameters can be included to change the scroll axis and container element, but these are not necessary for our implementation.Let’s use a scroll progress timeline for our animation:section.hero {
+  /* previous code */
+- animation: parallax 3s linear;
++ animation: parallax linear;
++ animation-timeline: scroll(); 
+}If you refresh the page, you will notice that as you scroll down, the position of the background of each hero section also changes. If you scroll back up, the animation reverses. As a bonus, this CSS animation is handled off the main thread and thus is not subject to blocking by any JavaScript that may be running.Using the view progress timelineNow let’s add a new parallax layer by animating the header text and icons within each hero section. This way, the background patterns, headers, and main page content will all appear to scroll at different speeds. We will initially use the  CSS function for the animation timeline here as well.@keyframes float {
+  from {
+    top: 25%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+.hero-content {
+  /* previous code */
++ position: absolute;
++ top: 25%;
++ animation: float linear;
++ animation-timeline: scroll(); 
+}That’s not quite right. The animation for the sections further down the page is nearly done by the time they come into view. Luckily, the view animation timeline solves this problem. By setting the  property to , our animation progresses based on the position of the subject within the scrollport, which is the part of the container that is visible when scrolling. Like the scroll animation timeline, scrolling in reverse will also reverse the animation.Let’s try changing our animation timeline property for the hero text:.hero-content {
+  /* previous code */
+- animation-timeline: scroll(); 
++ animation-timeline: view(); 
+}That looks pretty good, but there is a problem with the header content flashing into the view when scrolling back up the document. This is because the view timeline is calculated based on the original, pre-animation positioning of the subject element.We can solve this by adding an  parameter to the  function. This adjusts the size of the container in which the animation will take place. According to MDN’s documentation, the “inset is used to determine whether the element is in view which determines the length of the animation timeline. In other words, the animation lasts as long as the element is in the inset-adjusted view.”So, by using a negative value, we make the container larger than the window and trigger the animation to start a little before and end a little after the subject is visible. This accounts for the fact that the subject moves during the animation.- animation-timeline: view();
++ animation-timeline: view(-100px);Now both the text and background animate smoothly at different speeds.Adjusting animations using animation rangesSo far, we have employed both  and  progress timelines. Let’s look at another way to adjust the start and end timing of the animations using the  property. It can be used to modify where along the timeline the animation will start and end.We’ll start by adding a  timeline animation to the  emoji:@keyframes launch {
+  from {
+    transform: translate(-100px, 200px);
+  }
+  to {
+    transform: translate(100px, -100px);
+  }
+}
+
+#spaceship {
+  animation: launch;
+  animation-timeline: view();
+}Again, we see the emoji returning to its  position once its original unanimated position is outside of the scrollport.As discussed before, animations are based on the original pre-animation position of the subject. Previously, we solved this by adding an inset parameter to the  function. We can also adjust the animation range and tell our animation to continue beyond 100% of the animation timeline without having to manipulate the inset of the view timeline itself.#spaceship {
+  animation: launch;
+  animation-timeline: view();
++ animation-range: 0% 120%;
+}Now the animation continues until we have scrolled an extra 20% beyond the calculated scroll timeline’s normal endpoint.Let’s say that we want to add an animation to the  emoji, but we don’t want it to start animating until it has passed  from the bottom of the scrollport:@keyframes rotate {
+  from {
+    transform: rotate(0deg) translateX(100px);
+  }
+  to {
+    transform: rotate(-70deg) translateX(0px);
+  }
+}
+
+#comet {
+  animation: rotate linear;
+  transform-origin: center 125px;
+  animation-timeline: view();
+  animation-range: 4rem 120%;
+}Here we see the “delayed” animation in action:We can also combine animation ranges to run completely different animations at different points within the same timeline! Let’s illustrate this by combining animation ranges for the  icon at the top of the page The result is that the first animation runs until the icon passes 80% of the scrollport, then the second animation takes over for the final 20%.@keyframes orbit-in {
+  0% {
+    transform: rotate(200deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes orbit-out {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-50px, -15px);
+  }
+}
+
+#satellite {
+  animation: orbit-in linear, orbit-out ease;
+  animation-timeline: view();
+  animation-range: 0% 80%, 80% 110%;
+}Fallbacks and accessibilityOur webpage features numerous moving elements that may cause discomfort for some users. Let’s consider accessibility for motion sensitivities and incorporate the  CSS media feature.There are two possible values: , and . If we want to fine-tune the webpage with animations disabled by default and then enhance each selector with animations and associated styles, then we can use  to enable them.@media (prefers-reduced-motion: no-preference) {
+  .my-selector {
+    position: relative;
+    top: 25%;
+    animation: cool-animation linear;
+    animation-timeline: scroll(); 
+  }
+}For us, however, the webpage content and images will still all be visible if we disable all animations simultaneously. This can be done concisely using the  option. It’s important to note that this sort of blanket approach works for our situation, but you should always consider the impact on your specific users when implementing accessibility features.@media (prefers-reduced-motion: reduce) {
+  .my-selector {
+    animation: none !important;
+  }
+}In addition to considering accessibility, we should also take into account that scroll-driven animations are not supported by all browsers at the time of writing. If we care a lot about users seeing our animations, we can add a polyfill (direct link) to extend this functionality to currently unsupported browsers. This, however, will force the animation to run on the main thread.Alternatively, we could decide that performance is important enough to skip the animations on unsupported browsers, thereby keeping the main thread clear. In this case, we can use the  selector and include the styles only on supported browsers.Here is the final code with everything, including the polyfill and reduced motion fallback:There we go, we just re-created a classic web effect with scroll-driven animations using  and  progress timelines. We also discussed some of the parameters that can be used to adjust animation behavior. Whether or not parallax is your thing, I like the idea that we can use a modern approach that is capable of doing what we could before… only better with a dash of progressive enhancement.]]></content:encoded></item><item><title>Thinking Deeply About Theming and Color Naming</title><link>https://css-tricks.com/thinking-deeply-about-theming-and-color-naming/</link><author>Zell Liew</author><category>frontend</category><pubDate>Mon, 4 Aug 2025 13:14:45 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[As a front-end developer, I’ve been pretty curious about how other people code up their websites. So I tend to poke my head into design systems whenever I find one.Then, late last year, a conversation with Geoff Graham set me off thinking even deeper about theming websites. (If you don’t know that dude, he’s the chief editor of this site, so that guy’s a pretty big deal, too.)So I’ve been watching, pondering, and exploring:How can we create better themes?How can we allow increased flexibility in theming?How can we allow more colors to be used so that sites can be more alive and dimensional instead of being so flat all the time?Today, I want to discuss a couple of patterns that the community is using, and how I propose we can improve, so we achieve both flexibility and beauty.Hope you’re ready to go on a wild ride with me!Let’s begin from the beginning. After all, how can you discuss theming without including colors into the site?I think this problem is pretty much solved by now. Everyone has adopted systems that allows for various hues — along with multiple tints and shades — that can give some life to the design.We don’t need to go very far to see this trend happening. For example, Tailwind CSS includes a ton of colors and their respective tones.And Pico CSS ups the ante by introducing 19 different tones per color.Er… , so the number of tones doesn’t really matter. What’s important is you get sufficient color tones to create subtle effects for various parts of the design.Designing Your Own PaletteColor palettes provided by these libraries and frameworks can be good starting points, but I’d argue that you almost never want to use them.Because colors create differentiation; differentiation creates distinction; distinction creates identity.You probably know this is true without me telling you.Sites that use Bootstrap, look like Bootstrap.Sites that use Tailwind, look like Tailwind.Sites that use shadcn, look like that too…Of course there are makers who can break the mould, use Tailwind, and make it completely not like Tailwind. But that’s because they tweak many things.Color is one of these things — one of the most important ones — but other important pieces include typography, spacing, the roundness of your corners… and many others. Covering those is a story for another day, and perhaps best covered by Jack McDade who teaches Radical Design.So, if you don’t wanna drown in the sea of sameness — looking like everyone else — creating your own color palettes is a first step forward.Now, you may be anxious about creating color palettes because there’s been lots of writing about the amount of work that goes into creating accessible color palettes, so that might sound like a daunting task.Plus, anything related to accessibility carries “Big Potential Consequences” and “Highly Shameful When Done Incorrectly,” so that can add extra pressure on you.Throw all those pressures away.Because if you want to create a corner of the internet that looks like you (or your company), breathes like you, acts like you, and exudes fun like you do, then gotta do what you gotta do.There are only two words you have to remember.And you’re set for accessibility (design-wise, at least).Designing Color Palettes by HandI tend to design color palettes by hand — in Figma — when I design my websites. This seems to be the most natural process for me. (Or maybe I’m just influenced by how Jack designs stuff 🙃).If you do this, there’s no need to stress about filling up tones from 50 to 950. That’s because you’ll have no idea what colors would look nice before you fit them into the design. Stressing over tones is putting the cart before the horse.Here’s a decent example. When I designed Splendid Labz, I omitted a ton of color tones. Here’s an example of the pink color variables for the site.Notice I skipped values between 50 and 400? Well, I didn’t need ’em.Notice I added  and ? Well, I kinda wanted a desaturated (or muted) variant of these colors… which… could not be captured the existing systems. So I added  for desaturated 🙃.You get the drift, yeah? It’s not too hard. So, don’t be scared and give that a try.Designing Color Palettes ProgrammaticallyIf you’re the kinda person that prefers generating colors programmatically (and of course you can hand-tweak them afterwards if you desire), here are a few generators you may fancy:Of these, I highly recommend checking out @meodai‘s RampenSau because he’s really knowledgeable about the color space and does incredible work there. (Use the monochromatic feature to make this easy.)🎉 Just released RampenSau v1.0.0 on npm and GitHub! 🎢🐷
+
+After some Easter weekend coding, the color palette generation library is now stable with improved docs and APIs. 
+
+Generate beautiful color ramps for your data viz, design work, or generative art!
+
+meodai.github.io/rampensau/[image or embed]— David Aerne (@meodai.bsky.social) April 21, 2025 at 3:55 PMA thousand words later, we’re finally getting to the meat of this article. 😅With a seemingly unlimited amount of options given by the color palettes, it makes sense to assume that we can use them however we want — but when it comes to application, most systems seem to fall short.(Even  is generous. They actually seem to be .)For example, DaisyUI seems to support only two tones per color…Pico CSS, a system with one of the most options, on first glance, limits to 10 possible variants ““.But if you look deeper, we’re still looking at about two tones per “thing”:Background and background hover (two tones)Border and border hover (two tone)Underline (is this the same as border? More on this below.)Which brings me to one very important and very puzzling question:If colors are so important, why do these frameworks allow only the utilization of so few colors?I can’t answer this question because I’m not the creators behind those systems, but I’d guess these might be the possible causes:These system designers might not be as sensitive to colors as visual designers.Semantic class name confusion.Values were simply meant as guidelines.The second one a serious, and limiting, issue that we can deal with today.As for the first, I’m not saying I’m a great designer. I’m simply saying that, with what I know and have discovered, something seems to be amiss here.Anyway, let’s talk about the second point.Semantic Class Name ConfusionObserving the “semantic class names” these systems use actually unveil underlying confusion about what “semantic” means to the web development community.But if you look deeper, we’re still looking at about two tones per “thing”Background and background hover (two tones)Border and border hover (two tones)Underline (is this the same as border? More on this below)Isn’t that an interesting remark? (I ask this question because  and  can use the same color to create a unifying effect).From what we can see here, the term “semantic” actually means two things conflated into one:An order of hierarchy (, , , etc)The “thing” it was supposed to styleThis gets even more confusing because the order of hierarchy can now be split into two parts:A color-specific order (so  means ,  means , and so on)A use-case specific order (so a  button might be , while a  button might be )We keep the hierarchy (, , ) to the color hue.We name the strength, “oomph,” or weight of the button with a verb that describes their relative weight or appearance, like , , , , etc.We can create the appearance variations easily with something I call . But perhaps that’s an article for another day.Anyway, by creating this separation, we can now create a wealth amount of color combinations without being restricted by a single hierarchical dimension.The Second Problem With SemanticsUsing the same example (just for simplicity, and definitely not trying to bash Pico CSS because I think they’re doing a really good job in their own right), we see that semantics are conflated by stating its hierarchy along what its supposed to style.--pico-primary-backgroundThese two properties result in a problem when designing and developing the site later. If you consider these questions, you’d see the problems too:First: By using --pico-primary-background…Does it mean we only have one main background color?What if we need other colors? Do we use --pico-secondary-background?What if we need more? Do we use  (3rd),  (4th),  (5th), and  (6th) for other colors?Second: What if we have variants of the same color? Do we use things like --pico-primary-background-1, , , and so on?Third: Now, what if I need the same color for the --pico-primary-background and the  of the same component? But I’d need another color for a second one?This starts getting confusing and “semantics” begins to lose its meaning.What Semantics Actually MeanConsulting Etymology and the dictionary gives us clues about how to actually be semantic — and keep meaning.Two things we can see here:Semantics mean to indicate by a sign.It can be related to meaning or logic.What I’m noticing is that people generally ascribe “semantics” to words, as if only words can convey meanings and numbers cannot…But what if we broaden our scope and view numbers as semantic too — since we know 100 is a much lighter tint and 900 is a dark shade, isn’t that semantics showing through numbers?We already have a perfectly usable semantic system — using numbers — through the color palettes.What we simply need is to adjust it such that we can use the system to .I made the argument above that the hierarchy (, , etc.) should be used to refer to the colors.Then, if you have use  color as your main (hence ) color…You can simply set another color, say  as your  color!(Duh? Yeah, it’s obvious in hindsight.)Implementing this into our code, we can do a one-to-one port between hierarchy and hues. If you do this via CSS, it can be manual and not very fun….theme-pink {
+  --color-primary-100: var(--color-pink-100);
+  --color-primary-200: var(--color-pink-200);
+  --color-primary-300: var(--color-pink-300);
+  /* and so on ...*/
+
+  --color-secondary-100: var(--color-orange-100);
+  --color-secondary-200: var(--color-orange-200);
+  --color-secondary-300: var(--color-orange-300);
+  /* and so on ...*/
+}With Sass, you can run a quick loop and you’ll get these values quickly.$themes: (
+  pink: (
+    primary: pink,
+    secondary: orange
+  )
+);
+
+$color-tones: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@each $theme-name, $theme-colors in $themes {
+  .theme-#{$theme-name} {
+    @each $tone in $color-tones {
+      --color-primary-#{$tone}: var(--color-#{map-get($theme-colors, primary)}-#{$tone});
+      --color-secondary-#{$tone}: var(--color-#{map-get($theme-colors, secondary)}-#{$tone});
+    }
+  }
+}For Tailwind users, you could do a loop via a Tailwind plugin in v3, but I’m not quite sure how you would do this in v4.// The plugin code
+const plugin = require('tailwindcss/plugin')
+
+module.exports = plugin(function ({ addUtilities, theme }) {
+  const splendidThemes = theme('splendidThemes', {})
+  const palette = theme('colors')
+  // Collect all unique tone keys used by any color in any theme
+  const allTones = new Set()
+  Object.values(splendidThemes).forEach(themeConfig => {
+    Object.values(themeConfig).forEach(colorName => {
+      if (palette[colorName]) {
+        Object.keys(palette[colorName]).forEach(tone => allTones.add(tone))
+      }
+    })
+  })
+
+  const utilities = {}
+
+  Object.entries(splendidThemes).forEach(([themeName, themeConfig]) => {
+    const themeClass = {}
+
+    Object.entries(themeConfig).forEach(([role, colorName]) => {
+      if (!palette[colorName]) return
+      allTones.forEach(tone => {
+        if (palette[colorName][tone] !== undefined) {
+          themeClass[`--color-${role}-${tone}`] =
+            `var(--color-${colorName}-${tone})`
+        }
+      })
+    })
+
+    utilities[`.theme-${themeName}`] = themeClass
+  })
+
+  addUtilities(utilities)
+})// Using it in Tailwind v3
+module.exports = {
+  plugins: [
+    require('path-to-splendid-themes.js')
+  ]
+  theme: {
+    splendidThemes: {
+      pink: {
+        primary: 'pink',
+        secondary: 'orange'
+      },
+      blue: {
+        primary: 'blue',
+        secondary: 'purple',
+        tertiary: 'orange'
+      }
+    }
+  },
+}Will this generate a lot of CSS variables?But will in affect performance?Maybe, but I’d guess it won’t affect performance much, since this code is just a couple of bytes more. (Images, by contrast, weigh thousands of times more than these variables do.)And now we no longer need to worry about knowing whether  or  is the right keyword. We can simply use the semantic numerals in our components:.card {
+  background-color: var(--color-primary-500)
+}
+
+.card-muted {
+  background-color: var(--color-primary-700);
+}One More Note on SemanticsI think most frameworks get it right by creating component-level semantics. This makes a ton of sense.For example, with Pico CSS, you can do this:In your own creations, you might want to reduce the amount of namespaces (so you write less code; it’s less tedious, yeah?):.card-namespaced {
+  --card-header-bg: var(--color-primary-600);
+}
+
+.card-without-namespace {
+  --header-bg: var(--color-primary-600);
+}No “extra semantics” or even “namespacing” needed when the project doesn’t require it. Feel free to Keep It Simple and Sweet.This brings me to a separate point on component vs global variables.Some variables should be global because they can propagate through the entirety of your site without you lifting a finger (that is, once you design the CSS variables appropriately).An example of this with borders::root {
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: var(--color-neutral-700);
+}You can change the global  variable and adjust everything at once. Great!To use this sorta thing, you have to build your components with those variables in mind..card {
+  border: var(--border-width) var(--border-style) var(--border-color);
+}@utility border-scaffold {
+  border: var(--border-width) var(--border-style) var(--border-color);
+  border-radius: var(--radius);
+}Then we can easily apply them to the component:.card {
+  @apply border-scaffold;
+}To change the theme of the card, we can simply change the  variable, without needing to include the  namespace..card-red {
+  --border-color: var(--color-red-500);
+}This way, authors get the ability to create multiple variations of the component without having to repeat the namespace variable. (See, even the component namespace is unnecessary.).pico-card-red {
+  --pico-card-background-color: var(--color-red-500);
+}
+
+.card-red {
+  --bg-color: var(--color-red-500);
+}Now, I know we’re talking about colors and theming, and we segued into design systems and coding… but can you see that there’s a way to create a system that makes styling much easier and much more effective?Enough tooting my own horn! Let’s go back to theming!I think here are some other values that you might want to consider in your global variables::root {
+  --border-width: ...;
+  --border-style: ...;
+  --border-color: ...;
+
+  --outline-width: ...;
+  --outline-style: ...;
+  --outline-focus-color: ...;
+  --outline-offset: ...;
+
+  --transition-duration: ...;
+  --transition-delay: ...;
+  --transition-easing: ...;
+}How Important is All of This?It depends on what you need.People who need a single theme can skip the entire conversation we hashed out above because they can just use the color palettes and call it a day..card {
+  background: var(--color-pink-500);
+  color: var(--color-pink-900);
+}For those who need multiple themes with a simple design, perhaps the stuff that Pico CSS, DaisyUI, and other frameworks have provided is sufficient. Notice that DaisyUI contains variables for  and ? Why? Isn’t it obvious and consistent enough that you can use  for errors directly in your code? Why create an unnecessary abstraction? And why subject yourself to their limitations? Anyway, rant end. You get my point.For those who want flexibility and lots of possible color shades to play with, you’ll need a more robust system like the one I suggested.So, take what you need. Improve what you wish to. And may this help you through your development journey.If you wanna check out what I’ve created for my design system, head over to Splendid Styles. The documentation may still be lacking when this post gets published, but I’m trying to complete that as soon as I can.And if you’re interested in the same amount of rigour I’ve described in this article — but applied to CSS layouts — consider checking out Splendid Layouts too. I haven’t been able to look back after I started using it.]]></content:encoded></item><item><title>Pixel data from encoders to decoders</title><link>https://developer.mozilla.org/en-US/blog/image-formats-pixels-graphics/</link><author>polina-gurtovaia</author><category>dev</category><category>official</category><category>frontend</category><enclosure url="https://developer.mozilla.org/en-US/blog/image-formats-pixels-graphics/featured.png" length="" type=""/><pubDate>Mon, 4 Aug 2025 00:00:00 +0000</pubDate><source url="https://developer.mozilla.org/en-US/blog/">MDN Blog</source><content:encoded><![CDATA[From individual pixels to fully decoded images on your screen, raw pixel data gets transformed, compressed, and efficiently delivered. Learn about the techniques and optimizations that shrink image information without any perceivable loss in quality.
+]]></content:encoded></item></channel></rss>
