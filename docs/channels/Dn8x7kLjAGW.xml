@@ -1,457 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Debugging Book • Andreas Zeller &amp; Clare Sudbery • GOTO 2025</title><link>https://www.youtube.com/watch?v=MNRIJsoi-Ds</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/MNRIJsoi-Ds?version=3" length="" type=""/><pubDate>Thu, 3 Jul 2025 12:00:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
-http://gotopia.tech/bookclub
-
-Read the full transcription of the interview here:
-https://gotopia.tech/episodes/387
-
-Prof. Andreas Zeller - Faculty at CISPA Helmholtz Center for Information Security & Author of "The Debugging Book" @Doebldodl 
-Clare Sudbery - Independent Technical Coach @ClareSudberySSELtd 
-
-RESOURCES
-Andreas
-https://bsky.app/profile/andreaszeller.bsky.social
-https://mastodon.social/@AndreasZeller
-https://github.com/andreas-zeller
-https://www.linkedin.com/in/andreaszeller
-https://andreas-zeller.info
-
-Clare
-https://bsky.app/profile/claresudbery.bsky.social
-https://twitter.com/ClareSudbery
-https://linkedin.com/in/clare-sudbery-she-her-35939540
-https://mastodon.social/@claresudbery
-https://www.madetech.com/podcast
-https://insimpleterms.blog
-
-Links
-https://www.debuggingbook.org
-https://github.com/uds-se/debuggingbook
-https://hub.2i2c.mybinder.org/user/uds-se-debuggingbook-06yfdm2t/doc/tree/docs/notebooks/00_Table_of_Contents.ipynb
-https://www.st.cs.uni-saarland.de/dd
-https://youtu.be/30jNsCVLpAE
-https://youtu.be/LvhIMkr0rXg
-https://youtu.be/8bPDiuJGGh0
-https://youtu.be/lWPLgm52ICs
-https://youtu.be/4mRxIgu9R70
-https://youtu.be/n7QUBt6qsUU
-https://youtu.be/RNBpqbxhrng
-https://youtu.be/lCZtgN7b4TE
-https://youtu.be/sLjSGrkbIFw
-https://youtu.be/VwPCtxxvwjI
-
-DESCRIPTION
-Programming education has a critical blind spot: while we extensively teach code creation, we barely scratch the surface of testing and give almost no attention to debugging—despite debugging consuming half of all software development time.
-
-In this conversation with Clare Sudbery, Prof. Andreas Zeller argues that systematic debugging skills and modern automated debugging tools are the "ugly stepchild" of programming that nobody wants to discuss, yet debugging represents the biggest business risk and time sink in software development. As AI-driven coding becomes more prevalent, this gap will only widen, making investment in proper debugging education and tools not just beneficial but essential for the future of software development.
-
-TIMECODES
-00:00 Intro
-02:53 Revolutionizing tech education: The executable book format
-11:17 What "The Debugging Book" teaches
-16:01 Interactive debuggers & advanced techniques
-21:31 Python as the language of choice
-26:53 Tracking dependencies & Delta Debugging
-34:55 Automated software repair & testing
-51:09 Outro
-
-RECOMMENDED BOOKS
-Andreas Zeller • The Debugging Book • https://www.debuggingbook.org
-Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
-Charles Humble • Professional Skills for Software Engineers • https://www.conissaunce.com/professional-skills-shortcut
-Cathy O'Neil • Weapons of Math Destruction • https://amzn.to/42jYkba
-Jonathan B. Rosenberg • How Debuggers Work • https://amzn.to/3SnFHgv
-Nora Sandler • Writing a C Compiler • https://amzn.to/3Z6SMhU
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#Debugging #Debugger #DeltaDebugging #StatisticalDebugging #Compiler #SoftwareRepair #SoftwareTesting #Testing #TDD #Refactoring #Python #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #AndreasZeller #ClareSudbery #BookClub
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Health Insurance Appeals with Generative AI: From Lab to Production • Holden Karau • GOTO 2024</title><link>https://www.youtube.com/watch?v=Q5muBDDdhJg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Q5muBDDdhJg?version=3" length="" type=""/><pubDate>Wed, 2 Jul 2025 12:00:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Chicago 2024. #GOTOcon #GOTOchgo
-https://gotochgo.com
-
-Holden Karau - Co-Founder at Fight Health Insurance @HoldenKarau 
-
-RESOURCES
-https://bsky.app/profile/holdenkarau.com
-https://twitter.com/holdenkarau
-https://github.com/holdenk
-https://www.linkedin.com/in/holdenkarau
-http://holdenkarau.com
-
-Links
-https://www.fighthealthinsurance.com
-https://wpso.dmhc.ca.gov/imr
-https://huggingface.co/TotallyLegitCo/appeal-alpaca
-https://huggingface.co/TotallyLegitCo/fighthealthinsurance_model_v0.2
-https://huggingface.co/TotallyLegitCo/fighthealthinsurance_model_v0.3
-https://www.youtube.com/playlist?list=PLRLebp9QyZtYcK_X13lBS_HZjaXUDwyEt
-
-ABSTRACT
-This talk will cover how we created a system to generate health insurance appeals from denials. We'll start with a quick look at the different attempts at model fine-tuning (along with what eventually worked well for us), then look at the middleware, how we integrate in-house and external models, steps to protect privacy, and finally, some truly questionable frontend code (or truly great frontend code if we finish the rewrite in time—you never know).
-
-If you love the American healthcare system as it stands today, this is probably not the talk for you. For those ambivalent about the healthcare system, that's totally fine; you can still see what it takes to bring an ML system from drinks at a bar all the way through to production. [...]
-
-TIMECODES
-00:00 Intro
-00:25 Content warning
-03:38 What's the problem?
-06:13 How to use computers to fix the problem?
-07:13 What's needed to tune a LLM?
-10:36 Putting it together
-11:38 Downsides
-13:04 What models did we make?
-14:21 Model fine tune config
-15:40 Model serving
-18:38 Frontend?
-19:46 Demo
-25:18 How to do better for the next model?
-27:55 Links
-28:40 Outro
-
-Download slides and read the full abstract here:
-https://gotochgo.com/2024/sessions/3371
-
-RECOMMENDED BOOKS
-Holden Karau • Distributed Computing 4 Kids • https://www.distributedcomputing4kids.com
-Holden Karau • Scaling Python with Dask • https://www.oreilly.com/library/view/scaling-python-with/9781098119867
-Holden Karau & Boris Lublinsky • Scaling Python with Ray • https://amzn.to/44GU6cC
-Holden Karau & Rachel Warren • High Performance Spark • https://amzn.to/3v2eLbn
-Holden Karau, Konwinski, Wendell & Zaharia • Learning Spark • https://amzn.to/397e2NE
-Holden Karau & Krishna Sankar • Fast Data Processing with Spark 2nd Edition • https://amzn.to/3xKhXKu
-Holden Karau • Fast Data Processing with Spark 1st Edition • https://amzn.to/3rHQgOu
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#GenerativeAI #LLMs #GenAI #HealthInsurance #HealthInsuranceAppeals #HoldenKarau
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Industries Adopting Rust</title><link>https://www.youtube.com/watch?v=zRgtK2DsEXM</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zRgtK2DsEXM?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 14:15:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[If you love coding in Rust but aren’t sure how to turn that passion into a full-time career, this video is for you. We’re diving into the real-world opportunities for Rust developers, the industries that are actively adopting Rust, the skills they’re looking for, and the exact steps you can take to land your first Rust job.
-
-Join the Rust Live Accelerator: https://letsgetrusty.com/join
-
-Chapter:
-0:00 Intro
-0:43 Security Industry
-2:56 Backend Infrastructure
-4:00 Embedded
-5:26 Web3
-8:06 AI]]></content:encoded></item><item><title>Building Support Structures • Flavia Circiumaru &amp; Hannes Lowette • GOTO 2025</title><link>https://www.youtube.com/watch?v=Uk9CwG9a_C4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Uk9CwG9a_C4?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 12:01:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
-https://gotopia.tech
-
-Read the full transcription of this interview here:
-https://gotopia.tech/articles/386
-
-Flavia Circiumaru - Software Engineer at FundApps @flaviacirciumaru7502 
-Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover @Belenar82 
-
-RESOURCES
-Flavia
-https://x.com/FlavsFA
-https://github.com/flaviacirciumaru
-https://www.linkedin.com/in/flavia-circiumaru
-
-Hannes
-https://bsky.app/profile/hanneslowette.net
-https://twitter.com/hannes_lowette
-https://github.com/Belenar
-https://linkedin.com/in/hanneslowette
-
-Links
-https://youtu.be/wEq0RnHHE8g
-https://youtu.be/eaATm4rFqrE
-https://youtu.be/X3AHdo34gWM
-https://youtu.be/_R_Vc17mxNE
-https://youtu.be/j2AQ9eTZ3-0
-https://youtu.be/zmA5fhV-FGk
-https://youtu.be/Cx_vijTm24w
-
-DESCRIPTION
-When FundApps exploded from 20 to 50+ engineers in just one year, their old "everyone does support" model crumbled spectacularly. Software engineer Flavia Circiumaru and host Hannes Lowette dive deep into how this London-based regulatory compliance company transformed from a support-free-for-all to a streamlined powerhouse.
-
-Flavia Circiumaru reveals the behind-the-scenes story of building a three-desk support system that turned their support team into the ultimate connector, bridging customers, developers, and business teams like never before. From battling context-switching nightmares to creating communication magic, Flavia and Hannes explore actionable insights on scaling support without losing your sanity.
-
-The twist? Their ultimate goal is to make support so seamless that dedicated teams won't even be needed. Talk about engineering your way out of a job!
-
-TIMECODES
-00:00 Intro
-02:30 From support chaos to structure
-09:36 3 desks, 1 goal: Better support engineering
-20:09 The challenge of multi-tenant support at scale
-32:12 Future aspirations & advice
-39:23 Outro
-
-RECOMMENDED BOOKS
-Jacqui Read • Communication Patterns • https://amzn.to/3E37lvv
-Saleem Siddiqui • Learning Test-Driven Development • https://amzn.to/35OMb3n
-Ben Goldacre • Bad Science • https://amzn.to/4lqNLKN
-Ben Goldacre • Bad Pharma • https://amzn.to/3G15Mz7
-Jeet Pattanaik • Ethics in AI • https://amzn.to/4jXyQXw
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#SupportStructures #SupportEngineering #Communication #DevTeams #TodayInTech #FlaviaCirciumaru #HannesLowette
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>@souldzin: Being polite doesn&apos;t mean being inefficient</title><link>https://www.youtube.com/shorts/ztCsSWfBSd8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ztCsSWfBSd8?version=3" length="" type=""/><pubDate>Mon, 30 Jun 2025 12:01:59 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #PaulSlaughter #ConventionalComments #TeamDynamics #CodeQuality #PairProgramming #TeamHappiness #SoftwareEngineering #Programming #TodayInTech #AdrienneBraganza #AdrienneTacke  #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
-
-Full version available here:
-https://youtu.be/7oIs4kNH65Y
-
-Paul Slaughter - Staff Fullstack Engineer at GitLab & Creator of Conventional Comments @souldzin 
-
-RECOMMENDED BOOK
-Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews • https://amzn.to/3E75XrD
-Adrienne Braganza Tacke • Coding for Kids • https://amzn.to/3Ukd5Gw
-Grace Huang • Code Reviews in Tech • https://amzn.to/4fbwYr8
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
-Dave Thomas & Andy Hunt • The Pragmatic Programmer • https://amzn.to/3azvUy3
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Icicle: The Highs &amp; Lows of Optimizing DSLs • Jacob Stanley • YOW! 2016</title><link>https://www.youtube.com/watch?v=YnrECZC7O3Q</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/YnrECZC7O3Q?version=3" length="" type=""/><pubDate>Sun, 29 Jun 2025 12:00:57 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2016. #GOTOcon #YOW
-https://yowcon.com
-
-Jacob Stanley - Software Engineer at Ambiata
-
-RESOURCES
-https://github.com/jacobstanley
-https://x.com/jacobstanley
-https://github.com/icicle-lang/icicle-ambiata
-
-ABSTRACT
-So, you’ve written a #DSL, it’s a work of art! It so perfectly models the problem at hand that even a trained house cat could generate business value. You just have one problem, your interpreter runs 100x slower than a shell script launching JVMs in a loop.
-
-#DomainSpecificLanguages (DSLs) are able to offer the abstraction benefits of a high-level language, while when compiled, competing with low-level languages on performance. Because DSLs have a much smaller problem area, many specialised optimisations can be performed which are not feasible for a general purpose language.
-
-In this talk, we will explain a number of optimisations which are useful for DSLs, and show our solutions to the practical issues we faced when implementing them in our #QueryLanguage, #Icicle.
-
-Icicle is a query language for processing large amounts of time-series data. Its type system enforces that queries require only a single pass over the data, and that multiple queries over the same data can be fused together. By using a combination of high level optimisations such as partial evaluation and common subexpression elimination, and low level optimisations such as parsing code which is specialised for the given input, our queries are faster than the equivalent hand-written C code.
-
-From this talk, the audience will learn how the focused point of view that DSLs provide can be useful in performance critical systems, as well as a number of concrete techniques for optimising their own DSLs.
-
-RECOMMENDED BOOKS
-Kenneth E. Iverson • A Programming Language • https://amzn.to/45sCYKK
-Hadley Wickham • Advanced R • https://amzn.to/45XIbKw
-Jeffry A. Borror • q For Mortals Version • https://amzn.to/3zd58eo
-Nick Psaris • Q Tips • https://amzn.to/4cxJr76
-Nazia Habib • Hands-On Q-Learning with Python • https://amzn.to/3zfUbZM
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#FunctionalProgramming #SoftwareEngineering #Programmer #JacobStanley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Rationale for Continuous Delivery • Dave Farley • YOW! 2018</title><link>https://www.youtube.com/watch?v=Viv7bs99K0U</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Viv7bs99K0U?version=3" length="" type=""/><pubDate>Sat, 28 Jun 2025 12:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2018. #GOTOcon #YOW
-https://yowcon.com
-
-Dave Farley - Continuous Delivery & DevOps Pioneer, Award-winning Author, Founder & Director of Continuous Delivery Ltd. @ModernSoftwareEngineeringYT 
-
-RESOURCES
-https://bsky.app/profile/davefarley77.bsky.social
-https://www.continuous-delivery.co.uk
-https://linkedin.com/in/dave-farley-a67927
-https://twitter.com/davefarley77
-http://www.davefarley.net
-
-ABSTRACT
-The production of software is a complex, collaborative process that stretches our ability as human beings to cope with its demands. Many people working in #SoftwareDevelopment spend their careers without seeing what good really looks like.
-
-Our history is littered with inefficient processes creating poor quality output, too late to capitalise on the expected business value.
-How have we got into this state?
-How do we get past it?
-What does good really look like?
-
-Continuous Delivery changes the economics of software development for some of the biggest companies in the world, whatever the nature of their software development, find out how and why.
-
-RECOMMENDED BOOKS
-David Farley • Modern Software Engineering • https://amzn.to/3GI468M
-Dave Farley • Continuous Delivery Pipelines • https://amzn.to/3rjetdi
-Dave Farley & Jez Humble • Continuous Delivery • https://amzn.to/3ocIHwd
-Dave Farley & many more • Software Architecture Metrics • https://amzn.to/3M3XqG5
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#ContinuousDelivery #SoftwareArchitecture #Complexity #SoftwareComplexity #SoftwareEngineering #Programmer #DaveFarley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Using Generative AI to Strengthen &amp; Accelerate Learning • Barbara Oakley • GOTO 2024</title><link>https://www.youtube.com/watch?v=rbTaEsieWsU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/rbTaEsieWsU?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 12:01:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
-
-Barbara Oakley - Professor of Engineering at Oakland University & Author of Numerous Books @BarbaraOakley 
-
-RESOURCES
-https://twitter.com/Barbara97881398
-https://www.linkedin.com/in/barbaraoakley
-https://barbaraoakley.com
-
-Links
-https://arxiv.org/abs/1706.03762
-https://psycnet.apa.org/record/2025-07056-001
-https://psycnet.apa.org/record/1984-11828-001
-https://psycnet.apa.org/record/2016-51296-001
-https://pubmed.ncbi.nlm.nih.gov/29891660
-https://psycnet.apa.org/record/2023-71875-001
-https://psycnet.apa.org/record/2014-36030-003
-
-ABSTRACT
-This talk will demonstrate how AI, via transformers, can lift limits on core cognitive processes like attention, synthesis, and retention.
-
-These insights will allow you to use AI more effectively to scaffold and accelerate your own learning.
-
-After all, generative AI can do far more to propel our learning than simply answer questions (important and helpful though that may be!).
-
-Generative AI is, in essence, a teacher—but it can teach better if you know how its properties are sometimes similar to, and sometimes very different from, how the human brain works. [...]
-
-TIMECODES
-00:00 Intro
-03:03 What does ChatGPT do?
-12:32 The value of metaphor
-21:35 7 int. companies with their foundational LLMs
-26:25 Large language models
-34:33 Cheating or "learning lightly"
-36:11 The Flynn Effect
-39:08 How to think about the new complex world
-46:45 Good books on GenAI
-48:30 Outro
-
-Download slides and read the full abstract here:
-https://gotocph.com/2024/sessions/3168
-
-RECOMMENDED BOOKS
-Barbara Oakley & Olav Schewe • Learn Like a Pro • https://amzn.to/3Z3gyf9
-Barbara Oakley, Beth Rogowsky & Terrence J. Sejnowski • Uncommon Sense Teaching • https://amzn.to/4hKGaEW
-Barbara Oakley & Terrence J. Sejnowski • Learning How to Learn • https://amzn.to/3Cqe7dW
-Barbara Oakley • A Mind For Numbers • https://amzn.to/3Z2tjqi
-Barbara Oakley • Mindshift • https://amzn.to/3Z2EAaf
-Barbara Oakley, Madhavan, Green, Koon & Low • Practicing Sustainability • https://amzn.to/4fn95gZ
-Barbara Oakley • Pathological Altruism • https://amzn.to/48LDVNK
-C. Edward Watson & Jose Antonio Bowen • Teaching with AI • https://amzn.to/44sBgYC
-Terrence J. Sejnowski • ChatGPT and the Future of AI • https://amzn.to/45VnfEf
-Ethan Mollick • Co-Intelligence • https://amzn.to/3HTnNjK
-Brian Christian • The Alignment Problem • https://amzn.to/4k5D8LA
-Dr. Fei-Fei Li • The Worlds I See • https://amzn.to/44b2EJm
-Kai-Fu Lee • AI Superpowers • https://amzn.to/43YftrN
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#GenAI #ArtificialIntelligence #GenerativeAI #HowToLearn #StrengthenLearning #Mindshift #LearnLikeAPro #ChatGPT #Cloude #LLaMA #DeclarativeLearning #FlynnEffect #UncommonSenseTeaching #TodayInTech #BarbaraOakley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Better Value Sooner Safer Happier • Simon Rohrer &amp; Eduardo da Silva</title><link>https://www.youtube.com/watch?v=oRaYe4AUR2g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/oRaYe4AUR2g?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 09:35:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Balancing Coupling in Software Design • Vlad Khononov &amp; Sheen Brisals</title><link>https://www.youtube.com/watch?v=vuFSneZWpNU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/vuFSneZWpNU?version=3" length="" type=""/><pubDate>Fri, 15 Aug 2025 12:27:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here
- (https://gotopia.tech/episodes/356) 
-Simon Rohrer - Co-Author of "Better Value Sooner Safer Happier" & Senior Director at Saxo Bank
-Eduardo da Sliva - Independent Consultant on Organization, Architecture, and Leadership Modernization
+ (https://gotopia.tech/episodes/367) 
+Sheen Brisals - AWS Serverless Hero, Engineering Leader & Co-Author of "Serverless Development on AWS"
+Vlad Khononov - Author of "Balancing Coupling in Software Design" & "Learning Domain Driven Design" & Creator of the Balanced Coupling Model
 
 RESOURCES
-Simon
-https://bsky.app/profile/simon.bvssh.com
-https://mastodon.social/@simonr
-https://x.com/sirohrer
-https://www.linkedin.com/in/simonrohrer
-https://github.com/sirohrer
-https://www.soonersaferhappier.com
+Vlad
+https://bsky.app/profile/vladikk.bsky.social
+https://vladikk.com
+https://github.com/vladikk
+https://www.linkedin.com/in/vladikk
 
-Eduardo
-https://bsky.app/profile/esilva.net
-https://mastodon.social/@eduardodasilva
-https://x.com/emgsilva
-https://www.linkedin.com/in/emgsilva
-https://github.com/emgsilva
-https://esilva.net
+Sheen
+https://bsky.app/profile/sheenbrisals.bsky.social
+https://twitter.com/sheenbrisals
+https://www.linkedin.com/in/sheen-brisals
+https://sbrisals.medium.com
+
+Links
+https://www.informit.com
+https://youtu.be/6hTZXR2brWE
 
 DESCRIPTION
-Eduardo da Silva and Simon Rohrer discuss the core ideas of "Better Value Sooner Safer Happier" diving into the principles of organizational transformation.
+Sheen Brisals sits down with software engineer and author Vlad Khononov to explore his latest book, "Balancing Coupling in Software Design". Vlad shares his journey from a failed microservices project to his deep dive into the principles of coupling, drawing insights from a 1970s structured design book.
 
-Simon shares insights on the shift from output-driven to outcome-focused thinking, emphasizing value over productivity, and the need for continuous improvement in delivery speed, stakeholder satisfaction, and safety.
-The conversation explores key concepts like technical excellence, integrating safety into development, and balancing incremental changes with occasional larger steps.
-
-Simon Rohrer discusses organizational patterns and the importance of decentralizing decision-making, recommending a flexible, context-driven approach to transformation. The session concludes with practical advice on how to start implementing these ideas, using the book’s map to guide organizations toward the right transformation strategy based on their specific goals.
+The duo discusses the timeless nature of coupling in software, how modern systems like microservices and cloud architectures still rely on age-old design principles, and the importance of understanding complexity for better problem decomposition and estimation. Vlad also reveals his unique approach to the book—integrating AI-generated poetry into each chapter to help readers grasp complex concepts. With a focus on modularity as the antidote to complexity, Vlad emphasizes that by managing coupling, engineers can create more maintainable, scalable systems.
 
 RECOMMENDED BOOKS
-Jonathan Smart, Zsolt Berend, Myles Ogilvie & Simon Rohrer • Sooner Safer Happier
- (https://amzn.to/3Emm9p2) Stephen Fishman & Matt McLarty • Unbundling the Enterprise
- (https://amzn.to/3W2EcXw) Carliss Y. Baldwin • Design Rules, Vol. 2
- (https://amzn.to/4hdllRr) Matthew Skelton & Manuel Pais • Team Topologies
-Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps
- (http://amzn.to/3sVLyLQ) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook (https://amzn.to/47oAf3l) 
+Vlad Khononov • Balancing Coupling in Software Design
+ (https://amzn.to/4iGpbDv) Vlad Khononov • Learning Domain-Driven Design
+ (https://amzn.to/41EVhIX) Sheen Brisals & Luke Hedger • Serverless Development on AWS
+ (https://amzn.to/3W3Sw2f) Glenford Myers • Composite/Structured Design
+ (https://amzn.to/4kVblPN) Vaughn Vernon • Implementing Domain-Driven Design
+ (https://amzn.to/41Mpk2E) Eric Evans • Domain-Driven Design
+ (https://amzn.to/43lNxhv) van Kelle, Verschatse & Baas-Schwegler • Collaborative Software Design
+ (https://amzn.to/4iv0N8I) Nick Tune & Jean-Georges Perrin • Architecture Moderniza (https://amzn.to/4b5ASiN) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -467,4 +52,206 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item></channel></rss>
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Encrypted Computation: What if Decryption Wasn’t Needed? • Katharine Jarmul • GOTO 2024</title><link>https://www.youtube.com/watch?v=DXCQjpxdikI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/DXCQjpxdikI?version=3" length="" type=""/><pubDate>Thu, 14 Aug 2025 12:00:21 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
+
+Katharine Jarmul - Principal Data Scientist at Thoughtworks & O'Reilly Author
+
+RESOURCES
+https://twitter.com/kjam
+https://linkedin.com/in/katharinejarmul
+https://github.com/kjam
+https://kjamistan.com
+https://probablyprivate.com
+
+Links
+https://www.tooltester.com/en/blog/chatgpt-statistics
+https://huggingface.co
+https://github.com/tf-encrypted/moose
+https://github.com/apple/swift-homomorphic-encryption
+https://github.com/zama-ai
+https://github.com/carbynestack
+
+ABSTRACT
+If you are curious about the field of cryptography and what it has to offer data science and machine learning, this talk is for you!
+
+We'll dive into the field of encrypted computation, where decryption isn't needed in order to perform calculations, transformations and operations on the data. You'll learn some of the core mathematical theory behind why and how this works, as well as the differences between approaches like homomorphic encryption and secure multi-party computation. At the end, you'll get some pointers and open-source library hints on where to go next and how to start using encrypted computation for problems you are solving the hard way (or not solving at all). [...]
+
+TIMECODES
+00:00 Intro
+03:18 What if...?
+04:23 Demo: Huggingface
+06:25 Homomorphic encryption
+08:41 Pallier cryptosystem
+12:12 Demo: Pallier
+15:22 Recap
+19:55 Multi-party computation (MPC)
+22:58 Use cases
+29:54 Getting started with encrypted computation
+32:45 Understanding builds trust
+34:01 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3319
+
+RECOMMENDED BOOKS
+Katharine Jarmul • Practical Data Privacy • https://amzn.to/3OafC3m
+Katharine Jarmul & Jacqueline Kazil • Data Wrangling with Python • https://amzn.to/3Ue5BV5
+Katharine Jarmul & Richard Lawson • Python Web Scraping • https://amzn.to/44H7XPl
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Privacy #DataPrivacy #Huggingface #PrivacyTechnology #Swiftlang #Cryptography #Decryption #PrivacyEngineering #KatharineJarmul #CyberSecurity #Programming #SoftwareEngineering #HomomorphicEncryption #Encryption #TodayInTech
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Developers Think &quot;Testing&quot; is Synonymous with &quot;Unit Testing&quot; – @garthgilmourni</title><link>https://www.youtube.com/shorts/GBxFrTBjJGs</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/GBxFrTBjJGs?version=3" length="" type=""/><pubDate>Wed, 13 Aug 2025 12:00:27 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #SoftwareDevelopment #Testing #Stability #Complexity #Programming #UnitTesting #TDD #ProgrammingHistory #Coding #HistoryOfProgramming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+
+Full version available here:
+https://youtu.be/IlDIV5gaTP0
+
+Garth Gilmour - Head Of Learning at Instil Software @garthgilmourni 
+Eamonn Boyle - Development Manager at Gearset
+
+RECOMMENDED BOOKS
+Gene Kim, Jez Humble, Nicole Forsgren, Patrick Debois & John Willis • The DevOps Handbook • https://amzn.to/3C0Rj0C
+Kiczales, des Rivieres & Bobrow • The Art of the Metaobject Protocol • https://amzn.to/3zbvavV
+Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps • https://amzn.to/3tCz1xO
+Fred Brooks Jr. • The Mythical Man-Month • https://williamgibsonbooks.com
+Jeremy Kun • A Programmer's Introduction to Mathematics • https://amzn.to/3WbgKWz
+Scott Wlaschin • Domain Modeling Made Functional • https://amzn.to/3TPnLKz
+Tom Stuart • Understanding Computation • https://amzn.to/3Dt1Ymp
+Sam Halliday • Functional Programming for Mortals with Scalaz • https://leanpub.com/fpmortals
+Jack D. Hidary • Quantum Computing: An Applied Approach • https://amzn.to/3TAyk4g
+Daniel P. Friedman & Matthias Felleisen • The Little Schemer • https://amzn.to/3SzHNHI
+Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Reading Code Effectively: An Overlooked Developer Skill • Marit van Dijk &amp; Hannes Lowette</title><link>https://www.youtube.com/watch?v=TCWms1yk79E</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/TCWms1yk79E?version=3" length="" type=""/><pubDate>Tue, 12 Aug 2025 12:23:20 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
+
+Read the full transcription of this interview here
+ (https://gotopia.tech/articles/366) 
+Marit van Dijk - Developer Advocate at JetBrains, Java Champion & Open Source Contributor
+Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover
+
+RESOURCES
+Marit
+https://bsky.app/profile/maritvandijk.bsky.social
+https://linkedin.com/in/maritvandijk
+https://github.com/mlvandijk
+https://medium.com/@mlvandijk
+https://maritvandijk.com
+
+Hannes
+https://bsky.app/profile/hanneslowette.net
+https://twitter.com/hannes_lowette
+https://github.com/Belenar
+https://linkedin.com/in/hanneslowette
+
+Links
+https://www.felienne.com
+https://codereading.club
+https://github.com/neontribe/code-reading-club
+
+DESCRIPTION
+Reading code is a critical yet often underappreciated skill in software development. Marit van Dijk & Hannes Lowette highlight that while developers are trained to write code, they spend most of their time understanding existing codebases—often with incomplete documentation and evolving complexity.
+
+They discuss research-backed strategies, such as structured code reading exercises, participation in communities like the Code Reading Club, and leveraging modern IDE tools to navigate and comprehend unfamiliar code. The conversation underscores the importance of empathy in code reviews, writing clear commit messages, and using tests as documentation to improve collaboration and maintainability. By practicing code reading deliberately and utilizing available resources, developers can become more effective and adaptable in their work.
+
+RECOMMENDED BOOKS
+Felienne Hermans • The Programmer's Brain
+ (https://amzn.to/3mENbN0) Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews
+ (https://amzn.to/3E75XrD) Duncan McGregor & Nat Pryce • Java to Kotlin (https://amzn.to/4apSjLu) 
+ (https://amzn.to/40OIDa3) Saleem Siddiqui • Learning Test-Driven Development
+ (https://amzn.to/35OMb3n) Roy Osherove • The Art of Unit Testing
+ (https://bit.ly/3obiKNB) Trisha Gee & Helen Scott • Getting to Know IntelliJ IDEA
+ (https://amzn.to/3ZBgnGc) Jacqui Read • Communication Patt (https://amzn.to/3E37lvv) 
+
+
+Bluesky (https://bsky.app/profile/gotocon.com) 
+Twitter (https://twitter.com/GOTOcon) 
+Instagram (https://www.instagram.com/goto_con) 
+LinkedIn (https://www.linkedin.com/company/goto-) 
+Facebook (https://www.facebook.com/GOTOConferences) 
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Introducing the data accessor of the EstimatorReport</title><link>https://www.youtube.com/watch?v=mmcRcIY13GE</link><author>probabl</author><category>dev</category><category>ai</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/mmcRcIY13GE?version=3" length="" type=""/><pubDate>Tue, 12 Aug 2025 08:30:40 +0000</pubDate><source url="https://www.youtube.com/channel/UCIat2Cdg661wF5DQDWTQAmg">Probabl</source><content:encoded><![CDATA[skore v0.10 is out! We added a data accessor to the EstimatorReport that allows you to interactively explore your dataset to gain insights.
+
+------
+Links:
+
+skore v0.10 documentation:
+https://docs.skore.probabl.ai/0.10/index.html
+
+skore GitHub repository:
+https://github.com/probabl-ai/skore
+
+Website: https://probabl.ai/
+LinkedIn: https://www.linkedin.com/company/probabl
+Twitter: https://x.com/probabl_ai
+Bluesky: https://bsky.app/profile/probabl.bsky.social
+Discord: https://discord.probabl.ai
+
+We also host a podcast called Sample Space, which you can find on your favourite podcast player. All the links can be found here:
+https://rss.com/podcasts/sample-space/
+
+#probabl]]></content:encoded></item><item><title>Combinators Revisited • Edward Kmett • YOW! 2018</title><link>https://www.youtube.com/watch?v=GirDSC6BnCo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/GirDSC6BnCo?version=3" length="" type=""/><pubDate>Mon, 11 Aug 2025 12:00:36 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2018. #GOTOcon #YOW
+https://yowcon.com
+
+Edward Kmett - Research Engineer at Machine Intelligence Research Institute @ekmett 
+
+RESOURCES
+https://twitter.com/kmett
+https://github.com/ekmett
+https://www.linkedin.com/in/ekmett
+http://comonad.com
+
+RECOMMENDED BOOKS
+Saša Jurić • Elixir in Action • https://amzn.to/2RZh5eN
+Tim McNamara • Rust in Action • https://amzn.to/3ux2R9u
+Ulisses Almeida • Learn Functional Programming with Elixir • https://amzn.to/389grn6
+Neal Ford • Functional Thinking • https://amzn.to/3DdP35B
+Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
+Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
+Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
+
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.facebook.com/GOTOConferences
+#Combinators #FunctionalProgramming #SoftwareEngineering #Programming #Tech #SoftwareDevelopment #SoftwareTechnology #FP #Haskell #Graal #Truffle #EdwardKmett #YOWcon
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>

@@ -1,612 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Debugging Book • Andreas Zeller &amp; Clare Sudbery • GOTO 2025</title><link>https://www.youtube.com/watch?v=MNRIJsoi-Ds</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/MNRIJsoi-Ds?version=3" length="" type=""/><pubDate>Thu, 3 Jul 2025 12:00:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
-http://gotopia.tech/bookclub
-
-Read the full transcription of the interview here:
-https://gotopia.tech/episodes/387
-
-Prof. Andreas Zeller - Faculty at CISPA Helmholtz Center for Information Security & Author of "The Debugging Book" @Doebldodl 
-Clare Sudbery - Independent Technical Coach @ClareSudberySSELtd 
-
-RESOURCES
-Andreas
-https://bsky.app/profile/andreaszeller.bsky.social
-https://mastodon.social/@AndreasZeller
-https://github.com/andreas-zeller
-https://www.linkedin.com/in/andreaszeller
-https://andreas-zeller.info
-
-Clare
-https://bsky.app/profile/claresudbery.bsky.social
-https://twitter.com/ClareSudbery
-https://linkedin.com/in/clare-sudbery-she-her-35939540
-https://mastodon.social/@claresudbery
-https://www.madetech.com/podcast
-https://insimpleterms.blog
-
-Links
-https://www.debuggingbook.org
-https://github.com/uds-se/debuggingbook
-https://hub.2i2c.mybinder.org/user/uds-se-debuggingbook-06yfdm2t/doc/tree/docs/notebooks/00_Table_of_Contents.ipynb
-https://www.st.cs.uni-saarland.de/dd
-https://youtu.be/30jNsCVLpAE
-https://youtu.be/LvhIMkr0rXg
-https://youtu.be/8bPDiuJGGh0
-https://youtu.be/lWPLgm52ICs
-https://youtu.be/4mRxIgu9R70
-https://youtu.be/n7QUBt6qsUU
-https://youtu.be/RNBpqbxhrng
-https://youtu.be/lCZtgN7b4TE
-https://youtu.be/sLjSGrkbIFw
-https://youtu.be/VwPCtxxvwjI
-
-DESCRIPTION
-Programming education has a critical blind spot: while we extensively teach code creation, we barely scratch the surface of testing and give almost no attention to debugging—despite debugging consuming half of all software development time.
-
-In this conversation with Clare Sudbery, Prof. Andreas Zeller argues that systematic debugging skills and modern automated debugging tools are the "ugly stepchild" of programming that nobody wants to discuss, yet debugging represents the biggest business risk and time sink in software development. As AI-driven coding becomes more prevalent, this gap will only widen, making investment in proper debugging education and tools not just beneficial but essential for the future of software development.
-
-TIMECODES
-00:00 Intro
-02:53 Revolutionizing tech education: The executable book format
-11:17 What "The Debugging Book" teaches
-16:01 Interactive debuggers & advanced techniques
-21:31 Python as the language of choice
-26:53 Tracking dependencies & Delta Debugging
-34:55 Automated software repair & testing
-51:09 Outro
-
-RECOMMENDED BOOKS
-Andreas Zeller • The Debugging Book • https://www.debuggingbook.org
-Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
-Charles Humble • Professional Skills for Software Engineers • https://www.conissaunce.com/professional-skills-shortcut
-Cathy O'Neil • Weapons of Math Destruction • https://amzn.to/42jYkba
-Jonathan B. Rosenberg • How Debuggers Work • https://amzn.to/3SnFHgv
-Nora Sandler • Writing a C Compiler • https://amzn.to/3Z6SMhU
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#Debugging #Debugger #DeltaDebugging #StatisticalDebugging #Compiler #SoftwareRepair #SoftwareTesting #Testing #TDD #Refactoring #Python #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #AndreasZeller #ClareSudbery #BookClub
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kuberne... Asami Okina</title><link>https://www.youtube.com/watch?v=8pVt9dhHEVc</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/8pVt9dhHEVc?version=3" length="" type=""/><pubDate>Wed, 2 Jul 2025 23:01:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Lightning Talk: Optimizing Web Applications by Offloading Heavy Processing To Kubernetes Jobs - Asami Okina, Craftsman Software, Inc.
-
-While typical web applications do not require large amounts of resources constantly, there are cases where specific processes consume significant CPU and memory.
-
-In this session, we will introduce an architecture that offloads such resource-intensive processes to Kubernetes Jobs.
-
-We will explain specific methods for Job management, how to integrate web applications (Next.js, @kubernetes/client-node) with the Kubernetes API, methods for data integration between Jobs and web applications, and real-time tracking of Job progress in the UI, all while sharing practical examples. Furthermore, we will provide a detailed introduction to a pattern where Kubernetes Job definitions generated from applications are managed using ConfigMaps, enabling quick configuration switching between environments, and offer hints to optimize your applications in terms of cost, performance, and management.]]></content:encoded></item><item><title>Health Insurance Appeals with Generative AI: From Lab to Production • Holden Karau • GOTO 2024</title><link>https://www.youtube.com/watch?v=Q5muBDDdhJg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Q5muBDDdhJg?version=3" length="" type=""/><pubDate>Wed, 2 Jul 2025 12:00:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Chicago 2024. #GOTOcon #GOTOchgo
-https://gotochgo.com
-
-Holden Karau - Co-Founder at Fight Health Insurance @HoldenKarau 
-
-RESOURCES
-https://bsky.app/profile/holdenkarau.com
-https://twitter.com/holdenkarau
-https://github.com/holdenk
-https://www.linkedin.com/in/holdenkarau
-http://holdenkarau.com
-
-Links
-https://www.fighthealthinsurance.com
-https://wpso.dmhc.ca.gov/imr
-https://huggingface.co/TotallyLegitCo/appeal-alpaca
-https://huggingface.co/TotallyLegitCo/fighthealthinsurance_model_v0.2
-https://huggingface.co/TotallyLegitCo/fighthealthinsurance_model_v0.3
-https://www.youtube.com/playlist?list=PLRLebp9QyZtYcK_X13lBS_HZjaXUDwyEt
-
-ABSTRACT
-This talk will cover how we created a system to generate health insurance appeals from denials. We'll start with a quick look at the different attempts at model fine-tuning (along with what eventually worked well for us), then look at the middleware, how we integrate in-house and external models, steps to protect privacy, and finally, some truly questionable frontend code (or truly great frontend code if we finish the rewrite in time—you never know).
-
-If you love the American healthcare system as it stands today, this is probably not the talk for you. For those ambivalent about the healthcare system, that's totally fine; you can still see what it takes to bring an ML system from drinks at a bar all the way through to production. [...]
-
-TIMECODES
-00:00 Intro
-00:25 Content warning
-03:38 What's the problem?
-06:13 How to use computers to fix the problem?
-07:13 What's needed to tune a LLM?
-10:36 Putting it together
-11:38 Downsides
-13:04 What models did we make?
-14:21 Model fine tune config
-15:40 Model serving
-18:38 Frontend?
-19:46 Demo
-25:18 How to do better for the next model?
-27:55 Links
-28:40 Outro
-
-Download slides and read the full abstract here:
-https://gotochgo.com/2024/sessions/3371
-
-RECOMMENDED BOOKS
-Holden Karau • Distributed Computing 4 Kids • https://www.distributedcomputing4kids.com
-Holden Karau • Scaling Python with Dask • https://www.oreilly.com/library/view/scaling-python-with/9781098119867
-Holden Karau & Boris Lublinsky • Scaling Python with Ray • https://amzn.to/44GU6cC
-Holden Karau & Rachel Warren • High Performance Spark • https://amzn.to/3v2eLbn
-Holden Karau, Konwinski, Wendell & Zaharia • Learning Spark • https://amzn.to/397e2NE
-Holden Karau & Krishna Sankar • Fast Data Processing with Spark 2nd Edition • https://amzn.to/3xKhXKu
-Holden Karau • Fast Data Processing with Spark 1st Edition • https://amzn.to/3rHQgOu
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#GenerativeAI #LLMs #GenAI #HealthInsurance #HealthInsuranceAppeals #HoldenKarau
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>You will own NOTHING and be HAPPY! (SKG)</title><link>https://www.youtube.com/watch?v=rAsgjKBkKMA</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/rAsgjKBkKMA?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 20:35:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Please sign if you're in the EU or UK!
-EU: https://eci.ec.europa.eu/045/public/#/screen/home
-UK: https://petition.parliament.uk/petitions/702074/
-
-Things I mentioned in this video:
-
-  - Stop Killing Games: https://www.stopkillinggames.com
-  - My video takedown (and getting a 2nd appeal): https://www.jeffgeerling.com/blog/2025/self-hosting-your-own-media-considered-harmful-updated
-  - Bosch Dishwasher video: https://www.youtube.com/watch?v=5M_hmwBBPnc
-  - XKCD on WiFi appliances: https://xkcd.com/3109/
-  - Dead game list: https://stopkillinggames.wiki.gg/wiki/Dead_game_list
-
-Support me on Patreon: https://www.patreon.com/geerlingguy
-Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
-Merch: https://www.redshirtjeff.com
-2nd Channel: https://www.youtube.com/@GeerlingEngineering
-3rd Channel: https://www.youtube.com/@Level2Jeff
-
-Contents:
-
-00:00 - Controlling your own destiny. And dishwasher.
-01:27 - Games (please stop killing them)
-03:35 - What you can do (in the EU)]]></content:encoded></item><item><title>Platform Engineering Day 2: Why Service Iterations Are the Crux of Developer Platfor... Puja Abbassi</title><link>https://www.youtube.com/watch?v=Xr0Eb-ybvck</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/Xr0Eb-ybvck?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 20:32:44 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Platform Engineering Day 2: Why Service Iterations Are the Crux of Developer Platforms - Puja Abbassi, Giant Swarm
-
-Everyone is talking about platform engineering. You see smooth demos of golden paths and self-service platforms. However, there’s a significant area of challenges that is less talked about and thus often neglected when designing developer platforms.
-
-In this talk, we’ll explore the often-overlooked day 2 challenges that platform teams face. We’ll dissect the area of day 2 into the many sub-areas and challenges they pose. Drawing on real-world experiences, including notable migrations that many in this community have faced, we'll shed light on the pain behind developer platforms and discuss solutions to these issues. Among others, we’ll delve into practical strategies for managing versioning and rollouts, and highlight the significant hurdles encountered, such as dependencies on end user teams or GitOps.
-
-Join us for insights, strategies, and stories from the trenches that will help you navigate the complexities of service iteration in developer platforms.]]></content:encoded></item><item><title>Keynote: OpenTelemetry And The Future of Open Source Observability - Austin Parker, Honeycomb</title><link>https://www.youtube.com/watch?v=hERRANApN5c</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/hERRANApN5c?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:35:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Keynote: OpenTelemetry And The Future of Open Source Observability - Austin Parker, Honeycomb]]></content:encoded></item><item><title>Sponsored Keynote: Why Semantic Conventions are OpenTelemetry’s Most Important Con... Gordon Radlein</title><link>https://www.youtube.com/watch?v=dlDTX-aDNzg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/dlDTX-aDNzg?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:35:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Sponsored Keynote: Why Semantic Conventions are OpenTelemetry’s Most Important Contribution - Gordon Radlein, Datadog
-
-OpenTelemetry has accelerated the commoditization of instrumentation. Telemetry generation is becoming a solved problem, an implementation detail. But this has created a new challenge: a wealth of standardized signals with no standard meaning. Different systems instrumented with different semantics generating telemetry in their own unique language. And while signal correlation connects specific workloads, it fails when we need to understand our systems at a macro scale by joining disparate datasets.
-That is, until we all agreed to speak the same language.
-
-Just as English as a lingua franca fueled progress across the internet, OpenTelemetry Semantic Conventions are providing a shared language for our systems. In this talk we’ll discuss why semantic interoperability is the real connective tissue, how it’s fueling deeper insights into our production environments, and the key role it plays in enabling the AI systems that are rapidly ushering in the next revolution of our industry.]]></content:encoded></item><item><title>Welcome + Opening Remarks - Austin Parker, Honeycomb</title><link>https://www.youtube.com/watch?v=_rqgWHaEvgc</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/_rqgWHaEvgc?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:35:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Welcome + Opening Remarks - Austin Parker, Honeycomb]]></content:encoded></item><item><title>Sponsored Keynote: Manage Logging Costs While Preserving Value - Alok Bhide, Chronosphere</title><link>https://www.youtube.com/watch?v=Z4umnlRdLtA</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/Z4umnlRdLtA?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:35:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Sponsored Keynote: Manage Logging Costs While Preserving Value - Alok Bhide, Chronosphere
-
-Logs can get very expensive and often how useful all those logs are is unknown, some are but many are not. It is very difficult to know which logs are useful and how exactly they are used. With Chronosphere's Control plane for logs users can now get a comprehensive analysis of value and usage patterns, along with sophisticated recommendations and control actions that allow some or most of the value derived from those logs to be preserved. In order to achieve our goals we have enhanced Fluent Bit to be more flexible in which logs are actioned upon and will share useful future additions to it.]]></content:encoded></item><item><title>Keynote: Hybrid Cloud Architecture: Making Big Bets on Open Standards - Margaret Dawson</title><link>https://www.youtube.com/watch?v=J_hHiwa_3QU</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/J_hHiwa_3QU?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:35:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Keynote: Hybrid Cloud Architecture: Making Big Bets on Open Standards - Margaret Dawson, Chronosphere
-
-Hybrid cloud isn’t a stepping stone—it’s a destination. With 39% of CNCF survey respondents already operating in hybrid environments, this model is here to stay. But as teams pursue cloud-native architectures, many skip a critical step: developing a clear cloud strategy and an observability approach to match.
-The result is predictable— widening visibility gaps, redundant tooling and data, and spiraling costs as teams try to stitch together disconnected, vendor-specific systems never meant to work in concert. Hybrid environments expose these issues quickly, especially when workloads span multiple platforms without a unified way to observe and understand them.
-Modernization efforts demand open observability from the start—not as an add-on. Technologies like OpenTelemetry, Fluent Bit, and Prometheus act as connective tissue across clouds, clusters, and on-prem infrastructure, enabling standardization where it’s needed most.
-This talk outlines how to center open observability in your modernization journey: where to standardize architectural layers, how to maintain a more open approach, and why these decisions have long-term payoff. 
-Hybrid complexity is inevitable. Leading with open observability is how you stay in control—now and in the future.]]></content:encoded></item><item><title>Sponsored Keynote: Foundation-Led Innovation: OpenSearch&apos;s Impact on Modern Data I... Dotan Horovits</title><link>https://www.youtube.com/watch?v=C5Y3qnEJSY8</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/C5Y3qnEJSY8?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:35:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Sponsored Keynote: Foundation-Led Innovation: OpenSearch's Impact on Modern Data Insights - Dotan Horovits, AWS OpenSearch]]></content:encoded></item><item><title>Building Resilient Telemetry Pipelines: Mastering the OpenTelemetry Collector&apos;s Per... Denton Krietz</title><link>https://www.youtube.com/watch?v=zgnY8szpKUw</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/zgnY8szpKUw?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Building Resilient Telemetry Pipelines: Mastering the OpenTelemetry Collector's Persistent Queue - Denton Krietz, Bindplane
-
-The OpenTelemetry Collector’s persistent queue provides a robust mechanism for handling data bursts, destination outages, and processing delays, ensuring no telemetry data is lost—but from experience, it’s consistently one of the collector's least understood features.
-
-In this talk, we’ll explore the inner workings of the OTel Collector’s persistent queue, including how it buffers data, ensures durability, and enables replay after failures. Attendees will learn how to configure persistent queues for their unique workloads, optimize their telemetry pipeline performance, and troubleshoot common pitfalls.
-
-Whether you’re a site reliability engineer, developer, or observability enthusiast, this talk will equip you with the knowledge to deeply understand persistent queues to optimize your telemetry pipeline in production.]]></content:encoded></item><item><title>Introducing a Lightweight Rust OpenTelemetry Collector - Mike Heffner &amp; Ray Jenkins, Streamfold</title><link>https://www.youtube.com/watch?v=xeQnP8Ct7qY</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/xeQnP8Ct7qY?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Introducing a Lightweight Rust OpenTelemetry Collector - Mike Heffner & Ray Jenkins, Streamfold
-
-In this talk, we'll introduce Rotel—an open-source OpenTelemetry collector built in Rust. Rotel is lightweight and resource-efficient, integrating seamlessly into your development workflow. Its compact design lets you package it with your Python or NodeJS projects, so telemetry collection runs alongside your code without needing additional sidecars.
-
-We'll explore how rethinking telemetry collection at the edge can empower developers right from the early stages of development, paving the way for broader OpenTelemetry adoption. You’ll learn how Rust’s low-overhead FFI enables native extensions for telemetry filtering, transformation, and enrichment using Python and Typescript.
-
-By leveraging Rust’s performance strengths, Rotel avoids the overhead of garbage collection, resulting in lower memory usage and reduced latency. Its quick cold start times make it a natural fit for modern cloud-native, serverless, and edge computing environments. Join us to discover how moving telemetry collection closer to the source can help you analyze high-volume, high-fidelity signals more effectively.]]></content:encoded></item><item><title>Lightning Talk: From Zero To Developer: My One Year Serendipity Journey With OpenTele... Diana Todea</title><link>https://www.youtube.com/watch?v=wWON2NT41lE</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/wWON2NT41lE?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Lightning Talk: From Zero To Developer: My One Year Serendipity Journey With OpenTelemetry - Diana Todea, Aircall
-
-Becoming a contributor to an open-source project is a transformative step in any developer's career. This session explores the journey from first-time contributor to active developer, covering best practices for navigating project communities, understanding codebases, and making meaningful contributions. Learn strategies for selecting the right project, mastering collaboration tools, and embracing the culture of open-source development. The audience will be inspired about my one year journey with the open source project OpenTelemetry and how I have built a proof of concept for it and achieved developer status for this project. By the end of this talk, the public will gain insights into the tools to become a better developer and how to build more engagement with the community.]]></content:encoded></item><item><title>Telemetry Showdown: Fluent Bit Vs. OpenTelemetry Collector - A Comprehensive Benchma... Henrik Rexed</title><link>https://www.youtube.com/watch?v=tZho5W9L_Z8</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/tZho5W9L_Z8?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Telemetry Showdown: Fluent Bit Vs. OpenTelemetry Collector - A Comprehensive Benchmark Analysis - Henrik Rexed, Dynatrace
-
-In a push to standardize observability practices, the cloud-native community has embraced OpenTelemetry, offering a unified framework for metrics, logs, and traces. Prior to this, log processing relied on agents like fluent, evolving into fluentbit. With fluentbit's recent expansion to support additional signals and the OpenTelemetry Collector's emergence, a pertinent question arises: Which is the superior choice for performance?
-
-This session delves into:
-- Unveiling the distinctions between Fluent Bit and the OpenTelemetry Collector.
-- Sharing the findings derived from a series of benchmark tests.
-- Providing valuable insights to empower the community in selecting the most fitting agent for their cloud-native environments.]]></content:encoded></item><item><title>The Spec-tacular Game Show - Liudmila Molkova, Ted Young, Tyler Helmuth, Jamie Danielson, Alex Boten</title><link>https://www.youtube.com/watch?v=ipFVu0dl5Bw</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/ipFVu0dl5Bw?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Panel: The Spec-tacular Game Show - Liudmila Molkova, Microsoft; Ted Young, Grafana Labs; Tyler Helmuth, Jamie Danielson & Alex Boten, Honeycomb
-
-From OTLP to OTTL, engineers are excited about a lot of things. But there is one thing that excites them above all else and that is correcting people. Welcome to “The Spec-tacular Game Show”.
-
-In this fun game show our panelists will be given incorrect statements about the OpenTelemetry Specification or Semantic Convention. The panelists will buzz in, identify what’s wrong, and state the correction. If none of the panelists know the answer the audience will get a chance to answer to steal the point. The panelist (or audience) with the most points wins!
-
-After each question we’ll spend a time explaining why the Spec and Semconv is the way it is and highlight how it produces the production-quality telemetry you know and love. Join us for a fun, relaxing, (snarky) panel about everyone’s favorite part of Otel!]]></content:encoded></item><item><title>How To Think About Instrumentation Overhead - Jason Plumb, Splunk</title><link>https://www.youtube.com/watch?v=fvmzAX_ZyvM</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/fvmzAX_ZyvM?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-How To Think About Instrumentation Overhead - Jason Plumb, Splunk
-
-Novice observability practitioners are often overly obsessed with performance. They might approach instrumentation with skepticism and have concerns about latency degradation or resource consumption. This talk is a primer on the topic of instrumentation overhead, and it will teach you how to think about overhead in an observability context. We will cover the causes of overhead and why overhead is so hard to measure and even harder to predict reliably. Lastly, we will present some practical techniques for understanding overhead in your environment and some strategies for coping with it.]]></content:encoded></item><item><title>No Dependencies. No Plugins. Just Native OpenTelemetry - Liudmila Molkova, Microsoft</title><link>https://www.youtube.com/watch?v=fU6jsw0yaVU</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/fU6jsw0yaVU?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-No Dependencies. No Plugins. Just Native OpenTelemetry - Liudmila Molkova, Microsoft
-
-The best telemetry starts at the source—inside the client libraries.
-But in most cases, that means taking a dependency on the OpenTelemetry API from your library. And while it’s stable, minimal, reliable, and safely no-op unless configured—transitive dependencies are still the bane of any library developer’s existence, and most of us try to avoid them.
-
-To work around this, people reach for abstractions, plugins, bridges, or even OTel forks that break context propagation. The result? A poor user experience. Users must find the right plugin, install it, wire it up—and still hit the diamond dependency problem, now it just affects a subset of users.
-
-But what if you could take a truly optional dependency? If OpenTelemetry is on the classpath, instrumentation kicks in. If it’s not, no harm done.
-How hard is that to pull off? How reliable? How performant?
-
-Let’s explore that—through the lens of the next generation of Azure SDKs for Java. Spoiler: it’s easy and fast, and as a side-bonus, we can fall back to logs-based tracing if OTel is not found.]]></content:encoded></item><item><title>Closing Remarks - Austin Parker, Honeycomb</title><link>https://www.youtube.com/watch?v=eDbQfZ9eoNI</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/eDbQfZ9eoNI?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Closing Remarks - Austin Parker, Honeycomb]]></content:encoded></item><item><title>Lightning Talk: Beyond Good Enough: Why We Want a Kotlin API and SDK - Hanson Ho, Embrace</title><link>https://www.youtube.com/watch?v=di5nhYvUh6w</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/di5nhYvUh6w?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 17:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
-
-Lightning Talk: Beyond Good Enough: Why We Want a Kotlin API and SDK - Hanson Ho, Embrace
-
-The OTel Java API, SDK, and ecosystem are perfectly adequate for Android developer to get OTel instrumentation into their apps. But for a host of reasons, the match is not perfect, especially for developers who only write in Kotlin, which is the recommended development language for Android by Google, not the least of which is the emergence of Kotlin Multiple Platform (KMP) as a means to share code between Android, iOS, and many other platforms.
-
-This session will outline the reasons why we at Embrace is trying to kick-start the development of a pure Kotlin ecosystem for OTel, starting with an API and SDK implementation, and how we are doing it in a way where mobile developers can get value incrementally without having to wait until every aspect is fully built out.
-
-We want OTel to feel natural and idiomatic for Android developers, and this is the first step towards that end.]]></content:encoded></item><item><title>They Hired Me to Steal a Shopping Cart Full of Human DNA 🧬 Darknet Diaries Ep. 160: Greg</title><link>https://www.youtube.com/watch?v=YV5XVcNLHzs</link><author>Jack Rhysider</author><category>infosec</category><category>video</category><category>podcast</category><enclosure url="https://www.youtube.com/v/YV5XVcNLHzs?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 14:30:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCMIqrmh2lMdzhlCPK5ahsAg">Darknet diaries</source><content:encoded><![CDATA[Greg Linares (AKA Laughing Mantis) shares his hunts for Zero Day exploits, the triple(?) agent working at Microsoft, how he became the youngest hacker ever arrested in Arizona, and that time a client hired him to steal human DNA.
-
-Follow Greg on Twitter: https://x.com/Laughing_Mantis.
-
-Visit https://darknetdiaries.com/episode/160 for a list of sources, full transcripts, and to listen to all episodes.]]></content:encoded></item><item><title>The Industries Adopting Rust</title><link>https://www.youtube.com/watch?v=zRgtK2DsEXM</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zRgtK2DsEXM?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 14:15:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[If you love coding in Rust but aren’t sure how to turn that passion into a full-time career, this video is for you. We’re diving into the real-world opportunities for Rust developers, the industries that are actively adopting Rust, the skills they’re looking for, and the exact steps you can take to land your first Rust job.
-
-Join the Rust Live Accelerator: https://letsgetrusty.com/join
-
-Chapter:
-0:00 Intro
-0:43 Security Industry
-2:56 Backend Infrastructure
-4:00 Embedded
-5:26 Web3
-8:06 AI]]></content:encoded></item><item><title>Building Support Structures • Flavia Circiumaru &amp; Hannes Lowette • GOTO 2025</title><link>https://www.youtube.com/watch?v=Uk9CwG9a_C4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Uk9CwG9a_C4?version=3" length="" type=""/><pubDate>Tue, 1 Jul 2025 12:01:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
-https://gotopia.tech
-
-Read the full transcription of this interview here:
-https://gotopia.tech/articles/386
-
-Flavia Circiumaru - Software Engineer at FundApps @flaviacirciumaru7502 
-Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover @Belenar82 
-
-RESOURCES
-Flavia
-https://x.com/FlavsFA
-https://github.com/flaviacirciumaru
-https://www.linkedin.com/in/flavia-circiumaru
-
-Hannes
-https://bsky.app/profile/hanneslowette.net
-https://twitter.com/hannes_lowette
-https://github.com/Belenar
-https://linkedin.com/in/hanneslowette
-
-Links
-https://youtu.be/wEq0RnHHE8g
-https://youtu.be/eaATm4rFqrE
-https://youtu.be/X3AHdo34gWM
-https://youtu.be/_R_Vc17mxNE
-https://youtu.be/j2AQ9eTZ3-0
-https://youtu.be/zmA5fhV-FGk
-https://youtu.be/Cx_vijTm24w
-
-DESCRIPTION
-When FundApps exploded from 20 to 50+ engineers in just one year, their old "everyone does support" model crumbled spectacularly. Software engineer Flavia Circiumaru and host Hannes Lowette dive deep into how this London-based regulatory compliance company transformed from a support-free-for-all to a streamlined powerhouse.
-
-Flavia Circiumaru reveals the behind-the-scenes story of building a three-desk support system that turned their support team into the ultimate connector, bridging customers, developers, and business teams like never before. From battling context-switching nightmares to creating communication magic, Flavia and Hannes explore actionable insights on scaling support without losing your sanity.
-
-The twist? Their ultimate goal is to make support so seamless that dedicated teams won't even be needed. Talk about engineering your way out of a job!
-
-TIMECODES
-00:00 Intro
-02:30 From support chaos to structure
-09:36 3 desks, 1 goal: Better support engineering
-20:09 The challenge of multi-tenant support at scale
-32:12 Future aspirations & advice
-39:23 Outro
-
-RECOMMENDED BOOKS
-Jacqui Read • Communication Patterns • https://amzn.to/3E37lvv
-Saleem Siddiqui • Learning Test-Driven Development • https://amzn.to/35OMb3n
-Ben Goldacre • Bad Science • https://amzn.to/4lqNLKN
-Ben Goldacre • Bad Pharma • https://amzn.to/3G15Mz7
-Jeet Pattanaik • Ethics in AI • https://amzn.to/4jXyQXw
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#SupportStructures #SupportEngineering #Communication #DevTeams #TodayInTech #FlaviaCirciumaru #HannesLowette
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Google’s new CLI tool hits different…</title><link>https://www.youtube.com/watch?v=qqP1ucSiVkE</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/qqP1ucSiVkE?version=3" length="" type=""/><pubDate>Mon, 30 Jun 2025 16:23:32 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Try the best video API for developers (and get $50 in free credits) - https://mux.com/fireship
-
-Google has finally put Gemini in the command line, allowing you to hand total control of your machine over to AI. But how is their solution different from all the other similar tools out there?
-
-💬 Chat with Me on Discord
-
-https://discord.gg/fireship
-
-🔥 Get More Content - Upgrade to PRO
-
-Upgrade at https://fireship.io/pro
-Use code YT25 for 25% off PRO access 
-
-🎨 My Editor Settings
-
-- Atom One Dark 
-- vscode-icons
-- Fira Code Font
-
-🔖 Topics Covered
-
-* AI coding
-* Gemini CLI
-* Open-source AI agents
-* Claude Code
-* Svelte 5]]></content:encoded></item><item><title>@souldzin: Being polite doesn&apos;t mean being inefficient</title><link>https://www.youtube.com/shorts/ztCsSWfBSd8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ztCsSWfBSd8?version=3" length="" type=""/><pubDate>Mon, 30 Jun 2025 12:01:59 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #PaulSlaughter #ConventionalComments #TeamDynamics #CodeQuality #PairProgramming #TeamHappiness #SoftwareEngineering #Programming #TodayInTech #AdrienneBraganza #AdrienneTacke  #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
-
-Full version available here:
-https://youtu.be/7oIs4kNH65Y
-
-Paul Slaughter - Staff Fullstack Engineer at GitLab & Creator of Conventional Comments @souldzin 
-
-RECOMMENDED BOOK
-Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews • https://amzn.to/3E75XrD
-Adrienne Braganza Tacke • Coding for Kids • https://amzn.to/3Ukd5Gw
-Grace Huang • Code Reviews in Tech • https://amzn.to/4fbwYr8
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
-Dave Thomas & Andy Hunt • The Pragmatic Programmer • https://amzn.to/3azvUy3
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Icicle: The Highs &amp; Lows of Optimizing DSLs • Jacob Stanley • YOW! 2016</title><link>https://www.youtube.com/watch?v=YnrECZC7O3Q</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/YnrECZC7O3Q?version=3" length="" type=""/><pubDate>Sun, 29 Jun 2025 12:00:57 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2016. #GOTOcon #YOW
-https://yowcon.com
-
-Jacob Stanley - Software Engineer at Ambiata
-
-RESOURCES
-https://github.com/jacobstanley
-https://x.com/jacobstanley
-https://github.com/icicle-lang/icicle-ambiata
-
-ABSTRACT
-So, you’ve written a #DSL, it’s a work of art! It so perfectly models the problem at hand that even a trained house cat could generate business value. You just have one problem, your interpreter runs 100x slower than a shell script launching JVMs in a loop.
-
-#DomainSpecificLanguages (DSLs) are able to offer the abstraction benefits of a high-level language, while when compiled, competing with low-level languages on performance. Because DSLs have a much smaller problem area, many specialised optimisations can be performed which are not feasible for a general purpose language.
-
-In this talk, we will explain a number of optimisations which are useful for DSLs, and show our solutions to the practical issues we faced when implementing them in our #QueryLanguage, #Icicle.
-
-Icicle is a query language for processing large amounts of time-series data. Its type system enforces that queries require only a single pass over the data, and that multiple queries over the same data can be fused together. By using a combination of high level optimisations such as partial evaluation and common subexpression elimination, and low level optimisations such as parsing code which is specialised for the given input, our queries are faster than the equivalent hand-written C code.
-
-From this talk, the audience will learn how the focused point of view that DSLs provide can be useful in performance critical systems, as well as a number of concrete techniques for optimising their own DSLs.
-
-RECOMMENDED BOOKS
-Kenneth E. Iverson • A Programming Language • https://amzn.to/45sCYKK
-Hadley Wickham • Advanced R • https://amzn.to/45XIbKw
-Jeffry A. Borror • q For Mortals Version • https://amzn.to/3zd58eo
-Nick Psaris • Q Tips • https://amzn.to/4cxJr76
-Nazia Habib • Hands-On Q-Learning with Python • https://amzn.to/3zfUbZM
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#FunctionalProgramming #SoftwareEngineering #Programmer #JacobStanley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Rationale for Continuous Delivery • Dave Farley • YOW! 2018</title><link>https://www.youtube.com/watch?v=Viv7bs99K0U</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Viv7bs99K0U?version=3" length="" type=""/><pubDate>Sat, 28 Jun 2025 12:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2018. #GOTOcon #YOW
-https://yowcon.com
-
-Dave Farley - Continuous Delivery & DevOps Pioneer, Award-winning Author, Founder & Director of Continuous Delivery Ltd. @ModernSoftwareEngineeringYT 
-
-RESOURCES
-https://bsky.app/profile/davefarley77.bsky.social
-https://www.continuous-delivery.co.uk
-https://linkedin.com/in/dave-farley-a67927
-https://twitter.com/davefarley77
-http://www.davefarley.net
-
-ABSTRACT
-The production of software is a complex, collaborative process that stretches our ability as human beings to cope with its demands. Many people working in #SoftwareDevelopment spend their careers without seeing what good really looks like.
-
-Our history is littered with inefficient processes creating poor quality output, too late to capitalise on the expected business value.
-How have we got into this state?
-How do we get past it?
-What does good really look like?
-
-Continuous Delivery changes the economics of software development for some of the biggest companies in the world, whatever the nature of their software development, find out how and why.
-
-RECOMMENDED BOOKS
-David Farley • Modern Software Engineering • https://amzn.to/3GI468M
-Dave Farley • Continuous Delivery Pipelines • https://amzn.to/3rjetdi
-Dave Farley & Jez Humble • Continuous Delivery • https://amzn.to/3ocIHwd
-Dave Farley & many more • Software Architecture Metrics • https://amzn.to/3M3XqG5
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#ContinuousDelivery #SoftwareArchitecture #Complexity #SoftwareComplexity #SoftwareEngineering #Programmer #DaveFarley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Using Generative AI to Strengthen &amp; Accelerate Learning • Barbara Oakley • GOTO 2024</title><link>https://www.youtube.com/watch?v=rbTaEsieWsU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/rbTaEsieWsU?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 12:01:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
-
-Barbara Oakley - Professor of Engineering at Oakland University & Author of Numerous Books @BarbaraOakley 
-
-RESOURCES
-https://twitter.com/Barbara97881398
-https://www.linkedin.com/in/barbaraoakley
-https://barbaraoakley.com
-
-Links
-https://arxiv.org/abs/1706.03762
-https://psycnet.apa.org/record/2025-07056-001
-https://psycnet.apa.org/record/1984-11828-001
-https://psycnet.apa.org/record/2016-51296-001
-https://pubmed.ncbi.nlm.nih.gov/29891660
-https://psycnet.apa.org/record/2023-71875-001
-https://psycnet.apa.org/record/2014-36030-003
-
-ABSTRACT
-This talk will demonstrate how AI, via transformers, can lift limits on core cognitive processes like attention, synthesis, and retention.
-
-These insights will allow you to use AI more effectively to scaffold and accelerate your own learning.
-
-After all, generative AI can do far more to propel our learning than simply answer questions (important and helpful though that may be!).
-
-Generative AI is, in essence, a teacher—but it can teach better if you know how its properties are sometimes similar to, and sometimes very different from, how the human brain works. [...]
-
-TIMECODES
-00:00 Intro
-03:03 What does ChatGPT do?
-12:32 The value of metaphor
-21:35 7 int. companies with their foundational LLMs
-26:25 Large language models
-34:33 Cheating or "learning lightly"
-36:11 The Flynn Effect
-39:08 How to think about the new complex world
-46:45 Good books on GenAI
-48:30 Outro
-
-Download slides and read the full abstract here:
-https://gotocph.com/2024/sessions/3168
-
-RECOMMENDED BOOKS
-Barbara Oakley & Olav Schewe • Learn Like a Pro • https://amzn.to/3Z3gyf9
-Barbara Oakley, Beth Rogowsky & Terrence J. Sejnowski • Uncommon Sense Teaching • https://amzn.to/4hKGaEW
-Barbara Oakley & Terrence J. Sejnowski • Learning How to Learn • https://amzn.to/3Cqe7dW
-Barbara Oakley • A Mind For Numbers • https://amzn.to/3Z2tjqi
-Barbara Oakley • Mindshift • https://amzn.to/3Z2EAaf
-Barbara Oakley, Madhavan, Green, Koon & Low • Practicing Sustainability • https://amzn.to/4fn95gZ
-Barbara Oakley • Pathological Altruism • https://amzn.to/48LDVNK
-C. Edward Watson & Jose Antonio Bowen • Teaching with AI • https://amzn.to/44sBgYC
-Terrence J. Sejnowski • ChatGPT and the Future of AI • https://amzn.to/45VnfEf
-Ethan Mollick • Co-Intelligence • https://amzn.to/3HTnNjK
-Brian Christian • The Alignment Problem • https://amzn.to/4k5D8LA
-Dr. Fei-Fei Li • The Worlds I See • https://amzn.to/44b2EJm
-Kai-Fu Lee • AI Superpowers • https://amzn.to/43YftrN
-
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#GenAI #ArtificialIntelligence #GenerativeAI #HowToLearn #StrengthenLearning #Mindshift #LearnLikeAPro #ChatGPT #Cloude #LLaMA #DeclarativeLearning #FlynnEffect #UncommonSenseTeaching #TodayInTech #BarbaraOakley
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Better Value Sooner Safer Happier • Simon Rohrer &amp; Eduardo da Silva</title><link>https://www.youtube.com/watch?v=oRaYe4AUR2g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/oRaYe4AUR2g?version=3" length="" type=""/><pubDate>Fri, 27 Jun 2025 09:35:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>Merge Forward Meeting - 2025-08-13</title><link>https://www.youtube.com/watch?v=x8tsX7FZo7k</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/x8tsX7FZo7k?version=3" length="" type=""/><pubDate>Fri, 15 Aug 2025 13:36:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>Deep Roots Meeting - 2025-08-12</title><link>https://www.youtube.com/watch?v=MKOKsjYLTWI</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/MKOKsjYLTWI?version=3" length="" type=""/><pubDate>Fri, 15 Aug 2025 13:25:34 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon India in Hyderabad (August 6-7), and KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>Balancing Coupling in Software Design • Vlad Khononov &amp; Sheen Brisals</title><link>https://www.youtube.com/watch?v=vuFSneZWpNU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/vuFSneZWpNU?version=3" length="" type=""/><pubDate>Fri, 15 Aug 2025 12:27:09 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here
- (https://gotopia.tech/episodes/356) 
-Simon Rohrer - Co-Author of "Better Value Sooner Safer Happier" & Senior Director at Saxo Bank
-Eduardo da Sliva - Independent Consultant on Organization, Architecture, and Leadership Modernization
+ (https://gotopia.tech/episodes/367) 
+Sheen Brisals - AWS Serverless Hero, Engineering Leader & Co-Author of "Serverless Development on AWS"
+Vlad Khononov - Author of "Balancing Coupling in Software Design" & "Learning Domain Driven Design" & Creator of the Balanced Coupling Model
 
 RESOURCES
-Simon
-https://bsky.app/profile/simon.bvssh.com
-https://mastodon.social/@simonr
-https://x.com/sirohrer
-https://www.linkedin.com/in/simonrohrer
-https://github.com/sirohrer
-https://www.soonersaferhappier.com
+Vlad
+https://bsky.app/profile/vladikk.bsky.social
+https://vladikk.com
+https://github.com/vladikk
+https://www.linkedin.com/in/vladikk
 
-Eduardo
-https://bsky.app/profile/esilva.net
-https://mastodon.social/@eduardodasilva
-https://x.com/emgsilva
-https://www.linkedin.com/in/emgsilva
-https://github.com/emgsilva
-https://esilva.net
+Sheen
+https://bsky.app/profile/sheenbrisals.bsky.social
+https://twitter.com/sheenbrisals
+https://www.linkedin.com/in/sheen-brisals
+https://sbrisals.medium.com
+
+Links
+https://www.informit.com
+https://youtu.be/6hTZXR2brWE
 
 DESCRIPTION
-Eduardo da Silva and Simon Rohrer discuss the core ideas of "Better Value Sooner Safer Happier" diving into the principles of organizational transformation.
+Sheen Brisals sits down with software engineer and author Vlad Khononov to explore his latest book, "Balancing Coupling in Software Design". Vlad shares his journey from a failed microservices project to his deep dive into the principles of coupling, drawing insights from a 1970s structured design book.
 
-Simon shares insights on the shift from output-driven to outcome-focused thinking, emphasizing value over productivity, and the need for continuous improvement in delivery speed, stakeholder satisfaction, and safety.
-The conversation explores key concepts like technical excellence, integrating safety into development, and balancing incremental changes with occasional larger steps.
-
-Simon Rohrer discusses organizational patterns and the importance of decentralizing decision-making, recommending a flexible, context-driven approach to transformation. The session concludes with practical advice on how to start implementing these ideas, using the book’s map to guide organizations toward the right transformation strategy based on their specific goals.
+The duo discusses the timeless nature of coupling in software, how modern systems like microservices and cloud architectures still rely on age-old design principles, and the importance of understanding complexity for better problem decomposition and estimation. Vlad also reveals his unique approach to the book—integrating AI-generated poetry into each chapter to help readers grasp complex concepts. With a focus on modularity as the antidote to complexity, Vlad emphasizes that by managing coupling, engineers can create more maintainable, scalable systems.
 
 RECOMMENDED BOOKS
-Jonathan Smart, Zsolt Berend, Myles Ogilvie & Simon Rohrer • Sooner Safer Happier
- (https://amzn.to/3Emm9p2) Stephen Fishman & Matt McLarty • Unbundling the Enterprise
- (https://amzn.to/3W2EcXw) Carliss Y. Baldwin • Design Rules, Vol. 2
- (https://amzn.to/4hdllRr) Matthew Skelton & Manuel Pais • Team Topologies
-Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps
- (http://amzn.to/3sVLyLQ) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook (https://amzn.to/47oAf3l) 
+Vlad Khononov • Balancing Coupling in Software Design
+ (https://amzn.to/4iGpbDv) Vlad Khononov • Learning Domain-Driven Design
+ (https://amzn.to/41EVhIX) Sheen Brisals & Luke Hedger • Serverless Development on AWS
+ (https://amzn.to/3W3Sw2f) Glenford Myers • Composite/Structured Design
+ (https://amzn.to/4kVblPN) Vaughn Vernon • Implementing Domain-Driven Design
+ (https://amzn.to/41Mpk2E) Eric Evans • Domain-Driven Design
+ (https://amzn.to/43lNxhv) van Kelle, Verschatse & Baas-Schwegler • Collaborative Software Design
+ (https://amzn.to/4iv0N8I) Nick Tune & Jean-Georges Perrin • Architecture Moderniza (https://amzn.to/4b5ASiN) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -622,4 +52,288 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item></channel></rss>
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>ChatLoopBackOff: Episode 65 (Kubean)</title><link>https://www.youtube.com/watch?v=2-m1PIaYRqM</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/2-m1PIaYRqM?version=3" length="" type=""/><pubDate>Fri, 15 Aug 2025 05:15:26 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Ready to simplify Kubernetes cluster management across hybrid or multi-cloud environments? In this Live demo, CNCF Ambassador Afzal Ansari explores Kubean, a CNCF project that brings an Ansible-powered, GitOps-friendly approach to Kubernetes operations. Kubean aims to streamline the full lifecycle management of Kubernetes clusters—provisioning, upgrading, scaling, and decommissioning—using declarative configurations and a plugin-based architecture. Afzal will walk through the project’s core components, check out its integration with tools like Cluster API and OpenKruise, and assess its community momentum and production readiness. If you're interested in scalable cluster automation with a flexible control plane, don’t miss this first look at what Kubean has to offer.]]></content:encoded></item><item><title>DuckDB in 100 Seconds</title><link>https://www.youtube.com/watch?v=uHm6FEb2Re4</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/uHm6FEb2Re4?version=3" length="" type=""/><pubDate>Thu, 14 Aug 2025 18:23:22 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Learn the basics of DuckDB - an in-process, analytical database optimized for OLAP workloads. It's lightweight, portable and requires no server setup, allowing it to excel at complex queries on structured data.
+
+💬 Chat with Me on Discord
+
+https://discord.gg/fireship
+
+🔗 Resources
+
+https://duckdb.org/
+
+📚 Chapters
+
+🔥 Get More Content - Upgrade to PRO
+
+Upgrade at https://fireship.io/pro
+Use code YT25 for 25% off PRO access 
+
+🎨 My Editor Settings
+
+- Atom One Dark 
+- vscode-icons
+- Fira Code Font
+
+🔖 Topics Covered
+- What is DuckDB?
+- Why DuckDB is great for analyzing massive datasets
+- Which companies use DuckDB?
+- How to run DuckDB
+- Useful DuckDB commands
+- Aggregations with time series data]]></content:encoded></item><item><title>Encrypted Computation: What if Decryption Wasn’t Needed? • Katharine Jarmul • GOTO 2024</title><link>https://www.youtube.com/watch?v=DXCQjpxdikI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/DXCQjpxdikI?version=3" length="" type=""/><pubDate>Thu, 14 Aug 2025 12:00:21 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
+
+Katharine Jarmul - Principal Data Scientist at Thoughtworks & O'Reilly Author
+
+RESOURCES
+https://twitter.com/kjam
+https://linkedin.com/in/katharinejarmul
+https://github.com/kjam
+https://kjamistan.com
+https://probablyprivate.com
+
+Links
+https://www.tooltester.com/en/blog/chatgpt-statistics
+https://huggingface.co
+https://github.com/tf-encrypted/moose
+https://github.com/apple/swift-homomorphic-encryption
+https://github.com/zama-ai
+https://github.com/carbynestack
+
+ABSTRACT
+If you are curious about the field of cryptography and what it has to offer data science and machine learning, this talk is for you!
+
+We'll dive into the field of encrypted computation, where decryption isn't needed in order to perform calculations, transformations and operations on the data. You'll learn some of the core mathematical theory behind why and how this works, as well as the differences between approaches like homomorphic encryption and secure multi-party computation. At the end, you'll get some pointers and open-source library hints on where to go next and how to start using encrypted computation for problems you are solving the hard way (or not solving at all). [...]
+
+TIMECODES
+00:00 Intro
+03:18 What if...?
+04:23 Demo: Huggingface
+06:25 Homomorphic encryption
+08:41 Pallier cryptosystem
+12:12 Demo: Pallier
+15:22 Recap
+19:55 Multi-party computation (MPC)
+22:58 Use cases
+29:54 Getting started with encrypted computation
+32:45 Understanding builds trust
+34:01 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3319
+
+RECOMMENDED BOOKS
+Katharine Jarmul • Practical Data Privacy • https://amzn.to/3OafC3m
+Katharine Jarmul & Jacqueline Kazil • Data Wrangling with Python • https://amzn.to/3Ue5BV5
+Katharine Jarmul & Richard Lawson • Python Web Scraping • https://amzn.to/44H7XPl
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Privacy #DataPrivacy #Huggingface #PrivacyTechnology #Swiftlang #Cryptography #Decryption #PrivacyEngineering #KatharineJarmul #CyberSecurity #Programming #SoftwareEngineering #HomomorphicEncryption #Encryption #TodayInTech
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>CNCF On demand webinar: Troubleshooting Kubernetes with confidence</title><link>https://www.youtube.com/watch?v=cR1yFRlMD7U</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/cR1yFRlMD7U?version=3" length="" type=""/><pubDate>Thu, 14 Aug 2025 07:00:37 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Kubernetes debugging remains one of the most frustrating and time-consuming challenges in cloud native operations. When production issues hit, even seasoned platform engineers and SREs can find themselves grasping at logs, manually exec-ing into pods, and relying on shallow output from kubectl describe. In this conversational session, we sit down with Alban the creator of Traceloop and a core contributor to Inspektor Gadget, to explore how modern debugging is evolving, and what’s next. You’ll get a behind-the-scenes look at how Traceloop introduces kubectl-native tracing, powered by eBPF, to bring retroactive debugging into real-world Kubernetes clusters. Whether you're maintaining uptime, resolving incidents, or building internal tooling, this session will give you the practical insight and tools you need to troubleshoot Kubernetes with clarity and confidence.]]></content:encoded></item><item><title>My Smart Home Played me for a Fool</title><link>https://www.youtube.com/watch?v=AyE0_6N21h4</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/AyE0_6N21h4?version=3" length="" type=""/><pubDate>Wed, 13 Aug 2025 20:00:15 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Sometimes smart devices make me feel really dumb. And dumb devices are a smart idea.
+
+Mentioned in this video (some links are affiliate links):
+
+  - Home Assistant Connect ZWA-2: https://www.home-assistant.io/connect/zwa-2
+  - Zooz 800 Series Z-Wave Long Range Dimmer ZEN72: https://amzn.to/46NmRIj
+  - HackRF One: https://amzn.to/40WKGK0
+
+Thanks to Nabu Casa for sending the ZWA-2 for testing, and to Zooz for sending a few of their Z-Wave LR devices to connect to it. (The products used in this video were provided for review, but no money exchanged hands and they had no say in the video's contents.)
+
+Support me on Patreon: https://www.patreon.com/geerlingguy
+Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
+Merch: https://www.redshirtjeff.com
+2nd Channel: https://www.youtube.com/@GeerlingEngineering
+3rd Channel: https://www.youtube.com/@Level2Jeff
+
+Contents:
+
+00:00 - Smart TP
+00:46 - My smart problem is dumb
+01:43 - The fix
+02:09 - Setting up ZWA-2 with Home Assistant
+02:53 - A dumb switch that's smarter
+04:20 - Making it smarter with Z-Wave LR
+05:23 - How does it look on SDR?
+06:48 - Spouse Approval Factor
+07:09 - Should you buy one?]]></content:encoded></item><item><title>Why Gen Z Graduates Are in Crisis</title><link>https://www.youtube.com/watch?v=yVc2ZhECTMg</link><author>ColdFusion</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/yVc2ZhECTMg?version=3" length="" type=""/><pubDate>Wed, 13 Aug 2025 16:55:22 +0000</pubDate><source url="https://www.youtube.com/channel/UC4QZ_LsYcvcq7qOsOhpAX4A">Cold Fusion</source><content:encoded><![CDATA[Check out Odoo for free: https://www.odoo.com/r/OeAT
+
+From the threat of AI taking jobs to a sluggish job market, Gen Z new graduates are being hit from all sides. But how did it get so bad and what's the solution? In this episode, we explore.
+
+Watch or listen to ColdFusion on Spotify: https://open.spotify.com/show/1YEwCKoRz8fEDqheXB6UJ1
+
+ColdFusion Music: 
+https://www.youtube.com/@ColdFusionmusic
+http://burnwater.bandcamp.com   
+
+Sources and notes: 
+https://docs.google.com/document/d/149g1HepLsX6TGy4-HB__NMObvGCsdOObPZ_Erywlew0/edit?usp=drivesdk
+
+Get my book: 
+
+http://bit.ly/NewThinkingbook 
+
+ColdFusion Socials: 
+
+https://discord.gg/coldfusion
+https://facebook.com/ColdFusionTV 
+https://twitter.com/ColdFusion_TV 
+https://instagram.com/coldfusiontv
+
+Created by: Dagogo Altraide
+Producers: Tawsif Akkas, Dagogo Altraide]]></content:encoded></item><item><title>Cloud Native Live - Kyverno 1.15: New Policy Types</title><link>https://www.youtube.com/watch?v=354ztAcLVLg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/354ztAcLVLg?version=3" length="" type=""/><pubDate>Wed, 13 Aug 2025 16:04:34 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Join us next week for a follow-up session where we explore the new policy types introduced in Kyverno 1.15 — MutatingPolicies, DeletingPolicies, and GeneratingPolicies.
+
+This builds on our previous session, where we discussed Kyverno’s shift to CEL and introduced ValidatingPolicies and ImageValidatingPolicy. We’ll dive into how these new policies work, use cases they unlock, and how they fit into the future of Kubernetes policy management.]]></content:encoded></item><item><title>Developers Think &quot;Testing&quot; is Synonymous with &quot;Unit Testing&quot; – @garthgilmourni</title><link>https://www.youtube.com/shorts/GBxFrTBjJGs</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/GBxFrTBjJGs?version=3" length="" type=""/><pubDate>Wed, 13 Aug 2025 12:00:27 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #SoftwareDevelopment #Testing #Stability #Complexity #Programming #UnitTesting #TDD #ProgrammingHistory #Coding #HistoryOfProgramming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+
+Full version available here:
+https://youtu.be/IlDIV5gaTP0
+
+Garth Gilmour - Head Of Learning at Instil Software @garthgilmourni 
+Eamonn Boyle - Development Manager at Gearset
+
+RECOMMENDED BOOKS
+Gene Kim, Jez Humble, Nicole Forsgren, Patrick Debois & John Willis • The DevOps Handbook • https://amzn.to/3C0Rj0C
+Kiczales, des Rivieres & Bobrow • The Art of the Metaobject Protocol • https://amzn.to/3zbvavV
+Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps • https://amzn.to/3tCz1xO
+Fred Brooks Jr. • The Mythical Man-Month • https://williamgibsonbooks.com
+Jeremy Kun • A Programmer's Introduction to Mathematics • https://amzn.to/3WbgKWz
+Scott Wlaschin • Domain Modeling Made Functional • https://amzn.to/3TPnLKz
+Tom Stuart • Understanding Computation • https://amzn.to/3Dt1Ymp
+Sam Halliday • Functional Programming for Mortals with Scalaz • https://leanpub.com/fpmortals
+Jack D. Hidary • Quantum Computing: An Applied Approach • https://amzn.to/3TAyk4g
+Daniel P. Friedman & Matthias Felleisen • The Little Schemer • https://amzn.to/3SzHNHI
+Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Reading Code Effectively: An Overlooked Developer Skill • Marit van Dijk &amp; Hannes Lowette</title><link>https://www.youtube.com/watch?v=TCWms1yk79E</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/TCWms1yk79E?version=3" length="" type=""/><pubDate>Tue, 12 Aug 2025 12:23:20 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
+
+Read the full transcription of this interview here
+ (https://gotopia.tech/articles/366) 
+Marit van Dijk - Developer Advocate at JetBrains, Java Champion & Open Source Contributor
+Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover
+
+RESOURCES
+Marit
+https://bsky.app/profile/maritvandijk.bsky.social
+https://linkedin.com/in/maritvandijk
+https://github.com/mlvandijk
+https://medium.com/@mlvandijk
+https://maritvandijk.com
+
+Hannes
+https://bsky.app/profile/hanneslowette.net
+https://twitter.com/hannes_lowette
+https://github.com/Belenar
+https://linkedin.com/in/hanneslowette
+
+Links
+https://www.felienne.com
+https://codereading.club
+https://github.com/neontribe/code-reading-club
+
+DESCRIPTION
+Reading code is a critical yet often underappreciated skill in software development. Marit van Dijk & Hannes Lowette highlight that while developers are trained to write code, they spend most of their time understanding existing codebases—often with incomplete documentation and evolving complexity.
+
+They discuss research-backed strategies, such as structured code reading exercises, participation in communities like the Code Reading Club, and leveraging modern IDE tools to navigate and comprehend unfamiliar code. The conversation underscores the importance of empathy in code reviews, writing clear commit messages, and using tests as documentation to improve collaboration and maintainability. By practicing code reading deliberately and utilizing available resources, developers can become more effective and adaptable in their work.
+
+RECOMMENDED BOOKS
+Felienne Hermans • The Programmer's Brain
+ (https://amzn.to/3mENbN0) Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews
+ (https://amzn.to/3E75XrD) Duncan McGregor & Nat Pryce • Java to Kotlin (https://amzn.to/4apSjLu) 
+ (https://amzn.to/40OIDa3) Saleem Siddiqui • Learning Test-Driven Development
+ (https://amzn.to/35OMb3n) Roy Osherove • The Art of Unit Testing
+ (https://bit.ly/3obiKNB) Trisha Gee & Helen Scott • Getting to Know IntelliJ IDEA
+ (https://amzn.to/3ZBgnGc) Jacqui Read • Communication Patt (https://amzn.to/3E37lvv) 
+
+
+Bluesky (https://bsky.app/profile/gotocon.com) 
+Twitter (https://twitter.com/GOTOcon) 
+Instagram (https://www.instagram.com/goto_con) 
+LinkedIn (https://www.linkedin.com/company/goto-) 
+Facebook (https://www.facebook.com/GOTOConferences) 
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Introducing the data accessor of the EstimatorReport</title><link>https://www.youtube.com/watch?v=mmcRcIY13GE</link><author>probabl</author><category>dev</category><category>ai</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/mmcRcIY13GE?version=3" length="" type=""/><pubDate>Tue, 12 Aug 2025 08:30:40 +0000</pubDate><source url="https://www.youtube.com/channel/UCIat2Cdg661wF5DQDWTQAmg">Probabl</source><content:encoded><![CDATA[skore v0.10 is out! We added a data accessor to the EstimatorReport that allows you to interactively explore your dataset to gain insights.
+
+------
+Links:
+
+skore v0.10 documentation:
+https://docs.skore.probabl.ai/0.10/index.html
+
+skore GitHub repository:
+https://github.com/probabl-ai/skore
+
+Website: https://probabl.ai/
+LinkedIn: https://www.linkedin.com/company/probabl
+Twitter: https://x.com/probabl_ai
+Bluesky: https://bsky.app/profile/probabl.bsky.social
+Discord: https://discord.probabl.ai
+
+We also host a podcast called Sample Space, which you can find on your favourite podcast player. All the links can be found here:
+https://rss.com/podcasts/sample-space/
+
+#probabl]]></content:encoded></item><item><title>Combinators Revisited • Edward Kmett • YOW! 2018</title><link>https://www.youtube.com/watch?v=GirDSC6BnCo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/GirDSC6BnCo?version=3" length="" type=""/><pubDate>Mon, 11 Aug 2025 12:00:36 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2018. #GOTOcon #YOW
+https://yowcon.com
+
+Edward Kmett - Research Engineer at Machine Intelligence Research Institute @ekmett 
+
+RESOURCES
+https://twitter.com/kmett
+https://github.com/ekmett
+https://www.linkedin.com/in/ekmett
+http://comonad.com
+
+RECOMMENDED BOOKS
+Saša Jurić • Elixir in Action • https://amzn.to/2RZh5eN
+Tim McNamara • Rust in Action • https://amzn.to/3ux2R9u
+Ulisses Almeida • Learn Functional Programming with Elixir • https://amzn.to/389grn6
+Neal Ford • Functional Thinking • https://amzn.to/3DdP35B
+Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
+Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
+Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
+
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.facebook.com/GOTOConferences
+#Combinators #FunctionalProgramming #SoftwareEngineering #Programming #Tech #SoftwareDevelopment #SoftwareTechnology #FP #Haskell #Graal #Truffle #EdwardKmett #YOWcon
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>

@@ -1,201 +1,306 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>The Angular Custom Profiling Track is now available</title><link>https://blog.angular.dev/the-angular-custom-profiling-track-is-now-available-0f9d8d36218a?source=rss----447683c3d9a3---4</link><author>Angular</author><category>dev</category><category>official</category><category>frontend</category><pubDate>Wed, 2 Jul 2025 19:38:06 +0000</pubDate><source url="https://blog.angular.dev/?source=rss----447683c3d9a3---4">Angular official</source><content:encoded><![CDATA[Profiling web applications can be a complex task, often requiring developers to juggle between different tools that present data in disconnected ways. Traditionally, Chrome’s performance panel is excellent for detailed function call analysis, while Angular DevTools offers a higher-level view based on framework concepts like components, lifecycle hooks, bindings etc. Unfortunately, having two separate tools leads to a fragmented understanding of performance.This fragmentation presented a significant opportunity to improve the developer experience when profiling Angular applications. As a result, the Angular and Chrome teams have partnered to bring Angular-specific data and insights directly into the Chrome DevTools performance panel, creating a unified profiling experience. We’re excited to introduce the new custom track for Angular in Chrome DevTools.This integration allows developers to combine the benefits of both tools, offering a more synchronized and comprehensive view of their application’s performance.Getting to Know the New Custom TrackWith this new integration, you’ll find performance data using Angular concepts, such as application bootstrap, components, UI synchronization, and lifecycle hooks:The custom track’s flame charts group function invocations together under corresponding components and other Angular concepts. You can drill down to individual functions for a more granular view when needed and still glean meaning from the groupings in other scenariosOne of the most significant benefits is the ability to distinguish between your application’s code, other scripts, or browser activities like layout and paint.Decoding the Colors: What Your Code is DoingThe flame chart entries are color coded to help you quickly identify what’s happening in your application.: These represent Dependency Injection (DI) services instantiated during the application bootstrap process. In general, green signifies the execution of code written by application developers.: This color is reserved for templates compiled by Angular. Even though it’s still your code, it has been transformed by Angular before execution in the browser. This allows you to clearly see which templates are creating or updating the DOM and how long these operations take.: These mark the entry points. At the very top, you’ll see the trigger — why Angular decided to run application code. Subsequent blue bars represent all the components that need to perform work, which is particularly useful for understanding how user interactions impact DOM updates. Below component names, you’ll find the familiar purple (templates) and green (your component code).Since the custom track is interactive, clicking on an entry in the flame chart reveals more detailed information about a given entry. This data empowers developers to dive deeper into specific function calls and understand their impact on the application’s performance.Enabling this powerful new feature is straightforward. Complete the following steps:Ensure you are using the latest version of Angular (v20 at the time of this post) and an up-to-date version of the Google Chrome browser.Run your Angular application in developer mode.With your application running, open Chrome DevTools and enable the custom track by typing ng.enableProfiling() in the console.Once enabled, start recording a performance profile. The dedicated “Angular” track in the flame chart will be available.More Performant Apps are on the WayThis new integration with Chrome DevTools demonstrates our ongoing commitment to improving the developer experience within the Angular ecosystem. By providing tools that offer more focused and actionable insights, the Angular and Chrome teams are empowering developers to build faster, more efficient applications. Please try out this new integration and let us know what you think.]]></content:encoded></item><item><title>This Week In React #241: Remix, Next.js, Turbopack, Radix DOM templating, Ultracite, Stack, StyleX, MUI | Nitro Week, Skia, App Generator, Swift, Kotlin | ES2025, Rspack, Babel, TypeScript, Effect, Deno, Three.js</title><link>https://thisweekinreact.com/newsletter/241</link><author></author><category>frontend</category><pubDate>Wed, 2 Jul 2025 00:00:00 +0000</pubDate><source url="https://thisweekinreact.com/newsletter">This week in react</source><content:encoded><![CDATA[It's been a hot C° week here, but pretty calm in terms of React news. We still got various little releases, interesting blog posts and weak signals that show us what the future might look like.On the React Native side, the community is adopting Nitro Modules in various libraries, and Skia got built-in support for Lottie animations.ES2025 has been approved, and TS 5.9 beta should come anytime soon.As always, thanks for supporting us on your favorite platform:Embrace connects technical performance to real user impact across mobile, web, and backend so that engineering teams can deliver fast, reliable, and exceptional digital experiences.📊 Track Core Web Vitals, crashes, network requests, and custom events—all tied to full user sessions. 👤 Get deep insights into users with session stitching and play-by-plays of every user experience. 🔍 Discover the root cause faster with high-fidelity data, including session timelines, performance traces, and user journeys. 🔭 Embrace is built on OpenTelemetry. Own your data, integrate it anywhere, and avoid the rigid pricing and limitations of all-in-one platforms.Try Embrace today and get your first 1 million sessions free. Learn more at embrace.io.Interesting feedback from Shopify migrating their flagship Admin app to Remix, dogfooding the framework on a massive codebase with strong needs in terms of scalability. It looks to me many recent React Router features were things Shopify actually needed.15x faster TypeScript and JavaScript debugging than with breakpoints and , while upgrading your AI agent 🤖 into an expert debugger with real-time context.Wallaby.js runs your tests as you type, feeding your AI assistant real-time runtime values, code coverage, error details, and execution paths — all right next to your code.Designed specifically for testing, Wallaby features include a , the ability to run only opened test files, full-context AI integration, smart test runs, and more. Better context. Smarter debugging.Nitro Modules are trending among React Native lib developers, with 3 new releases this week:]]></content:encoded></item><item><title>The Gap Strikes Back: Now Stylable</title><link>https://css-tricks.com/the-gap-strikes-back-now-stylable/</link><author>Patrick Brosset</author><category>frontend</category><pubDate>Tue, 1 Jul 2025 12:42:38 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Four years ago, I wrote an article titled Minding the “gap”, where I talked about the CSS  property, where it applied, and how it worked with various CSS layouts.At the time, I described how easy it was to evenly space items out in a flex, grid, or multi-column layout, by using the  property. But, I also said that  the gap areas was much harder, and I shared a workaround.However, workarounds like using extra HTML elements, pseudo-elements, or borders to draw separator lines tend to come with drawbacks, especially those that impact your layout size, interfere with assistive technologies, or pollute your markup with style-only elements.Today, I’m writing again about layout gaps, but this time, to tell you all about a new and exciting CSS feature that’s going to change it all. What you previously had to use workarounds for, you’ll soon be able to do with just a few simple CSS properties that make it easy, yet also flexible, to display styled separators between your layout items.There’s already a specification draft for the feature you can peruse. At the time I’m writing this, it is available in Chrome and Edge 139 behind a flag. But I believe it won’t be long before we turn that flag on. I believe other browsers are also very receptive and engaged.Displaying decorative lines between items of a layout can make a big difference. When used well, these lines can bring more structure to your layout, and give your users more of a sense of how the different regions of a page are organized.Introducing CSS gap decorationsIf you’ve ever used a multi-column layout, such as by using the  property, then you might already be familiar with gap decorations. You can draw vertical lines between the columns of a multi-column layout by using the  property:article {
-  column-width: 20rem;
-  column-rule: 1px solid black;
-}The CSS gap decorations feature builds on this to provide a more comprehensive system that makes it easy for you to draw separator lines in other layout types.For example, the draft specification says that the  property also works in flexbox and grid layouts:.my-grid-container {
-  display: grid;
-  gap: 2px;
-  column-rule: 2px solid pink;
-}No need for extra elements or borders! The key benefit here is that the decoration happens in CSS only, where it belongs, with no impacts to your semantic markup.The CSS gap decorations feature also introduces a new  property for drawing lines between rows:.my-flex-container {
-  display: flex;
-  gap: 10px;
-  row-rule: 10px dotted limegreen;
-  column-rule: 5px dashed coral;
-}But that’s not all, because the above syntax also allows you to define multiple, comma-separated, line style values, and use the same  function that CSS grid already uses for row and column templates. This makes it possible to define different styles of line decorations in a single layout, and adapt to an unknown number of gaps:.my-container {
-  display: grid;
-  gap: 2px;
-  row-rule:
-    repeat(2, 1px dashed red),
-    2px solid black,
-    repeat(auto, 1px dotted green);
-}Finally, the CSS gap decorations feature comes with additional CSS properties such as , , , , and , which make it possible to precisely customize the way the separators are drawn, whether they overlap, or where they start and end.Currently, the CSS gap decorations feature is only available in Chromium-based browsers.The feature is still early in the making, and there’s time for you all to try it and to provide feedback that could help make the feature better and more adapted to your needs.If you want to try the feature today, make sure to use Edge or Chrome, starting with version 139 (or another Chromium-based browser that matches those versions), and enable the flag by following these steps:In Chrome or Edge, go to .In the search field, search for Enable Experimental Web Platform Features.Using CSS gap decorationsLet’s build a simple web page to learn how to use the feature. Here is what we’ll be building:The above layout contains a header section with a title, a navigation menu with a few links, a main section with a series of short paragraphs of text and photos, and a footer.We’ll use the following markup:<body>
-<header>
-  <h1>My personal site</h1>
-</header>
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Links</a></li>
-  </ul>
-</nav>
-<main>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="cat.jpg" alt="A sleeping cat.">
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="tree.jpg" alt="An old olive tree trunk.">
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <p>...</p>
-  </article>
-  <article>
-    <img src="strings.jpg" alt="Snow flakes falling in a motion blur effect.">
-  </article>
-</main>
-<footer>
-  <p>© 2025 Patrick Brosset</p>
-</footer>
-</body>We’ll start by making the  element be a grid container. This way, we can space out the , , , and  elements apart in one go by using the  property:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
-}Let’s now use the CSS gap decorations feature to display horizontal separator lines within the gaps we just defined:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
- 
-  row-rule: 1rem solid #efefef;
-}This gives us the following result:We can do a bit better by making the first horizontal line look different than the other two lines, and simplify the  value by using the  syntax:body {
-  display: grid;
-  gap: 4rem;
-  margin: 2rem;
- 
-  row-rule:
-    1rem solid #efefef,
-    repeat(2, 2px solid #efefef);
-}With this new  property value, we’re telling the browser to draw the first horizontal separator as a  thick line, and the next two separators as  thick lines, which gives the following result:Now, let’s turn our attention to the navigation element and its list of links. We’ll use flexbox to display the links in a single row, where each link is separated from the other links by a gap and a vertical line:nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  column-rule: 2px dashed #666;
-}Very similarly to how we used the  property before, we’re now using the  property to display a dashed  thick separator between the links.Our example web page now looks like this:The last thing we need to change is the  element and its paragraphs and pictures. We’ll use flexbox again and display the various children in a wrapping row of varying width items:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-}
-
-
-main > * {
-  flex: 1 1 200px;
-}
-
-
-main article:has(p) {
-  flex-basis: 400px;
-}In the above code snippet, we’re setting the  element to be a wrapping flex container with a  gap between items and flex lines. We’re also making the items have a flex basis size of  for pictures and  for text, and allowing them to grow and shrink as needed. This gives us the following result:Let’s use CSS gap decorations to bring a little more structure to our layout by drawing  thick separator lines between the rows and columns of the layout:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  row-rule: 2px solid #999;
-  column-rule: 2px solid #999;
-}This gives us the following result, which is very close to our expected design:The last detail we want to change is related to the vertical lines. We don’t want them to span across the entire height of the flex lines but instead start and stop where the content starts and stops.With CSS gap decorations, we can easily achieve this by using the  property to fine-tune exactly where the decorations start and end, relative to the gap area:main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  row-rule: 2px solid #999;
-  column-rule: 2px solid #999;
-  column-rule-outset: 0;
-}The  property above makes the vertical column separators span the height of each row, excluding the gap area, which is what we want:There’s more to the feature and I mentioned a couple more CSS properties earlier, which lets you control which of the decorations, rows or columns, appear above the other ones. / , which sets the behavior of the decoration lines at intersections. In particular, whether they are made of multiple segments, which start and end at intersections, or single, continuous lines.Because the feature is new, there isn’t MDN documentation about it yet. So to learn more, check out:The Edge team has also created an interactive playground where you can use visual controls to configure gap decorations.And, of course, the reason this is all implemented behind a flag is to elicit feedback from developers like you! If you have any feedback, questions, or bugs about this feature, I definitely encourage you to open a new ticket on the Chromium issue tracker.]]></content:encoded></item><item><title>Using CSS Cascade Layers With Tailwind Utilities</title><link>https://css-tricks.com/using-css-cascade-layers-with-tailwind-utilities/</link><author>Zell Liew</author><category>frontend</category><pubDate>Mon, 30 Jun 2025 13:16:43 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Adam Wathan has (very cleverly) built Tailwind with CSS Cascade Layers, making it extremely powerful for organizing styles by priority.@layer theme, base, components, utilities;
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'tailwindcss/utilities.css' layer(utilities);The core of Tailwind are its utilities. This means you have two choices:The default choice is to follow Tailwind’s recommended layer order: place components first, and Tailwind utilities last.So, if you’re building components, you need to manually wrap your components with a  directive. Then, overwrite your component styles with Tailwind, putting Tailwind as the “most important layer”./* Write your components */
-@layer components {
-  .component {
-    /* Your CSS here */
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>JS/Frontend</title><link>https://www.awesome-dev.news</link><description></description><item><title>Covering hidden=until-found</title><link>https://css-tricks.com/covering-hiddenuntil-found/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Fri, 15 Aug 2025 12:55:36 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Turns out there are a few good posts and tutorials about  floating out there, so I thought I’d jot down a few key takeaways for later reference.It makes hidden content “findable”Short story: Slapping  on an element in HTML enables any hidden content within the element to be findable in the browser with in-page search.<div hidden="until-found">
+  <!-- hidden content -->
+</div>You’ll see, or more accurately  see, that the content is hidden with that in place:It’s content-visibility: hidden under the hoodThe browser takes that as a hint to hide the content and does so by implicitly setting content-visibility: hidden on the element in the user agent styles.If we do a + on the keyboard to activate in-page search and enter a query, then a match reveals the content, highlighting said matched query.That’s what I was asking myself when I started digging into this a little deeper. The most prominent example of it being used is from the Chrome for Developers docs as a faux-accordion. You know, a series of panels that open and close on click.But isn’t that a solved deal now that we have the  element at the ready? May as well use a semantic disclosure widget to, you know, . Indeed, browsers also set content-visibility: hidden on the  portion of the element that holds the content.I’m pretty sure  was not as widely supported in 2022 as it is today. It’s actually part of Interop 2025 and notice that one of the functionalities mentioned is the capability for in-page search. Chrome already supports it. Firefox recently shipped it (ostensibly as part of the  release). And Safari will presumably get there with Interop 2025. The example from the Chrome for Developers post demonstrates an approach for working around a not-fully-supported  element and now we have it.So, why ?I don’t know. I’m sure there’s a good use case for hiding content accessibly in some fashion while making it searchable. I just can’t think of it off the top of my head. I mean, we have  as well, but that takes a different approach with  which completely removes the content from in-page search. Browser support and polyfillWe’ve already established that Chrome and Firefox are on board. Safari is the bigger holdout, but knowing that making the hidden content in  findable is part of Interop 2025 (and Firefox’s corresponding support for it as part of that effort) makes me think it’s around the corner. (Turns out that hunch was correct because it landed in Safari Technology Preview 125 after writing this.)In the meantime, though, is it worth using ? Because if we’re aiming for a consistent cross-browser experience, we’d need to do some sort of swap between content-visibility: hidden to hide the content and  to reveal it.Nathan Knowler expertly explains the conundrum this creates. We can’t set content-visibility: hidden on something without also removing it from in-page search. The  attribute works exactly like content-visibility: hidden but maintains that in-page search still works. In other words, we can’t polyfill the feature with .Thanks, Nathan, for going down the massive rabbit hole and finding a solution that leverages the Shadow DOM to look for the HTML attribute, check support, and revert its properties when needed to accessibly hide the content visually without fully nuking it from being found.Seems like there isn’t much to say about styling something that ain’t visible, but notice that the in-page search feature highlights content that matches the search query.Looks like we may get a new  pseudo that allows us to select the matched query and style the highlight color in the CSS Pseudo-Elements Module Level 4 specification, which is currently in Editor’s Draft status at the time I’m writing this.What about multiple matches? The current selection gets a different highlight from subsequent matches.We’ll presumably, according to the spec, be able to combine  with the  pseudo-class to target the current match: .If you’re thinking we might get to mix-and-match  with the corresponding  and  pseudo-classes, I’m afraid the spec says nay. But it does not shut the door on it completely:The  and  pseudo-classes are reserved for analogous use in the future. Any unsupported combination of these pseudo-classes with  be treated as invalid.Not really, but I do like the note at the end of Christian Shaefer’s “Rethinking Find-in-Page Accessibility” post that says consideration needs to go into what happens  a search query matches content on the page. Currently, the content remains visible even after in-page search is closed or canceled. Perhaps we’ll need some other HTML hint for that.A dump of things I found and used while researching this:]]></content:encoded></item><item><title>A Few Things About the Anchor Element’s href You Might Not Have Known</title><link>https://css-tricks.com/a-few-things-about-the-anchor-elements-href-you-might-not-have-known/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Fri, 15 Aug 2025 12:26:00 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[I love “re-learning” things I thought I knew. HTML is full of those opportunities (case in point, like today) since it’s where you typically start learning about web development. And in those early days, you don’t know what you don’t know.<a href="#"> <!-- Scrolls to the top of a document -->
+<a href=""> <!-- Reloads the current page, preserving the search string but removing the hash string (if present). -->
+<a href="."> <!-- Reloads the current page, removing both the search and hash strings -->
+<a href="?"> <!-- Reloads the current page, removing both the search and hash strings (keeps `?`) -->
+<a href="data:"> <!-- Link to data URLs, like text fragments -->
+<a href="video.mp4#t=10,20">  <!-- Links to specific parts of a media file -->But do yourself a favor and read Jim’s full post. He gets way more into the weeds, referencing the specification and stress testing different configurations. I mean, this is gold:But I’m writing because  will also scroll to the top  there isn’t another element with  in the document. I didn’t know that.]]></content:encoded></item><item><title>Learning web development: numbers, variables, functions in JavaScript</title><link>https://2ality.com/2025/08/javascript-numbers-variables-functions.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this chapter, we take the very first steps with JavaScript and learn about numbers, variables and functions.]]></content:encoded></item><item><title>On Accessibility Conformance, Design Systems, and CSS “Base” Units</title><link>https://css-tricks.com/on-accessibility-conformance-design-systems-and-css-base-units/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 14 Aug 2025 13:10:11 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[My brain can’t help but try to make connections between seemingly disparate ideas. And that’s what happened yesterday when I read:A semantic issue of saying that individual components can conform to WCAG. We might be able to “optimize” a component for accessibility, but accessible experiences are composed of complete web pages containing components designed to work together.A desire to automate all things in a design system. Update it here and it updates all over. But there’s still this matter of knowing if changing one component in a design system impacts other components.A musing over a possible new CSS “base” unit. The idea is to set one element as a “base” that allows other elements to inherit its font-related properties as roots for better vertical rhythm between elements, no matter their proximity.Could a base unit in CSS make components more interoperable? Like, if buttons could inherit its font size depending on what other component it is in? Sorta like container query units, but without needing additional wrappers in the markup.Would that allow design systems changes to cascade between components more smoothly?Will properties inherited through a base element make components more optimized for WCAG conformance when implemented on a page with other components?Does this overlap with CSS  at all?Sorry for the shower thoughts, but it’s interesting to consider how these ideas work together.]]></content:encoded></item><item><title>New series of blog posts: learning web development</title><link>https://2ality.com/2025/08/learning-web-dev-toc.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[This blog post provides an overview of my new series of blog posts called “Learning web development”.]]></content:encoded></item><item><title>We Might Need Something Between Root and Relative CSS Units for “Base Elements”</title><link>https://css-tricks.com/we-might-need-something-between-root-and-relative-css-units-for-base-elements/</link><author>Zell Liew</author><category>frontend</category><pubDate>Wed, 13 Aug 2025 13:24:55 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[CSS provides us with root and relative values.Root values are like  and  — they’re tied to the values written in the  selector (the most common one would be the  element).Relative values are like , ,  and various others — they’re tied to the  in that specific element.I’ve come to realize that perhaps we need to have a unit between root and relative values. Having such a unit allows us to size things without complex  or  calculations.Let me give you an example: Prose* + * {
+  margin-top: 1lh;
+}Today, we can also use the  to achieve the same effect — and that might be a tad more readable.*:not(:first-child) {
+  margin-top: 1lh;
+}Often, we need to constrain these selectors so they don’t spill everywhere and break the rest of the page. One great class for this is ..prose {
+  *:not(:first-child) {
+    margin-top: 1lh;
   }
-}<!-- Override with Tailwind utilities --> 
-<div class="component p-4"> ... </div>That’s a decent way of doing things.But, being the bad boy I am, I don’t take the default approach as the “best” one. Over a year of (major) experimentation with Tailwind and vanilla CSS, I’ve come across what I believe is a better solution.Before we go on, I have to tell you that I’m writing a course called Unorthodox Tailwind — this shows you everything I know about using Tailwind and CSS in synergistic ways, leveraging the strengths of each.Shameless plug aside, let’s dive into the Unorthodox Choice now.In this case, the Unorthodox Choice is to write your styles in an unnamed layer — or any layer after utilities, really — so that your CSS naturally overwrites Tailwind utilities.Of these two, I prefer the unnamed layer option:/* Unnamed layer option */
-@layer theme, base, components, utilities; 
-
-/* Write your CSS normally here */ 
-.component { /* ... */ }/* Named layer option */
-/* Use whatever layer name you come up with. I simply used css here because it made most sense for explaining things */
-@layer theme, base, components, utilities, css; 
-
-@layer css {
-  .component { /* ... */ }
-}I have many reasons why I do this:I don’t like to add unnecessary CSS layers because it makes code harder to write — more keystrokes, having to remember the specific layer I used it in, etc.I’m pretty skilled with ITCSS, selector specificity, and all the good-old-stuff you’d expect from a seasoned front-end developer, so writing CSS in a single layer doesn’t scare me at all.I can do complex stuff that are hard or impossible to do in Tailwind (like theming and animations) in CSS.Your mileage may vary, of course.Now, if you have followed my reasoning so far, you would have noticed that I use Tailwind  differently:Tailwind utilities are not the “most important” layer.My unnamed CSS layer is the most important one.Build prototypes with Tailwind (quickly, easily, especially with the tools I’ve created).Shift these properties to CSS when they get more complex — so I don’t have to read messy utility-littered HTML that makes my heart sink. Not because utility HTML is bad, but because it takes lots of brain processing power to figure out what’s happening.Finally, here’s the nice thing about Tailwind being in a utility layer: I can always  a utility to give it strength.<!-- !important the padding utility -->
-<div class="component !p-4"> ... </div>Whoa, hold on, wait a minute! Isn’t this wrong, you might ask?Nope. The  keyword has traditionally been used to override classes. In this case, we’re leveraging on the  feature in CSS Layers to say the Tailwind utility is more important than any CSS in the unnamed layer.This is perfectly valid and is a built-in feature for CSS Layers.Besides, the  is so explicit (and used so little) that it makes sense for one-off quick-and-dirty adjustments (without creating a brand new selector for it).Tailwind utilities are more powerful than they seemTailwind utilities are not a 1:1 map between a class and a CSS property. Built-in Tailwind utilities mostly look like this so it can give people a wrong impression.Tailwind utilities are more like convenient Sass mixins, which means we can build effective tools for layouts, theming, typography, and more, through them.Thanks for reading and I hope you’re enjoying a new way of looking at (or using) Tailwind!]]></content:encoded></item><item><title>CSS Blob Recipes</title><link>https://css-tricks.com/css-blob-recipes/</link><author>Juan Diego Rodríguez</author><category>frontend</category><pubDate>Fri, 27 Jun 2025 13:48:41 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[. You hate them. You love them. Personally, as a design illiterate, I like to overuse them… a lot. And when you repeat the same process over and over again, it’s only a question of how much you can optimize it, or in this case, what’s the easiest way to create blobs in CSS? Turns out, as always, there are many approaches.To know if our following blobs are worth using, we’ll need them to pass three tests:They can be with just a single element (and preferably without pseudos).They can be easily designed (ideally through an online tool).We can use gradient backgrounds, borders, shadows, and other CSS effects on them.Without further ado, let’s  right in.Just generate them onlineI know it’s disenchanting to click on an article about making blobs in CSS just for me to say you can generate them outside CSS. Still, it’s probably the most common way to create blobs on the web, so to be thorough, these are some online tools I’ve used before to create  blobs. Probably the one I have used the most since, besides blobs, it can also generate lots of SVG backgrounds. A dedicated tool for making blobs. It’s apparently part of Haikei now, so you can use both.Lastly, almost all graphic programs let you hand-draw blobs and export them as SVGs.For example, this is one I generated just now. Keep it around, as it will come in handy later.<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <path
-    fill="#FA4D56"
-    d="M65.4,-37.9C79.2,-13.9,81,17,68.1,38C55.2,59.1,27.6,70.5,1.5,69.6C-24.6,68.8,-49.3,55.7,-56,38.2C-62.6,20.7,-51.3,-1.2,-39,-24.4C-26.7,-47.6,-13.3,-72,6.2,-75.6C25.8,-79.2,51.6,-62,65.4,-37.9Z"
-    transform="translate(100 100)"
-  />
-</svg>While counterintuitive, we can use the  property to create blobs. This technique isn’t new by any means; it was first described by Nils Binder in 2018, but it is still fairly unknown. Even for those who use it, the inner workings are not entirely clear.To start, you may know the  is a shorthand to each individual corner’s radius, going from the top left corner clockwise. For example, we can set each corner’s  to get a bubbly square shape:.blob {
-  border-radius: 25% 50% 75% 100%;
-}However, what  does — and also why it’s called “radius” — is to shape each corner following a circle of the given radius. For example, if we set the top left corner to , it will follow a circle with a radius  the size of the shape..blob {
-  border-top-left-radius: 25%;
-}What’s less known is that each corner property is still a  towards its horizontal and vertical radii. Normally, you set both radii to the same value, getting a circle, but you can set them individually to create an ellipse. For example, the following sets the horizontal radius to  of the element’s width and the vertical to  of its height:.blob {
-  border-top-left-radius: 25% 50%;
-}We can now shape each corner like an ellipse, and it is the combination of all four ellipses that creates the illusion of a blob! Just take into consideration that to use the horizontal and vertical radii syntax through the  property, we’ll need to separate the horizontal from the vertical radii using a forward slash ()..blob {
-  border-radius:
-    /* horizontal */
-    100% 30% 60% 70% /
-    /* vertical */
-    50% 40% 70% 70%;
-}The syntax isn’t too intuitive, so designing a blob from scratch will likely be a headache. Luckily, Nils Binder made a tool exactly for that!This hack is awesome. We aren’t supposed to use  like that, but we still do. Admittedly, we are limited to boring blobs. Due to the nature of , no matter how hard we try, we will only get convex shapes.Just going off , we can try to minimize it a little by sticking more than one blob together:However, I don’t want to spend too much time on this technique since it is too impractical to be worth it. To name a few drawbacks:We are using more than one element or, at the very least, an extra pseudo-element. Ideally, we want to keep it to one element.We don’t have a tool to prototype our blobby amalgamations, so making one is a process of trial and error.We can’t use borders, gradients, or box shadows since they would reveal the element’s outlines.Multiple backgrounds and SVG filtersThis one is an improvement in the Gooey Effect, described here by Lucas Bebber, although I don’t know who first came up with it. In the original effect, several elements can be morphed together like drops of liquid sticking to and flowing out of each other:It works by first blurring shapes nearby, creating some connected shadows. Then we crank up the contrast, forcing the blur out and smoothly connecting them in the process. Take, for example, this demo by Chris Coyer (It’s from 2014, so more than 10 years ago!):If you look at the code, you’ll notice Chris uses the  property along the  and  functions, which I’ve also seen in other blob demos. To be specific, it applies  on each individual circle and then  on the parent element. So, if we have the following HTML:<div class="blob">
-  <div class="subblob"></div>
-  <div class="subblob"></div>
-  <div class="subblob"></div>
-</div>…we would need to apply filters and background colors as such:.blob {
-  filter: contrast(50);
-  background: white; /* Solid colors are necessary */
+}This is simple and good — but what happens if you include typography of other sizes…? You’ll see this break down incredibly quickly (because  of a  element can be incredibly big).One way around this issue is to use Flexbox on the parent element. By doing so, we can set  to  and we don’t have to deal with the value of  changing on the  element. (Bonus, we also don’t have to deal with margin collapse.).prose {
+  display: flex; 
+  flex-direction: column;
+  gap: 1lh;
+}But we introduce a new problem here: .Content below  belongs within the . But content above the  belongs with the previous section header. We should, ideally, make the spacing different to clarify their relationship.The simplest way is to add a little margin above the .But we can’t add margin above  with  since the  value on  will be different from that of the surrounding elements.We have to use a little CSS trickery and  (or the logical equivalent) on the element above the . Here, we simply set  to  since we use Flexbox and don’t have to deal with margin collapse. (If you had to deal with margin collapse, you’d have to set  to .)Is there a better way? Well, that’s what this article is about!But before we go there, let’s consider a different UI that has similar problems so you can begin to see the greater ramifications of this problem (and the importance of the solution).Now let’s say we have a card component that’s divided into two parts, header and content.In these kind of components, the header is often styled with a different  than the content.To create such a card, the simplest markup may be:<div class="card">
+  <h2 class="title">Card Title</h2>
+  <div class="content">Card Content</div>
+</div>Unfortunately, we cannot use the  unit to create the padding within the card — doing so causes the margin on the  element to blow (incredibly) out of proportion!There are, of course, many ways to handle this type of situation.One possible way is to change the markup such that the  resides in a  element. When we do this, we can apply the padding on the , bypassing the enlarged  problem.<div class="card">
+  <header class="title">
+    <h2>Card Title</h2>
+  </header>
+  <div class="content">Card Content</div>
+</div>While changing the markup solves the problem, it’s not ideal — since we probably don’t want to create an extra  element unless it’s necessary…Well, another possible method is to use a root value like . This allows  and  to use the same base unit, and therefore, create the same padding.But we still run into problems if the  needs to scale to different  values. Imagine you want to make a smaller card — now  isn’t going to look right since the padding value becomes too big in proportion to the content.A simple solution is to change the  value according to the supported variants of the component — but this kinda thing is sorta hard-coded and not very friendly….card-sm { --padding: 0.75rlh; }
+.card-md { --padding: 1rlh; }
+.card-lg { --padding: 1.25rlh; }This is where an intermediary between root and relative units might come in handy.The handy in-between unitThis section is purely speculative CSS to illustrate a point. We’ll follow up with a simple way to actually do this in practice today in a later section, so hang tight and follow along conceptually for now.Let’s say we have a unit that takes it’s reference value from a specified element. We’ll call this a  unit, for lack of a better name.So, 1  font-size unit could be .And 1  line-height unit could be .Pretty easy at this point.Imagine we can style the cards with this base unit. Then we can simply use  to quantify the padding and everything else would be sized appropriately:.card {
+  > * { padding: 1blh; }  
 }
 
-.subblob {
-  filter: blur(15px);
-  background: black; /* Solid colors are necessary */
-}However, there is a good reason why those demos stick to white shapes and black backgrounds (or vice versa) since things get unpredictable once colors aren’t contrast-y enough. See it for yourself in the following demo by changing the color. Just be wary: .To solve this, we will use an SVG filter instead. I don’t want to get too technical on SVG (if you want to, read Luca’s post!). In a nutshell, we can apply blurring and contrast filters using SVGs, but now, we can also pick which color channel we apply the contrast to, unlike normal , which modifies all colors. Since we want to leave color channels (,  and ) untouched, we will only crank the contrast up for the alpha channel. That translates to the next SVG filter, which can be embedded in the HTML:<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute;">
-  <defs>
-    <filter id="blob">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -6" result="goo" />
-      <feBlend in="SourceGraphic" in2="blob" />
-    </filter>
-  </defs>
-</svg>To apply it, we will use again , but this time we’ll set it to , so that it pulls the SVG from the HTML..blob {
-  filter: url("#blob");
-}And now we can even use it with gradient backgrounds!That being said, this approach comes with two small, but important, changes to common CSS filters:The filter is applied to the parent element, not the individual shapes.The parent element must be transparent (which is a huge advantage). To change the background color, we can instead change the body or other ancestors’ background, and it will work with no issues.What’s left is to place the  elements together such that they make a blobby enough shape, then apply the SVG filters to morph them:This works well, but it has a similar issue to the blob we made by morphing several  instances: too many elements for a simple blob. Luckily, we can take advantage of the  property to create multiple shapes and morph them together using SVG filters, all in a single element. Since we are keeping it to one element, we will go back to just one empty  div:First, we will use  along with  to create a circle inside the element:body {
-  background: radial-gradient(farthest-side, var(--blob-color) 100%, #0000);
-  background-repeat: no-repeat; /* Important! */
-}Here is what each parameter does: Confines the shape to the element’s box farthest from its center. This way, it is kept as a circle. Fills the background shape from 0 to 100% with the same color, so it ends up as a solid color. After the shape is done, it makes a full stop to transparency, so the color ends.The next part is moving and resizing the circle using the  and  properties. Luckily, both can be set on  after the gradient, separated from each other by a forward slash ().body {
-  background: radial-gradient(...) 20% 30% / 30% 40%;
-  background-repeat: no-repeat; /* Important! */
-}The first pair of percentages sets the shape’s horizontal and vertical position (taking as a reference the top-left corner), while the second pair sets the shape’s width and height (taking as a reference the element’s size).As I mentioned, we can stack up different backgrounds together, which means we can create as many circles/ellipses as we want! For example, we can create three ellipses on the same element:.blob {
-  background:
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 20% 30% / 30% 40%, 
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 80% 50% / 40% 60%, 
-    radial-gradient(farthest-side, var(--blob-color) 100%, #0000) 50% 70% / 50% 50%;
-  background-repeat: no-repeat;
-}What’s even better is that SVG filters don’t care whether shapes are made of elements or backgrounds, so we can also morph them together using the last  filter!While this method may be a little too much for blobs, it unlocks squishing, stretching, dividing, and merging blobs in seamless animations.Again, all these tricks are awesome, but not enough for what we want! We accomplished reducing the blob to a single element, but we still can’t use gradients, borders, or shadows on them, and also, they are tedious to design and model. Then, that brings us to the ultimate blob approach…Fortunately, there is a new way to make blobs that just dropped to CSS: the  function!First off, the CSS  function is used alongside the  property to cut elements into any shape we want. More specifically, it uses a verbal version of SVG’s  syntax. The syntax has lots of commands for lots of types of lines, but when blobbing with , we’ll define curves using the  command:.blob {
-  clip-path: shape(
-    from X0 Y0, 
-    curve to X1 Y1 with Xc1 Yc1, 
-    curve to X2 Y2 with Xc21 Yc21 / Xc22 Yc22
-    /* ... */
-  );
-}Let’s break down each parameter: defines the starting point of the shape. starts the curve where  is the next point of the shape, while  defines a control point used in Bézier curves.The next parameter is similar, but we used  instead to define two control points on the Bézier curve.I honestly don’t understand Bézier curves and control points completely, but luckily, we don’t need them to use  and blobs! Again,  uses a verbal version of SVG’s  syntax, so it can draw any shape an SVG can, which means that we can translate the SVG blobs we generated earlier… and CSS-ify them. To do so, we’ll grab the  attribute (which defines the ) from our SVG and paste it into Temani’s SVG to  generator.This is the exact code the tool generated for me:.blob {
-  aspect-ratio: 0.925; /* Generated too! */
+.card-sm { font-size: 0.8em; }
+.card-md { font-size: 1em; }
+.card-lg { font-size: 1.2em; }Tying this back to the  example earlier, it could very well resolve the proximity confusion issue without complicating our selectors:.prose {
+  h2:not(:first-child) {
+    margin-top: 2blh;
+  }
+}For this function to be added easily to modern CSS, I could think of two possible ways:Attach that to container queries.Define a syntax similar to anchor positioning.The container query methodThere are downsides to this approach.First, containers need to be defined in a parent element. This requires more markup and makes the code somewhat complex and unintuitive. This code below might be a possible implementation:<div class="container">
+  <div class="card">
+    <h2 class="title">Card Title</h2>
+    <div class="content">Card Content</div>
+  </div>
+</div>.container {
+  container-type: inline-size; 
+}
 
-  clip-path: shape(
-    from 91.52% 26.2%,
-    curve to 93.52% 78.28% with 101.76% 42.67%/103.09% 63.87%,
-    curve to 44.11% 99.97% with 83.95% 92.76%/63.47% 100.58%,
-    curve to 1.45% 78.42% with 24.74% 99.42%/6.42% 90.43%,
-    curve to 14.06% 35.46% with -3.45% 66.41%/4.93% 51.38%,
-    curve to 47.59% 0.33% with 23.18% 19.54%/33.13% 2.8%,
-    curve to 91.52% 26.2% with 62.14% -2.14%/81.28% 9.66%
+.card {
+  > * { padding: 1cqbl; }
+}Dealing with nested containers isn’t much a problem, because we can always set the  we want to inherit from. But, there might be a collision if we want to use different container references for  and .<!-- We might want to inherit the cqem or cqbl from here -->
+<div class="container-base">
+
+  <!-- But we might need cqw or cqh from here -->
+  <div class="two-column-grid"> 
+    <div class="card">...</div>
+    <div class="card">...</div>
+  </div>
+
+</div>Kinda sucks to be limited by container collisions.Anchor positioning syntaxIn this case, we first decide the base we want to inherit from. We can call this a , or something similar.Here, we can explicitly set a base anchor name — or perhaps even leave it as  if we don’t wanna name it. Then the rest of the elements within could inherit from this base value immediately:.card {
+  base-anchor: --card; /* or perhaps none */
+  > * { padding: 1blh; }
+}If we need to refer to this anchor from a completely unrelated component, we can leverage the anchor name and simply do this:.far-away-comp {
+  base-name: --card; 
+  /* Then use blh from here */
+}One fascinating aspect I can think of is a potential double-anchor use case where the  component is able to inherit its  or value from yet another base or its parent element.This flexibility lets us create component variations based on font sizes incredibly easily without needing to rely on complex  calculations.Here’s an example of what I’m talking about:.prose {
+  base-anchor: --prose;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Inherits font-size from .prose */
+/* This is automatic if base-name is not provided */
+.card {
+  base-anchor: none;
+  base-name: --prose;
+
+  /* In this case, 1blh could be 1.5em */
+  > * { padding: 1blh; }
+}
+
+/* After inheriting the font size, since we have a base-anchor in the card, we adjust the font-size value accordingly, so: 
+  - 1bem would mean 0.8em further in the card
+  - 1blh could then mean 0.8 * 1.5em = 1.2em 
+*/
+.card.card-sm {
+  font-size: 0.8em;
+}Fascinating, yeah? This brings about a whole new possibility when creating reusable components.Putting it into practice todayLet me preface this section with the fact that  and  does not exist today. So whatever implementation I can come up with is simply an imperfect stop-gap measure.Today, we are certain that we can use the  unit for such a purpose — but this requires a little bit more calculation, since  is a relative, not a base unit.The first step is to determine the  element — and the  font size — which we can do by setting the  property:.card { 
+  --base-size: 1em; 
+  font-size: var(--base-size);
+}
+
+.card-sm { 
+  --base-size: 0.8em; 
+}We can then simulate the  (base ) unit by dividing the intended  with the :.card {
+  h2 {
+    --font-size: 2em;
+    font-size: calc(var(--font-size) / var(--base-size));  
+  }
+}Unfortunately, the above code won’t work because we can’t perform a  division with a unit-ed value. So the best we can do to remove the units from .When we do this, we need to perform another  on the base element to create the actual  property:.card { 
+  --base-size: 1; 
+  font-size: calc(var(--base-size) * 1em);
+}Then we perform the same  in the  to create its font size:.card {
+  h2 {
+    --font-size: 2;
+    font-size: calc(var(--font-size) / var(--base-size) * 1em);  
+  }
+}This is all starting to get a little “ugh”.Nobody wants to all these boilerplate code. So, this is best abstracted away with a mixin, or perhaps even a function. If you use Sass, you might imagine something like this:@mixin base-anchor() {
+  font-size: calc(var(--base-size) * 1em);
+}@utility base-anchor {
+  font-size: calc(var(--base-size) * 1em);
+}We can then apply this utility into the base element. The code looks a little bit cleaner:.card {
+  @apply base-anchor; 
+  --base-size: 1; 
+}
+
+.card-sm { --base-size: 0.8; }For the , we can create another utility to perform the calculation for us. It’ll look something like this:@utility text-relative {
+  font-size: calc(var(--text-size) / var(--base-size) * 1em);
+}We can then use the utility like this:.card .title {
+  @apply text-relative;
+  --text-size: 2; 
+}Now, to calculate the  of the card for the  element, we need to reverse the  to get the  value. This is best done with a CSS function, which is not widely supported today, but hopefully, soon!@function --bem(--multiplier) {
+  result: calc(var(--text-size / var(--base-size) * 1em * --multiplier));
+}We can then use  to calculate the padding on the card title:.card .title {
+  /* ... */
+  padding-block: --bem(0.5);
+  padding-inline: --bem(1);
+}We mentioned above that the  value works better for margin and padding since it preserves vertical rhythm. So, why not create a  function too?In this case, we can add a  variable that the function can inherit from:@function --blh(--multiplier, --lh-multiplier) {
+  result: calc(
+    var(
+      --text-size / var(--base-size) * 1em * --multiplier *
+        var(--lh-multiplier, var(--leading))
+    )
   );
-}As you might have guessed, it returns our beautiful blob:Let’s check if it passes our requirements:Yes, they can be made of a single element.Yes, they can also be created in a generator and then translated into CSS.Yes, we can use gradient backgrounds, but due to the nature of , borders and shadows get cut out.Two out of three? Maybe two and a half of three? That’s a big improvement over the other approaches, even if it’s not perfect.So, alas, we failed to find what I believe is the perfect CSS approach to blobs. I am, however, amazed how something so trivial designing blobs can teach us about so many tricks and new CSS features, many of which I didn’t know myself.]]></content:encoded></item><item><title>KelpUI</title><link>https://css-tricks.com/kelpui/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Thu, 26 Jun 2025 16:42:32 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[KelpUI is new library that Chris Ferdinandi is developing, designed to leverage newer CSS features and Web Components. I’ve enjoyed following Chris as he’s published an ongoing series of articles detailing his thought process behind the library, getting deep into his approach. You really get a clear picture of his strategy and I love it.He outlined his principles up front in a post back in April:I’m imagining a system that includes…Base styles for all of the common HTML elements.Loads of utility classes for nudging and tweaking things.Group classes for styling more complex UI elements  a million little classes.Easy customization with CSS variables.Web Components to progressively add interactivity to functional HTML.All of the Web Component HTML lives in the light DOM, so its easy to style and reason about.I’m imagining something that can be loaded directly from a CDN, downloaded locally, or imported if you want to roll your own build.KelpUI is still evolving, and that’s part of the beauty of looking at it now and following Chris’s blog as he openly chronicles his approach. There’s always going to be some opinionated directions in a library like this, but I love that the guiding philosophy is so clear and is being used as a yardstick to drive decisions. As I write this, Chris is openly questioning the way he optimizes the library, demonstrating the tensions between things like performance and a good developer experience.Looks like it’ll be a good system, but even more than that, it’s a wonderful learning journey that’s worth following.]]></content:encoded></item></channel></rss>
+}Then we can use  like this:.card .title {
+  /* ... */
+  padding-block: --blh(0.5);
+  padding-inline: --blh(1);
+}We can’t use  and  in production because CSS Functions are not available all browsers yet. In the spirit of making  work , we can create a utility, that calculates the  from the .Notice this new variable is called , not , since  is already used. (We cannot overwrite the CSS variable.)/* I multiplied the value by 1em here to make it easy for you to use the value */
+@utility base-font-size {
+  --base-font-size: calc(var(--base-size) / var(--font-size) * 1em);
+}We can also create a utility called  to get the value of the . When we do this, it’s much easier if we also pass in a  variable:@utility base-line-height {
+  --base-leading: calc(var(--base-font-size)* var(--leading));
+}Then we can use  on  to get the values we want:.card .title {
+  @apply text-relative;
+  @apply base-font-size;
+  @apply base-line-height;
+  --font-size: 2; 
+  padding-inline: var(--base-line-height);
+  padding-block: calc(var(--base-line-height) * 0.5);
+}Let’s first put together the necessary utilities and functions to make this happen today:/* The necessary utilities */
+@utility base-anchor {
+  font-size: calc(var(--base-size) * 1em);
+}
+
+@utility text-relative {
+  font-size: calc(var(--font-size) / var(--base-size) * 1em);
+}
+
+/* To use this today */
+@utility base-font-size {
+  --base-font-size: calc(var(--base-size) / var(--font-size) * 1em);
+}
+
+@utility base-line-height {
+  --base-line-height: calc(var(--base-font-size)* var(--leading));
+}
+
+/* Easier usage when CSS Functions become available */
+@function --bem(--multiplier) {
+  result: calc(var(--font-size / var(--base-size) * 1em * --multiplier));
+}
+
+@function --blh(--multiplier, --lh-multiplier) {
+  result: calc(
+    var(
+      --font-size / var(--base-size) * 1em * --multiplier *
+        var(--lh-multiplier, var(--leading))
+    )
+  );
+}/* What we can actually use today */
+.card {
+  @apply base-anchor;
+  --base-size: 1;
+  --leading: 1.5;
+  
+  > * { padding: 1lh; }
+
+  .title {
+    @apply text-relative;
+    @apply base-font-size;
+    @apply base-line-height;
+    --font-size: 2; 
+    padding-inline: var(--base-line-height);
+    padding-block: calc(var(--base-line-height) * 0.5);
+  }
+}
+
+.card-sm {
+  --base-size: 0.8;
+  .title {
+    --font-size: 1.2;
+  }
+}
+
+/* What we can use when CSS Functions are available */
+.card {
+  @apply base-anchor;
+  --base-size: 1;
+  
+  > * { padding: calc(--blh(1)); }
+
+  .title {
+    @apply text-relative;
+    --text-size: 2; 
+    padding-block: calc(--blh(0.5));
+  }
+}It’s still not as pretty as the  and  versions I’ve shown you above, but at the very least, we achieve some sort of functionality, yeah? And it doesn’t look half bad!Using this with Splendid Labz todayWe also included the  and  versions if you wanna play with them as well.To use Splendid Styles, just download the library, import the  file, and do what you’ve just seen the above!npm i @splendidlabz/styles@import '@splendidlabz/styles/typography/base-font-size.css'Now, if you’re interested in all of the tools I’m been cooking up to make web development simpler, you can grab an early bird discount for the Splendid Pro package today — this is available to all CSS-Tricks readers!(I might add a lifetime option to the Styles package as it evolves to sufficiently. But it might be a year or so before that happens.)Alright, enough promotion. Let’s come back here.What do you think about this unit between root and relative values?I hesitate to call it “base”  because “base” can mean so many things. But it also sounds right at the same time.Does  and  make sense to you?Do you think I’m thinking a wee bit too much for this design aspect?Maybe you’ve got a better name for this?I’d love to hear from you so please feel free to share your thoughts below!]]></content:encoded></item><item><title>CSS-Questions</title><link>https://css-tricks.com/css-questions/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Tue, 12 Aug 2025 15:02:21 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Sunkanmi Fafowora is a frequent flier around here. You’ve probably seen his name pop up in the CSS-Tricks Almanac and we actually just published something today that he wrote up for the  function. The guy spends a lot of time in the Almanac because he loves technical documentation, something he showed off when writing the CSS Color Functions Guide.And it’s that love for technical documentation that lead him to ship CSS-Questions (gotta love that hyphenated URL, right?!), a place where you can test your CSS knowledge with over 100 questions. You can take the comprehensive exam or a basic one with 20 questions if all you want is a pop quiz.And of course, the first question I get is related to CSS color functions!My first try was a valiant effort, I’d say… perfect. Could be the title of my autobiography.There, now I feel better. 😅]]></content:encoded></item><item><title>Getting Creative With Quotes</title><link>https://css-tricks.com/getting-creative-with-quotes/</link><author>Andy Clarke</author><category>frontend</category><pubDate>Mon, 11 Aug 2025 13:43:14 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[Block quotes and pull quotes are useful for punctuating solid blocks of running text. They’re also two of the best typographic elements for acting as visual landmarks to catch someone’s eye. There are no rules about how long a quote should be, how big it should look, or even how it’s styled.So, how do you design block quotes and pull quotes to reflect a brand’s visual identity and help tell its story? Here’s how I do it by styling the HTML  element using borders, decorative quote marks, custom shapes, and a few unexpected properties. Patty Meltt is an up-and-coming country music sensation, and she needed a website to launch her new album. She wanted it to be distinctive-looking and memorable, so she called Stuff & Nonsense. Patty’s not real, but the challenges of designing and developing sites like hers are.First, a quote-unquote “recap.”There are no limitations on how quotations can be styled. Block and pull quotes can both be eye-catching design elements, but they convey different messages. While a block quote is typically inside the content flow, a pull quote (sometimes called a callout) is extracted from the text to form a separate element.The proper HTML for marking up a block quote depends on its contents. My design for Patty Meltt includes concert reviews, which contain the reviewer’s name:<blockquote>
+  <p>"Patty Meltt’s powerful ballads and toe-tapping anthems had the audience singing along all night."</p>
+  <footer>— Waylon Bootscuffer</footer>
+</blockquote>Here, the  contains information about the source or author of the parent element. This makes it a good fit for attributions inside a , where it indicates who wrote it. But what about ?For years, I used the  element to mark up attributions. It’s one of those sneaky bits of HTML that felt intuitive until I read the spec and went, “Dagnabbit!” because  isn’t meant to label people. Instead, it should be used for:“The title of a creative work (e.g. book, website, song, painting, etc.)”<blockquote>
+  <p>"Patty Meltt’s powerful ballads and toe-tapping anthems had the audience singing along all night."</p>
+  <footer>— Waylon Bootscuffer, <cite>Country Music Magazine</cite></footer>
+</blockquote>So, in that example,  marks up the attribution, and  points to the title of the publication, not the person writing it. This gives the markup a semantic boost and helps people who use screen readers.Out-of-the-box, browsers do very little to style blockquotes, except for adding inline margins. You could add some simple blockquote styling, but with just a little more style, you can transform them into expressive design elements that reflect a brand’s personality and voice.For Patty Meltt’s design, I wanted her quotes to feel confident, loud, and a little over the top.A simple border, used well, can make block and pull quotes stand out and anchor them into a layout. A border on the left or top separates a block quote from surrounding content, helping a reader recognise it as a different voice from the main narrative.In magazines and newspapers, block quotes punctuate content blocks and are frequently styled to contrast with the surrounding text. A full-width, bordered block quote encourages a reader to pause for a moment.It’s a simple, yet effective, way to focus someone’s attention on a message. A thin border feels quiet and understated:blockquote {
+  padding-inline: 1.5rem;
+  border-inline-start: 1px solid #98838e;
+  border-inline-end: 1px solid #98838e;
+}This may suit some brands, but that’s not a style which reflects Patty’s personality. Whereas a bolder, thicker border feels more confident, like it has something important to say:blockquote {
+  padding-inline: 1.5rem;
+  border-inline-start: 5px solid #98838e;
+  border-inline-end: 5px solid #98838e;
+}Those borders needn’t always fill the full height or width of a , so instead of using the  property, use  and  pseudo-elements to add faux borders at any size:blockquote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+blockquote::before,
+blockquote::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #98838e;
+}You could even animate those faux borders using keyframe animations or simple transitions to increase their width when someone interacts with the quotation:blockquote::before,
+blockquote::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #98838e;
+  transition: 300ms width ease-in-out;
+}
+
+blockquote:hover::before,
+blockquote:hover::after {
+  width: 100%;
+}Before choosing how to style your quote marks, consider whether you need them at all. Technically, an HTML  implies its content is a quotation. So, from an accessibility and semantic standpoint, quote marks aren’t required because screen readers and search engines will recognise a . However, quote marks can visually emphasise quoted content and add interest and personality to a design.Are both opening and closing marks always needed? Possibly, when a design needs a traditional feel, or a quotation appears in a passage of running text:blockquote {
+  position: relative;
+  padding-inline: 64px;
+}
+  
+blockquote img:first-of-type,
+blockquote img:last-of-type {
+  position: absolute;
+}
+
+blockquote img:first-of-type {
+  top: 0;
+  left: 0;
+}
+
+blockquote img:last-of-type {
+  right: 0;
+  bottom: 0;
+}Or, to give a design an editorial feel, you might use only a decorative oversized opening mark for a pull quote, which is separate from the normal flow of text:blockquote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+blockquote::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #98838e;
+}Block quotes don’t necessarily need quote marks, but when you use them with purpose, they become more than punctuation. They become part of the design personality. Decorative marks are ideal when a brand wants to infuse its character into a design.Sadly, even the nicest designed typefaces can include dull and uninspiring quote marks. So, it’s important to remember that you can choose marks from an altogether different font if they better suit a design.That’s why, whenever I audition a new typeface, I check its quote marks. If they’re memorable or noteworthy, I add them as SVGs to my quote marks library so I can easily find them later.Quotation design needn’t stop at borders and quote marks. Block and pull quotes can be any shape. You might style an album or concert review as a speech or thought bubble, and include an avatar for the author. Or, you could use a  or  to transform a quotation into any shape you can imagine.Designing for Patty MelttPatty Meltt wanted a website packed with design details. Every element added to a design is an opportunity to be expressive, and that includes her quotations. From the selection of designs I showed her, she felt a mixture of quote marks, avatar images, and borders — with type set in a flowing script — best suited her style.To implement her pull quote, I used a cursive typeface, which contrasts with the rest of her typographic design:blockquote p {
+  font-family: "Lobster Two", cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: unset;
+}<div>
+  <img src="img/blazeface-start.svg" alt="" width="48">
+</div>I turned its parent division into a flex container and aligned the contents vertically:blockquote div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}…and used generated content to add a flexible-width horizontal line to fill any remaining space:blockquote div:first-of-type::after {
+  content: "";
+  display: block;
+  flex: 1;
+  height: 5px;
+  background-color: #98838e;
+}With a little care and creativity, block quotes can become expressive, brand-building elements, as distinctive as a logo or headline. Whether you’re working with quiet, thoughtful quotes or loud, in-your-face testimonials, styling them is an opportunity to reinforce a client’s personality and voice.Patty Meltt’s quotations became mini design statements. But the same principles apply no matter the brand: get the semantics right, choose styling that fits the tone, and don’t be afraid to experiment with borders, quote marks, and even shapes.]]></content:encoded></item><item><title>Stuff &amp; Nonsense Practical Layout Workshop</title><link>https://css-tricks.com/stuff-nonsense-practical-layout-workshop/</link><author>Geoff Graham</author><category>frontend</category><pubDate>Mon, 11 Aug 2025 12:16:00 +0000</pubDate><source url="https://css-tricks.com/">CSS Tricks blog</source><content:encoded><![CDATA[We don’t publish a big ol’ bunch of links pushing products and whatnot around here. But I do like sharing a good resource when it’s available and that’s what I’m doing here with Andy Clarke’s upcoming Practical Layout Workshop.: Thursday, 18th September: 2 hours (live, with demos and Q&A): Online (join from anywhere), recording includedYou probably already know Andy pretty well. He’s been a leading voice in web design forever. He’s also written a slew of super CSS-Tricks articles recently (including this one today, with more on the way!) that are all about “getting creative” with common UI patterns while leveraging CSS to embrace a healthy dose of whimsy.Here’s what he had to say to me about the workshop:Over the past year, I’ve been exploring how classic layout principles from comics, posters, and magazines can bring energy and storytelling to digital design. This session is where I share what I’ve learned, with examples, demos, and practical takeaways you can actually use.Just get a whiff of the stuff he’s been digging into:And when you pair that with the Toon Title demos he’s been publishing, you get a really good idea of the clever ideas and solid techniques you’ll take away from this workshop.Oh, and CSS-Tricks readers can get in at a £5 discount with coupon code  (that’s the number 5 at the end) at checkout. 😉]]></content:encoded></item></channel></rss>
