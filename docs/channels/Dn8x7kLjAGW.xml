@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Breaking the Architecture Bottleneck • Andrew Harmel-Law &amp; Marit van Dijk • GOTO 2025</title><link>https://www.youtube.com/watch?v=zl5U8KO28rM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zl5U8KO28rM?version=3" length="" type=""/><pubDate>Mon, 25 Aug 2025 12:01:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
+
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/392
+
+Andrew Harmel-Law - Technical Principal at Thoughtworks & Author of "Facilitating Software Architecture" @AndrewHarmelLaw 
+Marit van Dijk - Developer Advocate at JetBrains, Java Champion & Open Source Contributor @maritvandijk 
+
+RESOURCES
+Andrew
+https://bsky.app/profile/andrewhl.bsky.social
+https://twit.social/@ahl
+https://x.com/al94781
+https://github.com/andrewharmellaw
+https://www.linkedin.com/in/andrewharmellaw
+https://andrewharmellaw.github.io
+
+Marit
+https://bsky.app/profile/maritvandijk.bsky.social
+https://linkedin.com/in/maritvandijk
+https://mastodon.social/@maritvandijk
+https://github.com/mlvandijk
+https://medium.com/@mlvandijk
+https://maritvandijk.com
+
+Links
+https://facilitatingsoftwarearchitecture.com
+https://ruthmalan.com
+https://www.linkedin.com/pulse/software-architects-do-we-need-em-ruth-malan
+https://youtu.be/YpFR8qzwYSA
+https://youtu.be/acqcyX-tpf4
+https://youtu.be/PK-y-iG5VnE
+https://youtu.be/zDugyWSguz4
+https://youtu.be/NGXl1D-KwRI
+https://youtu.be/wjF4X9t3FMk
+https://youtu.be/hhlxFtV_tZo
+https://youtu.be/6xrGo1IIB3w
+https://youtu.be/Cx_vijTm24w
+https://youtu.be/l1tyfb5we7I
+https://youtu.be/RlCpgSoOX6I
+https://youtu.be/xsMUuOwv7IA
+https://youtu.be/H0EK0B1QvVA
+https://youtu.be/XOSR0Asq4h0
+https://youtu.be/yPvef9R3k-M
+https://youtu.be/_R_Vc17mxNE
+
+DESCRIPTION
+Andrew Harmel-Law discusses their book "Facilitating Software Architecture" and how traditional architecture approaches often become bottlenecks that slow down high-performing development teams.
+
+Rather than architects making top-down decisions in isolation, Andrew advocates for a facilitation approach centered on the "advice process" - where anyone can make architectural decisions as long as they seek advice from those with expertise and those who will be affected.
+
+This collaborative method, inspired by open space conferences and supported by Architectural Decision Records (ADRs), shifts the architect's role from decision-maker to conversation facilitator, ensuring the right people have the right discussions at the right time. The approach requires psychological safety and organizational support but has proven successful even in traditional corporate environments, ultimately creating more maintainable code bases where development teams actually enjoy working and can respond effectively to changing requirements.
+
+TIMECODES
+00:00 Intro
+02:12 Problem: Traditional architecture as a bottleneck
+04:31 Solution: Facilitating Architecture Decisions
+12:22 3 key influences on the book
+27:43 Implementation challenges & organizational culture
+38:05 Outro
+
+RECOMMENDED BOOKS
+Andrew Harmel-Law • Facilitating Software Architecture • https://amzn.eu/d/5kZKVfU
+Christopher Alexander • A Pattern Language • https://amzn.to/3Urefj3
+Diana Montalion • Learning Systems Thinking • https://amzn.to/3ZpycdJ
+Donella H. Meadows • Thinking in Systems • https://amzn.to/3XtqYCV
+Eric Evans • Domain-Driven Design • https://amzn.to/3tnGhwm
+Alessandro Colla • Alberto Acerbis • Domain-Driven Refactoring • https://amzn.to/3I3I7zf
+Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews • https://amzn.to/3E75XrD
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#SoftwareArchitecture #ADR #ArchitecturalDecisionRecords #ReadingCode #LegacyCode #Refactoring #OpenSpace #TodayInTech #AndrewHarmelLaw #MaritvanDijk
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here
@@ -195,36 +283,4 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
-
-Andrew Browne - Solution Architect at Picnic Software
-
-RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
-
-RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
-
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item></channel></rss>
