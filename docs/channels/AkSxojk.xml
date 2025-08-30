@@ -1,98 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>ChatLoopBackOff: Episode 68 (KANISTER)</title><link>https://www.youtube.com/watch?v=-dy_J3VmmOg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/-dy_J3VmmOg?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 22:51:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Join us LIVE as CNCF Ambassador Carlos Santana dives into Kanister, the open source framework for application-level data management on Kubernetes.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>Google’s nano banana just killed Photoshop... let’s run it</title><link>https://www.youtube.com/watch?v=8_GgeASwHwQ</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/8_GgeASwHwQ?version=3" length="" type=""/><pubDate>Fri, 29 Aug 2025 16:27:32 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Try Brilliant for free - https://brilliant.org/fireship and get 20% off a premium annual subscription.
 
-Carlos will be exploring the project for the very first time, right alongside you. Expect a hands-on walkthrough of the docs, community resources, and real-world use cases that highlight how Kanister helps extend Kubernetes for backup, recovery, and data operations.
+A few days ago, image editing changed forever with Google's release of Gemini 2.5 Flash aka Nano Banana.
 
-If you’re curious about how cloud native projects approach complex data management challenges, or just enjoy watching an experienced open source explorer break down a CNCF project live, this session is for you.
+The new model can deliver any photo alterations you can imagine while maintaining character consistency. But how good is it in the real world? 
 
-Bring your questions, share your experiences, and learn in real time as we explore Kanister together!]]></content:encoded></item><item><title>I can&apos;t even with these company names...</title><link>https://www.youtube.com/shorts/UBnfA9s3OuE</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/UBnfA9s3OuE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 21:25:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Seriously... They're good products, just unfortunately named.
+#coding #programming #ai 
 
-And yes I know that's a switch and not a router, lol. This is why I use scripts for my long form videos :D
+💬 Chat with Me on Discord
 
-Here are affiliate links to the two products I bought and mentioned:
+https://discord.gg/fireship
 
-  - CUKTECH 10Ah 100W portable charger: https://amzn.to/4murMTe
-  - NICGIGA 5Gbps Network Switch: https://amzn.to/3HNJstX
+🔗 Resources
+- https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/
 
-Support me on Patreon: https://www.patreon.com/geerlingguy
-Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
-Merch: https://www.redshirtjeff.com
-2nd Channel: https://www.youtube.com/@GeerlingEngineering
-3rd Channel: https://www.youtube.com/@Level2Jeff]]></content:encoded></item><item><title>Blind &amp; Visually Impaired Initiative (BVI) Meeting - 2025-08-19</title><link>https://www.youtube.com/watch?v=bJej44Ug8tU</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/bJej44Ug8tU?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 20:16:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>Do THIS before you boot up that old computer!</title><link>https://www.youtube.com/watch?v=779nru5udpQ</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/779nru5udpQ?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 14:00:18 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Taking it apart is usually a better option than turning it on.
+🔥 Get More Content - Upgrade to PRO
 
-Track all the work I'm doing on Retro Macs: https://github.com/geerlingguy/retro-computers
+Upgrade at https://fireship.io/pro
+Use code YT25 for 25% off PRO access 
 
-Also check out Infinite Mac—you can enjoy retro Mac software in the comfort of your browser, and not have to restore a 35 year old Mac like I did! https://infinitemac.org/
+🎨 My Editor Settings
 
-Parts list:
+- Atom One Dark 
+- vscode-icons
+- Fira Code Font
 
-  - Console5 - Analog board (630-0395) caps: https://console5.com/store/macintosh-classic-analog-pcb-cap-kit.html
-  - Console5 - Logic board tantalum caps: https://console5.com/store/macintosh-classic-smd-tantalum-main-pcb-cap-kit.html
-  - Mac Memories - 2x 1MB SIMMs: https://www.ebay.com/itm/144565895077
-  - MacBatt Internal CR2032 PRAM replacement: https://www.tindie.com/products/jurassicomp/macbatt-internal-cr2032-pram-macintosh-battery/
-
-Some videos referenced in this video:
-
-  - Mac84 - Repairing a Sad Quadra 840AV: https://www.youtube.com/watch?v=LBgr5mdimRY
-  - Peter Cetinski - RIFA AC Cap Blowup: https://www.youtube.com/watch?v=njbwdbcfXjc
-  - iiiDIY Recapping 20th Anniversary Mac: https://youtu.be/mabH-YB6kn4?t=683
-
-Music in this video by LOOK MUM NO COMPUTER: https://www.youtube.com/watch?v=M47dXmZUnBc
-
-Support me on Patreon: https://www.patreon.com/geerlingguy
-Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
-Merch: https://redshirtjeff.com
-2nd Channel: https://www.youtube.com/c/GeerlingEngineering
-
-Contents:
-
-00:00 - Long screwdrivers and old computer problems
-03:18 - Tools of the trade
-05:09 - Cracking open the Mac
-07:41 - Breaking the anode, safely
-09:36 - Logic board removal
-11:06 - Analog board and CRT neck board removal
-12:50 - Recapping the Analog board
-18:08 - Recapping the Logic board
-21:29 - Tantalum caps, MacBatt, and 4 MB RAM upgrade
-23:02 - Re-assembling the Classic
-23:51 - First power
-25:53 - Computing like it's 1991
-28:45 - Revealing the build, reliving the memories
-30:41 - More Macs?]]></content:encoded></item><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+🔖 Topics Covered
+- Gemini Flash 2.5 Nano Banana
+- Character consistency
+- Nano Banana for developers
+- Nano Banana bugs]]></content:encoded></item><item><title>Professional Skills for Software Engineers • Charles Humble &amp; Trisha Gee</title><link>https://www.youtube.com/watch?v=Sc0vCXrbAsg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Sc0vCXrbAsg?version=3" length="" type=""/><pubDate>Fri, 29 Aug 2025 13:05:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+ (https://gotopia.tech/episodes/373) 
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
+Trisha Gee - Lead Developer Evangelist at Gradle, Java Champion & Co-Author of "Getting to Know IntelliJ IDEA"
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://linkedin.com/in/charleshumble
+https://mastodon.social/@charleshumble
+https://conissaunce.com
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Trisha
+https://bsky.app/profile/trishagee.bsky.social
+https://twitter.com/trisha_gee
+https://www.linkedin.com/in/trishagee
+https://trishagee.com
+https://github.com/trishagee
+
+Links
+https://www.conissaunce.com/professional-skills-shortcut.html
+https://www.jeanettewinterson.com
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
+Trisha Gee interviews Charles Humble on his project "Professional Skills for Software Engineers", a collection of 14 articles organized into four categories:
+• communication
+• critical thinking
+• documentation
+• networking
 
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
+Charles argues that career success in software engineering oftentimes depends more on non-programming skills than technical ability. Both Charles and Trisha emphasize that these skills are learnable and essential, despite being undervalued in the industry as mere "soft skills".
 
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+The conversation covers how intentional communication improves product development, the value of networking and public speaking for career advancement, and ways engineers can generate ideas for content creation while taking ownership of their career development. The interview makes a compelling case that developing these professional skills benefits both individual engineers and the industry as a whole.
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Charles Humble • Professional Skills for Software Engineers
+ (https://www.conissaunce.com/professional-skills-shortcut) Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know
+ (https://amzn.to/3kiTwJJ) Anne Currie, Sarah Hsu & Sara Bergman • Building Green Software
+ (https://amzn.to/3IKopW5) Cal Newport • Deep Work
+ (https://amzn.to/3RlicEx) Martin Fowler • UML Distilled
+ (https://amzn.to/3GdBObf) Cathy O'Neil • Weapons of (https://amzn.to/42jYkba) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -108,63 +87,108 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>ChatLoopBackOff: Episode 67 (Kserve)</title><link>https://www.youtube.com/watch?v=BjXZxUR8NMo</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/BjXZxUR8NMo?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 20:33:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Join us LIVE as CNCF Ambassador Shivay Lamaba dives into KServe, the open source project designed for scalable and reliable ML models serving on Kubernetes.
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>ChatLoopBackOff: Episode 66 (Kube-OVN)</title><link>https://www.youtube.com/watch?v=jKRguGArw_A</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/jKRguGArw_A?version=3" length="" type=""/><pubDate>Fri, 29 Aug 2025 05:00:29 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Kube-OVN brings the power of Open vSwitch (OVS) to Kubernetes, delivering a rich, policy-driven Container Network Interface (CNI) built for modern cloud-native infrastructure. In this livestream, a CNCF Ambassador, Koray Oksay dives into Kube-OVN for the first time—exploring how it extends native Kubernetes networking with advanced features like built-in IPAM, traffic mirroring, QoS, and a controller-driven control plane. Koray will take a look at the project’s architecture, community activity, and ecosystem integrations to understand where Kube-OVN fits in the cloud-native networking landscape. Whether you're curious about underlay/overlay support or managing complex network policies, join us as we unpack what makes Kube-OVN a compelling option for production-grade Kubernetes networks.]]></content:encoded></item><item><title>Bridging Big Data and Machine Learning Ecosystems: A Cloud Native Approac... Johnu George &amp; Shiv Jha</title><link>https://www.youtube.com/watch?v=3NWFCKUhB3A</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/3NWFCKUhB3A?version=3" length="" type=""/><pubDate>Thu, 28 Aug 2025 14:16:31 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
 
-Shivay will be  exploring the project for the very first time, right alongside you. Expect a hands-on walkthrough of the docs, community resources, and real-world use cases that make KServe a key piece in the cloud native AI/ML ecosystem.
-If you’re curious about production-grade model inference, want to see how cloud native communities approach machine learning workloads, or just enjoy watching an experienced open source explorer break down a CNCF project live, this session is for you.
+Bridging Big Data and Machine Learning Ecosystems: A Cloud Native Approach Using Kubeflow - Johnu George & Shiv Jha, Nutanix
 
-Bring your questions, share your experiences, and learn in real time as we explore KServe together!]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+In today's data-driven landscape, bridging the gap between scalable big data systems (e.g., Apache Spark, Iceberg) and machine learning frameworks (e.g., PyTorch) while minimizing data movement and serialization overhead is a critical challenge. Traditional workflows require costly data serialization between storage (e.g., Parquet/Iceberg) and training frameworks, creating bottlenecks leading to inefficient resource utilization in distributed training. This talk explores a cloud-native solution using Kubeflow for end-to-end ML orchestration and Apache Arrow for high-performance data interchange, enabling seamless integration of analytics and ML workflows.]]></content:encoded></item><item><title>TrueNAS storage server on a Raspberry Pi</title><link>https://www.youtube.com/watch?v=XvaXemGDSpk</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/XvaXemGDSpk?version=3" length="" type=""/><pubDate>Thu, 28 Aug 2025 14:01:00 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Finally, TrueNAS runs on a Raspberry Pi—or any other Arm server with UEFI support!
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+FULL instructions here: https://www.jeffgeerling.com/blog/2025/how-install-truenas-on-raspberry-pi
+
+Mentioned in this video:
+
+  - Joel0's TrueNAS on Arm thread: https://forums.truenas.com/t/truenas-on-arm-now-available/49160
+  - Links to all the TrueNAS on Arm resources: https://github.com/joel0-truenas/truenas-on-arm/issues/5
+  - My arm-nas GitHub project: https://github.com/geerlingguy/arm-nas
+  - HL15 Arm ZFS server: https://www.youtube.com/watch?v=Hz5k5WgTkcc
+  - Raspberry Pi SATA ZFS server: https://www.youtube.com/watch?v=l30sADfDiM8
+  - Homelabs Pi Storage NAS project: https://homepinas.com/en/
+
+Support me on Patreon: https://www.patreon.com/geerlingguy
+Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
+Merch: https://www.redshirtjeff.com
+2nd Channel: https://www.youtube.com/@GeerlingEngineering
+3rd Channel: https://www.youtube.com/@Level2Jeff
+
+The Homelabs Pi Server was sent to me by a member of Homelabs Club for testing, and following my typical policy, I am thus marking this video as 'sponsored'. No money exchanged hands, and nobody had any say in the content of this video besides me.
+
+Contents:
+
+00:00 - TrueNAS comes to Arm
+01:21 - The UEFI problem
+02:03 - Adding UEFI to Raspberry Pi
+03:24 - Install TrueNAS on Pi
+05:34 - Real-world Pi NAS - HomePiNAS
+06:17 - ZFS on Pi NAS
+06:50 - Should you do it?]]></content:encoded></item><item><title>Real-World Java • Victor Grazi, Jeanne Boyarsky &amp; Barry Burd • GOTO 2025</title><link>https://www.youtube.com/watch?v=IjE5eZEu7wI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/IjE5eZEu7wI?version=3" length="" type=""/><pubDate>Thu, 28 Aug 2025 12:00:37 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/393
+
+Victor Grazi - Oracle Java Champion & Co-Author of "Real-World Java"
+Jeanne Boyarsky - Oracle Java Champion, Co-Author of "Real-World Java" & "OCP 21 Java Cert Book" @jeanneboyarsky8071 
+Barry Burd - Professor at Drew University, Owner at Burd Brain Consulting & Author of "Java for Dummies"
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Victor
+https://x.com/vgrazi
+https://github.com/vgrazi
+https://www.linkedin.com/in/victorgrazi
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Jeanne
+https://bsky.app/profile/jeanneboyarsky.bsky.social
+https://x.com/jeanneboyarsky
+https://mastodon.social/@jeanneboyarsky
+https://github.com/boyarsky
+https://www.linkedin.com/in/jeanne-boyarsky
+https://sites.google.com/view/jeanneboyarsky
+https://www.selikoff.net
+
+Barry
+https://x.com/allmycode
+https://www.linkedin.com/in/barry-burd
+
+Links
+https://projectlombok.org
+https://www.selikoff.net/2014/12/07/why-i-like-regular-expressions-who-says-they-arent-readable
+https://youtu.be/eBuFzQeiGe0
+https://youtu.be/w008iz_UwDk
+https://youtu.be/ahyF8e9qKBc
+https://youtu.be/pfinplXtrkA
+https://youtu.be/la4kc57F6jU
+https://youtu.be/1PJM8p-RMsY
+
+DESCRIPTION
+Barry Burd interviews Victor Grazi and Jeanne Boyarsky about their book "Real World Java: Helping You Navigate the Java Ecosystem". The authors highlight a critical gap in Java education - while schools teach syntax, loops, and basic programming concepts, they barely cover the vast ecosystem that professional developers actually use daily, including Git, logging frameworks, Spring, CI/CD, and IDE mastery.
+Victor emphasizes that knowing how to use your development tools, particularly IDE refactoring features, is a better indicator of developer experience than algorithm tests.
+
+The book serves as a bridge for new graduates, career changers from other languages, or developers stuck on older Java versions, providing practical knowledge about the tools and frameworks that define modern Java development. Rather than just teaching "hello world" examples, the authors focus on the essential ecosystem components needed to succeed in enterprise Java environments, making it accessible for anyone who knows the Java language but needs to understand the broader technological landscape they'll encounter in professional development roles. 
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+00:39 Book overview
+05:08 The IDE chapter
+13:38 Technology challenges & AI's role
+16:09 Writing process & challenges
+26:16 Where's the Java ecosystem going?
+34:29 What's next?
+36:01 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Victor Grazi & Jeanne Boyarsky • Real-World Java • https://amzn.to/4oCEeBR
+Jeanne Boyarsky & Scott Selikoff • OCP 21 Java Cert Book • https://amzn.to/4lF8OIC
+Barry Burd • Java For Dummies • https://amzn.to/4mrXC3e
+Barry Burd • Quantum Computing Algorithms • https://amzn.to/3Josymi
+Ben Evans & Jim Gough • Optimizing Cloud Native Java • https://amzn.to/41nivD9
+Ben Evans, Jason Clark & David Flanagan • Java in a Nutshell • https://amzn.to/43FDoMA
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#Java #RealWorldJava #JVM #JVMPerformanceEngineering #Observability #JavaProgramming #JavaPerformance #JavaConcurrency #Concurrency #IntelliJ #CloudNativeJava #GraalVM #Quarkus #SoftwareEngineering #Programming #TodayInTech #VictorGrazi #JeanneBoyarsky #BarryBurd #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -175,70 +199,115 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Deno vs Oracle: The ugly custody battle for JavaScript…</title><link>https://www.youtube.com/watch?v=pOF11EDprxc</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/pOF11EDprxc?version=3" length="" type=""/><pubDate>Wed, 27 Aug 2025 16:40:59 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Try out Atlassian’s Rovo Dev CLI for free - https://fnf.dev/fireship
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
+The actual owner of the JavaScript trademark didn't create it, doesn't maintain it and isn't even involved in its ongoing development.
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
+But Ryan Dahl, creator of Node.js and Deno is trying to change that, even if it means waging a legal battle against a corporation with unlimited resources.
 
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
+In today's video, we'll breakdown the crazy battle between Deno and Oracle to control the JavaScript trademark.
 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+#programming #tech #coding
 
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
+💬 Chat with Me on Discord
 
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>CNL: Bringing Agentic AI to Cloud Native with kagent &amp; Kyverno</title><link>https://www.youtube.com/watch?v=C0y8bDvL47M</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/C0y8bDvL47M?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 17:03:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Let’s stop babysitting clusters and build AI agents to operate and govern for us! Kagent, a new CNCF project, enables simple declarative development of Kubernetes-native AI agents for any cloud native projects. This session will show you how to rapidly construct custom AI agents for essential operational and management tasks. Learn how Kyverno, the Kubernetes-native policy engine for managing validation, mutation, generation, and cleanup, can be extended with AI capabilities through kagent using the emerging Model Context Protocol (MCP) to enable intelligent policy recommendations and automation.]]></content:encoded></item><item><title>CNCF Deaf and Hard of Hearing Working Group at KubeCon + CloudNativeCon EU 2025</title><link>https://www.youtube.com/watch?v=CLhA-du1Yy8</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/CLhA-du1Yy8?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 14:49:58 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Huge shout-out to the CNCF Deaf and Hard of Hearing Working Group for an incredible week at KubeCon + CloudNativeCon in London earlier this year! Check out this latest video to get a glimpse of what they were up to and what to expect in Atlanta!
+https://discord.gg/fireship
 
-They brought so much energy and had lots of activities, including a keynote, several talks, and a fun sign language crash course. Their kiosk in the Project Pavilion was a hub of activity, creating meaningful connections and fostering a more inclusive community.
+🔗 Resources
+- https://deno.com/blog/deno-v-oracle4
+- https://javascript.tm/
 
-This group is full of passion and brilliant people. We're so proud of what they've accomplished, and look forward to seeing the team in Atlanta! And for a fun challenge, watch the video and see if you can spot the new sign they created for "CNCF." ✨]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
+🔥 Get More Content - Upgrade to PRO
 
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+Upgrade at https://fireship.io/pro
+Use code YT25 for 25% off PRO access 
+
+🎨 My Editor Settings
+
+- Atom One Dark 
+- vscode-icons
+- Fira Code Font
+
+🔖 Topics Covered
+- Who owns JavaScript?
+- History of the JavaScript trademark
+- Why is Ryan Dahl taking on Oracle
+- Deno vs Oracle]]></content:encoded></item><item><title>Cloud Native Live: Kubernetes v1.34 Release</title><link>https://www.youtube.com/watch?v=StyJ9b6-1t0</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/StyJ9b6-1t0?version=3" length="" type=""/><pubDate>Wed, 27 Aug 2025 15:56:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Similar to previous releases, the release of Kubernetes v1.34 introduces new stable, beta, and alpha features. This release consists of 58 enhancements. Of those enhancements, 23 have graduated to Stable, 22 have graduated to Beta, and 13 are entering Alpha.
+
+Tune in to see the latest and greatest from the Kubernetes v1.34 Release Team.]]></content:encoded></item><item><title>Why Young Men Are Falling Even Further Behind</title><link>https://www.youtube.com/watch?v=B257Ppi129k</link><author>ColdFusion</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/B257Ppi129k?version=3" length="" type=""/><pubDate>Wed, 27 Aug 2025 15:19:14 +0000</pubDate><source url="https://www.youtube.com/channel/UC4QZ_LsYcvcq7qOsOhpAX4A">Cold Fusion</source><content:encoded><![CDATA[Go to https://brilliant.org/coldfusion for 30-day free trial + 20% off!
+
+For as long as society has existed, it's always been a given that men had an advantage by simply just being male. But in the past 5 years or so, things have changed, and changed fast. These days many young men find themselves falling further behind in a surprisingly diverse set of ways. In this episode we explore why this is happening and what some solutions could be.
+
+Watch or listen to ColdFusion on Spotify: https://open.spotify.com/show/1YEwCKoRz8fEDqheXB6UJ1
+
+
+ColdFusion Music: 
+
+https://www.youtube.com/@ColdFusionmusic
+http://burnwater.bandcamp.com   
+
+Show notes:
+https://docs.google.com/document/d/1mF5T-F3r5g-gPL0kQUjR2IFcFvr_2b2Vnh6l_T4MRTw/edit?usp=drivesdk
+
+Get my book: 
+
+http://bit.ly/NewThinkingbook 
+
+ColdFusion Socials: 
+
+https://discord.gg/coldfusion
+https://facebook.com/ColdFusionTV 
+https://twitter.com/ColdFusion_TV 
+https://instagram.com/coldfusiontv
+
+Created by: Dagogo Altraide
+Producers: Tawsif Akkas, Dagogo Altraide]]></content:encoded></item><item><title>Deaf and Hard of Hearing WG Meeting - 2025-08-26</title><link>https://www.youtube.com/watch?v=jZLoO4ym264</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/jZLoO4ym264?version=3" length="" type=""/><pubDate>Wed, 27 Aug 2025 14:27:18 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>The Best Programmer I Know • Daniel Terhorst-North • GOTO 2024</title><link>https://www.youtube.com/watch?v=ybA0zxwgpxw</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ybA0zxwgpxw?version=3" length="" type=""/><pubDate>Wed, 27 Aug 2025 12:01:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
+
+Daniel Terhorst-North - Originator of Behavior Driven Development (BDD) & Principal at Dan North & Associates @daniel-terhorst-north 
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+https://bsky.app/profile/tastapod.com
+https://www.linkedin.com/in/tastapod
+https://github.com/tastapod
+https://mastodon.social/@tastapod
+http://dannorth.net/blog
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+ABSTRACT
+I believe great programmers are not born, they are made. Or rather, they make themselves, carefully and deliberately over time. I am not talking about the folks who rote-learn the l33t answers and throw their egos around; I mean the ones who build great products using simple, understandable code, while lifting up those around them.
 
-Links
-https://stripe.dev
+I have worked with some great programmers over the years, and met some others along the way. I want to tell you about the best programmer I know. As I have said elsewhere, they have “an insatiable curiosity and the belief they can convince a computer to do anything. Plus a healthy disregard for language and tool zealotry.”
 
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+As I describe them, you might recognise some of their traits in yourself; you might decide you want to aspire to some of them; you might choose to refer to them as an interviewer, or as a candidate. My hope is simply that you find them useful and in some way inspiring. [...]
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
+TIMECODES
+00:00 Intro
+02:22 Agenda
+02:37 Part 1: Getting the job done
+15:07 Part 2: Choosing the right tool
+28:03 Part 3: Caring about the team
+39:16 Wrapping up
+39:28 Outro
 
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3465
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
+Eliyahu M. Goldratt • Beyond the Goal • https://amzn.to/3wDbAL1
+Kent Beck, Fowler, John, William, Don & Gamma • Refactoring • https://amzn.to/3SFBYbN
+Kent Beck & Cynthia Andres • Extreme Programming Explained • https://amzn.to/3KeL5P5
+Jez Humble & Dave Farley • Continuous Delivery • https://amzn.to/3ocIHwd
+Robert B Cialdini • Influence, New and Expanded • https://amzn.to/3tL8GxB
+Aino Vonge Corry • Retrospective Antipatterns • https://amzn.to/3naFk84
+Subramaniam & Hunt • Practices of an Agile Developer • https://amzn.to/2XjbWor
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Programming #SoftwareEngineering #Polyglot #BuildTheRightProduct #BestProgrammers #GreatestProgrammers #Change #Team #TechTeam #DanNorth #DanielTerhorstNorth
+
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
 https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
@@ -248,7 +317,139 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>CNCF Member Video Spotlight: Testimonial by Veritas Automata</title><link>https://www.youtube.com/watch?v=ZtgKEmy8va4</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/ZtgKEmy8va4?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 21:11:58 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Veritas Automata shows off how many CNCF member programs they take advantage of, and tells you how to up-level their staff with CNCF resources.]]></content:encoded></item><item><title>CNCF Member Video spotlight: Gerardo Lopez of Veritas Automata</title><link>https://www.youtube.com/watch?v=5Wy3f1Xs-Hk</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/5Wy3f1Xs-Hk?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 21:11:54 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Facing infrastructure sprawl, Veritas Automata turned to CNCF tools to scale with control. By embracing Kubernetes, Flux, and GitOps, they transitioned to declarative, auditable deployments that improved reliability, speed, and adaptability.
+
+“The CNCF ecosystem gave us the confidence and community we needed to succeed.” — Gerardo Lopez, Principal Engineer, Veritas Automata]]></content:encoded></item><item><title>Lightning Talk: K0s at the Edge: Minimal Kubernetes, Maximum Impact - Satyam Bhardwaj, Mirantis</title><link>https://www.youtube.com/watch?v=xYVrelTAoo4</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/xYVrelTAoo4?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:11 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Lightning Talk: K0s at the Edge: Minimal Kubernetes, Maximum Impact - Satyam Bhardwaj, Mirantis
+
+As organizations shift workloads away from centralized clouds, they need solutions that are both lightweight and scalable. In this lightning talk, we’ll see how k0s - a single binary Kubernetes distribution, bridges this gap by making edge deployments simple and efficient.
+
+We’ll walk through a short demo on Raspberry Pi 5, showing how to set up a worker node using a Pi device and deploy containerized applications closer to where data is generated. By the end, we’ll understand how this minimal approach can power IoT, AI/ML.]]></content:encoded></item><item><title>To Succeed in Platform Engineering, Build Infrastructure Knowledge Graphs - Safeer C M, MoEngage</title><link>https://www.youtube.com/watch?v=uNCfd114rB8</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/uNCfd114rB8?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:11 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+To Succeed in Platform Engineering, Build Infrastructure Knowledge Graphs - Safeer C M, MoEngage
+
+Platform engineering continues to evolve as a critical discipline for modern software development. However, infrastructure complexity is slowing down its momentum. The software infrastructure is a complex web of interrelated entities that spans much beyond a simple software catalog and cloud resources. Such infrastructure management is often driven by a team’s understanding of the implicit relationship between these entities. This is not scalable and often leads to operational challenges and loss of developer productivity. Knowledge graphs can build relationships between entities from diverse infrastructure sources and make explicit what was previously implicit knowledge. It elevates the developer productivity and its neglected counterpart - operational excellence. This talk will discuss the importance of knowledge graphs and the strategies and mental models that will help in building knowledge graphs around the software infrastructure.]]></content:encoded></item><item><title>Project Lightning Talk: Argo CD 3.0: What’s New and What’s Next? - Nitish Kumar, Maintainer</title><link>https://www.youtube.com/watch?v=z_DgVAzS9Nw</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/z_DgVAzS9Nw?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Project Lightning Talk: Argo CD 3.0: What’s New and What’s Next? - Nitish Kumar, Maintainer
+
+The long-awaited Argo CD 3.0 is here, marking the first major release since 2021! This milestone introduces a more mature and robust GitOps experience, focusing on security, performance, and best-practice defaults. In this session, we’ll dive into the key updates, including fine-grained RBAC for resource-level permissions, smarter defaults for streamlined configurations, and new recommendations for secrets management. We’ll also cover what’s been deprecated, how to ensure a smooth upgrade from Argo CD 2.x, bug fixes, new features introduced and what’s next for the project.]]></content:encoded></item><item><title>Project Lightning Talk: What&apos;s new in Harbor Project Updates and New Features - Prasanth Baskar</title><link>https://www.youtube.com/watch?v=wzQakkig7DM</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/wzQakkig7DM?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Project Lightning Talk: What's new in Harbor Project Updates and New Features - Prasanth Baskar, Contributor
+
+We have recently released a new version of harbor. we will go through new and less used features in harbor. that would make managing artifacts at scale much easier. and we will also give you a sneak peek into the exciting features planned for next releases.]]></content:encoded></item><item><title>Rewriting the Rules: Why Kubernetes Is Moving To NFTables - Daman Arora &amp; Yash Kumar Singh, Broadcom</title><link>https://www.youtube.com/watch?v=trL7FRk9LcQ</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/trL7FRk9LcQ?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Rewriting the Rules: Why Kubernetes Is Moving To NFTables - Daman Arora & Yash Kumar Singh, Broadcom
+
+This session will explore why NFTables offer clear advantages over IPTables and IPVS, especially in large-scale production environments from both maintainers and end users perspective. We’ll share a user story who faced persistent issues with IPTables, saw some success with IPVS, and finally solved their scalability problems by migrating to NFTables. From a maintainers perspective we will showcase how and why NFTable outperforms the other proxy modes. We’ll provide performance insights and discuss kernel compatibility.
+
+We will also discuss NFTables compatibility with various CNI providers and plugins, and how NFTables support is already integrated in many environments, providing a smoother transition. Attending this session you will get an indepth understanding of behavioral changes when migrating from IPTables and IPVS to NFTables, including key metrics to track.]]></content:encoded></item><item><title>Beyond Productivity: Scaling Cloud Dev Environments for Faster Feedback &amp; Sustaina... Siddhant Khare</title><link>https://www.youtube.com/watch?v=sFVQVBVOOV0</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/sFVQVBVOOV0?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Beyond Productivity: Scaling Cloud Dev Environments for Faster Feedback & Sustainable Engineering - Siddhant Khare, Gitpod
+
+Local dev setups worked fine when teams were small. But when you’re dealing with hundreds or thousands of developers, things start to break - slow onboarding, dependency hell, inconsistent environments, and wasted compute cycles.
+
+Cloud Developer Environments (CDEs) promise instant, reproducible workspaces, but shifting from local machines to cloud-first workflows is easier said than done. Latency, security, adoption hurdles, and cost can turn a promising initiative into an operational headache.
+
+This talk will go deep into:
+
+* Why local dev is unsustainable—from wasted CPU cycles to lost engineering hours.
+* How cloud environments reduce friction—ephemeral, pre-configured workspaces that just work.
+* Optimizing for speed—pre-warmed environments, AI-assisted debugging, and workload-aware compute allocation.
+* Measuring impact—tracking developer velocity, infra costs, and sustainability improvements.
+* Lessons from real-world rollouts—what works, what breaks, and how to get buy-in.]]></content:encoded></item><item><title>Project Lightning Talk: Dockerfiles vs Buildpacks: What&apos;s The Cloud Native Way? - Ram Iyengar</title><link>https://www.youtube.com/watch?v=sEZSBrOyjl4</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/sEZSBrOyjl4?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Project Lightning Talk: Dockerfiles vs Buildpacks: What's The Cloud Native Way? - Ram Iyengar, Contributor
+
+Often, our cloud native thought process begins after we have created containers. Only when we complete the "docker build" command, do all the notions of cloud native come into the picture. This talk raises the question - is that the only way to build containers?
+
+Enter Cloud Native Buildpacks. These make the container build process so much easier. While the end product is an OCI-compatible image, the process in getting there is much more refined with Cloud Native Buildpacks.
+
+The images exported by Buildpacks are smaller, more transparent, and have improved security. They also preclude meta information such as static Dockerfiles, and are infinitely more maintainable as a result.]]></content:encoded></item><item><title>Project Lightning Talks: Closing - Jeffrey Sica, CNCF</title><link>https://www.youtube.com/watch?v=r7waewfj86A</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/r7waewfj86A?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Project Lightning Talks: Closing - Jeffrey Sica, CNCF]]></content:encoded></item><item><title>Project Lightning Talks: Opening - Jeffrey Sica, CNCF</title><link>https://www.youtube.com/watch?v=o3xD4fDxhPY</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/o3xD4fDxhPY?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:10 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Project Lightning Talks: Opening - Jeffrey Sica, CNCF]]></content:encoded></item><item><title>Unlocking the Power of Kuma Service Mesh: Enhancing Reliability and D... Deepak Verma &amp; Arpit Mishra</title><link>https://www.youtube.com/watch?v=W98f23NjodU</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/W98f23NjodU?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Unlocking the Power of Kuma Service Mesh: Enhancing Reliability and Developer Productivity - Deepak Verma & Arpit Mishra, Zomato
+
+This session delves into Zomato's journey of adopting Kuma Service Mesh to manage over 500 microservices with 10,000 dataplanes. The session begins by addressing common challenges in service communication, such as observability gaps, insecure traffic, and inconsistent configurations across environments, and explore how Kuma Service Mesh resolves these issues.
+
+The presentation highlights how Kuma standardises configurations, minimises debugging efforts, and improves application performance, thereby reducing developer overhead. A key focus is on leveraging Kuma to enhance developer workflows through local-preview environments, allowing dynamic traffic routing to local services based on headers. This facilitates rapid iteration and debugging.
+
+Additionally, we will discuss our roadmap for utilising Kuma's zone-aware routing to reduce cross-zone data transfer, lowering costs and enhancing efficiency.]]></content:encoded></item><item><title>Lightning Talk: OpenKruise: Advancing Kubernetes Workload Auto... Husni Alhamdani &amp; Herbert Sianturi</title><link>https://www.youtube.com/watch?v=W2-Uy3AU810</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/W2-Uy3AU810?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Lightning Talk: OpenKruise: Advancing Kubernetes Workload Automation for Scalable, Disruption-Free Operations - Husni Alhamdani, Amartha Mikro Teknologi & Herbert Sianturi, Krom Bank Indonesia
+
+Kubernetes has become the de facto standard for container orchestration, yet managing complex workloads—particularly stateful applications and large-scale deployments—often requires extensions beyond its native capabilities. OpenKruise, addresses these gaps by introducing powerful and enhancements to streamline application lifecycle management.
+
+This presentation explores how OpenKruise augments Kubernetes with features like in-place pod updates (reducing downtime by updating containers without restarting pods), advanced workload controllers (CloneSet, Advanced StatefulSet). These innovations enable DevOps teams to optimize deployments, minimize operational overhead, and scale stateful applications seamlessly.
+
+We’ll delve into real-world use cases from our experiences, plus, how OpenKruise can be plugged to any complex systems/apps.
+
+Attendees will leave with actionable insights into leveraging OpenKruise to enhance deployment strategies and achieve zero-downtime operations.]]></content:encoded></item><item><title>Lightning Talk: Confidential VMs in Kubevirt: Securing VMs With Kube... Basavaraju G &amp; Rishika Kedia</title><link>https://www.youtube.com/watch?v=UyyPsiUYY5M</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/UyyPsiUYY5M?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Lightning Talk: Confidential VMs in Kubevirt: Securing VMs With KubeVirt Trusted Execution Environments - Basavaraju G & Rishika Kedia, IBM
+
+Multi cloud deployments and shared infrastructure enhance data privacy and security issues, with containerized workloads becoming mainstream in Kubernetes, there is a need to host containers securely in addition to virtual machines (VMs) to safeguard hardware-level workloads.
+KubeVirt is a cloud native virtualization platform that comes with Confidential Virtual Machines for the most sensitive use cases. They take advantage of Trusted Execution Environments such as AMD SEV, Intel TDX, and IBM Secure Execution to provide data-in-motion encryption for their workloads and defend against subverted host admins as well as against system attacks.
+In this session, we will cover KubeVirt methodology for Confidential VMs, including the design of the architecture, challenges of implementation, and deployments. We will examine how the VMs protect sensitive workloads using memory encryption, workload isolation while being placed within Kubernetes orchestration and automation.]]></content:encoded></item><item><title>Building a Cloud Native IaC Platform for an Enterprise by Lev... Florian Hopfensperger &amp; Yury Tsarev</title><link>https://www.youtube.com/watch?v=TlVXDbrsU-w</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/TlVXDbrsU-w?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Building a Cloud Native IaC Platform for an Enterprise by Leveraging the Kubernetes Ecosystem - Florian Hopfensperger, Allianz Technology & Yury Tsarev, Upbound
+
+Infrastructure teams have long been a staple of large enterprises, responsible for creating and managing cloud and on-premises resources. However, each team often operates with its own user interface, making it difficult for developers to access the infrastructure they need efficiently. How can we enhance the developer experience while enabling infrastructure teams to offer products more effectively?
+
+This talk will showcase how Allianz Technology leverages the Kubernetes ecosystem and open-source software to build an infrastructure-as-code platform powered by over 1,000 Kubernetes control planes. This approach simplifies the developer experience through customized APIs while providing infrastructure engineers with a scalable framework for delivering infrastructure products and gaining insights for continuous improvement.]]></content:encoded></item><item><title>Project Lightning Talk: How to get your custom access tokens from Keycloak - Alexander Schwartz</title><link>https://www.youtube.com/watch?v=TkgUHQeymd0</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/TkgUHQeymd0?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Project Lightning Talk: How to get your custom access tokens from Keycloak - Alexander Schwartz, Maintainer
+
+Access tokens open the doors to APIs, and Keycloak and OpenID Connect provide you the ways to get them. The authentication code flow provides them to users and the client credential grant provides it to services. With token exchange, you can swap one token for another with the right audience and scopes so it fits the APIs.]]></content:encoded></item><item><title>Lessons from Running a CNCF Community: Mistakes, Wins, and Growth - Kemila De Silva &amp; Chamod Perera</title><link>https://www.youtube.com/watch?v=LpZK-uC6rwE</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/LpZK-uC6rwE?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 20:55:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Lessons from Running a CNCF Community: Mistakes, Wins, and Growth - Kemila De Silva, Aeturnum Inc. & Chamod Perera, Circles
+
+Building a CNCF community comes with wins and challenges. We launched KCD Sri Lanka in 2022 with a high-grade green screen production, featuring global speakers and over 1K YouTube livestream views. In 2023, our in-person KCD Sri Lanka was an early sold-out, house-full event, drawing speakers from around the world.
+
+From securing sponsorships and growing engagement to handling setbacks, we’ll share key lessons from leading Kubernetes Sri Lanka. Whether you’re starting or scaling a CNCF community, this talk will provide practical takeaways to build a sustainable and impactful cloud native ecosystem.]]></content:encoded></item><item><title>TypeScript Cookbook • Stefan Baumgartner &amp; Peter Kröner</title><link>https://www.youtube.com/watch?v=nDGLMRCsu7g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/nDGLMRCsu7g?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 12:23:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here
+ (https://gotopia.tech/episodes/371) 
+Stefan Baumgartner - Author of "TypeScript Cookbook" & "TypeScript in 50 Lessons"
+Peter Kröner - Host of "Working Draft" Podcast & Freelance Trainer for Frontend Web Tech
+
+RESOURCES
+Stefan
+https://bsky.app/profile/deadparrot.dev
+https://mastodon.social/@deadparrot
+https://x.com/ddprrt
+https://github.com/ddprrt
+https://www.linkedin.com/in/stefan-baumgartner-bb621564
+https://oida.dev
+
+Peter
+https://bsky.app/profile/sirpepe.bsky.social
+https://mastodon.social/@sir_pepe
+https://github.com/SirPepe
+https://www.linkedin.com/in/peterkroener
+https://www.peterkroener.de
+
+Links
+https://typescript-cookbook.com
+https://typescript-book.com
+https://workingdraft.de
+
+DESCRIPTION
+Peter Kröner and Stefan Baumgartner explore practical TypeScript implementation strategies in this discussion of Stefan's latest book, "TypeScript Cookbook", a sequel to his previous work "TypeScript in 50 Lessons". From minimal type annotations to knowing when to use advanced features, Stefan shares insights on efficient project setup, alternatives to enums, and the strategic use of classes.
+
+The conversation examines the philosophy behind TypeScript's design while emphasizing a pragmatic approach that focuses on understanding what happens behind the scenes to make better coding decisions. Stefan consistently advocates for simplicity and intentionality when working with TypeScript's powerful but sometimes complex type system.
+
+RECOMMENDED BOOKS
+Stefan Baumgartner • TypeScript Cookbook
+ (https://amzn.to/4iefuM7) Stefan Baumgartner • TypeScript in 50 Lessons
+ (https://amzn.to/4lEBanw) Alexandre Portela dos Santos • Deno Web Development
+ (https://amzn.to/3MZBY7g) Fernando Doglio • Introducing Deno
+ (https://amzn.to/3KOFBKy) Dan Vanderkam • Effective TypeScript
+ (https://amzn.to/3DBmCib) Nathan Rozentals • Mastering TypeScript (https://amzn.to/2V4LYUt) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -264,36 +465,107 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>CNL: Network-level and Identity-based Observability with Calico Open Source</title><link>https://www.youtube.com/watch?v=P7RUzvXr7Vg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/P7RUzvXr7Vg?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 13:51:23 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't let your Kubernetes environment be a mystery! Gain the visibility you need to keep things running smoothly. This session dives into why network observability is key in Kubernetes, and includes a live demo showing how to identify misconfigurations, simplify troubleshooting, streamline overall network management, and safely implement and test network security policies across any Kubernetes environment.
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>New MIT study says most AI projects are doomed...</title><link>https://www.youtube.com/watch?v=ly6YKz9UfQ4</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/ly6YKz9UfQ4?version=3" length="" type=""/><pubDate>Mon, 25 Aug 2025 17:36:26 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Get the best pair programming app for remote teams - https://tuple.app/fireship - Use code FIRESHIP for a discount
 
-Here's what we'll explore:
+A new MIT study says that 95% of corporate GenAI projects have failed, Meta is pulling back on its AI spend, and tech markets are getting nervous. Is the AI bubble starting to pop? 
 
-* Why network observability is important (hint: Kubernetes can be a bit chaotic! )
-* How observability is the foundation for zero trust security
-* Common customer pain points: Troubleshooting, incorrect policies, compliance, and audits
-* Calico Whisker: What it is and how it provides that crucial bird's-eye view
-* LIVE DEMO: Cluster-wide network observability using Calico Whisker]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+💬 Chat with Me on Discord
 
-Andrew Browne - Solution Architect at Picnic Software
+https://discord.gg/fireship
+
+🔗 Resources
+
+https://www.axios.com/2025/08/21/ai-wall-street-big-tech
+
+📚 Chapters
+
+🔥 Get More Content - Upgrade to PRO
+
+Upgrade at https://fireship.io/pro
+Use code YT25 for 25% off PRO access 
+
+🎨 My Editor Settings
+
+- Atom One Dark 
+- vscode-icons
+- Fira Code Font]]></content:encoded></item><item><title>Breaking the Architecture Bottleneck • Andrew Harmel-Law &amp; Marit van Dijk • GOTO 2025</title><link>https://www.youtube.com/watch?v=zl5U8KO28rM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zl5U8KO28rM?version=3" length="" type=""/><pubDate>Mon, 25 Aug 2025 12:01:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
+
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/392
+
+Andrew Harmel-Law - Technical Principal at Thoughtworks & Author of "Facilitating Software Architecture" @AndrewHarmelLaw 
+Marit van Dijk - Developer Advocate at JetBrains, Java Champion & Open Source Contributor @maritvandijk 
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Andrew
+https://bsky.app/profile/andrewhl.bsky.social
+https://twit.social/@ahl
+https://x.com/al94781
+https://github.com/andrewharmellaw
+https://www.linkedin.com/in/andrewharmellaw
+https://andrewharmellaw.github.io
+
+Marit
+https://bsky.app/profile/maritvandijk.bsky.social
+https://linkedin.com/in/maritvandijk
+https://mastodon.social/@maritvandijk
+https://github.com/mlvandijk
+https://medium.com/@mlvandijk
+https://maritvandijk.com
+
+Links
+https://facilitatingsoftwarearchitecture.com
+https://ruthmalan.com
+https://www.linkedin.com/pulse/software-architects-do-we-need-em-ruth-malan
+https://youtu.be/YpFR8qzwYSA
+https://youtu.be/acqcyX-tpf4
+https://youtu.be/PK-y-iG5VnE
+https://youtu.be/zDugyWSguz4
+https://youtu.be/NGXl1D-KwRI
+https://youtu.be/wjF4X9t3FMk
+https://youtu.be/hhlxFtV_tZo
+https://youtu.be/6xrGo1IIB3w
+https://youtu.be/Cx_vijTm24w
+https://youtu.be/l1tyfb5we7I
+https://youtu.be/RlCpgSoOX6I
+https://youtu.be/xsMUuOwv7IA
+https://youtu.be/H0EK0B1QvVA
+https://youtu.be/XOSR0Asq4h0
+https://youtu.be/yPvef9R3k-M
+https://youtu.be/_R_Vc17mxNE
+
+DESCRIPTION
+Andrew Harmel-Law discusses their book "Facilitating Software Architecture" and how traditional architecture approaches often become bottlenecks that slow down high-performing development teams.
+
+Rather than architects making top-down decisions in isolation, Andrew advocates for a facilitation approach centered on the "advice process" - where anyone can make architectural decisions as long as they seek advice from those with expertise and those who will be affected.
+
+This collaborative method, inspired by open space conferences and supported by Architectural Decision Records (ADRs), shifts the architect's role from decision-maker to conversation facilitator, ensuring the right people have the right discussions at the right time. The approach requires psychological safety and organizational support but has proven successful even in traditional corporate environments, ultimately creating more maintainable code bases where development teams actually enjoy working and can respond effectively to changing requirements.
+
+TIMECODES
+00:00 Intro
+02:12 Problem: Traditional architecture as a bottleneck
+04:31 Solution: Facilitating Architecture Decisions
+12:22 3 key influences on the book
+27:43 Implementation challenges & organizational culture
+38:05 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Andrew Harmel-Law • Facilitating Software Architecture • https://amzn.eu/d/5kZKVfU
+Christopher Alexander • A Pattern Language • https://amzn.to/3Urefj3
+Diana Montalion • Learning Systems Thinking • https://amzn.to/3ZpycdJ
+Donella H. Meadows • Thinking in Systems • https://amzn.to/3XtqYCV
+Eric Evans • Domain-Driven Design • https://amzn.to/3tnGhwm
+Alessandro Colla • Alberto Acerbis • Domain-Driven Refactoring • https://amzn.to/3I3I7zf
+Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews • https://amzn.to/3E75XrD
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#SoftwareArchitecture #ADR #ArchitecturalDecisionRecords #ReadingCode #LegacyCode #Refactoring #OpenSpace #TodayInTech #AndrewHarmelLaw #MaritvanDijk
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:

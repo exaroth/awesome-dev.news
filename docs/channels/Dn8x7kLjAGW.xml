@@ -1,38 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Professional Skills for Software Engineers • Charles Humble &amp; Trisha Gee</title><link>https://www.youtube.com/watch?v=Sc0vCXrbAsg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Sc0vCXrbAsg?version=3" length="" type=""/><pubDate>Fri, 29 Aug 2025 13:05:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+ (https://gotopia.tech/episodes/373) 
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
+Trisha Gee - Lead Developer Evangelist at Gradle, Java Champion & Co-Author of "Getting to Know IntelliJ IDEA"
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://linkedin.com/in/charleshumble
+https://mastodon.social/@charleshumble
+https://conissaunce.com
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Trisha
+https://bsky.app/profile/trishagee.bsky.social
+https://twitter.com/trisha_gee
+https://www.linkedin.com/in/trishagee
+https://trishagee.com
+https://github.com/trishagee
+
+Links
+https://www.conissaunce.com/professional-skills-shortcut.html
+https://www.jeanettewinterson.com
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
+Trisha Gee interviews Charles Humble on his project "Professional Skills for Software Engineers", a collection of 14 articles organized into four categories:
+• communication
+• critical thinking
+• documentation
+• networking
 
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
+Charles argues that career success in software engineering oftentimes depends more on non-programming skills than technical ability. Both Charles and Trisha emphasize that these skills are learnable and essential, despite being undervalued in the industry as mere "soft skills".
 
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+The conversation covers how intentional communication improves product development, the value of networking and public speaking for career advancement, and ways engineers can generate ideas for content creation while taking ownership of their career development. The interview makes a compelling case that developing these professional skills benefits both individual engineers and the industry as a whole.
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Charles Humble • Professional Skills for Software Engineers
+ (https://www.conissaunce.com/professional-skills-shortcut) Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know
+ (https://amzn.to/3kiTwJJ) Anne Currie, Sarah Hsu & Sara Bergman • Building Green Software
+ (https://amzn.to/3IKopW5) Cal Newport • Deep Work
+ (https://amzn.to/3RlicEx) Martin Fowler • UML Distilled
+ (https://amzn.to/3GdBObf) Cathy O'Neil • Weapons of (https://amzn.to/42jYkba) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +57,75 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Real-World Java • Victor Grazi, Jeanne Boyarsky &amp; Barry Burd • GOTO 2025</title><link>https://www.youtube.com/watch?v=IjE5eZEu7wI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/IjE5eZEu7wI?version=3" length="" type=""/><pubDate>Thu, 28 Aug 2025 12:00:37 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/393
+
+Victor Grazi - Oracle Java Champion & Co-Author of "Real-World Java"
+Jeanne Boyarsky - Oracle Java Champion, Co-Author of "Real-World Java" & "OCP 21 Java Cert Book" @jeanneboyarsky8071 
+Barry Burd - Professor at Drew University, Owner at Burd Brain Consulting & Author of "Java for Dummies"
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Victor
+https://x.com/vgrazi
+https://github.com/vgrazi
+https://www.linkedin.com/in/victorgrazi
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Jeanne
+https://bsky.app/profile/jeanneboyarsky.bsky.social
+https://x.com/jeanneboyarsky
+https://mastodon.social/@jeanneboyarsky
+https://github.com/boyarsky
+https://www.linkedin.com/in/jeanne-boyarsky
+https://sites.google.com/view/jeanneboyarsky
+https://www.selikoff.net
+
+Barry
+https://x.com/allmycode
+https://www.linkedin.com/in/barry-burd
+
+Links
+https://projectlombok.org
+https://www.selikoff.net/2014/12/07/why-i-like-regular-expressions-who-says-they-arent-readable
+https://youtu.be/eBuFzQeiGe0
+https://youtu.be/w008iz_UwDk
+https://youtu.be/ahyF8e9qKBc
+https://youtu.be/pfinplXtrkA
+https://youtu.be/la4kc57F6jU
+https://youtu.be/1PJM8p-RMsY
+
+DESCRIPTION
+Barry Burd interviews Victor Grazi and Jeanne Boyarsky about their book "Real World Java: Helping You Navigate the Java Ecosystem". The authors highlight a critical gap in Java education - while schools teach syntax, loops, and basic programming concepts, they barely cover the vast ecosystem that professional developers actually use daily, including Git, logging frameworks, Spring, CI/CD, and IDE mastery.
+Victor emphasizes that knowing how to use your development tools, particularly IDE refactoring features, is a better indicator of developer experience than algorithm tests.
+
+The book serves as a bridge for new graduates, career changers from other languages, or developers stuck on older Java versions, providing practical knowledge about the tools and frameworks that define modern Java development. Rather than just teaching "hello world" examples, the authors focus on the essential ecosystem components needed to succeed in enterprise Java environments, making it accessible for anyone who knows the Java language but needs to understand the broader technological landscape they'll encounter in professional development roles. 
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+00:39 Book overview
+05:08 The IDE chapter
+13:38 Technology challenges & AI's role
+16:09 Writing process & challenges
+26:16 Where's the Java ecosystem going?
+34:29 What's next?
+36:01 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Victor Grazi & Jeanne Boyarsky • Real-World Java • https://amzn.to/4oCEeBR
+Jeanne Boyarsky & Scott Selikoff • OCP 21 Java Cert Book • https://amzn.to/4lF8OIC
+Barry Burd • Java For Dummies • https://amzn.to/4mrXC3e
+Barry Burd • Quantum Computing Algorithms • https://amzn.to/3Josymi
+Ben Evans & Jim Gough • Optimizing Cloud Native Java • https://amzn.to/41nivD9
+Ben Evans, Jason Clark & David Flanagan • Java in a Nutshell • https://amzn.to/43FDoMA
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#Java #RealWorldJava #JVM #JVMPerformanceEngineering #Observability #JavaProgramming #JavaPerformance #JavaConcurrency #Concurrency #IntelliJ #CloudNativeJava #GraalVM #Quarkus #SoftwareEngineering #Programming #TodayInTech #VictorGrazi #JeanneBoyarsky #BarryBurd #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,66 +136,53 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Best Programmer I Know • Daniel Terhorst-North • GOTO 2024</title><link>https://www.youtube.com/watch?v=ybA0zxwgpxw</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ybA0zxwgpxw?version=3" length="" type=""/><pubDate>Wed, 27 Aug 2025 12:01:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
-
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
-
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
-
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+Daniel Terhorst-North - Originator of Behavior Driven Development (BDD) & Principal at Dan North & Associates @daniel-terhorst-north 
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+https://bsky.app/profile/tastapod.com
+https://www.linkedin.com/in/tastapod
+https://github.com/tastapod
+https://mastodon.social/@tastapod
+http://dannorth.net/blog
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+ABSTRACT
+I believe great programmers are not born, they are made. Or rather, they make themselves, carefully and deliberately over time. I am not talking about the folks who rote-learn the l33t answers and throw their egos around; I mean the ones who build great products using simple, understandable code, while lifting up those around them.
 
-Links
-https://stripe.dev
+I have worked with some great programmers over the years, and met some others along the way. I want to tell you about the best programmer I know. As I have said elsewhere, they have “an insatiable curiosity and the belief they can convince a computer to do anything. Plus a healthy disregard for language and tool zealotry.”
 
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+As I describe them, you might recognise some of their traits in yourself; you might decide you want to aspire to some of them; you might choose to refer to them as an interviewer, or as a candidate. My hope is simply that you find them useful and in some way inspiring. [...]
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
+TIMECODES
+00:00 Intro
+02:22 Agenda
+02:37 Part 1: Getting the job done
+15:07 Part 2: Choosing the right tool
+28:03 Part 3: Caring about the team
+39:16 Wrapping up
+39:28 Outro
 
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3465
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
+Eliyahu M. Goldratt • Beyond the Goal • https://amzn.to/3wDbAL1
+Kent Beck, Fowler, John, William, Don & Gamma • Refactoring • https://amzn.to/3SFBYbN
+Kent Beck & Cynthia Andres • Extreme Programming Explained • https://amzn.to/3KeL5P5
+Jez Humble & Dave Farley • Continuous Delivery • https://amzn.to/3ocIHwd
+Robert B Cialdini • Influence, New and Expanded • https://amzn.to/3tL8GxB
+Aino Vonge Corry • Retrospective Antipatterns • https://amzn.to/3naFk84
+Subramaniam & Hunt • Practices of an Agile Developer • https://amzn.to/2XjbWor
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Programming #SoftwareEngineering #Polyglot #BuildTheRightProduct #BestProgrammers #GreatestProgrammers #Change #Team #TechTeam #DanNorth #DanielTerhorstNorth
+
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
 https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
@@ -179,7 +192,47 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>TypeScript Cookbook • Stefan Baumgartner &amp; Peter Kröner</title><link>https://www.youtube.com/watch?v=nDGLMRCsu7g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/nDGLMRCsu7g?version=3" length="" type=""/><pubDate>Tue, 26 Aug 2025 12:23:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here
+ (https://gotopia.tech/episodes/371) 
+Stefan Baumgartner - Author of "TypeScript Cookbook" & "TypeScript in 50 Lessons"
+Peter Kröner - Host of "Working Draft" Podcast & Freelance Trainer for Frontend Web Tech
+
+RESOURCES
+Stefan
+https://bsky.app/profile/deadparrot.dev
+https://mastodon.social/@deadparrot
+https://x.com/ddprrt
+https://github.com/ddprrt
+https://www.linkedin.com/in/stefan-baumgartner-bb621564
+https://oida.dev
+
+Peter
+https://bsky.app/profile/sirpepe.bsky.social
+https://mastodon.social/@sir_pepe
+https://github.com/SirPepe
+https://www.linkedin.com/in/peterkroener
+https://www.peterkroener.de
+
+Links
+https://typescript-cookbook.com
+https://typescript-book.com
+https://workingdraft.de
+
+DESCRIPTION
+Peter Kröner and Stefan Baumgartner explore practical TypeScript implementation strategies in this discussion of Stefan's latest book, "TypeScript Cookbook", a sequel to his previous work "TypeScript in 50 Lessons". From minimal type annotations to knowing when to use advanced features, Stefan shares insights on efficient project setup, alternatives to enums, and the strategic use of classes.
+
+The conversation examines the philosophy behind TypeScript's design while emphasizing a pragmatic approach that focuses on understanding what happens behind the scenes to make better coding decisions. Stefan consistently advocates for simplicity and intentionality when working with TypeScript's powerful but sometimes complex type system.
+
+RECOMMENDED BOOKS
+Stefan Baumgartner • TypeScript Cookbook
+ (https://amzn.to/4iefuM7) Stefan Baumgartner • TypeScript in 50 Lessons
+ (https://amzn.to/4lEBanw) Alexandre Portela dos Santos • Deno Web Development
+ (https://amzn.to/3MZBY7g) Fernando Doglio • Introducing Deno
+ (https://amzn.to/3KOFBKy) Dan Vanderkam • Effective TypeScript
+ (https://amzn.to/3DBmCib) Nathan Rozentals • Mastering TypeScript (https://amzn.to/2V4LYUt) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +248,84 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>From Zero to 30+ Open Source Contributions</title><link>https://blog.algomaster.io/p/from-zero-to-30-open-source-contributions</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/5739e365-a9dc-422e-a084-a18d5a99807b_437x297.png" length="" type=""/><pubDate>Tue, 26 Aug 2025 12:16:37 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[This is a guest post by  who has contributed to over 30 open-source repositories and participated in multiple open sourceprograms, including Google Summer of Code (GSoC).In this article, Ritankar will share practical insights on how to get started with open source, based on his own journey and experiences.I am  your friendly neighborhood open-source junkie. What started with fixing tiny issues and learning how to make my first pull request slowly grew into something much bigger. Along the way, I have been lucky enough to contribute to 30+ open-source repositories and take part in programs -Google Summer of Code 2025 (SW360 @ Siemens) (Angor @ BlockCore) (SocialCalc & EtherCalc) (LF Energy — Hyphae APIS)But lemme tell you a secret…When I started, I had  what I was doing. I didn’t even know the difference between a  and a  (and no, it’s not kitchenware vs. Star Wars).Now, I get to design backend architectures, refactor complex codebases, work on blockchain transaction logic, and contribute to large-scale digital governance tools, all while collaborating with some of the smartest developers in the community.So if you have been wondering:“How do I start contributing to open source without feeling like an impostor?”Buckle up — this is going to be fun. 🎢1️⃣ Open Source Is Not Just “Coding for Free”Let’s kill this myth first.Open source is about collaboration, learning, and impact.It’s a place where you can:Learn  (Git, testing, APIs, you name it)Work with people across time zones, cultures, and tech stacks and believe me when I say everyone in the org is out there on a foot and ready to help you out.Build things that actually get used by  (or millions!)Create a  that employers drool over 😅And the best part? You don’t need to be some “1337 h4x0r” genius to start.I began by fixing… wait for it… a basic .2️⃣ Start Stupid Small (It’s Strategic)I know you want to dive in and rewrite the entire architecture of Kubernetes on day one. But trust me your first win should be something tiny unless you are truly cracked.Implementing very small features with PRs of approx 20-30 linesSolving issues tagged “good first issue”✅ Zero to little pressure - you are working small, not chasing deadlines from maintainers or contributing to something that might break the entire thing.✅ You learn the PR workflow without frying your brain✅ Maintainers see you as someone who finishes things and can be trusted with something bigger💡  Hunt for issues with tags like , , or .3️⃣ Pick Projects You’d Talk About at a PartyContribute to something you actually resonate with. If you are into backend, don’t go fixing CSS bugs in a random frontend repo (unless you enjoy it).If you’re into blockchain and stuff, go find some decentralized software to contribute to. → I love blockchain, so working on Bitcoin side-chains particularly the Elements Blockchain was 🔥 → Backend particularly in Spring (Java) has always been my strong hold. Also Big-scale enterprise software? Sign me up! → Digital governance is fascinating, so I hacked on SocialCalc and EtherCalc (used in public infrastructure) → API nerd here, so Hyphae APIS was right up my alleyWhere to find cool projects:goodfirstissue.dev — filters beginner-friendly issues across GitHubGitHub search: label:"good first issue" language:Python4️⃣ How to Slide Into a Community Without Being Weird 😅Open source is a . If you just silently fork, push, and PR without saying hi, you’re missing out.Join their  — there’s always oneDrop a  (“Hi, I’m new here and would love to help on beginner-friendly issues”)Ask questions  starting an issue — saves everyone timeStalk a few PRs (respectfully) to know who is the maintainer and who are contributors. Usually people mess up and tag the wrong people, although it’s a community effort, your PRs are getting merged by the maintainer only and sometimes in a very busy repo you PR might get un-noticed by the maintainer if a lot of PRs are flocking in every moment.Celebrate wins publicly (share merged PRs, thank maintainers)📌 During SoB, I learned that asking “Can I work on this?” early saved me from working on something that was already taken.5️⃣ The Magic Recipe: Contribution Workflow 🍳 the repo (copy to your account) it locally ( )Create a  (git checkout -b fix-bug-123)Make changes (code, docs, whatever) (git commit -m "Fix bug #123")Wait for review, make updates if neededTip: Don’t panic if your first PR gets rejected. Mine did. Twice initially . And I still survived.6️⃣ Level Up After the First Few PRsAfter your first couple contributions, the real fun starts:Get out of your comfort zone of solving small issues and pick medium-level bugs. By this time you should have built around enough trust in the community for the maintainer to assign you those.Improve tests & performanceReview  PRs (yes, you can!) in an open-source, however don’t do if the maintainer doesn’t encourage it properly.For example, I went from fixing minor backend bugs → writing transaction validation logic in Angor’s Liquid Network integration and entire mempool design for .7️⃣ Boost Your Journey With ProgramsHere’s where things get spicy 🌶️ — programs give you mentorship, exposure, sometimes stipends and sometimes if you are lucky and contributed good - job opportunities.Google Summer of Code (GSoC) — Work on a long-term feature with an org (my SW360 project at Siemens was all about deep integration with FOSSology). — Paid mentorship with Linux Foundation projects under CNCF majorly. — Learn blockchain fundamentals while building actual Bitcoin infrastructure. — Work on tech for public good, often in collaboration with government-backed tools.Pro tip: Apply even if you think you’re “not ready.” My first GSoC acceptance came when I thought I didn’t stand a chance and with a rejection from 2 other repos.If you wish to learn more about the SoB experience visit here -8️⃣ Show Your Work (Shamelessly)You can be building the coolest features in the world, but if no one knows, it’s like shouting into the void.Keep my  (green squares matter sometimes lol, kindof builds a trust among the maintainers that you won’t go BOLO)Write blogs (like this one!)Post on  and  about big milestonesShare before/after screenshots of features I buildThank mentors & tag projects — it builds relationshipsFun fact: I have had some recruiters from startups DM me just because they saw my  posts about open-source work. Believe me, open-source opens a lot of doors.🎯 Final Words (and Your First Step)If there’s one thing I have learned after 100+ contributions, it’s this:You don’t need to be an expert to start. You just need to start.So here’s my dare for you:Post about it and tag me — I’ll personally cheer you on 🎉Your first PR might be tiny, but it could be the start of your , , or  journey.And who knows? Maybe next year you’ll be writing  “From Zero to 30+ Contributions” story.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>Breaking the Architecture Bottleneck • Andrew Harmel-Law &amp; Marit van Dijk • GOTO 2025</title><link>https://www.youtube.com/watch?v=zl5U8KO28rM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/zl5U8KO28rM?version=3" length="" type=""/><pubDate>Mon, 25 Aug 2025 12:01:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
 
-Andrew Browne - Solution Architect at Picnic Software
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/392
+
+Andrew Harmel-Law - Technical Principal at Thoughtworks & Author of "Facilitating Software Architecture" @AndrewHarmelLaw 
+Marit van Dijk - Developer Advocate at JetBrains, Java Champion & Open Source Contributor @maritvandijk 
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Andrew
+https://bsky.app/profile/andrewhl.bsky.social
+https://twit.social/@ahl
+https://x.com/al94781
+https://github.com/andrewharmellaw
+https://www.linkedin.com/in/andrewharmellaw
+https://andrewharmellaw.github.io
+
+Marit
+https://bsky.app/profile/maritvandijk.bsky.social
+https://linkedin.com/in/maritvandijk
+https://mastodon.social/@maritvandijk
+https://github.com/mlvandijk
+https://medium.com/@mlvandijk
+https://maritvandijk.com
+
+Links
+https://facilitatingsoftwarearchitecture.com
+https://ruthmalan.com
+https://www.linkedin.com/pulse/software-architects-do-we-need-em-ruth-malan
+https://youtu.be/YpFR8qzwYSA
+https://youtu.be/acqcyX-tpf4
+https://youtu.be/PK-y-iG5VnE
+https://youtu.be/zDugyWSguz4
+https://youtu.be/NGXl1D-KwRI
+https://youtu.be/wjF4X9t3FMk
+https://youtu.be/hhlxFtV_tZo
+https://youtu.be/6xrGo1IIB3w
+https://youtu.be/Cx_vijTm24w
+https://youtu.be/l1tyfb5we7I
+https://youtu.be/RlCpgSoOX6I
+https://youtu.be/xsMUuOwv7IA
+https://youtu.be/H0EK0B1QvVA
+https://youtu.be/XOSR0Asq4h0
+https://youtu.be/yPvef9R3k-M
+https://youtu.be/_R_Vc17mxNE
+
+DESCRIPTION
+Andrew Harmel-Law discusses their book "Facilitating Software Architecture" and how traditional architecture approaches often become bottlenecks that slow down high-performing development teams.
+
+Rather than architects making top-down decisions in isolation, Andrew advocates for a facilitation approach centered on the "advice process" - where anyone can make architectural decisions as long as they seek advice from those with expertise and those who will be affected.
+
+This collaborative method, inspired by open space conferences and supported by Architectural Decision Records (ADRs), shifts the architect's role from decision-maker to conversation facilitator, ensuring the right people have the right discussions at the right time. The approach requires psychological safety and organizational support but has proven successful even in traditional corporate environments, ultimately creating more maintainable code bases where development teams actually enjoy working and can respond effectively to changing requirements.
+
+TIMECODES
+00:00 Intro
+02:12 Problem: Traditional architecture as a bottleneck
+04:31 Solution: Facilitating Architecture Decisions
+12:22 3 key influences on the book
+27:43 Implementation challenges & organizational culture
+38:05 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Andrew Harmel-Law • Facilitating Software Architecture • https://amzn.eu/d/5kZKVfU
+Christopher Alexander • A Pattern Language • https://amzn.to/3Urefj3
+Diana Montalion • Learning Systems Thinking • https://amzn.to/3ZpycdJ
+Donella H. Meadows • Thinking in Systems • https://amzn.to/3XtqYCV
+Eric Evans • Domain-Driven Design • https://amzn.to/3tnGhwm
+Alessandro Colla • Alberto Acerbis • Domain-Driven Refactoring • https://amzn.to/3I3I7zf
+Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews • https://amzn.to/3E75XrD
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#SoftwareArchitecture #ADR #ArchitecturalDecisionRecords #ReadingCode #LegacyCode #Refactoring #OpenSpace #TodayInTech #AndrewHarmelLaw #MaritvanDijk
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
