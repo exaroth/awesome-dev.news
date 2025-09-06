@@ -1,38 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Effective Code Reviews with Conventional Comments • Paul Slaughter &amp; Adrienne Braganza</title><link>https://www.youtube.com/watch?v=AzsR8bQFCSA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/AzsR8bQFCSA?version=3" length="" type=""/><pubDate>Fri, 5 Sep 2025 12:36:57 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Read the full transcription of this interview here
+ (https://gotopia.tech/articles/372) 
+Paul Slaughter - Staff Fullstack Engineer at GitLab & Creator of Conventional Comments
+Adrienne Braganza Tacke - Senior Developer Advocate at Viam Robotics & Author of "Looks Good To Me: Constructive Code Reviews"
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Paul
+https://x.com/souldzin
+https://github.com/souldzin
+https://gitlab.com/pslaughter
+https://gitlab.com/souldzin
+https://souldzin.com
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Adrienne
+https://bsky.app/profile/abt.bsky.social
+https://x.com/AdrienneTacke
+https://github.com/AdrienneTacke
+https://www.linkedin.com/in/adriennetacke
+https://www.instagram.com/adriennetacke
+https://www.adrienne.io
+https://blog.adrienne.io
+
+Links
+https://conventionalcomments.org
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
+Can "Conventional Comments" transform code reviews from frustrating experiences into productive collaborations?
 
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
+Paul Slaughter shares his experience developing and practicing "Conventional Comments", a structured approach to improving code review communications through labeled feedback. The conversation explores clear communication patterns with labels (e.g. 'suggestion:', 'issue:' or 'question:').
 
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+Paul and Adrienne discuss the importance of empathy in the review process, the balance between politeness and efficiency, and how GitLab's Code Review Weekly Workshops have helped normalize review experiences across their remote teams. The interview highlights that effective code reviews depend not just on technical evaluations but on thoughtful communication that acknowledges developers' emotional investment in their work while fostering a culture of collaborative ownership.
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews
+ (https://amzn.to/3E75XrD) Adrienne Braganza Tacke • Coding for Kids
+ (https://amzn.to/3Ukd5Gw) Grace Huang • Code Reviews in Tech
+ (https://amzn.to/4fbwYr8) Martin Fowler • Refactoring
+ (https://amzn.to/3EVcHXQ) Matthew Skelton & Manuel Pais • Team Topologies
+ (http://amzn.to/3sVLyLQ) Dave Thomas & Andy Hunt • The Pragmatic Programmer (https://amzn.to/3azvUy3) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +55,77 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Reliability Engineering Mindset • Alex Ewerlöf &amp; Charity Majors • GOTO 2025</title><link>https://www.youtube.com/watch?v=w57IXzd_BkM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/w57IXzd_BkM?version=3" length="" type=""/><pubDate>Thu, 4 Sep 2025 12:01:46 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/395
+
+Alex Ewerlöf - Senior Staff Engineer at Volvo Cars & Author of "Reliability Engineering Mindset" @alexewerlof 
+Charity Majors - Co-Founder & CTO of honeycomb.io & Co-Author of "Observability Engineering" @CharityMajors 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Alex
+https://bsky.app/profile/alexewerlof.com
+https://x.com/alexewerlof
+https://www.linkedin.com/in/alexewerlof
+https://www.alexewerlof.com
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Charity
+https://twitter.com/mipsytipsy
+https://github.com/charity
+https://linkedin.com/in/charity-majors
+https://charity.wtf
+
+Links
+https://blog.alexewerlof.com/p/rem
+https://www.honeycomb.io/blog/slos-are-the-api-for-your-engineering-team
+https://youtu.be/tx-gFamVeic
+https://youtu.be/Cxb7a8lTv8A
+https://youtu.be/SfIvrtDsE3Q
+https://youtu.be/k86P2J0xBK8
+https://youtu.be/DOQqOrHs3VY
+https://youtu.be/NNMnbBf0Itw
+https://youtu.be/0vkY2H2QDC8
+https://youtu.be/FZRpQOaePFU
+https://youtu.be/Oxmk-DiLrNA
+https://youtu.be/es3DNd5Qipg
+https://youtu.be/VAgT7CY572U
+https://youtu.be/yej1XoQE-WY
+https://youtu.be/ag2ykPO805M
+https://youtu.be/1PJM8p-RMsY
+
+DESCRIPTION
+Alex Ewerlöf, author of "Reliability Engineering Mindset" and Senior Staff Engineer at Volvo Cars, shares his serendipitous journey from product engineering to reliability engineering and discusses the practical challenges of implementing Google's SRE practices in real-world companies.
+
+Alex emphasizes the significant gap between Google's idealized SRE approach — which he links to "a fantastic chef's recipe for Michelin-starred restaurants" — and the reality most companies face with limited resources and infrastructure. The discussion covers key topics including the evolution from traditional operations to where engineers own their code in production, the critical importance of choosing SLIs that align with business impact, and how SLOs help set expectations and help the service consumers prepare non-functional requirements. Alex coined the law of 10x per 9 highlighting that reliability isn't free and requires careful cost-benefit analysis.
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+00:51 The serendipitous path to SRE
+04:31 From SRE to author
+07:04 The Google SRE gap
+10:24 Making Service Level Objectives (SLO) practical
+19:38 The future of observability & SLOs
+23:06 Swapping stories on recent reads
+25:02 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Alex Ewerlöf • Reliability Engineering Mindset • https://blog.alexewerlof.com/p/rem
+Charity Majors, Liz Fong-Jones & George Miranda • Observability Engineering • https://amzn.to/38scbma
+Charity Majors & Laine Campbell • Database Reliability Engineering • https://amzn.to/3ujybdS
+Alex Hidalgo • Implementing Service Level Objectives • https://amzn.to/4pbWJxw
+Brian Klaas • Fluke • https://amzn.to/41V1Cko
+Kevin Simler & Robin Hanson • The Elephant in the Brain • https://amzn.to/4fYCG1i
+Kelly Shortridge & Aaron Rinehart • Security Chaos Engineering • https://www.verica.io/sce-book
+Nora Jones & Casey Rosenthal • Chaos Engineering • https://amzn.to/3hUmuAH
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#ReliabilityEngineering #SRE #SiteReliabilityEngineering #ChaosEngineering #Observability #Observability2 #SLO #SLI #Reliability #Logging #PlatformEngineering #SoftwareEngineering #Programming #TodayInTech #AlexEwerloef #CharityMajors #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,17 +136,55 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Client-Server Architecture Explained</title><link>https://blog.algomaster.io/p/client-server-architecture-explained</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!g3db!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a38175b-11e8-40ae-879c-ab3ce2027089_2008x1252.png" length="" type=""/><pubDate>Wed, 3 Sep 2025 12:05:12 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Every time you're browsing your favorite website, streaming a show, or sending an email, you’re interacting with a system designed around the .This model is the backbone of modern computing. It defines how our devices (clients) talk to powerful machines (servers) across the internet to fetch data, deliver services, and keep everything running smoothly, often in just milliseconds.In this article, we’ll break down:What exactly Client-Server Architecture isHow the communication between clients and servers actually worksThe different types of client-server modelsThe pros, cons and real-world applications of this architectureClient-server architecture is a computing model in which multiple clients (users or devices) interact with a centralized server to access data, resources, or services.In this model, the  initiates requests (like fetching data or performing an action), while the  handles those requests, manages resources, and responds accordingly, often serving multiple clients at the same time.: The client is typically a device or application that initiates a request to the server. This could be a web browser, a mobile app, or a desktop application.: The server is a powerful computer or software application that processes requests from clients, manages resources, and delivers the requested services or data.: The communication medium (usually the internet) that allows clients and servers to exchange data.Example: Visiting a WebsiteLet’s say you type  in your browser: Browser sends a request to 's web server over HTTP/HTTPS. Finds the HTML, CSS, and JS files and sends them back. Browser displays the page based on those files.How does your browser know what to show when you type in a URL?Or how does your Spotify app pull in your favorite playlist in seconds?It all comes down to how clients and servers talk to each other.Let’s walk through it step by step.The Client Initiates a Request: You (the client) perform an action like clicking a link, pressing “Send” on an email, or opening an app. That action triggers a  to a server.The Request Travels Over the Network: This request usually in the form of an HTTP message is sent over the internet to a server’s IP address. Think of it like mailing a letter to a specific address.The Server Receives and Processes the Request: The server listens on a specific port and handles incoming requests. It processes the data, runs logic, queries a database if needed, and prepares a response.The Server Sends Back a Response: Once processing is done, the server sends the result back. This could be:JSON data for a mobile appThe Client Displays the Response: The client receives the response and renders it on screen. What you see in your browser or app is the result of this back-and-forth.Key Technologies InvolvedHere are some of the technologies that enable this communication:: The most common protocol used by browsers and web servers for communication.: Translates human-friendly domain names (like ) into server IP addresses.: The underlying protocol that ensures data packets are delivered reliably between client and server.: Servers listen on specific ports (like 80 for HTTP or 443 for HTTPS) to accept requests.Client-server systems can vary significantly in complexity based on how many layers (or "tiers") are involved in processing and delivering data.Let’s explore the most common models from the simplest one-tier setup to sophisticated, multi-tiered architectures used in large-scale applications.1-Tier Architecture (Monolithic Model)In , everything—the user interface, business logic, and data storage—resides in a . All operations are handled on the  or within the same application. that store and compute everything locallySimple to build and deployNo network communication overheadNo separation of concernsUnsuitable for multi-user environmentsBest suited for small, standalone, offline applications.In a , the system is split into two parts:The , which handles the  (UI)The , which handles both the  and In a two-tier architecture, the client directly communicates with the server to send requests and receive responses. The server runs the logic and interacts with the database to return results.A  that connects directly to a central database to retrieve and display data.Simple and fast for a small number of usersPoor scalability as more clients are addedPerformance bottlenecks on the serverDifficult to update logic across different clientsSuitable for internal tools or apps with a small user base and limited traffic.The  introduces a dedicated  (also called the ) between the client and the data server.This creates a clear separation of concerns and is the most commonly used architecture for modern web and enterprise applications.Client (Presentation Layer): The front-end interface users interact with (e.g., a browser or mobile app).Application Server (Logic Layer): Processes client requests, applies business rules, and interacts with the database.Database Server (Data Layer): Handles storage, retrieval, and management of data. A web application where the client (browser) interacts with a web server (application server) that then queries a database server to retrieve data.Better scalability and maintainabilityLogic is centralized, so clients are lightweightImproved security and abstractionMore complex than 1- or 2-tier setupsSlightly increased latency if layers aren't optimizedIdeal for web apps, SaaS products, and large internal tools. builds on the 3-tier model by adding  for specific responsibilities such as caching, load balancing, authentication, analytics, or API gateways.Each layer focuses on one concern and communicates only with adjacent layers, enabling high modularity and scalability. User interface or front-end application. Manages the user interface and presentation logic. Handles business logic and rules. Manages data access and storage.Additional Layers (optional): For caching, logging, security, etc. A large e-commerce platform with separate services for user authentication, product catalog, shopping cart, and payment processing might use an N-tier architecture.Highly scalable and fault-tolerantIndividual layers can be developed, deployed, and scaled independentlySupports complex workflows and distributed teamsMore difficult to design, maintain, and debugHigher latency if not optimizedRequires strong DevOps and monitoring practicesBest for enterprise-grade systems, cloud-native apps, and services that serve millions of users.The client-server model offers several advantages, which is why it’s so widely used: All critical data, resources, and services reside on the server, which means they can be monitored, updated, and secured from a central location. Client-server systems are built to grow. You can  by upgrading server hardware (e.g., adding more RAM or CPU) or  by adding more servers behind load balancers to distribute traffic.Efficient Resource Sharing: One server can serve multiple clients simultaneously, enabling shared access to databases, file storage, and applications. With everything centralized, it’s easier to implement and enforce authentication, authorization, encryption, and access control.Despite its advantages, client-server architecture also has some challenges: If the central server crashes or becomes unavailable, all connected clients lose access. Redundancy, replication and failover mechanisms are needed to mitigate this risk. As the number of clients grows, the server can become overwhelmed, leading to slow response times or system outages. Load balancing, caching and other optimizations are required to maintain performance. As systems grow, managing and scaling a client-server architecture can become complex, requiring advanced infrastructure and expertise.Client-server architecture is ubiquitous in modern computing. You interact with it dozens of times a day, often without even realizing it.Here are a few examples of real-world applications:When you visit a site like , your  sends a request to a , which responds with the HTML, CSS, and content of the page.Email apps like , , or  act as clients that connect to mail servers (using protocols like SMTP, IMAP, or POP3) to send, receive, and sync your emails.Banking apps and websites rely on client-server models to:Display real-time account data all while keeping data encrypted and secure on the server.Cloud providers like , , and  offer on-demand services (compute, storage, databases) using a client-server model. Your apps (clients) communicate with cloud APIs (servers) to scale seamlessly.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>X Marks the Spot: Navigating Possible Futures with Wardley Maps • Simon Wardley • GOTO 2024</title><link>https://www.youtube.com/watch?v=ShAzlhS_TCg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ShAzlhS_TCg?version=3" length="" type=""/><pubDate>Wed, 3 Sep 2025 12:00:52 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #gotocph
+https://gotocph.com
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
+Simon Wardley - Thought Lord, Mapper, Mostly Good @simonwardley 
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
+RESOURCES
+https://bsky.app/profile/swardley.bsky.social
+https://me.dm/@swardley
+https://twitter.com/swardley
+https://www.linkedin.com/in/simonwardley
+https://swardley.medium.com
 
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
+ABSTRACT
+In the keynote, Simon Wardley, the originator of Wardley Maps, takes the audience on a journey through the realm of strategic planning in the modern business landscape. This talk unveils the powerful utility of Wardley Maps in identifying and targeting strategic objectives, akin to finding treasure in the complex world of business.
+
+The discussion begins with an introduction to the fundamentals of Wardley Maps, emphasizing their role in enhancing situational awareness in decision-making. The keynote then delves into real-world applications, demonstrating how these maps have successfully enabled organisations to change the way they work and challenge what they do. We then explore concepts such as gameplay and strategy before examining how to identify that which really matters.
+
+There will be pirates, and possibly kittens. [...]
+
+TIMECODES
+00:00 Intro
+00:56 Agenda
+04:45 Origin
+06:05 Maps
+17:42 Patterns
+24:11 Change
+33:47 Gameplay
+36:33 X marks the spot
+38:13 Summary
+39:07 Outro
+
+Read the full abstract here:
+https://gotocph.com/2024/sessions/3128
+
+RECOMMENDED BOOKS
+Simon Wardley • Wardley Maps • https://amzn.to/45U8Upr
+Simon Wardley • Wardley Mapping, The Knowledge • https://amzn.to/3XQEeDu
+David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect • https://amzn.to/3VcHxC7
+Sun Tzu • The Art of War • https://amzn.to/2BqDeha
+Jonathan Allen & Thomas Blood • Reaching Cloud Velocity • https://amzn.to/4n39Fnt
+Susanne Kaiser • Adaptive Systems With Domain-Driven Design, Wardley Mapping & Team Topologies • https://amzn.to/3XTmNCc
+Erik Schön • The Art Of Strategy • https://amzn.to/2UPzXPa
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#WardleyMaps #WardleyMapping #Strategy #ArtOfStrategy #Patterns #SunTzu #Change #SimonWardley
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -131,55 +195,50 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Beyond the Cloud: The Local-First Software Revolution • Brooklyn Zelenka &amp; Julian Wood</title><link>https://www.youtube.com/watch?v=IT7Gw98q_cg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/IT7Gw98q_cg?version=3" length="" type=""/><pubDate>Tue, 2 Sep 2025 12:42:25 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
 https://gotopia.tech
 
 Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+ (https://gotopia.tech/articles/374) 
+Brooklyn Zelenka - Author of Numerous Libraries Including Witchcraft & Founded the Vancouver Functional Programming Meetup
+Julian Wood - Serverless Developer Advocate at AWS
+
+
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+Brooklyn
+https://bsky.app/profile/expede.wtf
+https://octodon.social/@expede@types.pl
+https://github.com/expede
+https://www.linkedin.com/in/brooklynzelenka
+https://notes.brooklynzelenka.com
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+Julian
+https://bsky.app/profile/julianwood.com
+https://twitter.com/julian_wood
+http://www.wooditwork.com
+https://www.linkedin.com/in/julianrwood
 
 Links
-https://stripe.dev
+https://automerge.org
+https://discord.com/invite/zKGe4DCfgR
+https://www.robinsloan.com/notes/home-cooked-app
+https://github.com/ipvm-wg
+https://www.localfirst.fm
+https://localfirstweb.dev
 
 DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+Distributed systems researcher Brooklyn Zelenka unpacks the paradigm shift of local-first computing, where applications primarily run on users' devices and synchronize seamlessly without central servers.
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+In a conversation with Julian Wood, she explains how this approach reduces latency, enables offline functionality, improves privacy through encryption, and democratizes app development—all while using sophisticated data structures. Perfect for collaborative tools and "cozy web" applications serving smaller communities, local-first software represents a fundamental rethinking of how we've built software for the past 30 years.
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+Ford, Parsons, Kua & Sadalage • Building Evolutionary Architectures 2nd Edition
+ (https://amzn.to/3lqr5Q8) Ford, Richards, Sadalage & Dehghani • Software Architecture: The Hard Parts
+ (https://amzn.to/3QeMgjR) Mark Richards & Neal Ford • Fundamentals of Software Architecture
+ (https://amzn.to/3wMBhoI) Ford, Parsons & Kua • Building Evolutionary Architectures
+ (https://amzn.to/3l0IOh2) Neal Ford • Functional Thinking
+ (https://amzn.to/3l6ND8M) Michael Feathers • Working Effectively with Legacy Code (https://amzn.to/3ZFQoMU) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +254,82 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>How to Discover the Binary System as a Child • Simon Peyton Jones &amp; Chelsea Troy • GOTO 2025</title><link>https://www.youtube.com/watch?v=lg0RYLlmjJM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/lg0RYLlmjJM?version=3" length="" type=""/><pubDate>Mon, 1 Sep 2025 12:01:25 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
 
-Andrew Browne - Solution Architect at Picnic Software
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/394
+
+Simon Peyton Jones - Key Contributor of Haskell & Engineering Fellow at Epic Games
+Chelsea Troy - MLOps Tech Lead at Mozilla & Lecturer at University of Chicago @HeyChelseaTroy 
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Simon
+https://simon.peytonjones.org
+https://en.wikipedia.org/wiki/Simon_Peyton_Jones
+https://twitter.com/simonpj0
+https://github.com/simonpj
+https://www.linkedin.com/in/simonpj
+
+Chelsea
+https://chelseatroy.com
+https://social.clawhammer.net/@HeyChelseaTroy
+https://twitter.com/HeyChelseaTroy
+https://www.linkedin.com/in/chelseatroy
+https://github.com/chelseatroy
+
+Links
+https://www.haskell.org
+https://www.barefootcomputing.org
+https://www.computingatschool.org.uk
+https://www.computingatschool.org.uk/resources/2015/january/simon-peyton-joness-bookmarks
+https://www.computingatschool.org.uk/forum-news-blogs/2023/november/why-we-must-still-teach-our-children-to-code
+https://chelseatroy.com/2025/05/14/the-homework-is-the-cheat-code-genai-policy-in-my-computer-science-graduate-classroom
+https://computingeducation.org.uk
+https://www.raspberrypi.org/blog/why-kids-still-need-to-learn-to-code-in-the-age-of-ai
+https://youtu.be/A2QWxT9a8HU
+https://youtu.be/ztdxlkmxpIQ
+https://youtu.be/Pv0cfsastFs
+https://youtu.be/PltixgJiRrw
+https://youtu.be/_ehD4D7N4ZU
+https://youtu.be/patyK226zeE
+https://youtu.be/lIy9qhwFB-s
+https://youtu.be/cz2oPxIU3u8
+https://youtu.be/_XbOTRunqHk
+https://youtu.be/QujM1S3tP-I
+https://youtu.be/0yKf8TrLUOw
+https://youtu.be/kOyVxj7p4lI
+https://youtu.be/-HNpim5x-IE
+https://youtu.be/8CXhiSddjAI
+
+DESCRIPTION
+Simon Peyton Jones – Royal Society member, Haskell language maintainer, and computing education advocate – discusses how a simple math problem about bank envelopes led him to discover the binary system 55 years ago, and why that moment of authentic problem-solving remains crucial for today's students. From his transition from Microsoft Research to founding Computing at School, Simon argues that computing education should be foundational rather than vocational, giving children agency in the digital world just as we teach them basic numeracy and science. He explores how to maintain the essence of computational thinking in an era where AI can instantly solve coding problems, emphasizing concrete, motivated contexts over abstract algorithms.
+
+The discussion spans from elementary programming with Scratch and physical computing devices to his unique role as a computing fellow at Epic Games, where he works with CEO Tim Sweeney to design the Verse programming language, proving that even billion-dollar companies can prioritize denotational semantics over quarterly profits.
+
+TIMECODES
+00:00 Intro
+01:08 The Binary System discovery: A teaching moment
+05:45 Problem-solving in the age of AI
+10:25 The journey into computing education
+16:35 Functional programming & compiler design
+20:41 Working as a computing fellow at Epic Games
+23:40 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Simon Peyton Jones • The Implementation of Functional Programming Languages • https://amzn.to/3HQE0Xn
+Chelsea Troy • Remote Work Sucks • https://heychelseatroy.gumroad.com/l/remoteworksucks
+Christopher Alexander • A Pattern Language • https://amzn.to/3Urefj3
+Vitaly Bragilevsky • Haskell in Depth • https://amzn.to/3EXpmbe
+Rebecca Skinner • Effective Haskell • https://amzn.to/3VgUKsh
+Graham Hutton • Programming in Haskell • https://amzn.to/3Fi8rBC
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#Binary #BinarySystem #Haskell #GHC #SoftwareEngineering #Programming #FunctionalProgramming #CompilerDesign #CodingForKids #LearnToCode #EducatingKids #RaspberryPi #Arduino #Tech #SoftwareDevelopment #SoftwareTechnology #SimonPeytonJones #ChelseaTroy #TodayInTech
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -227,4 +340,4 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The 10 BIG Questions of System Design</title><link>https://blog.algomaster.io/p/the-10-big-questions-of-system-design</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!mMev!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d4a35cb-d5f4-4d22-b478-7a9bd2975ab3_1064x620.png" length="" type=""/><pubDate>Sun, 31 Aug 2025 12:05:28 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[System design is often misunderstood as a simple exercise of sketching  and  on a whiteboard. In reality, it’s much more than that.It’s the art and science of building systems that can serve , , , and remain  over time.At its core, system design is about asking the .Every large-scale system, whether it’s  streaming billions of hours of video,  handling billions of messages per day, or your  web app scaling to thousands of users, faces similar set of fundamental challenges.In this article, we’ll explore the 10 big questions of system design that will guide your thinking, and help you make better architectural decisions.“How will the system handle a large number of users or requests simultaneously?”Scalability is about a system's ability to handle a growing number of users, requests, or data without a drop in performance.This isn't just a matter of making things bigger; it's about smart growth. A well-designed system should be able to serve one user, one million users, or one hundred million users with only minimal architectural changes.Think of scalability as preparing your system for success. If tomorrow your app suddenly goes viral, will it crash under the load, or will it handle the traffic as if nothing happened?Horizontal vs Vertical Scaling: Do we add more machines (horizontal) or beef up a single one (vertical)?: How do you ensure requests are evenly distributed across servers?: Can you split your data intelligently across multiple databases?: Can your services scale out without shared state?“How can we reduce response time and ensure low-latency performance under load?”]]></content:encoded></item></channel></rss>
