@@ -1,38 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Platform Engineering: A Deep Dive Conversation • Russ Miles &amp; Kevlin Henney</title><link>https://www.youtube.com/watch?v=erxUtkCkVuM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/erxUtkCkVuM?version=3" length="" type=""/><pubDate>Fri, 12 Sep 2025 12:25:34 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024.
+https://gotocph.com
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Russ Miles - Author, Engineering Manager & Chaos Engineering Practitioner
+Kevlin Henney - Consultant, Programmer, Keynote Speaker, Technologist, Trainer & Writer
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Russ
+https://bsky.app/profile/russmiles.bsky.social
+https://github.com/russmiles
+https://www.linkedin.com/in/russmiles
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Kevlin
+https://bsky.app/profile/kevlin.bsky.social
+https://about.me/kevlin
+https://twitter.com/KevlinHenney
+https://linkedin.com/in/kevlin
+https://instagram.com/kevlin.henney
+https://kevlinhenney.medium.com
 
-DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
-
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
-
+Read the full abstract here
+ (https://gotocph.com/2024/sessions/3524) 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Miles, Giguere & Smith • Cloud Native Application Protection Platforms
+ (https://amzn.to/3X4Bq4h) Mina, Warda, Marins & Miles • Digitalization of Financial Services in the Age of Cloud
+ (https://amzn.to/4gIYsow) Russ Miles • Learning Chaos Engineering
+ (https://amzn.to/412KEzf) Chip Heath & Dan Heat • Switch: How to Change Things When Change Is Hard
+ (https://amzn.to/3YLUYv7) Dan Pilone & Russ Miles • Head First Software Development
+ (https://amzn.to/4i02JF0) Chankramath, Cheneweth, Oliver & Alvarez • Effective Platform Engineering
+ (https://www.manning.com/books/effective-platform-engineering) Gregor Hohpe • Platform Strategy
+ (https://amzn.to/4cxfYdb) Martin Fowler • Refactoring
+ (https://amzn.to/3EVcHXQ) Matthew Skelton & Manuel Pais • Team Topologies (http://amzn.to/3sVLyLQ) 
+Crossing Borders (https://www.buzzsprout.com/2529297/episodes/17682252) 
+
+
+Crossing Borders is a podcast by Neema, a cross border payments platform that...
+
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id)    Spotify (https://open.spotify.com/show/2lOe2EyAuuvTnJjxqa1aav) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +53,63 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>C++ Memory Management • Patrice Roy &amp; Kevin Carpenter • GOTO 2025</title><link>https://www.youtube.com/watch?v=ehuYrQvFcFg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ehuYrQvFcFg?version=3" length="" type=""/><pubDate>Thu, 11 Sep 2025 12:01:18 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/397
+
+Patrice Roy - Author of "C++ Memory Management"
+Kevin Carpenter - Software Engineering Manager at EPX
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Patrice
+https://bsky.app/profile/patriceroy1.bsky.social
+https://www.linkedin.com/in/patrice-roy-a050b02a4
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Kevin
+https://www.linkedin.com/in/kevinbcarpenter
+https://github.com/kevinbcarpenter
+
+Links
+https://www.eventbrite.com/e/c-memory-management-masterclass-tickets-1580340644409
+https://youtu.be/D6jqVS5JFpM
+https://youtu.be/9KljYagEPnE
+https://youtu.be/mWfvi346puM
+https://youtu.be/HAFrggEDr5U
+https://youtu.be/VRGRTvfOxb4
+https://youtu.be/lWPLgm52ICs
+
+DESCRIPTION
+Kevin Carpenter talked to veteran C++ programmer Patrice Roy. The conversation explores the intricacies of memory management in modern C++. Patrice, who has been programming in C++ for over 30 years and serves on the C++ Standards Committee, shares wisdom from his new book "Memory Management in C++" while discussing everything from the pitfalls of over-allocation to the nuances of smart pointers.
+
+The conversation reveals how proper memory management isn't just about performance—it's about writing safer, more maintainable code that leverages C++'s powerful abstractions while avoiding common traps that lead seasoned developers astray.
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+02:50 Challenges for new C++ devs
+06:09 Code examples & teaching approach
+07:55 Performance considerations & modern C++ features
+11:21 Smart pointers & modern C++ practices
+13:16 Key takeaways for new C++ devs
+15:44 Custom allocators & performance optimization
+26:31 Template computing
+28:24 What's next?
+29:47 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Patrice Roy • C++ Memory Management • https://amzn.to/3K4gnet
+Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
+Andreas Zeller • The Debugging Book • https://www.debuggingbook.org
+Bjarne Stroustrup • Programming: Principles and Practice Using C++ • https://amzn.to/3I5Q335
+Marius Bancila • Modern C++ Programming Cookbook • https://amzn.to/41ES4Kd
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#Cpp #Cplusplus #MemoryManagement #TemplateComputing #CplusplusProgramming #ModernCpp #ProgrammingLanguages #SoftwareEngineering #Programming #TodayInTech #PatriceRoy #KevinCarpenter #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,17 +120,68 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How DNS Actually Works</title><link>https://blog.algomaster.io/p/how-dns-actually-works</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!hRnS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6e6d0fad-b7ac-4874-a832-22dab95965e1_2052x1430.png" length="" type=""/><pubDate>Thu, 11 Sep 2025 04:41:04 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[When you type a website address into your , something almost magical happens. Within seconds, your screen fills with content from servers that might be thousands of miles away.Behind this seamless experience is a crucial system: . It’s often called the “phonebook of the internet,” but that description barely scratches the surface.Let’s break it down and see how DNS  works. are critical but time-consuming.  acts as your AI co-pilot, providing instant Code review comments and potential impacts of every pull request.Beyond just flagging issues, CodeRabbit provides one-click fix suggestions and lets you define custom code quality rules using AST Grep patterns, catching subtle issues that traditional static analysis tools might miss. has so far reviewed more than , installed on , and used by 70 thousand Open-source projects. CodeRabbit is free for all open-source repo's.On the internet, computers communicate using  such as . You can think of them as phone numbers for servers.Humans, however, are much better at remembering names like . We can’t expect users (or even systems) to memorize a string of random numbers for every service they connect to.This is where the  helps. It acts as a translator between human-readable domain names and machine-friendly IP addresses.You type a URL ()DNS maps it to the correct IP ()Your browser connects to that IPWithout DNS, we would all be forced to type raw IP addresses such as  into our browsers. That would make using the internet far less convenient.When you enter a domain name (e.g., google.com) in your browser, here’s the step-by-step journey of how that name gets resolved into an IP address:The browser’s first checks is its own cache. It checks whether it has recently resolved the domain you’re trying to visit.If so, it uses the cached IP directly. This is the fastest path because no extra work needed.2. The Operating System CacheIf the browser doesn’t know, it turns to your computer’s operating system.The OS maintains its own local cache of recent domain lookups, shared across applications. If the record exists here, the operating system returns the IP and the search is complete.3. The Recursive ResolverIf the OS doesn’t have the answer, your computer sends the query to a special server called a .This resolver is usually operated by your Internet Service Provider (ISP) or a public DNS service like:The recursive resolver's job is to do all the hard work of hunting down the correct IP address for you. It won’t give up until it finds the answer or confirms the domain does not exist.If the resolver doesn’t already have the answer in its cache, it starts its search at the very top of the internet's hierarchy: the .There are only 13 sets of these root servers globally (though they are replicated in hundreds of locations for reliability).Root servers don’t know the final IP, but they know where to look next.They looks at the last part of the domain (.com in   and direct the resolver to the appropriate Top-Level Domain (TLD) server.The resolver now talks to the TLD servers. The  manages all domains ending in a specific extension, like , , , , etc.So, the resolver asks the  TLD server, "Hey, where can I find information about ?"The TLD server doesn't have the final IP address either. However, it knows which server  the official record-keeper for the  domain. It points the resolver to that domain's Authoritative Name Server.6. The Authoritative Name ServerFinally, the resolver contacts the authoritative name server. This server is the ultimate source of truth for a specific domain. It holds the official DNS records for  and knows the exact IP address.Authoritative server responds with the correct IP address (e.g., ).These records can include multiple IPs for load balancing and failover.The authoritative server returns the actual  (for IPv4) or  (for IPv6). It can also return other records depending on the query (e.g., MX for email, CNAME for aliases, TXT for verification).The recursive resolver now has the IP address. It passes this information back to your computer. Your computer then  this answer so it doesn't have to repeat the whole process next time. Finally, your browser uses the IP address to connect to Google's server, and the webpage begins to load.All of this happens in milliseconds.Authoritative name servers don’t just store one type of record. They store different kinds of instructions, each serving a purpose:The magic of DNS is not just in translating names to numbers but in how it does this  for billions of users every day. Several design choices make DNS both fast and resilient:1. Global Anycast NetworksRoot servers and public resolvers (like Cloudflare or Google DNS) use , which means the same IP address is advertised from many locations around the world.When you send a query, it automatically goes to the nearest available server.This reduces latency and ensures your request doesn’t have to travel halfway across the globe.2. Redundant Authoritative ServersDomains usually have more than one authoritative name server, spread across different regions.If one server fails or becomes unreachable, another can respond.This redundancy ensures high availability and fault tolerance.Some domains use geographic-based DNS responses.The same domain may resolve to different IP addresses depending on where the request originates.This can improve performance (by routing you to the closest server) or meet compliance needs (by directing you to a country-specific data center).4. Load Balancing with DNSDNS can return multiple IP addresses for a single domain.With multiple  or , traffic gets distributed across several servers.This simple form of load balancing spreads requests and prevents any single server from being overwhelmed.5. Content Delivery Networks (CDNs)Many websites rely on CDNs to speed up content delivery.DNS queries resolve to an  located near the user.This way, static files (like images, videos, scripts) load from the closest location, reducing latency and improving user experience.The next time you type a URL, remember what’s happening behind the scenes:Your browser first checks if it already knows the IP.If not, your computer passes the question along until eventually an authoritative source answers.Thanks to caching and a hierarchy of servers, this whole process is fast, efficient, and mostly invisible to you.DNS is one of those quiet heroes of the internet: always working in the background, making sure humans can use names while machines use numbers. Without it, the internet as we know it simply wouldn’t exist.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>AI Assistance for Software Teams: The State of Play • Birgitta Böckeler • GOTO 2024</title><link>https://www.youtube.com/watch?v=pzlqeX9nh1g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/pzlqeX9nh1g?version=3" length="" type=""/><pubDate>Wed, 10 Sep 2025 12:01:38 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
+Birgitta Böckeler - Technical Principal at Thoughtworks @thoughtworks 
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
+RESOURCES
+https://toot.thoughtworks.com/@bboeckel
+https://twitter.com/birgitta410
+https://www.linkedin.com/in/birgittaboeckeler
+https://birgitta.info
 
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
+Links
+https://gist.github.com/birgitta410/487080bcb95c0d67e2c4c3cd20e2d306
+https://www.atlassian.com/software/rovo
+https://www.thoughtworks.com/insights/blog/generative-ai/using-ai-requirements-analysis-case-study
+https://codescene.com/hubfs/whitepapers/Refactoring-vs-Refuctoring-Advancing-the-state-of-AI-automated-code-improvements.pdf
+https://gitclear-public.s3.us-west-2.amazonaws.com/Coding-on-Copilot-2024-Developer-Research.pdf
+https://martinfowler.com/articles/legacy-modernization-gen-ai.html
+https://martinfowler.com/articles/exploring-gen-ai.html#memo-08
+https://martinfowler.com/articles/exploring-gen-ai.html#memo-10
+https://www.continue.dev
+
+ABSTRACT
+After almost 2 years of high attention on coding assistants, many engineering managers are disappointed by the measurable results, and engineers are suffering from hype fatigue, even the ones who have learned to love their new AI team mate. Meanwhile, the pace of change in the AI tooling space is still quite high, which contributes further to the hype fatigue.
+
+This presentation gives an overview of the tooling and features available today, what works and what doesn't, and what might work with more technical advances. It will mostly focus on AI assistance for tasks that involve writing, reading and changing code, but also touch on software delivery tasks that don't touch code directly, like requirements analysis. This whirlwind tour of the AI tooling landscape is based on Birgitta's experience as Thoughtworks' global SME for AI-assisted software delivery. [...]
+
+TIMECODES
+00:00 Intro
+01:35 Big picture: AI tooling archetypes
+02:55 Adjusted for size: Tooling maturity & current adoption
+04:43 Coding assistants: A tour
+09:50 Coding assistants: Core features
+10:01 Coding assistants: Model choices
+12:43 Coding assistants: Context orchestration
+15:43 Context of all your codebases
+24:57 Coding assistants: The next frontiers
+25:20 Testing
+28:04 Solving larger problems
+30:12 Code review & refactoring
+33:31 Documentation
+36:41 Debugging
+42:29 Final thoughts
+44:48 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3334
+
+RECOMMENDED BOOKS
+Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Alex Castrounis • AI for People and Business • https://amzn.to/3NYKKTo
+Holden Karau, Trevor Grant, Boris Lublinsky, Richard Liu & Ilan Filonenko • Kubeflow for Machine Learning • https://amzn.to/3JVngcx
+Kelleher & Tierney • Data Science (The MIT Press Essential Knowledge series) • https://amzn.to/3AQmIRg
+Lakshmanan, Robinson & Munn • Machine Learning Design Patterns • https://amzn.to/2ZD7t0x
+Lakshmanan, Görner & Gillard • Practical Machine Learning for Computer Vision • https://amzn.to/3m9HNjP
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#AIAssistance #AIAssistant #LLM #LargeLanguageModel #LimitationsOfLLMs #InsideGPT #GPT #GenAI #AI #GenerativeAI #CodingAssistant #BirgittaBoeckeler
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -131,55 +192,43 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Ethics in AI: Biases &amp; Responsibilities • Michelle Frost &amp; Hannes Lowette</title><link>https://www.youtube.com/watch?v=nKd8Rou95dE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/nKd8Rou95dE?version=3" length="" type=""/><pubDate>Tue, 9 Sep 2025 12:57:31 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
 https://gotopia.tech
 
 Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+ (https://gotopia.tech/articles/376) 
+Michelle Frost - AI Advocate at JetBrains & Responsible AI Consultant
+Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+Michelle
+https://bsky.app/profile/aiwithmichelle.com
+https://www.linkedin.com/in/michelle-frost-dev
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
-
-Links
-https://stripe.dev
+Hannes
+https://bsky.app/profile/hanneslowette.net
+https://twitter.com/hannes_lowette
+https://github.com/Belenar
+https://linkedin.com/in/hanneslowette
 
 DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+AI advocate Michelle Frost and principal consultant Hannes Lowette discuss ethical challenges in AI development. They explore the balance between competing values like accuracy versus fairness, recent US regulatory rollbacks under the Trump administration, and market disruptions from innovations like Deep Seek.
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+While Michelle acknowledges concerns about bias in unregulated models, she remains optimistic about AI's potential to improve lives if developed responsibly. She emphasizes the importance of transparency, bias measurement, and focusing on beneficial applications while advocating for individual and corporate accountability in the absence of comprehensive regulation.
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+Mark Coeckelbergh • AI Ethics
+ (https://amzn.to/3SuXUbY) Debbie Sue Jancis • AI Ethics
+ (https://amzn.to/44yuEbR) Mohammad Rubyet Islam • Generative AI, Cybersecurity, and Ethics
+ (https://amzn.to/3GPvoQ1) Jeet Pattanaik • Ethics in AI (https://amzn.to/4jXyQXw) 
+Crossing Borders (https://www.buzzsprout.com/2529297/episodes/17682252) 
 
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
 
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+Crossing Borders is a podcast by Neema, a cross border payments platform that...
+
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id)    Spotify (https://open.spotify.com/show/2lOe2EyAuuvTnJjxqa1aav) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +244,99 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>The End of Engineering&apos;s Blank Check • Laura Tacho &amp; Charles Humble • GOTO 2025</title><link>https://www.youtube.com/watch?v=-_nrpj_kJac</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/-_nrpj_kJac?version=3" length="" type=""/><pubDate>Mon, 8 Sep 2025 12:00:01 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
 
-Andrew Browne - Solution Architect at Picnic Software
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/396
+
+Laura Tacho - CTO at DX & Executive Coach at Laura Tacho Consulting @laurajeanfrank 
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
+
+FULL TALK TITLE
+The End of Engineering's Blank Check: Accountability in Software Leadership
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Laura
+https://x.com/rhein_wein
+https://bsky.app/profile/lauratacho.com
+https://www.linkedin.com/in/lauratacho
+https://github.com/rheinwein
+https://lauratacho.com
+
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://linkedin.com/in/charleshumble
+https://mastodon.social/@charleshumble
+https://conissaunce.com
+
+Links
+https://getdx.com/research/measuring-ai-code-assistants-and-agents
+https://www.conissaunce.com/professional-skills-shortcut.html
+https://getdx.com/research/measuring-developer-productivity-with-the-dx-core-4
+https://dora.dev
+https://getdx.com/blog/understanding-dora-metrics
+https://queue.acm.org/detail.cfm?id=3454124
+https://getdx.com/blog/space-metrics
+https://getdx.com/research/devex-what-actually-drives-productivity
+https://getdx.com/news/introducing-genai-impact-report
+https://youtu.be/UfWo0XZB9IQ
+https://youtu.be/x6yUGSmU8Nk
+https://youtu.be/C48-Zsen1WI
+https://youtu.be/NTF1eE1yHzE
+https://youtu.be/Y962m1Ede7E
+https://youtu.be/KDHyxnLdOqc
+https://youtu.be/I9mBP0v-L_o
+https://youtu.be/BvJ0XLyCQsw
+https://youtu.be/dMwGfRINpz0
+https://youtu.be/i5Y_3938Qxw
+https://youtu.be/nRBoS8T6LvU
+https://youtu.be/trsDnGh-x4U
+https://youtu.be/w9YhmMPLQ4U
+https://youtu.be/nUoEN8zsJr0
+https://youtu.be/DvfMOJaIzhY
+https://youtu.be/H0EK0B1QvVA
+https://youtu.be/cW3yM-K2M08
+https://youtu.be/WKx9E3DRqXc
+https://youtu.be/j_r0wEgWRYI
+https://youtu.be/k2acwYoz3w8
+
+DESCRIPTION
+Laura Tacho, CTO at DX and executive coach, shares her take on the challenging transition from technical contributor to business leader. She discusses the most common leadership skill gaps she sees in CTOs, particularly around setting clear expectations without falling into the "micromanagement spiral of doom".
+
+Laura explains the development of the DX Core 4 framework for measuring developer productivity through four balanced dimensions:
+• Speed
+• Effectiveness
+• Quality
+• Impact
+
+She emphasizes the critical importance of connecting technical work to business outcomes, arguing that the era of engineering having a "blank check" is over and that today's leaders must think like business leaders who speak in terms of ROI and impact. The conversation with Charles Humble also covers emerging trends in AI-assisted development and unconventional approaches to performance management.
+
+TIMECODES
+00:00 Intro
+04:44 Common leadership challenges & skills gaps
+12:56 Measuring team & manager performance
+16:23 Understanding developer productivity & the DX Core 4 Framework
+35:10 Choosing frameworks & avoiding pitfalls
+39:53 AI's impact on developer productivity
+43:28 Measuring manager performance
+46:47 Recommendations & resources
+48:11 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Will Larson • An Elegant Puzzle • https://amzn.to/4gb9VyC
+Will Larson • The Engineering Executive's Primer • https://amzn.to/3UURQuT
+Meri Williams • The Principles of Project Management • https://amzn.to/4lj5B1G
+Daniel H. Pink • Drive: The Surprising Truth About What Motivates Us • https://amzn.to/3UHx535
+Kathy Sierra • Badass • https://amzn.to/4b9fb2V
+James Stanier • Become an Effective Software Engineering Manager • https://amzn.to/3vHrx1E
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#DX #DevEx #DeveloperExperience #DeveloperProductivity #DXCore4 #Core4 #DORAMetrics #SPACEframework #Leadership #CTO #HowToCTO #Strategy #TechLead #TechnicalLeadership #HumanFactor #Communication #Change #TodaInTech #LauraTacho #CharlesHumble
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -227,4 +347,24 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>What are Server-Sent Events (SSE)?</title><link>https://blog.algomaster.io/p/server-sent-events-sse</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!ixER!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6e5bbfd8-c620-4c55-805d-9949be630056_1182x948.png" length="" type=""/><pubDate>Sun, 7 Sep 2025 11:58:09 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Imagine you’re watching a . Prices keep changing every second, sometimes multiple times in a second.Would you prefer hitting refresh constantly, or having updates flow to you automatically?That’s exactly where  shine. SSE provides a simple, reliable way for a server to continuously push updates to a client over a single HTTP connection.In this article, we’ll break down what SSE is, how it works, how it compares to alternatives like WebSockets, and where you’d actually use it in real-world systems.If you’re enjoying this newsletter and want to get even more value, consider becoming a .The web was built on a simple idea: . A client (your browser) asks for a resource, and the server sends it back. Once the server responds, the connection is closed.This model works beautifully for static websites, but it starts to show its limits in the modern world where users expect .Think about how we consume information today:live sports scores updating every few secondsbreaking news alerts popping up without a refreshor notifications arriving instantly in a web appThese aren’t “request, wait, and reload” scenarios. They’re real-time streams of data.This is where  come in.Instead of forcing the client to constantly poll the server with “Got anything new?” requests, SSE allows the server to keep the connection open and push updates automatically as soon as they happen.SSE is intentionally . The server talks, and the client listens. That makes it a perfect fit for use cases where updates flow primarily in one direction. It turns a traditional one-off request into a  where the server continually sends data to the client over a single HTTP connection.How is this different from WebSockets?While WebSockets give you a  (both client and server can send messages at any time), SSE focuses on server-to-client delivery only. This narrower scope makes it lighter, simpler, and easier to scale in scenarios where bi-directional communication isn’t necessary.To really understand SSE, it helps to walk through the full flow—from the moment the client connects to how messages are delivered and consumed.1. Client Initiates the ConnectionIt all starts with the client (most often a browser) making a  to an endpoint on your server. The magic lies in the headers. By specifying Accept: text/event-stream, the client signals, “I’m expecting a continuous stream of events, not just a single response.”In JavaScript, this is as simple as:const eventSource = new EventSource('/events');The  API is built into most modern browsers, making it incredibly easy to open an SSE connection.2. Server Keeps the Connection OpenIn a traditional HTTP response, the server sends back data and then closes the connection. SSE works differently. After receiving the request, the server responds with headers like:Content-Type: text/event-stream
+Cache-Control: no-cache
+Connection: keep-aliveThen it keeps the connection open indefinitely. This long-lived connection becomes a dedicated channel over which the server can push updates at any time.The server doesn’t send random text, it follows a specific event-stream format. Each event is a block of text, terminated by a double newline (). Some common fields include: – the actual message payload – the event name (optional, lets you categorize events) – a unique identifier for the event (useful for reconnection and resuming) – how long the client should wait before trying to reconnect (in ms)data: This is the first message.
+
+data: Another update.
+event: user_update
+data: {"id": 123, "name": "Alice"}
+
+id: 45
+event: stock_price
+data: {"symbol": "AAPL", "price": 201.32}Notice how different events can carry different types of data, all over the same connection.4. Client Processes Incoming EventsOnce the stream is open, the browser listens for messages and exposes them through the  API. There are two main ways to handle them: – catches any event without a specific  field. – handle named events.// Handle generic messages
+eventSource.onmessage = function(event) {
+    console.log("Received:", event.data);
+};
+
+// Handle a specific type of event
+eventSource.addEventListener('user_update', function(event) {
+    const userData = JSON.parse(event.data);
+    console.log("User updated:", userData);
+});
+While WebSockets are incredibly versatile, SSE offers distinct advantages in scenarios where you primarily need to push data from the server to the client: SSE is built on top of HTTP, making it simpler to implement and debug. No special protocols or handshakes are required beyond the initial HTTP request. Many existing HTTP tools and infrastructure (proxies, load balancers) work seamlessly with SSE. A significant advantage of EventSource in browsers is its built-in automatic reconnection mechanism. If the connection drops due to network issues, the browser will automatically attempt to reconnect, saving you the hassle of implementing this logic yourself. For one-way communication, SSE generally has less overhead than WebSockets, as it doesn't require the WebSocket handshake or frame-based messaging. SSE is widely supported by modern browsers. While WebSockets can handle binary data, SSE is designed for UTF-8 encoded text data, which is often sufficient for many real-time updates.Server-Sent Events shine in situations where data needs to flow continuously from the server to the client, but the client doesn’t need to talk back over the same channel. Here are some common scenarios where SSE is a natural fit:1. Live Sports Scores and Stock TickersThink of a cricket scorecard or a stock market app. The numbers change constantly, sometimes multiple times per second. With SSE, the server can stream these updates directly to the browser, ensuring users always see the latest score or price without hitting refresh.2. News Feeds and Social Media NotificationsWhen a breaking news story is published or a friend likes your photo, you want to know instantly. SSE allows servers to push these updates in real time so users feel the experience is .3. Progress Updates for Long-Running TasksSome backend operations like processing large datasets, transcoding a video, or generating a report can take minutes to complete. Instead of forcing users to repeatedly check status, the server can stream incremental progress updates (e.g., “25% complete,” “50% complete”) to keep them informed.4. Real-Time Analytics DashboardsDashboards are most useful when they reflect the current state of the system. SSE is ideal for pushing new data points, refreshing charts, and updating metrics the moment they’re available without unnecessary polling overhead.5. Read-Only Broadcast ChannelsIn chat systems or messaging platforms, not every channel needs two-way interaction. For example, an  where only moderators post updates can be efficiently delivered via SSE, ensuring subscribers receive messages instantly without the complexity of WebSockets.While SSE is powerful, it's not a silver bullet. Keep these points in mind:Browser Connection Limits: Browsers typically limit the number of concurrent HTTP connections to a single domain (often around 6). If you have many SSE connections from one client to the same server, you might hit this limit. SSE is designed for text. If you need to send binary data in real-time, WebSockets are a better choice. Remember, SSE is one-way. If your application requires frequent client-to-server communication in real-time, WebSockets are more appropriate. Managing the state of many open connections on the server can become complex in large-scale applications.Proxy/Load Balancer Configuration: Ensure that your network infrastructure (proxies, load balancers) are configured to handle long-lived HTTP connections without timing them out prematurely.Server-Sent Events may not get as much hype as WebSockets, but they are a powerful, simple, and reliable way to build real-time features into your system. If your application needs a  of information, whether it’s live feeds, notifications, analytics dashboards, or progress updates, SSE gives you a ,  solution without the extra overhead of managing full-duplex connections.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item></channel></rss>
