@@ -1,38 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Building a Debugger • Sy Brand &amp; Tim Misiak</title><link>https://www.youtube.com/watch?v=geGJLtro_90</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/geGJLtro_90?version=3" length="" type=""/><pubDate>Fri, 19 Sep 2025 14:59:04 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
 Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+ (https://gotopia.tech/episodes/375) 
+Sy Brand - Author of "Building a Debugger" and C++ Developer Advocate at Microsoft
+Tim Misiak - Systems Engineer at Datadog and Co-Founder of Augmend
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Sy
+https://bsky.app/profile/tartanllama.xyz
+https://x.com/tartanllama
+https://github.com/TartanLLama
+https://uk.linkedin.com/in/sy-brand-36520857
+https://sybrand.ink
+https://blog.tartanllama.xyz
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Tim
+https://bsky.app/profile/timdbg.com
+https://x.com/timmisiak
+https://github.com/timmisiak
+https://www.linkedin.com/in/tim-misiak
+https://www.timdbg.com
+
+Links
+https://dwarfstd.org
+https://lldb.llvm.org
+https://rr-project.org
+https://undo.io
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
+Tim Misiak interviews Sy Brand about their book "Building a Debugger". Sy, who has a background in GPU compilers and debuggers, discusses how implementing a debugger offers profound insights into computer systems.
 
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
+The conversation explores the unexpected complexities of debugging fundamentals like stack unwinding and code stepping. They examine how debugging interfaces have evolved and the challenges posed by backward compatibility and language evolution.
 
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+Sy highlights areas for future advancement in debugging, particularly time travel debugging for non-deterministic issues and better tools for debugging optimized code. Throughout the interview, both experts share fascinating technical details that reveal why debugger implementation serves as an excellent path to deeper understanding of operating systems and hardware.
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Sy Brand • Building a Debugger
+ (https://amzn.to/4cWWr84) Cathy O'Neil • Weapons of Math Destruction (https://amzn.to/42jYkba) 
+Crossing Borders (https://www.buzzsprout.com/2529297/episodes/17682252) 
+
+
+Crossing Borders is a podcast by Neema, a cross border payments platform that...
+
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id)    Spotify (https://open.spotify.com/show/2lOe2EyAuuvTnJjxqa1aav) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +61,78 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>The Most Strict #ProgrammingLanguage @KevlinHenney Has Ever Used: #occam</title><link>https://www.youtube.com/shorts/XZPMXPQMAjc</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/XZPMXPQMAjc?version=3" length="" type=""/><pubDate>Thu, 18 Sep 2025 12:01:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #KevlinHenney #occam2 #KevlinHenneyScreen #ProgrammingLanguages #TIOBEIndex #RedMonk #FutureProgrammingLanguages #Fortran #Fibonacci #EdsgerDijkstra #Programming​ #CodingLife #Coding #SoftwareDeveloper​ #SoftwareEngineer​ #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+
+Full version available here:
+https://youtu.be/0y7IFUYUTgg
+
+Kevlin Henney - Consultant, Programmer, Keynote Speaker, Technologist, Trainer & Writer @KevlinHenney 
+
+RECOMMENDED BOOK
+Geraint Jones & Michael Goldsmith • Programming In Occam 2 • https://amzn.to/42ogw26
+C.A.R. Hoare • Occam Programming Manual • https://amzn.to/42m2fTz
+Horst Ruthrof • Pandora and Occam • https://amzn.to/4i3XBzh
+John Galletly • Occam 2 • https://amzn.to/3RFrGKJ
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
+Kevlin Henney • 97 Things Every Programmer Should Know • https://amzn.to/2Yahf9U
+Henney & Monson-Haefel • 97 Things Every Software Architect Should Know • https://amzn.to/3pZuHsQ
+Henney, Buschmann & Schmidt • Pattern-Oriented Software Architecture Volume 5 • https://amzn.to/3GAPzN7
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Moldable Development &amp; Glamorous Toolkit in Practice • Tudor Girba &amp; Kris Jenkins • GOTO 2024</title><link>https://www.youtube.com/watch?v=5PaJsEbBARo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/5PaJsEbBARo?version=3" length="" type=""/><pubDate>Wed, 17 Sep 2025 12:00:11 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
 https://gotocph.com
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Tudor Girba - Software Environmentalist and CEO of feenk @tudorgirba 
+Kris Jenkins - Developer Advocate, Software Developer, Podcast Host, Conference Speaker & Geek @krisajenkins 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Tudor
+https://twitter.com/girba
+https://www.linkedin.com/in/girba
+https://github.com/girba
+https://medium.com/@girba
+http://www.tudorgirba.com
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Kris
+https://twitter.com/krisajenkins
+https://www.linkedin.com/in/krisjenkins
+https://github.com/krisajenkins
+http://blog.jenkster.com
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
+00:20 Agenda
+00:52 Moldable Development
+08:49 Demo: Glamorous Toolkit
+40:20 Conclusion
+42:35 Outro
 
 Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+https://gotocph.com/2024/sessions/3530
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
+Susanne Kaiser • Adaptive Systems With Domain-Driven Design, Wardley Mapping, and Team Topologies • https://amzn.to/4b7ht2n
+Eric Evans • Domain-Driven Design • https://amzn.to/3tnGhwm
 Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Heidi Helfand • Dynamic Reteaming • https://amzn.to/3Fvu5BA
+Vlad Khononov • Learning Domain-Driven Design • https://amzn.to/47O7GLx
+Erik Schön • The Art of Strategy • https://amzn.to/3vPmmwS
+Thomas M. Siebel • Digital Transformation • https://amzn.to/3elUnIV
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#TudorGirba #KrisJenkins #MoldableDevelopment #GlamorousToolkit #Programming #SoftwareEngineering #DeveloperProductivity #DeveloperHappiness
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,76 +143,82 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Clean Code Tips I Learned from Senior Engineers</title><link>https://blog.algomaster.io/p/10-clean-code-tips</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/6b8294fb-3546-4506-b775-e26c4801afe2_982x1294.png" length="" type=""/><pubDate>Wed, 17 Sep 2025 04:12:53 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[ and  are two different skills. I learned it the hard way after one of my pull requests at  received 30+ comments.At first, it felt overwhelming. But looking back, it turned out to be one of the most valuable learning experiences of my career.It taught me that writing code isn’t just about passing tests, it’s about writing code that other developers can understand, maintain, and build upon.The good news is that writing clean code is a skill that can be learned by internalizing a few key principles and applying them consistently in your work.In this article, I will share 10 practical clean code tips that I’ve picked up over years from senior engineers and reading books like “Clean Code“. is an AI code review tool that runs directly in your terminal. It provides intelligent code analysis, catches issues early, and integrates seamlessly with AI coding agents like Claude Code, Codex CLI, Cursor CLI, and Gemini to ensure your code is production-ready before it ships.Enables pre-commit reviews of both staged and unstaged changes, creating a multi-layered review process.Fits into existing Git workflows. Review uncommitted changes, staged files, specific commits, or entire branches without disrupting your current development process.Reviews specific files, directories, uncommitted changes, staged changes, or entire commits based on your needs.Supports programming languages including JavaScript, TypeScript, Python, Java, C#, C++, Ruby, Rust, Go, PHP, and more.Offers free AI code reviews with rate limits so developers can experience senior-level reviews at no cost.Flags hallucinations, code smells, security issues, and performance problems.Supports guidelines for other AI generators, AST Grep rules, and path-based instructions.1. Avoid Magic Numbers and StringsMagic numbers (and strings) are hard-coded values that appear directly in your code without explanation. They make the code cryptic, harder to read, and more error-prone.If another developer (or even future-you) stumbles upon a random  in the code, it’s not immediately clear whether it represents seconds in a day, milliseconds in a minute, or something else entirely.Bad Example (Using Magic Numbers):At first glance, nobody knows what  means. It requires prior knowledge or extra digging.Good Example (Using Named Constants):Now, the meaning is crystal clear. Even someone new to the code can immediately understand that the session expires if more than a day has passed.2. Use Meaningful, Descriptive NamesCode is read far more often than it is written. If variables, methods, or classes have vague names, the reader is forced to pause and decipher what’s happening. This slows everyone down and increases the chances of mistakes.Your names should . A reader should understand  a piece of code does without needing extra comments or mental gymnastics.Bad Example (Vague Names):Here, the class , method , and variables , ,  mean nothing to the reader. What does  do? What are  and  supposed to represent?Good Example (Meaningful Names):Now it’s immediately clear: we are dealing with a , and the method calculates and prints the .Consistency in naming is equally important. If you sometimes call a user’s identifier , elsewhere , and in another place , you’re inviting confusion.Bad Example (Inconsistent Naming):String id = "123";
+String userIdentifier = "123";
+String uid = "123";Which one is the real user ID? The inconsistency makes the code harder to follow.Good Example (Consistent Naming):Use the same term across your codebase. This helps new developers quickly build a mental model of your system.When naming methods, think about how they’ll be used by the caller.Does  mean "validate"? "Charge payment"? "Ship the product"? It’s too vague.order.chargePayment();
+order.shipToCustomer();Now the intent is obvious from the caller’s perspective.3. Favor Early Returns Over Deep NestingDeeply nested  conditions or loops make code harder to read and understand. The more levels of indentation you add, the more cognitive load you place on the reader. It becomes easy to miss edge cases or introduce bugs.Instead, you can  by returning early when conditions are not met. This improves readability, reduces indentation, and makes your code easier to follow.Bad Example (Deep Nesting):This works, but the nested  blocks make it harder to see the main logic.Good Example (Early Returns):Now the method reads like a . Once the conditions are satisfied, the main action () is executed without unnecessary nesting.4. Avoid Long Parameter ListsFunctions with long parameter lists are hard to read, hard to remember, and error-prone. When you see a method call with 6–7 arguments, it’s not obvious which parameter represents what especially if multiple arguments are of the same type.Long parameter lists also make functions difficult to extend or refactor. If you need to pass additional information later, the list keeps growing, further complicating the method signature.Bad Example (Too Many Parameters):Calling this method becomes messy:At a glance, it’s not obvious which argument corresponds to what.Good Example (Group into Object):Calling the method now looks much cleaner:Even Better: Use the Builder PatternWhen the object has many optional fields, a  improves clarity and flexibility.Now the method call is . You can easily see what values are being set without guessing their order.5. Keep Functions Small and FocusedLarge, multi-purpose functions are hard to read, test, and maintain. They often mix unrelated responsibilities, which makes them fragile and changing one part can unintentionally break another.A good rule of thumb is: One function, one responsibility.If you can’t summarize what a function does in a single sentence, it’s probably doing too much.Bad Example (Too Many Responsibilities):This single method is handling validation, calculation, payment, and shipping. If something breaks, debugging will be messy.Good Example (Single Responsibility):Now each function has a clear, focused responsibility: → checks input → computes the cost → handles payment → manages shippingThis not only improves readability but also makes the code easier to test and maintain.By breaking logic into smaller functions, you can reuse them elsewhere. For example,  could be reused in an invoice service without duplicating logic.DRY stands for . Duplicate code is dangerous because:If you find a bug, you have to fix it in  copy.Changes in requirements often lead to inconsistencies if one copy gets updated but others don’t.The codebase grows unnecessarily large and harder to maintain.The goal isn’t to remove all duplication at any cost, but to identify meaningful abstractions and reuse logic where it makes sense.Bad Example (Duplicate Logic):Here, both services have the  duplicated. If you need to update the way totals are calculated (e.g., apply discounts or taxes), you must change it in multiple places.Good Example (Extract Common Logic):Now the logic lives in  (). Any change is made once and applied everywhere.KISS stands for “Keep It Simple, Stupid.” It reminds us that software should be as simple as possible, and no simpler.Overengineering—adding unnecessary complexity, abstractions, or features creates code that is:Harder to read and maintainSlower to adapt when requirements changeMany times, developers try to anticipate future needs by writing overly generic or abstract code. Ironically, this extra complexity often becomes useless because requirements evolve differently than expected.Bad Example (Unnecessary Complexity):This design uses  for something as trivial as addition and subtraction. Unless you’re genuinely dealing with dozens of complex calculation types, this abstraction is overkill.Good Example (Keep It Simple):Much simpler, easier to read, and does the job perfectly without unnecessary layers.8. Prefer Composition Over InheritanceInheritance is one of the pillars of OOP, but when misused, it leads to tight coupling, fragile hierarchies, and code that’s hard to extend or change.With inheritance, a subclass is tightly bound to the implementation details of its parent.Changes in the base class can ripple through all subclasses, causing unexpected breakages.Deep inheritance chains are difficult to understand and maintain.Composition, on the other hand, favors building classes by combining smaller, reusable components. It leads to flexible and loosely coupled designs.Bad Example (Overusing Inheritance):Here,  inherits from  and gets a  method that may not even make sense. This is a design smell caused by forcing everything into an inheritance tree.Good Example (Using Composition):Car car = new Car(new Engine());
+car.move(); // Driving with engine...
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
+Bicycle bike = new Bicycle(new Pedal());
+bike.move(); // Pedaling forward...Instead of forcing all vehicles into one inheritance tree, we compose behavior using interfaces and delegation. Each class is free to define its own functionality without being constrained by a parent class.When to Use Inheritance vs Composition: there’s a clear  relationship and the base class is stable (e.g., ).: you want to add behaviors flexibly, avoid tight coupling, or support multiple behaviors (e.g., a ).9. Comment Only When NecessaryMany developers either  or . Both are problematic:Too few comments make it hard to understand non-obvious decisions.Too many comments clutter the code and often go out of date, making them misleading.The truth is: good code should explain itself through meaningful names, small functions, and clear structure. Comments should be reserved for explaining  something is done, not  the code is already showing. Bad Example (Redundant Comments):// Create a new user
+User user = new User();
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
+// Set the user's name
+user.setName("John");
 
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
+// Save the user to the database
+userRepository.save(user);These comments add no value, they just repeat what the code already says. Worse, if the method names change ( → ), the comments may become inconsistent.Good Example (Self-Explanatory Code):User newUser = new User();
+newUser.setFullName("John Doe");
+userRepository.save(newUser);Here, the code is clear enough that comments are unnecessary.Comment the , Not the Sometimes, though, there  value in comments when explaining intent or non-obvious decisions.// We cache user details to reduce DB load, even if slightly stale data is acceptable.
+// Freshness guaranteed by scheduled background refresh every 5 minutes.
+UserDetails userDetails = userCache.get(userId);Here the comment explains why caching is acceptable, something that code alone cannot convey.10. Write Good Commit MessagesA commit message is more than just a note for yourself, it’s documentation for your whole team (and your future self). Poor commit messages like  or  provide no context, making it hard to understand the history of a project or why a change was made.Help others (and you) understand the  behind code changes.Make debugging and rollback easier.Improve collaboration, especially in large teams.Guidelines for Good Commit MessagesPretend you’re giving a command:  instead of .This matches how Git itself uses messages (e.g., ).Keep the subject line conciseAim for .Capitalize the first letter, don’t end with a period.Provide context in the body (if needed)The subject is  changed.The body explains  it changed or  it was solved.Wrap lines at ~72 characters for readability in CLI tools.Reference issues or tickets (if applicable)Helps track changes to features, bugs, or requirements.These are vague and unhelpful.Short Commit (Simple Change):Add null check in user validationCommit with Body (Explaining Reason):Refactor payment service to use strategy pattern
 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+Replaced conditional logic with a Strategy pattern to make it easier 
+to add new payment providers in the future. This improves extensibility 
+and reduces duplication across services.Commit with Issue Reference:Fix incorrect tax calculation in invoice generator (#123)
 
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
+The tax rate was being applied twice in certain edge cases. Added 
+unit tests to cover this scenario.Suppose you refactored this:// Old Code
+double total = price + (price * 0.18); // 18% GST hardcoded// New Code
+private static final double GST_RATE = 0.18;
 
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
+double total = price + (price * GST_RATE);Refactor invoice calculation to use GST_RATE constant
 
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+Replaced hardcoded tax value with a named constant. This makes 
+the code easier to maintain if tax rates change in the future.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>Flow Engineering • Steve Pereira &amp; Andrew Davis</title><link>https://www.youtube.com/watch?v=ntLRJ8FC-uo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ntLRJ8FC-uo?version=3" length="" type=""/><pubDate>Tue, 16 Sep 2025 12:59:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here
+ (https://gotopia.tech/episodes/377) 
+Steve Pereira - Co-Author of "Flow Engineering" & Principal Consultant at Visible Flow Consulting
+Andrew Davis - Co-Author of "Flow Engineering" & Founder at Institute for Transformational Leadership
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+Steve
+https://x.com/steveelsewhere
+https://github.com/stevepereira
+https://www.linkedin.com/in/devopsto
+https://stevepereira.ca
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+Andrew
+https://x.com/andrewdavis_io
+https://github.com/abd3
+https://www.linkedin.com/in/andrewdavis-io
+https://www.andrewdavis.io
 
 Links
-https://stripe.dev
+https://flowcollective.org
 
 DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+Flow Engineering co-authors Steve Pereira and Andrew Davis discuss their approach to improving workflow visibility in software development and knowledge work. They explore how value stream mapping can be adapted for modern digital work environments, where the work is largely invisible compared to manufacturing settings.
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+The authors explain their five-map framework designed to help teams establish clarity, improve collaboration, and enhance productivity despite busy schedules and constant firefighting. They emphasize the importance of visual collaboration to create shared mental models and the continuing relevance of these practices in an AI-driven future.
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+Steve Pereira & Andrew Davis • Flow Engineering
+ (https://amzn.to/3GY3u44) Andrew Davis • Mastering Salesforce DevOps
+ (https://amzn.to/4kjGmf6) Susanne Kaiser • Adaptive Systems With Domain-Driven Design, Wardley Mapping & Team Topologies
+ (https://amzn.to/3XTmNCc) Charles Humble • Professional Skills for Software Engineers
+ (https://www.conissaunce.com/professional-skills-shortcut) Simon Wardley • Wardley Mapping, The Knowledge
+ (https://amzn.to/3XQEeDu) Simon Wardley • Wardley Maps (https://amzn.to/45U8Upr) 
+Crossing Borders (https://www.buzzsprout.com/2529297/episodes/17682252) 
 
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
 
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+Crossing Borders is a podcast by Neema, a cross border payments platform that...
+
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id)    Spotify (https://open.spotify.com/show/2lOe2EyAuuvTnJjxqa1aav) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +234,27 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Metrics that Matter: Outcomes Over Outputs • Gabrielle Benefield • YOW! 2014</title><link>https://www.youtube.com/watch?v=7FHnPIDGdtA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/7FHnPIDGdtA?version=3" length="" type=""/><pubDate>Mon, 15 Sep 2025 12:00:15 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2014. #GOTOcon #YOW
 https://yowcon.com
 
-Andrew Browne - Solution Architect at Picnic Software
+Gabrielle Benefield - Agile Trainer
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+https://x.com/gbenefield
+https://www.linkedin.com/in/mobiusloop
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Subramaniam & Hunt • Practices of an Agile Developer • https://amzn.to/2XjbWor
+Uncle Bob • Clean Agile • https://amzn.to/3tpAqb5
+Derby, Larsen & Schwaber • Agile Retrospectives • https://amzn.to/3hB4eNk
+Jeff Sutherland • Scrum: The Art of Doing Twice the Work in Half the Time • https://amzn.to/2X4GQAD
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#Agile #ScalingAgile #Scrum #GabrielleBenefield #YOWcon
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
