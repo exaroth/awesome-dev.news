@@ -1,38 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Early Days of Agile Development &amp; Is Design Dead? • Martin Fowler &amp; James Lewis</title><link>https://www.youtube.com/watch?v=D348BiHXRCw</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/D348BiHXRCw?version=3" length="" type=""/><pubDate>Fri, 26 Sep 2025 12:52:26 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024.
+https://gotocph.com
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Martin Fowler - Pioneer of Various Topics around Object-Oriented Technology & Agile Methods
+James Lewis - Software Architect & Director at Thoughtworks  @thoughtworks  
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Martin
+https://x.com/martinfowler
+https://www.martinfowler.com
+https://toot.thoughtworks.com/@mfowler
+https://www.linkedin.com/in/martin-fowler-com
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+James
+https://bsky.app/profile/boicy.bovon.org
+https://twitter.com/boicy
+https://linkedin.com/in/james-lewis-microservices
+https://github.com/boicy
+https://www.bovon.org
 
-DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
+Links
+https://agilemanifesto.org
+https://martinfowler.com/articles/designDead.html
+https://martinfowler.com/articles/on-pair-programming.html
 
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
-
+Read the full abstract here
+ (https://gotocph.com/2024/sessions/3521) 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Martin Fowler • Refactoring
+ (https://amzn.to/3EVcHXQ) Scott W. Ambler & Pramod Sadalage • Refactoring Databases
+ (https://amzn.to/3HgdLJ3) Martin Fowler & Pramod Sadalage • NoSQL Distilled
+ (https://amzn.to/3ChIpu7) Martin Fowler • Patterns of Enterprise Application Architecture
+ (https://amzn.to/3lp4sIq) Martin Fowler • Domain-Specific Languages
+ (https://amzn.to/3nzOIFk) Martin Fowler • UML Distilled (https://amzn.to/3kahjyA) 
+Crossing Borders (https://www.buzzsprout.com/2529297/episodes/17682252) 
+
+
+Crossing Borders is a podcast by Neema, a cross border payments platform that...
+
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id)    Spotify (https://open.spotify.com/show/2lOe2EyAuuvTnJjxqa1aav) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +55,61 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Fundamentals of Data Engineering • Matt Housley &amp; Joe Reis • GOTO 2025</title><link>https://www.youtube.com/watch?v=VdGVmqiJkeg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/VdGVmqiJkeg?version=3" length="" type=""/><pubDate>Wed, 24 Sep 2025 22:00:38 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/399
+
+Matt Housley - Co-Author of "Fundamentals of Data Engineering", Keynote Speaker & Podcaster
+Joe Reis - Co-Author of "Fundamentals of Data Engineering", Keynote Speaker, Professor & Podcaster
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Matt
+https://www.linkedin.com/in/housleymatthew
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Joe
+https://www.linkedin.com/in/josephreis
+https://github.com/JoeReis
+https://joereis.substack.com
+
+Links
+https://mathstodon.xyz/@tao/114915604830689046
+https://youtu.be/Q-Tm-HO7auE
+https://youtu.be/ObTljG96k_k
+https://youtu.be/e22uxT0BdvI
+https://youtu.be/OF9ORPLonq4
+https://youtu.be/Xqnv1vzB9lc
+https://youtu.be/vJ4lydQhxZc
+https://youtu.be/4aHd5qvINoU
+
+DESCRIPTION
+Joe Reis and Matt Housley, co-authors of "Fundamentals of Data Engineering," discuss the evolution of their field three years after their book's publication. They explore how the rise of AI tools has transformed data engineering practices, the ongoing importance of foundational knowledge, and the challenges facing junior engineers in an AI-dominated landscape. The conversation covers the balance between leveraging AI assistance and maintaining core expertise, the resurgence of classical techniques, and why fundamental principles remain more relevant than ever.
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+00:56 The genesis of a data engineering classic
+05:25 Writing before the AI revolution
+12:27 The AI era: Opportunities & challenges
+20:27 The role of expertise in an AI world
+28:00 Timeless principles in a changing landscape
+31:06 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Joe Reis & Matt Housley • Fundamentals of Data Engineering • https://amzn.to/4n85049
+Karen Hao • Empire of AI • https://amzn.to/46qeL6B
+Keach Hagey • The Optimist • https://amzn.to/4nlcS20
+Parmy Olson • Supremacy • https://amzn.to/3IpHdgI
+Peter Norvig & Stuart Russel • Artificial Intelligence • https://amzn.to/420ZgR8
+David Foster • Generative Deep Learning • https://amzn.to/48ZgP4x
+Sol Rashidi • Your AI Survival Guide • https://amzn.to/3UFYnKC
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#DataEngineering #DataScience #AI #ArtificialIntelligence #ML #MachineLearning #Programming #AISolutions #SoftwareEngineering #Programming #TodayInTech #MattHousley #JoeReis #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,66 +120,60 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Solving the Hard Problems • Dave Farley • GOTO 2024</title><link>https://www.youtube.com/watch?v=TMQCiX5wUVU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/TMQCiX5wUVU?version=3" length="" type=""/><pubDate>Wed, 24 Sep 2025 12:01:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+https://gotocph.com
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
-
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
-
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
-
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+Dave Farley - Continuous Delivery & DevOps Pioneer, Award-winning Author, Founder & Director of Continuous Delivery Ltd. @@ModernSoftwareEngineeringYT 
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+https://bsky.app/profile/davefarley77.bsky.social
+https://www.continuous-delivery.co.uk
+https://linkedin.com/in/dave-farley-a67927
+https://twitter.com/davefarley77
+http://www.davefarley.net
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+ABSTRACT
+Evolutionary Architecture & Design – Tackling Complexity in Software
 
-Links
-https://stripe.dev
+Software is a creative act, and is at the forefront of the advance of our culture, we are living through the information revolution. Software is also one of the most complex things that humans build. Sure not all software is cutting edge, but the lessons that we have learned from building cutting edge systems are profound and some of them are widely applicable.
 
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+Perhaps the most profound and most generally applicable idea of all is that you don’t build complex systems in one giant bound of intuition and inspiration, complex systems evolve over time and are the product of many many small steps, so how do we, and what does it take to, organise to take advantage of that? [...]
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
+TIMECODES
+00:00 Intro
+03:17 What is engineering really for?
+08:53 How to design & architect for ease of change?
+12:29 Iteration
+15:48 How to use the power-tools
+18:03 Small steps
+21:08 Prioritize testability
+25:00 Architecture as a snapshot
+27:16 Maintain the tourist map
+28:13 Prioritize ease of change
+29:31 Separate concerns
+30:18 Adapt to the current context
+32:34 Don't design ahead
+33:56 Platform as abstraction
+35:45 Manage coupling
+37:25 Conclusion
+37:48 Outro
 
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Download slides and read the full abstract here:
+https://gotocph.com/2024/sessions/3317
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
+David Farley • Modern Software Engineering • https://amzn.to/3GI468M
+Dave Farley • Continuous Delivery Pipelines • https://amzn.to/3rjetdi
+Dave Farley & Jez Humble • Continuous Delivery • https://amzn.to/3ocIHwd
+Dave Farley & many more • Software Architecture Metrics • https://amzn.to/3M3XqG5
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#EvolutionaryArchitecture #SoftwareArchitecture #ContinuousArchitecture #EvolutionaryArchitecture #Coupling #Complexity #SoftwareComplexity #SoftwareEngineering #Programmer #DaveFarley
+
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
 https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
@@ -179,7 +183,49 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Serverless Apps on Cloudflare • Ashley Peacock &amp; Ricky Robinett</title><link>https://www.youtube.com/watch?v=EgfJKipBpVE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/EgfJKipBpVE?version=3" length="" type=""/><pubDate>Tue, 23 Sep 2025 12:26:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here
+ (https://gotopia.tech/episodes/379) 
+Ashley Peacock - Staff Software Engineer at Simply Business & Author of "Serverless Apps on Cloudflare" & "Creating Software with Modern Diagramming Techniques"
+Ricky Robinett - VP Developer Relations & Community at Cloudflare
+
+RESOURCES
+Ashley
+https://twitter.com/_ashleypeacock
+https://www.linkedin.com/in/ashley-peacock-133749120
+https://medium.com/@ashley-peacock
+https://github.com/apeacock1991
+
+Ricky
+https://twitter.com/rickyrobinett
+https://www.linkedin.com/in/rickyrobinett
+https://about.me/rickyrobinett
+https://github.com/rickyrobinett
+
+Links
+https://www.cursor.com
+
+DESCRIPTION
+Ricky Robinett interviews Ashley Peacock, author of "Serverless Apps on Cloudflare", about the developer platform side of Cloudflare. Ashley explains how Cloudflare has evolved from primarily a security company to a full-fledged developer platform with global deployment capabilities, databases, caching solutions, and AI tools.
+
+They discuss the unique aspects of Cloudflare's architecture, including global deployment by default, bindings that simplify resource connections without requiring secrets management, and excellent local development experience.
+
+Ashley highlights several Cloudflare products including Workers (serverless functions), D1 (SQLite database), KV (key-value store), R2 (object storage), Durable Objects, and AI offerings like Workers AI and AI Gateway. The conversation covers developer experience, using AI assistants for coding, and the benefits of Cloudflare's approach to simplifying cloud development.
+
+RECOMMENDED BOOKS
+Ashley Peacock • Serverless Apps on Cloudflare
+ (https://amzn.to/3EU7P85) Ashley Peacock • Creating Software with Modern Diagramming Techniques
+ (https://amzn.to/438rcBZ) Jeroen Mulder • Multi-Cloud Strategy for Cloud Architects (https://amzn.to/3FdNDOA) 
+Crossing Borders (https://www.buzzsprout.com/2529297/episodes/17682252) 
+
+
+Crossing Borders is a podcast by Neema, a cross border payments platform that...
+
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id)    Spotify (https://open.spotify.com/show/2lOe2EyAuuvTnJjxqa1aav) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +241,69 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>The Death of Classical Computer Science • Matt Welsh &amp; Julian Wood • GOTO 2025</title><link>https://www.youtube.com/watch?v=Xqnv1vzB9lc</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Xqnv1vzB9lc?version=3" length="" type=""/><pubDate>Mon, 22 Sep 2025 12:01:04 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
 
-Andrew Browne - Solution Architect at Picnic Software
+Check out more here:
+https://gotopia.tech/articles/398
+
+Matt Welsh - Head of Al Systems at Palantir
+Julian Wood - Serverless Developer Advocate at AWS  @julian_wood  
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Matt
+https://twitter.com/mdwelsh
+https://www.mdw.la
+https://github.com/mdwelsh
+https://www.linkedin.com/in/welsh-matt
+https://www.ultravox.ai
+
+Julian
+https://bsky.app/profile/julianwood.com
+https://twitter.com/julian_wood
+http://www.wooditwork.com
+https://www.linkedin.com/in/julianrwood
+
+Links
+https://youtu.be/Pv0cfsastFs
+https://youtu.be/-hrf9XAy0Tk
+https://youtu.be/xZ_Ize3knj0
+https://youtu.be/fROpZ6EYa54
+https://youtu.be/NDWdkmvX91E
+https://youtu.be/N53Gsz0Gm4c
+https://youtu.be/M0exasJQ1ks
+https://youtu.be/wUrIjKbktCk
+https://youtu.be/iVY7dMqRZOY
+https://youtu.be/Rxqko96C5ZI
+https://youtu.be/7sHUZ66aSYI
+
+DESCRIPTION
+Matt Welsh, former professor at Harvard University and AI researcher, argues to Julian Wood that we're witnessing the death of classical computer science as language models evolve into general-purpose computers capable of direct problem-solving without human-written code.
+
+He envisions a future where AI eliminates programming barriers, democratizing computing power so anyone can instruct computers through natural language. While acknowledging concerns about job displacement and societal equity, Matt believes this transformation will unleash unprecedented human creativity by putting the full power of computing in everyone's hands, moving beyond the current "programming priesthood" to universal access to computational problem-solving. 
+
+TIMECODES
+00:00 Intro
+00:24 LLMs as the new computers
+06:07 The future of language models: From silos to integration
+11:15 Open Source models & the democratization of AI
+17:44 From programming priesthood to universal computing
+29:31 Challenges & concerns
+44:53 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Michael Feathers • AI Assisted Programming • https://leanpub.com/ai-assisted-programming
+Matthias Kalle Dalheimer & Matt Welsh • Running Linux • https://amzn.to/3YSwAIv
+Alex Castrounis • AI for People and Business • https://amzn.to/3NYKKTo
+Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Kelleher & Tierney • Data Science (The MIT Press Essential Knowledge series) • https://amzn.to/3AQmIRg
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#AI #LLM #LargeLanguageModels #AIAssistant #FutureOfComputing #RAG #RetrievalAugmentedGeneration #FutureOfCS #ComputerScience #Programming #AIFuture #TodayInTech #MattWelsh  #JulianWood
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
