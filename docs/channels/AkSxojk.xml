@@ -1,98 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>ChatLoopBackOff: Episode 68 (KANISTER)</title><link>https://www.youtube.com/watch?v=-dy_J3VmmOg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/-dy_J3VmmOg?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 22:51:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Join us LIVE as CNCF Ambassador Carlos Santana dives into Kanister, the open source framework for application-level data management on Kubernetes.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>Alibaba is going all in on Qwen…</title><link>https://www.youtube.com/watch?v=SquU4Bpc73Y</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/SquU4Bpc73Y?version=3" length="" type=""/><pubDate>Fri, 3 Oct 2025 16:02:28 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Try Brilliant for free - https://brilliant.org/fireship and get 20% off a premium annual subscription.
 
-Carlos will be exploring the project for the very first time, right alongside you. Expect a hands-on walkthrough of the docs, community resources, and real-world use cases that highlight how Kanister helps extend Kubernetes for backup, recovery, and data operations.
+Alibaba just announced a $52 billion roadmap towards artificial super intelligence and their ultimate goal of becoming the Android of the AI era. But can the announcements made at Apsara 2025 really put them on the road to ASI? Let's find out...
 
-If you’re curious about how cloud native projects approach complex data management challenges, or just enjoy watching an experienced open source explorer break down a CNCF project live, this session is for you.
+#ai #tech #alibaba
 
-Bring your questions, share your experiences, and learn in real time as we explore Kanister together!]]></content:encoded></item><item><title>I can&apos;t even with these company names...</title><link>https://www.youtube.com/shorts/UBnfA9s3OuE</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/UBnfA9s3OuE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 21:25:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Seriously... They're good products, just unfortunately named.
+💬 Chat with Me on Discord
 
-And yes I know that's a switch and not a router, lol. This is why I use scripts for my long form videos :D
+https://discord.gg/fireship
 
-Here are affiliate links to the two products I bought and mentioned:
+🔗 Resources
+- https://www.alibabacloud.com/en/apsara-conference
 
-  - CUKTECH 10Ah 100W portable charger: https://amzn.to/4murMTe
-  - NICGIGA 5Gbps Network Switch: https://amzn.to/3HNJstX
+🔥 Get More Content - Upgrade to PRO
 
-Support me on Patreon: https://www.patreon.com/geerlingguy
-Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
-Merch: https://www.redshirtjeff.com
-2nd Channel: https://www.youtube.com/@GeerlingEngineering
-3rd Channel: https://www.youtube.com/@Level2Jeff]]></content:encoded></item><item><title>Blind &amp; Visually Impaired Initiative (BVI) Meeting - 2025-08-19</title><link>https://www.youtube.com/watch?v=bJej44Ug8tU</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/bJej44Ug8tU?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 20:16:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>Do THIS before you boot up that old computer!</title><link>https://www.youtube.com/watch?v=779nru5udpQ</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/779nru5udpQ?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 14:00:18 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Taking it apart is usually a better option than turning it on.
+Upgrade at https://fireship.io/pro
+Use code YT25 for 25% off PRO access 
 
-Track all the work I'm doing on Retro Macs: https://github.com/geerlingguy/retro-computers
+🎨 My Editor Settings
 
-Also check out Infinite Mac—you can enjoy retro Mac software in the comfort of your browser, and not have to restore a 35 year old Mac like I did! https://infinitemac.org/
+- Atom One Dark 
+- vscode-icons
+- Fira Code Font
 
-Parts list:
+🔖 Topics Covered
+- What Alibaba announced at Apsara 2025
+- How close is Alibaba achieve ASI?
+- Are Alibaba's plans achievable?
+- Qwen 3-Max]]></content:encoded></item><item><title>Incremental Design, DevOps, Microservices &amp; CICD • Michael Nygard &amp; Dave Farley</title><link>https://www.youtube.com/watch?v=Fc-aQoc-XZI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Fc-aQoc-XZI?version=3" length="" type=""/><pubDate>Fri, 3 Oct 2025 12:32:25 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024.
+https://gotocph.com
 
-  - Console5 - Analog board (630-0395) caps: https://console5.com/store/macintosh-classic-analog-pcb-cap-kit.html
-  - Console5 - Logic board tantalum caps: https://console5.com/store/macintosh-classic-smd-tantalum-main-pcb-cap-kit.html
-  - Mac Memories - 2x 1MB SIMMs: https://www.ebay.com/itm/144565895077
-  - MacBatt Internal CR2032 PRAM replacement: https://www.tindie.com/products/jurassicomp/macbatt-internal-cr2032-pram-macintosh-battery/
-
-Some videos referenced in this video:
-
-  - Mac84 - Repairing a Sad Quadra 840AV: https://www.youtube.com/watch?v=LBgr5mdimRY
-  - Peter Cetinski - RIFA AC Cap Blowup: https://www.youtube.com/watch?v=njbwdbcfXjc
-  - iiiDIY Recapping 20th Anniversary Mac: https://youtu.be/mabH-YB6kn4?t=683
-
-Music in this video by LOOK MUM NO COMPUTER: https://www.youtube.com/watch?v=M47dXmZUnBc
-
-Support me on Patreon: https://www.patreon.com/geerlingguy
-Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
-Merch: https://redshirtjeff.com
-2nd Channel: https://www.youtube.com/c/GeerlingEngineering
-
-Contents:
-
-00:00 - Long screwdrivers and old computer problems
-03:18 - Tools of the trade
-05:09 - Cracking open the Mac
-07:41 - Breaking the anode, safely
-09:36 - Logic board removal
-11:06 - Analog board and CRT neck board removal
-12:50 - Recapping the Analog board
-18:08 - Recapping the Logic board
-21:29 - Tantalum caps, MacBatt, and 4 MB RAM upgrade
-23:02 - Re-assembling the Classic
-23:51 - First power
-25:53 - Computing like it's 1991
-28:45 - Revealing the build, reliving the memories
-30:41 - More Macs?]]></content:encoded></item><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
-
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Michael Nygard - General Manager of Data at Nubank
+Dave Farley - Continuous Delivery & DevOps Pioneer, Award-winning Author, Founder & Director of Continuous Delivery Ltd.
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Michael
+https://www.linkedin.com/in/mtnygard
+https://twitter.com/mtnygard
+http://www.michaelnygard.com
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Dave
+https://bsky.app/profile/davefarley77.bsky.social
+https://www.continuous-delivery.co.uk
+https://linkedin.com/in/dave-farley-a67927
+https://twitter.com/davefarley77
+http://www.davefarley.net
 
-DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
-
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
-
+Read the full abstract here
+ (https://gotocph.com/2024/sessions/3526) 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+David Deutsch • The Beginning of Infinity
+ (https://amzn.to/4k4ZxJA) Michael Nygard • Release It! 2nd Edition
+ (https://amzn.to/3WJeKV8) Michael Nygard • Release It! 1st Edition
+ (https://amzn.to/3XCkiRf) Zhamak Dehghani • Data Mesh
+ (https://amzn.to/3tTCwAC) Dave Farley • Modern Software Engineering
+ (https://amzn.to/3GI468M) Dave Farley • Continuous Delivery Pipelines
+ (https://amzn.to/3rjetdi) Dave Farley & Jez Humble • Continuous Delivery (https://amzn.to/3ocIHwd) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -108,63 +70,87 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>ChatLoopBackOff: Episode 67 (Kserve)</title><link>https://www.youtube.com/watch?v=BjXZxUR8NMo</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/BjXZxUR8NMo?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 20:33:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Join us LIVE as CNCF Ambassador Shivay Lamaba dives into KServe, the open source project designed for scalable and reliable ML models serving on Kubernetes.
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Can we get Intel Arc GPUs working on a Pi before Nvidia kills them?</title><link>https://www.youtube.com/watch?v=Q3bY0qHl8gw</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/Q3bY0qHl8gw?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 19:55:46 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[It's been five years since I started working towards full eGPU support on the Raspberry Pi.
 
-Shivay will be  exploring the project for the very first time, right alongside you. Expect a hands-on walkthrough of the docs, community resources, and real-world use cases that make KServe a key piece in the cloud native AI/ML ecosystem.
-If you’re curious about production-grade model inference, want to see how cloud native communities approach machine learning workloads, or just enjoy watching an experienced open source explorer break down a CNCF project live, this session is for you.
+And we're finally here. Check out all the graphics cards I'm testing on: https://pipci.jeffgeerling.com
 
-Bring your questions, share your experiences, and learn in real time as we explore KServe together!]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+And PLEASE consider donating to the UOAA, who has helped me and millions of ostomates over the years, to live a better life after surgery. You can use the donation option on YouTube, or support the UOAA directly: https://www.ostomy.org/donate/
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+You can also donate on my 5K Run for Resilience fundraising page—any option supports the UOAA directly! https://runsignup.com/jeff-geerling
+
+Support me on Patreon: https://www.patreon.com/geerlingguy
+Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
+Merch: https://www.redshirtjeff.com
+2nd Channel: https://www.youtube.com/@GeerlingEngineering
+3rd Channel: https://www.youtube.com/@Level2Jeff
+
+Contents:
+
+(Chapters will be added after the livestream's over)]]></content:encoded></item><item><title>Learning Python Programming • Fabrizio Romano &amp; Naomi Ceder • GOTO 2025</title><link>https://www.youtube.com/watch?v=Yi-Kv882umU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Yi-Kv882umU?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 12:01:07 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/401
+
+Fabrizio Romano - Development Manager at Sohonet & Co-Author of "Learning Python Programming"
+Naomi Ceder - Python Instruction and Consulting & Author of "The Quick Python Book" @NaomiCeder 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Fabrizio
+https://x.com/gianchub
+https://github.com/gianchub
+https://www.linkedin.com/in/gianchub
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Naomi
+https://bsky.app/profile/naomiceder.tech
+https://github.com/nceder
+https://www.linkedin.com/in/naomiceder
+https://www.naomiceder.tech
+
+Links
+https://adventofcode.com
+https://youtu.be/7CwmUmQjvYg
+https://youtu.be/qmh7Uppd3x0
+https://youtu.be/ahyF8e9qKBc
+https://youtu.be/SYrVZR_g718
+https://youtu.be/lWPLgm52ICs
+https://youtu.be/EFXxXFHpS0M
+https://youtu.be/Xqnv1vzB9lc
+https://youtu.be/IX3300umebg
+https://youtu.be/ul5vjXTNSsE
+https://youtu.be/Pv0cfsastFs
+https://youtu.be/MNRIJsoi-Ds
+https://youtu.be/pzlqeX9nh1g
+
+DESCRIPTION
+Naomi Ceder interviews Fabrizio Romano, author of "Learning Python Programming" (now in its 4th edition). They discuss Fabrizio’s decade-long journey as a Python programmer and book author, exploring how his perspectives have evolved across multiple editions.
+
+Key topics include the shift from GUI-focused content to command-line applications, the controversial introduction of typing in Python, the rise of AI in coding, and the importance of educating junior developers. Fabrizio emphasizes the balance between embracing new tools like AI while maintaining fundamental programming skills and the human element in software development.
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+01:49 The journey of writing 4 book editions
+04:48 From scripts to command-line interfaces (CLI)
+11:51 Adding a collaborator
+14:38 The evolution of Python typing
+18:33 Coding challenges as a passion project
+22:20 AI & the future of coding
+29:34 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Fabrizio Romano & Heinrich Kruger • Learning Python Programming • https://amzn.to/4myLBIt
+Naomi Ceder • The Quick Python Book • https://amzn.to/3zwdDOa
+Luciano Ramalho • Fluent Python • https://amzn.to/3oSw2je
+David Beazley • Python Distilled (Developer's Library) • https://amzn.to/3QjNBEv
+Anna Skoulikari • Learning Git • https://amzn.to/4cSl8lz
+Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#Python #Python3 #LearningPythonProgramming #Coding #PythonTutorial #FluentPython #PythonDistilled #AISolutions #AdventOfCode #CommandLine #CommandLineInterfaces #CLI #SoftwareEngineering #Programming #TodayInTech #FabrizioRomano #NaomiCeder #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -175,17 +161,100 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Welcome and Opening Remarks</title><link>https://www.youtube.com/watch?v=o0tRD1joNuQ</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/o0tRD1joNuQ?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 00:46:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
+Welcome & Opening Remarks
+Kyverno Maintainers and Community Members welcome all event participants]]></content:encoded></item><item><title>Orchestrating Policy-Driven Tests with Kyverno, Argo Events, and Testkube -- Sonali Srivastava</title><link>https://www.youtube.com/watch?v=cNn-OtEGDvQ</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/cNn-OtEGDvQ?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 00:46:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
+Orchestrating Policy-Driven Tests with Kyverno, Argo Events, and Testkube -- Sonali Srivastava, Technology Evangelist at Improving
+As Kubernetes adoption grows, each deployment introduces potential security, compliance, and operational risks that manual governance cannot scale to address. DevOps teams deploy code multiple times a day, while security and compliance teams demand thorough reviews. The result is often a trade-off: either slowing innovation or weakening security posture. Over time, configurations drift from intended standards, while frameworks like SOC 2, PCI DSS, and GDPR demand continuous proof of compliance. Policy-as-Code helps close this gap by codifying rules such as resource limits and compliance checks directly in Kubernetes. In this talk, we'll show how policies can do more than enforce guardrails; they can trigger automated tests. Using Kyverno for policy enforcement, Argo Events for event capture, and Testkube for test orchestration, we'll demonstrate how violations can automatically run smoke or regression tests, providing actionable feedback instead of simply blocking deployments.]]></content:encoded></item><item><title>How Kyverno has Changed Platform Engineering Security -- Pedro Ignacio, Itaú Unibanco</title><link>https://www.youtube.com/watch?v=bWDuJ94NhGo</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/bWDuJ94NhGo?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 00:46:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
 
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
+How Kyverno has Changed Platform Engineering Security -- Pedro Ignacio, Senior Platform Engineer, Itaú Unibanco
+In this session we're going to explore how Kyverno, applied in the context of Kubernetes clusters has changed the way we implement guardrails and controls into our platforms. We'll explore the most important issues Kyverno addresses within the platform engineering landscape as well as see real-world examples of how the solution is being used to protect environments and to guarantee security best practices bettering the overall Developer experience while delivering more secure applications faster.]]></content:encoded></item><item><title>Thank You &amp; Closing Remarks</title><link>https://www.youtube.com/watch?v=YJXThy4lksA</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/YJXThy4lksA?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 00:46:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Thank You & Closing Remarks
+Kyverno Maintainers and Community Members give thanks to event organizing committee and share details about the Kyverno Project and contribution opportunities in closing]]></content:encoded></item><item><title>Kyverno Gets Smarter: Writing Dynamic Policies with CEL -- Koray Oksay</title><link>https://www.youtube.com/watch?v=P7e5cy5Vi9E</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/P7e5cy5Vi9E?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 00:46:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Kyverno Gets Smarter: Writing Dynamic Policies with CEL -- Koray Oksay, Kubernetes Consultat at Kubermatic
+Kyverno’s YAML-first policy model is easy to adopt, but as complexity grows, traditional match and pattern rules can become flaky or overly verbose. CEL (Common Expression Language), a game-changing addition that brings dynamic, context-aware logic, now supports Kyverno policies to overcome this. In this session, you’ll learn how CEL unlocks a new level of flexibility in Kyverno. We will explore how to write cleaner, smarter policies by embedding CEL expressions into validation conditions, preconditions, and match logic. You’ll see real-world use cases where CEL simplifies policy writing, improves performance, and enables previously impossible or challenging tasks in pure YAML. Whether you’re writing policies for security, governance, or multi-tenant control, CEL gives you the power to go beyond boilerplate YAML and build dynamic, context-sensitive guardrails without leaving Kubernetes.]]></content:encoded></item><item><title>Green Platform Engineering: Sustainable Kubernetes with Kyverno Policies -- Rajeev Samuel Devadas</title><link>https://www.youtube.com/watch?v=Kje6kQK2J3k</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/Kje6kQK2J3k?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 00:46:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Green Platform Engineering: Sustainable Kubernetes with Kyverno Policies -- Rajeev Samuel Devadas, Application Consultant Architect at IBM Corp's Hybrid Cloud Transformation Division
+Platform engineering teams increasingly prioritize sustainability alongside developer experience. This presentation explores how Kyverno policies enable organizations to build environmentally conscious Internal Developer Platforms (IDPs) that reduce resource waste while enhancing developer productivity. We'll demonstrate how policy-as-code approaches help teams achieve their sustainability goals without sacrificing innovation or deployment velocity. Our analysis shows that implementing resource optimization policies through Kyverno reduces cluster resource consumption by 40% while improving application performance. We'll showcase practical policies that automatically right-size workloads, enforce resource limits, and prevent overprovisioning. The session includes real examples of mutation policies that inject sustainability best practices, such as automatic horizontal pod autoscaler configurations and efficient container image selection based on size and vulnerability metrics. We'll present a comprehensive framework for building self-service platforms where Kyverno policies guide developers toward sustainable choices. This includes integration patterns with developer portals like Backstage, where policy validations provide immediate feedback on resource efficiency. We'll demonstrate how generate policies can automatically create namespace quotas and limit ranges that balance developer freedom with environmental responsibility. Advanced examples will cover using Kyverno's background scans to identify and remediate resource waste in existing deployments. Attendees will learn strategies for implementing graduated policy enforcement that educates developers while preventing unsustainable practices. We'll share metrics dashboards that visualize the environmental impact of policy decisions and demonstrate how platform teams can use Kyverno to report on sustainability KPIs. This session equips platform engineers with practical tools to build developer platforms that deliver exceptional experiences while contributing to organizational sustainability goals through intelligent policy automation.]]></content:encoded></item><item><title>I Broke My Cluster with Kyverno (So You Don’t Have To) -- Vinod Kumar, Arcesium India</title><link>https://www.youtube.com/watch?v=JZLcTBaFebo</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/JZLcTBaFebo?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 00:46:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+I Broke My Cluster with Kyverno (So You Don’t Have To) -- Vinod Kumar, Principal Cloud Engineer at Arcesium India
+Working with Kyverno is powerful but with great policy comes great responsibility! In this light-hearted, fast-paced talk, I will share how I accidentally broke my Kubernetes cluster (more than once!) using Kyverno policies that were too strict, too recursive, or just misunderstood. This talk will walk through: (1) The top 3 mistakes I made (e.g., blocking all workloads, infinite policy loops, and bad patching) (2) How to debug and recover from Kyverno policy mishaps (3) Pro tips to write safe, testable, and non-destructive policies Whether you are just starting out or already using Kyverno in production, you will walk away with laughs, learnings, and policy patterns that won’t bring your cluster to its knees.]]></content:encoded></item><item><title>Scaling Developer Self-Service: Kyverno Policies for Inclusive Platform Engineering- Divya Chaudhary</title><link>https://www.youtube.com/watch?v=6YIL-gBjTKg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/6YIL-gBjTKg?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 00:46:16 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io
+
+Scaling Developer Self-Service: Kyverno Policies for Inclusive Platform Engineering -- Divya Chaudhary, Software Development Manager at Amazon
+Digital transformation demands scalable platforms that serve diverse developer populations effectively. This presentation explores how Kyverno policies can create inclusive self-service experiences that parallel successful financial inclusion models—reducing barriers, enabling microservices at scale, and formalizing shadow IT practices. We'll demonstrate how thoughtfully designed Kyverno policies dramatically reduce operational friction for developers, similar to how digital payment systems transformed financial access. Through practical examples, attendees will learn to implement policies that provide guardrails without gatekeeping, enabling teams with varying expertise levels to deploy safely. The session covers using Kyverno's mutation capabilities to automatically inject best practices, reducing the knowledge barrier for junior developers while maintaining platform standards. Critical implementation strategies include creating proportional policies that scale requirements with risk levels, implementing multi-channel policy education through generate policies and developer portals, and leveraging Kyverno's reporting features to identify and address adoption barriers. We'll showcase real-world patterns where policy-as-code reduced deployment failures by standardizing configurations while preserving developer flexibility. The presentation concludes with metrics-driven approaches to measure policy effectiveness in expanding platform access, ensuring your Kubernetes environment serves as a catalyst for innovation rather than a barrier to entry.]]></content:encoded></item><item><title>ChatLoopBackOff: Episode 69 (Logging-Operator)</title><link>https://www.youtube.com/watch?v=H2MOv1uwrgI</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/H2MOv1uwrgI?version=3" length="" type=""/><pubDate>Wed, 1 Oct 2025 22:21:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[In this episode of ChatLoopBackOff, CNCF Ambassador Paige Cruz takes her first look at Logging Operator, a CNCF Sandbox project built to simplify and standardize log management on Kubernetes. Designed to configure and control log collectors like Fluentd and Fluent Bit, Logging Operator enables teams to define log flows as Kubernetes resources—bringing observability closer to cluster-native workflows. Paige will explore how the operator manages pipelines, and what resources are available to contributors and adopters. Where do you think this project is headed in the CNCF landscape? If you’re interested in logging pipelines, Kubernetes-native automation, or evaluating emerging CNCF projects, this first-time exploration is for you.]]></content:encoded></item><item><title>ChatLoopBackOff: Episode 70 (KCP)</title><link>https://www.youtube.com/watch?v=uWM4w_qwtmk</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/uWM4w_qwtmk?version=3" length="" type=""/><pubDate>Wed, 1 Oct 2025 22:17:38 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[In this episode of ChatLoopBackOff, CNCF Ambassador Henrik Rexed explores KCP, a CNCF Sandbox project that rethinks multi-cluster Kubernetes management. KCP provides a lightweight control plane designed for workloads and APIs that span beyond a single cluster. This maes it easier to build, test, and operate software across diverse environments. Henrik will look into how KCP models APIs, its approach to workload placement and tenancy, and what resources exist for contributors and adopters. If you’re curious about scaling across teams and clusters, or want to understand the building blocks of this emerging project, join us for a first look at KCP in action.]]></content:encoded></item><item><title>CNL: kcp – Kubernetes-Like Control Planes for Declarative APIs</title><link>https://www.youtube.com/watch?v=OVjTKxPc92Y</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/OVjTKxPc92Y?version=3" length="" type=""/><pubDate>Wed, 1 Oct 2025 21:34:33 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[In the Cloud Native world declarative APIs are ubiquitous, enshrined in the Kubernetes Resource Model (KRM). Kubernetes Operators are built around this concept and Platform Engineering, an emerging discipline in the ecosystem, often centers around it as well.
+
+This continued success of the KRM raises a question: Why not use the Kubernetes API without the intention to orchestrate containers? kcp, a CNCF Sandbox project, adds stronger multi-tenancy and additional API management capabilities on top of the Kubernetes API server code. It supercharges the KRM to be used as a generic control plane for any kind of declarative APIs.
+
+Our webinar on kcp explores the fundamental concepts of kcp, its usage of the KRM and how to publish and reconcile Kubernetes-like APIs to a multitude of users. Join us on this webinar and gain insights into unlocking all new possibilities with kcp!]]></content:encoded></item><item><title>OpenAI’s new slop machine is open for business…</title><link>https://www.youtube.com/watch?v=hkSj-QapfZo</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/hkSj-QapfZo?version=3" length="" type=""/><pubDate>Wed, 1 Oct 2025 18:38:26 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Try out Blitzy’s codegen platform for enterprise codebases for free - https://blitzy.com
+
+OpenAI's new Sora 2 model is the most accurate, realistic and controllable than anything we've seen before.
+
+In today's video, we'll take a look at what Sora 2 means video content creators and whether they're about to go the way of the dodo. 
+
+#Coding #programming #tech 
+
+💬 Chat with Me on Discord
+
+https://discord.gg/fireship
+
+🔗 Resources
+-   https://openai.com/index/sora-2/
+
+🔥 Get More Content - Upgrade to PRO
+
+Upgrade at https://fireship.io/pro
+Use code YT25 for 25% off PRO access 
+
+🎨 My Editor Settings
+
+- Atom One Dark 
+- vscode-icons
+- Fira Code Font
+
+🔖 Topics Covered
+- OpenAI Sora 2
+- What can Sora 2 do?
+- The future of generative video]]></content:encoded></item><item><title>The Future of Serverless • Nick Coult • GOTO 2025</title><link>https://www.youtube.com/watch?v=5sZR5X7noi0</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/5sZR5X7noi0?version=3" length="" type=""/><pubDate>Wed, 1 Oct 2025 12:00:21 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Serverless 2025. #GOTOcon #GOTOserverless
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025
+
+Nick Coult - Director of Product for Serverless at AWS 
+
+RESOURCES
+https://x.com/nickcoult
+https://github.com/coultn
+https://www.linkedin.com/in/nickcoult
+
+TIMECODES
+00:00 Intro
+02:48 What is serverless?
+04:35 Why serverless?
+06:32 Pioneering serverless compute
+08:25 Event-driven architectures
+13:13 AI agents
+14:51 Agentic or serverless?
+22:06 What are we doing to help build for the future?
+26:26 Start now
+27:32 Outro
+
+Download slides and read the full abstract here:
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3848
+
+RECOMMENDED BOOKS
+Peter Sbarski • Serverless Architectures on AWS • https://amzn.to/3hJzEUM
+Michael Stack • Event-Driven Architecture in Golang • https://amzn.to/3G5e8ST
+Ashley Peacock • Serverless Apps on Cloudflare • https://amzn.to/3EU7P85
+Jeroen Mulder • Multi-Cloud Strategy for Cloud Architects • https://amzn.to/3FdNDOA
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Serverless #AWSServerless #FutureOfServerless #EDA #EventDrivenArchitecture #NickCoult
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -196,59 +265,65 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>CNL: Bringing Agentic AI to Cloud Native with kagent &amp; Kyverno</title><link>https://www.youtube.com/watch?v=C0y8bDvL47M</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/C0y8bDvL47M?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 17:03:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Let’s stop babysitting clusters and build AI agents to operate and govern for us! Kagent, a new CNCF project, enables simple declarative development of Kubernetes-native AI agents for any cloud native projects. This session will show you how to rapidly construct custom AI agents for essential operational and management tasks. Learn how Kyverno, the Kubernetes-native policy engine for managing validation, mutation, generation, and cleanup, can be extended with AI capabilities through kagent using the emerging Model Context Protocol (MCP) to enable intelligent policy recommendations and automation.]]></content:encoded></item><item><title>CNCF Deaf and Hard of Hearing Working Group at KubeCon + CloudNativeCon EU 2025</title><link>https://www.youtube.com/watch?v=CLhA-du1Yy8</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/CLhA-du1Yy8?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 14:49:58 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Huge shout-out to the CNCF Deaf and Hard of Hearing Working Group for an incredible week at KubeCon + CloudNativeCon in London earlier this year! Check out this latest video to get a glimpse of what they were up to and what to expect in Atlanta!
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Replacing Humans with AI is Going Horribly Wrong</title><link>https://www.youtube.com/watch?v=QX1Xwzm9yHY</link><author>ColdFusion</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/QX1Xwzm9yHY?version=3" length="" type=""/><pubDate>Tue, 30 Sep 2025 13:42:26 +0000</pubDate><source url="https://www.youtube.com/channel/UC4QZ_LsYcvcq7qOsOhpAX4A">Cold Fusion</source><content:encoded><![CDATA[Go to https://brilliant.org/coldfusion for 20% off the premium subscription, which grants you unlimited daily access to everything on Brilliant.
 
-They brought so much energy and had lots of activities, including a keynote, several talks, and a fun sign language crash course. Their kiosk in the Project Pavilion was a hub of activity, creating meaningful connections and fostering a more inclusive community.
+AI is a technology that divides people's opinions when we talk about its impacts. On the one had, AI has been disruptive to certain roles of employment. On the other hand, companies who have rushed to implement AI have found themselves regretting it. In this episode we get to the bottom of how AI is being used in the business world.
 
-This group is full of passion and brilliant people. We're so proud of what they've accomplished, and look forward to seeing the team in Atlanta! And for a fun challenge, watch the video and see if you can spot the new sign they created for "CNCF." ✨]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+Watch or listen to ColdFusion on Spotify: https://open.spotify.com/show/1YEwCKoRz8fEDqheXB6UJ1
+
+Sources: 
+https://docs.google.com/document/d/1cavjbsmufe42UwPWBJAZFnuIcML58SZR1I8g1CugCYA/edit?usp=drivesdk
+
+ColdFusion Music: 
+
+https://www.youtube.com/@ColdFusionmusic
+http://burnwater.bandcamp.com   
+
+Get my book: 
+
+http://bit.ly/NewThinkingbook 
+
+ColdFusion Socials: 
+
+https://discord.gg/coldfusion
+https://facebook.com/ColdFusionTV 
+https://twitter.com/ColdFusion_TV 
+https://instagram.com/coldfusiontv
+
+Created by: Dagogo Altraide
+Producers: Tawsif Akkas, Dagogo Altraide]]></content:encoded></item><item><title>The Blind Spots of Platform Engineering • Matt McLarty &amp; Erik Wilde</title><link>https://www.youtube.com/watch?v=swVM5soB1Os</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/swVM5soB1Os?version=3" length="" type=""/><pubDate>Tue, 30 Sep 2025 12:53:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
 https://gotopia.tech
 
 Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+
+Matt McLarty - CTO at Boomi & Co-Author of "Unbundling the Enterprise"
+Erik Wilde - Principal Consultant at INNOQ
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+Matt
+https://bsky.app/profile/mattmclartybc.bsky.social
+https://x.com/MattMcLartyBC
+https://www.linkedin.com/in/mattmclartybc
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+Erik
+https://www.linkedin.com/in/erikwilde
+https://github.com/dret
 
 Links
-https://stripe.dev
+https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6417
+https://cloud.google.com/blog/products/application-development/richard-seroter-on-shifting-down-vs-shifting-left
+https://platformengineering.org/blog
 
 DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
-
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Matt McLarty and Erik Wilde explore the nuanced world of platform engineering, challenging conventional approaches and highlighting the critical importance of aligning technological capabilities with business outcomes. They discuss the evolution from DevOps, the role of APIs, and the need to create flexible, reusable technological building blocks that drive true organizational innovation.
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+Stephen Fishman & Matt McLarty • Unbundling the Enterprise
+ (https://amzn.to/3W2EcXw) Carliss Y. Baldwin • Design Rules, Vol. 2
+ (https://amzn.to/4hdllRr) Matthew Skelton & Manuel Pais • Team Topologies
+ (http://amzn.to/3sVLyLQ) Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps
+ (https://amzn.to/3tCz1xO) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
+ (https://amzn.to/47oAf3l) Gene Kim, Kevin Behr & George Spafford • The Phoenix Project (https://amzn.to/3X9cYxa) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -264,36 +339,132 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>CNL: Network-level and Identity-based Observability with Calico Open Source</title><link>https://www.youtube.com/watch?v=P7RUzvXr7Vg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/P7RUzvXr7Vg?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 13:51:23 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't let your Kubernetes environment be a mystery! Gain the visibility you need to keep things running smoothly. This session dives into why network observability is key in Kubernetes, and includes a live demo showing how to identify misconfigurations, simplify troubleshooting, streamline overall network management, and safely implement and test network security policies across any Kubernetes environment.
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>n8n will change your life as a developer...</title><link>https://www.youtube.com/watch?v=bS9R6aCVEzw</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/bS9R6aCVEzw?version=3" length="" type=""/><pubDate>Mon, 29 Sep 2025 18:11:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Get up to 67% off VPS at Hostinger to self-host your own automations. Use code FIRESHIP for an extra discount at https://hostinger.com/fireshipn8n
 
-Here's what we'll explore:
+As programmers, we have the unique ability to prevent lost time through automation but it's often difficult and expensive to pull off.
 
-* Why network observability is important (hint: Kubernetes can be a bit chaotic! )
-* How observability is the foundation for zero trust security
-* Common customer pain points: Troubleshooting, incorrect policies, compliance, and audits
-* Calico Whisker: What it is and how it provides that crucial bird's-eye view
-* LIVE DEMO: Cluster-wide network observability using Calico Whisker]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+But in today's video we'll look at how an open-source project called n8n could change the way you think about automating work forever. 
 
-Andrew Browne - Solution Architect at Picnic Software
+#coding #programming #codereport
+
+💬 Chat with Me on Discord
+
+https://discord.gg/fireship
+
+🔗 Resources
+- https://n8n.io/
+
+🔥 Get More Content - Upgrade to PRO
+
+Upgrade at https://fireship.io/pro
+Use code YT25 for 25% off PRO access 
+
+🎨 My Editor Settings
+
+- Atom One Dark 
+- vscode-icons
+- Fira Code Font
+
+🔖 Topics Covered
+- What is n8n?
+- Automation software
+- n8n vs Zapier
+- Crazy ways to use n8n
+-  n8n Linux VPS install]]></content:encoded></item><item><title>Sguaba: Type-safe spatial math in Rust</title><link>https://www.youtube.com/watch?v=kESBAiTYMoQ</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/kESBAiTYMoQ?version=3" length="" type=""/><pubDate>Mon, 29 Sep 2025 14:26:27 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[There are a wide variety of ways to describe the locations of objects in space. To name a few, there is: WGS84, the well-known Earth-bound system of latitude and longitude; ECEF (“Earth-centered, Earth-fixed”), a Cartesian coordinate system fixed to Earth’s axes; NED (“North, East, Down”), a coordinate system that describes where in compass directions a given object is relative to an observer; or FRD (“Front, Right, Down”), which describes where a given object is relative to the facing direction of an observer. And to make matters worse, points in all of these systems except WGS84 can be expressed in Cartesian coordinates (ie, X, Y, and Z), spherical coordinates (ie, angle to pole, angle on XY plane, and radius), or horizontal coordinates (ie, azimuth, elevation, and distance).
+
+When we write software for systems that have to handle real-world coordinates, the question of what coordinate system those coordinates are in, and how they’re represented, comes up a lot. And getting it wrong in even a single place opens the door to disastrous consequences. To that end, for work, I wrote the now-open-source crate Sguaba (named after the self-navigating boat of the Celtic deity Manannán mac Lir that is navigated solely by the thoughts of its pilot). Sguaba is a Rust crate that strongly types coordinates and vectors with their respective coordinate system, and implements conversions between them.
+
+In this talk, presented at the Rust Amsterdam meetup @ BlockTech, I go into the complexities of spatial math, as well as how we can use the type system to encode those complexities away. Plus, answers to lots of questions!
+
+Sguaba open-source announcement from Helsing: https://blog.helsing.ai/sguaba-hard-to-misuse-rigid-body-transforms-for-engineers-with-other-things-to-worry-about-than-aeaa45af9e0d
+
+Sguaba on GitHub: https://github.com/helsing-ai/sguaba
+
+You can find the slides at https://jon.thesquareplanet.com/slides/sguaba/ (or an export at https://jon.thesquareplanet.com/slides/sguaba/export.pdf).
+
+0:00:00 Introduction
+0:01:28 Talk
+0:31:40 Q&A]]></content:encoded></item><item><title>Why SW Architecture is Mostly Communication • David Whitney, Ian Cooper &amp; Hannes Lowette • GOTO 2025</title><link>https://www.youtube.com/watch?v=VMmkHZ4wShA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/VMmkHZ4wShA?version=3" length="" type=""/><pubDate>Mon, 29 Sep 2025 12:01:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
+
+Check out more here:
+https://gotopia.tech/articles/400
+
+David Whitney - Director of Architecture at NewDay @DavidWhitneycouk 
+Ian Cooper - A Polyglot Coding Architect at Just Eat @ian_hammond_cooper 
+Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover @Belenar82 
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+David
+https://bsky.app/profile/davidwhitney.co.uk
+http://twitter.com/david_whitney
+https://www.instagram.com/davidwhitneycouk
+https://github.com/davidwhitney
+https://www.linkedin.com/in/davidwhitney
+https://davidwhitney.co.uk/blog
+
+Ian
+https://bsky.app/profile/icooper.bsky.social
+https://hachyderm.io/@ICooper
+https://twitter.com/ICooper
+https://www.linkedin.com/in/ian-cooper-2b059b
+https://github.com/iancooper
+https://ian-cooper.writeas.com
+
+Links
+https://youtu.be/j2AQ9eTZ3-0
+https://youtu.be/_ZvwRJnSsQ4
+https://youtu.be/wO8M6M39vZk
+https://youtu.be/tqmiUJtxaF4
+https://youtu.be/2ofzdPXeQ6o
+https://youtu.be/RtMmxqkPVug
+https://youtu.be/m_Lc0hZvRVM
+https://youtu.be/vvFdTp54gII
+https://youtu.be/vzqzLSJWo3k
+https://youtu.be/m7cWdYVAzX0
+https://youtu.be/hhlxFtV_tZo
+https://youtu.be/PzEox3szeRc
+https://youtu.be/zl5U8KO28rM
+https://youtu.be/JkZvdasAofs
+https://youtu.be/bzVjBu5nhyM
+https://youtu.be/dMwGfRINpz0
+https://youtu.be/7NAyn1DC420
+https://youtu.be/LTFe7Zj-hzQ
+https://youtu.be/x6yUGSmU8Nk
+
+DESCRIPTION
+Three experienced software engineers - Ian Cooper, David Whitney, and Hannes Lowette - discuss the evolution of software architecture from traditional "ivory tower" approaches to modern, collaborative practices. The conversation explores the tension between emergent and designed architecture, the importance of sustainable versus "slash-and-burn" development approaches, and how architectural decisions scale with organizational growth.
+Key themes include the critical role of communication and coaching in architecture, the dangers of pattern cargo-culting, and the fundamental reality that all architectural challenges are ultimately people problems requiring empathy, shared language, and cultural change.
+
+TIMECODES
+00:00 Intro
+00:33 Defining software architecture in a modern context
+04:13 Sustainable vs Slash-and-burn architecture
+07:41 The role of the modern software architect
+15:57 Language & communication in software architecture
+20:46 Scale & organizational growth
+25:18 Decision-making processes & advice forums
+29:45 Balancing standards with team autonomy
+32:53 The pattern problem & design wisdom
+44:50 The transition to leadership & coaching
+50:41 Communication is key
+55:13 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Barry O'Reilly • Residues • https://leanpub.com/residuality
+Barry O'Reilly • The Architect's Paradox • https://leanpub.com/architectsparadox
+Diana Montalion • Learning Systems Thinking • https://amzn.to/3ZpycdJ
+Sam Newman • Monolith to Microservices • https://amzn.to/2Nml96E
+Ronnie Mitra & Irakli Nadareishvili • Microservices: Up and Running• https://amzn.to/3c4HmmL
+Jacqui Read • Communication Patterns • https://amzn.to/3E37lvv
+Vaughn Vernon & Tomasz Jaskula • Strategic Monoliths & Microservices • https://amzn.to/3AcUscj
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#SoftwareArchitecture #Microservices #MicroservicesArchitecture #Monolith #MonolithToMicroservices #TodayInTech #IanCooper #DavidWhitney #HannesLowette
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:

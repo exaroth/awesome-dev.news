@@ -1,38 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Incremental Design, DevOps, Microservices &amp; CICD • Michael Nygard &amp; Dave Farley</title><link>https://www.youtube.com/watch?v=Fc-aQoc-XZI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Fc-aQoc-XZI?version=3" length="" type=""/><pubDate>Fri, 3 Oct 2025 12:32:25 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024.
+https://gotocph.com
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Michael Nygard - General Manager of Data at Nubank
+Dave Farley - Continuous Delivery & DevOps Pioneer, Award-winning Author, Founder & Director of Continuous Delivery Ltd.
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Michael
+https://www.linkedin.com/in/mtnygard
+https://twitter.com/mtnygard
+http://www.michaelnygard.com
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Dave
+https://bsky.app/profile/davefarley77.bsky.social
+https://www.continuous-delivery.co.uk
+https://linkedin.com/in/dave-farley-a67927
+https://twitter.com/davefarley77
+http://www.davefarley.net
 
-DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
-
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
-
+Read the full abstract here
+ (https://gotocph.com/2024/sessions/3526) 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+David Deutsch • The Beginning of Infinity
+ (https://amzn.to/4k4ZxJA) Michael Nygard • Release It! 2nd Edition
+ (https://amzn.to/3WJeKV8) Michael Nygard • Release It! 1st Edition
+ (https://amzn.to/3XCkiRf) Zhamak Dehghani • Data Mesh
+ (https://amzn.to/3tTCwAC) Dave Farley • Modern Software Engineering
+ (https://amzn.to/3GI468M) Dave Farley • Continuous Delivery Pipelines
+ (https://amzn.to/3rjetdi) Dave Farley & Jez Humble • Continuous Delivery (https://amzn.to/3ocIHwd) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +42,71 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Learning Python Programming • Fabrizio Romano &amp; Naomi Ceder • GOTO 2025</title><link>https://www.youtube.com/watch?v=Yi-Kv882umU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Yi-Kv882umU?version=3" length="" type=""/><pubDate>Thu, 2 Oct 2025 12:01:07 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/401
+
+Fabrizio Romano - Development Manager at Sohonet & Co-Author of "Learning Python Programming"
+Naomi Ceder - Python Instruction and Consulting & Author of "The Quick Python Book" @NaomiCeder 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Fabrizio
+https://x.com/gianchub
+https://github.com/gianchub
+https://www.linkedin.com/in/gianchub
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Naomi
+https://bsky.app/profile/naomiceder.tech
+https://github.com/nceder
+https://www.linkedin.com/in/naomiceder
+https://www.naomiceder.tech
+
+Links
+https://adventofcode.com
+https://youtu.be/7CwmUmQjvYg
+https://youtu.be/qmh7Uppd3x0
+https://youtu.be/ahyF8e9qKBc
+https://youtu.be/SYrVZR_g718
+https://youtu.be/lWPLgm52ICs
+https://youtu.be/EFXxXFHpS0M
+https://youtu.be/Xqnv1vzB9lc
+https://youtu.be/IX3300umebg
+https://youtu.be/ul5vjXTNSsE
+https://youtu.be/Pv0cfsastFs
+https://youtu.be/MNRIJsoi-Ds
+https://youtu.be/pzlqeX9nh1g
+
+DESCRIPTION
+Naomi Ceder interviews Fabrizio Romano, author of "Learning Python Programming" (now in its 4th edition). They discuss Fabrizio’s decade-long journey as a Python programmer and book author, exploring how his perspectives have evolved across multiple editions.
+
+Key topics include the shift from GUI-focused content to command-line applications, the controversial introduction of typing in Python, the rise of AI in coding, and the importance of educating junior developers. Fabrizio emphasizes the balance between embracing new tools like AI while maintaining fundamental programming skills and the human element in software development.
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+01:49 The journey of writing 4 book editions
+04:48 From scripts to command-line interfaces (CLI)
+11:51 Adding a collaborator
+14:38 The evolution of Python typing
+18:33 Coding challenges as a passion project
+22:20 AI & the future of coding
+29:34 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Fabrizio Romano & Heinrich Kruger • Learning Python Programming • https://amzn.to/4myLBIt
+Naomi Ceder • The Quick Python Book • https://amzn.to/3zwdDOa
+Luciano Ramalho • Fluent Python • https://amzn.to/3oSw2je
+David Beazley • Python Distilled (Developer's Library) • https://amzn.to/3QjNBEv
+Anna Skoulikari • Learning Git • https://amzn.to/4cSl8lz
+Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#Python #Python3 #LearningPythonProgramming #Coding #PythonTutorial #FluentPython #PythonDistilled #AISolutions #AdventOfCode #CommandLine #CommandLineInterfaces #CLI #SoftwareEngineering #Programming #TodayInTech #FabrizioRomano #NaomiCeder #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,17 +117,43 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Future of Serverless • Nick Coult • GOTO 2025</title><link>https://www.youtube.com/watch?v=5sZR5X7noi0</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/5sZR5X7noi0?version=3" length="" type=""/><pubDate>Wed, 1 Oct 2025 12:00:21 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Serverless 2025. #GOTOcon #GOTOserverless
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
+Nick Coult - Director of Product for Serverless at AWS 
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
+RESOURCES
+https://x.com/nickcoult
+https://github.com/coultn
+https://www.linkedin.com/in/nickcoult
 
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
+TIMECODES
+00:00 Intro
+02:48 What is serverless?
+04:35 Why serverless?
+06:32 Pioneering serverless compute
+08:25 Event-driven architectures
+13:13 AI agents
+14:51 Agentic or serverless?
+22:06 What are we doing to help build for the future?
+26:26 Start now
+27:32 Outro
+
+Download slides and read the full abstract here:
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3848
+
+RECOMMENDED BOOKS
+Peter Sbarski • Serverless Architectures on AWS • https://amzn.to/3hJzEUM
+Michael Stack • Event-Driven Architecture in Golang • https://amzn.to/3G5e8ST
+Ashley Peacock • Serverless Apps on Cloudflare • https://amzn.to/3EU7P85
+Jeroen Mulder • Multi-Cloud Strategy for Cloud Architects • https://amzn.to/3FdNDOA
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Serverless #AWSServerless #FutureOfServerless #EDA #EventDrivenArchitecture #NickCoult
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -131,55 +164,41 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The secret architecture behind &quot;username already taken&quot;</title><link>https://blog.algomaster.io/p/username-lookup-architecture</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!R3uh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F901244c8-b5d7-486e-92e7-9efcf2fe7b74_1492x910.png" length="" type=""/><pubDate>Wed, 1 Oct 2025 03:58:02 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[When you try to sign up on a platform like  and type in your , the system almost instantly tells you whether it’s available or not. If it’s taken, it even suggests  on the spot.For a small startup with only a few thousand users, this check is simple—a quick database query will do. But for platforms like Instagram, Google, or X (formerly Twitter), with , the challenge is far greater.They can’t possibly scan through billions of records every time someone signs up.So how do they make it happen in the blink of an eye?In this article, we will walk through the journey of how these systems are built, starting with the most basic approach and leveling up to the sophisticated architecture used at Big Tech scale.The most straightforward way to check if a username exists is to query the database:SELECT COUNT(1) 
+FROM users 
+WHERE username = ‘new_user’;If the count is greater than zero, the username is already taken. If it’s zero, the username is available.For a small system with thousands or even a few million users, this works just fine. A well-indexed relational database can return the result in milliseconds.But things start to look very different once you scale to hundreds of millions or even billions of users, spread across multiple servers and data centers. Even with efficient data structures like B-trees or hash indexes, scanning and maintaining them takes longer.Databases get overloaded. Every sign-up attempt means another query, creating heavy read traffic on already busy systems.In short: while direct queries are  and , they simply don’t scale to the demands of Big Tech. At billions of records, this approach would quickly grind to a halt.The next natural optimization is .Instead of hitting the database every single time a user tries a new username, we keep a temporary copy of frequently checked usernames in memory (using tools like  or ). The request first goes to the application server.The system checks the cache to see if this username has been queried recently. → return the result instantly (no need to touch the database). → move on to the database.Database check (fallback): If the cache misses, the application queries the database for the authoritative result.Update cache (future optimization): Once the database returns the answer, the system updates the cache so the next time someone checks the same username, it’s available instantly from memory.This works beautifully for usernames that are checked often. For example, if thousands of people keep trying names like , , or , the cache can serve those requests instantly without touching the database at all.But caching introduces new trade-offs: You can’t possibly store billions of usernames in memory forever, it’s just too expensive. Systems often rely on eviction policies like Least Recently Used (LRU) to keep only the “hot” entries. If a username becomes available (say a user deletes their account), but the cache isn’t updated in time, the system may mistakenly think it’s still taken. This is usually solved with  values so cached data eventually expires. Unique usernames still have to go all the way to the database the first time they’re queried.Now things get interesting.Instead of storing every single username explicitly in memory or querying the database each time, what if we stored a  that could tell us whether a username  exist?A Bloom filter is a probabilistic data structure that can very quickly answer the question: “Might this username exist in the system?”If the filter says , you can be 100% sure the username does not exist.If it says , the username  exist, and you double-check in the cache or database.Bloom filters trade a tiny probability of false positives for extreme speed and memory efficiency.Why Bloom Filters are Powerful With ~1.2 GB of memory, a Bloom filter can represent around  with just a . Checking a few bits in memory is much faster than hitting a cache or database.A Bloom filter starts as a large array of bits, all set to .Suppose a user signs up with .The username is run through several different  (say 3–10).Each hash function produces a position in the bit array, and those positions are flipped to .When someone later tries , the same hash functions are applied.The system checks the corresponding bits:If , the username has definitely never been seen → it’s available.If , the username is probably taken.The Catch: False PositivesSometimes, a new username’s hash positions may overlap with ones set by other usernames. This means the filter might say “maybe taken” when the username is actually free.That’s why Bloom filters are always followed by a  for confirmation in case of false positives (~1% of the requests).When you type  and hit enter, here’s what happens behind the scenes in a large-scale system:Your request first first hits a , which routes it to the nearest or least-busy server.Bloom Filter (Primary Check)The server first checks in-memory Bloom filter.If the Bloom filter says the server instantly returns the response “Available!“Most usernames are unique, so the vast majority of requests end here, without touching the cache or database.Cache Check (Secondary Check)If the Bloom filter says , the system consults the distributed cache (Redis/Memcached).If the username was checked recently, the cache instantly returns the definitive answer.Database Check (Final Check)Only if the cache also misses does the request go to the .This is not a single machine but a  (Cassandra, DynamoDB, or Spanner) spread across thousands of servers.Under the hood, indexing structures like  keep lookups efficient— even at massive scale.The database returns the final .On the way back, the result is written into the cache so the next lookup for the same username is instant.This layered approach acts as a funnel, where each step filters out a large number of requests, ensuring that only a tiny fraction ever need to make the “expensive” trip to the main database.Up to this point, we’ve been talking about simple : Does this username exist or not?But real-world platforms like Instagram go further. They also suggest  if your first choice is taken.Take the username  for example. If it’s already in use, Instagram might suggest:These features require something smarter than a  or a . They rely on a data structure purpose-built for : the A  is a tree-like structure that organizes strings by their shared prefixes. Instead of storing usernames as whole words, it breaks them down character by character, reusing common paths. becomes  shares the path  before branching into .Tries unlock a set of capabilities that databases and caches struggle with: Checking whether a username exists takes time proportional only to the length of the string (), not the total number of usernames.For , that’s just 6 steps even if there are billions of usernames in the system. By following a partial path, the trie can instantly list all usernames starting with a given prefix (e.g., ). Since similar usernames share common paths, generating alternatives like  or  becomes easy and efficient.Tries come with trade-offs too: If usernames don’t share many prefixes, the trie branches can grow explosively, consuming large amounts of memory. Inserting or deleting usernames in real-time requires careful synchronization in distributed environments.To reduce memory usage, compressed tries (also called radix trees) are often used.Instead of storing every single character as a node, compressed tries collapse chains of single-child nodes into one edge.This saves both space and lookup steps, making the structure more practical at scale.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>The Blind Spots of Platform Engineering • Matt McLarty &amp; Erik Wilde</title><link>https://www.youtube.com/watch?v=swVM5soB1Os</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/swVM5soB1Os?version=3" length="" type=""/><pubDate>Tue, 30 Sep 2025 12:53:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
 https://gotopia.tech
 
 Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+
+Matt McLarty - CTO at Boomi & Co-Author of "Unbundling the Enterprise"
+Erik Wilde - Principal Consultant at INNOQ
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+Matt
+https://bsky.app/profile/mattmclartybc.bsky.social
+https://x.com/MattMcLartyBC
+https://www.linkedin.com/in/mattmclartybc
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+Erik
+https://www.linkedin.com/in/erikwilde
+https://github.com/dret
 
 Links
-https://stripe.dev
+https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6417
+https://cloud.google.com/blog/products/application-development/richard-seroter-on-shifting-down-vs-shifting-left
+https://platformengineering.org/blog
 
 DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
-
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Matt McLarty and Erik Wilde explore the nuanced world of platform engineering, challenging conventional approaches and highlighting the critical importance of aligning technological capabilities with business outcomes. They discuss the evolution from DevOps, the role of APIs, and the need to create flexible, reusable technological building blocks that drive true organizational innovation.
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+Stephen Fishman & Matt McLarty • Unbundling the Enterprise
+ (https://amzn.to/3W2EcXw) Carliss Y. Baldwin • Design Rules, Vol. 2
+ (https://amzn.to/4hdllRr) Matthew Skelton & Manuel Pais • Team Topologies
+ (http://amzn.to/3sVLyLQ) Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps
+ (https://amzn.to/3tCz1xO) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
+ (https://amzn.to/47oAf3l) Gene Kim, Kevin Behr & George Spafford • The Phoenix Project (https://amzn.to/3X9cYxa) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +214,101 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Sguaba: Type-safe spatial math in Rust</title><link>https://www.youtube.com/watch?v=kESBAiTYMoQ</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/kESBAiTYMoQ?version=3" length="" type=""/><pubDate>Mon, 29 Sep 2025 14:26:27 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[There are a wide variety of ways to describe the locations of objects in space. To name a few, there is: WGS84, the well-known Earth-bound system of latitude and longitude; ECEF (“Earth-centered, Earth-fixed”), a Cartesian coordinate system fixed to Earth’s axes; NED (“North, East, Down”), a coordinate system that describes where in compass directions a given object is relative to an observer; or FRD (“Front, Right, Down”), which describes where a given object is relative to the facing direction of an observer. And to make matters worse, points in all of these systems except WGS84 can be expressed in Cartesian coordinates (ie, X, Y, and Z), spherical coordinates (ie, angle to pole, angle on XY plane, and radius), or horizontal coordinates (ie, azimuth, elevation, and distance).
 
-Andrew Browne - Solution Architect at Picnic Software
+When we write software for systems that have to handle real-world coordinates, the question of what coordinate system those coordinates are in, and how they’re represented, comes up a lot. And getting it wrong in even a single place opens the door to disastrous consequences. To that end, for work, I wrote the now-open-source crate Sguaba (named after the self-navigating boat of the Celtic deity Manannán mac Lir that is navigated solely by the thoughts of its pilot). Sguaba is a Rust crate that strongly types coordinates and vectors with their respective coordinate system, and implements conversions between them.
+
+In this talk, presented at the Rust Amsterdam meetup @ BlockTech, I go into the complexities of spatial math, as well as how we can use the type system to encode those complexities away. Plus, answers to lots of questions!
+
+Sguaba open-source announcement from Helsing: https://blog.helsing.ai/sguaba-hard-to-misuse-rigid-body-transforms-for-engineers-with-other-things-to-worry-about-than-aeaa45af9e0d
+
+Sguaba on GitHub: https://github.com/helsing-ai/sguaba
+
+You can find the slides at https://jon.thesquareplanet.com/slides/sguaba/ (or an export at https://jon.thesquareplanet.com/slides/sguaba/export.pdf).
+
+0:00:00 Introduction
+0:01:28 Talk
+0:31:40 Q&A]]></content:encoded></item><item><title>Why SW Architecture is Mostly Communication • David Whitney, Ian Cooper &amp; Hannes Lowette • GOTO 2025</title><link>https://www.youtube.com/watch?v=VMmkHZ4wShA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/VMmkHZ4wShA?version=3" length="" type=""/><pubDate>Mon, 29 Sep 2025 12:01:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
+
+Check out more here:
+https://gotopia.tech/articles/400
+
+David Whitney - Director of Architecture at NewDay @DavidWhitneycouk 
+Ian Cooper - A Polyglot Coding Architect at Just Eat @ian_hammond_cooper 
+Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover @Belenar82 
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+David
+https://bsky.app/profile/davidwhitney.co.uk
+http://twitter.com/david_whitney
+https://www.instagram.com/davidwhitneycouk
+https://github.com/davidwhitney
+https://www.linkedin.com/in/davidwhitney
+https://davidwhitney.co.uk/blog
+
+Ian
+https://bsky.app/profile/icooper.bsky.social
+https://hachyderm.io/@ICooper
+https://twitter.com/ICooper
+https://www.linkedin.com/in/ian-cooper-2b059b
+https://github.com/iancooper
+https://ian-cooper.writeas.com
+
+Links
+https://youtu.be/j2AQ9eTZ3-0
+https://youtu.be/_ZvwRJnSsQ4
+https://youtu.be/wO8M6M39vZk
+https://youtu.be/tqmiUJtxaF4
+https://youtu.be/2ofzdPXeQ6o
+https://youtu.be/RtMmxqkPVug
+https://youtu.be/m_Lc0hZvRVM
+https://youtu.be/vvFdTp54gII
+https://youtu.be/vzqzLSJWo3k
+https://youtu.be/m7cWdYVAzX0
+https://youtu.be/hhlxFtV_tZo
+https://youtu.be/PzEox3szeRc
+https://youtu.be/zl5U8KO28rM
+https://youtu.be/JkZvdasAofs
+https://youtu.be/bzVjBu5nhyM
+https://youtu.be/dMwGfRINpz0
+https://youtu.be/7NAyn1DC420
+https://youtu.be/LTFe7Zj-hzQ
+https://youtu.be/x6yUGSmU8Nk
+
+DESCRIPTION
+Three experienced software engineers - Ian Cooper, David Whitney, and Hannes Lowette - discuss the evolution of software architecture from traditional "ivory tower" approaches to modern, collaborative practices. The conversation explores the tension between emergent and designed architecture, the importance of sustainable versus "slash-and-burn" development approaches, and how architectural decisions scale with organizational growth.
+Key themes include the critical role of communication and coaching in architecture, the dangers of pattern cargo-culting, and the fundamental reality that all architectural challenges are ultimately people problems requiring empathy, shared language, and cultural change.
+
+TIMECODES
+00:00 Intro
+00:33 Defining software architecture in a modern context
+04:13 Sustainable vs Slash-and-burn architecture
+07:41 The role of the modern software architect
+15:57 Language & communication in software architecture
+20:46 Scale & organizational growth
+25:18 Decision-making processes & advice forums
+29:45 Balancing standards with team autonomy
+32:53 The pattern problem & design wisdom
+44:50 The transition to leadership & coaching
+50:41 Communication is key
+55:13 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Barry O'Reilly • Residues • https://leanpub.com/residuality
+Barry O'Reilly • The Architect's Paradox • https://leanpub.com/architectsparadox
+Diana Montalion • Learning Systems Thinking • https://amzn.to/3ZpycdJ
+Sam Newman • Monolith to Microservices • https://amzn.to/2Nml96E
+Ronnie Mitra & Irakli Nadareishvili • Microservices: Up and Running• https://amzn.to/3c4HmmL
+Jacqui Read • Communication Patterns • https://amzn.to/3E37lvv
+Vaughn Vernon & Tomasz Jaskula • Strategic Monoliths & Microservices • https://amzn.to/3AcUscj
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#SoftwareArchitecture #Microservices #MicroservicesArchitecture #Monolith #MonolithToMicroservices #TodayInTech #IanCooper #DavidWhitney #HannesLowette
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -227,4 +319,4 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Indexing Works in Distributed Databases</title><link>https://blog.algomaster.io/p/indexing-in-distributed-databases</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!-zTO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F547d41c8-3c4c-4b59-8fb3-38f7f10629ba_1976x1224.png" length="" type=""/><pubDate>Sun, 28 Sep 2025 04:02:01 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[In a , indexing is relatively simple. Databases use data structures such as B-Trees, Hash Maps, or Bitmap indexes to create shortcuts that allows them to quickly locate rows without scanning the entire table.But what happens when your database is distributed across dozens or hundreds of machines?Where should the index live?Should it be local to each node or global across the cluster?How do we keep it consistent when data is replicated?What happens when queries span multiple machines?In this article, we will explore these challenges and learn how indexing works in distributed databases.Modern applications generate massive volumes of data, far beyond what a single machine can store or process efficiently. To scale horizontally, databases distribute data across multiple nodes in a cluster.Two core techniques make this distribution possible:The dataset is split into slices, and each shard is stored on a different node. For example, one shard might store users with names starting from A–M, while another stores N–Z. Queries are then routed to the relevant shard based on the partitioning strategy. Every piece of data is stored on multiple nodes to ensure fault tolerance and high availability. If one node fails, another replica can take over seamlessly.While sharding and replication provide scalability and reliability, they create new challenges for indexing:Where should indexes live?Should each shard maintain its own local index, or should the system maintain a single global index that spans all shards?How do we keep indexes consistent?When data is updated across multiple replicas, how do we ensure that indexes also reflect those changes correctly?How do we handle queries that touch multiple shards?Range queries or aggregations may need to scan data spread across several nodes. Without careful indexing strategies, these queries can become bottlenecks.These questions form the foundation of indexing in distributed databases and heavily influence the design choices made by systems like , , , and .Lets now explore two main strategies for distributed indexing:  and Local indexing is the simplest and most common strategy in distributed databases. In this approach, each shard maintains its own index for the subset of data it stores.When a query arrives, the database does not know in advance which shard contains the target data. As a result, the query must be  in a process known as :The query is sent to every shard in the cluster.Each shard uses its local index to search its own slice of data efficiently.Partial results are collected from all shards.The coordinator merges these results and returns the final answer to the client.The key point to note is that while the query still fans out to multiple shards, each shard avoids scanning its entire dataset by leveraging its local index. Each node is responsible only for its own data and index. There is no global coordination overhead. Inserts and updates affect only the shard that owns the data. The index update happens locally, making it efficient for write-heavy workloads. As data volume grows, you simply add more shards, each with its own index. To fetch a single record, the system often queries all shards. Even if each shard responds quickly, the overall latency is higher due to network communication and result merging. Scatter-gather queries can overwhelm the system as the number of nodes increases.Local indexing optimizes lookups within a shard but does little to optimize queries across shards. It works well for workloads with  or  (like analytics scans), but it struggles with highly selective queries where only one record is needed.Global indexing addresses the  directly. Instead of letting each shard operate independently, the system maintains a  that maps keys (such as user IDs or emails) to the shards where the corresponding data resides.This global view allows the system to route queries to the  that contains the data, eliminating the need for scatter-gather queries.Suppose we want to look up:SELECT * FROM Users WHERE userId = 102;With a global index, the process works like this:The query first checks the .The global index responds: “That userId is stored on .”The system forwards the query directly to Shard 3.Shard 3 (optionally using its own ) fetches the data and returns the result.This approach avoids broadcasting queries to all shards and makes targeted lookups extremely efficient. Point lookups and range queries touch only the relevant shard, reducing latency and resource usage. Queries no longer need to fan out across the cluster. From an client’s perspective, queries behave as though the entire dataset is indexed as one. The global index is itself a distributed system that must be partitioned, replicated, and synchronized. This adds operational overhead and new failure points. Each write requires at least two updates: one to the shard storing the data and another to the global index. This increases latency and can create . To keep the global index up to date, the system must choose between strong consistency (slower writes but accurate reads) and eventual consistency (faster writes but temporarily stale reads).Global indexing optimizes search across nodes but complicates write operations. It is often used in systems where reads are frequent and selective (e.g., user lookups by ID or email).One of the hardest problems in distributed indexing is keeping the index in sync with the underlying data.This problem becomes especially tricky with .For example, imagine inserting a new user into . The write succeeds on the shard, but the update to the global index fails or is delayed. For a brief period, queries that rely on the global index will not be able to locate that user, even though the data is already stored.To handle this, distributed databases typically adopt one of two consistency models: Systems like  use protocols such as  or  to ensure that both the data write and the index write happen atomically. This guarantees correctness but increases write latency. Systems like  prioritize availability and performance. They update indexes asynchronously, meaning writes are acknowledged immediately, but indexes may lag behind. For many workloads, such as analytics or logging, this trade-off is acceptable.In practice, databases often provide both options, leaving it up to developers to choose between guaranteed correctness with slower writes or faster writes with the possibility of temporary staleness, depending on the workload.Indexes in distributed databases are themselves large-scale data structures that must be carefully managed across many nodes. Just like primary data, they need to be partitioned, replicated, and kept consistent.The way partitioning and replication apply depends on the type of index: Partitioning and replication happen  as part of the shard. Each shard naturally maintains its own local index, and when the shard is replicated, the index is replicated too. No additional design is required. Partitioning and replication must be explicitly designed and managed. Because a global index spans the entire dataset across all shards, it needs its own partitioning strategy and replication mechanism. This makes it significantly more complex to maintain.Let’s look at how partitioning and replication work for  in more detail.Global indexes are often sharded in the same way as the data they reference. Instead of storing one massive index on a single machine, the index is divided into pieces and spread across the cluster.A  (commonly hash-based or range-based) decides which node stores which portion of the index.For example, if we build an index on , the system might take the hash of the email value to determine which shard should hold that entry.This prevents any single node from becoming a bottleneck for indexing or querying.Scales horizontally as data volume grows.Avoids a single point of failure.Each node handles only a fraction of the index, which reduces memory and CPU pressure.However, partitioned indexes also mean that answering a query may involve multiple shards, especially if the query spans a range of values.Global Indexes can also be replicated across multiple nodes, much like how data replication works. Instead of a single copy of an index partition, the system maintains multiple replicas.A query can be served by the , improving read latency.If one node fails, another replica can immediately take over, ensuring high availability.Improved performance through load balancing (read from the nearest replica).Improved fault tolerance, since replicas provide redundancy.All replicas must stay consistent when data is updated.Synchronization protocols introduce additional overhead.In practice, most distributed databases use a combination of partitioning and replication for global indexes:Indexes are  to achieve scalability and distribute workload evenly.Each partition is  to improve fault tolerance and query performance.This hybrid strategy ensures that distributed indexes can scale with data growth while remaining resilient to failures and responsive to queries.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item></channel></rss>
