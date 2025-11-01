@@ -1,38 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>20+ Years in Tech: Things We Wish We Knew Sooner • Daniel Terhorst-North &amp; Kevlin Henney</title><link>https://www.youtube.com/watch?v=aiyS2CdI4GM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/aiyS2CdI4GM?version=3" length="" type=""/><pubDate>Fri, 31 Oct 2025 13:44:11 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024.
+https://gotocph.com
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Daniel Terhorst-North - Originator of Behavior Driven Development (BDD) & Principal at Dan North & Associates
+Kevlin Henney - Consultant, Programmer, Keynote Speaker, Technologist, Trainer & Writer
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Daniel
+https://bsky.app/profile/tastapod.com
+https://twitter.com/tastapod
+https://www.linkedin.com/in/tastapod
+https://github.com/tastapod
+https://mastodon.social/@tastapod
+http://dannorth.net/blog
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Kevlin
+https://bsky.app/profile/kevlin.bsky.social
+https://about.me/kevlin
+https://twitter.com/KevlinHenney
+https://linkedin.com/in/kevlin
+https://instagram.com/kevlin.henney
+https://kevlinhenney.medium.com
 
-DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
-
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+Links
+https://jaoo.dk/jaoo2004/index2.jsp
+https://jaoo.dk/archives
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Jez Humble & David Farley • Continuous Delivery • https://amzn.to/452ZRky
+Nicole Forsgren, Jez Humble & Gene Kim • Accelerate • https://amzn.to/442Rep0
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
+Kevlin Henney • 97 Things Every Programmer Should Know • https://amzn.to/2Yahf9U
+Henney & Monson-Haefel • 97 Things Every Software Architect Should Know • https://amzn.to/3pZuHsQ
+Gojko Adzic • Specification by Example • https://amzn.to/44uqT6z
+Inspiring Tech Leaders - The Technology Podcast (https://www.priceroberts.com/) 
+Interviews with Tech Leaders and insights on the latest emerging technology trends.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1563026924)    Spotify (https://open.spotify.com/show/5ihWZxxIa2rEnzbx5tdKfH) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +52,89 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Rust intern saved TikTok $300K</title><link>https://www.youtube.com/watch?v=1y_vBNbZmIA</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1y_vBNbZmIA?version=3" length="" type=""/><pubDate>Thu, 30 Oct 2025 14:52:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[Grab your Rust Job-Ready Roadmap (free): https://letsgetrusty.com/join
+The fastest way to become a Rust dev (limited seats): https://letsgetrusty.com/join
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+An intern used Rust to save TikTok $300k! Yes, you heard that right. Rust’s performance and efficiency are unmatched, and this story proves it.
+
+Original video: https://www.youtube.com/watch?v=sELryGUfzMg
+
+Join the Rust Live Accelerator: https://letsgetrusty.com/join
+
+Chapter:
+0:00 Context
+0:39 Problem
+1:02 Why Rust
+1:17 Rewrite Approaches
+2:40 Final Solution
+3:50 Results
+4:24 Takeaways]]></content:encoded></item><item><title>Java Generics and Collections • Maurice Naftalin &amp; Stuart Marks • GOTO 2025</title><link>https://www.youtube.com/watch?v=WpvmRaHEQzA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/WpvmRaHEQzA?version=3" length="" type=""/><pubDate>Thu, 30 Oct 2025 13:01:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
+
+Check out more here:
+https://gotopia.tech/episodes/406
+
+Maurice Naftalin - Architect, Trainer & Co-Author of “Java Generics & Collections”
+Stuart Marks - Java & OpenJDK at Oracle & Technical Editor of “Java Generics & Collections”
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Maurice
+https://bsky.app/profile/mauricenaftalin.bsky.social
+https://x.com/mauricenaftalin
+https://github.com/MauriceNaftalin
+https://www.linkedin.com/in/maurice-naftalin
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Stuart
+https://bsky.app/profile/smarks.bsky.social
+https://mastodon.social/@stuartmarks
+https://x.com/stuartmarks
+https://github.com/stuart-marks
+https://www.linkedin.com/in/stuart-marks-17a71a2
+https://stuartmarks.wordpress.com
+
+Links
+https://youtu.be/IjE5eZEu7wI
+https://youtu.be/Cx_vijTm24w
+https://youtu.be/fbI3qveS_Is
+https://youtu.be/e6n-Ci8V2CM
+https://youtu.be/5xe64wudvCo
+https://youtu.be/THIlDdXk6Ac
+https://youtu.be/xsMUuOwv7IA
+https://youtu.be/J-bC20aAat8
+https://youtu.be/YAXGU2J7XjM
+https://youtu.be/miUbs3mqPJE
+
+DESCRIPTION
+Maurice Naftalin and Stuart Marks discuss the second edition of "Java Generics and Collections", published 19 years after the original. The conversation explores how Java programming has evolved from Java 5 to Java 25, covering major shifts like the move toward immutability, the introduction of sequenced collections, streams, and unmodifiable collections.
+
+They delve into critical design topics including encapsulation of collections, the anemic domain model anti-pattern, the controversial unsupported operation exception, and the challenges of null handling. The book includes new chapters on usage guidance and design retrospectives that reflect decades of accumulated wisdom about the Collections Framework.
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+01:19 A 19-year journey from Java 5 to Java 25
+04:41 The shift toward immutability & unmodifiable collections
+07:08 Usage guidance: Ownership & the anemic domain model
+17:58 Extension points & the fragile base class problem
+20:41 Design retrospective: The unsupported operation exception controversy
+27:11 The Null handling mess
+29:09 A lasting achievement
+30:21 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Maurice Naftalin & Philip Wadler • Java Generics and Collections 2nd ed • https://amzn.to/47dOp9t
+Maurice Naftalin & Philip Wadler • Java Generics and Collections 1st ed • https://amzn.to/42JI03i
+Joshua Bloch • Effective Java • https://amzn.to/4oFbdoi
+Victor Grazi & Jeanne Boyarsky • Real-World Java • https://amzn.to/4oCEeBR
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
+Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
+Nicolai Parlog • The Java Module System • https://amzn.to/3xFggR4
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#Java #JavaGenerics #JavaCollections #Immutability #Unmodifiability #Encapsulation #Java25 #Java5 #Null #NullHandling #Getters #Setters #AnemicDomainModel #JavaProgramming #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #MauriceNaftalin #StuartMarks #PhilipWadler #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,40 +145,136 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Top 6 API Architecture Styles</title><link>https://blog.algomaster.io/p/top-6-api-architecture-styles</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!VOZJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F230bee2c-6957-499a-8bda-473bfb05b4b2_2332x1352.png" length="" type=""/><pubDate>Thu, 30 Oct 2025 03:52:37 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[An API (Application Programming Interface) defines how two systems communicate, what data can be shared, and in what format.But not all APIs are built the same. Over time, as applications evolved, so did the challenges they faced.This led to the creation of new API styles, each designed to solve specific problems related to performance, flexibility, or real-time updates.In this article, we’ll break down the  that power modern software.In the beginning, there was SOAP (Simple Object Access Protocol).As the internet began to rise in the late 1990s, companies needed a standardized way for applications to communicate across different platforms and programming languages.SOAP emerged as the first major standard to solve this.SOAP demands that all messages be in  format, and it operates based on a very strict contract called a WSDL (Web Services Description Language).Think of WSDL as a detailed instruction manual that precisely defines every operation you can perform.SOAP is very “verbose,” meaning it uses a lot of text to describe a simple action. All that text for one simple request makes messages large, which  network transmission and processing.Furthermore, the strict WSDL contract creates ; if the server changes any part of the contract, the client will often break.While this was acceptable for large, internal enterprise systems, SOAP was just too heavy and inflexible for the fast moving web and new mobile apps. Developers needed something simpler, lighter, and more flexible that used the web’s own language, HTTP.In response to SOAP’s complexity, REST (Representational State Transfer) emerged and it quickly became the standard for the modern web.REST represented a complete mindset shift. Instead of complex operations defined in a WSDL, REST treats data as “resources” (like ) that you interact with using the standard HTTP methods (GET, POST, PUT, DELETE) that power the entire web.It is , meaning every request contains all the information needed to process it. It also embraced  over XML, which is far lighter and easier for both humans and machines (especially JavaScript) to read.REST is amazing and runs the majority of the web. But as applications grew, two common problems emerged: Clients often receive more data than they need. You just need a user’s name, but  returns their name, address, entire post history, and a dozen other fields. This is wasted data that slows down apps, especially on mobile networks. You need to show a user’s profile  their latest posts. This requires two separate requests:  and then . This “waterfall” of requests creates noticeable lag.As frontend applications grew richer especially with mobile and single-page apps, developers wanted more control over the data they fetched.This led to the rise of .What if you could ask for  what you need, all in one trip? That’s what Facebook set out to solve when they created in 2012 and open-sourced in 2015.GraphQL is a query language for your API. The most important shift is that the , not the server, defines the shape of the data it needs. Instead of dozens of REST endpoints, you typically have just one (like ) that accepts a query. The client sends a query that precisely describes the data it wants, and the server returns a JSON object in that exact same shape.This single query can pull from multiple sources (like a user database and a post database) and return it all in one response.There is no  (you only get the  and , not the user’s email or post bodies) and no  (you get the user and their posts in one round trip).However, GraphQL introduces its own set of challenges:Complex Server Implementation: Building a GraphQL server (especially with nested data) can be more complex than a simple REST API. The single endpoint and dynamic queries make traditional HTTP caching mechanisms less effective compared to REST.GraphQL shares a fundamental trait with REST: it’s text based (JSON) and works on a client “pull” model, where the client must make a request.For high-performance internal communication between dozens of microservices, the overhead of parsing text and the HTTP request-response pattern is too slow.This need for raw speed led to .Developed by Google and open-sourced in 2015, gRPC is a modern Remote Procedure Call (RPC) framework designed for high-performance, language-agnostic communication  services.It’s built for performance in two key ways: It replaces text-based JSON with Protocol Buffers (Protobufs), a highly efficient binary format. This is much faster for computers to  (write) and  (read). It runs on  by default. This modern protocol is far more efficient than HTTP/1.1, supporting features like , where many requests can fly back and forth on a single connection.You define your services and messages in a simple  file. This file acts as a language-agnostic contract, which gRPC uses to generate native code for any language you need (Java, Go, Python, etc.).gRPC is an excellent choice for internal Service-to-Service Communication, especially over low-bandwidth networks.However, its binary format is not human-readable, which can make debugging more challenging. It also isn’t directly supported by browsers, requiring a proxy like gRPC-Web for client-side use.Although highly performant, gRPC is still a request-response pattern: the client asks, the server answers.What if you need a persistent, two-way connection for a live chat app, a stock ticker, or a multiplayer game?That’s where  comes in.Traditional HTTP, which underpins REST, GraphQL, and gRPC, is a  protocol. The client must always initiate the conversation.This becomes inefficient for real-time use cases, because the only way to constantly get updates is to repeatedly ask the server () or keep a request hanging until something happens (). was built to solve exactly this. It creates a ,  communication channel over a single connection.The connection begins as a normal HTTP request, then upgrades to a WebSocket. After that, both client and server can send data to each other whenever they want without new requests.Client-side code example:This model is perfect for live dashboards, multiplayer gaming, or chat applications where the server must push updates instantly.But running WebSockets at scale is not trivial. You have to manage millions of long-lived connections, ensure state consistency across servers, and handle reconnects and failures.Another limitation: the client must initiate the connection first. That works for browsers and apps, but fails for server-to-server events.For example, what if Stripe’s server needs to notify  server that a payment just succeeded? Your server isn’t sitting there with an open connection to Stripe.In such cases, we need a different mechanism:  a .Webhooks are essentially “reverse APIs.” Instead of your application polling an API endpoint for new data, the  calls  (acting as the client) when a specific event occurs. It’s a user-defined HTTP callback.A Webhook is a server to server push model. You provide a URL (an endpoint on your server) to a third party service like GitHub, Stripe, or Slack. When a specific event happens (like a  or a ), that service instantly sends an HTTP POST request with the event data (the payload) to your URL.Webhooks eliminate the need for constant polling, allowing systems to react to events asynchronously and saving resources for both the client and the server.Despite their power, Webhooks require careful implementation: Your endpoint is public. You  verify a signature (like ) to ensure the request is legitimate and not a forgery. Webhooks can fail and be retried. Your endpoint must be , meaning processing the same notification multiple times has the same effect as processing it once.As you can see, there is no single “best” API. The “best” API is the one that fits your use case. In fact, a single, complex application will often use many of them together: or  for its public web and mobile apps. for its internal, high speed microservice communication. for its real time chat feature. to receive events from its payment provider.The journey from SOAP to Webhooks shows an evolution towards more specific, efficient, and flexible tools. The real skill is not knowing just one, but knowing which one to pick for the job.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>Connection is Everything • Ken Hughes • GOTO 2025</title><link>https://www.youtube.com/watch?v=tHf-BFM2CNM</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/tHf-BFM2CNM?version=3" length="" type=""/><pubDate>Wed, 29 Oct 2025 13:02:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph
+https://gotocph.com
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
-
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
-
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
-
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+Ken Hughes - The King of Customer Experience @kenhughesIE 
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+https://twitter.com/KenHughesIE
+https://www.linkedin.com/in/kenhughesie
+https://www.kenhughes.info
+
+ABSTRACT
+In an ever increasing digital world, human connection is everything. As AI, quantum computing and robotics converge, our human user experience becomes paramount.
+
+This performance will explore the nature of connection, discuss the values of the modern consumer, and challenge all to refocus on the essence of experience, rather than software, technology or code.
+
+Connection is Everything. [...]
+
+TIMECODES
+00:00 Intro
+00:39 7 generations of consumer users
+04:41 Old ways won't open new doors
+08:57 The race for relevance
+12:47 Connection
+16:10 4 pillars of society
+16:14 Blue dot
+25:51 Expectant
+32:52 Phygital
+48:00 Relational
+57:37 Wrap-up
+59:11 Outro
+
+Read the full abstract here:
+https://gotocph.com/2025/sessions/3777
+
+RECOMMENDED BOOKS
+Ken Hughes • Taylormaking • https://amzn.to/3WOEgd9
+Robert Waldinger & Marc Schulz • The Good Life • https://amzn.to/4orelUS
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Taylormaking #UserExperience #UX #CustomerExperience #CX #HumanConnection #Connection #ConnectionIsEverything #RaceForRelevance #Phygital #TaylorSwift #KenHughes
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Support Structures • Flavia Circiumaru &amp; Hannes Lowette</title><link>https://www.youtube.com/watch?v=8lx6df6ENsk</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/8lx6df6ENsk?version=3" length="" type=""/><pubDate>Tue, 28 Oct 2025 13:34:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
+
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/386
+
+Flavia Circiumaru - Software Engineer at FundApps
+Hannes Lowette - Principal Consultant at Axxes, Monolith Advocate, Speaker & Whiskey Lover
+
+RESOURCES
+Flavia
+https://x.com/FlavsFA
+https://github.com/flaviacirciumaru
+https://www.linkedin.com/in/flavia-circiumaru
+
+Hannes
+https://bsky.app/profile/hanneslowette.net
+https://twitter.com/hannes_lowette
+https://github.com/Belenar
+https://linkedin.com/in/hanneslowette
+
+DESCRIPTION
+When FundApps exploded from 20 to 50+ engineers in just one year, their old "everyone does support" model crumbled spectacularly. Software engineer Flavia Circiumaru and host Hannes Lowette dive deep into how this London-based regulatory compliance company transformed from a support-free-for-all to a streamlined powerhouse.
+
+Flavia Circiumaru reveals the behind-the-scenes story of building a three-desk support system that turned their support team into the ultimate connector, bridging customers, developers, and business teams like never before. From battling context-switching nightmares to creating communication magic, Flavia and Hannes explore actionable insights on scaling support without losing your sanity.
+
+The twist? Their ultimate goal is to make support so seamless that dedicated teams won't even be needed. Talk about engineering your way out of a job!
+
+RECOMMENDED BOOKS
+Jacqui Read • Communication Patterns • https://amzn.to/3E37lvv
+Saleem Siddiqui • Learning Test-Driven Development • https://amzn.to/35OMb3n
+Ben Goldacre • Bad Science • https://amzn.to/4lqNLKN
+Ben Goldacre • Bad Pharma • https://amzn.to/3G15Mz7
+Jeet Pattanaik • Ethics in AI • https://amzn.to/4jXyQXw
+Inspiring Tech Leaders - The Technology Podcast (https://www.priceroberts.com/) 
+Interviews with Tech Leaders and insights on the latest emerging technology trends.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1563026924)    Spotify (https://open.spotify.com/show/5ihWZxxIa2rEnzbx5tdKfH) 
+
+
+Bluesky (https://bsky.app/profile/gotocon.com) 
+Twitter (https://twitter.com/GOTOcon) 
+Instagram (https://www.instagram.com/goto_con) 
+LinkedIn (https://www.linkedin.com/company/goto-) 
+Facebook (https://www.facebook.com/GOTOConferences) 
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>How to Securely Store Passwords in a Database</title><link>https://blog.algomaster.io/p/securely-storing-passwords-in-a-database</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!XCWf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ea8f9a6-9de3-4221-810e-636a6f4fb034_1908x1336.png" length="" type=""/><pubDate>Tue, 28 Oct 2025 04:01:11 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[A password is meant to be . If someone steals it, they do not just break into one account, they often get access to every other place where the user reused that same password.That is why  is not optional. It is our responsibility as developers to store passwords in a form that remains safe even if the database is stolen.In this article, we will break down  from first principles. We will begin with , then climb upward to the correct techniques and the reasoning behind them.1. Storing in Plain Text: The Worst WayThe absolute worst thing you can do is store a password as plain text. This means if a user signs up with the password “Pa$$w0rd123”, your database stores the literal string “Pa$$w0rd123”. An attacker who finds an SQL injection vulnerability can dump your entire  table in one query. There is nothing to decode or crack. They instantly have the passwords to every user’s account.SELECT email, password FROM users; A developer, DBA, support engineer or cloud vendor with read access can export the entire password list in seconds, and you would never know it happened. Many breaches are not hackers, they are insiders.With plain text, there is no second line of protection. You cannot “undo” the exposure. Once seen, it is gone forever.Now that we have established the worst practice, let us examine the first step in doing better: .2. Simple Hashing: Slightly Better But Still BrokenA  is supposed to be a one-way transformation.Think of it like a blender. You can drop a banana and strawberry in, blend them, and get a smoothie. You can recognize the smoothie as “fruit mix” but you can never reverse it back into the original fruits.That is the idea behind a hash. You feed in a password and get a fixed-length output that cannot be reversed.Early systems used fast general-purpose hash algorithms like  and  for this.You would run “Pa$$w0rd123” through MD5 and get a hash like:e10adc3949ba59abbe56e057f20f883e It looks random and irreversible. It looks safe. Sounds good, right?Here is the twist — it is not.Why fast hashing ruins securityAlgorithms like MD5, SHA-1, and even SHA-256 are designed to be extremely fast. That is great for file integrity and signatures, but disastrous for passwords. Modern GPUs can compute billions of these hashes per second, which means an attacker can brute-force weak passwords almost instantly.Worse, attackers do not even have to brute-force from scratch. They can use something called .Rainbow Tables are massive precomputed dictionaries where attackers hash millions of common passwords in advance and store the mapping. A lookup is enough to reveal the plaintext password.For MD5, a tiny fragment of a rainbow table might look like: The attacker steals your  table and finds a list of password hashes. They see the hash 5f4dcc3b5aa765d61d8327deb882cf99 for a user. Instead of trying to “guess” the password, they just look up this hash in their giant rainbow table. They instantly find the matching plaintext password: “password”.No brute force. No guessing. Just a dictionary lookup.This method works because old, fast hashing functions (like MD5 or SHA-1) always produce the same exact hash for the same exact input.This is why “simple hashing” is still insecure. The fix is not just “hash it”, it is “hash it the right way.”3. The Right Kind of HASHA secure password hashing function must be , , and computationally expensive on purpose.The idea is simple: if every password attempt takes real time and real resources, large-scale cracking becomes impractical even with modern GPUs.Why slow hashing kills rainbow tablesRainbow tables only work when hashing is fast and deterministic. Slow and adaptive hash functions make precomputation economically pointless.To generate a rainbow table now, an attacker would have to spend years and extreme hardware cost just to compute the table before even attacking.Popular Slow Hashing OptionsHere are the three widely used hashing options:This has been the industry standard for a long time. Its key feature is a configurable . You can tell it “make this hash take 100 milliseconds.” As computers get faster in the future, you can just increase the cost factor to keep it slow.This was designed to be “memory hard.” It forces the hashing process to consume significant RAM, which makes pre-computation and GPU attacks extremely inefficient. GPUs excel at raw compute but struggle when memory is the bottleneck.This is the modern preferred option. It won the official Password Hashing Competition in 2015. It is resistant to GPU attacks, highly configurable (you can balance its memory, CPU, and parallelism needs), and is the top recommendation by OWASP (Open Web Application Security Project). Use  if your language and framework support it. If not,  is an extremely solid and widely supported alternative.Slow hashing removes the attacker’s “shortcut”.But slow hashing by itself still has a weakness. The same password still produces the same hash. This is where  enters the picture.A “salt” is simply a unique, random string generated for each user.Returning to the smoothie analogy: a salt is like adding a different mystery ingredient to every person’s blend before mixing. Even if two people start with the same fruits (same password), the final smoothie looks completely different.You do not hash the raw password. You hash: Two users with the same password now produce completely different hashes.Alice password = “123456”
+Alice salt     = “abc_salt”
+Stored hash    = H(”123456abc_salt”)
+
+Bob password   = “123456”
+Bob salt       = “xyz_salt”
+Stored hash    = H(”123456xyz_salt”)The salt must be ,  (at least 16 bytes), and .You must  use usernames, timestamps, or predictable data. Use a cryptographically secure random generator, for example: in NodeWhy salting kills rainbow tablesRainbow tables depend on the assumption that the same password always leads to the same hash. Salting breaks that. Now the attacker would need a separate precomputed table for , which is mathematically and economically infeasible.The salt is . You store it right next to the hash. You need it later to re-compute the hash during login. In many modern implementations (bcrypt, Argon2, PBKDF2), the salt is automatically generated and embedded inside the final hash output itself so you never handle salts manually.So far we have made two things clear:Hashing must be slow and adaptiveHashes must be salted to prevent precomputation and duplicate patternsThose two alone already raise the bar enormously. But there is still one more defensive layer that can make a breach dramatically less useful to an attacker even if they steal both the hashes and the salts.That additional layer is called .Peppering adds one more defensive layer by mixing in a secret value that is never stored in the database. Even if an attacker steals your user table (hashes and salts), they still cannot verify guesses without the pepper.A  is a random secret value (for example 32 bytes) that is combined with the password and salt before hashing. It does not replace salts or slow hashing. It complements them.If salt is a per-user ingredient added to each smoothie, the pepper is the restaurant’s master secret sauce stored in a separate locked kitchen. The smoothies can be stolen. The recipe cannot.Where is the pepper stored?Unlike salts, peppers must be treated as secrets and kept outside the database.Typical storage locations:A secure environment variable (e.g., )A secrets management system (like HashiCorp Vault, AWS Secrets Manager, or Google Secret Manager).Peppers should never sit in the same system that holds the hashes.Two common pepper patternsOne secret value used for the whole application. Simple to implement. Must be carefully protected.Per-user pepper stored externally: A different secret per user kept in a separate secure store (HSM or encrypted key-value store). Harder to manage but limits blast radius if one pepper is leaked.A typical pipeline with salt and pepper:Imagine an attacker steals your . They have all the usernames, all the hashes, and all the salts.Without pepper, they can immediately begin brute-forcing, because they know the hashing function and inputs except the password. With pepper, they are missing a required input.They are trying to solve:hash(password + salt)   ❌   (what attacker assumes)But the real stored hash came from:hash(password + salt + pepper)   ✅6. Putting It All TogetherLet’s see how these pieces fit in a real application.A user signs up with their password (e.g., “Pa$$w0rd123”).Your server generates a cryptographically secure .Your server retrieves the application’s secret  from environment variable.Your server uses a library (like  or ) to hash the password.The library combines the (password + salt + pepper) and runs them through the slow hash algorithm.The server stores the  and  in the  table. The pepper is never stored.A user tries to log in with their email and password (e.g., “Pa$$w0rd123”).The server retrieves the user’s  and  from the database (using their email).The server retrieves the application’s secret  from the environment variable.The server combines the  with the  and .The server hands this combined string  the  to the  (or equivalent) function.The library function re-hashes the user’s input using that same salt, and securely compares the two.If they match, the user is authenticated. If not, the password was wrong.Practical Code Example (Node.js)Here is a clean and minimal example using  in Node.js where the library handles salt generation for you.7. The “Best” Way? Don’t Store Passwords at All.There is one more option. Do not keep passwords. Delegate authentication to a trusted identity provider instead.You have seen this everywhere: “Sign in with Google,” “Sign in with Facebook,” or “Sign in with GitHub.”Under the hood these flows use standards like OAuth 2.0 and OpenID Connect. You never store or manage user passwords. You shift the entire security burden to experts at Google, Microsoft, or Apple. A breach of your database is less catastrophic because you do not have any passwords to steal. You create a dependency on a third party. If Google’s login service is down, your users cannot log in. It also may not be suitable for all types of applications.While building authentication at , I chose OAuth (Google and GitHub login) to avoid the complexity and risk of password management. For users who did not use Google accounts (e.g., Outlook or Hotmail), I added email OTP-based authentication as a fallback instead of storing passwords.Protecting user passwords is a fundamental responsibility for anyone building software. When you do it correctly, your users stay safe and your product earns trust. When you get it wrong, the fallout can be immediate, public, and irreversible.Here are the non-negotiable rules: store passwords in plain text. use old, fast hashes like MD5 or SHA-1. use a modern, slow, adaptive hash (like  or ). use a unique  for every single user (which modern libraries do for you). using a secret  (stored outside the DB) to protect against database theft., use a trusted third party provider (like “Sign in with Google”) and do not handle passwords at all.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>Building Better Software: Why Workflows Beat Code Every Time • Ben Smith &amp; James Beswick • GOTO 2025</title><link>https://www.youtube.com/watch?v=SKYbOk2S-xo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/SKYbOk2S-xo?version=3" length="" type=""/><pubDate>Mon, 27 Oct 2025 13:00:57 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
+
+Check out more here:
+https://gotopia.tech/articles/407
+
+Ben Smith - Staff Developer Advocate at Stripe @bls20 
+James Beswick - Head of Developer Relations at Stripe @JamesBeswickD 
+
+RESOURCES
+Ben
+https://twitter.com/benjamin_l_s
+https://github.com/bls20AWS
+https://linkedin.com/in/bensmithportfolio
+http://developeradvocate.co.uk
+https://thewebsmithsite.wordpress.com
 
 James
 https://bsky.app/profile/jbesw.bsky.social
@@ -152,71 +283,59 @@ https://linkedin.com/in/jamesbeswick
 
 Links
 https://stripe.dev
+@StripeDev 
+https://serverlessland.com
+https://youtu.be/4YeZf3HupQA
+https://youtu.be/0caADKrbl5M
+https://youtu.be/kR2sm1zelI4
+https://youtu.be/dUXDuxqTxmo
+https://youtu.be/-nJmFYUiLqk
+https://youtu.be/zms-iepcLpw
+https://youtu.be/HAFrggEDr5U
+https://youtu.be/KruVNy9Gino
+https://youtu.be/zf5HH1BPN4o
+https://youtu.be/8j6CsAzp2K0
+https://youtu.be/Saaz6D1azlU
+https://youtu.be/qjJ6LvOU7q0
+https://youtu.be/w9a7eI6BlVc
+https://youtu.be/etKM5-gGwto
+https://youtu.be/zJiUNKXZA1E
+https://youtu.be/Th4MFWJmlsc
+https://youtu.be/DvfMOJaIzhY
+https://youtu.be/nUoEN8zsJr0
+https://youtu.be/LTFe7Zj-hzQ
 
 DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+James Beswick and Ben Smith explore the evolution of modern software architecture. They discuss why workflow services are essential for managing distributed systems, the challenges of microservices versus monoliths, and the power of plugin architectures.
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
+The conversation covers practical topics like idempotency, circuit breaker patterns, and the importance of observability, while also diving into what makes a great developer advocate and how to build demos that truly resonate with developers.
 
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
-
-RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
-
-
-Bluesky (https://bsky.app/profile/gotocon.com) 
-Twitter (https://twitter.com/GOTOcon) 
-Instagram (https://www.instagram.com/goto_con) 
-LinkedIn (https://www.linkedin.com/company/goto-) 
-Facebook (https://www.facebook.com/GOTOConferences) 
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
-
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
-
-Andrew Browne - Solution Architect at Picnic Software
-
-RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+TIMECODES
+00:00 Intro
+00:27 Why workflows matter
+06:03 Versioning & evolution
+12:03 From monoliths to microservices
+19:22 Extensions & extensibility
+25:23 Building effective demos & choosing technology
+31:35 Observability & debugging
+39:57 The art of developer advocacy
+45:21 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Simon Brown • Software Architecture for Developers Vol. 2 • https://leanpub.com/visualising-software-architecture
+David Farley • Modern Software Engineering • https://amzn.to/3GI468M
+Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook • https://amzn.to/47oAf3l
+Simon Wardley • Wardley Maps • https://amzn.to/45U8Upr
+Simon Wardley • Wardley Mapping, The Knowledge • https://amzn.to/3XQEeDu
+David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect • https://amzn.to/3VcHxC
+Mike Amundsen • Restful Web API Patterns & Practices Cookbook • https://amzn.to/3C74fpH
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#Workflows #Idempotency #Immutability #AWSSAM #Serverless #EDA #EventDrivenArchitecture #Microservices #CircuitBreaker #Stripe #DevRel #DeveloperRelations #DeveloperAdvocacy #API #APIs #Observability #Debugging #BenSmith #JamesBeswick
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -227,4 +346,37 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>What&apos;s New in Rust 1.81-1.84 Rustacean Station marathon</title><link>https://www.youtube.com/watch?v=6mwVWmKONY0</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/6mwVWmKONY0?version=3" length="" type=""/><pubDate>Sun, 26 Oct 2025 16:35:00 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[Ben and Jon have yet again, and still completely intentionally, fallen behind on the "What's New in Rust" series from Rustacean Station (https://rustacean-station.org/) where they discuss each new Rust release. And all so that they (we?) could do another live marathon stream to go through what's changed across a bunch of Rust releases together!
+
+You can listen to the last What's New in Rust podcast episode (covering 1.79 and 1.80) at https://rustacean-station.org/episode/rust-1.79-1.80/ or wherever you listen to podcasts.
+
+The recording of this episode will be posted to the regular Rustacean Station feed once it's been cut appropriately :)
+
+0:00:00 Black screen
+0:25:29 Introduction
+0:32:24 1.81.0
+1:04:05 1.82.0
+1:57:54 1.83.0
+2:14:49 1.84.0
+
+**Links**
+
+1.81.0: https://blog.rust-lang.org/2024/09/05/Rust-1.81.0/
+- https://github.com/rust-lang/rust/pull/124032/
+- https://blog.rust-lang.org/2024/09/04/cve-2024-43402/
+
+1.82.0: https://blog.rust-lang.org/2024/10/17/Rust-1.82.0/
+- https://doc.rust-lang.org/rustc/target-tier-policy.html
+- https://github.com/rust-lang/rust/pull/128254
+
+1.83.0: https://blog.rust-lang.org/2024/11/28/Rust-1.83.0/
+- https://www.unicode.org/emoji/charts-16.0/emoji-released.html
+- https://github.com/rust-lang/rust/pull/129687
+- https://doc.rust-lang.org/nightly/cargo/CHANGELOG.html#changed-9
+- https://github.com/rust-lang/cargo/pull/14588
+- https://github.com/rust-lang/cargo/pull/14137
+
+1.84.0: https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/
+- https://rust-lang.github.io/rfcs/3559-rust-has-provenance.html
+- https://github.com/rust-lang/cargo/pull/14815
+- https://github.com/rust-lang/rust/pull/129248]]></content:encoded></item></channel></rss>
