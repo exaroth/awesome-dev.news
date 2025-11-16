@@ -1,38 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>From Hardware Hacker to CTO: Building Teams That Scale • Meri Williams &amp; Charles Humble</title><link>https://www.youtube.com/watch?v=a2DvXnecXVk</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/a2DvXnecXVk?version=3" length="" type=""/><pubDate>Fri, 14 Nov 2025 13:30:54 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/388
+
+Meri Williams - CTO at Pleo & Advisor at Skiller Whale & Kindred Capital
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Meri
+https://x.com/Geek_Manager
+https://github.com/geekmanager
+http://blog.geekmanager.co.uk
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://mastodon.social/@charleshumble
+https://conissaunce.com
+
+Links
+https://blog.container-solutions.com/managing-remote-teams-in-scaling-organisations
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
-
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+Join us in a conversation with Meri Williams, an experienced CTO who has led technology teams from 30 to 300 people across organizations.
+In this candid discussion, Meri shares their journey from reluctant manager to seasoned leader, revealing hard-won insights about scaling teams, avoiding the "Google trap" of copying big tech practices inappropriately, and why investing in onboarding can make or break your organization.
+With refreshing honesty about management mistakes and the ongoing importance of diversity in building products that serve everyone, this conversation offers practical wisdom for anyone navigating the world of tech leadership.
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Meri Williams • The Principles of Project Management • https://amzn.to/4lj5B1G
+Tom DeMarco & Tim Lister • Peopleware • https://amzn.to/3KJmFOq
+Marcus Buckingham & Gallup Organization • First, Break All the Rules • https://amzn.to/40xpppI
+Daniel H. Pink • Drive: The Surpri
+Inspiring Tech Leaders - The Technology Podcast (https://www.priceroberts.com/) 
+Interviews with Tech Leaders and insights on the latest emerging technology trends.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1563026924)    Spotify (https://open.spotify.com/show/5ihWZxxIa2rEnzbx5tdKfH) 
+ Canada Now (https://canadanow.buzzsprout.com) 
+Bold ideas with the people shaping Canada’s next chapter.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1842774054)    Spotify (https://open.spotify.com/show/79AhUeB2xDEovXrPvtPs62) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,19 +56,20 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>The Way the Future Was • Kevlin Henney &amp; James Lewis • GOTO 2025</title><link>https://www.youtube.com/watch?v=ZTfnRXtIFEo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ZTfnRXtIFEo?version=3" length="" type=""/><pubDate>Thu, 13 Nov 2025 13:01:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph
 https://gotocph.com
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Kevlin Henney - Speaker, Writer, Author and Trainer @KevlinHenney 
+James Lewis - Director at Thoughtworks, Coined the Term Microservices
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Kevlin
+https://bsky.app/profile/kevlin.bsky.social
+https://about.me/kevlin
+https://twitter.com/KevlinHenney
+https://linkedin.com/in/kevlin
+https://instagram.com/kevlin.henney
+https://kevlinhenney.medium.com
 
 James
 https://bsky.app/profile/boicy.bovon.org
@@ -68,26 +77,33 @@ https://linkedin.com/in/james-lewis-microservices
 https://github.com/boicy
 https://www.bovon.org
 
+ABSTRACT
+The future is not what it used to be. From the end of the 19th century, through the dawn of the Atomic Age and past the rush of the Space Race, the future was painted as a place of possibility and optimism.
+
+But now?
+Not so much. Our view of the future lies somewhere between neutral and gloomy.
+
+Why the change?
+That question has come up almost every time our Program Committee has met. Back in the good old days the future was always bright. Innovation and craftsmanship was blooming. Failure not a topic.
+
+So, if the future is not what it used to be, what is it?
+In this keynote, PC members Kevlin Henney and James Lewis will look at the future seen through the eyes of the past. [...]
+
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
+02:39 The way the future was
+14:22 The way the future is
+31:17 The way the future comes to be
+41:17 The way the future could be
+56:01 Outro
 
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+Download slides and read the full abstract here:
+https://gotocph.com/2025/sessions/3839
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
+Kevlin Henney • 97 Things Every Programmer Should Know • https://amzn.to/2Yahf9U
+Henney & Monson-Haefel • 97 Things Every Software Architect Should Know • https://amzn.to/3pZuHsQ
 Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
 Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
 Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
@@ -99,7 +115,7 @@ https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#Futurology #HowTheFutureWas #SoftwareEngineering #SoftwareDevelopment #Programming #FutureOfCoding #JevonsParadox #VonNeumann #SpaceCommunism #FutureIsConnected #TodayInTech #KevlinHenney #JamesLewis
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,17 +126,17 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Latency vs. Throughput vs. Bandwidth</title><link>https://blog.algomaster.io/p/latency-vs-throughput-vs-bandwidth</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!4JMb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d4178a8-233c-4a58-9455-78c56c6dc7a1_786x747.png" length="" type=""/><pubDate>Thu, 13 Nov 2025 04:08:18 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Latency, throughput, and bandwidth are the core metrics that describe the performance of a network or distributed system.Together they determine how fast the first byte arrives, how much data you can move per second, and the maximum capacity of the path.Let’s understand them with the . The number of lanes on the highway (e.g., 5 lanes). This is the maximum physical capacity of the road. The time it takes one car to drive from Exit 1 to Exit 10 at the speed limit with no traffic. The total number of cars that pass Exit 10 per hour.Now, consider a traffic jam (congestion).The  stays the same. The road still has 5 lanes.The  (travel time) rises for every car because travel takes longer.The  (cars per hour) drops because fewer cars clear the exit per hour.Networks behave the same way. Congestion increases latency and reduces throughput even when raw bandwidth does not change.Lets now explore them in more detail. It is the time it takes for a single piece of data to travel from its source to its destination. It is commonly measured in .In practice, we almost always measure , which is the time for a request to go out and an acknowledgment to come back. When you make an API call, the latency is the time between your client sending the HTTP request and receiving the first byte of the response.The speed of light sets a hard limit. Even with a 1 Gbps internet connection, your latency to a server on another continent will be high.Each router, DNS lookup, NAT, firewall, and load balancer adds queueing and processing time.Establishing a connection (especially over HTTPS) requires multiple back-and-forth steps.CPU contention, locks, context switches, garbage collection pauses, and cold code paths add processing time before a response is generated.Cache misses, missing indexes, N+1 queries, synchronous disk I/O, and cross-region reads lengthen database query time.The goal is to cut distance, round trips, and processing time. Store frequently accessed data (e.g., in Redis or a browser cache) so you avoid a slow database call or network request.Content Delivery Networks (CDNs): This is a global network of caches. When a user in India requests a video, they get it from a server in Mumbai, not New York. Run application logic (not just static content) closer to the user to reduce the number of round trips. Instead of blocking the user while your system completes a time-consuming task,  to a background process and return a response immediately.Use techniques like database indexes, partitioning, and sharding to reduce query time.Keep a long-lived connection between a client and server that remains open across multiple requests and responses. It measures how much data actually gets transferred successfully over a network in a specific amount of time.It is measured in Megabits per second (Mbps), Gigabits per second (Gbps), or often in Requests Per Second (RPS) or or Transactions Per Second (TPS). Your API server might have a low latency of 50ms. However, if that server can only process 100 requests concurrently before it runs out of CPU or database connections, its .Throughput is almost always limited by a . This bottleneck could be anything:Database connection limitsDisk read/write speeds (I/O)How to Increase ThroughputThe goal is to process more units of work in the same amount of time. You can do this by reducing the overhead of each task or by doing more tasks at once. Instead of making 1000 separate, tiny API calls to insert data, make one large API call with 1000 records. This reduces the per call overhead. This means doing multiple things at the same time. Download managers use multiple connections to download parts of a file simultaneously.Increase Server Capacity: Scale horizontally (add more servers behind a load balancer) to handle more concurrent requests.Bandwidth is the capacity. It represents the  amount of data your network link or system could handle.Bandwidth is measured as a  per second, usually in . Common units: , , . In some systems you might also see  (KB/s, MB/s), where . Your internet connection has . So a  download cannot finish faster than  in ideal conditions, no matter how low the latency is or how many threads you use.Think of bandwidth as the width of the pipe. It belongs to the link, not to a single request or user.Two important clarifications: Real applications rarely hit it because protocols, losses, CPU, and storage often limit the actual rate.Bandwidth is not throughput. Throughput is what you actually achieve at a moment in time. Bandwidth is what the link could deliver in ideal conditions.In real-world systems, we rarely talk about increasing bandwidth itself, that’s just buying a bigger pipe from your provider. Instead, we focus on using our available bandwidth more efficiently.How to Improve Bandwidth UtilizationThe goal is to get more work done with the capacity you already have. The most direct way to “improve” bandwidth is to make your data smaller. If you can make a 1 MB file 100 KB, you can send 10 times as many files over the same link in the same amount of time.For Text (HTML, CSS, JSON): Use server-side compression like  or . Serve modern formats like  or . They offer vastly better compression and quality compared to old JPEGs or PNGs. Use modern codecs (like  or ) instead of older ones (like H.264) to cut the data size in half for the same visual quality. Use modern protocols like HTTP/2 or HTTP/3 (which uses QUIC). They are far more efficient at handling multiple requests over a single connection, which reduces the “waiting” caused by latency.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>​@that_rendle about the hardest problems in software: #CacheInvalidation &amp; #NamingThings</title><link>https://www.youtube.com/shorts/bCYe0ZIZBwE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/bCYe0ZIZBwE?version=3" length="" type=""/><pubDate>Wed, 12 Nov 2025 13:01:21 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #ProgrammingMistakes #Programming #SoftwareEngineering #WorstMistakes #MarkRendle #Linebreakers #ALGOL #Deloitte #AutoScrum #Accenture #ScaledAgile #Scrum #Viral #ViralShorts #GOTO
 
 Full version available here:
-https://youtu.be/P_6eDL1aqtA
+https://youtu.be/Y9clBHENy4Q
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
+Mark Rendle - Creator of Visual ReCode with 7 Microsoft MVP Awards & 30+ Years of Experience Building Software @that_rendle 
 
 RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
+Tomasz Lelek & Jon Skeet • Software Mistakes & Tradeoffs • https://amzn.to/45Nf1u3
+Henney & Monson-Haefel • 97 Things Every Software Architect Should Know • https://amzn.to/3pZuHsQ
+Merih Taze • Engineers Survival Guide • https://amzn.to/40hPmZd
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -131,55 +147,51 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1d]]></content:encoded></item><item><title>Real-World Java • Victor Grazi, Jeanne Boyarsky &amp; Barry Burd</title><link>https://www.youtube.com/watch?v=jE6kzMoknPs</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/jE6kzMoknPs?version=3" length="" type=""/><pubDate>Tue, 11 Nov 2025 13:29:07 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
 
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/393
+
+Victor Grazi - Oracle Java Champion & Co-Author of "Real-World Java"
+Jeanne Boyarsky - Oracle Java Champion, Co-Author of "Real-World Java" & "OCP 21 Java Cert Book"
+Barry Burd - Professor at Drew University, Owner at Burd Brain Consulting & Author of "Java for Dummies"
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+Victor
+https://x.com/vgrazi
+https://www.linkedin.com/in/victorgrazi
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+Jeanne
+https://bsky.app/profile/jeanneboyarsky.bsky.social
+https://www.linkedin.com/in/jeanne-boyarsky
+
+Barry
+https://x.com/allmycode
+https://www.linkedin.com/in/barry-burd
 
 Links
-https://stripe.dev
+https://projectlombok.org
+https://www.selikoff.net/2014/12/07/why-i-like-regular-expressions-who-says-they-arent-readable
 
 DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
-
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Barry interviews Victor and Jeanne  about their book "Real-World Java: Helping You Navigate the Java Ecosystem".
+Victor emphasizes that knowing how to use your development tools, particularly IDE refactoring features, is a better indicator of developer experience than algorithm tests.
+Rather than just teaching "hello world" examples, the authors focus on the essential ecosystem components needed to succeed in enterprise Java environments, making it accessible for anyone who knows the Java language but needs to understand the broader technological landscape they'll encounter in professional development roles. 
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+Victor Grazi & Jeanne Boyarsky • Real-World Java • https://amzn.to/4oCEeBR
+Jeanne Boyarsky &
+Inspiring Tech Leaders - The Technology Podcast (https://www.priceroberts.com/) 
+Interviews with Tech Leaders and insights on the latest emerging technology trends.
 
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
 
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1563026924)    Spotify (https://open.spotify.com/show/5ihWZxxIa2rEnzbx5tdKfH) 
+ Canada Now (https://canadanow.buzzsprout.com) 
+Bold ideas with the people shaping Canada’s next chapter.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1842774054)    Spotify (https://open.spotify.com/show/79AhUeB2xDEovXrPvtPs62) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +207,63 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Containerization ≠ Modernization: Kick-Start Your Transformation Journey • Jeevan Dongre • GOTO 2025</title><link>https://www.youtube.com/watch?v=ULcWhYFMEKY</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/ULcWhYFMEKY?version=3" length="" type=""/><pubDate>Mon, 10 Nov 2025 13:01:05 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Serverless 2025. #GOTOcon #GOTOserverless
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025
 
-Andrew Browne - Solution Architect at Picnic Software
+Jeevan Dongre - CEO & Co-Founder at AntStack @JeevanDongre1986 
+
+ORIGINAL TALK TITLE
+Containerization ≠ Modernization: Kick-Start Your True Transformation Journey
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+https://x.com/jeevandongre
+https://github.com/jeevandongre
+https://www.linkedin.com/in/jeevandongre
+
+ABSTRACT
+Containers solved a huge deployment headache—but they didn’t magically erase legacy thinking. If your “modernization” effort stopped at lifting-and-shifting monolithic apps into Kubernetes, you’ve simply boxed yesterday’s problems in today’s tech.
+
+In this session we’ll unpack why true modernization demands more than orchestration stickers: it requires re-architecting for event-driven, serverless, and AI-augmented patterns that slash time-to-value and operating costs. Drawing on field experience across 50+ enterprise and startup transformations—spanning 8,000+ AWS Lambda functions, real-time data pipelines, and GenAI copilots.
+
+We’ll explore:
+• The Illusion of Progress: Hidden technical debt and cost traps that containers often preserve.
+• Transformation Levers: Domain-driven decomposition, serverless services, and managed data layers that free teams from infrastructure toil.
+• GenAI as a Catalyst: Where large-language-model capabilities amplify modernization ROI—and where they don’t.
+• Change Management Playbook: Culture, skill-matrix, and governance shifts that let teams iterate safely at cloud speed.
+• Success Metrics & Case Studies: Concrete KPIs (release frequency ↑ 5×, infra spend ↓ 60%) from healthcare, QSR, and fintech modernizations. [...]
+
+TIMECODES
+00:00 Intro
+03:52 The CFO's corridor panic
+05:41 The managed services nudge
+07:16 Jugaad isn't a strategy
+09:24 Buy or build?
+13:49 Enter modernization – The real one
+14:03 The cost of stale code
+14:31 Data as first-class citizen
+16:49 Serverless first, not Kubernetes always
+19:13 6 dimensions of modernization
+21:06 Start with small wins
+21:42 Modernization is a culture, not a phase
+23:03 What "Good" looks like
+23:53 Key takeaways
+24:23 Outro
+
+Download slides and read the full abstract here:
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3846
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Peter Sbarski • Serverless Architectures on AWS • https://amzn.to/3hJzEUM
+Michael Stack • Event-Driven Architecture in Golang • https://amzn.to/3G5e8ST
+Ashley Peacock • Serverless Apps on Cloudflare • https://amzn.to/3EU7P85
+Jeroen Mulder • Multi-Cloud Strategy for Cloud Architects • https://amzn.to/3FdNDOA
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#Serverless #AWSServerless #Containerization #Modernization #AIWorkflows #TodayInTech #JeevanDongre #AntStack
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -227,4 +274,62 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Debugging Book • Andreas Zeller &amp; Clare Sudbery</title><link>https://www.youtube.com/watch?v=EdLwVt4LCXo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/EdLwVt4LCXo?version=3" length="" type=""/><pubDate>Sun, 9 Nov 2025 22:47:13 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/387
+
+Prof. Andreas Zeller - Faculty at CISPA Helmholtz Center for Information Security & Author of "The Debugging Book"
+Clare Sudbery - Independent Technical Coach
+
+RESOURCES
+Andreas
+https://bsky.app/profile/andreaszeller.bsky.social
+ (https://mastodon.social/@AndreasZeller) https://www.linkedin.com/in/andreaszeller
+https://andreas-zeller.info
+
+Clare
+https://bsky.app/profile/claresudbery.bsky.social
+ (https://linkedin.com/in/clare-sudbery-she-her-35939540) https://www.madetech.com/podcast
+https://insimpleterms.blog
+
+Links
+https://www.debuggingbook.org
+https://github.com/uds-se/debuggingbook
+https://www.st.cs.uni-saarland.de/dd
+
+DESCRIPTION
+Programming education has a critical blind spot: while we extensively teach code creation, we barely scratch the surface of testing and give almost no attention to debugging—despite debugging consuming half of all software development time.
+
+In this conversation with Clare Sudbery, Prof. Andreas Zeller argues that systematic debugging skills and modern automated debugging tools are the "ugly stepchild" of programming that nobody wants to discuss, yet debugging represents the biggest business risk and time sink in software development.
+
+RECOMMENDED BOOKS
+Andreas Zeller • The Debugging Book • https://www.debuggingbook.org
+Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
+Nora Sandler • Writing a C Compiler • https (https://amzn.to/3Z6SMhU) 
+Inspiring Tech Leaders - The Technology Podcast (https://www.priceroberts.com/) 
+Interviews with Tech Leaders and insights on the latest emerging technology trends.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1563026924)    Spotify (https://open.spotify.com/show/5ihWZxxIa2rEnzbx5tdKfH) 
+ Canada Now (https://canadanow.buzzsprout.com) 
+Bold ideas with the people shaping Canada’s next chapter.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1842774054)    Spotify (https://open.spotify.com/show/79AhUeB2xDEovXrPvtPs62) 
+
+
+Bluesky (https://bsky.app/profile/gotocon.com) 
+Twitter (https://twitter.com/GOTOcon) 
+Instagram (https://www.instagram.com/goto_con) 
+LinkedIn (https://www.linkedin.com/company/goto-) 
+Facebook (https://www.facebook.com/GOTOConferences) 
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item></channel></rss>
