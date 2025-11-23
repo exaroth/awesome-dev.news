@@ -1,57 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>21+ Rust Pro Tips (TOP SECRET)</title><link>https://www.youtube.com/watch?v=53XYcpCgQWE</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/53XYcpCgQWE?version=3" length="" type=""/><pubDate>Fri, 21 Nov 2025 14:00:08 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[👉Join the Rust Live Accelerator waitlist (30 seats): https://letsgetrusty.com/join
+.
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Level up your Rust skills with practical insights and hard-earned lessons from mentoring over 100 Rust engineers. This video gives you clear, actionable techniques you can apply immediately to write cleaner, safer, and more efficient Rust code.
 
-RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
-
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
-
-DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
-
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
-
-RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
-
-
-Bluesky (https://bsky.app/profile/gotocon.com) 
-Twitter (https://twitter.com/GOTOcon) 
-Instagram (https://www.instagram.com/goto_con) 
-LinkedIn (https://www.linkedin.com/company/goto-) 
-Facebook (https://www.facebook.com/GOTOConferences) 
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
-
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+Chapter:
+0:00 Intro
+0:32 Tip 1 Use dbg!
+0:47 Tip 2 Use todo!
+1:03 Tip 3 Cargo Bacon
+1:20 Tip 4 Cargo Nextest
+1:35 Tip 5 Compiler-Driven Development
+2:23 Tip 6 Type reuse
+3:26 Tip 7 Use macros
+4:02 Tip 8 Thin main.rs
+4:20 Tip 9 Modules
+4:34 Tip 10 Prelude
+4:45 Tip 11 Control Visibility
+5:10 Tip 12 Cargo workspace
+5:56 Tip 13 Parse constructors
+6:41 Tip 14 Type-state pattern
+7:30 Tip 15 Clippy
+7:45 Tip 16 must_use attribute
+7:58 Tip 17 Clippy fix
+8:16 Tip 18 rustfmt
+8:40 Tip 19 rust toolchain
+9:10 Tip 20 cargo audit
+9:20 Tip 21 cargo deny
+9:35 Tip 22 cargo tarpaulin
+9:47 Tip 23 cargo chef]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis</title><link>https://www.youtube.com/watch?v=9_kMT4hQkME</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/9_kMT4hQkME?version=3" length="" type=""/><pubDate>Fri, 21 Nov 2025 13:25:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024.
 https://gotocph.com
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
+Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby"
 James Lewis - Software Architect & Director at Thoughtworks
 
 RESOURCES
@@ -68,19 +47,6 @@ https://linkedin.com/in/james-lewis-microservices
 https://github.com/boicy
 https://www.bovon.org
 
-TIMECODES
-00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
 Read the full abstract here:
 https://gotocph.com/2024/sessions/3522
 
@@ -93,93 +59,11 @@ Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn
 Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
 Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
 Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Inspiring Tech Leaders - The Technology Podcast (https://www.priceroberts.com/) 
+Interviews with Tech Leaders and insights on the latest emerging technology trends.
 
-https://bsky.app/profile/gotocon.com
-https://twitter.com/GOTOcon
-https://www.linkedin.com/company/goto-
-https://www.instagram.com/goto_con
-https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
-
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
-
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
-
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
-
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
-
-RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
-
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
-
-Links
-https://stripe.dev
-
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
-
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
-
-RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1563026924)    Spotify (https://open.spotify.com/show/5ihWZxxIa2rEnzbx5tdKfH) 
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +79,69 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Modern X86 Assembly Language Programming • Daniel Kusswurm &amp; Matt Godbolt • GOTO 2025</title><link>https://www.youtube.com/watch?v=L2Qu9rk05rE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/L2Qu9rk05rE?version=3" length="" type=""/><pubDate>Thu, 20 Nov 2025 13:00:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
 
-Andrew Browne - Solution Architect at Picnic Software
+Check out more here:
+https://gotopia.tech/episodes/411
+
+Daniel Kusswurm - SW Developer, Computer Scientist & Author of "Modern X86 Assembly Language Programming" & many more books
+Matt Godbolt - Low-level Latency Geek & Creator of Compiler Explorer @MattGodbolt 
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Matt
+https://bsky.app/profile/matt.godbolt.org
+https://xania.org
+https://github.com/mattgodbolt
+https://www.linkedin.com/in/godbolt
+https://twitter.com/mattgodbolt
+https://godbolt.org
+
+Links
+https://link.springer.com
+https://youtu.be/hgcNM-6wr34
+https://youtu.be/nI15yE2yIoI
+https://youtu.be/ehuYrQvFcFg
+https://youtu.be/lg0RYLlmjJM
+https://youtu.be/7PFwUpXKLrg
+https://youtu.be/_XbOTRunqHk
+https://youtu.be/-HNpim5x-IE
+https://youtu.be/EFXxXFHpS0M
+https://youtu.be/MkbgZMCTUyU
+https://youtu.be/y30jmDB7QLc
+https://youtu.be/qmh7Uppd3x0
+https://youtu.be/fDGWWpHlzvw
+https://youtu.be/VwPCtxxvwjI
+https://youtu.be/n9aSa9XVuiQ
+
+DESCRIPTION
+Matt Godbolt, creator of Compiler Explorer, interviews Daniel Kusswurm, author of "Modern X86 Assembly Language Programming", about the enduring relevance of assembly language in modern software development. They explore what SIMD (Single Instruction, Multiple Data) is and why it enables dramatic performance improvements for specific computational tasks, discuss when assembly language programming is justified versus using compiler intrinsics, and examine the challenges of writing vectorized algorithms. Dan shares insights from his career optimizing image analysis software and explains how understanding low-level architecture can improve code quality even when writing in higher-level languages.
+
+TIMECODES
+00:00 Intro
+01:39 What is Assembly Language & why does it matter?
+05:58 Understanding SIMD programming
+10:11 Writing SIMD algorithms
+13:16 Challenges of SIMD programming
+18:58 Intrinsics vs Assembly Language
+22:41 Real-world optimization examples
+24:42 Development workflow & benchmarking
+30:12 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Daniel Kusswurm • Modern X86 Assembly Language Programming v3 • https://amzn.to/44hIVZf
+Daniel Kusswurm • Modern X86 Assembly Language Programming v2 • https://amzn.to/3LJlMIZ
+Daniel Kusswurm • Modern X86 Assembly Language Programming v1 • https://amzn.to/43DPANj
+Daniel Kusswurm • Modern Arm Assembly Language Programming • https://amzn.to/4rbyH6M
+Daniel Kusswurm • Practical C++ STL Programming • https://amzn.to/4ickAdq
+Daniel Kusswurm • Modern Parallel Programming with C++ and Assembly Language • https://amzn.to/4o5J3SF
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#X86 #Assembly #AssemblyLanguage #SIMD #SIMDAlgorithms #SSE #Compiler #Intrinsics #Benchmarking #CompilerExplorer #ARM #ARMx64 #64bit #AVX #AVX2 #AVX512 #TodayInTech #SoftwareDevelopment #SoftwareEngineering #Programming #DanielKusswurm #DanKusswurm #MattGodbolt #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -227,4 +152,314 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item></channel></rss>
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Beyond Chat: Bringing Models to the Canvas • Lu Wilson • GOTO 2025</title><link>https://www.youtube.com/watch?v=pSTOENRgt7g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/pSTOENRgt7g?version=3" length="" type=""/><pubDate>Wed, 19 Nov 2025 13:01:41 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph
+https://gotocph.com
+
+Lu Wilson - Software Engineer at tldraw @TodePond 
+
+RESOURCES
+https://bsky.app/profile/todepond.com
+https://mastodon.social/@TodePond
+https://twitter.com/TodePond
+https://www.todepond.com
+
+ABSTRACT
+Whenever a new technology appears, our first instinct as developers is to offer "text" as the primary method of interaction. This has happened throughout computing history, with the computer terminal, with early smartphones, and now it's happening again with AI.
+
+At tldraw, we’ve been working on moving AI interaction away from the chat-based interface, towards a richer canvas environment. It hasn't been easy! I'll show you all the challenges we've faced, and how we're currently overcoming them. Some of the solutions have been surprising. [...]
+
+TIMECODES
+00:00 Intro
+
+Read the full abstract here:
+https://gotocph.com/2025/sessions/3773
+
+RECOMMENDED BOOKS
+Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Alex Castrounis • AI for People and Business • https://amzn.to/3NYKKTo
+Holden Karau, Trevor Grant, Boris Lublinsky, Richard Liu & Ilan Filonenko • Kubeflow for Machine Learning • https://amzn.to/3JVngcx
+Kelleher & Tierney • Data Science (The MIT Press Essential Knowledge series) • https://amzn.to/3AQmIRg
+Lakshmanan, Robinson & Munn • Machine Learning Design Patterns • https://amzn.to/2ZD7t0x
+Lakshmanan, Görner & Gillard • Practical Machine Learning for Computer Vision • https://amzn.to/3m9HNjP
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#AI #GenAI #GenerativeAI #ArtificialIntelligence #ChatGPT #ML #MakeRealtldraw #MakeReal #tldraw #Teachtldraw #TodayInTech #AIDriven #LuWilson
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Beyond the Hype: Real Talk on AI-Assisted Development • Jessica Kerr &amp; Diana Montalion</title><link>https://www.youtube.com/watch?v=CrE2cpW4CGQ</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/CrE2cpW4CGQ?version=3" length="" type=""/><pubDate>Tue, 18 Nov 2025 14:01:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
+
+Jessica Kerr - Engineering Manager of Developer Relation at Honeycomb.io & Symmathecist
+Diana Montalion - Systems Architect, Mentrix Founder & Author of "Learning Systems Thinking"
+
+RESOURCES
+Jessica
+https://bsky.app/profile/jessitron.bsky.social
+ (https://github.com/jessitron) https://linkedin.com/in/jessicakerr
+https://www.twitch.tv/jessitronica
+ (https://www.instagram.com/jessitronica) https://jessitron.com
+
+Diana
+https://bsky.app/profile/dianamontalion.com
+ (https://hachyderm.io/@diana) https://www.linkedin.com/in/dianamontalion
+ (https://github.com/dianamontalion) https://montalion.com
+https://learningsystemsthinking.com
+
+DESCRIPTION
+Systems architect Diana Montalion and engineering manager Jessica Kerr cut through the AI coding hype to explore what these tools actually do well - and where they have room for improvement. Moving beyond the "AI will replace developers" narrative, they reveal how AI assistants excel at the tedious work of typing, scaffolding, and error handling while remaining surprisingly bad at the nuanced thinking that experienced developers bring to complex systems.
+
+Their discussion illuminates a more mature relationship with AI tools: one where developers maintain agency over design decisions while leveraging AI's strengths in automation, synthesis, and rapid prototyping. The result is a pragmatic roadmap for using AI to amplify human expertise rather than replace it.
+
+RECOMMENDED BOOKS
+Diana Montalion • Learning Systems Thinking • https://amzn.to/3ZpycdJ
+Andrew Harmel-Law • Facilitating Software Architecture • https://amzn.eu/d/5kZKVfU
+Donella H. Meadows • Thinking in Systems • https://amzn.to/3XtqYCV
+Yu-kai Chou • Actionable Gamification • https://amzn.to/45D8bHA
+Inspiring Tech Leaders - The Technology Podcast (https://www.priceroberts.com/) 
+Interviews with Tech Leaders and insights on the latest emerging technology trends.
+
+
+Listen on: Apple Podcasts (https://podcasts.apple.com/podcast/id1563026924)    Spotify (https://open.spotify.com/show/5ihWZxxIa2rEnzbx5tdKfH) 
+
+
+Bluesky (https://bsky.app/profile/gotocon.com) 
+Twitter (https://twitter.com/GOTOcon) 
+Instagram (https://www.instagram.com/goto_con) 
+LinkedIn (https://www.linkedin.com/company/goto-) 
+Facebook (https://www.facebook.com/GOTOConferences) 
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
+
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>From Apache Spark to Fighting Health Insurance Denials • Holden Karau &amp; Julian Wood • GOTO 2025</title><link>https://www.youtube.com/watch?v=qNO8U3-ZzCk</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/qNO8U3-ZzCk?version=3" length="" type=""/><pubDate>Mon, 17 Nov 2025 13:01:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
+
+Check out more here:
+https://gotopia.tech/articles/410
+
+Holden Karau - Co-Founder at Fight Health Insurance @HoldenKarau 
+Julian Wood - Serverless Developer Advocate at AWS @julian_wood 
+
+RESOURCES
+Holden
+https://bsky.app/profile/holdenkarau.com
+https://twitter.com/holdenkarau
+https://github.com/holdenk
+https://www.linkedin.com/in/holdenkarau
+http://holdenkarau.com
+
+Julian
+https://bsky.app/profile/julianwood.com
+https://twitter.com/julian_wood
+https://github.com/julianwood
+http://www.wooditwork.com
+https://www.linkedin.com/in/julianrwood
+
+Links
+https://fighthealthinsurance.com
+https://youtu.be/4xsBQYdHgn8
+https://youtu.be/GZfJM7lhi8o
+https://youtu.be/7M7wt3nY0dg
+https://youtu.be/L2kkRvqHcFg
+https://youtu.be/dsiTp4sCHaE
+https://youtu.be/9gZMnJ2XPkM
+https://youtu.be/dqDLDngR-og
+https://youtu.be/Q5muBDDdhJg
+https://youtu.be/w3zkqfTN1fc
+https://youtu.be/wiU3QIcf4fU
+https://youtu.be/dUZ5TrSReZc
+https://youtu.be/IX3300umebg
+https://youtu.be/mUTx61t443A
+https://youtu.be/MxlLDSUBJX8
+https://youtu.be/QgrChOltYek
+https://youtu.be/8KntBPOdfWA
+
+DESCRIPTION
+Apache Spark contributor Holden Karau discusses the evolution of distributed data processing, the challenges of integrating machine learning with big data tools, and the technical complexities of working with GPUs at scale.
+
+The conversation takes a personal turn as Holden reveals her latest project: an open-source AI tool that helps people appeal health insurance claim denials. Drawing from personal experiences with denied claims, she has built a system that trains on independent medical review data to generate effective appeals, making it freely available at https://fighthealthinsurance.com while grappling with the classic open-source challenge of sustainable funding.
+
+TIMECODES
+00:00 Intro
+00:26 Apache Spark: A decade of distributed data processing
+07:03 GPU integration & resource management
+09:51 Common mistakes & best practices in data processing
+14:59 Building an AI tool to fight insurance denials
+18:36 How the insurance appeal tool works
+26:17 Technical challenges & open source sustainability
+39:55 Outro
+
+RECOMMENDED BOOKS
+Holden Karau • Distributed Computing 4 Kids • https://www.distributedcomputing4kids.com
+Holden Karau • Scaling Python with Dask • https://www.oreilly.com/library/view/scaling-python-with/9781098119867
+Holden Karau & Boris Lublinsky • Scaling Python with Ray • https://amzn.to/44GU6cC
+Holden Karau & Rachel Warren • High Performance Spark • https://amzn.to/3v2eLbn
+Holden Karau, Konwinski, Wendell & Zaharia • Learning Spark • https://amzn.to/397e2NE
+Holden Karau & Krishna Sankar • Fast Data Processing with Spark 2nd Edition • https://amzn.to/3xKhXKu
+Holden Karau • Fast Data Processing with Spark 1st Edition • https://amzn.to/3rHQgOu
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#ApacheSpark #OpenSource #DistributedData #DataProcessing #LLMs #GenAI #HealthInsurance #HealthInsuranceAppeals #FightHealthInsurance #InsuranceDenials #GPU #Programming #TodayInTech #HoldenKarau #JulianWood
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Linked List: Explained in 4 minutes</title><link>https://blog.algomaster.io/p/linked-list</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/ec413e06-d5fc-406c-8401-55044c5c8bfd_745x534.png" length="" type=""/><pubDate>Sun, 16 Nov 2025 04:28:52 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[ is one of the most fundamental data structures in computer science and a must-know topic for coding interviews.Unlike arrays, linked lists don’t require you to predefine a size.They allocate memory dynamically as elements are added. And because each element points to the next, you can  without shifting anything.In this article, I’ll break down:What a linked list is and how it worksDifferent types of linked listsMost common linked list operations and their time complexitiesand the most common interview patterns built around linked listsI also made a  on Linked List. Check it out for more in-depth and visual explanation.Subscribe for more such videos!A  is a linear data structure made up of .Each node contains two parts:A value: the actual data you want to storeand a  or  to the  in the sequenceThe last node points to null, indicating the end of list.Unlike arrays, where all elements are stored together in a single, continuous block of memory, the nodes in a linked list can be .What keeps them connected are those pointers linking one node to the next.This structure makes linked lists . You can grow or shrink them dynamically, and insertions or deletions don’t require shifting large chunks of memory like arrays do.But this flexibility comes with a trade-off.Since the elements aren’t stored together, you  to a specific item like you can with arrays.Instead, to access the 5th or 10th element, you may have to traverse the list from the beginning, one node at a time, which takes .Depending on how the nodes are connected, we can categorize them into three common types:In a , each node contains a value and a pointer to the  and that’s it.class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+        this.next = null;
+    }
+}You can only move in , from the head toward the tail.It’s simple to implement and memory-efficient.But there’s a downside: if you need to go , there’s no easy way. You’d have to start from the head and traverse again until you reach the previous node.Singly linked lists are great for problems where you only need forward traversal.A  takes things one step further.Each node has :One pointing to the  nodeOne pointing to the  nodeclass DoublyListNode {
+    int val;
+    DoublyListNode next;
+    DoublyListNode prev;
+
+    DoublyListNode(int val) {
+        this.val = val;
+        this.next = null;
+        this.prev = null;
+    }
+}This means you can move , which makes certain operations much more efficient.But the trade-off is that it uses  to store the additional pointer and it introduces a bit more complexity in updating links during insertions or deletions.Doubly linked lists are widely used in real-world systems like: LRU caches, text editors for undo/redo functionality, and browser history navigation.A  is a variation where the last node points back to the first node, instead of .This forms a . You can start at any node and keep going until you’re back where you started.class CircularListNode {
+    int val;
+    CircularListNode next;
+
+    CircularListNode(int val) {
+        this.val = val;
+        this.next = this; // initially points to itself
+    }
+}It’s great for problems where you need cyclical behavior like round-robin scheduling, or multiplayer games where turns cycle through players.Now that we know what linked lists are and the different types, let’s go over the most common operations you’ll perform on them.Traversal means moving through the list, visiting each node one by one. You  and move one node at a time.void traverse(Node head) {
+    Node current = head;
+
+    while (current != null) {
+        System.out.print(current.value + “ -> “);
+        current = current.next;
+    }
+
+    System.out.println(”null”);
+}This operation takes  because, in the worst case, you might visit every node.If you want to find whether a value exists in a linked list, you must:Check each node one by one until you find the value or reach the endboolean search(int target) {
+    Node current = head;
+
+    while (current != null) {
+        if (current.value == target) {
+            return true;
+        }
+        current = current.next;
+    }
+
+    return false;
+}Since this is a linear search, it takes  in the worst case.Linked lists really shine when it comes to insertion because you don’t have to shift elements like you would in an array.There are different cases depending on where you are inserting a node:This is the fastest case.Point its  to the current headUpdate the head to the new nodevoid insertAtHead(int value) {
+    Node newNode = new Node(value);
+    newNode.next = head;
+    head = newNode;
+}It takes  since no traversal is needed.To insert at the end, you have to:Traverse the list until you reach the last nodeUpdate the last node’s  to the new nodevoid insertAtEnd(int value) {
+    Node newNode = new Node(value);
+
+    // If list is empty, new node becomes head
+    if (head == null) {
+        head = newNode;
+        return;
+    }
+
+    // Otherwise, go to the last node
+    Node current = head;
+    while (current.next != null) {
+        current = current.next;
+    }
+
+    current.next = newNode;
+}If you maintain a tail pointer, you can insert in constant time . Otherwise, you’ll need to traverse the entire list to find the last node, which takes .Insert at a Given PositionTo insert at a specific position (say after the 5th node), you must:Traverse to that positionAdjust the pointers to insert the new nodevoid insertAtPosition(int value, int position) {
+    if (position == 0) {
+        insertAtHead(value);
+        return;
+    }
+
+    Node current = head;
+    // move to node at position-1
+    for (int i = 0; i < position - 1 && current != null; i++) {
+        current = current.next;
+    }
+
+    Node newNode = new Node(value);
+    newNode.next = current.next;
+    current.next = newNode;
+}Again, this requires  time in the worst case.Like insertion, deletion can also vary based on position.Delete from the BeginningThis is fast. Just move the head pointer to the next node:void deleteHead() {
+    if (head == null) {
+        return; // nothing to delete
+    }
+    head = head.next;
+}This is constant time since no traversal is needed.Delete from the End or MiddleTo delete the last node or a node in the middle:You have to Update its  pointer to skip the node you want to deletevoid deleteAtPosition(int position) {
+    if (position == 0) {
+        deleteHead();
+        return;
+    }
+
+    Node current = head;
+    // move to node at position-1
+    for (int i = 0; i < position - 1 && current != null; i++) {
+        current = current.next;
+    }
+
+    // skip the node at `position`
+    current.next = current.next.next;
+}Since there’s no backward pointer in a singly linked list, this means  from the head, which takes  time.It is also known as Floyd’s Tortoise and Hare algorithm.The  moves one step at a time.The  moves two steps at a time.This simple trick allows you to solve problems like:: if there’s a loop, the fast and slow pointers will eventually meet. of a linked listThis is a  technique in interviews. The challenge is to reverse the direction of pointers so the last node becomes the new head.We can do it in-place by maintaining three pointers at ,  and  node.void reverse() {
+    Node prev = null;
+    Node curr = head;
+
+    while (curr != null) {
+        Node nextNode = curr.next; // store next
+        curr.next = prev;          // reverse pointer
+        prev = curr;               // move prev forward
+        curr = nextNode;           // move curr forward
+    }
+
+    head = prev; // new head after full reversal
+}And then walking through the list and flipping the pointers one by one.Another common trick is using dummy nodes. This one’s a  that makes your implementation simpler and less error-prone.A  is just a placeholder node that you insert  the real head of the list.It eliminates messy special cases like:“What if we delete the head?”“What if insertion happens at the very beginning?”“Do we need separate logic when head changes?”Node deleteAll(Node head, int target) {
+    // 1. Create a dummy node before the real head
+    Node dummy = new Node(0);   // value doesn’t matter
+    dummy.next = head;
+
+    // 2. Use current pointer starting from dummy
+    Node current = dummy;
+
+    while (current.next != null) {
+        if (current.next.value == target) {
+            // Skip the node with target value
+            current.next = current.next.next;
+        } else {
+            // Move forward only if we didn’t delete
+            current = current.next;
+        }
+    }
+
+    // 3. New head might have changed
+    return dummy.next;
+}With a dummy node, you treat the head like any other node so your logic stays uniform and your code gets much cleaner.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item></channel></rss>
