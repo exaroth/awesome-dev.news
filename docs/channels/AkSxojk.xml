@@ -1,98 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>ChatLoopBackOff: Episode 68 (KANISTER)</title><link>https://www.youtube.com/watch?v=-dy_J3VmmOg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/-dy_J3VmmOg?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 22:51:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Join us LIVE as CNCF Ambassador Carlos Santana dives into Kanister, the open source framework for application-level data management on Kubernetes.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Video</title><link>https://www.awesome-dev.news</link><description></description><item><title>2026 Will Make or Break Rust</title><link>https://www.youtube.com/watch?v=h4-t2hZ9T2A</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/h4-t2hZ9T2A?version=3" length="" type=""/><pubDate>Sat, 6 Dec 2025 14:45:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[👉Join the Rust Live Accelerator waitlist (30 seats): https://letsgetrusty.com/join
+.
 
-Carlos will be exploring the project for the very first time, right alongside you. Expect a hands-on walkthrough of the docs, community resources, and real-world use cases that highlight how Kanister helps extend Kubernetes for backup, recovery, and data operations.
+Rust is approaching its most important moment yet.
 
-If you’re curious about how cloud native projects approach complex data management challenges, or just enjoy watching an experienced open source explorer break down a CNCF project live, this session is for you.
+In this video, we break down where Rust sits on the technology adoption curve, why 2026 is a make-or-break year, and what it means for developers betting their careers on Rust. We’ll look at real production usage, ecosystem maturity, hiring trends, and whether Rust is finally ready to cross the chasm into mainstream adoption.
 
-Bring your questions, share your experiences, and learn in real time as we explore Kanister together!]]></content:encoded></item><item><title>I can&apos;t even with these company names...</title><link>https://www.youtube.com/shorts/UBnfA9s3OuE</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/UBnfA9s3OuE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 21:25:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Seriously... They're good products, just unfortunately named.
+If you’re learning Rust—or thinking about it—this is the video you don’t want to miss.]]></content:encoded></item><item><title>Anthropic just bought your favorite JS runtime...</title><link>https://www.youtube.com/watch?v=5JMiNsV7P3Y</link><author>Fireship</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/5JMiNsV7P3Y?version=3" length="" type=""/><pubDate>Fri, 5 Dec 2025 21:43:51 +0000</pubDate><source url="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</source><content:encoded><![CDATA[Try Brilliant for free - https://brilliant.org/fireship and get 20% off a premium annual subscription
 
-And yes I know that's a switch and not a router, lol. This is why I use scripts for my long form videos :D
+Anthropic just bought Bun - the super fast JavaScript runtime that's  universally loved by developers. In today's video, we'll break down why they did it, how Bun got here, and what their marriage might look like.
 
-Here are affiliate links to the two products I bought and mentioned:
+💬 Chat with Me on Discord
 
-  - CUKTECH 10Ah 100W portable charger: https://amzn.to/4murMTe
-  - NICGIGA 5Gbps Network Switch: https://amzn.to/3HNJstX
+https://discord.gg/fireship
 
-Support me on Patreon: https://www.patreon.com/geerlingguy
-Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
-Merch: https://www.redshirtjeff.com
-2nd Channel: https://www.youtube.com/@GeerlingEngineering
-3rd Channel: https://www.youtube.com/@Level2Jeff]]></content:encoded></item><item><title>Blind &amp; Visually Impaired Initiative (BVI) Meeting - 2025-08-19</title><link>https://www.youtube.com/watch?v=bJej44Ug8tU</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/bJej44Ug8tU?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 20:16:43 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Atlanta (November 10-13). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>Do THIS before you boot up that old computer!</title><link>https://www.youtube.com/watch?v=779nru5udpQ</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/779nru5udpQ?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 14:00:18 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Taking it apart is usually a better option than turning it on.
+🔗 Resources
+https://bun.com/blog/bun-joins-anthropic
+https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone
 
-Track all the work I'm doing on Retro Macs: https://github.com/geerlingguy/retro-computers
+📚 Chapters
 
-Also check out Infinite Mac—you can enjoy retro Mac software in the comfort of your browser, and not have to restore a 35 year old Mac like I did! https://infinitemac.org/
+🔥 Get More Content - Upgrade to PRO
 
-Parts list:
+Upgrade at https://fireship.io/pro
+Use code YT25 for 25% off PRO access 
 
-  - Console5 - Analog board (630-0395) caps: https://console5.com/store/macintosh-classic-analog-pcb-cap-kit.html
-  - Console5 - Logic board tantalum caps: https://console5.com/store/macintosh-classic-smd-tantalum-main-pcb-cap-kit.html
-  - Mac Memories - 2x 1MB SIMMs: https://www.ebay.com/itm/144565895077
-  - MacBatt Internal CR2032 PRAM replacement: https://www.tindie.com/products/jurassicomp/macbatt-internal-cr2032-pram-macintosh-battery/
+🎨 My Editor Settings
 
-Some videos referenced in this video:
+- Atom One Dark 
+- vscode-icons
+- Fira Code Font
 
-  - Mac84 - Repairing a Sad Quadra 840AV: https://www.youtube.com/watch?v=LBgr5mdimRY
-  - Peter Cetinski - RIFA AC Cap Blowup: https://www.youtube.com/watch?v=njbwdbcfXjc
-  - iiiDIY Recapping 20th Anniversary Mac: https://youtu.be/mabH-YB6kn4?t=683
+🔖 Topics Covered]]></content:encoded></item><item><title>The End of Engineering&apos;s Blank Check: Accountability in Software Leadership • Laura Tacho &amp; Charl...</title><link>https://www.youtube.com/watch?v=MJjmRN2Xteo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/MJjmRN2Xteo?version=3" length="" type=""/><pubDate>Fri, 5 Dec 2025 13:28:11 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
 
-Music in this video by LOOK MUM NO COMPUTER: https://www.youtube.com/watch?v=M47dXmZUnBc
-
-Support me on Patreon: https://www.patreon.com/geerlingguy
-Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
-Merch: https://redshirtjeff.com
-2nd Channel: https://www.youtube.com/c/GeerlingEngineering
-
-Contents:
-
-00:00 - Long screwdrivers and old computer problems
-03:18 - Tools of the trade
-05:09 - Cracking open the Mac
-07:41 - Breaking the anode, safely
-09:36 - Logic board removal
-11:06 - Analog board and CRT neck board removal
-12:50 - Recapping the Analog board
-18:08 - Recapping the Logic board
-21:29 - Tantalum caps, MacBatt, and 4 MB RAM upgrade
-23:02 - Re-assembling the Classic
-23:51 - First power
-25:53 - Computing like it's 1991
-28:45 - Revealing the build, reliving the memories
-30:41 - More Macs?]]></content:encoded></item><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
-
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Laura Tacho - CTO at DX & Executive Coach at Laura Tacho Consulting
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Laura
+https://x.com/rhein_wein
+https://bsky.app/profile/lauratacho.com
+https://www.linkedin.com/in/lauratacho
+https://lauratacho.com
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://linkedin.com/in/charleshumble
+https://mastodon.social/@charleshumble
+https://conissaunce.com
+
+Links
+https://getdx.com/research/measuring-ai-code-assistants-and-agents
+https://www.conissaunce.com/professional-skills-shortcut.html
+https://getdx.com/research/measuring-developer-productivity-with-the-dx-core-4
+https://dora.dev
+https://getdx.com/blog/understanding-dora-metrics
+https://queue.acm.org/detail.cfm?id=3454124
+https://getdx.com/blog/space-metrics
+https://getdx.com/research/devex-what-actually-drives-productivity
+https://getdx.com/news/introducing-genai-impact-report
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
+Laura Tacho, CTO at DX and executive coach, shares her take on the challenging transition from technical contributor to business leader. She discusses the most common leadership skill gaps she sees in CTOs, particularly around setting clear expectations without falling into the "micromanagement spiral of doom".
 
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
+Laura explains the development of the DX Core 4 framework for measuring developer productivity through four balanced dimensions:
+• Speed
+• Effectiveness
+• Quality
+• Impact
 
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+She emphasizes the critical importance of connecting technical work to business outcomes, arguing that the era of engineering having a "blank check" is over and that today's leaders must think like business leaders who speak in terms of ROI and impact. The conversation with Charles Humble also covers emerging trends in AI-assisted development and unconventional approaches to performance management.
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Will Larson • An Elegant Puzzle • https://amzn.to/4gb9VyC
+Will Larson • The Engineering Executive's Primer • https://amzn.to/3UURQuT
+Meri Williams • The Principles of Project Management • https://amzn.to/4lj5B1G
+Daniel H. Pink • Drive: The Surprising Truth About What Motivates Us • https://amzn.to/3UHx535
+Kathy Sierra • Badass • https://amzn.to/4b9fb2V
+James Stanier • Become an Effective Software Engineering Manager • https://amzn.to/3vHrx1E
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -108,63 +93,103 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>ChatLoopBackOff: Episode 67 (Kserve)</title><link>https://www.youtube.com/watch?v=BjXZxUR8NMo</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/BjXZxUR8NMo?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 20:33:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Join us LIVE as CNCF Ambassador Shivay Lamaba dives into KServe, the open source project designed for scalable and reliable ML models serving on Kubernetes.
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>ChatLoopBackOff: Episode 73 (Easegress)</title><link>https://www.youtube.com/watch?v=B_FxNFx6DG0</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/B_FxNFx6DG0?version=3" length="" type=""/><pubDate>Fri, 5 Dec 2025 06:01:29 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Join CNCF Ambassador Chad Crowell as he explores Easegress, a CNCF project built to simplify traffic orchestration in cloud native environments. In this live, first-time walkthrough, Chad will take a look at how Easegress handles service mesh traffic, API gateway capabilities, canary releases, and workflow automation—all through a lightweight and flexible architecture.
 
-Shivay will be  exploring the project for the very first time, right alongside you. Expect a hands-on walkthrough of the docs, community resources, and real-world use cases that make KServe a key piece in the cloud native AI/ML ecosystem.
-If you’re curious about production-grade model inference, want to see how cloud native communities approach machine learning workloads, or just enjoy watching an experienced open source explorer break down a CNCF project live, this session is for you.
+Expect real-time experimentation, open discussion, and plenty of “let’s see what happens” moments as Chad navigates the docs, tries out key features, and evaluates where Easegress fits within the broader CNCF landscape.
 
-Bring your questions, share your experiences, and learn in real time as we explore KServe together!]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+Whether you're curious about traffic management, interested in emerging CNCF Sandbox projects, or just enjoy learning alongside the community, this episode is the perfect way to get to know Easegress for the first time.]]></content:encoded></item><item><title>The RAM Shortage Comes for Us All</title><link>https://www.youtube.com/watch?v=9rbz0akyLyQ</link><author>Jeff Geerling</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/9rbz0akyLyQ?version=3" length="" type=""/><pubDate>Thu, 4 Dec 2025 18:42:58 +0000</pubDate><source url="https://www.youtube.com/channel/UCR-DXc1voovS8nhAvccRZhg">Jeff Goerling yt channel</source><content:encoded><![CDATA[Some of the articles and posts I referenced:
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+  - TeamGroup 64GB DDR5 Memory Kit I bought for $209.99 is now $649.99: https://www.microcenter.com/product/680461/teamgroup-t-create-expert-64gb-(2-x-32gb)-ddr5-6400-pc5-51200-cl34-dual-channel-desktop-memory-kit-ctced564g6400hc34bdc01-black
+  - PC Part Picker Memory Pricing Trends: https://pcpartpicker.com/trends/price/memory/
+  - Samsung can't buy Samsung memory: https://www.pcworld.com/article/2998935/ram-is-so-expensive-samsung-wont-even-sell-it-to-samsung.html
+  - Micron stops selling Crucial memory and NVMes: https://investors.micron.com/news-releases/news-release-details/micron-announces-exit-crucial-consumer-business
+  - Libre Computer's quote for LPDDR4 4GB RAM increasing beyond entire board BoM: https://x.com/librecomputer/status/1995592912063922578
+  - Lenovo Stockpiles RAM for Laptops: https://www.pcworld.com/article/2986266/lenovo-stockpiles-ram-to-hopefully-keep-laptop-prices-down.html
+  - Raspberry Pi memory-driven price rises: https://www.raspberrypi.com/news/1gb-raspberry-pi-5-now-available-at-45-and-memory-driven-price-rises/
+  - Mono's future production runs impacted by LPDDR4 memory pricing: https://www.youtube.com/watch?v=AyueVGLT7qI
+
+Support me on Patreon: https://www.patreon.com/geerlingguy
+Sponsor me on GitHub: https://github.com/sponsors/geerlingguy
+Merch: https://www.redshirtjeff.com
+2nd Channel: https://www.youtube.com/@GeerlingEngineering
+3rd Channel: https://www.youtube.com/@Level2Jeff]]></content:encoded></item><item><title>Quarkus in Action • Martin Stefanko, Jan Martiska &amp; Holly Cummins • GOTO 2025</title><link>https://www.youtube.com/watch?v=j0h7wu7gjoU</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/j0h7wu7gjoU?version=3" length="" type=""/><pubDate>Thu, 4 Dec 2025 13:01:34 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
+
+Check out more here:
+https://gotopia.tech/episodes/416
+
+Martin Štefanko - Quarkus Core Engineer at IBM & Co-Author of "Quarkus in Action" @xstefank 
+Jan Martiška - Software Engineer Quarkus at IBM & Co-Author of "Quarkus in Action" @janmartiska611 
+Holly Cummins - Senior Technical Staff Member, Quarkus at IBM @Holly_Cummins 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Martin
+https://bsky.app/profile/xstefank.bsky.social
+https://mastodon.cloud/@xstefank
+https://x.com/xstefank
+https://github.com/xstefank
+https://www.linkedin.com/in/martin-stefanko
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Jan
+https://bsky.app/profile/janmartiska.bsky.social
+https://x.com/janmartiska
+https://github.com/jmartisk
+https://www.linkedin.com/in/janmartiska
+
+Holly
+https://hollycummins.com
+https://hollycummins.com/type/blog
+https://bsky.app/profile/hollycummins.com
+https://hachyderm.io/@holly_cummins
+https://twitter.com/holly_cummins
+https://github.com/holly-cummins
+https://linkedin.com/in/holly-k-cummins
+
+Links
+https://code.quarkus.io
+https://vaadin.com
+https://youtu.be/RlCpgSoOX6I
+https://youtu.be/0FhQmHb1kLk
+https://youtu.be/la4kc57F6jU
+https://youtu.be/THIlDdXk6Ac
+https://youtu.be/7bvQXb3Nv0E
+https://youtu.be/7Anvawx9ixY
+https://youtu.be/tSCyTUkVdoA
+https://youtu.be/G_CNnWH8Opw
+https://youtu.be/fXWywFRwHOk
+https://youtu.be/IW-cPuydd5s
+https://youtu.be/nxQrpLfX3rs
+https://youtu.be/ESM84C7QKl8
+https://youtu.be/8fi7uSYlOdc
+https://youtu.be/npdqkbOLVws
+https://youtu.be/wgJWs14YcEs
+
+DESCRIPTION
+Holly Cummins sits down with Martin Stefanko and Jan Martiška, authors of "Quarkus in Action", to discuss their journey writing this comprehensive guide to the Java framework. The authors share insights about Quarkus's developer experience, from its blazing-fast dev mode to native compilation capabilities, while revealing what they learned writing about 29 different extensions across 12 chapters.
+
+They discuss the book's structure - from getting started to deploying in the cloud- and offer practical advice on when to use JVM versus native compilation, making this essential reading for both Quarkus newcomers and experienced developers.
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+01:38 Why Quarkus & why this book?
+09:34 Inside the book: Structure & coverage
+17:33 What the authors learned
+24:49 JVM vs Native: essential guidance
+28:19 Unexpected sidebar
+30:25 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Martin Stefanko • Jan Martiska • Quarkus in Action • https://amzn.to/3K1En2z
+Ben Evans & Jim Gough • Optimizing Cloud Native Java • https://amzn.to/41nivD9
+Kief Morris • Infrastructure as Code • https://amzn.to/4e6EBQc
+Alex Soto Bueno & Jason Porter • Quarkus Cookbook • https://amzn.to/4au3QfF
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#QuarkusInAction #Quarkus #PerformanceEngineering #JVM #JavaNative #Java #JavaProgramming #JavaPerformance #JavaConcurrency #CloudNative #CloudNativeJava #GraalVM #GraphQL #gRPC #RESTAPI  #TodayInTech #MartinStefanko #JanMartiska #HollyCummins #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -175,70 +200,100 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>CNCF On-Demand: Cloud Native Inference at Scale - Unlocking LLM Deployments with KServe</title><link>https://www.youtube.com/watch?v=GBIiUq82cws</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/GBIiUq82cws?version=3" length="" type=""/><pubDate>Thu, 4 Dec 2025 08:00:27 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[The demand for scalable and cost-efficient inference of large language models (LLMs) is outpacing the capabilities of traditional serving stacks. Unlike conventional ML workloads, LLM inference brings unique challenges: long prompts, token-by-token generation, bursty traffic patterns, and the need for consistently high GPU utilization. These factors make request routing, deterministic scheduling, and autoscaling significantly more complex than typical model serving scenarios. In this presentation, we will discuss Kserve, an open source project for LLM Inference at scale.
+* Scalable model serving on Kubernetes using KServe.
+* Seamless integration with Kubernetes, enabling reproducible, resilient, and cost- efficient deployments.
+* Deterministic scheduling and token-aware request handling through the Kubernetes inference scheduler (using Gateway Inference Extension) and execution strategies.
+* Distributed and Disaggregated Inferencing with LLM Inference Service for advance serving.]]></content:encoded></item><item><title>Deno vs. Node.js vs. Bun: Performance Comparison</title><link>https://www.youtube.com/watch?v=_iEaaNIjg7U</link><author>Anton Putra</author><category>dev</category><category>video</category><enclosure url="https://www.youtube.com/v/_iEaaNIjg7U?version=3" length="" type=""/><pubDate>Thu, 4 Dec 2025 04:55:54 +0000</pubDate><source url="https://www.youtube.com/channel/UCeLvlbC754U6FyFQbKc0UnQ">Anton Putra</source><content:encoded><![CDATA[Deno vs. Bun vs. Node.js Performance Comparison
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
+👨‍💼 Mentorship/On-the-Job Support/Consulting - https://calendly.com/antonputra/youtube or me@antonputra.com
+👀 Check out recommendations from my previous clients - https://www.linkedin.com/in/anton-putra/details/recommendations/
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
+▬▬▬▬▬ Experience & Location 💼 ▬▬▬▬▬
+►  I’m a Senior Software Engineer (13+ years of experience)
+►  Located in San Francisco Bay Area, CA (US citizen)
 
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
+▬▬▬▬▬▬ Connect with me 👋 ▬▬▬▬▬▬
+►  LinkedIn: https://www.linkedin.com/in/anton-putra
+►  Twitter/X: https://twitter.com/antonvputra
+►  GitHub: https://github.com/antonputra
+►  Email: me@antonputra.com
 
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+▬▬▬▬▬▬▬ Source Code 📚 ▬▬▬▬▬▬▬
+► Original Source Code: https://github.com/antonputra/tutorials/tree/273/lessons/273
 
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
+#redis #valkey #devops]]></content:encoded></item><item><title>The Metaverse Only Has 900 Users</title><link>https://www.youtube.com/watch?v=ntPGl8UyIq4</link><author>ColdFusion</author><category>tech</category><category>video</category><enclosure url="https://www.youtube.com/v/ntPGl8UyIq4?version=3" length="" type=""/><pubDate>Wed, 3 Dec 2025 17:46:38 +0000</pubDate><source url="https://www.youtube.com/channel/UC4QZ_LsYcvcq7qOsOhpAX4A">Cold Fusion</source><content:encoded><![CDATA[Try Odoo for free: https://www.odoo.com/r/S0w
 
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>CNL: Bringing Agentic AI to Cloud Native with kagent &amp; Kyverno</title><link>https://www.youtube.com/watch?v=C0y8bDvL47M</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/C0y8bDvL47M?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 17:03:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Let’s stop babysitting clusters and build AI agents to operate and govern for us! Kagent, a new CNCF project, enables simple declarative development of Kubernetes-native AI agents for any cloud native projects. This session will show you how to rapidly construct custom AI agents for essential operational and management tasks. Learn how Kyverno, the Kubernetes-native policy engine for managing validation, mutation, generation, and cleanup, can be extended with AI capabilities through kagent using the emerging Model Context Protocol (MCP) to enable intelligent policy recommendations and automation.]]></content:encoded></item><item><title>CNCF Deaf and Hard of Hearing Working Group at KubeCon + CloudNativeCon EU 2025</title><link>https://www.youtube.com/watch?v=CLhA-du1Yy8</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/CLhA-du1Yy8?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 14:49:58 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Huge shout-out to the CNCF Deaf and Hard of Hearing Working Group for an incredible week at KubeCon + CloudNativeCon in London earlier this year! Check out this latest video to get a glimpse of what they were up to and what to expect in Atlanta!
+Mark Zuckerberg's Metaverse was supposed to be the next version of the internet. Instead it largely sits abandoned after billions of dollars in spending. What happened? In this episode we explore.
 
-They brought so much energy and had lots of activities, including a keynote, several talks, and a fun sign language crash course. Their kiosk in the Project Pavilion was a hub of activity, creating meaningful connections and fostering a more inclusive community.
+Watch or listen to ColdFusion on Spotify: https://open.spotify.com/show/1YEwCKoRz8fEDqheXB6UJ1
 
-This group is full of passion and brilliant people. We're so proud of what they've accomplished, and look forward to seeing the team in Atlanta! And for a fun challenge, watch the video and see if you can spot the new sign they created for "CNCF." ✨]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
 
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+ColdFusion Music: 
+
+https://www.youtube.com/@ColdFusionmusic
+http://burnwater.bandcamp.com   
+
+Get my book: 
+
+http://bit.ly/NewThinkingbook 
+
+ColdFusion Socials: 
+
+https://discord.gg/coldfusion
+https://facebook.com/ColdFusionTV 
+https://twitter.com/ColdFusion_TV 
+https://instagram.com/coldfusiontv
+
+Created by: Dagogo Altraide
+Producers: Tawsif Akkas, Dagogo Altraide]]></content:encoded></item><item><title>Orchestration Lightning: Rapid-Fire AWS Step Functions Patterns • Eric Johnson • GOTO 2025</title><link>https://www.youtube.com/watch?v=Sxsp2p0Nio4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/Sxsp2p0Nio4?version=3" length="" type=""/><pubDate>Wed, 3 Dec 2025 13:01:07 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Serverless 2025. #GOTOcon #GOTOserverless
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025
+
+Eric Johnson - Principal Developer Advocate for Serverless at AWS
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+https://bsky.app/profile/edjgeek.bsky.social
+https://twitter.com/edjgeek
+https://linkedin.com/in/singledigit
+https://serverlessland.com
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+ABSTRACT
+Ready to supercharge your Step Functions game in just 30 minutes?
+This rapid-fire session delivers battle-tested patterns and architectural shortcuts that'll make your serverless orchestration sing. We'll blitz through real-world scenarios—when to Map vs. Parallel, how to tame nested workflows, and clever tricks with JSONata and variables that'll slash your costs and boost performance.
 
-Links
-https://stripe.dev
+No fluff, just the patterns that matter, served up lightning-fast with production war stories that prove they work.
 
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+Because orchestration isn't just powerful—it's genuinely fun when you know the right moves! [...]
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
+TIMECODES
+00:00 Intro
+02:21 AWS Step Functions
+04:52 The CRUD machine
+08:57 The chat bot
+10:25 Demo
+12:20 The super mapper
+15:40 The loop reducer
+18:45 The MCP machine
+22:21 Outro
 
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Download slides and read the full abstract here:
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3849
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
+Sheen Brisals & Luke Hedger • Serverless Development on AWS • https://amzn.to/3W3Sw2f
+Adam Bellemare • Building Event-Driven Microservices • https://amzn.to/3WfNKfM
+Peter Sbarski • Serverless Architectures on AWS • https://amzn.to/3hJzEUM
+Michael Stack • Event-Driven Architecture in Golang • https://amzn.to/3G5e8ST
+Ford, Richards, Sadalage & Dehghani • Software Architecture: The Hard Parts • https://amzn.to/3v4pKQS
+James Urquhart • Flow Architectures • https://amzn.to/3Tyz8cY
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Serverless #ServerlessCompute #ServerlessArchitecture #EventDrivenArchitecture #SoftwareArchitecture #StepFunctions #AWSStepFunctions #CRUDmachine #CRUD #AWSServerless #ServerlessDevelopment #EDA #AWS #GenAI #EventLoop #LambdaFunctions #SoftwareEngineering #Programming #TodayInTech #EricJohnson
+
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
 https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
@@ -248,7 +303,39 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Deaf and Hard of Hearing WG Meeting - November 2025</title><link>https://www.youtube.com/watch?v=6zxt1cPKI-4</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/6zxt1cPKI-4?version=3" length="" type=""/><pubDate>Tue, 2 Dec 2025 14:40:20 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon events in Amsterdam, The Netherlands (23-26 March, 2026). Connect with our current graduated, incubating, and sandbox projects as the community gathers to further the education and advancement of cloud native computing. Learn more at https://kubecon.io]]></content:encoded></item><item><title>Reliability Engineering Mindset • Alex Ewerlöf &amp; Charity Majors</title><link>https://www.youtube.com/watch?v=SHUnzL6Z8Io</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/SHUnzL6Z8Io?version=3" length="" type=""/><pubDate>Tue, 2 Dec 2025 13:23:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Alex Ewerlöf - Senior Staff Engineer at Volvo Cars & Author of "Reliability Engineering Mindset"
+Charity Majors - Co-Founder & CTO of honeycomb.io & Co-Author of "Observability Engineering"
+
+RESOURCES
+Alex
+https://bsky.app/profile/alexewerlof.com
+https://www.linkedin.com/in/alexewerlof
+https://www.alexewerlof.com
+
+Charity
+https://twitter.com/mipsytipsy
+https://linkedin.com/in/charity-majors
+https://charity.wtf
+https://www.honeycomb.io/blog/slos-are-the-api-for-your-engineering-team
+
+DESCRIPTION
+Alex Ewerlöf shares his journey from product engineering to reliability engineering and discusses the practical challenges of implementing Google's SRE practices in real-world companies.
+
+He emphasizes the significant gap between Google's idealized SRE approach — which he links to "a fantastic chef's recipe for Michelin-starred restaurants" — and the reality most companies face with limited resources and infrastructure. The discussion covers key topics including the evolution from traditional operations to where engineers own their code in production, the critical importance of choosing SLIs that align with business impact, and how SLOs help set expectations and help the service consumers prepare non-functional requirements.
+
+
+Alex coined the law of 10x per 9 highlighting that reliability isn't free and requires careful cost-benefit analysis.
+
+RECOMMENDED BOOKS
+Alex Ewerlöf • Reliability Engineering Mindset • https://blog.alexewerlof.com/p/rem
+C. Majors, L. Fong-Jones & G. Miranda • Observability Eng. • https://amzn.to/38scbma
+C. Majors & L. Campbell • Database Reliability Eng. • https://amzn.to/3ujybdS
+Alex Hidalgo • Implementing Service Level Objectives • https://amzn.to/4pbWJxw
+Brian Klaas • Fluke • https://amzn.to/41V1Cko
+Simler & Hanson • The Elephant in the Brain • https://amzn.to/4fYCG1i
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -264,36 +351,173 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>CNL: Network-level and Identity-based Observability with Calico Open Source</title><link>https://www.youtube.com/watch?v=P7RUzvXr7Vg</link><author>CNCF [Cloud Native Computing Foundation]</author><category>k8s</category><category>devops</category><category>video</category><enclosure url="https://www.youtube.com/v/P7RUzvXr7Vg?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 13:51:23 +0000</pubDate><source url="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA">CNCF</source><content:encoded><![CDATA[Don't let your Kubernetes environment be a mystery! Gain the visibility you need to keep things running smoothly. This session dives into why network observability is key in Kubernetes, and includes a live demo showing how to identify misconfigurations, simplify troubleshooting, streamline overall network management, and safely implement and test network security policies across any Kubernetes environment.
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>There&apos;s No Way Into This Tech Company&apos;s Server Room ... Except Through the Sewer💧Episode 166: Maxie</title><link>https://www.youtube.com/watch?v=YmRqp4x7Nvw</link><author>Jack Rhysider</author><category>infosec</category><category>video</category><category>podcast</category><enclosure url="https://www.youtube.com/v/YmRqp4x7Nvw?version=3" length="" type=""/><pubDate>Tue, 2 Dec 2025 08:00:47 +0000</pubDate><source url="https://www.youtube.com/channel/UCMIqrmh2lMdzhlCPK5ahsAg">Darknet diaries</source><content:encoded><![CDATA[Maxie Reynolds has held many jobs: underwater roboticist, Hollywood stunt performer, quantum computing engineer. But her *favorite* line of work — the one that REALLY gets her blood pumping — is penetration testing, especially the IRL kind.
 
-Here's what we'll explore:
+Maxie shares how a new wardrobe, a bad Swedish accent, and a TON of adrenaline are the best tools for hacking companies, governments, and the security teams that are supposed to protect them.
 
-* Why network observability is important (hint: Kubernetes can be a bit chaotic! )
-* How observability is the foundation for zero trust security
-* Common customer pain points: Troubleshooting, incorrect policies, compliance, and audits
-* Calico Whisker: What it is and how it provides that crucial bird's-eye view
-* LIVE DEMO: Cluster-wide network observability using Calico Whisker]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+Visit https://darknetdiaries.com/episode/166/ for a list of sources, full transcripts, and to listen to all episodes.
 
-Andrew Browne - Solution Architect at Picnic Software
+Support the show and get bonus episodes: https://plus.darknetdiaries.com/
+
+Or get a sweet t-shirt with official Darknet Diaries artwork: https://shop.darknetdiaries.com/]]></content:encoded></item><item><title>State of the Art of DORA Metrics &amp; AI Integration • Nathen Harvey &amp; Charles Humble • GOTO 2025</title><link>https://www.youtube.com/watch?v=_IKB4h9e4NA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/_IKB4h9e4NA?version=3" length="" type=""/><pubDate>Mon, 1 Dec 2025 13:01:15 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO State of the Art in October 2025. #GOTOcon #GOTO
+https://gotopia.tech
+
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/415
+
+Nathen Harvey - DORA Lead, Product Manager at Google Cloud & Author @NathenHarvey 
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Nathen
+https://bsky.app/profile/nathenharvey.bsky.social
+https://x.com/nathenharvey
+https://github.com/nathenharvey
+https://www.linkedin.com/in/nathen
+https://linktr.ee/nathenharvey
+http://nathenharvey.com
+
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://linkedin.com/in/charleshumble
+https://mastodon.social/@charleshumble
+https://conissaunce.com
+
+Links
+https://dora.dev
+https://dora.dev/research/2025/dora-report
+https://dora.dev/research/2024/dora-report
+https://thenewstack.io/ebooks/kubernetes/kubernetes-at-the-edge-container-orchestration-at-scale
+https://youtu.be/dwdJ0GC5md0
+https://youtu.be/a-BOSpxYJ9M
+https://youtu.be/qhairDunuIA
+https://youtu.be/dMwGfRINpz0
+https://youtu.be/wgdBVIX9ifA
+https://youtu.be/LFnA0EOR6zY
+https://youtu.be/xA82XipDQ38
+https://youtu.be/MCPrtYxuVPU
+https://youtu.be/mBUJ-fg4EKA
+https://youtu.be/EmDtmYwDs50
+https://youtu.be/MbaPtzSuQII
+https://youtu.be/pzlqeX9nh1g
+https://youtu.be/Z7_AatHRXjI
+https://youtu.be/po712VIZZ7M
+https://youtu.be/Ms3J6_-6-fk
+https://youtu.be/wUrIjKbktCk
+https://youtu.be/cW3yM-K2M08
+https://youtu.be/3NdTNJyuWbA
+https://youtu.be/7sHUZ66aSYI
+https://youtu.be/g9m3R0NMJ1Y
+https://youtu.be/9w6YeNNJLkg
+https://youtu.be/Z5OrR99OpiY
+https://youtu.be/M0exasJQ1ks
+https://youtu.be/k9lwn-RqEsE
+https://youtu.be/Vd5IxWn3Ync
+https://youtu.be/hIwVqt6qtc4
+https://youtu.be/7LgaIx7C7Cw
+https://youtu.be/ZTfnRXtIFEo
+https://youtu.be/Zyz_2lELqG8
+https://youtu.be/TMQCiX5wUVU
+https://youtu.be/XwhF_xbVpIQ
+
+DESCRIPTION
+Charles Humble speaks with Nathen Harvey, leader of Google's DORA research team, about the real impact of AI on software development.
+
+Drawing from surveys of nearly 5,000 practitioners, Nathen reveals a surprising finding: increased AI adoption initially correlates with decreased stability and throughput - the very metrics teams have optimized for decades. The conversation explores why this happens, what capabilities organizations need before scaling AI adoption, and how AI acts as an amplifier of existing systems rather than a silver bullet.
+
+Nathen introduces DORA's seven AI capabilities model and discusses critical issues around trust, documentation, skill devaluation, and the future of software delivery in an AI-native world.
+
+TIMECODES
+00:00 Intro
+02:43 Understanding DORA: More than just metrics
+08:48 From 4 to 5 Metrics: The evolution of DORA
+14:18 The surprising impact of AI on software delivery
+18:41 AI as an amplifier
+24:08 The documentation paradox
+28:30 Trust, ownership & the human element
+34:20 The devaluation of skills & the future of expertise
+37:54 The future of AI in software development
+42:42 Getting started: Practical steps for AI integration
+44:59 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Emily Freeman & Nathen Harvey • 97 Things Every Cloud Engineer Should Know • https://amzn.to/3UlWBLt
+Charles Humble • Professional Skills for Software Engineers • https://www.conissaunce.com/professional-skills-shortcut
+Nicole Forsgren, Jez Humble & Gene Kim • Accelerate • https://amzn.to/442Rep0
+Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook • https://amzn.to/47oAf3l
+Jez Humble & David Farley • Continuous Delivery • https://amzn.to/452ZRky
+Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/47pcOXD
+Adrienne Braganza Tacke • "Looks Good to Me": Constructive Code Reviews • https://amzn.to/3E75XrD
 
+Yevgeniy Brikman • Fundamentals of DevOps and Software Delivery • https://amzn.to/3WMPMFU
+
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#DORA #DORAMetrics #DevOps #Documentation #SoftwareDelivery #AIAdoption #OrganizationalChange #Leadership #Accelerate #DevOpsReport #HumanFactor #Communication #Change #ContinuousDelivery #ContinuousIntegration #TodaInTech #NathenHarvey #CharlesHumble
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>impl Rust: One Billion Row Challenge</title><link>https://www.youtube.com/watch?v=tCY7p6dVAGE</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/tCY7p6dVAGE?version=3" length="" type=""/><pubDate>Sun, 30 Nov 2025 20:27:22 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[I'm late to the party, but it's time we take a stab at the One Billion Row Challenge ( https://github.com/gunnarmorling/1brc ) in Rust. It's an excellent way to dig into optimizing Rust code and learning somethings about assembly, SIMD, performance profiling, and just CPUs in general in the process, so let's take it on!
+
+Thanks to the sponsor of this video, Hudson River Trading. If you're interested in finding out more about them, see https://www.hudsonrivertrading.com/gjengset
+
+There are already several Rust implementations ( https://github.com/gunnarmorling/1brc/discussions/57 ), this excellent write-up ( https://curiouscoding.nl/posts/1brc/ ), and even an existing stream ( https://www.youtube.com/watch?v=Q-0durxAB6s ), but I'm hoping that walking through the iterative optimization process live is still a good teaching exercise.
+
+You can find my implementation at https://github.com/jonhoo/brrr, and the commit at the end of the stream is https://github.com/jonhoo/brrr/commit/f1ef7ecd9305be997f6ae0bc6a2c44392406f237.
+
+The other posts I refer to in the video are:
+- https://github.com/gunnarmorling/1brc/discussions/57
+- https://curiouscoding.nl/posts/1brc/
+- https://github.com/gunnarmorling/1brc/discussions/138#discussioncomment-8319376
+
+0:00:00 Housekeeping
+0:01:30 The One Billion Row Challenge
+0:10:53 The easy version
+0:22:10 First, the build configuration
+0:32:15 Aside: reliable perf symbols
+0:36:54 Letting perf guide us
+0:45:59 Avoid UTF-8 parsing
+0:57:04 Memory mapping the file
+1:26:59 Fixed point temperature
+1:57:00 Splitting strings
+2:35:30 Hashing...
+3:31:45 Inspiration from a Java solution
+4:05:45 Inlining short keys
+5:14:08 Concurrent data loading
+5:50:55 Playing with the map type
+6:06:01 Inspiration from another Java solution
+6:35:30 SIMD in next_line
+6:48:39 Branchless temperature parsing
+7:34:55 Avoiding load_or_default
+8:02:45 Multithreading
+8:38:48 More hashing
+9:16:44 Cycle hunt
+9:54:33 Shrinking stats
+10:08:20 Temperature parsing again
+10:23:19 Maybe hashing this time
+10:33:43 Closing thoughts
+
+Live version with chat: https://youtube.com/live/g2EKNXKKGM4?feature=share]]></content:encoded></item><item><title>Agile Product Development &amp; Design Tips from @henrikkniberg</title><link>https://www.youtube.com/shorts/AUS-XAov0vA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/AUS-XAov0vA?version=3" length="" type=""/><pubDate>Sun, 30 Nov 2025 13:00:17 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Agile #Agility #AgileDevelopment #SoftwareDevelopment #Retrospective #Scrum #XP #AgileProductDevelopment #AgileProductDesign #HenrikKniberg #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+
+Full version available here:
+https://youtu.be/9WSHK_29Hos
+
+Henrik Kniberg - Consultant at Crisp, cofounder of Hups.com & GoClimate.com @henrikkniberg 
+
+RECOMMENDED BOOK
+Henrik Kniberg • Scrum and XP from theTrenches • https://amzn.to/3Jg9Aue
+Henrik Kniberg • Lean from the Trenches • https://amzn.to/403IQnu
+Henrik Kniberg • Scrum and XP from the Trenches - 2nd Edition • https://amzn.to/3JxsYV4
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
