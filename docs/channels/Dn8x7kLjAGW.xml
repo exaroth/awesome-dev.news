@@ -1,38 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Rust is now officially part of the Linux Kernel</title><link>https://www.youtube.com/watch?v=i8a2alQPw3Y</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/i8a2alQPw3Y?version=3" length="" type=""/><pubDate>Fri, 12 Dec 2025 14:39:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[👉Join the Rust Live Accelerator waitlist (30 seats): https://letsgetrusty.com/join
+.
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Rust is now officially supported as the second main language in the Linux Kernel! Let's break down what this mean for Linux, Rust, and us Rustaceans! 
+
+News article:  https://thenewstack.io/rust-goes-mainstream-in-the-linux-kernel/
+
+Join the Rust Live Accelerator: https://letsgetrusty.com/join]]></content:encoded></item><item><title>The Death of Classical Computer Science • Matt Welsh &amp; Julian Wood</title><link>https://www.youtube.com/watch?v=P-8N7erpC9M</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/P-8N7erpC9M?version=3" length="" type=""/><pubDate>Fri, 12 Dec 2025 13:27:25 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
+
+Check out more here:
+https://gotopia.tech/articles/398
+
+Matt Welsh - Head of Al Systems at Palantir
+Julian Wood - Serverless Developer Advocate at AWS
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Matt
+https://twitter.com/mdwelsh
+https://www.mdw.la
+https://github.com/mdwelsh
+https://www.linkedin.com/in/welsh-matt
+https://www.ultravox.ai
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Julian
+https://bsky.app/profile/julianwood.com
+https://twitter.com/julian_wood
+https://github.com/julianwood
+http://www.wooditwork.com
+https://www.linkedin.com/in/julianrwood
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
+Matt Welsh, former professor at Harvard University and AI researcher, argues to Julian Wood that we're witnessing the death of classical computer science as language models evolve into general-purpose computers capable of direct problem-solving without human-written code.
 
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+He envisions a future where AI eliminates programming barriers, democratizing computing power so anyone can instruct computers through natural language. While acknowledging concerns about job displacement and societal equity, Matt believes this transformation will unleash unprecedented human creativity by putting the full power of computing in everyone's hands, moving beyond the current "programming priesthood" to universal access to computational problem-solving. 
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Michael Feathers • AI Assisted Programming • https://leanpub.com/ai-assisted-programming
+Matthias Kalle Dalheimer & Matt Welsh • Running Linux • https://amzn.to/3YSwAIv
+Alex Castrounis • AI for People and Business • https://amzn.to/3NYKKTo
+Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Kelleher & Tierney • Data Science (The MIT Press Essential Knowledge series) • https://amzn.to/3AQmIRg
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +55,71 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>How to Use AI Effectively in Large Codebases</title><link>https://blog.algomaster.io/p/using-ai-effectively-in-large-codebases</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!ge-Z!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2313b162-231f-4a2a-8115-888344721b64_1642x1378.png" length="" type=""/><pubDate>Fri, 12 Dec 2025 10:38:06 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[AI coding assistants are everywhere now.GitHub Copilot, Cursor, Claude, ChatGPT. Every developer has tried at least one.And for small projects, they work great. But something breaks when you try to use these tools in a large, production codebase.The suggestions become generic. The AI hallucinates function names that don’t exist. It confidently tells you to import a module that isn’t in your project.This isn’t a flaw in the AI models themselves. It’s a context problem.And understanding this problem is the key to actually getting value from AI in professional software development.In this article, I’ll share  with large codebases and share  for using it effectively at that scale. is an AI coding assistant built for real-world engineering teams shipping millions of lines of code.They recently launched an industry-leading tool that actually understands context, not just diffs.Instead of blindly reacting to changed lines,  loads the full picture – the files your PR touches, the dependencies around them, and the architecture three layers deep.What does that look like in practice?Code reviews with full-codebase awareness, not just the diff you pushed.Inline comments, right in GitHub: no extra dashboards or tools to check.One-click fixes from your IDE or terminal with Augment CodeHigh-signal comments developers actually readTo understand why AI coding tools struggle at scale, you need to understand how they work.When you ask an AI assistant a question about your code, it needs context. Without context, it’s just guessing based on patterns it learned during training.Here’s the problem: most AI tools have a very limited view of your codebase.The Context Window ProblemEvery LLM has a context window, the maximum amount of text it can consider at once. Even with context windows of 100K+ tokens, you can’t just dump your entire codebase into a prompt.A typical production codebase might have:Hundreds of internal APIsYears of accumulated conventions and patternsYou can’t fit that into any context window. So AI tools have to be selective about what they include.Most tools solve this by looking at:The file you’re currently editingSometimes files you’ve recently viewedThat’s it. The AI has no idea about your authentication service three directories over, the utility functions your team uses constantly, or the database schema that defines your data model.The Stale Context ProblemHere’s another issue that gets overlooked: your codebase changes constantly.You switch branches multiple times a day. Your teammates merge PRs. You run search-and-replace across dozens of files. The code that existed five minutes ago might not exist now.Most AI indexing systems update on a schedule, often every 10 minutes or longer. In that time, you might have:Switched to a feature branchAdded new type definitionsMerged in your colleague’s changesIf the AI’s understanding of your codebase is 10 minutes old, it’s working with outdated information. It might suggest importing a module that was just renamed, or recommend a function signature that no longer exists.This is especially painful when you’re doing code review. You check out a PR branch, ask the AI about the changes, and it responds based on the main branch because its index hasn’t caught up yet.At its core, making AI useful in large codebases is a retrieval problem.The AI model itself is powerful. GPT-4, Claude, and others can understand and generate code remarkably well. The bottleneck is getting the right context into the model’s prompt before it generates a response.This is conceptually similar to RAG (Retrieval Augmented Generation) for documents, but with code-specific challenges:Code relationships are complexUnlike documents, code has rich structural relationships. A function definition isn’t just similar to its call sites textually, it’s semantically connected. Documentation isn’t necessarily similar to the code it describes.Generic embedding models trained on text don’t capture these relationships well.Context relevance isn’t just about similarityWhen you’re writing code, the most “relevant” context isn’t always the most similar text. If you’re implementing a new API endpoint, you probably need:Similar endpoints for pattern matchingThe authentication middlewareData validation utilitiesError handling conventionsThese aren’t necessarily textually similar to what you’re writing, but they’re essential context.Some “relevant” context is actually uselessHere’s a counterintuitive point: sometimes the most semantically similar code is the least helpful.If you’re using PyTorch and the AI retrieves PyTorch source code, that’s probably not useful. The model already knows how PyTorch works. It was trained on that. What it doesn’t know is your specific project structure, your team’s conventions, your custom utilities.The ideal retrieval system prioritizes helpfulness over raw relevance.After years of trying to make AI useful in professional development, here’s what I’ve learned actually matters:1. Deep Codebase IndexingThe AI needs to understand your entire codebase, not just open files.Indexing all source files, not just recent onesUnderstanding relationships between files (imports, dependencies, call graphs)Capturing type definitions, interfaces, and schemasLearning your project structure and conventionsThe index also needs to stay current. If you switch branches, the AI should immediately understand the new state of the code. If you rename a function, it should know about that within seconds, not minutes.2. Context-Aware RetrievalWhen you ask a question or request a code change, the AI needs to pull in relevant context intelligently.Good retrieval considers:: What files import this one? What does this file import?: What other code does similar things?: What’s the project structure around this file?: How has your team solved similar problems before?3. Branch-Aware UnderstandingYour AI assistant needs to understand that you work on branches.When you switch from  to , everything changes. The AI should:Immediately understand the new branch stateNot mix up code from different branchesHandle rebases and merges gracefullyProvide suggestions based on the current branch, not a stale main4. Security-Conscious ArchitectureFor production codebases, security isn’t optional.Respect access controls (don’t retrieve code the user can’t access)Not send sensitive code to third-party APIs unnecessarilyMaintain audit trails of what was accessedComply with your organization’s security requirementsThis is where I want to talk about , our sponsor for this post.I’ve been using Augment for the past few weeks, and it solves many of the problems I described above in ways that other tools don’t.Augment maintains a personal search index for each developer that updates within seconds of code changes.When you switch branches in git, when you do a search-and-replace across 100 files, when your colleague’s PR gets merged, Augment’s index reflects those changes almost immediately.I downloaded the Kafka source code from GitHub (around 7,000 files, 300+ MB). Augment indexed it in under a minute. I asked questions about Kafka’s internals, like “show me the code path for storing messages to log files”, and it found the relevant code paths accurately.On my own project (1,000+ files), the index updated in about 10 seconds.Augment doesn’t use generic embedding models like most tools.They’ve trained custom models specifically for code retrieval. These models understand that:A function call site is related to its definition (even though they look different)Documentation is related to the code it describesCode in different languages can be semantically relatedCommon library code (like PyTorch internals) doesn’t need to be retrieved since the model already knows itThis matters because generic embeddings optimized for text similarity often miss the connections that matter in code.This is something Augment users consistently mention as their favorite feature.You don’t have to be a prompt engineer to get good results. The system takes your simple request and automatically enriches it with relevant context from your codebase.I tested this on my website project. I gave it a minimal prompt: “Update comment component to allow users to edit their comments.”No additional context. No file paths. No architecture explanation.Augment built the complete feature in one prompt: UI components, database calls, edge case handling, everything. It understood my project’s patterns, my component structure, my database schema, and generated code that fit naturally.That’s what good retrieval enables. The model has all the context it needs to make intelligent decisions.Augment self-hosts their embedding search and doesn’t use third-party APIs for retrieval. This matters because research has shown that embeddings can be reverse-engineered back to source code.They also implement proof-of-possession for file access. The IDE has to prove it knows a file’s content before the backend will return information about that file. This prevents retrieving code you’re not authorized to access.Whether you’re using  or another tool, here are strategies that help:1. Provide Explicit ContextDon’t assume the AI knows your codebase structure.Fix the bug in the user serviceIn src/services/user/authentication.ts, the validateToken
+function is not checking token expiration correctly.
+It should use the exp claim from the JWT payload.Explicit file paths and specific details help the AI focus on the right area.2. Reference Related FilesIf you know what files are relevant, mention them.Update the UserProfile component (src/components/UserProfile.tsx)
+to display the user’s subscription status.
+
+The subscription data comes from the useSubscription hook
+(src/hooks/useSubscription.ts) and follows the same pattern
+as the useAccount hook.3. Explain Your ConventionsAI tools don’t automatically know your team’s patterns.Create a new API endpoint for updating user preferences.
+
+Follow the same pattern as the existing endpoints in
+src/api/routes/:
+- Use the validateRequest middleware
+- Return responses using the ApiResponse wrapper
+- Log errors to the auditLoggerDon’t expect perfect results on the first try.Start with a simple request, review what the AI generates, and provide corrections. Each iteration helps narrow in on what you actually need.5. Use AI for ExplorationLarge codebases are hard to navigate. AI tools excel at questions like:“How does authentication work in this codebase?”“What’s the flow when a user places an order?”“Where is the database connection configured?”These exploration queries help you get oriented quickly, even in unfamiliar code.The Future of AI in Professional DevelopmentThe tools we have today are just the beginning.As retrieval systems get better, as context windows expand, and as models become more capable, AI assistants will become genuinely useful for complex professional work.The key insight is that model capability isn’t the bottleneck anymore. Context is. The teams building the best code understanding, the best retrieval systems, and the best context management will build the most useful tools.This is why I’m excited about tools like  that focus specifically on professional development in large codebases. They’re solving the hard problems that make AI actually useful, not just impressive in demos.If you work with large codebases and want to see what proper context awareness looks like, .VS Code and JetBrains extensionsA CLI tool for terminal usersSOC 2 Type II compliance for enterprise requirementsA free trial to test it on your own codebaseA newly launched industry leading code review toolThe best way to evaluate any AI tool is to try it on your actual work. See if it understands your codebase, your conventions, your patterns.]]></content:encoded></item><item><title>Getting Buy-In: Overcoming Larman&apos;s Law • Allen Holub • GOTO 2025</title><link>https://www.youtube.com/watch?v=UAlumfwmcwY</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/UAlumfwmcwY?version=3" length="" type=""/><pubDate>Thu, 11 Dec 2025 13:01:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph
 https://gotocph.com
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Allen Holub - Authority. When Allen Speaks the World Listens @AllenHolub 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+https://bsky.app/profile/allenholub.bsky.social
+https://mstdn.social/@allenholub
+https://twitter.com/allenholub
+https://holub.com
+https://www.linkedin.com/in/allenholub
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Links
+https://web.goodnotes.com/s/qIZRDGx5GiIzXT6inIzWe7#page-1
+https://www.craiglarman.com/wiki/index.php?title=Larman%27s_Laws_of_Organizational_Behavior
+
+ABSTRACT
+Larman's Law states, "Organizations are implicitly optimized to avoid changing the status quo…" The third law is particularly relevant: 'Any change initiative will be derided as “purist,” "theoretical," “revolutionary," " “religion,” and “needing pragmatic customization for local concerns”—which deflects from addressing weaknesses and the manager/specialist status quo.'
+
+You need to overcome that resistance to use innovative approaches like no-estimation or mob/ensemble programming.
+
+Devs, however, almost always go about that the wrong way. Senior management is rarely interested in the mechanics of what you're doing. They're interested in the bottom line, how the new approaches change how the business is managed, and whether the inevitable disruption is worth it.
+
+In this talk, you'll learn how to convince the “suits” (and your clients) that innovation is a good thing. You'll learn how to create a business case for innovation that overcomes the resistance of Larman's Law. [...]
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
+01:14 Larman's Law of organizational behavior
+12:39 Conway's Law
+15:12 How to make this all work
+22:35 How to speak to managers
+28:35 Value Stream Mapping
+35:49 Time value of money
+53:40 Summary
+55:57 Outro
 
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+Download slides and read the full abstract here:
+https://gotocph.com/2025/sessions/3628
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Allen Holub • Holub on Patterns • https://amzn.to/3Q1hwTX
+Allen Holub • Compiler design in C • https://amzn.to/4b0vXS9
+Allen Holub • Enough Rope to Shoot Yourself in the Foot • https://amzn.to/4hFIL2m
+Craig Larman & Bas Vodd • Scaling Lean & Agile Development • https://amzn.to/4qxLdgl
+Craig Larman • Agile and Iterative Development • https://amzn.to/47Mcft8
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#LarmansLaw #CraigLarman #ConwaysLaw #AgileDevelopment #RationalThinking #Disruption #EnsembleProgramming #MobProgramming #ValueStreamMapping #TechLead #TechLeadership #PsychologicalSafety #SkunkWorks #ValueStreamMapping #TodayInTech #AllenHolub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,66 +130,64 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>AI, Corporate Responsibility &amp; Democratic Legitimacy • Joanna Bryson • GOTO 2025</title><link>https://www.youtube.com/watch?v=9Yc7Mi7yW7g</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/9Yc7Mi7yW7g?version=3" length="" type=""/><pubDate>Wed, 10 Dec 2025 13:00:31 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph 
+https://gotocph.com
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
+Joanna Bryson - Professor of Ethics and Technology, Responsible Data Science for Human Development @j2bryson 
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
-
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
-
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+ORIGINAL TALK TITLE
+AI, Corporate Responsibility & Democratic Legitimacy – Is DevOps the Answer?
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
-
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+https://mastodon.social/@j2bryson
+https://twitter.com/j2bryson
+https://www.linkedin.com/in/bryson
+https://joanna-bryson.blogspot.com
 
 Links
-https://stripe.dev
+https://www.washingtonpost.com/investigations/2023/11/17/how-hamas-breached-israel-iron-wall
+https://youtu.be/EqMe1J4a6IQ
+https://www.972mag.com/lavender-ai-israeli-army-gaza
+https://online.ucpress.edu/gp/article/2/1/24803/117647/Is-There-an-AI-Cold-War
+https://www.independent.co.uk/news/world/europe/kursk-russia-ukraine-war-putin-ceasefire-b2713769.html
+https://arxiv.org/abs/2508.08231
 
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+ABSTRACT
+Those engaged in regulatory disruption often allege that AI is opaque. Yet far more complex human institutions function adequately, despite being never fully comprehended in every detail by any one individual.
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
+In this talk I discuss legitimacy and responsibility as a design requirement for both governments and AI systems, and how good systems engineering practice can deploy AI for increased transparency. [...]
 
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+TIMECODES
+00:00 Intro
+06:46 When AI fails: Real-world examples
+11:28 Polarization & inequality like it's 1899
+17:18 How do we change? Who's responsible?
+20:16 EU digital regulation
+27:20 Does the EU have a right to regulate AI?
+36:39 DevOps
+41:30 Robots are not our peers
+42:22 Summary
+43:20 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2025/sessions/3739
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
+Chris Miller • Chip War • https://amzn.to/4aBCUKT
+Henry Farrell & Abraham Newman • Underground Empire • https://amzn.to/3YdXdGX
+Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Alex Castrounis • AI for People and Business • https://amzn.to/3NYKKTo
+Holden Karau, Trevor Grant, Boris Lublinsky, Richard Liu & Ilan Filonenko • Kubeflow for Machine Learning • https://amzn.to/3JVngcx
+Kelleher & Tierney • Data Science (The MIT Press Essential Knowledge series) • https://amzn.to/3AQmIRg
+Lakshmanan, Robinson & Munn • Machine Learning Design Patterns • https://amzn.to/2ZD7t0x
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#AI #CorporateResponsibility #DemocraticLegitimacy #DesignRequirements #DigitalSuperintelligence #Transparency #Polarization #Inequality #Diversity #GDPR #SystemsEngineering #TodayInTech #JoannaBryson
+
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
 https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
@@ -179,7 +197,42 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Pub-Sub vs Message Queue vs Message Broker</title><link>https://blog.algomaster.io/p/pub-sub-vs-message-queue-vs-message-broker</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!kC8x!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F48800e6c-b0e5-4fe0-a9e4-7f667b1e66a7_1830x1388.png" length="" type=""/><pubDate>Wed, 10 Dec 2025 04:57:26 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[When you’re working on a distributed system and need components to communicate asynchronously, you’ll hear terms like: “pub-sub”, “message queue”, and .Although they are used interchangeably sometimes, they’re not the same thing.A message broker is the . Message queues and pub-sub are  that brokers implement.In this article, we’ll explore:How they differ architecturallyReal-world examples and use casesHow modern systems like Kafka, RabbitMQ, and Redis fit inBefore diving into comparisons, let’s define each term clearly.A  is the middleware infrastructure that receives, stores, and routes messages between producers and consumers. It’s the “thing” that sits in the middle.Think of a message broker like a post office. It receives mail (messages), stores it temporarily, and delivers it to the right recipients based on addresses (routing rules). RabbitMQ, Apache Kafka, ActiveMQAccept messages from producersStore messages durably or transientlyRoute messages to appropriate consumersHandle delivery guarantees (at-least-once, exactly-once)Manage consumer acknowledgmentsA  is a messaging pattern where messages are sent to a queue and consumed by exactly one consumer. Messages are typically processed in order and removed from the queue after consumption.Message queues enable asynchronous service-to-service communication, especially in serverless and microservices architectures. They allow you to build reliable background processing, work distribution, and decoupled systems.SQS queues, RabbitMQ queuesWhen multiple consumers connect to the same queue, they compete for messages. Each message goes to exactly one consumer.Exactly one consumer receives each messageFirst-In-First-Out (FIFO) ordering within a single queueMessages stored until consumed and acknowledgedConsumer must confirm successful processingFailed messages can be retried or dead-lettered1.3 Pub-Sub (Publish-Subscribe) is a messaging pattern where publishers send messages to topics, and all subscribers to that topic receive a copy of the message. Messages are broadcast, not consumed exclusively.Think of it like a radio broadcast. The station (publisher) broadcasts a signal (message), and everyone tuned to that frequency (subscribers) receives it simultaneously.It’s an asynchronous communication model that decouples services, making it easier to build scalable, event-driven systems. Pub/Sub is widely used in modern cloud architectures to deliver instant event notifications and enable reliable communication between independent components.Redis Pub/Sub, SNSPub-sub naturally implements fan-out in event-drive architectures, where one event triggers multiple actions:One-to-many. Each message delivered to all subscribers.Publishers and subscribers are decoupledEasy to add new subscribersMessages may or may not be removed after delivery (depends on implementation)Modern message brokers typically support both patterns. Here’s how popular brokers handle each:RabbitMQ uses  to support both patterns:Direct Exchange (Message Queue style): Routes messages to queues based on an exact routing key. Great for work distribution to specific consumers.Fanout Exchange (Pub-Sub style): Broadcasts every message to all bound queues. Ideal for event broadcasting to multiple consumers.Kafka’s architecture is built around an , and it supports both patterns using .Message Queue in Kafka (competing consumers):A topic is split into .In a consumer group, each partition is consumed by exactly one consumer.Pub-Sub in Kafka (independent consumers):Each consumer group gets all messages from the topic.You can have many groups (analytics, notifications, billing, etc.), all reading the same stream independently.Within each group, messages are still load-balanced across consumers like a queue.AWS offers separate services for each pattern.Simple Queue Service (SQS) for Message QueuesSimple Notification Service (SNS) for Pub-SubA common pattern is to combine both SNS and SQS in an even-driver architecture:Use  for  (publish an event once, deliver to many targets).Attach  as subscribers for durable, reliable delivery to each downstream service.This gives you pub-sub style broadcasting with queue-style reliability and independent scaling for each consumer.Redis supports both patterns using different data structures and commands.Lists give you queue-like behavior with persistence in memory, while Pub/Sub is ephemeral and only delivers messages to clients that are currently subscribed.Use a list as a simple queue: producers push, consumers block and pop.LPUSH myqueue “message” --> Publisher sends a message
+
+BRPOP myqueue 0         --> Consumer blocks until a message is availableUse Redis Pub/Sub to broadcast messages to all active subscribers.PUBLISH channel “message”  --> Publisher sends a message
+
+SUBSCRIBE channel          --> Subscriber listens for messagesA  is about . Each message represents a unit of work that should be done  by  worker. is about . Something happened, and many services might care.Use a Message Queue when you need: Each task must be executed exactly once. You want to spread load evenly across multiple workers. Long-running or async tasks with reliable delivery. You need to control how fast consumers process messages. FIFO ordering for messages in a queue.Use Pub-Sub when you need: Multiple services should react to the same event. Broadcast changes (e.g., price updates, notifications) to many clients. Publishers and subscribers can evolve independently without tight coupling.If every message is “do this work once,” you’re in message queue territory.If every message is “this happened, whoever cares may react,” you’re in pub-sub territory.Message queues and pub-sub are , not mutually exclusive tools. A message broker is the infrastructure that often supports both.Need ? → Use a .Need every subscriber to get every message? → Use .Most real-world systems combine them: for cross-service events. for work distribution within or behind services.Modern brokers (Kafka, RabbitMQ, cloud messaging services) usually support both patterns. The key is to choose based on  and  requirements, not on tool names alone.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>C++ Memory Management • Patrice Roy &amp; Kevin Carpenter</title><link>https://www.youtube.com/watch?v=aDxviPTVUUg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/aDxviPTVUUg?version=3" length="" type=""/><pubDate>Tue, 9 Dec 2025 13:28:31 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Read the full transcription of the interview here:
+https://gotopia.tech/episodes/397
+
+Patrice Roy - Author of "C++ Memory Management"
+Kevin Carpenter - Software Engineering Manager at EPX
+
+RESOURCES
+Patrice
+https://bsky.app/profile/patriceroy1.bsky.social
+https://www.linkedin.com/in/patrice-roy-a050b02a4
+
+Kevin
+https://www.linkedin.com/in/kevinbcarpenter
+https://github.com/kevinbcarpenter
+
+Link
+https://www.eventbrite.com/e/c-memory-management-masterclass-tickets-1580340644409
+
+DESCRIPTION
+Kevin Carpenter talked to veteran C++ programmer Patrice Roy. The conversation explores the intricacies of memory management in modern C++. Patrice, who has been programming in C++ for over 30 years and serves on the C++ Standards Committee, shares wisdom from his new book "Memory Management in C++" while discussing everything from the pitfalls of over-allocation to the nuances of smart pointers.
+
+The conversation reveals how proper memory management isn't just about performance—it's about writing safer, more maintainable code that leverages C++'s powerful abstractions while avoiding common traps that lead seasoned developers astray.
+
+RECOMMENDED BOOKS
+Patrice Roy • C++ Memory Management • https://amzn.to/3K4gnet
+Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
+Andreas Zeller • The Debugging Book • https://www.debuggingbook.org
+Bjarne Stroustrup • Programming: Principles and Practice Using C++ • https://amzn.to/3I5Q335
+Marius Bancila • Modern C++ Programming Cookbook • https://amzn.to/41ES4Kd
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +248,116 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Reliable AWS Lambda Data Pipelines with AsyncAPI Specification • Hari Krishnan • GOTO 2025</title><link>https://www.youtube.com/watch?v=3McRayR31D4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3McRayR31D4?version=3" length="" type=""/><pubDate>Mon, 8 Dec 2025 13:00:07 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Serverless 2025. #GOTOcon #GOTOserverless
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025
 
-Andrew Browne - Solution Architect at Picnic Software
+Hari Krishnan - Co-founder and CTO at Specmatic @harikrishnan1913 
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+https://twitter.com/HariKrishnan83
+https://www.linkedin.com/in/harikrishnan83
+https://github.com/harikrishnan83
+https://medium.com/@harikrishnan
+https://about.me/harikrishnan83
+
+Links
+https://www.asyncapi.com
+https://specmatic.io
+https://github.com/specmatic/aws-lambda-kafka-with-localstack
+
+ABSTRACT
+Event-driven architectures powered by Kafka and AWS Lambda are increasingly popular for real-time analytics pipelines. However, schema compatibility issues between Lambda functions are often detected too late—during end-to-end or integration testing—making them expensive to fix.
+
+What if we could define and validate event schemas before integration, ensuring compatibility between Lambda functions and pipeline stages early in the development cycle?
+
+In this talk, I’ll share practical lessons from building real-world Kafka–Lambda pipelines and demonstrate how we use the AsyncAPI Specification as an executable contract to detect schema mismatches early and ensure reliable data transformation. We’ll model Kafka topics and event schemas (Avro, XML, JSON, etc.) using AsyncAPI 3.0’s request-reply pattern, and show how we can use the same for automated contract testing with Specmatic to verify each Lambda function’s input-output compatibility in isolation.
+
+Attendees will walk away with a clear strategy and practical tools to: Isolated Lambda Testing – Rapidly test AWS Lambda functions locally with Kafka and tools like LocalStack. Iterate faster and debug earlier. Executable Contracts with AsyncAPI – Turn AsyncAPI specs into living contract tests (#NOCODE) to ensure every message transformation aligns with the agreed schema. Early, Targeted Feedback – Instantly identify contract mismatches and integration issues at the function level, saving hours of debugging and keeping pipelines in sync. If you work on data products or event-driven pipelines with AWS Lambda and want faster iteration, higher reliability, and a clear way to communicate and enforce data expectations, this session is for you. [...]
+
+TIMECODES
+00:00 Intro
+00:35 Context: Data pipeline
+02:25 Focusing on 1 Lambda
+03:10 AsyncAPI specification
+06:24 Demo
+16:45 Recap
+18:48 Outro
+
+Download slides and read the full abstract here:
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3845
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Peter Sbarski • Serverless Architectures on AWS • https://amzn.to/3hJzEUM
+Michael Stack • Event-Driven Architecture in Golang • https://amzn.to/3G5e8ST
+Ashley Peacock • Serverless Apps on Cloudflare • https://amzn.to/3EU7P85
+Jeroen Mulder • Multi-Cloud Strategy for Cloud Architects • https://amzn.to/3FdNDOA
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#AWSLambda #DataPipelines #AsyncAPI #ApacheKafka #EDA #EventDrivenArchitecture #Serverless #LambdaFunctions #Programming #SoftwareEngineering #TodayInTech #HariKrishnan #Specmatic
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Why You Should NEVER Start With Microservices</title><link>https://blog.algomaster.io/p/why-you-should-never-start-with-microservices</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!kPsl!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9891d75a-3c7f-4b21-b600-aadd10428032_1412x1038.png" length="" type=""/><pubDate>Mon, 8 Dec 2025 03:40:18 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[You’re starting a new project. You’ve read about how , , and  use microservices to handle millions of requests.You want to build something scalable from day one.So you begin designing your system with separate services for users, orders, payments, notifications, and inventory. Each with its own database, its own deployment pipeline, its own monitoring setup.Six months later, you have 15 services, a team of 3 developers, and you’re spending 80% of your time debugging distributed system issues instead of building features.This is the , and it catches more teams than you might think.In this article, I’ll explain:Why microservices are exciting but dangerous for new projectsThe hidden costs that nobody talks aboutWhen microservices actually make senseThe “Monolith First” approach and why it worksWhy microservices are important in System Design InterviewsMicroservices sound exciting and they always look impressive in system design interviews.The idea of having small, independent services that can be developed, deployed, and scaled independently sounds like engineering nirvana.When you read about microservices, you hear about:: Deploy one service without affecting others: Use the best language/framework for each service: Small teams own their services end-to-end: Scale only the services that need it: One service failure doesn’t bring down the systemThese benefits are real. But they come with a catch.These benefits only materialize at scale, both in terms of traffic AND team size.For a startup or small team, microservices don’t just fail to provide these benefits. They actively work against you.1. Distributed Systems ComplexityThe moment you split your application into multiple services, you’ve created a distributed system. And distributed systems are .Problems that didn’t exist in a monolith suddenly become your daily reality: - Service A can’t reach Service B. Now what? - A function call that took microseconds is now a network call taking milliseconds - How do you maintain consistency across multiple databases? - A single request might touch 10 services. Good luck tracing that error.In a monolith, calling a function is guaranteed to either work or throw an exception.In microservices, a service call can:Timeout (but did it actually succeed?)Succeed but return stale dataSucceed on retry but cause duplicate operationsEach of these scenarios requires different handling. Multiply this by every service-to-service call in your system.In a monolith you get a stack trace.In a microservices architecture, a single user request might touch 10 different services. When something goes wrong, you need to trace through logs across all of them, correlate timestamps, and figure out which service caused the failure.But distributed complexity is just the beginning. How do you even manage all these services?A monolith means one thing to deploy, monitor, and maintain.With microservices, everything multiplies:You’ll also need additional infrastructure that a monolith simply doesn’t require:: How do services find each other?: How do external clients reach your services?: How do you debug across services?: How do you handle cascading failures?: How do services communicate asynchronously?Each of these adds complexity, cost, and potential failure points. A small team can easily spend more time managing infrastructure than building features.Speaking of performance costs, let’s look at what happens to your application’s speed.3. Network Is Now Your BottleneckIn a monolith, data access is fast . Objects are in memory or a single database call away.In microservices, what was once a method call is now:1. Serialize request to JSON           ~0.5ms
+2. DNS lookup                          ~1-10ms
+3. TCP connection                      ~1-5ms
+4. TLS handshake                       ~5-30ms
+5. Send HTTP request                   ~1-5ms
+6. Service B processes                 ~varies
+7. Serialize response                  ~0.5ms
+8. Network transfer back               ~1-5ms
+9. Deserialize response                ~0.5ms
+
+Time: 10-50+ milliseconds (10,000x slower!)       This overhead adds up quickly. A page that required 5 internal method calls in a monolith might now require 5 network calls, each adding 10-50ms of latency. 4. Data Management Becomes a NightmareOne of the “benefits” of microservices is that each service owns its data. But this creates serious challenges.In a monolith, you can easily join users with orders with products in a single SQL query:SELECT u.name, o.total, p.title
+FROM users u
+JOIN orders o ON u.id = o.user_id
+JOIN order_items oi ON o.id = oi.order_id
+JOIN products p ON oi.product_id = p.id
+WHERE u.id = 123;In microservices, the same data lives in different databases:To get user + orders + products, you need to: Call the Products serviceJoin the data in your application codeIn a monolith, you can wrap multiple operations in a database transaction:In microservices, each service has its own database. You can’t have a transaction span multiple services. Instead, you need  or  - both are complex and error-prone.5. Testing Is Exponentially HarderTesting a monolith is straightforward: spin up the application, run your tests.Testing microservices requires multiple layers: between services that spin up multiple services across the entire system to verify fault toleranceYour CI/CD pipeline becomes a complex orchestration of building, deploying, and testing multiple services in the correct order. A change to a shared API requires updating and testing all dependent services.6. You Don’t Know Your Domain YetThis might be the most important point.When you’re starting a new project, you don’t fully understand your domain.Requirements will change. You’ll discover that what you thought were separate concerns are actually deeply intertwined.In a monolith, refactoring is moving code between packages. In microservices, refactoring is redesigning APIs, migrating data, and coordinating deployments across teams.“Almost all the successful microservice stories have started with a monolith that got too big and was broken up.”Starting with microservices means you’re drawing service boundaries before you understand where they should be. And wrong boundaries are incredibly expensive to fix.So when do microservices actually make sense?Microservices aren’t bad. They’re a solution to specific problems that most projects don’t have.Consider microservices when:1. You Have Multiple Teams That Need IndependenceIf you have 50+ developers and they’re constantly stepping on each other’s toes in a monolith, microservices can provide team autonomy.: You need at least one team (5-8 developers) per service for microservices to make organizational sense.2. You Have Genuinely Different Scaling RequirementsTraffic Distribution:
+
+Search Service    ████████████████████████████████  90%
+User Service      ███                               8%
+Admin Service     █                                 2%If 90% of your traffic goes to your search service while your user service handles 10%, and you’re paying significantly more to scale everything together, microservices might help. does your company really have this problem? Or can one optimized monolith handle it all?3. You Have Clear, Stable Domain BoundariesIf you’ve been running your monolith for years and you clearly understand which parts of the system are independent and rarely change together, you can confidently extract services.4. You Have the Infrastructure and ExpertiseRunning microservices well requires mature infrastructure:Container orchestration (Kubernetes or similar)Service mesh or API gatewayDistributed tracing and loggingOn-call rotation for multiple servicesIf you don’t have these, you’ll spend more time on infrastructure than features.Here’s the recommend approach:1. Start With a Well-Structured MonolithBuild a monolith, but structure it well internally. Use clear module boundaries, separate concerns, and write clean interfaces between components.my-app/
+├── modules/
+│   ├── users/
+│   │   ├── api/
+│   │   ├── service/
+│   │   └── repository/
+│   ├── orders/
+│   │   ├── api/
+│   │   ├── service/
+│   │   └── repository/
+│   └── products/
+│       ├── api/
+│       ├── service/
+│       └── repository/
+├── shared/
+└── infrastructure/This is sometimes called a  or .2. Define Clear Internal BoundariesEven within a monolith, modules should communicate through well-defined interfaces. Don’t let the Orders module directly access User database tables. Have it call the Users module’s public interface.This makes future extraction easier while keeping current development simple.3. Extract Services When Pain Becomes RealOnly extract a service when you experience  that microservices would solve:“We can’t deploy because another team is using the same codebase”“We need to scale this component 100x but the rest doesn’t need it”“This component needs a different technology stack”“Deployments take 2 hours because the codebase is so large”When you extract, you already understand the domain, the boundaries are proven, and you have real requirements to guide you.Some of the most successful tech companies started with monoliths:Amazon ran as a monolith for years before transitioning to services. They didn’t start with microservices. They evolved to them when their monolith couldn’t scale further and organizational bottlenecks became real.Shopify is famous for their  architecture. Even at massive scale, they’ve chosen to optimize their monolith rather than split into microservices. Their monolith handles billions of dollars in transactions.Etsy deliberately chose to stick with their monolith and invest in tooling to make it better, rather than split into microservices. They’ve been profitable and successful while competitors struggled with microservices complexity.Use this framework to decide your architecture:If you answered “No” to most of these, a monolith is almost certainly the right choice.Here’s where things get nuanced.Everything I’ve said applies to real-world architecture decisions. But system design interviews are a different game.In interviews, you  discuss microservices. Here’s why:Interviews Test Knowledge, Not Just JudgmentInterviewers want to see that you  distributed systems concepts, even if you wouldn’t use them on day one. Can you break down a system into logical components?Do you understand service boundaries and APIs?Can you discuss trade-offs between approaches?Do you know how to scale individual components?The Winning Interview StrategyThe best candidates show . Here’s how to approach it:1. Acknowledge the starting point“For an early-stage product, I’d start with a modular monolith. It’s simpler to develop, deploy, and debug.”2. Then show the scaled architecture“As the system grows to millions of users, we’d extract services based on scaling needs and team structure.”3. Discuss trade-offs explicitly“Splitting into microservices adds network latency and operational complexity, but gives us independent scaling and deployment.”This approach demonstrates both  (start simple) and  (know how to scale).Microservices sound appealing and for good reasons. They’re intellectually interesting, they look great on architecture diagrams, and they’re what the cool companies use.But the cool companies didn’t start with microservices. They evolved to them after years of growth.Your job as an engineer isn’t to use the fanciest architecture, it’s to solve problems with the simplest solution that works.For most projects, that solution is a well-structured monolith.Start boring. Get fancy when you need to.If you found it valuable, hit a like ❤️ and consider subscribing for more such content.If you have any questions or suggestions, leave a comment.This post is public so feel free to share it. If you’re enjoying this newsletter and want to get even more value, consider becoming a .I hope you have a lovely day!]]></content:encoded></item><item><title>How to Teach Kids to Code with #SonicPi with @SamAaron</title><link>https://www.youtube.com/shorts/5wcPBM0Lw-A</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/5wcPBM0Lw-A?version=3" length="" type=""/><pubDate>Sun, 7 Dec 2025 13:00:18 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #SonicPi #LiveCodingMusic #CodingMusic #EducatingKids #SonicPiTutorial #SamAaron #JamesLewis #SoundOfCode #CodeBasedMusic #SCSynth #Ruby #Erlang #Cpp #SoftwareEngineering #Code #Technology #TeachingKidsToCode #TeachingKidsProgramming #TodayInTech #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+
+Full version available here:
+https://youtu.be/_ehD4D7N4ZU
+
+Links
+https://www.patreon.com/samaaron
+https://sonic-pi.net
+
+Sam Aaron - Live Coding Musician & Creator of Sonic Pi @SamAaron
+James Lewis - Principal Consultant & Technical Director at Thoughtworks
+
+RECOMMENDED BOOK
+Hans Gruendel • Making Music with Sonic Pi • https://amzn.to/3oVxGV7
+Hans Gruendel • Learn to Program with Sonic PI • https://amzn.to/3qCrLEO
+Simon Monk • Raspberry Pi Cookbook • https://amzn.to/43AGPRX
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
