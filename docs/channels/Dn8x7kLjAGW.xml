@@ -1,38 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Learning Python Programming • Fabrizio Romano &amp; Naomi Ceder</title><link>https://www.youtube.com/watch?v=YIxL2qRubOs</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/YIxL2qRubOs?version=3" length="" type=""/><pubDate>Fri, 26 Dec 2025 13:23:00 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Check out more here:
+https://gotopia.tech/episodes/401
+
+Fabrizio Romano - Development Manager at Sohonet & Co-Author of "Learning Python Programming"
+Naomi Ceder - Python Instruction and Consulting & Author of "The Quick Python Book"
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Fabrizio
+https://x.com/gianchub
+https://github.com/gianchub
+https://www.linkedin.com/in/gianchub
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Naomi
+https://bsky.app/profile/naomiceder.tech
+https://github.com/nceder
+https://www.linkedin.com/in/naomiceder
+https://www.naomiceder.tech
+
+Link
+https://adventofcode.com
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
+Naomi Ceder interviews Fabrizio Romano, author of "Learning Python Programming" (now in its 4th edition). They discuss Fabrizio’s decade-long journey as a Python programmer and book author, exploring how his perspectives have evolved across multiple editions.
 
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+Key topics include the shift from GUI-focused content to command-line applications, the controversial introduction of typing in Python, the rise of AI in coding, and the importance of educating junior developers. Fabrizio emphasizes the balance between embracing new tools like AI while maintaining fundamental programming skills and the human element in software development.
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Fabrizio Romano & Heinrich Kruger • Learning Python Programming • https://amzn.to/4myLBIt
+Naomi Ceder • The Quick Python Book • https://amzn.to/3zwdDOa
+Luciano Ramalho • Fluent Python • https://amzn.to/3oSw2je
+David Beazley • Python Distilled (Developer's Library) • https://amzn.to/3QjNBEv
+Anna Skoulikari • Learning Git • https://amzn.to/4cSl8lz
+Sy Brand • Building a Debugger • https://amzn.to/4cWWr84
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +49,60 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>January 2026 Q&amp;A</title><link>https://www.youtube.com/watch?v=g1ZgInFTfEo</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/g1ZgInFTfEo?version=3" length="" type=""/><pubDate>Fri, 26 Dec 2025 12:45:48 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[As has become tradition, it's time for another new year's Q&A!
+
+Ask questions here — no question is too small or too big: https://wewerewondering.com/event/01KDDAR568ZMCG9HT70BDHF150]]></content:encoded></item><item><title>I Created the Most Comprehensive System Design Interview Resource</title><link>https://blog.algomaster.io/p/system-design-course</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!AeNy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0030996-9d6d-4200-9e3b-3c5a3e735763_2518x1728.png" length="" type=""/><pubDate>Thu, 25 Dec 2025 14:30:25 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[ WhatsApp, Slack, Zoom, Google Docs Instagram, TikTok, Reddit, FB News Feed, Tinder Spotify, YouTube, Netflix, Twitch, Google DriveAirbnb, Food Delivery, Uber, Google Maps Autocomplete, Web Crawler, Google Search, Ad Click AggregatorE-commerce & Marketplace: Amazon, Shopify, Flash Sale, Movie Booking, Auction SystemPayment Systems (Stripe), Digital Wallet, Stock ExchangeDistributed Infrastructure: Key-Value Store, Distributed Cache, CDN, Rate Limiter, Message Queue Likes Counter, Top K, Real-Time Leaderboard Notification Service, Job Scheduler, CI/CD Pipeline]]></content:encoded></item><item><title>Beyond Sonic Pi: Tau5 &amp; the Art of Coding with AI • Sam Aaron • GOTO 2025</title><link>https://www.youtube.com/watch?v=RAd5RkuZPb4</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/RAd5RkuZPb4?version=3" length="" type=""/><pubDate>Thu, 25 Dec 2025 13:00:55 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph
 https://gotocph.com
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Sam Aaron - Live Coding Musician and Creator of Sonic Pi @SamAaron 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+https://www.patreon.com/samaaron
+https://twitter.com/samaaron
+https://github.com/samaaron
+https://linkedin.com/in/samaaron
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+ABSTRACT
+For over a decade, Sonic Pi has been used in classrooms around the world to teach programming through music. Students learn sequencing, loops, data structures, and algorithms while coding beats, basslines, and shimmering synths. At the same time, professional musicians have taken Sonic Pi to stages and concert halls, using programming itself as an instrument of musical expression.
+
+Now the story continues with Tau5, a new live coding system focused on collaboration. In music, concurrency, distribution, and fault tolerance aren’t just safety nets - they are uncompromising demands. When harnessed, they can be transformed into powerful creative possibilities for human expression and connection.
+
+Collaboration isn’t limited to humans. Tau5 also experiments with AI as a creative partner, asking not what machines can replace, but how they might improvise with us.
+
+This keynote reflects on the lessons these explorations in music and code can teach us about collaboration, creativity, and education in the age of AI. Along the way, we’ll explore concurrency, rhythm, and the subtle but critical difference between working at the same time and working truly in time.
+
+Dont just pattern match - rhythm catch! [...]
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
+00:13 DJ set with Sam Aaron feat. Sonic Pi
+08:30 Intro No. 2
+12:07 Sonic Pi demo
+21:00 Teaching kids to code
+28:50 DJ Dave
+30:33 Demo
+36:00 Joe Armstrong's contribution
+36:48 José Valim & Elixir
+37:17 The Black Dog
+39:18 Collaborative jamming
+47:32 Visuals
+59:51 Outro
 
 Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+https://gotocph.com/2025/sessions/3744
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Sam Aaron & Russell Barnes • Code Music with Sonic Pi • https://amzn.to/4hBRYtC
+Hans Gruendel • Making Music with Sonic Pi • https://amzn.to/3oVxGV7
+Hans Gruendel • Learn to Program with Sonic PI • https://amzn.to/3qCrLEO
+Simon Monk • Raspberry Pi Cookbook • https://amzn.to/43AGPRX
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#SonicPi #LiveCodingMusic #CodingMusic #EducatingKids #SonicPiTutorial #SamAaron #SoundOfCode #CodeBasedMusic #SCSynth #Ruby #Erlang #Cpp #TodayInTech #Tau5 #Hydra #Erlang #Elixir #BEAM
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,66 +113,70 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Serverless Panel • N. Coult, R. Kohler, D. Anderson, J. Agarwal, A. Laxmi &amp; J. Dongre • GOTO 2025</title><link>https://www.youtube.com/watch?v=eBOkg-GbCSE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/eBOkg-GbCSE?version=3" length="" type=""/><pubDate>Wed, 24 Dec 2025 13:01:32 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Serverless 2025. #GOTOcon #GOTOserverless
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
-
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
-
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
-
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+Nick Coult - Director of Product for Serverless at AWS
+Robbie Kohler - VP of Software Engineering, Byte by Yum!
+David Anderson - Software Architect at G-P/Globalization Partners & Author of "The Value Flywheel Effect"
+Janak Agarwal - Senior Manager, Product Management, AWS Lambda
+Akshatha Laxmi - Solution Architect at AntStack @AkshathaLaxmi-gm2mw 
+Jeevan Dongre - CEO & Co-Founder at AntStack @JeevanDongre1986 
 
 RESOURCES
+Nick
+https://x.com/nickcoult
+https://github.com/coultn
+https://www.linkedin.com/in/nickcoult
+
+Robbie
+https://www.linkedin.com/in/rkohler
+https://x.com/robbie_kohler
+
 David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+https://x.com/davidand393
+https://www.linkedin.com/in/david-anderson-belfast
+https://theserverlessedge.com
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+Janak
+https://www.linkedin.com/in/janakagarwal
 
-Links
-https://stripe.dev
+Akshatha
+https://github.com/AkshathaLaxmi
+https://www.linkedin.com/in/akshatha-laxmi
 
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+Jeevan
+https://x.com/jeevandongre
+https://github.com/jeevandongre
+https://www.linkedin.com/in/jeevandongre
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
+TIMECODES
+00:00 Intro
+02:10 Usage of AI tools
+08:07 How life changed with AI as a product manager
+11:00 How life changed with AI as a system architect
+17:30 How life changed with AI as a software developer
+21:50 Modernization at AWS
+34:00 A glimpse into the future
+38:30 Audience Q&A
+50:30 Outro 
 
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Read the full abstract here:
+https://conferences.gotopia.tech/goto-serverless-bengaluru-2025/sessions/3856
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
+Peter Sbarski • Serverless Architectures on AWS • https://amzn.to/3hJzEUM
+Michael Stack • Event-Driven Architecture in Golang • https://amzn.to/3G5e8ST
+Ashley Peacock • Serverless Apps on Cloudflare • https://amzn.to/3EU7P85
+Jeroen Mulder • Multi-Cloud Strategy for Cloud Architects • https://amzn.to/3FdNDOA
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#Serverless #AWSServerless #AIWorkflows #TodayInTech #JeevanDongre #NickCoult #AkshathaLaxmi #JanakAgarwal #DavidAnderson #RobbieKohler #Programming
+
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
 https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
@@ -179,7 +186,38 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>ASP.NET Core 9 Essentials • Albert Tanure &amp; Rafael Herik de Carvalho</title><link>https://www.youtube.com/watch?v=d_9ZqxYXd28</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/d_9ZqxYXd28?version=3" length="" type=""/><pubDate>Tue, 23 Dec 2025 13:13:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Check out more here:
+https://gotopia.tech/episodes/402
+
+Albert S. Tanure - Cross Solutions Architec at Microsoft & Author of "ASP.NET Core 9 Essentials"
+Rafael Herik de Carvalho - Platform & DevOps Engineering at Devoteam
+
+RESOURCES
+Albert
+https://x.com/alberttanure
+https://github.com/tanure
+https://www.linkedin.com/in/albert-tanure
+https://www.codefc.io/en
+
+Rafael
+https://x.com/rafaelherik
+https://github.com/rafaelherik
+https://www.linkedin.com/in/rafaelh-carvalho
+https://dev.to/rafaelherik
+
+DESCRIPTION
+Microsoft Solutions Architect Albert Tanure explores his approach to writing "ASP.NET Core 9 Essentials", a guide designed to take developers from basic .NET concepts to advanced cloud-native application development. Albert emphasizes the intentional structure of starting with foundations before introducing best practices, covering the complete application lifecycle from UI development and APIs to deployment, monitoring, and cloud operations.
+
+The conversation highlights how modern development requires understanding not just coding, but also DevOps practices, observability with tools like OpenTelemetry, dynamic configurations, containers, and cloud-native principles. The book serves both beginners seeking solid foundations and experienced developers looking to understand modern deployment strategies, with particular emphasis on chapters 9-11 that cover cloud native mindsets and operational considerations.
+
+RECOMMENDED BOOKS
+Albert Tanure • ASP.NET Core 9 Essentials • https://amzn.to/43bH73t
+Mark J. Price • Real-World Web Development with .NET 9 • https://amzn.to/46ZKsnw
+Mark J. Price • C# 13 and .NET 9 – Modern Cross-Platform Development Fundamentals • https://amzn.to/4o5E5FZ
+Fabrizio Romano & Heinrich Kruger • Learning Python Programming • https://amzn.to/4myLBIt
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +233,95 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>How I’d learn Rust (If I could start over)</title><link>https://www.youtube.com/watch?v=DhiHhQimSa4</link><author>Let&apos;s Get Rusty</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/DhiHhQimSa4?version=3" length="" type=""/><pubDate>Mon, 22 Dec 2025 15:07:48 +0000</pubDate><source url="https://www.youtube.com/channel/UCSp-OaMpsO8K0KkOqyBl7_w">Let&apos;s get Rusty</source><content:encoded><![CDATA[👉Join the Rust Live Accelerator waitlist (30 seats): https://letsgetrusty.com/join
+.
 
-Andrew Browne - Solution Architect at Picnic Software
+Here are 3 things I would do completely differently if I started learning Rust from scratch again today.
+
+Join the Rust Live Accelerator: https://letsgetrusty.com/join]]></content:encoded></item><item><title>Handling AI-Generated Code: Challenges &amp; Best Practices • Roman Zhukov &amp; Damian Brady • GOTO 2025</title><link>https://www.youtube.com/watch?v=SsiDLh9-TN8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/SsiDLh9-TN8?version=3" length="" type=""/><pubDate>Mon, 22 Dec 2025 13:01:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted. #GOTOcon #GOTOunscripted
+https://gotopia.tech
+
+Check out more here:
+https://gotopia.tech/articles/419
+
+Roman Zhukov - Principal Architect - Security Communities Lead at Red Hat
+Damian Brady - Staff Developer Advocate at GitHub @DamianBrady 
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Roman
+https://github.com/rozhukov
+https://www.linkedin.com/in/rozhukov
+
+Damian
+https://bsky.app/profile/damovisa.me
+https://hachyderm.io/@damovisa
+https://x.com/damovisa
+https://github.com/Damovisa
+https://www.linkedin.com/in/damianbrady
+https://damianbrady.com.au
+
+Links
+https://www.redhat.com/en/blog/ai-assisted-development-and-open-source-navigating-legal-issues
+https://youtu.be/tn6nkZP1iSY
+https://youtu.be/wUrIjKbktCk
+https://youtu.be/Pv0cfsastFs
+https://youtu.be/MyCsYagUR6w
+https://youtu.be/o6XiGJQ6_dQ
+https://youtu.be/ZUS7r3c3iGc
+https://youtu.be/xZ_Ize3knj0
+https://youtu.be/ul5vjXTNSsE
+https://youtu.be/Vd5IxWn3Ync
+https://youtu.be/7oIs4kNH65Y
+https://youtu.be/j_r0wEgWRYI
+
+DESCRIPTION
+Roman Zhukov (Red Hat) and Damian Brady (GitHub) explore the evolving landscape of AI-assisted software development. They discuss how AI tools are transforming developer workflows, making developers about 20% faster on simple tasks while being 19% slower on complex ones.
+
+The conversation covers critical topics including code quality and trust, security concerns with AI-generated code, the importance of education and best practices, and how developer roles are shifting from syntax experts to system architects. Both experts emphasize that AI tools serve as amplifiers rather than replacements, with humans remaining essential in the loop for quality, security, and licensing compliance.
+
+TIMECODES
+00:00 Intro
+01:32 Evolution of developer workflows
+08:05 Trust & security in the age of AI-generated code
+20:39 Building trust through provenance
+24:31 Future of developer roles & skills
+27:51 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Alex Castrounis • AI for People and Business • https://amzn.to/3NYKKTo
+Holden Karau, Trevor Grant, Boris Lublinsky, Richard Liu & Ilan Filonenko • Kubeflow for Machine Learning • https://amzn.to/3JVngcx
+Kelleher & Tierney • Data Science (The MIT Press Essential Knowledge series) • https://amzn.to/3AQmIRg
+Lakshmanan, Robinson & Munn • Machine Learning Design Patterns • https://amzn.to/2ZD7t0x
+Lakshmanan, Görner & Gillard • Practical Machine Learning for Computer Vision • https://amzn.to/3m9HNjP
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#AIAssistance #AIAssistant #LLM #LargeLanguageModel #LimitationsOfLLMs #InsideGPT #GPT #GenAI #AI #GenerativeAI #CodingAssistant #RomanZhukov #DamianBrady #Programming #TodayInTech #GOTO
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Joy &amp; Sorrow of Hardware Management in the Cloud with @Holly_Cummins</title><link>https://www.youtube.com/shorts/DtZJPzhj3ZY</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/DtZJPzhj3ZY?version=3" length="" type=""/><pubDate>Sun, 21 Dec 2025 13:00:24 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Quarkus #CloudNative #Cloud #Microservices #HollyCummins #SoftwareDevelopment #SoftwareTechnology #CloudTransformation #CloudTraining #DevOps #Observability #RedHatQuarkus #RedHat #Modularity #DistributedMonolith #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+
+Full version available here:
+https://youtu.be/sk1NPkAzYSM
+
+Holly Cummins - Senior Principal Software Engineer on the Red Hat Quarkus Team @Holly_Cummins 
+
+RECOMMENDED BOOK
+Holly Cummins & Timothy Ward • Enterprise OSGi in Action • https://amzn.to/3rn2POB
+Liz Rice • Container Security • https://amzn.to/3oU4iJe
+Liz Rice • Kubernetes Security • https://www.oreilly.com/library/view/kubernetes-security/9781492039075
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:

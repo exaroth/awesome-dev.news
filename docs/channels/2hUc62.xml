@@ -1,62 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blog</title><link>https://www.awesome-dev.news</link><description></description><item><title>Links</title><link>https://matklad.github.io/2025/08/23/links.html</link><author>Alex Kladov</author><category>dev</category><category>rust</category><category>blog</category><pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate><source url="https://matklad.github.io/">Matklad blog</source><content:encoded><![CDATA[If you have a blog, consider adding a “links” page to it, which references resources that you find
-notable:I’ve started my links page several years ago, mostly because I found myself referring to the same
-few links repeatedly in various discussions, and not all the links were easily searchable.Note that the suggestion is different from more typical “monthly links roundup”, which is nice to
-maintain Substack engagement/community, but doesn’t contribute to long-term knowledge distilling.It is also different from the exhaustive list of everything I’ve read on the Internet. It is
-relatively short, considering its age.]]></content:encoded></item><item><title>Friday Squid Blogging: Bobtail Squid</title><link>https://www.schneier.com/blog/archives/2025/08/friday-squid-blogging-bobtail-squid.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 22 Aug 2025 21:02:39 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[As usual, you can also use this squid post to talk about the security stories in the news that I haven’t covered.]]></content:encoded></item><item><title>The science of loudness</title><link>https://fasterthanli.me/articles/the-science-of-loudness</link><author>Amos Wenger</author><category>dev</category><category>rust</category><category>blog</category><pubDate>Fri, 22 Aug 2025 20:30:00 +0000</pubDate><source url="https://fasterthanli.me/index.xml">Faster than time blog</source><content:encoded><![CDATA[My watch has a “Noise” app: it shows , for decibels.My amp has a volume knob, which also shows decibels, although.. negative ones, this time.And finally, my video editing software has a ton of meters — which are all in decibel or
-decibel-adjacent units.How do all these decibels fit together?]]></content:encoded></item><item><title>I’m Spending the Year at the Munk School</title><link>https://www.schneier.com/blog/archives/2025/08/im-spending-the-year-at-the-munk-school.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 22 Aug 2025 19:00:37 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[This academic year, I am taking a sabbatical from the Kennedy School and Harvard University. (It’s not a real sabbatical—I’m just an adjunct—but it’s the same idea.) I will be spending the Fall 2025 and Spring 2026 semesters at the Munk School at the University of Toronto.I will be organizing a reading group on AI security in the fall. I will be teaching my cybersecurity policy class in the Spring. I will be working with Citizen Lab, the Law School, and the Schwartz Reisman Institute. And I will be enjoying all the multicultural offerings of Toronto.It’s all pretty exciting.]]></content:encoded></item><item><title>AI Agents Need Data Integrity</title><link>https://www.schneier.com/blog/archives/2025/08/ai-agents-need-data-integrity.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 22 Aug 2025 11:04:19 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Think of the Web as a digital territory with its own social contract. In 2014, Tim Berners-Lee called for a “Magna Carta for the Web” to restore the balance of power between individuals and institutions. This mirrors the original charter’s purpose: ensuring that those who occupy a territory have a meaningful stake in its governance.Web 3.0—the distributed, decentralized Web of tomorrow—is finally poised to change the Internet’s dynamic by returning ownership to data creators. This will change many things about what’s often described as the “CIA triad” of digital security: confidentiality, integrity, and availability. Of those three features, data integrity will become of paramount importance.When we have agency in digital spaces, we naturally maintain their integrity—protecting them from deterioration and shaping them with intention. But in territories controlled by distant platforms, where we’re merely temporary visitors, that connection frays. A disconnect emerges between those who benefit from data and those who bear the consequences of compromised integrity. Like homeowners who care deeply about maintaining the property they own, users in the Web 3.0 paradigm will become stewards of their personal digital spaces.This will be critical in a world where AI agents don’t just answer our questions but act on our behalf. These agents may execute financial transactions, coordinate complex workflows, and autonomously operate critical infrastructure, making decisions that ripple through entire industries. As digital agents become more autonomous and interconnected, the question is no longer whether we will trust AI but what that trust is built upon. In the new age we’re entering, the foundation isn’t intelligence or efficiency—it’s integrity.In information systems, integrity is the guarantee that data will not be modified without authorization, and that all transformations are verifiable throughout the data’s life cycle. While availability ensures that systems are running and confidentiality prevents unauthorized access, integrity focuses on whether information is accurate, unaltered, and consistent across systems and over time.It’s a new idea. The undo button, which prevents accidental data loss, is an integrity feature. So is the reboot process, which returns a computer to a known good state. Checksums are an integrity feature; so are verifications of network transmission. Without integrity, security measures can backfire. Encrypting corrupted data just locks in errors. Systems that score high marks for availability but spread misinformation just become amplifiers of risk.All IT systems require some form of data integrity, but the need for it is especially pronounced in two areas today. First: Internet of Things devices interact directly with the physical world, so corrupted input or output can result in real-world harm. Second: AI systems are only as good as the integrity of the data they’re trained on, and the integrity of their decision-making processes. If that foundation is shaky, the results will be too.Integrity manifests in four key areas. The first,  concerns the quality and authenticity of data entering a system. When this fails, consequences can be severe. In 2021, Facebook’s global outage was triggered by a single mistaken command—an input error missed by automated systems. Protecting input integrity requires robust authentication of data sources, cryptographic signing of sensor data, and diversity in input channels for cross-validation.The second issue is  which ensures that systems transform inputs into outputs correctly. In 2003, the U.S.-Canada blackout affected 55 million people when a control-room process failed to refresh properly, resulting in damages exceeding US $6 billion. Safeguarding processing integrity means formally verifying algorithms, cryptographically protecting models, and monitoring systems for anomalous behavior. covers the correctness of information as it’s stored and communicated. In 2023, the Federal Aviation Administration was forced to halt all U.S. departing flights because of a corrupted database file. Addressing this risk requires cryptographic approaches that make any modification computationally infeasible without detection, distributed storage systems to prevent single points of failure, and rigorous backup procedures.Finally,  addresses the appropriate flow of information according to the norms of its larger context. It’s not enough for data to be accurate; it must also be used in ways that respect expectations and boundaries. For example, if a smart speaker listens in on casual family conversations and uses the data to build advertising profiles, that action would violate the expected boundaries of data collection. Preserving contextual integrity requires clear data-governance policies, principles that limit the use of data to its intended purposes, and mechanisms for enforcing information-flow constraints.As AI systems increasingly make critical decisions with reduced human oversight, all these dimensions of integrity become critical.The Need for Integrity in Web 3.0As the digital landscape has shifted from Web 1.0 to Web 2.0 and now evolves toward Web 3.0, we’ve seen each era bring a different emphasis in the CIA triad of confidentiality, integrity, and availability.Returning to our home metaphor: When simply having shelter is what matters most, availability takes priority—the house must exist and be functional. Once that foundation is secure, confidentiality becomes important—you need locks on your doors to keep others out. Only after these basics are established do you begin to consider integrity, to ensure that what’s inside the house remains trustworthy, unaltered, and consistent over time.Web 1.0 of the 1990s prioritized making information available. Organizations digitized their content, putting it out there for anyone to access. In Web 2.0, the Web of today, platforms for e-commerce, social media, and cloud computing prioritize confidentiality, as personal data has become the Internet’s currency.Somehow, integrity was largely lost along the way. In our current Web architecture, where control is centralized and removed from individual users, the concern for integrity has diminished. The massive social media platforms have created environments where no one feels responsible for the truthfulness or quality of what circulates.Web 3.0 is poised to change this dynamic by returning ownership to the data owners. This is not speculative; it’s already emerging. For example, ActivityPub, the protocol behind decentralized social networks like Mastodon, combines content sharing with built-in attribution. Tim Berners-Lee’s Solid protocol restructures the Web around personal data pods with granular access controls.These technologies prioritize integrity through cryptographic verification that proves authorship, decentralized architectures that eliminate vulnerable central authorities, machine-readable semantics that make meaning explicit—structured data formats that allow computers to understand participants and actions, such as “Alice performed surgery on Bob”—and transparent governance where rules are visible to all. As AI systems become more autonomous, communicating directly with one another via standardized protocols, these integrity controls will be essential for maintaining trust.Why Data Integrity Matters in AIFor AI systems, integrity is crucial in four domains. The first is decision quality. With AI increasingly contributing to decision-making in health care, justice, and finance, the integrity of both data and models’ actions directly impact human welfare. Accountability is the second domain. Understanding the causes of failures requires reliable logging, audit trails, and system records.The third domain is the security relationships between components. Many authentication systems rely on the integrity of identity information and cryptographic keys. If these elements are compromised, malicious agents could impersonate trusted systems, potentially creating cascading failures as AI agents interact and make decisions based on corrupted credentials.Finally, integrity matters in our public definitions of safety. Governments worldwide are introducing rules for AI that focus on data accuracy, transparent algorithms, and verifiable claims about system behavior. Integrity provides the basis for meeting these legal obligations.The importance of integrity only grows as AI systems are entrusted with more critical applications and operate with less human oversight. While people can sometimes detect integrity lapses, autonomous systems may not only miss warning signs—they may exponentially increase the severity of breaches. Without assurances of integrity, organizations will not trust AI systems for important tasks, and we won’t realize the full potential of AI.How to Build AI Systems With IntegrityImagine an AI system as a home we’re building together. The integrity of this home doesn’t rest on a single security feature but on the thoughtful integration of many elements: solid foundations, well-constructed walls, clear pathways between rooms, and shared agreements about how spaces will be used.We begin by laying the cornerstone: cryptographic verification. Digital signatures ensure that data lineage is traceable, much like a title deed proves ownership. Decentralized identifiers act as digital passports, allowing components to prove identity independently. When the front door of our AI home recognizes visitors through their own keys rather than through a vulnerable central doorman, we create resilience in the architecture of trust.Formal verification methods enable us to mathematically prove the structural integrity of critical components, ensuring that systems can withstand pressures placed upon them—especially in high-stakes domains where lives may depend on an AI’s decision.Just as a well-designed home creates separate spaces, trustworthy AI systems are built with thoughtful compartmentalization. We don’t rely on a single barrier but rather layer them to limit how problems in one area might affect others. Just as a kitchen fire is contained by fire doors and independent smoke alarms, training data is separated from the AI’s inferences and output to limit the impact of any single failure or breach.Throughout this AI home, we build transparency into the design: The equivalent of large windows that allow light into every corner is clear pathways from input to output. We install monitoring systems that continuously check for weaknesses, alerting us before small issues become catastrophic failures.But a home isn’t just a physical structure, it’s also the agreements we make about how to live within it. Our governance frameworks act as these shared understandings. Before welcoming new residents, we provide them with certification standards. Just as landlords conduct credit checks, we conduct integrity assessments to evaluate newcomers. And we strive to be good neighbors, aligning our community agreements with broader societal expectations. Perhaps most important, we recognize that our AI home will shelter diverse individuals with varying needs. Our governance structures must reflect this diversity, bringing many stakeholders to the table. A truly trustworthy system cannot be designed only for its builders but must serve anyone authorized to eventually call it home.That’s how we’ll create AI systems worthy of trust: not by blindly believing in their perfection but because we’ve intentionally designed them with integrity controls at every level.Unlike other properties of security, like “available” or “private,” we don’t have a common adjective form for “integrity.” This makes it hard to talk about it. It turns out that there is a word in English: “integrous.” The Oxford English Dictionary recorded the word used in the mid-1600s but now declares it obsolete.We believe that the word needs to be revived. We need the ability to describe a system with integrity. We must be able to talk about integrous systems design.Ensuring integrity in AI presents formidable challenges. As models grow larger and more complex, maintaining integrity without sacrificing performance becomes difficult. Integrity controls often require computational resources that can slow systems down—particularly challenging for real-time applications. Another concern is that emerging technologies like quantum computingthreaten current cryptographic protections. Additionally, the distributed nature of modern AI—which relies on vast ecosystems of libraries, frameworks, and services—presents a large attack surface.Beyond technology, integrity depends heavily on social factors. Companies often prioritize speed to market over robust integrity controls. Development teams may lack specialized knowledge for implementing these controls, and may find it particularly difficult to integrate them into legacy systems. And while some governments have begun establishing regulations for aspects of AI, we need worldwide alignment on governance for AI integrity.Addressing these challenges requires sustained research into verifying and enforcing integrity, as well as recovering from breaches. Priority areas include fault-tolerantalgorithms for distributed learning, verifiable computation on encrypted data, techniques that maintain integrity despite adversarial attacks, and standardized metrics for certification. We also need interfaces that clearly communicate integrity status to human overseers.As AI systems become more powerful and pervasive, the stakes for integrity have never been higher. We are entering an era where machine-to-machine interactions and autonomous agents will operate with reduced human oversight and make decisions with profound impacts.The good news is that the tools for building systems with integrity already exist. What’s needed is a shift in mind-set: from treating integrity as an afterthought to accepting that it’s the core organizing principle of AI security.The next era of technology will be defined not by what AI can do, but by whether we can trust it to know or especially to do what’s right. Integrity—in all its dimensions—will determine the answer.Sidebar: Examples of Integrity FailuresProcessing integrity failure
-A 64-bit velocity calculation was converted to a 16-bit output, causing an error called overflow. The corrupted data triggered catastrophic course corrections that forced the US $370 million rocket to self-destruct.Processing integrity failure
-Lockheed Martin’s software calculated thrust in pound-seconds, while NASA’s navigation software expected newton-seconds. The failure caused the $328 million spacecraft to burn up in the Mars atmosphere.
-Faulty sensor data caused an automated flight-control system to repeatedly push the airplane’s nose down, leading to a fatal crash.Storage integrity failure
-Russian hackers compromised the process that SolarWinds used to package its software, injecting malicious code that was distributed to 18,000 customers, including nine federal agencies. The hack remained undetected for 14 months.Storage integrity failure
-A bug in OpenAI’s ChatGPT mixed different users’ conversation histories. Users suddenly had other people’s chats appear in their interfaces with no way to prove the conversations weren’t theirs.Contextual integrity failure
-Users discovered that the AI image generator often produced biased images of people, such as showing white men as CEOs regardless of the prompt. The AI tool didn’t accurately reflect the context requested by the users.
-Attackers embedded hidden prompts in emails, documents, and websites that hijacked AI assistants, causing them to treat malicious instructions as legitimate commands.Processing integrity failure
-A faulty software update from CrowdStrike caused 8.5 million Windows computers worldwide to crash—grounding flights, shutting down hospitals, and disrupting banks. The update, which contained a software logic error, hadn’t gone through full testing protocols.Input and processing integrity failure
-Scammers used AI-powered voice-cloning tools to mimic the voices of victims’ family members, tricking people into sending money. These scams succeeded because neither phone systems nor victims identified the AI-generated voice as fake.This essay was written with Davi Ottenheimer, and originally appeared in IEEE Spectrum.]]></content:encoded></item><item><title>Jim Sanborn Is Auctioning Off the Solution to Part Four of the Kryptos Sculpture</title><link>https://www.schneier.com/blog/archives/2025/08/jim-sanborn-is-auctioning-off-the-solution-to-part-four-of-the-kryptos-sculpture.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Thu, 21 Aug 2025 11:02:28 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[The auction, which will include other items related to cryptology, will be held Nov. 20. RR Auction, the company arranging the sale, estimates a winning bid between $300,000 and $500,000.Along with the original handwritten plain text of K4 and other papers related to the coding, Mr. Sanborn will also be providing a 12-by-18-inch copper plate that has three lines of alphabetic characters cut through with a jigsaw, which he calls “my proof-of-concept piece” and which he kept on a table for inspiration during the two years he and helpers hand-cut the letters for the project. The process was grueling, exacting and nerve wracking. “You could not make any mistake with 1,800 letters,” he said. “It could not be repaired.”Mr. Sanborn’s ideal winning bidder is someone who will hold on to that secret. He also hopes that person is willing to take over the system of verifying possible solutions and reviewing those unending emails, possibly through an automated system.]]></content:encoded></item><item><title>Subverting AIOps Systems Through Poisoned Input Data</title><link>https://www.schneier.com/blog/archives/2025/08/subverting-aiops-systems-through-poisoned-input-data.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Wed, 20 Aug 2025 11:02:27 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[In this input integrity attack against an AI system, researchers were able to fool AIOps tools:AIOps refers to the use of LLM-based agents to gather and analyze application telemetry, including system logs, performance metrics, traces, and alerts, to detect problems and then suggest or carry out corrective actions. The likes of Cisco have deployed AIops in a conversational interface that admins can use to prompt for information about system performance. Some AIOps tools can respond to such queries by automatically implementing fixes, or suggesting scripts that can address issues.These agents, however, can be tricked by bogus analytics data into taking harmful remedial actions, including downgrading an installed package to a vulnerable version. AI for IT Operations (AIOps) is transforming how organizations manage complex software systems by automating anomaly detection, incident diagnosis, and remediation. Modern AIOps solutions increasingly rely on autonomous LLM-based agents to interpret telemetry data and take corrective actions with minimal human intervention, promising faster response times and operational cost savings.In this work, we perform the first security analysis of AIOps solutions, showing that, once again, AI-driven automation comes with a profound security cost. We demonstrate that adversaries can manipulate system telemetry to mislead AIOps agents into taking actions that compromise the integrity of the infrastructure they manage. We introduce techniques to reliably inject telemetry data using error-inducing requests that influence agent behavior through a form of adversarial reward-hacking; plausible but incorrect system error interpretations that steer the agent’s decision-making. Our attack methodology, AIOpsDoom, is fully automated—combining reconnaissance, fuzzing, and LLM-driven adversarial input generation—and operates without any prior knowledge of the target system.To counter this threat, we propose AIOpsShield, a defense mechanism that sanitizes telemetry data by exploiting its structured nature and the minimal role of user-generated content. Our experiments show that AIOpsShield reliably blocks telemetry-based attacks without affecting normal agent performance.Ultimately, this work exposes AIOps as an emerging attack vector for system compromise and underscores the urgent need for security-aware AIOps design.]]></content:encoded></item><item><title>Learning web development: Booleans, comparisons and if statements</title><link>https://2ality.com/2025/08/javascript-booleans-comparisons-if.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this chapter, we learn about tools for only running a piece of code if a condition is met: truth values (booleans), comparisons and  statements.]]></content:encoded></item><item><title>Zero-Day Exploit in WinRAR File</title><link>https://www.schneier.com/blog/archives/2025/08/zero-day-exploit-in-winrar-file.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Tue, 19 Aug 2025 11:07:28 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[A zero-day vulnerability in WinRAR is being exploited by at least two Russian criminal groups:The vulnerability seemed to have super Windows powers. It abused alternate data streams, a Windows feature that allows different ways of representing the same file path. The exploit abused that feature to trigger a previously unknown path traversal flaw that caused WinRAR to plant malicious executables in attacker-chosen file paths %TEMP% and %LOCALAPPDATA%, which Windows normally makes off-limits because of their ability to execute code.More details in the article.]]></content:encoded></item><item><title>Eavesdropping on Phone Conversations Through Vibrations</title><link>https://www.schneier.com/blog/archives/2025/08/eavesdropping-on-phone-conversations-through-vibrations.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Mon, 18 Aug 2025 11:02:55 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Researchers have managed to eavesdropon cell phone voice conversations by using radar to detect vibrations. It’s more a proof of concept than anything else. The radar detector is only ten feet away, the setup is stylized, and accuracy is poor. But it’s a start.]]></content:encoded></item><item><title>Bliki: Expansion Joints</title><link>https://martinfowler.com/bliki/ExpansionJoints.html</link><author>Martin Fowler</author><category>dev</category><category>blog</category><pubDate>Mon, 18 Aug 2025 04:00:00 +0000</pubDate><source url="https://martinfowler.com/feed.atom">Martin Fowler</source><content:encoded><![CDATA[Back in the days when I did live talks, one of my abilities was to finish
-  on time, even if my talk time was cut at the last moment (perhaps due to the
-  prior speaker running over). The key to my ability to do this was to use
-  Expansion Joints - parts of the talk that I'd
-  pre-planned so I could cover them quickly or slowly depending on how much time
-  I had.The way I'd do this would be to plan for some topics to be optional. The
-  talk would work if I skipped over them, but I could also witter on about them
-  for five (or ten) minutes. Ideally, each of these topics would get one slide,
-  usually with a bunch of key phrases on it - the headings of what I'd talk
-  about should I be talking about it. When I got to the slide, I'd look at how
-  time was going with the talk. If (as was usually the case) I was running short
-  of time, I could cover the slide in about thirty seconds, saying something
-  like: “in doing this, there's a bunch of things you need to consider, but they
-  are out of scope for today's talk”.If, however, I did have time, I could then spend some time talking about
-  them. The slide would be simple, and not provide much of a Visual Channel, but that wasn't so important, after all this material
-  was optional in the first place.The single flex-slide was my favorite Expansion Joint, as it was easy to
-  use. Sometimes however my optional topic required a proper visual channel,
-  necessitating dedicated slides. My solution here was good control over
-  slide handling. Presentation tools include the ability to skip over slides
-  while I'm talking, and I made sure I practiced how to use them so I could skip
-  a bunch of slides without the audience knowing. It's crucial here that it's
-  invisible to the audience, I find it looks sloppy if anyone says “in the
-  interests of time I'll skip over these slides”. To do this, however, I do need
-  access to my laptop while presenting, venues that only provide a clicker while
-  loading the slides on some other machine lack that control. That started to
-  happen in my last couple of years, much to my annoyance.When creating talks, I was always worried that I would run out of things to
-  say, even though experience told me I reliably crammed more stuff in than I
-  could possibly cover. Expansion Joints helped with this, I could aggressively
-  trim the core talk to less than I needed, and rely on the Expansion Joints to
-  fill the gap. In practice I usually didn't need the Expansion Joints anyway, but
-  their presence helped my confidence.Using Expansion Joints was particularly important for me as I never
-  rehearsed my talks. I was always someone whose ability to present was driven by
-  adrenaline. Talking to a rubber duck just didn't work, the duck was clearly
-  every bit as bored as I was. Consequently the first time I gave a talk, I was
-  hazy as to how long it would take. Yet with Expansion Joints in place, I was
-  able to finish a talk right on time.Expansion Joints enabled me to give the same talk
-  to different time slots. Sometimes I'd have thirty minutes, sometimes
-  forty-five. With Expansion Joints, I didn't need to change my slides,
-  particularly handy if a time cut (or more rarely a time increase) appeared at the
-  last moment. (Although in my later years, I handled this by doing a Suite Of Talks.)Talks that encourage audience interaction need these because we can never
-  predict how much time the interaction will use up. Sometimes we get a steady
-  stream of questions, other times (particularly in Scandinavia, or
-  upper-Midwest America) a lack of questions had me blasting through the agenda.
-  Any such talk needed a double-dose of this temporal ballast.Expansion Joints are at their most useful in later parts of the talk, as
-  it's then that I have the most information on how much time I have. Earlier
-  ones can still be handy, particularly if they come after an interactive
-  section when I'd like to rebase my timing.The name was coined by Neal Ford, Matthew McCullough, and Nathaniel
-    Schutta in their excellent book Presentation Patterns.]]></content:encoded></item><item><title>Learning web development: Arrays in JavaScript</title><link>https://2ality.com/2025/08/javascript-arrays.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In this chapter we look at one way of storing more than one value in a variable: .]]></content:encoded></item><item><title>Learning web development: Strings and methods in JavaScript</title><link>https://2ality.com/2025/08/javascript-strings-methods.html</link><author>Dr. Axel Rauschmayer</author><category>dev</category><category>frontend</category><category>blog</category><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><source url="https://feeds.feedburner.com/2ality">Axel Raushmayer</source><content:encoded><![CDATA[In the last chapter, we worked with numbers. In this chapter, we’ll work with text and write our first applications.]]></content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blog</title><link>https://www.awesome-dev.news</link><description></description><item><title>Friday Squid Blogging: Squid Camouflage</title><link>https://www.schneier.com/blog/archives/2025/12/friday-squid-blogging-squid-camouflage.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 26 Dec 2025 22:08:17 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[ Coleoid cephalopods have the most elaborate camouflage system in the animal kingdom. This enables them to hide from or deceive both predators and prey. Most studies have focused on benthic species of octopus and cuttlefish, while studies on squid focused mainly on the chromatophore system for communication. Camouflage adaptations to the substrate while moving has been recently described in the semi-pelagic oval squid (). Our current study focuses on the same squid’s complex camouflage to substrate in a stationary, motionless position. We observed disruptive, uniform, and mottled chromatic body patterns, and we identified a threshold of contrast between dark and light chromatic components that simplifies the identification of disruptive chromatic body pattern. We found that arm postural components are related to the squid position in the environment, either sitting directly on the substrate or hovering just few centimeters above the substrate. Several of these context-dependent body patterns have not yet been observed in  species complex or other loliginid squids. The remarkable ability of this squid to display camouflage elements similar to those of benthic octopus and cuttlefish species might have convergently evolved in relation to their native coastal habitat.As usual, you can also use this squid post to talk about the security stories in the news that I haven’t covered.]]></content:encoded></item><item><title>IoT Hack</title><link>https://www.schneier.com/blog/archives/2025/12/iot-hack.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Fri, 26 Dec 2025 12:02:54 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Someone hacked an Italian ferry.It looks like the malware was installed by someone on the ferry, and not remotely.]]></content:encoded></item><item><title>Urban VPN Proxy Surreptitiously Intercepts AI Chats</title><link>https://www.schneier.com/blog/archives/2025/12/urban-vpn-proxy-surreptitiously-intercepts-ai-chats.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Wed, 24 Dec 2025 12:03:03 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[Urban VPN Proxy targets conversations across ten AI platforms: ChatGPT, Claude, Gemini, Microsoft Copilot, Perplexity, DeepSeek, Grok (xAI), Meta AI.For each platform, the extension includes a dedicated “executor” script designed to intercept and capture conversations. The harvesting is enabled by default through hardcoded flags in the extension’s configuration.There is no user-facing toggle to disable this. The only way to stop the data collection is to uninstall the extension entirely.The data collection operates independently of the VPN functionality. Whether the VPN is connected or not, the harvesting runs continuously in the background.Every prompt you send to the AI
+Every response you receiveConversation identifiers and timestamps
+The specific AI platform and model used
+]]></content:encoded></item><item><title>Denmark Accuses Russia of Conducting Two Cyberattacks</title><link>https://www.schneier.com/blog/archives/2025/12/denmark-accuses-russia-of-conducting-two-cyberattacks.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Tue, 23 Dec 2025 12:02:32 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[The Danish Defence Intelligence Service (DDIS) announced on Thursday that Moscow was behind a cyber-attack on a Danish water utility in 2024 and a series of distributed denial-of-service (DDoS) attacks on Danish websites in the lead-up to the municipal and regional council elections in November.The first, it said, was carried out by the pro-Russian group known as Z-Pentest and the second by NoName057(16), which has links to the Russian state.]]></content:encoded></item><item><title>Static Allocation For Compilers</title><link>https://matklad.github.io/2025/12/23/static-allocation-compilers.html</link><author>Alex Kladov</author><category>dev</category><category>rust</category><category>blog</category><pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate><source url="https://matklad.github.io/">Matklad blog</source><content:encoded><![CDATA[TigerBeetle famously
+uses “static allocation”.
+Infamously, the use of the term is idiosyncratic: what is meant is  arrays, as found
+in embedded development, but rather a weaker “no allocation after startup” form. The amount of
+memory TigerBeetle process uses is not hard-coded into the Elf binary. It depends on the runtime
+command line arguments. However, all allocation happens at startup, and there’s no deallocation. The
+long-lived event loop goes round and round happily without .I’ve wondered for years if a similar technique is applicable to compilers. It seemed impossible, but
+today I’ve managed to extract something actionable from this idea?Static allocation depends on the physics of the underlying problem. And distributed databases have
+surprisingly simple physics, at least in the case of TigerBeetle.The only inputs and outputs of the system are messages. Each message is finite in size (1MiB). The
+actual data of the system is stored on disk and can be arbitrarily large. But the diff applied by a
+single message is finite. And, if your input is finite, and your output is finite, it’s actually
+quite hard to need to allocate extra memory!This is worth emphasizing — it might seem like doing static allocation is tough and requires
+constant vigilance and manual accounting for resources. In practice, I learned that it is
+surprisingly compositional. As long as inputs and outputs of a system are finite, non-allocating
+processing is easy. And you can put two such systems together without much trouble.
+routing.zig is a good
+example of such an isolated subsystem.The only issue here is that there isn’t a physical limit on how many messages can arrive at the same
+time. Obviously, you can’t process arbitrary many messages simultaneously. But in  the context of a
+distributed system over an unreliable network, a safe move is to drop a message on the floor if the
+required processing resources are not available.Counter-intuitively, not allocating is simpler than allocating, provided that you can pull it off!Alas, it seems impossible to pull it off for compilers. You  say something like “hey, the
+largest program will have at most one million functions”, but that will lead to both wasted memory
+and poor user experience. You  also use a single yolo arena of a fixed size, like I did in
+, but that isn’t at all
+similar to “static allocation”. With arenas, the size is fixed explicitly, but you can OOM. With
+static allocation it is the opposite — no OOM, but you don’t know how much memory you’ll need
+until startup finishes!The “problem size” for a compiler isn’t fixed — both the input (source code) and the output
+(executable) can be arbitrarily large. But that is  the case for TigerBeetle — the size of
+the database is not fixed, it’s just that TigerBeetle gets to cheat and store it on disk, rather
+than in RAM. And TigerBeetle doesn’t do “static allocation” on disk, it can fail with  at
+runtime, and it includes a dynamic block allocator to avoid that as long as possible by re-using no
+longer relevant sectors.So what we could say is that a compiler consumes arbitrarily large input, and produces arbitrarily
+large output, but those “do not count” for the purpose of static memory allocation. At the start, we
+set aside an “output arena” for storing finished, immutable results of compiler’s work. We then say
+that this output is accumulated after processing a sequence of chunks, where chunk size is strictly
+finite.  While limiting the total size of the code-base is unreasonable, limiting a single file to,
+say, 4 MiB (runtime-overridable) is fine. Compiling then essentially becomes a “stream processing”
+problem, where both inputs and outputs are arbitrary large, but the filter program itself must
+execute in O(1) memory.With this setup, it is natural to use indexes rather than pointers for “output data”, which then
+makes it easy to persist it to disk between changes. And it’s also natural to think about “chunks of
+changes” not only spatially (compiler sees a new file), but also temporally (compiler sees a new
+version of an old file).Is there any practical benefits here? I don’t know! But seems worth playing around with! I feel that
+a strict separation between O(N) compiler output and O(1) intermediate processing artifacts can
+clarify compiler’s architecture, and I won’t be too surprised if O(1) processing in compilers would
+lead to simpler code the same way it does for databases?]]></content:encoded></item><item><title>Newtype Index Pattern In Zig</title><link>https://matklad.github.io/2025/12/23/zig-newtype-index-pattern.html</link><author>Alex Kladov</author><category>dev</category><category>rust</category><category>blog</category><pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate><source url="https://matklad.github.io/">Matklad blog</source><content:encoded><![CDATA[In efficiency-minded code, it is idiomatic to use indexes rather than pointers. Indexes have several
+advantages:, they save memory. Typically a 32-bit index is enough, a saving of four bytes per pointer on
+64-bit architectures. I haven’t seen this measured, but my gut feeling is that this is much more
+impactful than it might initially seem. On modern architectures, saving memory saves time (and
+energy) as well, because the computing bottleneck is often the bit pipe between the memory and the
+CPU, not the computation per se. Dense data structures use CPU cache more efficiently, removing
+prohibitive latency of memory accesses. Bandwidth savings are even better: smaller item size
+obviously improves bandwidth utilization, but having more items in cache obviates the need to use
+the bandwidth in the first place. Best case, the working set fits into the CPU cache!Note well that memory savings are evenly spread out. Using indexes makes every data structure
+slightly more compact, which improves performance across the board, regardless of hotspot
+distribution. It’s hard to notice a potential for such saving in a profiler, and even harder to test
+out. For these two reasons, I would default to indexes for code where speed matters, even when I
+don’t have the code written yet to profile it!There’s also a more subtle way in which indexes save memory. Using indexes means storing multiple
+items in an array, but such dense storage contains extra information in relative positions of the
+items. If you need to store a list of items, you can often avoid materializing the list of indexes
+by storing a range “pointing” into the shared storage. Occasionally, you can even do UTF-8 trick and
+use just a single bit to mark the end of a list. benefit of indexes is more natural modeling of cyclic and recursive data structures.
+Creating a cycle fundamentally requires mutability somewhere (“tying the knot” in Haskell relies on
+mutability of lazy thunks). This means that you need to make some pointers nullable, and that
+usually gets awkward even without borrow checker behind your back. Even without cycles and just
+recursion, pointers are problematic, due to a combination of two effects:
+pointers encourage recursive functions, and
+
+recursive data structures lead to arbitrary long (but finite) chains of pointers.
+The combination works fine at small scale, but then it fails with stack overflow in production every
+single time, requiring awkward work-arounds. For example,  serializes error traces from
+nested macro expansions as a deeply nested tree of JSON objects, which requires using
+stacker hack when parsing the output (which you’ll learn
+about only  crashes in the hands of macro connoisseur users)., indexes greatly help serialization, they make it trivial to communicate data structures
+both through space (sending a network message) and time (saving to disk and reading later). Indexes
+are naturally relocatable, it doesn’t matter where in memory they are. But this is just a half of
+serialization benefit. The other is that, because everything is in few arrays, you can do bulk
+serialization. You don’t need to write the items one by one, you can directly  arrays around
+(but be careful to not leak data via padding, and be sure to checksum the result).The big problem with “naive”  indexes is of course using the right index with the wrong array,
+or vice verse. The standard solution here is to introduce a newtype wrapper around the raw index.
+@andrewrk recently popularized a nice “happy accident of language
+design” pattern for this in Zig. The core idea is to define an index via non-exhaustive :In Zig,  designates a strongly-typed collection of integer constants, not a Rust-style ADT
+(there’s  for that). By default an backing integer type is chosen by the compiler, but
+you can manually override it with  syntax:Finally, Zig allows making enums non-exhaustive with . In a non-exhaustive enum, any numeric
+value is valid, and some have symbolic labels:is a way to spell “, but a distinct type”. Note that there’s no  encapsulation
+boundary here, anyone can . Zig just doesn’t provide language-enforced encapsulation
+mechanisms.Putting everything together, this is how I would model n-ary tree with parent pointers in Zig:
+As usual with indexes, you start with defining the collective noun first, a  rather than a
+.
+
+In my experience, you usually don’t want  suffix in your index types, so  is just
+, not the underlying data.
+
+Nested types are good!  feels just right.
+
+For readability, the order is fields, then nested types, then functions.
+
+In , we have a couple of symbolic constants.  is for the root node that is stored
+first,  for whenever we want to apply offensive programing and make bad indexes blow up.
+Here, we use  for “null” parent. An alternative would be to use , but that would
+waste of space, or making the root its own parent.
+
+If you care about performance, its a good idea to  sizes of structures, not to
+prevent changes, but as a comment that explains to the reader just how the large the struct is.
+
+I don’t know if I like  or  more for representing ranges, but I use the
+former just because the names align in length.
+
+Both  and  are reasonable shapes for the API. I don’t know
+which one I prefer more. I default to the former because it works even if there are several node
+arguments.
+]]></content:encoded></item><item><title>Microsoft Is Finally Killing RC4</title><link>https://www.schneier.com/blog/archives/2025/12/microsoft-is-finally-killing-rc4.html</link><author>Bruce Schneier</author><category>infosec</category><category>blog</category><pubDate>Mon, 22 Dec 2025 17:05:09 +0000</pubDate><source url="https://www.schneier.com/">Schneider on Security</source><content:encoded><![CDATA[After twenty-six years, Microsoft is finally upgrading the last remaining instance of the encryption algorithm RC4 in Windows.of the most visible holdouts in supporting RC4 has been Microsoft. Eventually, Microsoft upgraded Active Directory to support the much more secure AES encryption standard. But by default, Windows servers have continued to respond to RC4-based authentication requests and return an RC4-based response. The RC4 fallback has been a favorite weakness hackers have exploited to compromise enterprise networks. Use of RC4 played a key role in last year’s breach of health giant Ascension. The breach caused life-threatening disruptions at 140 hospitals and put the medical records of 5.6 million patients into the hands of the attackers. US Senator Ron Wyden (D-Ore.) in September called on the Federal Trade Commission to investigate Microsoft for “gross cybersecurity negligence,” citing the continued default support for RC4.Last week, Microsoft said it was finally deprecating RC4 and cited its susceptibility to Kerberoasting, the form of attack, known since 2014, that was the root cause of the initial intrusion into Ascension’s network.Fun fact: RC4 was a trade secret until I published the algorithm in the second edition of  in 1995.]]></content:encoded></item><item><title>That mockingbird won&apos;t sing: a mock API server in Rust</title><link>https://bitfieldconsulting.com/posts/mockingbird-wont-sing</link><author>John Arundel</author><category>dev</category><category>blog</category><category>go</category><pubDate>Mon, 22 Dec 2025 12:29:00 +0000</pubDate><source url="https://bitfieldconsulting.com/posts/">Bitfield</source><content:encoded><![CDATA[Faking it till you make it isn’t always the best strategy in life,
+but it can be a useful one in software engineering. In A hard rain’s a-gonna fall, we
+wrote some Rust code that sends requests to the Weatherstack API, and
+decodes its responses. So, how happy are we about the correctness of
+that code?We’ve put it all into a magic function named
+, and we call it like this:It looks believable, sure, and it does work. But I sense you might
+still be feeling a little bit unconvinced about the way we so glibly
+finessed testing .We said, if you remember, that we couldn’t test 
+function because we don’t know what weather conditions the real API will
+return: that depends on what the weather  when we run the
+test!So, in Elephants for
+breakfast we decided to break up  into two
+smaller functions, each with its own test. Then we rewrote the
+ function to use these two subcomponents.On reflection, though, can we really be confident that
+ works properly? I mean, it 
+correct:Also, when we run the real program, it does successfully call
+Weatherstack and produce believable results. So there can’t be
+ much wrong with . Can there?If you’ve read my book The Secrets of
+Rust: Tools, you’ll have noticed that there’s a strong emphasis on
+testing all the way through. We use tests as a thinking tool, a design
+tool, and of course to check that our code works properly (and continues
+to work, even when we fiddle with it over time).It’s great to have tests, so doesn’t it feel like a bit of a step
+backwards now to be writing a function without one? It does to me. Let’s
+dig into that a little.Sometimes manual testing and inspection is good enough, but it’s
+worth taking a minute or two to think about what might still be missing
+here.When I’m wondering how to test something, I usually ask a question
+like “What could be wrong?” What bugs could there be in
+ that we wouldn’t detect with the individual
+tests for  and ?Well, one obvious one is that we might have forgotten to call
+ or ! Even the world’s
+greatest and best-tested functions are no use if you don’t call
+them.Also, we could imagine ways in which we might call them wrongly. For
+example, we could accidentally write:Rust will absolutely not stop us doing this, because both parameters
+are , so it’s fine—syntactically—to swap them
+around. We’ll end up with the wrong request, and the call to
+Weatherstack certainly won’t work, but our existing unit tests won’t
+detect this problem at all. After all,  call the functions
+correctly, but they can’t validate that  functions do
+so.Similarly, we could call  with the wrong
+argument, or forget to return its result, or make any number of other
+silly mistakes which nevertheless are bound to happen in a big enough
+codebase, in a big enough team, or over a long enough span of time.Why don’t we want
+to make API calls in tests?So I completely sympathise with your unhappiness about the current
+approach to testing . Can’t we do better?
+Ideally, we’d like to test this function the same way we’d test any
+other function: by calling it. So what’s the problem with that?One problem we identified earlier is that we don’t know exactly what
+weather conditions the API will return, but that’s not the only thing
+stopping us. We also don’t really want to make HTTP calls to external
+servers as part of our tests, because that’s awfully slow (relatively
+speaking). Okay, one call won’t break the bank, but it’s not an approach
+that would work well in large test suites with lots of dependent
+services and endpoints.We want our tests to be fast, but even more importantly, we want them
+to be reliable, and the internet just isn’t reliable in general. We
+might not be in range of a WiFi or cellular connection, or that
+connection might be slow and flaky, or insecure (we’re passing our
+secret API key over the wire, after all). Even if everything at our end
+is working perfectly, Weatherstack  might be down, or
+slow, or faulty.And it doesn’t make sense that our tests would fail in that case,
+because as long as our  is correct, the tests should always
+pass.A fake server using
+So we want to call , but we don’t want to
+make a request to the real Weatherstack API. Thinking about it, though,
+what are we really testing here? Is it critical that
+ makes its request to 
+specifically, or would any HTTP server do?As long as it returns the kind of JSON data we expect, in fact, any
+server would do. What’s to stop us setting up our  local
+HTTP server, pointing  at it, and having it
+return some canned JSON we prepared earlier—for example, the data we’re
+already using in the  test?There’s nothing at all to stop us doing this, and it sounds like a
+good idea. In fact, there’s a crate for exactly this:The  crate makes it easy to set up a simple HTTP
+server for tests, with a local URL on a random port, and configure it to
+respond to various types of requests.This pattern is sometimes called a test “double” or “fake”, though
+it’s not, strictly speaking, a fake. It’s a real : it’s
+just not the Weatherstack server. It emulates, or “mocks” a subset of
+the API server’s behaviour so that we can test our code against it.We’ll also want the  crate, which gives us some
+handy status code constants to test against, like
+:Let’s first see if we can use this to test a simple GET request, with
+no parameters, and respond with a “hello” message:To create the test server, we call .
+We now have a working HTTP server listening on a random local port, but
+it’s not very useful yet, because it responds to every request with “404
+Not Found”.Configuring routes on the
+mock serverTo fix that, we’ll tell the mock server how to respond to certain
+requests:We’re saying  you receive any GET request, no matter
+what the path,  send a response whose status is OK, and
+whose body is the string “hello”. Ignore all other requests (or rather,
+continue to respond to them with “404 Not Found”).So, let’s make that request and see what happens:How do we know what URL to make the request to? The server itself
+tells us, when we call .Now we have a response that we can check to see if it’s what it
+should be:That was a good confidence builder. We think we should now be able to
+extend this to a more complicated mock server that can check its query
+parameters, and respond with data from a file instead of a string
+literal. Here goes:Again, we start the mock server and use its  method
+to tell it what kind of request to expect (“GET /current”) and what
+parameters the query should have.When the server gets this request, it should respond with OK status,
+a “Content-Type” header of  (meaning that
+the body will contain JSON data), and the data itself from our test
+file.This looks good, and now we’re ready to call
+. But there’s a problem:Where do we pass in the mock server’s URL? I mean,
+ doesn’t take any other parameters, and if we
+don’t do something it will just go ahead and call the real Weatherstack
+API, which we don’t want. We need some way for the test to
+ this extra information into the client code.What’s the right way to solve this problem? You might like to have a
+think about it. Let’s look at one wrong answer first:I mean, no? This  function is out of control
+with all the paperwork we’re forced to pass to it. An abstraction is
+supposed to conceal things, but the machinery is dangerously exposed
+here.We’ve made this function slightly easier to test by adding the URL
+parameter, but as a result we’ve actually made it  for
+real users, who now have to write:Why should  have to tell us the Weatherstack API URL?
+Shouldn’t we already know? This just seems weird and unnecessary, and
+indeed it is.I don’t mean to sound ungrateful to , which is
+terrific. It’s very handy for us to be able to create a mock server to
+test against. But if we had to make our API worse in order to use it,
+that would be a shame.What we’d  is for our  function
+to use the real API by default, so that users don’t have to pass the
+Weatherstack URL when calling the function for real. But we’d also like
+to be able to tell it the URL of our mock server when we call it in
+tests. So how would  work?As usual, this slightly contrived cliffhanger will be resolved in the
+next post. Don’t miss it!]]></content:encoded></item></channel></rss>
