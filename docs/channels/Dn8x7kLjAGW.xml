@@ -1,38 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Modern X86 Assembly Language Programming • Daniel Kusswurm &amp; Matt Godbolt</title><link>https://www.youtube.com/watch?v=1GfPBqyGWmw</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1GfPBqyGWmw?version=3" length="" type=""/><pubDate>Fri, 16 Jan 2026 13:24:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
 http://gotopia.tech/bookclub
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Check out more here:
+https://gotopia.tech/episodes/411
+
+Daniel Kusswurm - SW Developer, Computer Scientist & Author of "Modern X86 Assembly Language Programming" & many more books
+Matt Godbolt - Low-level Latency Geek & Creator of Compiler Explorer
 
 RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
+Matt
+https://bsky.app/profile/matt.godbolt.org
+https://xania.org
+https://github.com/mattgodbolt
+https://www.linkedin.com/in/godbolt
+https://twitter.com/mattgodbolt
+https://godbolt.org
 
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
+Links
+https://link.springer.com
+https://youtu.be/L2Qu9rk05rE
+https://youtu.be/-HNpim5x-IE
+https://youtu.be/hgcNM-6wr34
 
 DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
-
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+Matt Godbolt, creator of Compiler Explorer, interviews Daniel Kusswurm, author of "Modern X86 Assembly Language Programming", about the enduring relevance of assembly language in modern software development. They explore what SIMD (Single Instruction, Multiple Data) is and why it enables dramatic performance improvements for specific computational tasks, discuss when assembly language programming is justified versus using compiler intrinsics, and examine the challenges of writing vectorized algorithms. Dan shares insights from his career optimizing image analysis software and explains how understanding low-level architecture can improve code quality even when writing in higher-level languages.
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Daniel Kusswurm • Modern X86 Assembly Language Programming v3 • https://amzn.to/44hIVZf
+Daniel Kusswurm • Modern X86 Assembly Language Programming v2 • https://amzn.to/3LJlMIZ
+Daniel Kusswurm • Modern X86 Assembly Language Programming v1 • https://amzn.to/43DPANj
+Daniel Kusswurm • Modern Arm Assembly Language Programming • https://amzn.to/4rbyH6M
+Daniel Kusswurm • Practical C++ STL Programming • https://amzn.to/4ickAdq
+Daniel Kusswurm • Modern Parallel Programming with C++ and Assembly Language • https://amzn.to/4o5J3SF
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +47,65 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Spring Then &amp; Now: What’s Next? • Rod Johnson, Arjen Poutsma &amp; Trisha Gee • GOTO 2025</title><link>https://www.youtube.com/watch?v=04WwkBc6cZ8</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/04WwkBc6cZ8?version=3" length="" type=""/><pubDate>Thu, 15 Jan 2026 13:00:03 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This conversation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph
 https://gotocph.com
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
-James Lewis - Software Architect & Director at Thoughtworks
+Rod Johnson - Building the future of agent frameworks at Embabel
+Arjen Poutsma - Practical Insights from a Spring Framework Veteran @apoutsma 
+Trisha Gee - Award-winning Engineer, Author and PC Member @TrishaGee 
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Rod
+https://twitter.com/springrod
+https://github.com/johnsonr
+https://www.linkedin.com/in/johnsonroda
+https://the-composition.com/@springrod
 
-James
-https://bsky.app/profile/boicy.bovon.org
-https://linkedin.com/in/james-lewis-microservices
-https://github.com/boicy
-https://www.bovon.org
+Arjen
+https://bsky.app/profile/poutsma.bsky.social
+https://fosstodon.org/@poutsma
+https://github.com/poutsma
+https://www.linkedin.com/in/arjen-poutsma-288ba6
+
+Trisha
+https://bsky.app/profile/trishagee.bsky.social
+https://twitter.com/trisha_gee
+https://github.com/trishagee
+https://www.linkedin.com/in/trishagee
+https://trishagee.com
+
+ABSTRACT
+Ask me anything.
 
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
+01:04 RestTemplate deprecation & the new Rest Client
+02:25 From XML to annotation‑driven Spring configuration 
+06:11 Reactive support – current status & future outlook
+08:20 Impact of modern Java concurrency (virtual threads, records)
+15:45 Low‑code / no‑code debate – will Java remain “code-romantic”?
+21:10 Modular vs Microservice architectures
+26:52 Kotlin vs Java – When to Choose Each Language
+32:18 AI skills needed for enterprise Java developers
+40:10 Spring security integration for data access control
+44:00 Wrap‑up & closing remarks
 
 Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+https://gotocph.com/2025/sessions/3927
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Rod Johnson • Expert One-On-One J2Ee Design and Development • https://amzn.to/48oCxAJ
+Johnson, Höller, Arendsen, Risbert & Sampaleanu • Professional Java Development with the Spring Framework • https://amzn.to/44J4SRb
+Trisha Gee & Helen Scott • Getting to Know IntelliJ IDEA • https://amzn.to/3ZBgnGc
+Kevlin Henney & Trisha Gee • 97 Things Every Java Programmer Should Know • https://amzn.to/3kiTwJJ
+Trisha Gee, Kathy Sierra & Bert Bates • Head First Java • https://amzn.to/3k59BJ6
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#SpringAI #GenAI #JVM #JavaAI #JavaProgramming #Embabel #PromptEngineering #EnterpriseAI #LLM #TodayInTech #TodayInTech #Programming #SoftwareEngineering #RodJohnson #ArjenPoutsma #TrishaGee #Kotlin #GOTO
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,66 +116,73 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Git Works Internally</title><link>https://blog.algomaster.io/p/how-git-works-internally</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!LSMI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8363fed-dc7e-4f8b-bf3f-756841964c63_685x532.png" length="" type=""/><pubDate>Thu, 15 Jan 2026 10:03:30 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Most of us treat Git like a black box: memorize a few commands like , , and , copy-paste the rest, and hope nothing breaks.But what actually happens when you run these commands? Where do your files go?How does Git track every change you have ever made without consuming gigabytes of storage?Understanding Git’s internals helps you reason about your changes, debug issues faster, and use Git as the powerful tool it was designed to be.In this article, we will explore:What Git really is under the hoodGit’s object model: blobs, trees, and commitsHow Git uses SHA-1 hashes to store and address dataThe three areas: working directory, staging area, and repositoryHow commits, branches, merges and rebases actually workHow Git keeps repositories smallGit is a distributed version control system created by Linus Torvalds in 2005 for Linux kernel development.Older tools like  and  use a  model: one server holds the source of truth, and developers pull from and push to that central machine.Git flips this model. In Git, every developer has a full copy of the repository, including the entire history.This distributed setup gives Git a few key advantages:Work offline with full historyNo single point of failureFaster operations because most work happens locallyFlexible workflows for teams and individualsBut how does Git store the full history without the repo becoming huge? To answer that, you need to understand the .At its core, Git is a content-addressable filesystem. It stores data as , and each object is identified by a  of its contents.When you add a file to Git, it computes a 40-character hexadecimal SHA-1 hash of the file’s contents. This hash becomes the file’s unique address in Git’s database.File contents: "Hello, World!"
+SHA-1 hash:    5dd01c177f5d7d1be5346a5bc18a569a7410c2efSame content always produces the same hash. So two files with identical contents (even if they have different names) share the same hash. Git stores the content  and references it , which helps repositories stay compact even across thousands of commits.Git organizes everything into  stored in its database. There are four types of objects, but three are essential for understanding how Git works: blobs, trees, and commits.Blobs: Storing File ContentsA  (binary large object) stores the raw contents of a file. Just the contents. No filename, no permissions, no timestamps, no metadata of any kind.When you add  to Git, it creates a blob containing the file’s text. That blob has no idea it came from a file called . It is simply a chunk of bytes with a SHA-1 hash computed from those bytes.Why separate content from filename?If the same config file is copied to three locations, a naive system stores three copies. Git stores  and references it , and these storage savings compound across the project’s history.Of course, if blobs do not store filenames, Git still needs a way to represent folder structure. That is the job of .Trees: Mapping Directory StructureA  represents a . It contains pointers to blobs (files) and other trees (subdirectories), along with filenames and permissions.Tree: 4c5f8a2b9d3e7f1a6b0c8d5e2f9a4b7c3d6e0f1a
+├── README.md      -> blob 5dd01c17...  (100644)
+├── src/           -> tree 8a3b2c1d...
+└── package.json   -> blob 7f2e3d4c...  (100644)The tree acts as a directory listing. It says “there is a file called README.md, and its contents are stored in blob 5dd01c17.” The blob stores the data; the tree gives it a name and location.If you rename a file without changing its contents, Git creates a new tree (with the new filename) pointing to the same blob. The actual file data is not duplicated.Now we have blobs for content and trees for structure. But version control needs more: who made changes, when, and why. That is what  provide.Commits: Recording HistoryA  captures a complete snapshot of your project at a specific moment in time. Every commit contains:A pointer to a tree (the root directory at that moment)Pointers to parent commits (the history leading to this point)Author information (who wrote the changes)Committer information (who applied the changes)A commit message explaining the changesCommit: abc123def456...
+  tree:      def456...
+  parent:    789012...
+  author:    John <john@example.com> 1699900000 +0000
+  committer: John <john@example.com> 1699900000 +0000
+
+  Add login featureWhen you run , Git creates a new commit object. This commit points to a tree representing your project’s current state. The parent pointer links back to the previous commit, forming a chain. This chain is your project’s history.The  is what makes Git a version control system rather than just a filesystem. By following parent pointers backward, Git can reconstruct any previous state of your project.The following diagram shows how a complete snapshot looks in Git’s object model:With blobs, trees, and commits, Git has everything it needs to store and track your project. But where do these objects actually live?When you run , Git creates the  directory with this structure:.git/
+├── HEAD              (contains: ref: refs/heads/main)
+├── config            (repository configuration)
+├── description       (used by GitWeb, rarely relevant)
+├── hooks/            (scripts triggered by Git events)
+├── info/             (exclude patterns, other info)
+├── objects/          (the object database, initially empty)
+│   ├── info/
+│   └── pack/
+└── refs/             (references to commits)
+    ├── heads/        (branch pointers, initially empty)
+    └── tags/         (tag pointers)All Git objects live inside your repository’s  directory.Git uses a simple organization scheme: the first two characters of an object’s hash become a subdirectory name, and the remaining 38 characters become the filename..git/objects/
+├── 5d/
+│   └── d01c177f5d7d1be5346a5bc18a569a7410c2ef  (blob)
+├── 4c/
+│   └── 5f8a2b9d3e7f1a6b0c8d5e2f9a4b7c3d6e0f1a  (tree)
+├── a1/
+│   └── b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0  (commit)
+└── ...This two-character prefix prevents any single directory from containing too many files, which could slow down filesystem operations.Before writing an object to disk, Git also . A 1MB source file might shrink to ~100KB or less. Combine that with content-addressable deduplication (identical content stored once), and Git repositories stay surprisingly small even with long histories.Inspecting Objects DirectlyGit provides low-level commands to examine objects. These “plumbing” commands reveal what is happening under the hood:# Determine an object's type (blob, tree, commit, or tag)
+git cat-file -t 5dd01c17
+
+# Display an object's contents
+git cat-file -p 5dd01c17
+
+# Examine what a commit contains
+git cat-file -p HEADTry running  in a repository. You will see the tree pointer, parent pointer, author information, and commit message. Then run  on that tree hash to see the directory listing.Objects explain how Git stores data, but they do not yet explain the day-to-day workflow. When you edit a file, stage it, and commit, you move data through three distinct areas. Let’s look at those next.Git organizes your work into three separate areas. Understanding these areas is the key to understanding why Git commands behave the way they do.Working Directory: Your WorkspaceThe  is what you see in your file explorer. These are actual files on your filesystem that you open in your editor, modify, and save.The working directory is not Git. It is simply a checkout of one particular version of your project. Git can delete it and recreate it from any commit in seconds.This is why you can switch branches instantly, even in large projects. Git is not moving files around; it is regenerating the working directory from its object database.The  (also called the ) lives in a single file at . It represents the exact snapshot of what your  will contain.When you run , Git does two things:Creates a blob object from the file’s current contents (or reuses an existing blob if the contents match)Updates the index to associate the filename with that blob’s hashThink of the staging area as a draft of your next commit. You can add files to it incrementally, remove files from it, and review exactly what is staged before committing. This gives you precise control over what goes into each commit.# See what is staged versus what is modified
+git status
+
+# See the actual diff of staged changes
+git diff --staged
+
+# Remove a file from staging (keep the working directory change)
+git restore --staged README.mdWhy have a staging area at all?Imagine you changed five files. Three are part of a bug fix, and two are unrelated cleanup. Without staging, you either commit everything together or do awkward manual juggling. With staging, you commit the bug fix first, then commit the cleanup separately. Your history stays clean and easy to follow.Repository: The Source of TruthThe  is the  directory. It contains everything: the object database (all blobs, trees, commits), references (branches, tags), configuration, hooks, and more.When you run , Git:Creates a tree object from the current indexCreates a commit object pointing to that tree, with the current HEAD as parentUpdates the current branch to point to this new commitThe repository is the source of truth for your project. The working directory and staging area are just convenient views into it. If you delete your working directory but keep , you can restore everything. If you delete , your history is gone.Now that we understand where data lives, let’s understand what actually happens when you commit files.A Git commit is not a “bundle of changes.” It is a  of your project at a moment in time, plus a pointer to its parent commit(s).Let’s trace what Git creates as you commit.Creating Your First Commitecho "Hello" > hello.txt
+git add hello.txt
+git commit -m "Initial commit"At this point, Git writes :: the contents of  (): a directory listing that maps  to that blob (and stores file mode like ): points to the tree and stores metadata (author, timestamp, message)The commit does not contain file contents directly. It contains a pointer to the root tree, and the tree points to blobs.Now change the file and commit again:echo "World" >> hello.txt
+git commit -am "Add world" has new content, so Git creates a  for the new contents.Because the file now points to a different blob, Git creates a .Git creates a  pointing to that new tree, and sets its  to the previous commit.Notice what did not happen:Git did not modify Blob A.Git did not overwrite Tree A.Git did not “update” Commit A.Git objects are effectively immutable. New state means new objects, while unchanged objects are reused.Also notice the storage efficiency: even though commits are “snapshots,” Git is not duplicating everything each time. Only objects that changed are new. Everything else is referenced again.A common misconception is that Git stores  between commits, like:Commit 1 + Diff -> Commit 2 + Diff -> Commit 3 ...That is not how Git works.Each commit points to a treeThat tree represents the full directory state at that momentGit computes diffs only when you ask for them (for example , , PR views)So the internal model is closer to this:Snapshot (Tree) A  -> Commit A
+Snapshot (Tree) B  -> Commit B
+Snapshot (Tree) C  -> Commit CThis is why operations like  are fast. Git does not replay every change from the beginning of time. It simply reads the tree for the commit you want and regenerates the working directory from that snapshot.Here is the fact that changes how you think about Git: a branch is just a pointer to a commit.That is the entire implementation. A branch is a small file containing a 40-character commit hash. The file for your  branch lives at ..git/refs/heads/main:    a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
+.git/refs/heads/feature: x9y8z7w6v5u4t3s2r1q0p9o8n7m6l5k4j3i2h1g0Creating a branch is nearly instantaneous because Git only creates a tiny file. There is no copying of files, no duplicating history. Just a 41-byte file (40 characters plus a newline) pointing to an existing commit.HEAD: Tracking Your Current Position is a special reference that tells Git where you are. In most cases, HEAD points to a branch name rather than directly to a commit:.git/HEAD: ref: refs/heads/mainThis means: “you are on .” Git resolves your current commit by following pointers:  →  → commit → tree → filesWhen you create a new branch using , Git creates  containing the current commit hash. No new commits, no copying.When you switch branches with , Git updates HEAD to point to , then regenerates your working directory and index to match that branch’s commit.Sometimes HEAD points directly to a commit hash instead of a branch name. This is called  state. It happens when you checkout a specific commit by its hash or checkout a tag. In this state, any new commits you create are not attached to a branch and can become “lost” if you switch away without creating a branch to preserve them.How Commits Advance BranchesWhen you create a new commit while on a branch, Git advances that branch pointer.The new commit (C4) has C3 as its parent. Then Git updates  to contain C4’s hash. HEAD still points to main, but main now points to the new commit.This pointer-based design explains why Git branching is so fast and cheap. There is no copying involved. Creating ten branches from the same commit means creating ten 41-byte files, all pointing to the same commit hash.But branches diverge. Different developers make different changes on different branches. Eventually, those branches need to come back together. Let’s see how merging works.Merging combines the work from two branches into one. Git handles merging differently depending on how the branches have diverged.Fast-Forward Merge: The Simple CaseThe simplest merge happens when the target branch has not moved since the source branch was created. In this case, Git performs a : it simply moves the target branch pointer forward to match the source branch.No new commit is created. Git just updates the main branch pointer from C2 to C3. Fast-forward merges are instant and create a linear history.Three-Way Merge: When Branches DivergeWhen both branches have new commits since they diverged, Git performs a . It needs three pieces of information:The : the common ancestor where the branches divergedThe : where your branch is now (ours)The : what you are merging in (theirs)Git compares both branch tips against the merge base to determine what changed on each side. Changes that only appear on one side are applied automatically. Changes that conflict (both sides modified the same lines) require manual resolution.The resulting merge commit (C4) has two parents: C2 from main and C3 from feature. This preserves the complete history of both branches. You can trace back through either parent to see exactly what work happened on each branch.When Git cannot automatically merge (the same lines were changed differently on both sides), it marks the conflicts in your files:<<<<<<< HEAD
+const timeout = 5000;
+=======
+const timeout = 10000;
+>>>>>>> featureEverything between  and  is from your current branch. Everything between  and  is from the branch being merged. You resolve the conflict by editing the file to contain what you actually want, removing the conflict markers, then staging and committing.Merging preserves the complete history of both branches, but it creates merge commits that can clutter the history. There is another way to integrate changes that results in a cleaner, linear history.Rebasing is an alternative to merging that rewrites history to create a linear sequence of commits. Instead of creating a merge commit that ties two branches together, rebase moves your commits to appear as if they were created on top of the target branch.When you run  while on a feature branch, Git:Finds the common ancestor of both branchesSaves the commits that are unique to your feature branchResets your branch to the tip of mainReplays your saved commits one by one on topNotice that F1 and F2 become F1' and F2' after rebasing. The prime marks indicate these are new commits with different hashes. Even though the changes are identical, the commits have different parent pointers, which means different SHA-1 hashes. The original commits still exist in the object database (and are recoverable via reflog) but are no longer reachable from any branch.So far, we have discussed “loose objects”: individual files in  named by their hash. This is simple and fast for writing new objects, but it does not scale perfectly.Two issues show up as a repo grows: thousands (or millions) of tiny files can slow down filesystems.Wasted space across versions: even though Git stores snapshots, many snapshots differ only slightly.Git solves both problems with .Instead of keeping every object as a separate file, Git periodically (during , , , or ) bundles many objects together into a pack:.git/objects/pack/
+├── pack-abc123def456.idx   (index for fast lookup)
+└── pack-abc123def456.pack  (compressed objects with deltas)The  file holds the actual compressed, delta-encoded data.The  file is an index that lets Git locate any object inside the pack quickly.This reduces file count dramatically and makes large repositories more efficient to store and transfer.When Git creates a pack, it applies three main optimizations:Git clusters related objects (for example, multiple versions of the same file) so it can compress them effectively.Instead of storing every version in full, Git stores one full version and then stores  (differences) for the others. Older versions can be reconstructed by applying deltas.The packed data is compressed (zlib), just like loose objects, but now Git can often compress even better because it is working with a larger, more structured dataset.The Impact on Repository SizeImagine a 1MB configuration file modified 100 times.Without packing, Git would store many full versions (each compressed, but still substantial). You might end up with something on the order of  or more across history.With packing, Git can store one full version plus small deltas for the other 99 versions. If each change touches only a few lines, each delta could be only a few kilobytes, so the total might be closer to .This is why repositories with years of history and thousands of commits can still clone in a reasonable size. Git is not shipping every full file version. It is shipping a compact representation built from packed objects and deltas.You usually do not need to trigger packing manually. Git does it for you: explicitly runs garbage collection and repacking /  /  often involve packing or repacking for efficient transferGit can also run GC automatically when loose objects grow past certain thresholdsYou rarely think about pack files day to day, but they are a big reason Git scales so well and why repository sizes are manageable despite storing complete history.Git is a content-addressable filesystem. Every piece of data is stored by its SHA-1 hash. Same content, same hash, stored once.Three object types matter. Blobs store file contents. Trees store directory structure. Commits store snapshots with history links.The three areas structure your workflow. Working directory for editing, staging area for drafting commits, repository for permanent storage.Branches are just pointers. A branch is a 41-byte file containing a commit hash. Creating branches is instant. Switching branches regenerates the working directory.Merging connects histories. Fast-forward when possible, three-way merge when branches diverge. Conflicts happen when the same lines change differently.Pack files keep Git efficient. Delta compression and grouping allow Git to store extensive history in surprisingly little space.If you found it valuable, hit a like ❤️ and consider subscribing for more such content every week.If you have any questions/suggestions, feel free to leave a comment.]]></content:encoded></item><item><title>@NathenHarvey about Unlocking the Secret to Faster, Safer Releases with DORA Metrics</title><link>https://www.youtube.com/shorts/7QqZnX6r5bk</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/7QqZnX6r5bk?version=3" length="" type=""/><pubDate>Wed, 14 Jan 2026 13:00:28 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #DORAMetrics #DORAReport #DORA2025 #DevOps #DORA #SoftwareDelivery #SpeedAndStability #DeploymentFrequency #RecoverySpeed #FailureRate #DeploymentRework #NathenHarvey #TodaInTech #Programming #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
 
 Full version available here:
-https://youtu.be/P_6eDL1aqtA
+https://youtu.be/_IKB4h9e4NA
 
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
-
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
-
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
-
-RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
-
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
-
-Links
-https://stripe.dev
-
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
-
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Nathen Harvey - DORA Lead, Product Manager at Google Cloud & Author @NathenHarvey 
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
+Emily Freeman & Nathen Harvey • 97 Things Every Cloud Engineer Should Know • https://amzn.to/3UlWBLt
+Nicole Forsgren, Jez Humble & Gene Kim • Accelerate • https://amzn.to/442Rep0
+Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook • https://amzn.to/47oAf3l
+Jez Humble & David Farley • Continuous Delivery • https://amzn.to/452ZRky
+
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
 https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
@@ -179,7 +192,50 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The AI Engineer&apos;s Guide to Surviving the EU AI Act • Larysa Visengeriyeva &amp; Barbara Lampl</title><link>https://www.youtube.com/watch?v=qv1771pMwSQ</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/qv1771pMwSQ?version=3" length="" type=""/><pubDate>Tue, 13 Jan 2026 13:22:06 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Check out more here:
+https://gotopia.tech/episodes/409
+
+Dr. Larysa Visengeriyeva - Author of "The AI Engineer’s Guide to Surviving the EU AI Act" & Independent Consultant for EU AI Act Engineering
+Barbara Lampl - Behavioral Mathematician at empathic business by Barbara Lampl
+
+RESOURCES
+Larysa
+https://x.com/visenger
+https://bsky.app/profile/visenger.bsky.social
+https://github.com/visenger
+https://www.linkedin.com/in/larysavisenger
+
+Barbara
+https://x.com/BarbaraLampl
+https://www.linkedin.com/in/barbaralampl
+https://barbara-lampl.tumblr.com
+
+Links
+https://ml-ops.org
+https://github.com/visenger/awesome-mlops
+https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
+https://machinelearningcanvas.com
+https://louisdorard.gumroad.com/l/mlcanvas
+https://ml-ops.org/content/crisp-ml
+
+DESCRIPTION
+Barbara Lampl interviews Larysa Visengeriyeva, software engineer and "godmother of MLOps", about her new book on AI engineering and compliance. What starts as a discussion about the EU AI Act quickly reveals a deeper truth: the real challenge isn't regulatory compliance - it's fundamental engineering practices.
+
+Larysa argues that quality AI systems require robust MLOps, comprehensive documentation, and proper data governance, whether regulation mandates it or not. Drawing from frameworks like CRISP-ML and the Machine Learning Canvas, the book provides practical checklists and methodologies for taking AI projects from prototype to production. Written partially in Ukraine during wartime, this "battle-tested" guide addresses the gap between technical and non-technical stakeholders, offering a common language for building sustainable AI systems.
+
+RECOMMENDED BOOKS
+Larysa Visengeriyeva • The AI Engineer's Guide to Surviving the EU AI Act • https://amzn.to/42SKOuU
+Lakshmanan, Robinson & Munn • Machine Learning Design Patterns • https://amzn.to/4ox4Eos
+Phil Winder • Reinforcement Learning • https://amzn.to/3t1S1VZ
+Diana Montalion • Learning Systems Thinking • https://amzn.to/3ZpycdJ
+Bernd Rücker • Practical Process Automation • https://amzn.to/3cs3BSH
+Lauren Maffeo • Designing Data Governance from the Ground Up • https://amzn.to/3QhIlnV
+Katharine Jarmul • Practical Data Privacy • https://amzn.to/46XPrns
+Zhamak Dehghani • Data Mesh • https://amzn.to/3tTCwAC
+Kate Stanley & Mickael Maison • Kafka Connect • https://amzn.to/40Jq5Jz
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +251,69 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>9 Lessons Learned from Deploying GenAI at Scale • Garth Gilmour &amp; Stuart Greenlees • GOTO 2025</title><link>https://www.youtube.com/watch?v=tRL2sRDg_DA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/tRL2sRDg_DA?version=3" length="" type=""/><pubDate>Mon, 12 Jan 2026 13:01:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph
+https://gotocph.com
 
-Andrew Browne - Solution Architect at Picnic Software
+Garth Gilmour - Technical Learning Consultant at Liberty IT @garthgilmourni 
+Stuart Greenlees - Senior Director of Technology at Liberty IT
+
+ORIGINAL TALK TITLE
+Leading 5000 Developers Into the Next Era of Software Engineering
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Garth
+https://twitter.com/GarthGilmour
+https://www.linkedin.com/in/garthgilmour
+https://medium.com/@garthgilmour
+https://github.com/garthgilmourni
+
+Stuart
+https://x.com/StuGreenlees
+https://www.linkedin.com/in/stuart-greenlees-704346a1
+
+ABSTRACT
+For the past two years Liberty Mutual has faced a challenge. How to exploit GenAI to make our 3000 engineers more productive without compromising quality, safety, or our values. Initially we created our own ChatGPT experience (LibertyGPT), rolled out GitHub CoPilot worldwide, and designed our own SDLC process. That was the easy part.
+
+Right now we’re tackling three interrelated opportunities:
+• The first is AI Engineering - how do we integrate GenAI into developer pipelines to ship better software faster?
+• The second is AI Architecture - how do we infuse AI based features into new applications to better serve our customers?
+• The final revolves around Agentic AI and the prospect of Digital Software Engineers - can this work and if so how?
+
+Your organisation is most likely walking a similar path. We will share with you what we have learned to date, in terms of technologies, architectures, practises and processes. There will be no artificial hype or gushing over vendors and their platforms. This will be a ‘from the trenches’ talk where we share hard won lessons. [...]
+
+TIMECODES
+00:00 Intro
+02:16 GenAl adoption was a roller coaster
+04:22 1. Learning never stops
+07:43 2. Shipping isn't adoption
+16:23 3. Models aren't equal
+19:10 4. Scaling is a beast
+24:39 5. Today's fix is tomorrow's pain
+27:48 6. Stay out of the weeds
+30:38 7. Costs can spiral
+35:15 8. RAG is really hard
+40:59 Latency is real
+42:52 Summary
+43:54 Call to action
+44:56 Outro
+
+Download slides and read the full abstract here:
+https://gotocph.com/2025/sessions/3823
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Gene Kim, Jez Humble, Nicole Forsgren, Patrick Debois & John Willis • The DevOps Handbook • https://amzn.to/3C0Rj0C
+Kiczales, des Rivieres & Bobrow • The Art of the Metaobject Protocol • https://amzn.to/3zbvavV
+Forsgren, Humble & Kim • Accelerate: The Science of Lean Software and DevOps • https://amzn.to/3tCz1xO
+Fred Brooks Jr. • The Mythical Man-Month • https://williamgibsonbooks.com
+Jeremy Kun • A Programmer's Introduction to Mathematics • https://amzn.to/3WbgKWz
+Scott Wlaschin • Domain Modeling Made Functional • https://amzn.to/3TPnLKz
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#GenAI #DeveloperProductivity #LibertyGPT #GitHubCoPilot #AIEngineering #AgenticAI #AIfromtheTrenches #RAG #RetrievalAugmentedGeneration #TodayInTech #Programming #SoftwareEngineering #GarthGilmour #StuartGreenlees
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
