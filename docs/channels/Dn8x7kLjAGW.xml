@@ -1,38 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>&quot;Residues&quot; &amp; &quot;The Architect’s Paradox&quot; • Barry O&apos;Reilly &amp; Jacqui Read</title><link>https://www.youtube.com/watch?v=iDzUXzOYAmE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/iDzUXzOYAmE?version=3" length="" type=""/><pubDate>Fri, 22 Aug 2025 13:00:53 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
-http://gotopia.tech/bookclub
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning</title><link>https://www.awesome-dev.news</link><description></description><item><title>Before Dashboards, We Had Blinky Lights @DotNetMartin</title><link>https://www.youtube.com/shorts/OZFPQ_CfGcg</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/OZFPQ_CfGcg?version=3" length="" type=""/><pubDate>Sun, 8 Feb 2026 13:00:44 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #MartinThwaites #OpenTelemetry #Observability #CNCF #CloudNative #Tracing #Logs #Kibana #Logstash #Propogation #Programming #SoftwareEngineering #TodayInTech #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
 
-Read the full transcription of the interview here
- (https://gotopia.tech/episodes/369) 
-Barry O'Reilly - Founder at Black Tulip Tech and Author of "Residues" & "The Architect's Paradox"
-Jacqui Read - Software Architect, Speaker & Author of "Communication Patterns"
+Full version available here:
+https://youtu.be/jC1icupHlMs
 
-RESOURCES
-Barry
-https://bsky.app/profile/technologytulip.bsky.social
-https://www.linkedin.com/in/barry-o-reilly-b924657
-https://www.blacktulip.se
-
-Jacqui
-https://bsky.app/profile/tekiegirl.bsky.social
-https://jacquiread.com
-https://fosstodon.org/@tekiegirl
-https://www.linkedin.com/in/jacquelineread
-https://github.com/tekiegirl
-
-DESCRIPTION
-In this GOTO Book Club interview, Jacqui Read discusses with Barry O'Reilly his books "Residues: Time, Uncertainty, and Change in Software Architecture" and "The Architect's Paradox". He explains how uncertainty defines the architect's role and introduces residuality—a method where architects deliberately stress their conceptual models until they collapse, then optimize the resulting "residues" or leftovers to create more resilient systems.
-
-Unlike traditional software engineering approaches, that try to eliminate uncertainty through rigid requirements, residuality embraces random stressors (even far-fetched scenarios like giant lizards) to uncover architectural fault lines.
-
-O'Reilly argues that this playful yet mathematically sound approach produces more robust architectures than conventional methods, and his second book explores how inherited philosophical thinking often undermines software architecture's effectiveness in complex business contexts.
+Martin Thwaites - Principle Developer Advocate at Honeycomb @DotNetMartin 
 
 RECOMMENDED BOOKS
-Barry O'Reilly • Residues
- (https://leanpub.com/residuality) Barry O'Reilly • The Architect's Paradox
- (https://leanpub.com/architectsparadox) Jacqui Read • Communication Patterns
- (https://amzn.to/3E37lvv) Anne Currie & Jamie Dobson • The Cloud Native Attitude
- (https://amzn.to/3R0exeT) Gregor Hohpe • The Software Architect Elevator
- (https://amzn.to/3F6d2ax) Gregor Hohpe • Enterprise Integration Patterns, Vol 2 (https://amzn.to/3TNedQ3) 
+Anthony Brown • Reactive Applications with Akka.NET • https://amzn.to/3Mwkkon
+Jamie Allen • Effective Akka • https://amzn.to/3ERlnws
+Roestenburg, Bakker & Williams • Akka in Action 1st Ed. • https://amzn.to/3KmXGNA
+
+CHANNEL MEMBERSHIP BONUS
+Join this channel to get early access to videos & other perks:
+https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
+
+Looking for a unique learning experience?
+Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
+Sign up for updates and specials at https://gotopia.tech/newsletter
+
+SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>impl Rust: Avro IDL tool in Rust via LLM</title><link>https://www.youtube.com/watch?v=vmKvw73V394</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/vmKvw73V394?version=3" length="" type=""/><pubDate>Fri, 6 Feb 2026 22:20:48 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[Some of you may be familiar with Avro, the Apache take on Google's Protocol Buffers. Where Protobuf has just one file format, `.proto`, Avro has *three*. Two of these are JSON-based. The first, .avsc files, are used for "schemas", which are like Protobuf message types. The second, .avpr files, are for "protocols", which are like gRPC service declarations. The third file format, .avdl, uses an Interface Description Language, or IDL ( https://avro.apache.org/docs/1.12.0/idl-language/ ), which is intended for humans (as opposed to machines) to read and write and looks more like a .proto file. Avro comes with a tool that converts those IDLs into JSONs. That tool is written in Java and maintained by the Avro folks, but also seems to have stagnated somewhat. In particular, it produces *really* unhelpful errors, to the point where I've heard of people spending an hour chasing down a misplaced comma.
+
+My sense is that this is probably not *too* hard to fix in the Java version, but after digging a little I discovered that the parser behind this tool uses the ANTLR parser generator ( https://www.antlr.org/ ). ANTLR supports code generation to many languages, *including Rust*! And you know what that means: let's try to port it to Rust using something like miette ( https://docs.rs/miette/ ) for errors, and see how good we can make it!
+
+Since we a) have access to the existing Java code and b) there's an infinite supply of tests (the same IDL passed to the Java tool should produce the same JSON), this is also a perfect candidate for powercoding (LLM + review the code), so we decided to see if we could get a complete substitute up and running in just four hours 😅
+
+The resulting repository can be found at https://github.com/jonhoo/avdl
+
+Live version with chat: https://youtube.com/live/NqV_KhDsMIs
+
+00:00:00 Introduction
+00:03:36 What is Apache Avro?
+00:13:44 Setup and trying out the Java tool
+00:23:25 ANTLR parser generation
+00:46:07 Planning the implementation with Claude Code
+01:46:10 Reviewing AI-generated Rust code
+02:33:30 Making the LLM iterate
+02:44:38 Setting up for a multi-agent workflow
+02:57:56 Seeding a decent CLAUDE.md
+03:03:08 Parallel issue identification and fixing
+03:38:26 Making worktrees work
+03:46:22 Brainrot, FOMO, and LLM use
+04:16:37 Designing a self-correcting agent loop
+04:53:14 Wrap-up & next steps]]></content:encoded></item><item><title>CI/CD Evolution: From Pipelines to AI-Powered DevOps • Olaf Molenveld &amp; Julian Wood</title><link>https://www.youtube.com/watch?v=D1l_HERUL9o</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/D1l_HERUL9o?version=3" length="" type=""/><pubDate>Fri, 6 Feb 2026 13:27:35 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
+https://gotopia.tech
+
+Check out more here:
+https://gotopia.tech/articles/417
+
+Olaf Molenveld - Technology Advisor at CircleCI
+Julian Wood - Serverless Developer Advocate at AWS
+
+RESOURCES
+Olaf
+https://x.com/olafmolenveld
+https://medium.com/@olafmolenveld
+https://www.linkedin.com/in/olafmolenveld
+
+Julian
+https://bsky.app/profile/julianwood.com
+https://twitter.com/julian_wood
+https://github.com/julianwood
+http://www.wooditwork.com
+https://www.linkedin.com/in/julianrwood
+
+DESCRIPTION
+CircleCI's Technology Advisor Olaf Molenveld discusses the evolution of CI/CD practices with AWS's Julian Wood. They explore how modern software delivery has transformed from simple monolithic deployments to complex microservices ecosystems, drawing parallels between managing production code and managing the "factory" that produces it.
+
+The discussion covers optimization strategies, the balance between local and remote development, platform engineering trends, and how AI is reshaping DevOps practices. Olaf emphasizes that getting software into users' hands is as critical as writing it, and shares how teams can leverage observability, right-sizing, and intelligent automation to improve their delivery pipelines.
+
+RECOMMENDED BOOKS
+David Farley • Continuous Delivery Pipelines • https://leanpub.com/cd-pipelines
+Jez Humble & Dave Farley • Continuous Delivery • https://amzn.to/3ocIHwd
+Nicole Forsgren, Jez Humble & Gene Kim • Accelerate • https://amzn.to/442Rep0
+Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook • https://amzn.to/47oAf3l
+Lauren Maffeo • Designing Data Governance from the Ground Up • https://amzn.to/3QhIlnV
+Roy Osherove • The Art of Unit Testing • https://bit.ly/3obiKNB
+Burns, Beda & Hightower • Kubernetes: Up & Running • https://amzn.to/3sueuuI
+Gojko Adzic • Lizard Optimization • https://leanpub.com/lizardoptimization
+Gregor Hohpe • Platform Strategy • https://amzn.to/4cxfYdb
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -48,58 +94,82 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I Created the most Comprehensive LLD Interview Resource</title><link>https://blog.algomaster.io/p/launching-premium-lld-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substack-post-media.s3.amazonaws.com/public/images/1bdf8340-7a0f-42e0-8609-c5174fb17828_2048x1426.jpeg" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:02:00 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[It’s one of the most comprehensive and high quality resource you can find online with support for 5 programming languages — Java, Python, C++, C#, and TypeScript.Many chapters are . To unlock full access, you would need to become a  to the newsletter. and  and other important  (with real-world examples)40+ LLD interview problems (with more added over time), with UML class diagrams and design patterns explained in context.Support for Java, Python, C++,  C#, and TypeScriptBuilt-in  and  where you can edit, run and see the solution output directly on the site (supports Java, Python, C++,  and C#) to test your understanding.I’ve poured a lot of thought and effort into making this course as useful and practical as possible. I truly hope you’ll find it valuable in your interview prep journey.I will keep making improvements and enhancements to this resource over time.You may already know my , which is one of the most popular resources to learn LLD. This course takes it to the next level, offering a far better reading experience, focused specifically on interview prep. I have also updated the solutions in the Github repository with more design patterns and class diagrams.Starting , subscription pricing will increase:Subscribe now to lock in the current price.All existing paid subscribers will continue at their current rate.💎 New: Lifetime Access PlanYou can now get  to all current and future AlgoMaster premium content for a .For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>How to Get People Excited about Functional Programming • Russ Olsen &amp; James Lewis • GOTO 2024</title><link>https://www.youtube.com/watch?v=0SpsIgtOCbA</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/0SpsIgtOCbA?version=3" length="" type=""/><pubDate>Thu, 21 Aug 2025 12:00:02 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded at GOTO Copenhagen 2024. #GOTOcon #GOTOcph
-https://gotocph.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>I created a comprehensive resource to master Concurrency Interviews</title><link>https://blog.algomaster.io/p/concurrency-interview-resource</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!QD7M!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c970fb5-a9f2-46c3-bd80-e8408439a6c6_2506x1736.png" length="" type=""/><pubDate>Thu, 5 Feb 2026 14:06:24 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[I’m excited to announce the launch of my , built to be the most complete, structured, and high-quality resources for concurrency interview prep available on the internet.It covers concurrency and synchronization fundamentals,, and 25 commonly asked interview problems organized by category, each with detailed explanations and implementations. The content supports 5 languages: Java, Python, C++, C#, and Go.I’ve kept a meaningful portion of the course (around ~50%) as free. For full access, you can .25 Interview Problems (and growing)The course includes 25 concurrency interview problems, with plans to add more over time.For each problem, you get:The core concurrency challengesMultiple synchronization approaches (so you learn trade-offs, not just one solution)Clean implementations across supported languagesLanguage Specific Deep-DivesConcurrency is deeply language-dependent. Each language has its own primitives, libraries, and best practices.That’s why the course includes dedicated deep-dive chapters for each language, covering the key concurrency primitives and standard libraries.Concurrency is easier to learn when you can visualize what threads are doing.This course includes  (flowcharts, sequence diagrams, state diagrams, and more) to make the behavior of threads, locks, and coordination mechanisms feel intuitive.There are quizzes after chapters to test and reinforce your understanding.There are interactive simulations to help you better understand the multi-threading concepts. I plan to add more simulations in coming weeks.For any questions related to content or subscription, please reply to this email or reach out at ]]></content:encoded></item><item><title>Architecture for Flow • Susanne Kaiser &amp; James Lewis • GOTO 2026</title><link>https://www.youtube.com/watch?v=NwtE82Wzs_U</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NwtE82Wzs_U?version=3" length="" type=""/><pubDate>Thu, 5 Feb 2026 13:00:45 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club. #GOTOcon #GOTObookclub
+http://gotopia.tech/bookclub
 
-Russ Olsen - Author of "Getting Clojure" & "Eloquent Ruby" @russolsen3122 
+Check out more here:
+https://gotopia.tech/episodes/424
+
+Susanne Kaiser - Independent Tech Consultant & Author of "Architecture for Flow" @architectureforflow 
 James Lewis - Software Architect & Director at Thoughtworks
 
 RESOURCES
-Russ
-https://bsky.app/profile/russolsen.bsky.social
-https://hachyderm.io/@russolsen
-https://github.com/russolsen
-https://www.linkedin.com/in/russolsen
-http://russolsen.com
+Susanne
+https://bsky.app/profile/suksr.bsky.social
+https://mastodon.social/@suksr
+https://twitter.com/suksr
+https://www.linkedin.com/in/susannekaiser1
+https://susannekaiser.net
 
 James
 https://bsky.app/profile/boicy.bovon.org
+https://twitter.com/boicy
 https://linkedin.com/in/james-lewis-microservices
 https://github.com/boicy
 https://www.bovon.org
 
+Links
+https://susannekaiser.net/the-architecture-for-flow-canvas
+https://susannekaiser.net/articles
+https://www.christenseninstitute.org/theory/jobs-to-be-done
+https://youtu.be/1BKp616GPQE
+https://youtu.be/TgFSdEP9gcc
+https://youtu.be/_bDDtS3aEes
+https://youtu.be/b7Nc_FJiosk
+https://youtu.be/Gs1zUKrFCoY
+https://youtu.be/HKS5sKsIkkc
+https://youtu.be/l1tyfb5we7I
+https://youtu.be/USc-yLHXNUg
+https://youtu.be/D8qQUHrksrE
+https://youtu.be/hBxV3Cr0lXY
+https://youtu.be/QmaNucXFYd8
+https://youtu.be/NGXl1D-KwRI
+https://youtu.be/zx1C_MKncv0
+https://youtu.be/dcp6YMAmI3M
+https://youtu.be/PK-y-iG5VnE
+https://youtu.be/IIy4Adg4WR0
+https://youtu.be/DnSogTnJlqk
+
+DESCRIPTION
+James Lewis interviews Susanne Kaiser about her comprehensive new book "Architecture for Flow: Adaptive Systems with Domain-Driven Design, Wardley Mapping and Team Topologies".
+
+Susanne shares how she brought together 3 powerful frameworks over several years of her consulting work, creating a holistic approach to designing socio-technical systems. The discussion covers her journey from startup CTO to independent consultant, the evolution of her thinking around value streams and team organization, and her practical "Architecture for Flow Canvas" that teams can use to assess their current state and envision their future.
+
+With 126 hand-drawn illustrations and 599 sticky notes in the book, Kaiser emphasizes the importance of visual communication and starting with the problem space before jumping to solutions.
+
 TIMECODES
 00:00 Intro
-00:53 How Russ got started with functional programming
-05:55 Russ' new book
-11:05 Clojure
-14:46 Q&A
-24:15 Misconceptions about functional programming
-28:25 To the Moon
-34:20 Q&A
-37:34 Mechanical vs Software Engineering
-38:23 Agile & TDD
-40:28 Outro
-
-Read the full abstract here:
-https://gotocph.com/2024/sessions/3522
+01:32 Bridging multiple business strategies
+05:41 Bringing clarity to value streams & team alignment
+10:35 Understanding team dynamics through context mapping
+17:22 Collaborative modeling techniques & practical workshops
+20:31 The Architecture for Flow Canvas: A practical framework
+27:11 The most important takeaway from the book
+28:42 Outro
 
 RECOMMENDED BOOKS
-Russ Olsen • Getting Clojure • https://amzn.to/3J8zI8s
-Russ Olsen • Eloquent Ruby • https://amzn.to/37gOhcG
-Russ Olsen • Design Patterns in Ruby • https://amzn.to/3r2uBjW
-Barry O'Reilly • Unlearn • https://amzn.to/3O3DQeI
-Jez Humble, Joanne Molesky & Barry O'Reilly • Lean Enterprise • https://amzn.to/3Cpt6ET
-Sarah Wells • Enabling Microservice Success • https://amzn.to/4aa8xrv
-Martin Fowler • Refactoring • https://amzn.to/3EVcHXQ
-Matthew Skelton & Manuel Pais • Team Topologies • http://amzn.to/3sVLyLQ
+Susanne Kaiser • Adaptive Systems With Domain-Driven Design, Wardley Mapping & Team Topologies • https://amzn.to/3XTmNCc
+Matthew Skelton & Manuel Pais • Team Topologies • https://amzn.to/4a2gh0i
+Woods, Erder & Pureur • Continuous Architecture in Practice • https://amzn.to/2QWAmkl
+Steve Pereira & Andrew Davis • Flow Engineering • https://amzn.to/3GY3u44
+Stefan Hofer & Henning Schwentner • Domain Storytelling • https://amzn.to/3EroBH7
 
 https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
 https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#RussOlsen #JamesLewis #Clojure #lisplang #Agile #TDD #ChaosEngineering #FunctionalProgramming #CategoryTheory #FPvsOOP #Programming #SoftwareEngineering #TodayInTech
+#SoftwareArchitecture #DDD #WardleyMapping #TeamTopologies #ArchitectureForFlow #FlowEngineering #EventStorming #ContextMapping #DomainDrivenDesign #ConwaysLaw #SoftwareEngineering #Programming #TodayInTech #SusanneKaiser #JamesLewis #BookClub
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
@@ -110,66 +180,53 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>How Unforgiving Tools Help Your Programming Discipline with Michael Feathers</title><link>https://www.youtube.com/shorts/3Z1uq0Vj5Ys</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/3Z1uq0Vj5Ys?version=3" length="" type=""/><pubDate>Wed, 20 Aug 2025 12:00:12 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[Check out the full version on our YouTube channel now! #GOTOcon #SoftwareEngineering #Legacy #LegacyCode #Effectiveness #Testing #TDD #CodeQuality #CLangguage #Pascal #DDD #QA #ComputerScience #MichaelFeathers #ChristianClausen #Programming #ViralProgrammingShorts #Viral #ViralShorts #TodayInTech #GOTO
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>The Forest &amp; The Desert Are Parallel Universes • Kent Beck • GOTO 2025</title><link>https://www.youtube.com/watch?v=W7XL_LZgvKI</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/W7XL_LZgvKI?version=3" length="" type=""/><pubDate>Wed, 4 Feb 2026 13:00:57 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at GOTO Copenhagen 2025. #GOTOcon #GOTOcph
+https://gotocph.com
 
-Full version available here:
-https://youtu.be/P_6eDL1aqtA
-
-Michael Feathers - Author of “Working Effectively with Legacy Code” &  Chief Architect at Globant
-
-RECOMMENDED BOOK
-Michael Feathers • Working Effectively with Legacy Code • https://amzn.to/3ZFQoMU
-Christian Clausen • Five Lines of Code • https://amzn.to/3s2zjyg
-Kent Beck • Test Driven Development • https://amzn.to/36kchvd
-
-CHANNEL MEMBERSHIP BONUS
-Join this channel to get early access to videos & other perks:
-https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
-
-Looking for a unique learning experience?
-Attend the next GOTO conference near you! Get your ticket at https://gotopia.tech
-Sign up for updates and specials at https://gotopia.tech/newsletter
-
-SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>Building Bridges: From Developer to Developer Advocate • David Edoh-Bedi &amp; James Beswick</title><link>https://www.youtube.com/watch?v=1T3w7UxeNMo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/1T3w7UxeNMo?version=3" length="" type=""/><pubDate>Tue, 19 Aug 2025 12:21:56 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO Unscripted.
-https://gotopia.tech
-
-Read the full transcription of this interview here
- (https://gotopia.tech/articles/368) 
-David Edoh-Bedi - Developer Relations at Stripe
-James Beswick - Head of Developer Relations at Stripe
+Kent Beck - Software Engineer & Creator of Extreme Programming @KentLBeck 
 
 RESOURCES
-David
-https://x.com/edohbedi_d
-https://www.linkedin.com/in/edohbedi
-https://edoh-bedi.com
+https://bsky.app/profile/kentbeck.bsky.social
+https://www.kentbeck.com
+https://github.com/KentBeck
+https://twitter.com/KentBeck
+https://www.linkedin.com/in/kentbeck
+https://tidyfirst.substack.com/about
 
-James
-https://bsky.app/profile/jbesw.bsky.social
-https://twitter.com/jbesw
-https://linkedin.com/in/jamesbeswick
+ABSTRACT
+So close and yet so far. We see similar behaviors in The Forest & The Desert, but with opposite meanings. Similar words but opposite meanings. Superficially similar goals but working out at completely different scales.
 
-Links
-https://stripe.dev
+What is The Forest? What is The Desert? Why are they so different, despite the similarities? And how can we get from crumbs to cake and stay there? [...]
 
-DESCRIPTION
-James Beswick (Head of Developer Relations at Stripe) talks with David Edoh-Bedi (Developer Advocate) about his professional journey from growing up in Togo to working at Microsoft and eventually Stripe.
+TIMECODES
+00:00 Intro
+00:16 Opening story: The Forest‑vs‑Desert metaphor
+01:16 Why XP still matters in the AI era
+04:08 Scarcity vs Abundance: The underlying assumptions
+09:16 Purpose‑driven pull vs Pressure‑driven push
+14:16 Metrics: Learning tool or hammer of control?
+20:51 Dependencies: Collaboration invitation vs blame shield
+27:38 Compliance: Enabler of speed or survival tactic?
+35:28 Closing call: Choose your universe (forest or desert)
+39:03 Outro
 
-The conversation explores David's transition from software engineering to developer advocacy, highlighting the importance of empathy, communication skills, and technical knowledge in the role.
-They discuss the challenges of working with large legacy systems, the complexities of payment processing, and how the software development landscape has evolved from library-focused development to API-centric approaches.
-
-The interview provides valuable insights for developers considering a career path in developer relations and those integrating complex systems like payment processing into their applications.
+Download slides and read the full abstract here:
+https://gotocph.com/2025/sessions/3659
 
 RECOMMENDED BOOKS
-Simon Brown • Software Architecture for Developers Vol. 2
- (https://leanpub.com/visualising-software-architecture) David Farley • Modern Software Engineering
- (https://amzn.to/3GI468M) Kim, Humble, Debois, Willis & Forsgren • The DevOps Handbook
- (https://amzn.to/47oAf3l) Simon Wardley • Wardley Maps
- (https://amzn.to/45U8Upr) Simon Wardley • Wardley Mapping, The Knowledge
- (https://amzn.to/3XQEeDu) David Anderson, Marck McCann & Michael O'Reilly • The Value Flywheel Effect
- (https://amzn.to/3VcHxC) Mike Amundsen • Restful Web API Patterns & Practices Cookbook
- (https://amzn.to/3C74fpH) 
+Kent Beck • Tidy First? • https://amzn.to/4gscjjK
+Kent Beck & Cynthia Andres • Extreme Programming Explained • https://amzn.to/3sBASDG
+Kent Beck • Test Driven Development • https://amzn.to/3U4AXLs
+Kent Beck, Fowler, John, William, Don & Gamma • Refactoring • https://amzn.to/3SFBYbN
+Kent Beck • Implementation Patterns • https://amzn.to/3sBlCGL
+
+https://bsky.app/profile/gotocon.com
+https://twitter.com/GOTOcon
+https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
+https://www.facebook.com/GOTOConferences
+#SoftwareDesign #XP #EmpiricalDesign #ExtremeProgramming #Explore #Expand #Extract #3X #Ergodicity #Coupling #ConstantinesEquation #TodayInTech #Programming #SoftwareEngineering #KentBeck
+
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
 https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
@@ -179,7 +236,158 @@ Attend the next GOTO conference near you! Get your ticket at https://gotopia.tec
 Sign up for updates and specials at https://gotopia.tech/newsletter
 
 SUBSCRIBE TO OUR CHANNEL - new videos posted almost daily.
-https://www.youtube.com/user/GotoConferences/?sub_confirmation=1
+https://www.youtube.com/user/GotoConferences/?sub_confirmation=1]]></content:encoded></item><item><title>7 Graph Algorithms You Should Know for Coding Interviews in 2026</title><link>https://blog.algomaster.io/p/7-graph-algorithms-you-should-know</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!1puy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd166816b-b57e-40e3-ac90-33b31795d92e_1280x926.jpeg" length="" type=""/><pubDate>Wed, 4 Feb 2026 04:03:02 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[In this post Shayan will share  to know if you are preparing for coding interviews.Graphs come up in about 35-40% of coding interviews at major tech companies because so many real systems are graphs: social networks, map routing, dependency chains, web crawlers. If you don’t know core graph patterns, you’ll struggle in the interview.I’ve seen candidates get stuck on problems like “Number of Islands” simply because they hadn’t practiced basic grid traversal. These problems become straightforward once you know the patterns.In this post, I’ll show you 7 graph algorithms that cover about 85% of graph-related interview questions. For each one, you’ll learn what it does, when to use it, how it works, and which LeetCode problems to practice. BFS explores a graph . It visits every node at distance 1 from the start, then distance 2, then distance 3, and so on.Use BFS when the problem is naturally about  or :Finding the shortest path in an unweighted graphFinding all nodes within K distanceAny problem that asks for “minimum steps” or “shortest path” without weightsBFS uses a . You start by adding the source node. Then you repeat: remove the front node, process it, and add all its unvisited neighbors to the back of the queue.The queue enforces the level-by-level order. By the time you reach a node, you’ve visited all closer nodes first. This guarantees the first path you find is the shortest.queue = [start]
+visited = {start}
+
+while queue is not empty:
+    node = queue.pop_front()
+    for neighbor in node.neighbors:
+        if neighbor not in visited:
+            visited.add(neighbor)
+            queue.push_back(neighbor)Grid Problems (Flood Fill)BFS works well on 2D grids. Think of grids like this:Its neighbors are usually  (sometimes diagonals too)Problems like “Number of Islands” and “Rotting Oranges” are grid-based BFS.For flood fill, you start at a cell and spread to all connected cells matching a condition. You stop at boundaries or cells that don’t match. This is the algorithm behind the paint bucket tool in image editors.Practice these LeetCode problems: DFS explores a graph  before it backtracks. If a node has multiple neighbors, DFS fully explores the first neighbor’s branch, then returns and tries the next.DFS is the right tool when you care about reachability, structure, or exhaustive exploration, not minimum distance:Finding connected componentsPath finding (when you don’t need the shortest path)A good mental model is a maze.You choose a path, keep walking, and mark where you’ve been. When you hit a dead end, you backtrack to the last fork and try a different direction.Either an explicit stack you manage yourselfOr recursion, which uses the call stack implicitlyBecause the “most recent” node is processed next, DFS naturally pushes deeper into the graph.function dfs(node):
+    if node in visited:
+        return
+    visited.add(node)
+
+    for neighbor in node.neighbors:
+        dfs(neighbor)DFS is one of the most common ways to detect cycles, but the exact rule depends on the graph type (directed vs undirected graphs).For undirected graphs: if you reach a visited node that isn’t your immediate parent, you’ve found a cycle.For directed graphs: you use three states (unvisited, in-progress, completed). If you reach an in-progress node, you’ve found a back edge, which means a cycle.// Directed graph cycle detection
+state = [UNVISITED] * n
+
+function hasCycle(node):
+    state[node] = IN_PROGRESS
+
+    for neighbor in node.neighbors:
+        if state[neighbor] == IN_PROGRESS:
+            return true  // cycle found
+        if state[neighbor] == UNVISITED:
+            if hasCycle(neighbor):
+                return true
+
+    state[node] = COMPLETED
+    return falsePractice these LeetCode problems: Dijkstra’s Algorithm finds the shortest path in a weighted graph where all edge weights are . Unlike BFS, it works when edges have different costs.Reach for Dijkstra when you see  and the question is about :Shortest path with weighted edgesNavigation and routing (Google Maps)Network routing with latency costsAny problem mentioning “minimum cost path”BFS doesn’t work on weighted graphs because one step doesn’t equal one unit of distance. A direct path might cost 10 while a two-step path costs 2.Dijkstra fixes this by always expanding the currently cheapest known node first:Maintain  = best known distance from the sourceUse a min-heap / priority queue keyed by distancePop the node with the smallest distance, then relax its edgesIf the graph has only non-negative weights, the first time a node is popped with its best distance, that distance is final.dist = [infinity] * numNodes
+dist[source] = 0
+pq = [(0, source)]  // (distance, node)
+
+while pq is not empty:
+    d, node = pq.pop_min()
+
+    if d > dist[node]:
+        continue  // found a better path already
+
+    for (neighbor, weight) in node.edges:
+        newDist = d + weight
+        if newDist < dist[neighbor]:
+            dist[neighbor] = newDist
+            pq.push((newDist, neighbor))Sample Problem: Network Delay TimeYou have n network nodes. You’re given travel times as directed edges (u, v, w) where w is the time. You send a signal from node k. How long until all nodes receive it?To solve this, you run Dijkstra from node k. Your answer is the maximum distance among all reachable nodes. If any node is unreachable, you return -1.Practice these LeetCode problems: Topological sort orders nodes in a Directed Acyclic Graph (DAG) so that for every edge , node  appears  node . In plain terms: it gives you an execution order that respects dependencies. That’s why it shows up so often in scheduling-style problems.Topological sort is the default pattern when you see dependency language:Course scheduling with prerequisitesBuild systems and dependency resolutionAny problem that mentions “prerequisites” or “dependencies”How it works (Kahn’s Algorithm):Kahn’s algorithm is the BFS-style way to do topological sorting. A node’s in-degree is the number of edges pointing to it. If a node has in-degree 0, it has no dependencies and you can process it.You start by adding all nodes with in-degree 0 to a queue. You process them one by one. When you process a node, you decrement the in-degree of its neighbors. If a neighbor’s in-degree drops to 0, you add it to the queue.If you process all nodes, you have a valid topological order. If the queue empties before you’ve processed all nodes, you’ve found a cycle.inDegree = count incoming edges for each node
+queue = all nodes with inDegree 0
+result = []
+
+while queue is not empty:
+    node = queue.pop()
+    result.append(node)
+
+    for neighbor in node.outgoing:
+        inDegree[neighbor] -= 1
+        if inDegree[neighbor] == 0:
+            queue.push(neighbor)
+
+if len(result) < numNodes:
+    return "cycle detected"Sample Problem: Course Schedule IIYou have numCourses courses. Some have prerequisites: [0, 1] means you take course 1 before course 0. You need to return any valid order to finish all courses, or an empty array if impossible.To solve this, you build a directed graph where edge b→a means “take b before a”. Then run Kahn’s algorithm. If you can’t process all courses, you’ve found a cyclic dependency.Practice these LeetCode problems: Union-Find is a data structure for tracking a collection of elements split into disjoint (non-overlapping) sets. It supports two core operations: which set does  belong to? merge the sets containing  and Once you have these, you can answer connectivity questions like “are these two nodes connected?” efficiently.Union-Find shines when you’re adding connections over time and need fast connectivity checks:Dynamic connectivity queriesDetecting cycles in undirected graphsGrouping elements as edges are addedEach set has a leader (representative). Two elements are in the same set if they have the same leader. You store a parent array where parent[i] points to i’s parent. The root is the leader (where parent[i] = i).To make operations extremely fast in practice, Union-Find uses two standard optimizations:: When you find the leader, you make each node on the path point directly to the leader.: When merging two sets, attach the smaller tree under the larger one to keep trees shallow.parent = [0, 1, 2, ..., n-1]  // each node is its own leader
+rank = [0] * n
+
+function find(x):
+    if parent[x] != x:
+        parent[x] = find(parent[x])  // path compression
+    return parent[x]
+
+function union(x, y):
+    px, py = find(x), find(y)
+    if px == py:
+        return false  // already connected
+
+    if rank[px] < rank[py]:
+        parent[px] = py
+    else if rank[px] > rank[py]:
+        parent[py] = px
+    else:
+        parent[py] = px
+        rank[px] += 1
+
+    return trueSample Problem: Redundant ConnectionYou have a graph that started as a tree (connected, no cycles), then one edge was added. You need to find the edge that can be removed to restore the tree.To solve this using union find, process edges one by one. For each edge (u, v), you check if u and v are already connected using find(). If yes, this edge creates a cycle. If no, you union them. The first edge that connects already-connected nodes is your answer.Practice these LeetCode problems: A spanning tree connects all nodes in a graph using exactly n-1 edges with no cycles. The minimum spanning tree is the one with the smallest total edge weight.MST comes up whenever you need to connect a set of nodes with minimum total cost:Connecting all nodes with minimum costNetwork design (cables, roads, pipelines)Approximation algorithms for NP-hard problemsHow it works (Kruskal’s Algorithm):Kruskal’s is the most common MST approach in interviews because it’s simple and pairs naturally with Union-Find.You sort all edges by weight. You process them in order. For each edge, you use Union-Find to check if it connects two different components. If yes, you add it to the MST. If no, you skip it to avoid a cycle.edges.sort(by weight)
+mst = []
+uf = UnionFind(n)
+
+for edge in edges:
+    u, v, weight = edge
+    if uf.find(u) != uf.find(v):
+        uf.union(u, v)
+        mst.append(edge)
+
+    if len(mst) == n - 1:
+        break
+
+return mstSample Problem: Min Cost to Connect All PointsYou’re given points on a 2D plane. The cost to connect two points is their Manhattan distance. You return the minimum cost to connect all points.To solve this, you treat each pair of points as a potential edge. Generate all edges, sort by weight, and run Kruskal’s. The MST gives you the minimum total cost.Practice these LeetCode problems: A graph is  if you can split its nodes into two groups such that every edge connects nodes from different groups. No edge is allowed within the same group.A simple way to remember it: Can you  the graph so that no two adjacent nodes share the same color?Bipartite checks appear whenever the problem is about dividing things into two compatible sets:Team or group assignmentsChecking for odd-length cycles (a graph is bipartite if and only if it has no odd-length cycles)Scheduling with conflictsYou can use  to try 2-coloring the graph.Pick a start node and assign it color 0. Assign all its neighbors color 1. Assign their neighbors color 0. Continue alternating.If you ever find an edge where both endpoints have the , the graph is  bipartite.color = [-1] * n  // uncolored
+
+function isBipartite(start):
+    queue = [start]
+    color[start] = 0
+
+    while queue is not empty:
+        node = queue.pop()
+        for neighbor in node.neighbors:
+            if color[neighbor] == -1:
+                color[neighbor] = 1 - color[node]
+                queue.push(neighbor)
+            else if color[neighbor] == color[node]:
+                return false
+
+    return trueSample Problem: Is Graph Bipartite?You’re given an undirected graph. You return true if it’s bipartite.Because the graph may be disconnected, run BFS/DFS from :Start a new traversal, try to 2-color that componentIf any component fails, return If all components succeed, the graph is bipartitePractice these LeetCode problems:You now have 7 algorithms that cover most graph problems in coding interviews. Here’s how to retain them: Start with BFS and DFS. They’re the foundation the others build on.Match patterns to algorithms. “Shortest path” without weights → BFS. “Prerequisites” or “dependencies” → topological sort. “Minimum cost to connect” → MST. Don’t just read the code. Write it yourself. Debug it. That’s how you learn.Practice with time limits. In interviews, you have 20-30 minutes per problem. Get comfortable working under that constraint.For a structured approach to learn, feel free to take a look at our roadmaps. It covers these algorithms plus topics like Strongly Connected Components, Lowest Common Ancestor, and Network Flow.]]></content:encoded></item><item><title>Quarkus in Action • Martin Stefanko, Jan Martiska &amp; Holly Cummins</title><link>https://www.youtube.com/watch?v=FQpzBNQtLkE</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/FQpzBNQtLkE?version=3" length="" type=""/><pubDate>Tue, 3 Feb 2026 13:28:58 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for the GOTO Book Club.
+http://gotopia.tech/bookclub
+
+Check out more here:
+https://gotopia.tech/episodes/416
+
+Martin Štefanko - Quarkus Core Engineer at IBM & Co-Author of "Quarkus in Action"
+Jan Martiška - Software Engineer Quarkus at IBM & Co-Author of "Quarkus in Action"
+Holly Cummins - Senior Technical Staff Member, Quarkus at IBM
+
+RESOURCES
+Martin
+https://bsky.app/profile/xstefank.bsky.social
+https://mastodon.cloud/@xstefank
+https://x.com/xstefank
+https://github.com/xstefank
+https://www.linkedin.com/in/martin-stefanko
+
+Jan
+https://bsky.app/profile/janmartiska.bsky.social
+https://x.com/janmartiska
+https://github.com/jmartisk
+https://www.linkedin.com/in/janmartiska
+
+Holly
+https://hollycummins.com
+https://hollycummins.com/type/blog
+https://bsky.app/profile/hollycummins.com
+https://hachyderm.io/@holly_cummins
+https://twitter.com/holly_cummins
+https://github.com/holly-cummins
+https://linkedin.com/in/holly-k-cummins
+
+Links
+https://code.quarkus.io
+https://vaadin.com
+
+DESCRIPTION
+Holly Cummins sits down with Martin Stefanko and Jan Martiška, authors of "Quarkus in Action", to discuss their journey writing this comprehensive guide to the Java framework. The authors share insights about Quarkus's developer experience, from its blazing-fast dev mode to native compilation capabilities, while revealing what they learned writing about 29 different extensions across 12 chapters.
+
+They discuss the book's structure - from getting started to deploying in the cloud- and offer practical advice on when to use JVM versus native compilation, making this essential reading for both Quarkus newcomers and experienced developers.
+
+RECOMMENDED BOOKS
+Martin Stefanko • Jan Martiska • Quarkus in Action • https://amzn.to/3K1En2z
+Ben Evans & Jim Gough • Optimizing Cloud Native Java • https://amzn.to/41nivD9
+Kief Morris • Infrastructure as Code • https://amzn.to/4e6EBQc
+Alex Soto Bueno & Jason Porter • Quarkus Cookbook • https://amzn.to/4au3QfF
 
 
 Bluesky (https://bsky.app/profile/gotocon.com) 
@@ -195,28 +403,144 @@ https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA/join
 Looking for a unique learning experience?
 Attend the next GOTO conference near you! Get your ticket: gotopia.tech (https://gotopia.tech) 
 
-SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Lets See What We Can do! with F# Computation Expressions • Andrew Browne • YOW! 2015</title><link>https://www.youtube.com/watch?v=NFofVoR8EZo</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NFofVoR8EZo?version=3" length="" type=""/><pubDate>Mon, 18 Aug 2025 12:00:42 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This presentation was recorded at YOW! 2015. #GOTOcon #YOW
-https://yowcon.com
+SUBSCRIBE TO OUR YOUTUBE CHANNEL (https://www.youtube.com/user/GotoConferences/?sub_confirmation=1)  - new videos posted daily!]]></content:encoded></item><item><title>Polling vs. Long Polling vs. SSE vs. WebSockets vs. Webhooks</title><link>https://blog.algomaster.io/p/polling-vs-long-polling-vs-sse-vs-websockets-webhooks</link><author>Ashish Pratap Singh</author><category>dev</category><category>learning</category><enclosure url="https://substackcdn.com/image/fetch/$s_!DkxM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf447e18-ccb7-4f9c-8e09-2a4d51989ac8_2068x1366.png" length="" type=""/><pubDate>Tue, 3 Feb 2026 04:02:53 +0000</pubDate><source url="https://blog.algomaster.io/">Algomaster</source><content:encoded><![CDATA[Whether you are chatting with a friend or playing an online game, updates show up in real time without hitting .Behind these seamless experiences lies a key engineering decision: how does the server notify the client (or another system) when new data is available?The traditional HTTP was built around a simple request-response flow: the client asks, the server answers. But in real-time systems, the server often needs to push updates proactively, sometimes continuously.That’s where communication models like Long Polling, Server-Sent Events (SSE), WebSockets, and Webhooks come in.In this article, we’ll break down how each one works, it’s pros and cons, where it fits best, and how to choose the right approach for a  or a .Let's start with the most straightforward approach. is the simplest approach to getting updates from a server. The client sends requests to the server at regular intervals, checking if anything has changed.Think of it like refreshing your email inbox every few minutes to check for new messages.Client sends an HTTP request to the serverServer responds immediately with current data (or empty response)Client waits for a fixed interval (e.g., 5 seconds)Client sends another requestNotice something wasteful here? The client keeps asking even when nothing has changed. Three out of four requests in this diagram returned empty responses. In real applications, this ratio is often much worse. You might make 100 requests before getting a single meaningful update.Example: Weather DashboardImagine you’re building a weather dashboard. Weather data doesn’t change that frequently, maybe every 15-30 minutes at most. Polling makes sense here:setInterval(async () => {
+    const response = await fetch('/api/weather?city=london');
+    const weather = await response.json();
+    updateDashboard(weather);
+}, 60000); // Poll every minuteEvery minute, your client asks for the current weather. The server responds with temperature, humidity, conditions, and so on. Just a regular HTTP request in a loop. No special protocols or libraries needed. Any HTTP client can do polling. No firewall or proxy issues. Each request is independent. The server doesn’t need to maintain any connection state. Standard HTTP requests that show up in network logs and dev tools. Most requests return empty responses when nothing has changed. This wastes bandwidth and server resources. Updates are delayed by the polling interval. If you poll every 10 seconds, updates can take up to 10 seconds to reach the client. 10,000 clients polling every second means 10,000 requests per second, even when nothing is happening.Trade-off between latency and efficiency: Shorter intervals mean faster updates but more wasted requests. Longer intervals mean fewer requests but slower updates. Weather data, daily reports, or anything that changes infrequently MVPs, internal tools, or situations where simplicity matters more than efficiency When you need to support older clients or environments that can’t use modern techniques When delays of several seconds (or minutes) are acceptablePolling is a reasonable starting point, but you’ll quickly feel its limitations as your application grows. If you need faster updates without drowning your server in requests, that’s where long polling comes in. improves on regular polling by having the server hold the request open until new data is available (or a timeout occurs). Instead of the client repeatedly asking “anything new?”, the server waits and responds only when there’s something to report.This was the technique that powered early real-time applications like Facebook Messenger before WebSockets became widely supported.Client sends an HTTP request to the serverServer holds the connection open (doesn’t respond immediately)When new data arrives, server sends the responseClient immediately sends another requestIf no data arrives within the timeout period, server sends an empty response and client reconnectsThe key insight is that the server only responds when it has something meaningful to say. This eliminates the wasted “nothing new” responses of regular polling.Example: Chat ApplicationConsider a chat app built with long polling. When you open a conversation, your browser sends a request like:GET /api/messages?conversation=123&after=msg_999The server checks if there are any messages newer than . If not, instead of returning an empty response, it holds the connection and waits. When someone sends a new message to that conversation, the server immediately responds with the new message. Your client receives it, renders it in the chat window, and immediately opens a new connection to wait for the next message.There’s an important detail here: the . HTTP connections can’t stay open forever. Proxies, load balancers, and browsers all have limits. So the server needs to respond eventually, even if nothing happened.A typical timeout is 30 seconds. If 30 seconds pass with no new data, the server sends an empty response, the client immediately reconnects, and the wait continues. Updates arrive almost instantly when they happen, without waiting for a polling interval. Responses almost always contain useful data, not empty “nothing new” responses.Works through proxies and firewalls: Uses standard HTTP, so it works in restrictive network environments where WebSockets might be blocked. No protocol upgrade, no special handling for connection state. Each waiting client holds a connection open on the server. With 10,000 clients, you need 10,000 open connections.Timeout handling complexity: You need to handle timeouts, reconnection logic, and edge cases like the client receiving data just as the timeout expires. If multiple events happen quickly, they may get batched together or delivered out of order. Every response requires a new request, and each request carries HTTP headers. This overhead adds up.Chat applications (historically): Before WebSocket support was universal, long polling powered most chat systems When WebSockets aren’t available due to proxy or firewall restrictionsServer-initiated updates: When clients mostly receive data rather than send it Works well for hundreds or thousands of concurrent connections, but gets expensive at massive scaleLong polling feels like “almost real-time,” but it’s still request-response at heart. The client still initiates every exchange. What if the server could just push data to clients whenever it wants? That’s exactly what Server-Sent Events enable. is a standard that allows a server to push updates to a client over a single, long-lived HTTP connection. Unlike polling where the client keeps asking, SSE opens a connection once and the server sends data whenever it has something to share.Think of it like subscribing to a news feed. You sign up once, and updates stream to you automatically.Client opens a connection using the  APIServer keeps the connection open and sends events as they occurEvents are sent as plain text in a specific formatIf the connection drops, the browser automatically reconnectsServer can send different event types for clients to handle differentlyThe data flows in one direction: from server to client. If the client needs to send data back, it uses separate HTTP requests.Example: Stock Price Dashboardconst eventSource = new EventSource('/api/stock-prices');
 
-Andrew Browne - Solution Architect at Picnic Software
+eventSource.addEventListener('price_update', (event) => {
+    const data = JSON.parse(event.data);
+    updatePriceDisplay(data.symbol, data.price);
+});
+
+eventSource.addEventListener('alert', (event) => {
+    showNotification(JSON.parse(event.data).message);
+});The server streams price updates as they happen. The client handles different event types (price updates vs alerts) with separate listeners.SSE uses a simple text-based format that’s easy to read and debug:event: price_update
+data: {"symbol": "AAPL", "price": 150.25}
+id: 12345
+
+event: price_update
+data: {"symbol": "GOOG", "price": 2840.50}
+id: 12346The  field enables resumption. If the connection drops, the browser sends  in the reconnection request, and the server can replay missed events. The browser’s  API handles connections, reconnection, and parsing automatically. If the connection drops, the browser reconnects automatically with the last event ID. Multiple SSE streams can share a single TCP connection, reducing overhead.Lower overhead than polling: One connection, no repeated request headers, no wasted “nothing new” responses.Text-based and debuggable: Events are plain text, easy to inspect in browser dev tools. Data flows server to client only. The client can’t send data over the same connection. Browsers limit connections per domain (typically 6 for HTTP/1.1). This matters if you need multiple SSE streams. SSE is text-only. Binary data must be base64 encoded, which adds overhead.Less flexible than WebSockets: No custom subprotocols or extensions. News feeds, social media timelines, activity streams Stock tickers, analytics dashboards, monitoring systems Push notifications, alerts, status updatesAny scenario where data flows one way: From server to client, with no client-to-server messages neededSSE works great when you only need server-to-client communication. But many applications need bidirectional communication, where both sides send and receive messages freely. That’s where WebSockets shine. represent a fundamental departure from HTTP’s request-response model. Instead of one side asking and the other answering, WebSockets establish a persistent, bidirectional channel where either party can send messages at any time.This is the technology behind real-time chat apps like Slack and Discord, multiplayer games, and collaborative tools like Google Docs.A WebSocket connection starts as HTTP, then “upgrades” to a different protocol:Client initiates a WebSocket handshake via HTTP upgrade requestServer accepts and upgrades the connection from HTTP to WebSocketBoth sides can now send messages freelyConnection stays open until either side closes itThe initial HTTP handshake looks like this:GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+Sec-WebSocket-Version: 13
+Origin: https://example.comHTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=Once upgraded, the connection is no longer HTTP. It’s now a WebSocket connection, a binary framing protocol optimized for low-overhead messaging.Example: Chat ApplicationHere’s how a chat client might work:const socket = new WebSocket('wss://chat.example.com/room/123');
+
+socket.onopen = () => {
+    socket.send(JSON.stringify({
+        type: 'join',
+        username: 'alice'
+    }));
+};
+
+socket.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    if (data.type === 'message') {
+        displayMessage(data.user, data.text);
+    } else if (data.type === 'typing') {
+        showTypingIndicator(data.user);
+    }
+};
+
+// Send a message
+function sendMessage(text) {
+    socket.send(JSON.stringify({
+        type: 'message',
+        text: text
+    }));
+}Both client and server can send messages at any time. The server can broadcast typing indicators while the client sends messages, all over the same connection. Messages arrive with minimal latency. No polling, no waiting. Both sides can send messages independently, without waiting for a response. After the initial handshake, message framing is minimal (as little as 2 bytes per frame). WebSockets can send binary data directly, unlike SSE. You can negotiate application-level protocols (like STOMP or MQTT) over WebSocket. The server must maintain state for each connection. This complicates horizontal scaling since you need sticky sessions or a pub/sub layer. You need to handle disconnections, reconnections, heartbeats, and timeouts manually.Proxy and firewall issues: Some corporate proxies don’t handle WebSocket upgrades properly, blocking connections. Debugging is harder. Messages don’t show up in standard HTTP logs. You need WebSocket-aware tools. Each connection consumes server memory and file descriptors. At massive scale, this adds up. Slack, Discord, WhatsApp Web Real-time game state synchronization Google Docs, Figma, Notion Where milliseconds matter Auctions, live streaming with chatThe rule of thumb: if you truly need bidirectional real-time communication, WebSockets are probably your answer. But if data only flows one way (server to client), SSE is simpler. And if you’re building server-to-server integrations, there’s yet another approach.Everything we’ve discussed so far involves browsers or mobile apps talking to servers. flip the script entirely: they’re how servers talk to other servers. Instead of clients pulling data from servers, webhooks let one server push data to another when events occur.Think of webhooks as “reverse APIs.” Instead of you calling an API to get data, the API calls you when something happens.You register a callback URL with the provider (e.g., Stripe, GitHub)You specify which events you want to receiveWhen those events occur, the provider sends an HTTP POST to your URLYour server processes the event and responds with 200 OKIf delivery fails, the provider typically retries with exponential backoffExample: Stripe Payment WebhooksWhen integrating Stripe, you configure a webhook endpoint in their dashboard:https://api.yourapp.com/webhooks/stripeAnd you subscribe to events like , customer.subscription.created, or .When a customer’s payment succeeds, Stripe sends you something like:{
+  "id": "evt_1PoJkD2eZvKYlo2CmOJbvwD9",
+  "type": "payment_intent.succeeded",
+  "created": 1713681701,
+  "data": {
+    "object": {
+      "id": "pi_3JhdNe2eZvKYlo2C1IqojYg9",
+      "amount": 4999,
+      "currency": "usd",
+      "customer": "cus_xyz789",
+      "metadata": {
+        "order_id": "order_12345"
+      }
+    }
+  }
+}Your server receives this, verifies the signature (to ensure it really came from Stripe), and then does whatever needs doing: update the order status, send a receipt, decrement inventory, notify fulfillment.Webhooks create a publicly accessible endpoint that anyone could try to call. You must verify that requests actually come from the expected source.Most providers include a signature in the headers:Stripe-Signature: t=1617000000,v1=abc123def456...You verify this by computing an HMAC of the request body using your webhook secret:expected = hmac.new(secret, payload, hashlib.sha256).hexdigest()
+if not hmac.compare_digest(expected, signature):
+    return 403  # Reject the request Events arrive immediately when they happen, no polling delay. You only receive HTTP calls when something actually happens. The provider doesn’t need to know your internal architecture. It just calls your URL. No persistent connections to maintain. Each event is a single HTTP request. Easy to debug, log, and monitor with standard tools.Requires public endpoint: Your server must be accessible from the internet. Local development requires tools like ngrok.Delivery isn’t guaranteed: If your server is down, you miss events. You need idempotent handlers and event replay mechanisms. Providers retry failed deliveries, so your handler must be idempotent (processing the same event twice should be safe). A public endpoint increases attack surface. Signature verification is essential. If events arrive faster than you can process them, you need queuing and rate limiting. Stripe, PayPal, Square notifications GitHub push events triggering buildsThird-party integrations: Any external service that needs to notify your systemMicroservices communication: Event-driven architectures between internal services Receiving notifications about account changes, security eventsThe pattern is clear: when one server needs to notify another about events, webhooks are almost always the right approach. They’re not for browser clients (which can’t expose public endpoints), but for backend-to-backend communication, they’re the gold standard.With five options, how do you pick the right one? Consider these four factors:Question 1: Who Needs to Talk to Whom?This is the most fundamental question.Server notifying another server? Webhooks. There’s rarely a good reason to use anything else for backend-to-backend event notification.Server pushing updates to clients (one-way)? SSE is usually the best choice. It’s simpler than WebSockets and handles reconnection automatically.Truly bidirectional client-server communication? WebSockets. If both sides need to send messages freely, nothing else really works.Question 2: How Fast Do Updates Need to Arrive?Minutes or hours are acceptable? Polling is fine. Don’t over-engineer. Long polling or SSE both work well. WebSockets. There’s nothing faster for browser-to-server communication.Question 3: What Infrastructure Constraints Exist?Corporate firewalls blocking WebSockets? Fall back to long polling or SSE.Need to support old browsers or restricted environments? Polling is the safest choice.Horizontal scaling is critical? SSE or webhooks scale more easily than WebSockets.Running serverless or can’t maintain persistent connections? Webhooks for server-to-server. Polling for client-to-server.Question 4: What’s the Acceptable Complexity Budget?Every approach has a complexity cost. Almost zero complexity. Anyone can implement it. Low client complexity (browser handles it), moderate server complexity. Moderate complexity on both sides. Edge cases are tricky. High complexity. Connection management, scaling, state synchronization. Moderate complexity. Security verification, idempotency, error handling.Match the tool to the actual requirements.If you found it valuable, hit a like ❤️ and consider subscribing for more such content every week.If you have any questions/suggestions, feel free to leave a comment.]]></content:encoded></item><item><title>impl Rust: Avro IDL tool in Rust via LLM (live version)</title><link>https://www.youtube.com/watch?v=NqV_KhDsMIs</link><author>Jon Gjengset</author><category>dev</category><category>rust</category><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/NqV_KhDsMIs?version=3" length="" type=""/><pubDate>Mon, 2 Feb 2026 18:40:36 +0000</pubDate><source url="https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ">Jon Gjengset</source><content:encoded><![CDATA[Live version of https://youtu.be/vmKvw73V394
+
+Code repository: https://github.com/jonhoo/avdl
+
+0:00:00 Audio on
+0:01:12 Video on
+0:05:07 Stream on]]></content:encoded></item><item><title>State of the Art of Biological Computing • Ewelina Kurtys &amp; Charles Humble • GOTO 2026</title><link>https://www.youtube.com/watch?v=45b_lEXW9Ew</link><author>GOTO Conferences</author><category>video</category><category>learning</category><enclosure url="https://www.youtube.com/v/45b_lEXW9Ew?version=3" length="" type=""/><pubDate>Mon, 2 Feb 2026 13:00:11 +0000</pubDate><source url="https://www.youtube.com/channel/UCs_tLP3AiwYKwdUHpltJPuA">GOTO Conferences yt</source><content:encoded><![CDATA[This interview was recorded for GOTO State of the Art in January 2026. #GOTOcon #GOTO
+https://gotopia.tech
+
+Read the full transcription of this interview here:
+https://gotopia.tech/articles/423
+
+Dr. Ewelina Kurtys - Strategic Advisor on Frontier Technologies at FinalSpark @ewelinakurtys1161
+Charles Humble - Freelance Techie, Podcaster, Editor, Author & Consultant
 
 RESOURCES
-https://www.linkedin.com/in/andrew-browne-b9813b7
-https://github.com/adbrowne
-http://brownie.com.au
+Ewelina
+https://x.com/ewelina_kurtys
+https://github.com/ewelinaewela
+https://www.linkedin.com/in/ewelinakurtys
+https://www.ewelinakurtys.com
+
+Charles
+https://bsky.app/profile/charleshumble.bsky.social
+https://linkedin.com/in/charleshumble
+https://mastodon.social/@charleshumble
+https://conissaunce.com
+
+Links
+https://finalspark.com
+https://www.linkedin.com/pulse/biologically-inspired-computing-dr-ewelina-kurtys-udnhe
+https://finalspark.com/finalspark-6-month-research-technology-update
+https://finalspark.com/first-publication-from-a-neuroplatform-user
+https://youtu.be/Pv0cfsastFs
+https://youtu.be/sQOHhoCSfak
+https://youtu.be/jRyIGtTGxcE
+https://youtu.be/RNdspOqbBEk
+https://youtu.be/N53Gsz0Gm4c
+https://youtu.be/MyCsYagUR6w
+https://youtu.be/K2mx9ZaNDyE
+https://youtu.be/rdJXUN4YV_M
+https://youtu.be/rbTaEsieWsU
+https://youtu.be/o8I0M5vjdyE
+
+DESCRIPTION
+Dr. Ewelina Kurtys, Strategy Advisor at FinalSpark, discusses the revolutionary potential of biological computing with host Charles Humble.
+
+The conversation explores FinalSpark's ambitious goal to build computers using living neurons that are 1 million times more energy efficient than current digital systems. Ewelina explains the technical challenges of working with brain organoids, the ethical considerations of using human stem cells, and why biological neurons could dramatically reduce AI costs while offering unique advantages for complex tasks like generative AI.
+The interview covers everything from neural encoding and plasticity to consciousness and the deterministic nature of the brain.
+
+TIMECODES
+00:00 Intro
+01:52 From academia to biological computing
+07:30 Vision: Building computers from living neurons
+17:03 Technical challenges & breakthroughs
+32:22 Ethical considerations & future implications
+40:32 Resources
+41:51 Outro
 
 RECOMMENDED BOOKS
-Neal Ford • Functional Thinking • https://amzn.to/3DdP35B Petricek & Skeet • Real-World Functional Programming • https://amzn.to/38diF4M
-Venkat Subramaniam • Functional Programming in Java • https://amzn.to/2WlOXIt
-Cristian Salcescu • Functional Programming in JavaScript • https://amzn.to/3y75jBS
-Richard Feldman • Elm in Action • https://amzn.to/387kujI
-Jeremy Fairbank • Programming Elm • https://amzn.to/2WhZCE8
-Wolfgang Loder • Web Applications with Elm • https://amzn.to/3jblQ3q
+Robert M. Sapolsk • Determined • https://amzn.to/4akv2gi
+Jin Xu • Biological Computing • https://amzn.to/4a4Wwp9
 
+https://bsky.app/profile/gotocon.com
 https://twitter.com/GOTOcon
 https://www.linkedin.com/company/goto-
+https://www.instagram.com/goto_con
 https://www.facebook.com/GOTOConferences
-#Fsharp #ComputationExpressions #FunctionalProgramming #Programming #Coding #FStack #AndrewBrowne #YOWcon
+#BiologicalComputing #BiologicalComputers #Organoids #FinalSpark #GenerativeAI #CostOfAI #EnergyEfficiencey #TodaInTech #EwelinaKurtys #CharlesHumble
 
 CHANNEL MEMBERSHIP BONUS
 Join this channel to get early access to videos & other perks:
